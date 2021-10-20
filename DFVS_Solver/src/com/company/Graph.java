@@ -1,26 +1,12 @@
 package com.company;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class Graph {
 
     List<GraphNode> nodes = new ArrayList<>();
     List<Arc> arcs = new ArrayList<>();
-
-    public Graph removeNode(GraphNode node) {
-        nodes.remove(node);
-        List<Arc> newArcs = new ArrayList<>();
-        for(Arc arc : arcs){
-            if(arc.from != node && arc.to != node) newArcs.add(arc);
-        }
-        arcs = newArcs;
-
-        return this;
-    }
 
     public static class GraphNode{
         String label;
@@ -50,13 +36,119 @@ public class Graph {
         }
     }
 
+    public void addArc(String from, String to){
+
+        //Add nodes if not existing
+        if(nodes.stream().noneMatch(x -> x.label.equals(from))) nodes.add(new GraphNode(from));
+        if(nodes.stream().noneMatch(x -> x.label.equals(to))) nodes.add(new GraphNode(to));
+
+        //Get Nodes
+        GraphNode a = nodes.stream().filter(x -> x.label.equals(from)).findFirst().get();
+        GraphNode b = nodes.stream().filter(x -> x.label.equals(to)).findFirst().get();
+
+        arcs.add(new Arc(a, b));
+    }
+
+    public Graph removeNode(GraphNode node) {
+        nodes.remove(node);
+        List<Arc> newArcs = new ArrayList<>();
+        for(Arc arc : arcs){
+            if(arc.from != node && arc.to != node) newArcs.add(arc);
+        }
+        arcs = newArcs;
+
+        return this;
+    }
+
     public boolean isDAG(){
         return isDAGRecursive(new ArrayList<>());
     }
 
-    public List<GraphNode> getCircle(){
-        return getCircleRecursive(List.of(nodes.get(0)));
+    private boolean isDAGRecursive(List<GraphNode> checked){
+        if(checked.size() == nodes.size()) return true;
+
+        //Check if something can be removed
+        for(GraphNode node : nodes){
+
+            //Skip those already checked
+            if(checked.contains(node)) continue;
+
+            //Get all out going arcs
+            List<Arc> outArcs = getOutArcs(node);
+
+            //Remove those with no arcs
+            if(outArcs.size() == 0){
+                checked.add(node);
+                return isDAGRecursive(checked);
+            }
+
+            //Remove those where all neighbours are already checked
+            List<GraphNode> neighbours = outArcs.stream().map(x -> x.to).collect(Collectors.toList());
+            if(checked.containsAll(neighbours)){
+                checked.add(node);
+                return isDAGRecursive(checked);
+            }
+        }
+
+        return false;
     }
+
+    public List<GraphNode> getCircle(){
+
+        for(GraphNode node : nodes){
+            List<GraphNode> subGraphCircle = getCircleRecursive(List.of(node));
+            if(subGraphCircle != null) return subGraphCircle;
+        }
+
+        /*
+        List<List<GraphNode>> connectedSubGraphs = getConnectedSubGraphs();
+        if(connectedSubGraphs.size() > 1){
+            int x = 5;
+        }
+        for(List<GraphNode> subGraph : connectedSubGraphs){
+            List<GraphNode> subGraphCircle = getCircleRecursive(List.of(subGraph.get(0)));
+            if(subGraphCircle != null) return subGraphCircle;
+        }*/
+
+        //No circle found
+        return null;
+    }
+
+    /*
+    private List<List<GraphNode>> getConnectedSubGraphs(){
+        List<List<GraphNode>> result = new ArrayList<>();
+        List<GraphNode> allNodesInSolution = new ArrayList<>();
+
+        while(allNodesInSolution.size() < nodes.size()){
+            //Find unconnected node
+            GraphNode unconnectedNode = nodes.stream().filter(x -> !allNodesInSolution.contains(x)).findFirst().get();
+            List<GraphNode> connectedNodes = getAllConnectedNodes(unconnectedNode);
+            result.add(connectedNodes);
+            allNodesInSolution.addAll(connectedNodes);
+
+            if(allNodesInSolution.size() < nodes.size()){
+                int x = 5;
+            }
+        }
+
+        return result;
+    }
+
+    private List<GraphNode> getAllConnectedNodes(GraphNode node){
+        getAllConnectedNodesRecursive(node);
+        return testList;
+    }
+
+    public List<GraphNode> testList = new ArrayList<>();
+
+    private void getAllConnectedNodesRecursive(GraphNode node){
+        if(testList.contains(node)) return;
+        else testList.add(node);
+
+        for(Arc arc : getOutArcs(node)){
+            getAllConnectedNodesRecursive(arc.to);
+        }
+    }*/
 
     private List<GraphNode> getCircleRecursive(List<GraphNode> path){
 
@@ -89,42 +181,14 @@ public class Graph {
         return arcs.stream().filter(x -> x.from == node).collect(Collectors.toList());
     }
 
-    private boolean isDAGRecursive(List<GraphNode> checked){
-        if(checked.size() == nodes.size()) return true;
 
-        //Check if something can be removed
-        for(GraphNode node : nodes){
-
-            //Skip those already checked
-            if(checked.contains(node)) continue;
-
-            //Get all out going arcs
-            List<Arc> outArcs = getOutArcs(node);
-
-            //Remove those with no arcs
-            if(outArcs.size() == 0){
-                checked.add(node);
-                return isDAGRecursive(checked);
-            }
-
-            //Remove those where all neighbours are already checked
-            List<GraphNode> neighbours = outArcs.stream().map(x -> x.to).collect(Collectors.toList());
-            if(checked.containsAll(neighbours)){
-                checked.add(node);
-                return isDAGRecursive(checked);
-            }
-        }
-
-        return false;
-    }
 
     @Override
     public String toString() {
         List<String> nodesStrings = nodes.stream().map(Object::toString).collect(Collectors.toList());
         List<String> arcStrings = arcs.stream().map(Arc::toString).collect(Collectors.toList());
 
-        return "Graph: " + "\n" +
-                "Nodes = {" + String.join(", ", nodesStrings) + "}" + "\n" +
+        return  "Nodes = {" + String.join(", ", nodesStrings) + "}" + "\n" +
                 "Arcs = {" + String.join(", ", arcStrings) + "}";
     }
 

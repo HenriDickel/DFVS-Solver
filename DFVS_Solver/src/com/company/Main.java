@@ -1,8 +1,18 @@
 package com.company;
 
+import java.util.List;
+
 public class Main {
 
     public static void main(String[] args) {
+
+        //List<Graph> Synthetics = GraphFileReader.CreateFromFolder("src/com/company/synthetic");
+        //Synthetics.forEach(Solver::dfvs_solve);
+
+        List<Graph> Complex = GraphFileReader.CreateFromFolder("src/com/company/complex");
+        Complex.forEach(Solver::dfvs_solve);
+
+/*
         Graph DAG = TestCreator.createSimpleDAG();
         Graph NonDAG = TestCreator.createSimpleNonDAG();
 
@@ -19,7 +29,7 @@ public class Main {
 
         System.out.println("");
 
-        System.out.println(Solver.dfvs_solve(NonDAG));
+        System.out.println(Solver.dfvs_solve(NonDAG));*/
 
     }
 }
