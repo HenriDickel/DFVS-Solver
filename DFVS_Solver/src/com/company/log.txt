@@ -1,144 +1,112 @@
-[2021-10-21 17:48:01.681] synth-n_10-m_12-k_2-p_0.2.txt: 	Success with k = 0 in 4ms
-[2021-10-21 17:48:01.734] synth-n_10-m_12-k_2-p_0.2.txt: 	Verified
-[2021-10-21 17:48:01.736] synth-n_10-m_12-k_4-p_0.2.txt: 	Success with k = 1 in 1ms
-[2021-10-21 17:48:01.779] synth-n_10-m_12-k_4-p_0.2.txt: 	Verified
-[2021-10-21 17:48:01.779] synth-n_10-m_2-k_2-p_0.05.txt: 	Success with k = 0 in 0ms
-[2021-10-21 17:48:01.821] synth-n_10-m_2-k_2-p_0.05.txt: 	Verified
-[2021-10-21 17:48:01.822] synth-n_10-m_2-k_4-p_0.05.txt: 	Success with k = 0 in 0ms
-[2021-10-21 17:48:01.863] synth-n_10-m_2-k_4-p_0.05.txt: 	Verified
-[2021-10-21 17:48:01.864] synth-n_10-m_5-k_2-p_0.1.txt: 	Success with k = 0 in 0ms
-[2021-10-21 17:48:01.905] synth-n_10-m_5-k_2-p_0.1.txt: 	Verified
-[2021-10-21 17:48:01.905] synth-n_10-m_5-k_4-p_0.1.txt: 	Success with k = 0 in 0ms
-[2021-10-21 17:48:01.948] synth-n_10-m_5-k_4-p_0.1.txt: 	Verified
-[2021-10-21 17:48:01.948] synth-n_20-m_10-k_2-p_0.05.txt: 	Success with k = 0 in 0ms
-[2021-10-21 17:48:01.991] synth-n_20-m_10-k_2-p_0.05.txt: 	Verified
-[2021-10-21 17:48:01.991] synth-n_20-m_11-k_6-p_0.05.txt: 	Success with k = 0 in 0ms
-[2021-10-21 17:48:02.032] synth-n_20-m_11-k_6-p_0.05.txt: 	Verified
-[2021-10-21 17:48:02.033] synth-n_20-m_18-k_4-p_0.05.txt: 	Success with k = 1 in 0ms
-[2021-10-21 17:48:02.075] synth-n_20-m_18-k_4-p_0.05.txt: 	Verified
-[2021-10-21 17:48:02.076] synth-n_20-m_20-k_4-p_0.1.txt: 	Success with k = 0 in 0ms
-[2021-10-21 17:48:02.121] synth-n_20-m_20-k_4-p_0.1.txt: 	Verified
-[2021-10-21 17:48:02.122] synth-n_20-m_25-k_2-p_0.1.txt: 	Success with k = 1 in 0ms
-[2021-10-21 17:48:02.174] synth-n_20-m_25-k_2-p_0.1.txt: 	Not Verified
-[2021-10-21 17:48:02.175] synth-n_20-m_25-k_8-p_0.1.txt: 	Success with k = 2 in 1ms
-[2021-10-21 17:48:02.222] synth-n_20-m_25-k_8-p_0.1.txt: 	Not Verified
-[2021-10-21 17:48:02.223] synth-n_20-m_38-k_6-p_0.1.txt: 	Success with k = 2 in 1ms
-[2021-10-21 17:48:02.269] synth-n_20-m_38-k_6-p_0.1.txt: 	Not Verified
-[2021-10-21 17:48:02.270] synth-n_20-m_48-k_2-p_0.2.txt: 	Success with k = 2 in 1ms
-[2021-10-21 17:48:02.307] synth-n_20-m_48-k_2-p_0.2.txt: 	Verified
-[2021-10-21 17:48:02.309] synth-n_20-m_54-k_8-p_0.2.txt: 	Success with k = 2 in 0ms
-[2021-10-21 17:48:02.365] synth-n_20-m_54-k_8-p_0.2.txt: 	Not Verified
-[2021-10-21 17:48:02.367] synth-n_20-m_58-k_4-p_0.2.txt: 	Success with k = 3 in 2ms
-[2021-10-21 17:48:02.412] synth-n_20-m_58-k_4-p_0.2.txt: 	Not Verified
-[2021-10-21 17:48:02.414] synth-n_20-m_59-k_6-p_0.2.txt: 	Success with k = 3 in 1ms
-[2021-10-21 17:48:02.457] synth-n_20-m_59-k_6-p_0.2.txt: 	Not Verified
-[2021-10-21 17:48:02.458] synth-n_20-m_9-k_8-p_0.05.txt: 	Success with k = 0 in 0ms
-[2021-10-21 17:48:02.495] synth-n_20-m_9-k_8-p_0.05.txt: 	Verified
-[2021-10-21 17:48:02.502] synth-n_30-m_111-k_8-p_0.2.txt: 	Success with k = 4 in 6ms
-[2021-10-21 17:48:02.554] synth-n_30-m_111-k_8-p_0.2.txt: 	Not Verified
-[2021-10-21 17:48:02.556] synth-n_30-m_114-k_6-p_0.2.txt: 	Success with k = 4 in 2ms
-[2021-10-21 17:48:02.613] synth-n_30-m_114-k_6-p_0.2.txt: 	Not Verified
-[2021-10-21 17:48:02.623] synth-n_30-m_117-k_10-p_0.2.txt: 	Success with k = 4 in 8ms
-[2021-10-21 17:48:02.678] synth-n_30-m_117-k_10-p_0.2.txt: 	Not Verified
-[2021-10-21 17:48:02.678] synth-n_30-m_25-k_2-p_0.05.txt: 	Success with k = 0 in 0ms
-[2021-10-21 17:48:02.716] synth-n_30-m_25-k_2-p_0.05.txt: 	Verified
-[2021-10-21 17:48:02.716] synth-n_30-m_28-k_4-p_0.05.txt: 	Success with k = 2 in 0ms
-[2021-10-21 17:48:02.770] synth-n_30-m_28-k_4-p_0.05.txt: 	Not Verified
-[2021-10-21 17:48:02.771] synth-n_30-m_28-k_6-p_0.05.txt: 	Success with k = 1 in 0ms
-[2021-10-21 17:48:02.809] synth-n_30-m_28-k_6-p_0.05.txt: 	Verified
-[2021-10-21 17:48:02.809] synth-n_30-m_28-k_8-p_0.05.txt: 	Success with k = 1 in 0ms
-[2021-10-21 17:48:02.847] synth-n_30-m_28-k_8-p_0.05.txt: 	Verified
-[2021-10-21 17:48:02.847] synth-n_30-m_35-k_10-p_0.05.txt: 	Success with k = 0 in 0ms
-[2021-10-21 17:48:02.884] synth-n_30-m_35-k_10-p_0.05.txt: 	Verified
-[2021-10-21 17:48:02.885] synth-n_30-m_55-k_4-p_0.1.txt: 	Success with k = 2 in 0ms
-[2021-10-21 17:48:02.925] synth-n_30-m_55-k_4-p_0.1.txt: 	Not Verified
-[2021-10-21 17:48:02.926] synth-n_30-m_58-k_6-p_0.1.txt: 	Success with k = 2 in 0ms
-[2021-10-21 17:48:02.976] synth-n_30-m_58-k_6-p_0.1.txt: 	Not Verified
-[2021-10-21 17:48:02.976] synth-n_30-m_60-k_2-p_0.1.txt: 	Success with k = 1 in 0ms
-[2021-10-21 17:48:03.014] synth-n_30-m_60-k_2-p_0.1.txt: 	Verified
-[2021-10-21 17:48:03.015] synth-n_30-m_64-k_8-p_0.1.txt: 	Success with k = 2 in 0ms
-[2021-10-21 17:48:03.084] synth-n_30-m_64-k_8-p_0.1.txt: 	Not Verified
-[2021-10-21 17:48:03.085] synth-n_30-m_73-k_10-p_0.1.txt: 	Success with k = 3 in 0ms
-[2021-10-21 17:48:03.133] synth-n_30-m_73-k_10-p_0.1.txt: 	Not Verified
-[2021-10-21 17:48:03.134] synth-n_30-m_97-k_2-p_0.2.txt: 	Success with k = 2 in 0ms
-[2021-10-21 17:48:03.173] synth-n_30-m_97-k_2-p_0.2.txt: 	Verified
-[2021-10-21 17:48:03.173] synth-n_30-m_99-k_4-p_0.2.txt: 	Success with k = 3 in 0ms
-[2021-10-21 17:48:03.212] synth-n_30-m_99-k_4-p_0.2.txt: 	Verified
-[2021-10-21 17:48:03.213] synth-n_40-m_112-k_8-p_0.1.txt: 	Success with k = 3 in 1ms
-[2021-10-21 17:48:03.260] synth-n_40-m_112-k_8-p_0.1.txt: 	Not Verified
-[2021-10-21 17:48:03.261] synth-n_40-m_114-k_10-p_0.1.txt: 	Success with k = 3 in 0ms
-[2021-10-21 17:48:03.308] synth-n_40-m_114-k_10-p_0.1.txt: 	Not Verified
-[2021-10-21 17:48:03.310] synth-n_40-m_114-k_15-p_0.1.txt: 	Success with k = 3 in 2ms
-[2021-10-21 17:48:03.356] synth-n_40-m_114-k_15-p_0.1.txt: 	Not Verified
-[2021-10-21 17:48:03.357] synth-n_40-m_176-k_2-p_0.2.txt: 	Success with k = 2 in 0ms
-[2021-10-21 17:48:03.396] synth-n_40-m_176-k_2-p_0.2.txt: 	Verified
-[2021-10-21 17:48:03.398] synth-n_40-m_185-k_4-p_0.2.txt: 	Success with k = 3 in 2ms
-[2021-10-21 17:48:03.440] synth-n_40-m_185-k_4-p_0.2.txt: 	Not Verified
-[2021-10-21 17:48:03.471] synth-n_40-m_192-k_10-p_0.2.txt: 	Success with k = 5 in 31ms
-[2021-10-21 17:48:03.529] synth-n_40-m_192-k_10-p_0.2.txt: 	Not Verified
-[2021-10-21 17:48:03.536] synth-n_40-m_192-k_15-p_0.2.txt: 	Success with k = 6 in 6ms
-[2021-10-21 17:48:03.592] synth-n_40-m_192-k_15-p_0.2.txt: 	Not Verified
-[2021-10-21 17:48:03.598] synth-n_40-m_194-k_6-p_0.2.txt: 	Success with k = 4 in 6ms
-[2021-10-21 17:48:03.656] synth-n_40-m_194-k_6-p_0.2.txt: 	Not Verified
-[2021-10-21 17:48:03.672] synth-n_40-m_203-k_8-p_0.2.txt: 	Success with k = 4 in 16ms
-[2021-10-21 17:48:03.720] synth-n_40-m_203-k_8-p_0.2.txt: 	Not Verified
-[2021-10-21 17:48:03.720] synth-n_40-m_36-k_2-p_0.05.txt: 	Success with k = 0 in 0ms
-[2021-10-21 17:48:03.761] synth-n_40-m_36-k_2-p_0.05.txt: 	Verified
-[2021-10-21 17:48:03.761] synth-n_40-m_47-k_6-p_0.05.txt: 	Success with k = 0 in 0ms
-[2021-10-21 17:48:03.799] synth-n_40-m_47-k_6-p_0.05.txt: 	Verified
-[2021-10-21 17:48:03.799] synth-n_40-m_50-k_4-p_0.05.txt: 	Success with k = 1 in 0ms
-[2021-10-21 17:48:03.837] synth-n_40-m_50-k_4-p_0.05.txt: 	Verified
-[2021-10-21 17:48:03.838] synth-n_40-m_58-k_15-p_0.05.txt: 	Success with k = 1 in 0ms
-[2021-10-21 17:48:03.895] synth-n_40-m_58-k_15-p_0.05.txt: 	Not Verified
-[2021-10-21 17:48:03.895] synth-n_40-m_61-k_8-p_0.05.txt: 	Success with k = 1 in 0ms
-[2021-10-21 17:48:03.934] synth-n_40-m_61-k_8-p_0.05.txt: 	Verified
-[2021-10-21 17:48:03.935] synth-n_40-m_62-k_10-p_0.05.txt: 	Success with k = 2 in 1ms
-[2021-10-21 17:48:03.987] synth-n_40-m_62-k_10-p_0.05.txt: 	Not Verified
-[2021-10-21 17:48:03.988] synth-n_40-m_88-k_4-p_0.1.txt: 	Success with k = 2 in 0ms
-[2021-10-21 17:48:04.035] synth-n_40-m_88-k_4-p_0.1.txt: 	Not Verified
-[2021-10-21 17:48:04.036] synth-n_40-m_92-k_2-p_0.1.txt: 	Success with k = 2 in 0ms
-[2021-10-21 17:48:04.074] synth-n_40-m_92-k_2-p_0.1.txt: 	Verified
-[2021-10-21 17:48:04.075] synth-n_40-m_95-k_6-p_0.1.txt: 	Success with k = 3 in 1ms
-[2021-10-21 17:48:04.129] synth-n_40-m_95-k_6-p_0.1.txt: 	Not Verified
-[2021-10-21 17:48:04.130] synth-n_50-m_139-k_2-p_0.1.txt: 	Success with k = 2 in 0ms
-[2021-10-21 17:48:04.177] synth-n_50-m_139-k_2-p_0.1.txt: 	Not Verified
-[2021-10-21 17:48:04.178] synth-n_50-m_139-k_4-p_0.1.txt: 	Success with k = 2 in 0ms
-[2021-10-21 17:48:04.219] synth-n_50-m_139-k_4-p_0.1.txt: 	Verified
-[2021-10-21 17:48:04.222] synth-n_50-m_154-k_8-p_0.1.txt: 	Success with k = 3 in 3ms
-[2021-10-21 17:48:04.263] synth-n_50-m_154-k_8-p_0.1.txt: 	Not Verified
-[2021-10-21 17:48:04.272] synth-n_50-m_159-k_10-p_0.1.txt: 	Success with k = 4 in 9ms
-[2021-10-21 17:48:04.315] synth-n_50-m_159-k_10-p_0.1.txt: 	Not Verified
-[2021-10-21 17:48:04.316] synth-n_50-m_169-k_6-p_0.1.txt: 	Success with k = 3 in 0ms
-[2021-10-21 17:48:04.378] synth-n_50-m_169-k_6-p_0.1.txt: 	Not Verified
-[2021-10-21 17:48:04.383] synth-n_50-m_192-k_20-p_0.1.txt: 	Success with k = 4 in 4ms
-[2021-10-21 17:48:04.428] synth-n_50-m_192-k_20-p_0.1.txt: 	Not Verified
-[2021-10-21 17:48:04.434] synth-n_50-m_195-k_15-p_0.1.txt: 	Success with k = 4 in 6ms
-[2021-10-21 17:48:04.491] synth-n_50-m_195-k_15-p_0.1.txt: 	Not Verified
-[2021-10-21 17:48:04.491] synth-n_50-m_275-k_2-p_0.2.txt: 	Success with k = 2 in 0ms
-[2021-10-21 17:48:04.530] synth-n_50-m_275-k_2-p_0.2.txt: 	Verified
-[2021-10-21 17:48:04.533] synth-n_50-m_278-k_4-p_0.2.txt: 	Success with k = 3 in 2ms
-[2021-10-21 17:48:04.599] synth-n_50-m_278-k_4-p_0.2.txt: 	Not Verified
-[2021-10-21 17:48:04.648] synth-n_50-m_302-k_6-p_0.2.txt: 	Success with k = 5 in 48ms
-[2021-10-21 17:48:04.693] synth-n_50-m_302-k_6-p_0.2.txt: 	Not Verified
-[2021-10-21 17:48:04.763] synth-n_50-m_320-k_15-p_0.2.txt: 	Success with k = 6 in 68ms
-[2021-10-21 17:48:04.818] synth-n_50-m_320-k_15-p_0.2.txt: 	Not Verified
-[2021-10-21 17:48:04.871] synth-n_50-m_327-k_10-p_0.2.txt: 	Success with k = 6 in 52ms
-[2021-10-21 17:48:04.913] synth-n_50-m_327-k_10-p_0.2.txt: 	Not Verified
-[2021-10-21 17:48:04.956] synth-n_50-m_334-k_8-p_0.2.txt: 	Success with k = 5 in 43ms
-[2021-10-21 17:48:05.008] synth-n_50-m_334-k_8-p_0.2.txt: 	Not Verified
-[2021-10-21 17:48:07.885] synth-n_50-m_357-k_20-p_0.2.txt: 	Success with k = 7 in 2.2873s
-[2021-10-21 17:48:07.928] synth-n_50-m_357-k_20-p_0.2.txt: 	Not Verified
-[2021-10-21 17:48:07.929] synth-n_50-m_66-k_2-p_0.05.txt: 	Success with k = 1 in 0ms
-[2021-10-21 17:48:07.967] synth-n_50-m_66-k_2-p_0.05.txt: 	Verified
-[2021-10-21 17:48:07.967] synth-n_50-m_70-k_4-p_0.05.txt: 	Success with k = 0 in 0ms
-[2021-10-21 17:48:08.007] synth-n_50-m_70-k_4-p_0.05.txt: 	Verified
-[2021-10-21 17:48:08.008] synth-n_50-m_71-k_8-p_0.05.txt: 	Success with k = 2 in 1ms
-[2021-10-21 17:48:08.071] synth-n_50-m_71-k_8-p_0.05.txt: 	Not Verified
-[2021-10-21 17:48:08.072] synth-n_50-m_81-k_10-p_0.05.txt: 	Success with k = 2 in 0ms
-[2021-10-21 17:48:08.122] synth-n_50-m_81-k_10-p_0.05.txt: 	Not Verified
-[2021-10-21 17:48:08.122] synth-n_50-m_90-k_20-p_0.05.txt: 	Success with k = 2 in 0ms
-[2021-10-21 17:48:08.184] synth-n_50-m_90-k_20-p_0.05.txt: 	Not Verified
-[2021-10-21 17:48:08.185] synth-n_50-m_91-k_6-p_0.05.txt: 	Success with k = 1 in 0ms
-[2021-10-21 17:48:08.223] synth-n_50-m_91-k_6-p_0.05.txt: 	Verified
-[2021-10-21 17:48:08.224] synth-n_50-m_97-k_15-p_0.05.txt: 	Success with k = 2 in 0ms
-[2021-10-21 17:48:08.265] synth-n_50-m_97-k_15-p_0.05.txt: 	Not Verified
+[2021-10-21 17:59:05.962] synth-n_10-m_12-k_2-p_0.2.txt: 	Success with k = 0 in 5ms
+[2021-10-21 17:59:06.016] synth-n_10-m_12-k_2-p_0.2.txt: 	Verified
+[2021-10-21 17:59:06.018] synth-n_10-m_12-k_4-p_0.2.txt: 	Success with k = 1 in 2ms
+[2021-10-21 17:59:06.058] synth-n_10-m_12-k_4-p_0.2.txt: 	Verified
+[2021-10-21 17:59:06.059] synth-n_10-m_2-k_2-p_0.05.txt: 	Success with k = 0 in 0ms
+[2021-10-21 17:59:06.097] synth-n_10-m_2-k_2-p_0.05.txt: 	Verified
+[2021-10-21 17:59:06.098] synth-n_10-m_2-k_4-p_0.05.txt: 	Success with k = 0 in 0ms
+[2021-10-21 17:59:06.137] synth-n_10-m_2-k_4-p_0.05.txt: 	Verified
+[2021-10-21 17:59:06.138] synth-n_10-m_5-k_2-p_0.1.txt: 	Success with k = 0 in 1ms
+[2021-10-21 17:59:06.177] synth-n_10-m_5-k_2-p_0.1.txt: 	Verified
+[2021-10-21 17:59:06.177] synth-n_10-m_5-k_4-p_0.1.txt: 	Success with k = 0 in 0ms
+[2021-10-21 17:59:06.218] synth-n_10-m_5-k_4-p_0.1.txt: 	Verified
+[2021-10-21 17:59:06.219] synth-n_20-m_10-k_2-p_0.05.txt: 	Success with k = 0 in 0ms
+[2021-10-21 17:59:06.264] synth-n_20-m_10-k_2-p_0.05.txt: 	Verified
+[2021-10-21 17:59:06.265] synth-n_20-m_11-k_6-p_0.05.txt: 	Success with k = 0 in 1ms
+[2021-10-21 17:59:06.307] synth-n_20-m_11-k_6-p_0.05.txt: 	Verified
+[2021-10-21 17:59:06.308] synth-n_20-m_18-k_4-p_0.05.txt: 	Success with k = 1 in 0ms
+[2021-10-21 17:59:06.347] synth-n_20-m_18-k_4-p_0.05.txt: 	Verified
+[2021-10-21 17:59:06.348] synth-n_20-m_20-k_4-p_0.1.txt: 	Success with k = 0 in 0ms
+[2021-10-21 17:59:06.386] synth-n_20-m_20-k_4-p_0.1.txt: 	Verified
+[2021-10-21 17:59:06.387] synth-n_20-m_25-k_2-p_0.1.txt: 	Success with k = 1 in 1ms
+[2021-10-21 17:59:06.426] synth-n_20-m_25-k_2-p_0.1.txt: 	Verified
+[2021-10-21 17:59:06.428] synth-n_20-m_25-k_8-p_0.1.txt: 	Success with k = 2 in 1ms
+[2021-10-21 17:59:06.467] synth-n_20-m_25-k_8-p_0.1.txt: 	Verified
+[2021-10-21 17:59:06.469] synth-n_20-m_38-k_6-p_0.1.txt: 	Success with k = 2 in 2ms
+[2021-10-21 17:59:06.506] synth-n_20-m_38-k_6-p_0.1.txt: 	Verified
+[2021-10-21 17:59:06.508] synth-n_20-m_48-k_2-p_0.2.txt: 	Success with k = 2 in 1ms
+[2021-10-21 17:59:06.545] synth-n_20-m_48-k_2-p_0.2.txt: 	Verified
+[2021-10-21 17:59:06.550] synth-n_20-m_54-k_8-p_0.2.txt: 	Success with k = 3 in 5ms
+[2021-10-21 17:59:06.589] synth-n_20-m_54-k_8-p_0.2.txt: 	Verified
+[2021-10-21 17:59:06.598] synth-n_20-m_58-k_4-p_0.2.txt: 	Success with k = 4 in 9ms
+[2021-10-21 17:59:06.637] synth-n_20-m_58-k_4-p_0.2.txt: 	Verified
+[2021-10-21 17:59:06.638] synth-n_20-m_59-k_6-p_0.2.txt: 	Success with k = 3 in 0ms
+[2021-10-21 17:59:06.676] synth-n_20-m_59-k_6-p_0.2.txt: 	Verified
+[2021-10-21 17:59:06.677] synth-n_20-m_9-k_8-p_0.05.txt: 	Success with k = 0 in 0ms
+[2021-10-21 17:59:06.715] synth-n_20-m_9-k_8-p_0.05.txt: 	Verified
+[2021-10-21 17:59:07.232] synth-n_30-m_111-k_8-p_0.2.txt: 	Success with k = 7 in 516ms
+[2021-10-21 17:59:07.272] synth-n_30-m_111-k_8-p_0.2.txt: 	Verified
+[2021-10-21 17:59:07.277] synth-n_30-m_114-k_6-p_0.2.txt: 	Success with k = 5 in 5ms
+[2021-10-21 17:59:07.314] synth-n_30-m_114-k_6-p_0.2.txt: 	Verified
+[2021-10-21 17:59:09.335] synth-n_30-m_117-k_10-p_0.2.txt: 	Success with k = 7 in 2.2019s
+[2021-10-21 17:59:09.374] synth-n_30-m_117-k_10-p_0.2.txt: 	Verified
+[2021-10-21 17:59:09.374] synth-n_30-m_25-k_2-p_0.05.txt: 	Success with k = 0 in 0ms
+[2021-10-21 17:59:09.410] synth-n_30-m_25-k_2-p_0.05.txt: 	Verified
+[2021-10-21 17:59:09.410] synth-n_30-m_28-k_4-p_0.05.txt: 	Success with k = 2 in 0ms
+[2021-10-21 17:59:09.447] synth-n_30-m_28-k_4-p_0.05.txt: 	Verified
+[2021-10-21 17:59:09.447] synth-n_30-m_28-k_6-p_0.05.txt: 	Success with k = 1 in 0ms
+[2021-10-21 17:59:09.484] synth-n_30-m_28-k_6-p_0.05.txt: 	Verified
+[2021-10-21 17:59:09.484] synth-n_30-m_28-k_8-p_0.05.txt: 	Success with k = 1 in 0ms
+[2021-10-21 17:59:09.522] synth-n_30-m_28-k_8-p_0.05.txt: 	Verified
+[2021-10-21 17:59:09.522] synth-n_30-m_35-k_10-p_0.05.txt: 	Success with k = 0 in 0ms
+[2021-10-21 17:59:09.560] synth-n_30-m_35-k_10-p_0.05.txt: 	Verified
+[2021-10-21 17:59:09.560] synth-n_30-m_55-k_4-p_0.1.txt: 	Success with k = 2 in 0ms
+[2021-10-21 17:59:09.599] synth-n_30-m_55-k_4-p_0.1.txt: 	Verified
+[2021-10-21 17:59:09.599] synth-n_30-m_58-k_6-p_0.1.txt: 	Success with k = 2 in 0ms
+[2021-10-21 17:59:09.638] synth-n_30-m_58-k_6-p_0.1.txt: 	Verified
+[2021-10-21 17:59:09.638] synth-n_30-m_60-k_2-p_0.1.txt: 	Success with k = 1 in 0ms
+[2021-10-21 17:59:09.676] synth-n_30-m_60-k_2-p_0.1.txt: 	Verified
+[2021-10-21 17:59:09.678] synth-n_30-m_64-k_8-p_0.1.txt: 	Success with k = 3 in 1ms
+[2021-10-21 17:59:09.715] synth-n_30-m_64-k_8-p_0.1.txt: 	Verified
+[2021-10-21 17:59:09.722] synth-n_30-m_73-k_10-p_0.1.txt: 	Success with k = 4 in 6ms
+[2021-10-21 17:59:09.760] synth-n_30-m_73-k_10-p_0.1.txt: 	Verified
+[2021-10-21 17:59:09.761] synth-n_30-m_97-k_2-p_0.2.txt: 	Success with k = 2 in 1ms
+[2021-10-21 17:59:09.798] synth-n_30-m_97-k_2-p_0.2.txt: 	Verified
+[2021-10-21 17:59:09.799] synth-n_30-m_99-k_4-p_0.2.txt: 	Success with k = 3 in 0ms
+[2021-10-21 17:59:09.837] synth-n_30-m_99-k_4-p_0.2.txt: 	Verified
+[2021-10-21 17:59:09.934] synth-n_40-m_112-k_8-p_0.1.txt: 	Success with k = 6 in 95ms
+[2021-10-21 17:59:09.973] synth-n_40-m_112-k_8-p_0.1.txt: 	Verified
+[2021-10-21 17:59:10.091] synth-n_40-m_114-k_10-p_0.1.txt: 	Success with k = 6 in 118ms
+[2021-10-21 17:59:10.130] synth-n_40-m_114-k_10-p_0.1.txt: 	Verified
+[2021-10-21 17:59:12.558] synth-n_40-m_114-k_15-p_0.1.txt: 	Success with k = 6 in 2.2428s
+[2021-10-21 17:59:12.596] synth-n_40-m_114-k_15-p_0.1.txt: 	Verified
+[2021-10-21 17:59:12.598] synth-n_40-m_176-k_2-p_0.2.txt: 	Success with k = 2 in 0ms
+[2021-10-21 17:59:12.636] synth-n_40-m_176-k_2-p_0.2.txt: 	Verified
+[2021-10-21 17:59:12.644] synth-n_40-m_185-k_4-p_0.2.txt: 	Success with k = 4 in 8ms
+[2021-10-21 17:59:12.681] synth-n_40-m_185-k_4-p_0.2.txt: 	Verified
+[2021-10-21 18:01:12.683] synth-n_40-m_192-k_10-p_0.2.txt: 	Failed with k = 8 because of the timelimit
+[2021-10-21 18:01:12.740] synth-n_40-m_192-k_10-p_0.2.txt: 	Not Verified
+[2021-10-21 18:03:12.740] synth-n_40-m_192-k_15-p_0.2.txt: 	Failed with k = 11 because of the timelimit
+[2021-10-21 18:03:12.790] synth-n_40-m_192-k_15-p_0.2.txt: 	Not Verified
+[2021-10-21 18:03:12.823] synth-n_40-m_194-k_6-p_0.2.txt: 	Success with k = 5 in 32ms
+[2021-10-21 18:03:12.862] synth-n_40-m_194-k_6-p_0.2.txt: 	Verified
+[2021-10-21 18:03:16.172] synth-n_40-m_203-k_8-p_0.2.txt: 	Success with k = 7 in 3.3310s
+[2021-10-21 18:03:16.211] synth-n_40-m_203-k_8-p_0.2.txt: 	Verified
+[2021-10-21 18:03:16.211] synth-n_40-m_36-k_2-p_0.05.txt: 	Success with k = 0 in 0ms
+[2021-10-21 18:03:16.248] synth-n_40-m_36-k_2-p_0.05.txt: 	Verified
+[2021-10-21 18:03:16.248] synth-n_40-m_47-k_6-p_0.05.txt: 	Success with k = 0 in 0ms
+[2021-10-21 18:03:16.285] synth-n_40-m_47-k_6-p_0.05.txt: 	Verified
+[2021-10-21 18:03:16.286] synth-n_40-m_50-k_4-p_0.05.txt: 	Success with k = 1 in 0ms
+[2021-10-21 18:03:16.322] synth-n_40-m_50-k_4-p_0.05.txt: 	Verified
+[2021-10-21 18:03:16.323] synth-n_40-m_58-k_15-p_0.05.txt: 	Success with k = 1 in 0ms
+[2021-10-21 18:03:16.360] synth-n_40-m_58-k_15-p_0.05.txt: 	Verified
+[2021-10-21 18:03:16.360] synth-n_40-m_61-k_8-p_0.05.txt: 	Success with k = 1 in 0ms
+[2021-10-21 18:03:16.397] synth-n_40-m_61-k_8-p_0.05.txt: 	Verified
+[2021-10-21 18:03:16.399] synth-n_40-m_62-k_10-p_0.05.txt: 	Success with k = 3 in 1ms
+[2021-10-21 18:03:16.437] synth-n_40-m_62-k_10-p_0.05.txt: 	Verified
+[2021-10-21 18:03:16.446] synth-n_40-m_88-k_4-p_0.1.txt: 	Success with k = 3 in 9ms
+[2021-10-21 18:03:16.484] synth-n_40-m_88-k_4-p_0.1.txt: 	Verified
+[2021-10-21 18:03:16.485] synth-n_40-m_92-k_2-p_0.1.txt: 	Success with k = 2 in 0ms
+[2021-10-21 18:03:16.523] synth-n_40-m_92-k_2-p_0.1.txt: 	Verified
+[2021-10-21 18:03:16.528] synth-n_40-m_95-k_6-p_0.1.txt: 	Success with k = 4 in 5ms
+[2021-10-21 18:03:16.565] synth-n_40-m_95-k_6-p_0.1.txt: 	Verified
+[2021-10-21 18:03:16.567] synth-n_50-m_139-k_2-p_0.1.txt: 	Success with k = 2 in 0ms
+[2021-10-21 18:03:16.605] synth-n_50-m_139-k_2-p_0.1.txt: 	Verified
+[2021-10-21 18:03:16.607] synth-n_50-m_139-k_4-p_0.1.txt: 	Success with k = 2 in 1ms
+[2021-10-21 18:03:16.645] synth-n_50-m_139-k_4-p_0.1.txt: 	Verified
+[2021-10-21 18:03:19.614] synth-n_50-m_154-k_8-p_0.1.txt: 	Success with k = 6 in 2.2968s
+[2021-10-21 18:03:19.653] synth-n_50-m_154-k_8-p_0.1.txt: 	Verified
+[2021-10-21 18:03:28.607] synth-n_50-m_159-k_10-p_0.1.txt: 	Success with k = 8 in 8.8953s
+[2021-10-21 18:03:28.646] synth-n_50-m_159-k_10-p_0.1.txt: 	Verified
+[2021-10-21 18:03:28.927] synth-n_50-m_169-k_6-p_0.1.txt: 	Success with k = 6 in 280ms
+[2021-10-21 18:03:28.965] synth-n_50-m_169-k_6-p_0.1.txt: 	Verified

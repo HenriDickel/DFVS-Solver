@@ -30,35 +30,46 @@ public class Graph {
     }
 
     public boolean isDAG(){
+        Log.log(Log.LogDetail.Unimportant, name, "Test if graph is DAG...");
 
-        //Count
-        long deleteCount = nodes.stream().filter(x -> x.deleted).count();
+        //Start Recursion
+        boolean isDag = isDAGRecursive(new ArrayList<>());
+        Log.log(Log.LogDetail.Unimportant, name, isDag ? "Graph is a DAG" : "Graph is not a DAG");
 
-        //While there are unchecked nodes
-        while(deleteCount < nodes.size()){
+        return isDag;
+    }
+    private boolean isDAGRecursive(List<Node> checked){
 
-            //Remember if something was removed
-            boolean nodeWasRemoved = false;
+        if(checked.size() == nodes.size()) return true;
 
-            //Check each unchecked node
-            for(Node node : nodes.stream().filter(x -> !x.deleted).collect(Collectors.toList())){
-                //If it has no neighbours remove it
-                if(node.getOutNeighbours().isEmpty()){
-                    node.delete();
-                    deleteCount++;
-                    nodeWasRemoved = true;
-                }
+        //Check if something can be removed
+        for(Node node : nodes){
+
+            //Skip those already checked
+            if(checked.contains(node)) continue;
+
+            //Get all out going arcs
+            List<Node> outArcs = node.getOutNeighbours();
+
+            //Remove those with no arcs
+            if(outArcs.size() == 0){
+                checked.add(node);
+                return isDAGRecursive(checked);
             }
 
-            //Check if nodeWasRemoved
-            if(!nodeWasRemoved){
-                return false;
+            //Remove those where all neighbours are already checked
+            if(checked.containsAll(outArcs)){
+                checked.add(node);
+                return isDAGRecursive(checked);
             }
         }
-
-        //Every node was checked
-        return true;
+        return false;
     }
+
+
+
+
+
 
     public List<Node> getCircle(){
 

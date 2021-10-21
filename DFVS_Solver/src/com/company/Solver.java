@@ -11,8 +11,8 @@ public abstract class Solver {
     private static List<Node> dfvs_branch(Graph graph, int k) throws Exception {
 
         //Timer
-        //if(ChronoUnit.MINUTES.between(startTime, LocalDateTime.now()) > 1) throw new Exception();
-        if(ChronoUnit.SECONDS.between(startTime, LocalDateTime.now()) > 10) throw new Exception();
+        if(ChronoUnit.MINUTES.between(startTime, LocalDateTime.now()) > 1) throw new Exception();
+        //if(ChronoUnit.SECONDS.between(startTime, LocalDateTime.now()) > 10) throw new Exception();
 
         //Break
         if(k < 0) return null;
