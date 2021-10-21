@@ -5,76 +5,60 @@ import java.util.stream.Collectors;
 
 public class Graph {
 
-    List<GraphNode> nodes = new ArrayList<>();
-    List<Arc> arcs = new ArrayList<>();
+    //Name of the graph for logging
+    public String name;
 
-    public static class GraphNode{
-        String label;
+    List<Node> nodes = new ArrayList<>();
 
-        GraphNode(String label){
-            this.label = label;
-        }
-
-        @Override
-        public String toString(){
-            return label;
-        }
-    }
-
-    public static class Arc{
-        GraphNode from;
-        GraphNode to;
-
-        public Arc(GraphNode from, GraphNode to) {
-            this.from = from;
-            this.to = to;
-        }
-
-        @Override
-        public String toString(){
-            return "(" + from.label + " -> " + to.label + ")";
-        }
+    public Graph(String name) {
+        this.name = name;
     }
 
     public void addArc(String from, String to){
 
         //Add nodes if not existing
-        if(nodes.stream().noneMatch(x -> x.label.equals(from))) nodes.add(new GraphNode(from));
-        if(nodes.stream().noneMatch(x -> x.label.equals(to))) nodes.add(new GraphNode(to));
+        if(nodes.stream().noneMatch(x -> x.label.equals(from))) nodes.add(new Node(from));
+        if(nodes.stream().noneMatch(x -> x.label.equals(to))) nodes.add(new Node(to));
 
         //Get Nodes
-        GraphNode a = nodes.stream().filter(x -> x.label.equals(from)).findFirst().get();
-        GraphNode b = nodes.stream().filter(x -> x.label.equals(to)).findFirst().get();
+        Node a = nodes.stream().filter(x -> x.label.equals(from)).findFirst().get();
+        Node b = nodes.stream().filter(x -> x.label.equals(to)).findFirst().get();
 
-        arcs.add(new Arc(a, b));
+        //Add to neighbours
+        a.addNeighbour(b);
     }
 
-    public Graph removeNode(GraphNode node) {
-        nodes.remove(node);
-        List<Arc> newArcs = new ArrayList<>();
-        for(Arc arc : arcs){
-            if(arc.from != node && arc.to != node) newArcs.add(arc);
+    public Graph removeNode(Node node) {
+        //node.delete();
+        for(Node node1 : nodes){
+           node1.outNeighbours.remove(node);
         }
-        arcs = newArcs;
-
+        nodes.remove(node);
         return this;
     }
 
     public boolean isDAG(){
-        return isDAGRecursive(new ArrayList<>());
+        Log.log(Log.LogDetail.Unimportant, name, "Test if graph is DAG...");
+
+        //Start Recursion
+        boolean isDag = isDAGRecursive(new ArrayList<>());
+
+        Log.log(Log.LogDetail.Unimportant, name, isDag ? "Graph is a DAG" : "Graph is not a DAG");
+
+        return isDag;
     }
 
-    private boolean isDAGRecursive(List<GraphNode> checked){
+    private boolean isDAGRecursive(List<Node> checked){
         if(checked.size() == nodes.size()) return true;
 
         //Check if something can be removed
-        for(GraphNode node : nodes){
+        for(Node node : nodes){
 
             //Skip those already checked
             if(checked.contains(node)) continue;
 
             //Get all out going arcs
-            List<Arc> outArcs = getOutArcs(node);
+            List<Node> outArcs = node.getOutNeighbours();
 
             //Remove those with no arcs
             if(outArcs.size() == 0){
@@ -83,8 +67,7 @@ public class Graph {
             }
 
             //Remove those where all neighbours are already checked
-            List<GraphNode> neighbours = outArcs.stream().map(x -> x.to).collect(Collectors.toList());
-            if(checked.containsAll(neighbours)){
+            if(checked.containsAll(outArcs)){
                 checked.add(node);
                 return isDAGRecursive(checked);
             }
@@ -93,20 +76,25 @@ public class Graph {
         return false;
     }
 
-    public List<GraphNode> getCircle(){
+    public List<Node> getCircle(){
 
-        for(GraphNode node : nodes){
-            List<GraphNode> subGraphCircle = getCircleRecursive(List.of(node));
-            if(subGraphCircle != null) return subGraphCircle;
+        Log.log(Log.LogDetail.Unimportant, name, "Get Circle...");
+
+        for(Node node : nodes){
+            List<Node> subGraphCircle = getCircleRecursive(List.of(node));
+            if(subGraphCircle != null){
+                Log.log(Log.LogDetail.Normal, name, "Found Circle: " + subGraphCircle.stream().map(x -> x.label).collect(Collectors.joining(",")));
+                return subGraphCircle;
+            }
         }
 
         /*
-        List<List<GraphNode>> connectedSubGraphs = getConnectedSubGraphs();
+        List<List<Node>> connectedSubGraphs = getConnectedSubGraphs();
         if(connectedSubGraphs.size() > 1){
             int x = 5;
         }
-        for(List<GraphNode> subGraph : connectedSubGraphs){
-            List<GraphNode> subGraphCircle = getCircleRecursive(List.of(subGraph.get(0)));
+        for(List<Node> subGraph : connectedSubGraphs){
+            List<Node> subGraphCircle = getCircleRecursive(List.of(subGraph.get(0)));
             if(subGraphCircle != null) return subGraphCircle;
         }*/
 
@@ -115,14 +103,14 @@ public class Graph {
     }
 
     /*
-    private List<List<GraphNode>> getConnectedSubGraphs(){
-        List<List<GraphNode>> result = new ArrayList<>();
-        List<GraphNode> allNodesInSolution = new ArrayList<>();
+    private List<List<Node>> getConnectedSubGraphs(){
+        List<List<Node>> result = new ArrayList<>();
+        List<Node> allNodesInSolution = new ArrayList<>();
 
         while(allNodesInSolution.size() < nodes.size()){
             //Find unconnected node
-            GraphNode unconnectedNode = nodes.stream().filter(x -> !allNodesInSolution.contains(x)).findFirst().get();
-            List<GraphNode> connectedNodes = getAllConnectedNodes(unconnectedNode);
+            Node unconnectedNode = nodes.stream().filter(x -> !allNodesInSolution.contains(x)).findFirst().get();
+            List<Node> connectedNodes = getAllConnectedNodes(unconnectedNode);
             result.add(connectedNodes);
             allNodesInSolution.addAll(connectedNodes);
 
@@ -134,14 +122,14 @@ public class Graph {
         return result;
     }
 
-    private List<GraphNode> getAllConnectedNodes(GraphNode node){
+    private List<Node> getAllConnectedNodes(Node node){
         getAllConnectedNodesRecursive(node);
         return testList;
     }
 
-    public List<GraphNode> testList = new ArrayList<>();
+    public List<Node> testList = new ArrayList<>();
 
-    private void getAllConnectedNodesRecursive(GraphNode node){
+    private void getAllConnectedNodesRecursive(Node node){
         if(testList.contains(node)) return;
         else testList.add(node);
 
@@ -150,7 +138,7 @@ public class Graph {
         }
     }*/
 
-    private List<GraphNode> getCircleRecursive(List<GraphNode> path){
+    private List<Node> getCircleRecursive(List<Node> path){
 
         //Check if element is in path twice
         if(path.size() != Arrays.stream(path.toArray()).distinct().count()){
@@ -163,13 +151,13 @@ public class Graph {
         }
 
         //Get all out going arcs
-        List<Arc> outArcs = getOutArcs(path.get(path.size() - 1));
+        List<Node> outArcs = path.get(path.size() - 1).getOutNeighbours();
 
         //Next iteration
-        for(Arc arc : outArcs){
-            List<GraphNode> copyPath = new ArrayList<>(path);
-            copyPath.add(arc.to);
-            List<GraphNode> recCircle = getCircleRecursive(copyPath);
+        for(Node arc : outArcs){
+            List<Node> copyPath = new ArrayList<>(path);
+            copyPath.add(arc);
+            List<Node> recCircle = getCircleRecursive(copyPath);
             if(recCircle != null) return recCircle;
         }
 
@@ -177,26 +165,27 @@ public class Graph {
         return null;
     }
 
-    private List<Arc> getOutArcs(GraphNode node){
-        return arcs.stream().filter(x -> x.from == node).collect(Collectors.toList());
-    }
-
-
-
     @Override
     public String toString() {
         List<String> nodesStrings = nodes.stream().map(Object::toString).collect(Collectors.toList());
-        List<String> arcStrings = arcs.stream().map(Arc::toString).collect(Collectors.toList());
-
-        return  "Nodes = {" + String.join(", ", nodesStrings) + "}" + "\n" +
-                "Arcs = {" + String.join(", ", arcStrings) + "}";
+        return String.join("\n", nodesStrings);
     }
 
     public Graph copy(){
-        Graph graph = new Graph();
+        Graph graph = new Graph(this.name);
+        List<Node> nodes = new ArrayList<>();
+        for(Node neighbour : nodes){
+            //nodes.add(neighbour.copy())
+        }
         graph.nodes = new ArrayList<>(nodes);
-        graph.arcs = new ArrayList<>(arcs);
         return graph;
     }
 
+    public void enableNode(Node node) {
+        node.unDelete();
+    }
+
+    public void disableNode(Node node) {
+        node.delete();
+    }
 }

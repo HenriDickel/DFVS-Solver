@@ -4,18 +4,21 @@ import java.util.*;
 
 public class Solver {
 
-    public static Set<Graph.GraphNode> dfvs_branch(Graph graph, int k){
+    private static List<Node> dfvs_branch(Graph graph, int k){
         //Break
         if(k < 0) return null;
-        if(graph.isDAG()) return new HashSet<>();
+        if(graph.isDAG()) return new ArrayList<>();
 
         //Next Circle
-        List<Graph.GraphNode> cycle = graph.getCircle();
+        List<Node> cycle = graph.getCircle();
 
         //Loop
-        for(Graph.GraphNode node : cycle.subList(0, cycle.size())){
-            Graph reducedGraph = graph.copy().removeNode(node);
-            Set<Graph.GraphNode> S = dfvs_branch(reducedGraph, k - 1);
+        for(Node node : cycle.subList(0, cycle.size())){
+            Log.log(Log.LogDetail.Unimportant, graph.name, "Removing " + node.label + " from graph");
+            graph.disableNode(node);
+            List<Node> S = dfvs_branch(graph, k - 1);
+            Log.log(Log.LogDetail.Unimportant, graph.name, "Adding " + node.label + " back to graph");
+            graph.enableNode(node);
             if(S != null){
                 S.add(node);
                 return S;
@@ -24,16 +27,17 @@ public class Solver {
         return null;
     }
 
-    public static Set<Graph.GraphNode> dfvs_solve(Graph graph){
-        Log.log("Start solving for: \n" + graph);
+    public static List<Node> dfvs_solve(Graph graph){
+        Log.log(Log.LogDetail.Important, graph.name, "Start solving for: \n" + graph);
 
         int k = 0;
-        Set<Graph.GraphNode> S = null;
+        List<Node> S = null;
         while(S == null){
+            Log.log(Log.LogDetail.Normal, graph.name, "Try solving with k = " + k);
             S = dfvs_branch(graph, k);
             k++;
         }
-        Log.log("Success with k = " + (k - 1) + "\n");
+        Log.log(Log.LogDetail.Important, graph.name,"Success with k = " + (k - 1) + "\n");
         return S;
     }
 
