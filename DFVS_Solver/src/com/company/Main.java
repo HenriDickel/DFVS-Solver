@@ -12,14 +12,18 @@ public class Main {
         Log.type = Log.LogType.File;
         Log.detail = Log.LogDetail.Important;
 
+        /*
         List<Graph> Synthetics = GraphFileManager.CreateFromFolder("src/com/company/synthetic");
         Synthetics.forEach(x -> {
             List<Node> nodes = Solver.dfvs_solve(x);
             GraphFileManager.SaveSolution("src/com/company/solutions/synthetic/" + x.name, nodes);
-        } );
+        } );*/
 
-        //List<Graph> Complex = GraphFileReader.CreateFromFolder("src/com/company/complex");
-        //Complex.forEach(Solver::dfvs_solve);
+        List<Graph> Complex = GraphFileManager.CreateFromFolder("src/com/company/complex");
+        Complex.forEach(x -> {
+            List<Node> nodes = Solver.dfvs_solve(x);
+            GraphFileManager.SaveSolution("src/com/company/solutions/complex/" + x.name, nodes);
+        } );
 
         //Graph K3Test = TestCreator.createK3Test();
         //Solver.dfvs_solve(K3Test);

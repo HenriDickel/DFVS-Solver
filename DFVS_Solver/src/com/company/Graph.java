@@ -88,55 +88,9 @@ public class Graph {
             }
         }
 
-        /*
-        List<List<Node>> connectedSubGraphs = getConnectedSubGraphs();
-        if(connectedSubGraphs.size() > 1){
-            int x = 5;
-        }
-        for(List<Node> subGraph : connectedSubGraphs){
-            List<Node> subGraphCircle = getCircleRecursive(List.of(subGraph.get(0)));
-            if(subGraphCircle != null) return subGraphCircle;
-        }*/
-
         //No circle found
         return null;
     }
-
-    /*
-    private List<List<Node>> getConnectedSubGraphs(){
-        List<List<Node>> result = new ArrayList<>();
-        List<Node> allNodesInSolution = new ArrayList<>();
-
-        while(allNodesInSolution.size() < nodes.size()){
-            //Find unconnected node
-            Node unconnectedNode = nodes.stream().filter(x -> !allNodesInSolution.contains(x)).findFirst().get();
-            List<Node> connectedNodes = getAllConnectedNodes(unconnectedNode);
-            result.add(connectedNodes);
-            allNodesInSolution.addAll(connectedNodes);
-
-            if(allNodesInSolution.size() < nodes.size()){
-                int x = 5;
-            }
-        }
-
-        return result;
-    }
-
-    private List<Node> getAllConnectedNodes(Node node){
-        getAllConnectedNodesRecursive(node);
-        return testList;
-    }
-
-    public List<Node> testList = new ArrayList<>();
-
-    private void getAllConnectedNodesRecursive(Node node){
-        if(testList.contains(node)) return;
-        else testList.add(node);
-
-        for(Arc arc : getOutArcs(node)){
-            getAllConnectedNodesRecursive(arc.to);
-        }
-    }*/
 
     private List<Node> getCircleRecursive(List<Node> path){
 
@@ -171,21 +125,4 @@ public class Graph {
         return String.join("\n", nodesStrings);
     }
 
-    public Graph copy(){
-        Graph graph = new Graph(this.name);
-        List<Node> nodes = new ArrayList<>();
-        for(Node neighbour : nodes){
-            //nodes.add(neighbour.copy())
-        }
-        graph.nodes = new ArrayList<>(nodes);
-        return graph;
-    }
-
-    public void enableNode(Node node) {
-        node.unDelete();
-    }
-
-    public void disableNode(Node node) {
-        node.delete();
-    }
 }

@@ -28,7 +28,7 @@ public abstract class Log {
 
         //Console Log
         if(type == LogType.Console || type == LogType.File){
-            System.out.println(logMessage);
+            System.out.print(logMessage);
         }
 
         //Log File

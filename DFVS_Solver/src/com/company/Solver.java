@@ -15,10 +15,10 @@ public class Solver {
         //Loop
         for(Node node : cycle.subList(0, cycle.size())){
             Log.log(Log.LogDetail.Unimportant, graph.name, "Removing " + node.label + " from graph");
-            graph.disableNode(node);
+            node.delete();
             List<Node> S = dfvs_branch(graph, k - 1);
             Log.log(Log.LogDetail.Unimportant, graph.name, "Adding " + node.label + " back to graph");
-            graph.enableNode(node);
+            node.unDelete();
             if(S != null){
                 S.add(node);
                 return S;
