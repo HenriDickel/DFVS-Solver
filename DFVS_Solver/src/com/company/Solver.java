@@ -16,17 +16,21 @@ public abstract class Solver {
 
         //Break
         if(k < 0) return null;
+
         if(graph.isDAG()) return new ArrayList<>();
 
         //Next Circle
         List<Node> cycle = graph.getCircle();
 
+        // Break to skip the redundant dfvs_branch()-call when k = 0
+        if(k <= 0) return null;
+
         //Loop
         for(Node node : cycle.subList(0, cycle.size())){
-            Log.log(Log.LogDetail.Unimportant, graph.name, "Removing " + node.label + " from graph");
+            Log.log(Log.LogDetail.Unimportant, graph.name, "Removing " + node.label + " from graph with k = " + k);
             node.delete();
             List<Node> S = dfvs_branch(graph, k - 1);
-            Log.log(Log.LogDetail.Unimportant, graph.name, "Adding " + node.label + " back to graph");
+            Log.log(Log.LogDetail.Unimportant, graph.name, "Adding " + node.label + " back to graph with k = " + k);
             node.unDelete();
             if(S != null){
                 S.add(node);

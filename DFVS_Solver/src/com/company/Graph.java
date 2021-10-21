@@ -75,7 +75,8 @@ public class Graph {
 
         Log.log(Log.LogDetail.Unimportant, name, "Get Circle...");
 
-        for(Node node : nodes){
+        for(Node node : getActiveNodes()){
+            Log.log(Log.LogDetail.Unimportant, name, "Checking node " + node.label + "...");
             List<Node> subGraphCircle = getCircleRecursive(List.of(node));
             if(subGraphCircle != null){
                 Log.log(Log.LogDetail.Normal, name, "Found Circle: " + subGraphCircle.stream().map(x -> x.label).collect(Collectors.joining(",")));
@@ -114,9 +115,13 @@ public class Graph {
         return null;
     }
 
+    private List<Node> getActiveNodes() {
+        return nodes.stream().filter(node -> !node.deleted).collect(Collectors.toList());
+    }
+
     @Override
     public String toString() {
-        List<String> nodesStrings = nodes.stream().map(Object::toString).collect(Collectors.toList());
+        List<String> nodesStrings = getActiveNodes().stream().map(Object::toString).collect(Collectors.toList());
         return String.join("\n", nodesStrings);
     }
 
