@@ -1,7 +1,6 @@
 package com.company;
 
 import java.util.List;
-import java.util.Set;
 
 public class Main {
 
@@ -9,8 +8,13 @@ public class Main {
 
         //LogLevel
         Log.Clear();
-        Log.type = Log.LogType.File;
+        Log.type = Log.LogType.Console;
         Log.detail = Log.LogDetail.Important;
+
+        //Custom Tests
+        //Solver.dfvs_solve(TestCreator.createSimpleDAG());
+        //Solver.dfvs_solve(TestCreator.createSimpleNonDAG());
+        //Solver.dfvs_solve(TestCreator.createK3Test());
 
         /*
         List<Graph> Synthetics = GraphFileManager.CreateFromFolder("src/com/company/synthetic");
@@ -25,27 +29,7 @@ public class Main {
             GraphFileManager.SaveSolution("src/com/company/solutions/complex/" + x.name, nodes);
         } );
 
-        //Graph K3Test = TestCreator.createK3Test();
-        //Solver.dfvs_solve(K3Test);
 
-        /*
-        Graph DAG = TestCreator.createSimpleDAG();
-        Graph NonDAG = TestCreator.createSimpleNonDAG();
 
-        System.out.println("DAG: ");
-        System.out.println(DAG);
-        System.out.println("Is DAG? " + DAG.isDAG());
-
-        System.out.println("");
-
-        System.out.println("Non DAG: ");
-        System.out.println(NonDAG);
-        System.out.println("Is DAG? " + NonDAG.isDAG());
-        System.out.println("Circle: " + NonDAG.getCircle().toString());
-
-        System.out.println("");
-
-        System.out.println(Solver.dfvs_solve(NonDAG));
-*/
     }
 }

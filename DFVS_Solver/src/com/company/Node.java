@@ -7,8 +7,9 @@ import java.util.stream.Collectors;
 public class Node {
 
         public String label;
-        public final List<Node> outNeighbours;
         public boolean deleted = false;
+
+        private final List<Node> outNeighbours;
 
         public Node(String label){
             this.label = label;

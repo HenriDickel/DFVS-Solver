@@ -2,7 +2,7 @@ package com.company;
 
 import java.util.*;
 
-public class Solver {
+public abstract class Solver {
 
     private static List<Node> dfvs_branch(Graph graph, int k){
         //Break

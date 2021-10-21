@@ -28,15 +28,6 @@ public class Graph {
         a.addNeighbour(b);
     }
 
-    public Graph removeNode(Node node) {
-        //node.delete();
-        for(Node node1 : nodes){
-           node1.outNeighbours.remove(node);
-        }
-        nodes.remove(node);
-        return this;
-    }
-
     public boolean isDAG(){
         Log.log(Log.LogDetail.Unimportant, name, "Test if graph is DAG...");
 
@@ -88,7 +79,7 @@ public class Graph {
             }
         }
 
-        //No circle found
+        //No circle found - ERROR
         return null;
     }
 
