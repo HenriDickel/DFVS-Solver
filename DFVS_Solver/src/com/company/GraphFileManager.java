@@ -10,10 +10,10 @@ import java.util.stream.Stream;
 
 public abstract class GraphFileManager {
 
-    private static Graph CreateFromFile(String path, String filename){
+    public static Graph CreateFromFile(String path, String filename){
         Graph graph = new Graph(filename);
 
-        try (Stream<String> stream = Files.lines(Paths.get(path + "/" + filename))) {
+        try (Stream<String> stream = Files.lines(Paths.get(path + filename))) {
             stream.forEach(str -> {
                 if(str.startsWith("#")) return;
                 if(str.startsWith("%")) return;
@@ -37,7 +37,7 @@ public abstract class GraphFileManager {
 
         List<Graph> graphs = new ArrayList<>();
         for (File listOfFile : listOfFiles) {
-            graphs.add(CreateFromFile(path, listOfFile.getName()));
+            graphs.add(CreateFromFile(path + "/" , listOfFile.getName()));
         }
         return graphs;
     }

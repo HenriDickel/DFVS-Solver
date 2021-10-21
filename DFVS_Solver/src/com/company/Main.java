@@ -6,9 +6,19 @@ public class Main {
 
     public static void main(String[] args) {
 
+        //As args
+        if(args.length > 0){
+            String fileName = args[0];
+            Graph graph = GraphFileManager.CreateFromFile("", fileName);
+            List<Node> nodes = Solver.dfvs_solve(graph);
+            GraphFileManager.SaveSolution("Solution_" + fileName, nodes);
+            return;
+        }
+
+
         //LogLevel
         Log.Clear();
-        Log.type = Log.LogType.Console;
+        Log.type = Log.LogType.File;
         Log.detail = Log.LogDetail.Important;
 
         //Custom Tests
