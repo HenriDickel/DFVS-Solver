@@ -24,7 +24,7 @@ public abstract class Log {
 
         //Create log string
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS");
-        String logMessage = "[" + LocalDateTime.now().format(dtf) + "]" +  " " + graphName + ": " + message + "\n";
+        String logMessage = "[" + LocalDateTime.now().format(dtf) + "]" +  " " + graphName + ": \t" + message + "\n";
 
         //Console Log
         if(type == LogType.Console || type == LogType.File){

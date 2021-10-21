@@ -1,10 +1,19 @@
 package com.company;
 
+import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
 import java.util.*;
 
 public abstract class Solver {
 
-    private static List<Node> dfvs_branch(Graph graph, int k){
+    public static LocalDateTime startTime;
+
+    private static List<Node> dfvs_branch(Graph graph, int k) throws Exception {
+
+        //Timer
+        //if(ChronoUnit.MINUTES.between(startTime, LocalDateTime.now()) > 1) throw new Exception();
+        if(ChronoUnit.SECONDS.between(startTime, LocalDateTime.now()) > 10) throw new Exception();
+
         //Break
         if(k < 0) return null;
         if(graph.isDAG()) return new ArrayList<>();
@@ -28,16 +37,29 @@ public abstract class Solver {
     }
 
     public static List<Node> dfvs_solve(Graph graph){
-        Log.log(Log.LogDetail.Important, graph.name, "Start solving for: \n" + graph);
+        Log.log(Log.LogDetail.Unimportant, graph.name, "Start solving for: \n" + graph);
+
+        //Timer
+        startTime = LocalDateTime.now();
 
         int k = 0;
         List<Node> S = null;
         while(S == null){
             Log.log(Log.LogDetail.Normal, graph.name, "Try solving with k = " + k);
-            S = dfvs_branch(graph, k);
+            try{
+                S = dfvs_branch(graph, k);
+            }
+           catch (Exception e){
+               Log.log(Log.LogDetail.Important, graph.name,"Failed with k = " + (k - 1) + " because of the timelimit");
+               return new ArrayList<>();
+           }
             k++;
         }
-        Log.log(Log.LogDetail.Important, graph.name,"Success with k = " + (k - 1) + "\n");
+
+        long seconds = ChronoUnit.SECONDS.between(startTime, LocalDateTime.now());
+        long millis = ChronoUnit.MILLIS.between(startTime, LocalDateTime.now());
+        String timer = seconds == 0 ? millis + "ms" : seconds + "." + millis + "s";
+        Log.log(Log.LogDetail.Important, graph.name,"Success with k = " + (k - 1) + " in " + timer);
         return S;
     }
 
