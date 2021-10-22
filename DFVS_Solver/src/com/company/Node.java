@@ -11,6 +11,8 @@ public class Node {
 
         private final List<Node> outNeighbours;
 
+        public int visited;
+
         public Node(String label){
             this.label = label;
             outNeighbours = new ArrayList<>();

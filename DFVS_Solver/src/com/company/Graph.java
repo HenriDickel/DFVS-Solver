@@ -2,7 +2,6 @@ package com.company;
 
 import java.util.*;
 import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 
 public class Graph {
 
@@ -13,6 +12,10 @@ public class Graph {
 
     public Graph(String name) {
         this.name = name;
+    }
+
+    public void unvisitAllNodes() {
+        nodes.forEach(node -> node.visited = -1);
     }
 
     public void addArc(String from, String to){
@@ -66,56 +69,7 @@ public class Graph {
         return false;
     }
 
-
-
-
-
-
-    public List<Node> getCircle(){
-
-        Log.log(Log.LogDetail.Unimportant, name, "Get Circle...");
-
-        for(Node node : getActiveNodes()){
-            Log.log(Log.LogDetail.Unimportant, name, "Checking node " + node.label + "...");
-            List<Node> subGraphCircle = getCircleRecursive(List.of(node));
-            if(subGraphCircle != null){
-                Log.log(Log.LogDetail.Normal, name, "Found Circle: " + subGraphCircle.stream().map(x -> x.label).collect(Collectors.joining(",")));
-                return subGraphCircle;
-            }
-        }
-
-        //No circle found - ERROR
-        return null;
-    }
-
-    private List<Node> getCircleRecursive(List<Node> path){
-
-        //Check if element is in path twice
-        if(path.size() != Arrays.stream(path.toArray()).distinct().count()){
-            Collections.reverse(path);
-            for(int i = 1; i < path.size(); i++){
-                if(path.get(0) == path.get(i)){
-                    return path.subList(0, i);
-                }
-            }
-        }
-
-        //Get all out going arcs
-        List<Node> outArcs = path.get(path.size() - 1).getOutNeighbours();
-
-        //Next iteration
-        for(Node arc : outArcs){
-            List<Node> copyPath = new ArrayList<>(path);
-            copyPath.add(arc);
-            List<Node> recCircle = getCircleRecursive(copyPath);
-            if(recCircle != null) return recCircle;
-        }
-
-        //No circle
-        return null;
-    }
-
-    private List<Node> getActiveNodes() {
+    public List<Node> getActiveNodes() {
         return nodes.stream().filter(node -> !node.deleted).collect(Collectors.toList());
     }
 

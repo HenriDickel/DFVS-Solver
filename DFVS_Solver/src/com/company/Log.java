@@ -14,6 +14,13 @@ public abstract class Log {
     public static LogType type = LogType.Console;
     public static LogDetail detail = LogDetail.Important;
 
+    private static int recursionLevel;
+
+    public static void log(LogDetail detailLevel, String graphName, int recursionLevel, String message) {
+        Log.recursionLevel = recursionLevel;
+        log(detailLevel, graphName, message);
+    }
+
     public static void log(LogDetail detailLevel, String graphName, String message){
 
         //Don't Log
@@ -24,7 +31,8 @@ public abstract class Log {
 
         //Create log string
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS");
-        String logMessage = "[" + LocalDateTime.now().format(dtf) + "]" +  " " + graphName + ": \t" + message + "\n";
+        String recursionGap = new String(new char[recursionLevel]).replace("\0", "  ⋅  ");
+        String logMessage = "[" + LocalDateTime.now().format(dtf) + "]" +  " " + graphName + ": \t" + recursionGap + message + "\n";
 
         //Console Log
         if(type == LogType.Console || type == LogType.File){

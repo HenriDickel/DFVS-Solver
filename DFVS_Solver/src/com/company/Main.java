@@ -11,7 +11,7 @@ public class Main {
 
         // Custom Tests
         if(false) {
-            solveTests();
+            solveSelectedGraphs();
             return;
         }
 
@@ -52,10 +52,22 @@ public class Main {
     // For testing the performance with a few graphs, that take a while
     public static void solveSelectedGraphs() {
         List<Graph> graphs = new ArrayList<>();
-        graphs.add(GraphFileManager.CreateFromFile("src/com/company/synthetic/", "synth-n_30-m_117-k_10-p_0.2.txt"));
         graphs.add(GraphFileManager.CreateFromFile("src/com/company/synthetic/", "synth-n_30-m_111-k_8-p_0.2.txt"));
-        graphs.add(GraphFileManager.CreateFromFile("src/com/company/synthetic/", "synth-n_40-m_114-k_10-p_0.1.txt"));
+        graphs.add(GraphFileManager.CreateFromFile("src/com/company/synthetic/", "synth-n_30-m_117-k_10-p_0.2.txt"));
         graphs.add(GraphFileManager.CreateFromFile("src/com/company/synthetic/", "synth-n_40-m_114-k_15-p_0.1.txt"));
+        graphs.add(GraphFileManager.CreateFromFile("src/com/company/synthetic/", "synth-n_40-m_192-k_10-p_0.2.txt"));
+        graphs.add(GraphFileManager.CreateFromFile("src/com/company/synthetic/", "synth-n_40-m_192-k_15-p_0.2.txt"));
+        graphs.add(GraphFileManager.CreateFromFile("src/com/company/synthetic/", "synth-n_40-m_203-k_8-p_0.2.txt"));
+        graphs.add(GraphFileManager.CreateFromFile("src/com/company/synthetic/", "synth-n_50-m_154-k_8-p_0.1.txt"));
+        graphs.add(GraphFileManager.CreateFromFile("src/com/company/synthetic/", "synth-n_50-m_159-k_10-p_0.1.txt"));
+        graphs.add(GraphFileManager.CreateFromFile("src/com/company/synthetic/", "synth-n_50-m_192-k_20-p_0.1.txt"));
+        graphs.add(GraphFileManager.CreateFromFile("src/com/company/synthetic/", "synth-n_50-m_195-k_15-p_0.1.txt"));
+        graphs.add(GraphFileManager.CreateFromFile("src/com/company/synthetic/", "synth-n_50-m_302-k_6-p_0.2.txt"));
+        graphs.add(GraphFileManager.CreateFromFile("src/com/company/synthetic/", "synth-n_50-m_320-k_15-p_0.2.txt"));
+        graphs.add(GraphFileManager.CreateFromFile("src/com/company/synthetic/", "synth-n_50-m_327-k_10-p_0.2.txt"));
+        graphs.add(GraphFileManager.CreateFromFile("src/com/company/synthetic/", "synth-n_50-m_334-k_8-p_0.2.txt"));
+        graphs.add(GraphFileManager.CreateFromFile("src/com/company/synthetic/", "synth-n_50-m_357-k_20-p_0.2.txt"));
+
         graphs.forEach(graph -> {
             List<Node> nodes = Solver.dfvs_solve(graph);
             GraphFileManager.SaveSolution("src/com/company/solutions/synthetic/" + graph.name, nodes);
@@ -64,10 +76,13 @@ public class Main {
     }
 
     public static void solveTests() {
-        //Solver.dfvs_solve(TestCreator.createSimpleDAG());
-        //Solver.dfvs_solve(TestCreator.createSimpleNonDAG());
-        //Solver.dfvs_solve(TestCreator.createComplexNonDAG());
+        Solver.dfvs_solve(TestCreator.createSimpleDAG());
+        Solver.dfvs_solve(TestCreator.createSimpleNonDAG());
+        Solver.dfvs_solve(TestCreator.createComplexNonDAG());
         Solver.dfvs_solve(TestCreator.createK3Test());
+        Solver.dfvs_solve(TestCreator.createSimpleNonDAG2());
+        Solver.dfvs_solve(TestCreator.createSimpleNonDAG3());
+
     }
 
     public static boolean verify(String graphName, String inputGraph, String solutionPath){
@@ -78,7 +93,7 @@ public class Main {
 
             BufferedReader in = new BufferedReader(new InputStreamReader(p.getInputStream()));
             String ret = in.readLine();
-            Log.log(Log.LogDetail.Important, graphName, ret != null ? "Verified" : "Not Verified");
+            Log.log(Log.LogDetail.Important, graphName, 0, ret != null ? "Verified" : "Not Verified");
         }catch(Exception e){e.printStackTrace();}
 
         return false;
