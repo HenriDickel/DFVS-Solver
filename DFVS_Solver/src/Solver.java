@@ -1,6 +1,5 @@
 import log.Log;
 
-import com.company.util.GraphUtils;
 
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
@@ -13,9 +12,7 @@ public abstract class Solver {
     private static List<Node> dfvs_branch(Graph graph, int k, int recursionLevel) throws TimeoutException {
 
         //Timer
-        if(ChronoUnit.MINUTES.between(startTime, LocalDateTime.now()) > 1) throw new TimeoutException("The programm stopped after 60 seconds");
-        ää
-        if(ChronoUnit.MINUTES.between(startTime, LocalDateTime.now()) == 3) throw new Exception();
+        if(ChronoUnit.MINUTES.between(startTime, LocalDateTime.now()) == 3) throw new TimeoutException("The programm stopped after 60 seconds");
         //if(ChronoUnit.SECONDS.between(startTime, LocalDateTime.now()) > 10) throw new Exception();
 
         //Break
@@ -70,11 +67,9 @@ public abstract class Solver {
         long seconds = ChronoUnit.SECONDS.between(startTime, LocalDateTime.now());
         long millis = ChronoUnit.MILLIS.between(startTime, LocalDateTime.now());
         String timer = seconds == 0 ? millis + "ms" : seconds + "." + millis + "s";
-        Log.log(Log.LogDetail.Important, graph.name,"Success with k = " + (k - 1) + " in " + timer);
-        Log.TimeLog((k - 1), millis);
-        ää
         Log.log(Log.LogDetail.Important, graph.name, 0,"Success with k = " + (k - 1) + " in " + timer);
         Log.log(Log.LogDetail.Normal, graph.name, 0,"Nodes to remove: " + S);
+        Log.TimeLog((k - 1), millis);
         return S;
     }
 

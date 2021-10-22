@@ -16,7 +16,7 @@ public class Main {
     public static void main(String[] args) {
 
         // Custom Tests
-        if(false) {
+        if(true) {
             solveSelectedGraphs();
             return;
         }
