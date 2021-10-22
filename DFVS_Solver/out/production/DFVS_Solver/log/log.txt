@@ -1,0 +1,116 @@
+[2021-10-22 12:15:36.416] biology-n_12-m_33-p_0.5-15: 	Success with k = 3 in 15ms
+[2021-10-22 12:15:36.473] biology-n_12-m_33-p_0.5-15: 	Verified
+[2021-10-22 12:15:36.476] biology-n_12-m_33-p_0.75-15: 	Success with k = 3 in 2ms
+[2021-10-22 12:15:36.521] biology-n_12-m_33-p_0.75-15: 	Verified
+[2021-10-22 12:15:36.527] biology-n_12-m_33-p_0.9-15: 	Success with k = 3 in 4ms
+[2021-10-22 12:15:36.570] biology-n_12-m_33-p_0.9-15: 	Verified
+[2021-10-22 12:15:36.579] biology-n_12-m_43-p_0.5-25: 	Success with k = 4 in 8ms
+[2021-10-22 12:15:36.625] biology-n_12-m_43-p_0.5-25: 	Verified
+[2021-10-22 12:15:36.628] biology-n_12-m_43-p_0.75-25: 	Success with k = 3 in 1ms
+[2021-10-22 12:15:36.670] biology-n_12-m_43-p_0.75-25: 	Verified
+[2021-10-22 12:15:36.671] biology-n_12-m_43-p_0.9-25: 	Success with k = 1 in 0ms
+[2021-10-22 12:15:36.714] biology-n_12-m_43-p_0.9-25: 	Verified
+[2021-10-22 12:15:36.715] biology-n_12-m_45-p_0.5-19: 	Success with k = 3 in 1ms
+[2021-10-22 12:15:36.757] biology-n_12-m_45-p_0.5-19: 	Verified
+[2021-10-22 12:15:36.758] biology-n_12-m_45-p_0.75-19: 	Success with k = 3 in 1ms
+[2021-10-22 12:15:36.800] biology-n_12-m_45-p_0.75-19: 	Verified
+[2021-10-22 12:15:36.801] biology-n_12-m_45-p_0.9-19: 	Success with k = 1 in 0ms
+[2021-10-22 12:15:36.843] biology-n_12-m_45-p_0.9-19: 	Verified
+[2021-10-22 12:15:36.844] biology-n_13-m_39-p_0.5-4: 	Success with k = 2 in 0ms
+[2021-10-22 12:15:36.886] biology-n_13-m_39-p_0.5-4: 	Verified
+[2021-10-22 12:15:36.888] biology-n_13-m_39-p_0.75-4: 	Success with k = 3 in 1ms
+[2021-10-22 12:15:36.927] biology-n_13-m_39-p_0.75-4: 	Verified
+[2021-10-22 12:15:36.929] biology-n_13-m_39-p_0.9-4: 	Success with k = 4 in 2ms
+[2021-10-22 12:15:36.968] biology-n_13-m_39-p_0.9-4: 	Verified
+[2021-10-22 12:15:36.971] biology-n_13-m_51-p_0.5-22: 	Success with k = 4 in 2ms
+[2021-10-22 12:15:37.013] biology-n_13-m_51-p_0.5-22: 	Verified
+[2021-10-22 12:15:37.014] biology-n_13-m_51-p_0.75-22: 	Success with k = 3 in 0ms
+[2021-10-22 12:15:37.059] biology-n_13-m_51-p_0.75-22: 	Verified
+[2021-10-22 12:15:37.061] biology-n_13-m_51-p_0.9-22: 	Success with k = 3 in 2ms
+[2021-10-22 12:15:37.105] biology-n_13-m_51-p_0.9-22: 	Verified
+[2021-10-22 12:15:37.131] biology-n_16-m_79-p_0.5-3: 	Success with k = 6 in 26ms
+[2021-10-22 12:15:37.174] biology-n_16-m_79-p_0.5-3: 	Verified
+[2021-10-22 12:15:37.183] biology-n_16-m_79-p_0.75-3: 	Success with k = 6 in 9ms
+[2021-10-22 12:15:37.225] biology-n_16-m_79-p_0.75-3: 	Verified
+[2021-10-22 12:15:37.227] biology-n_16-m_79-p_0.9-3: 	Success with k = 4 in 1ms
+[2021-10-22 12:15:37.267] biology-n_16-m_79-p_0.9-3: 	Verified
+[2021-10-22 12:15:37.293] biology-n_17-m_89-p_0.5-10: 	Success with k = 6 in 25ms
+[2021-10-22 12:15:37.337] biology-n_17-m_89-p_0.5-10: 	Verified
+[2021-10-22 12:15:37.429] biology-n_17-m_89-p_0.75-10: 	Success with k = 6 in 92ms
+[2021-10-22 12:15:37.470] biology-n_17-m_89-p_0.75-10: 	Verified
+[2021-10-22 12:15:37.476] biology-n_17-m_89-p_0.9-10: 	Success with k = 4 in 5ms
+[2021-10-22 12:15:37.517] biology-n_17-m_89-p_0.9-10: 	Verified
+[2021-10-22 12:15:37.665] biology-n_19-m_99-p_0.5-20: 	Success with k = 7 in 146ms
+[2021-10-22 12:15:37.707] biology-n_19-m_99-p_0.5-20: 	Verified
+[2021-10-22 12:15:37.776] biology-n_19-m_99-p_0.75-20: 	Success with k = 6 in 69ms
+[2021-10-22 12:15:37.818] biology-n_19-m_99-p_0.75-20: 	Verified
+[2021-10-22 12:15:37.820] biology-n_19-m_99-p_0.9-20: 	Success with k = 3 in 0ms
+[2021-10-22 12:15:37.860] biology-n_19-m_99-p_0.9-20: 	Verified
+[2021-10-22 12:15:42.072] biology-n_20-m_125-p_0.5-24: 	Success with k = 8 in 4.4209s
+[2021-10-22 12:15:42.112] biology-n_20-m_125-p_0.5-24: 	Verified
+[2021-10-22 12:15:44.365] biology-n_20-m_125-p_0.5-7: 	Success with k = 9 in 2.2252s
+[2021-10-22 12:15:44.406] biology-n_20-m_125-p_0.5-7: 	Verified
+[2021-10-22 12:15:46.424] biology-n_20-m_125-p_0.75-24: 	Success with k = 9 in 2.2017s
+[2021-10-22 12:15:46.465] biology-n_20-m_125-p_0.75-24: 	Verified
+[2021-10-22 12:15:46.473] biology-n_20-m_125-p_0.75-7: 	Success with k = 5 in 8ms
+[2021-10-22 12:15:46.513] biology-n_20-m_125-p_0.75-7: 	Verified
+[2021-10-22 12:15:46.514] biology-n_20-m_125-p_0.9-24: 	Success with k = 3 in 1ms
+[2021-10-22 12:15:46.553] biology-n_20-m_125-p_0.9-24: 	Verified
+[2021-10-22 12:15:46.555] biology-n_20-m_125-p_0.9-7: 	Success with k = 4 in 2ms
+[2021-10-22 12:15:46.593] biology-n_20-m_125-p_0.9-7: 	Verified
+[2021-10-22 12:15:46.597] biology-n_22-m_76-p_0.5-9: 	Success with k = 4 in 3ms
+[2021-10-22 12:15:46.637] biology-n_22-m_76-p_0.5-9: 	Verified
+[2021-10-22 12:15:46.643] biology-n_22-m_76-p_0.75-9: 	Success with k = 4 in 6ms
+[2021-10-22 12:15:46.684] biology-n_22-m_76-p_0.75-9: 	Verified
+[2021-10-22 12:15:46.686] biology-n_22-m_76-p_0.9-9: 	Success with k = 3 in 2ms
+[2021-10-22 12:15:46.727] biology-n_22-m_76-p_0.9-9: 	Verified
+[2021-10-22 12:17:07.019] biology-n_23-m_166-p_0.5-17: 	Success with k = 12 in 80.80291s
+[2021-10-22 12:17:07.060] biology-n_23-m_166-p_0.5-17: 	Verified
+[2021-10-22 12:17:12.186] biology-n_23-m_166-p_0.75-17: 	Success with k = 10 in 5.5126s
+[2021-10-22 12:17:12.227] biology-n_23-m_166-p_0.75-17: 	Verified
+[2021-10-22 12:17:12.252] biology-n_23-m_166-p_0.9-17: 	Success with k = 6 in 25ms
+[2021-10-22 12:17:12.293] biology-n_23-m_166-p_0.9-17: 	Verified
+[2021-10-22 12:19:12.294] biology-n_25-m_231-p_0.5-6: 	Failed with k = 9 because of the timelimit
+[2021-10-22 12:19:12.338] biology-n_25-m_231-p_0.5-6: 	Not Verified
+[2021-10-22 12:21:12.339] biology-n_25-m_231-p_0.75-6: 	Failed with k = 9 because of the timelimit
+[2021-10-22 12:21:12.383] biology-n_25-m_231-p_0.75-6: 	Not Verified
+[2021-10-22 12:21:13.905] biology-n_25-m_231-p_0.9-6: 	Success with k = 8 in 1.1521s
+[2021-10-22 12:21:13.944] biology-n_25-m_231-p_0.9-6: 	Verified
+[2021-10-22 12:23:13.946] biology-n_28-m_163-p_0.5-11: 	Failed with k = 9 because of the timelimit
+[2021-10-22 12:23:14.000] biology-n_28-m_163-p_0.5-11: 	Not Verified
+[2021-10-22 12:23:22.119] biology-n_28-m_163-p_0.75-11: 	Success with k = 8 in 8.8117s
+[2021-10-22 12:23:22.160] biology-n_28-m_163-p_0.75-11: 	Verified
+[2021-10-22 12:23:22.218] biology-n_28-m_163-p_0.9-11: 	Success with k = 5 in 57ms
+[2021-10-22 12:23:22.259] biology-n_28-m_163-p_0.9-11: 	Verified
+[2021-10-22 12:25:22.259] biology-n_28-m_249-p_0.5-8: 	Failed with k = 9 because of the timelimit
+[2021-10-22 12:25:22.314] biology-n_28-m_249-p_0.5-8: 	Not Verified
+[2021-10-22 12:27:22.315] biology-n_28-m_249-p_0.75-8: 	Failed with k = 9 because of the timelimit
+[2021-10-22 12:27:22.358] biology-n_28-m_249-p_0.75-8: 	Not Verified
+[2021-10-22 12:27:22.425] biology-n_28-m_249-p_0.9-8: 	Success with k = 6 in 66ms
+[2021-10-22 12:27:22.466] biology-n_28-m_249-p_0.9-8: 	Verified
+[2021-10-22 12:28:55.968] biology-n_29-m_153-p_0.5-21: 	Success with k = 11 in 93.93473s
+[2021-10-22 12:28:56.009] biology-n_29-m_153-p_0.5-21: 	Verified
+[2021-10-22 12:30:13.177] biology-n_29-m_153-p_0.75-21: 	Success with k = 11 in 77.77167s
+[2021-10-22 12:30:13.219] biology-n_29-m_153-p_0.75-21: 	Verified
+[2021-10-22 12:30:13.371] biology-n_29-m_153-p_0.9-21: 	Success with k = 5 in 151ms
+[2021-10-22 12:30:13.411] biology-n_29-m_153-p_0.9-21: 	Verified
+[2021-10-22 12:32:13.411] biology-n_30-m_287-p_0.5-5: 	Failed with k = 8 because of the timelimit
+[2021-10-22 12:32:13.454] biology-n_30-m_287-p_0.5-5: 	Not Verified
+[2021-10-22 12:34:13.454] biology-n_30-m_287-p_0.75-5: 	Failed with k = 9 because of the timelimit
+[2021-10-22 12:34:13.514] biology-n_30-m_287-p_0.75-5: 	Not Verified
+[2021-10-22 12:35:37.171] biology-n_30-m_287-p_0.9-5: 	Success with k = 10 in 83.83656s
+[2021-10-22 12:35:37.213] biology-n_30-m_287-p_0.9-5: 	Verified
+[2021-10-22 12:37:37.214] biology-n_35-m_315-p_0.5-18: 	Failed with k = 9 because of the timelimit
+[2021-10-22 12:37:37.257] biology-n_35-m_315-p_0.5-18: 	Not Verified
+[2021-10-22 12:39:37.258] biology-n_35-m_315-p_0.75-18: 	Failed with k = 8 because of the timelimit
+[2021-10-22 12:39:37.306] biology-n_35-m_315-p_0.75-18: 	Not Verified
+[2021-10-22 12:41:37.307] biology-n_35-m_315-p_0.9-18: 	Failed with k = 8 because of the timelimit
+[2021-10-22 12:41:37.366] biology-n_35-m_315-p_0.9-18: 	Not Verified
+[2021-10-22 12:43:37.367] biology-n_36-m_219-p_0.5-12: 	Failed with k = 9 because of the timelimit
+[2021-10-22 12:43:37.411] biology-n_36-m_219-p_0.5-12: 	Not Verified
+[2021-10-22 12:45:37.411] biology-n_36-m_219-p_0.75-12: 	Failed with k = 9 because of the timelimit
+[2021-10-22 12:45:37.460] biology-n_36-m_219-p_0.75-12: 	Not Verified
+[2021-10-22 12:45:43.150] biology-n_36-m_219-p_0.9-12: 	Success with k = 9 in 5.5688s
+[2021-10-22 12:45:43.191] biology-n_36-m_219-p_0.9-12: 	Verified
+[2021-10-22 12:47:43.193] biology-n_42-m_297-p_0.5-23: 	Failed with k = 8 because of the timelimit
+[2021-10-22 12:47:43.237] biology-n_42-m_297-p_0.5-23: 	Not Verified
