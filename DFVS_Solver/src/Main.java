@@ -22,7 +22,7 @@ public class Main {
             components = Preprocessing.findAllCycles(TestCreator.createSimpleNonDAG2());
             components = Preprocessing.findAllCycles(TestCreator.createSimpleNonDAG3());
             components = Preprocessing.findAllCycles(TestCreator.createSimpleNonDAG4());
-            components = Preprocessing.findAllCycles(TestCreator.createComplexNonDAG());
+            components = Preprocessing.findAllCycles(TestCreator.createSimpleNonDAG5());
             components = Preprocessing.findAllCycles(TestCreator.createK3Test());
 
             //solveSelectedGraphs();

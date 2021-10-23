@@ -148,6 +148,35 @@ public abstract class TestCreator {
         return result;
     }
 
+
+    /**
+     * Graph with circles A-B-C-D and A-B-E
+     */
+    public static Graph createSimpleNonDAG5(){
+        Graph result = new Graph("S8");
+
+        Node a = new Node("A");
+        Node b = new Node("B");
+        Node c = new Node("C");
+        Node d = new Node("D");
+        Node e = new Node("E");
+
+        a.addNeighbour(b);
+        b.addNeighbour(c);
+        c.addNeighbour(d);
+        d.addNeighbour(a);
+        b.addNeighbour(e);
+        e.addNeighbour(a);
+
+        result.nodes.add(a);
+        result.nodes.add(b);
+        result.nodes.add(c);
+        result.nodes.add(d);
+        result.nodes.add(e);
+
+        return result;
+    }
+
     public static Graph createComplexNonDAG(){
         Graph result = new Graph("S3");
 
