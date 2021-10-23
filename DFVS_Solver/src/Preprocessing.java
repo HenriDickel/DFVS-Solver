@@ -89,39 +89,4 @@ public abstract class Preprocessing {
             node.visitIndex = -1;
         }
     }
-
-    private static List<Node> visitNodeInComponent(Node node) {
-
-        if(node.visitIndex != -1) {
-            List<Node> pathToStart = new ArrayList<>();
-            pathToStart.add(node);
-            cycleStartIndex = node.visitIndex;
-            return pathToStart;
-        } else {
-            node.visitIndex = index;
-            index++;
-
-            for (Node out : node.getOutNeighbours()) {
-                List<Node> pathToStart = visitNodeInComponent(out);
-                if(pathToStart != null) {
-                    if(node.visitIndex > cycleStartIndex) {
-                        pathToStart.add(node);
-                        //node.visited = -1;
-                        return pathToStart;
-                    } else if(node.visitIndex == cycleStartIndex) {
-                        cycles.add(pathToStart);
-                        //node.visited = -1;
-                        return null;
-                    } else {
-                        //node.visited = -1;
-                        return pathToStart;
-                    }
-                }
-
-            }
-
-            node.visitIndex = -1;
-            return null;
-        }
-    }
 }
