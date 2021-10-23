@@ -17,7 +17,21 @@ public class Main {
 
         // Custom Tests
         if(true) {
-            solveSelectedGraphs();
+
+            List<List<Node>> components = TarjanAlgorithm.findComponents(TestCreator.createSimpleDAG());
+            System.out.println("Simple DAG: ");
+            components.forEach(System.out::println);
+            components = TarjanAlgorithm.findComponents(TestCreator.createSimpleNonDAG());
+            System.out.println("Simple Non-DAG: ");
+            components.forEach(System.out::println);
+            components = TarjanAlgorithm.findComponents(TestCreator.createComplexNonDAG());
+            System.out.println("Complex Non-DAG: ");
+            components.forEach(System.out::println);
+            components = TarjanAlgorithm.findComponents(TestCreator.createK3Test());
+            System.out.println("K3: ");
+            components.forEach(System.out::println);
+
+            //solveSelectedGraphs();
             return;
         }
 

@@ -11,6 +11,11 @@ public class Node {
 
         public int visited;
 
+        // Attributes for Tarjan's Algorithm
+        public int index;
+        public int lowLink;
+        public boolean onStack;
+
         public Node(String label){
             this.label = label;
             outNeighbours = new ArrayList<>();
@@ -34,7 +39,7 @@ public class Node {
 
         @Override
         public String toString(){
-            String nodeString = "[" + label + "]";
+            String nodeString = label;
             List<String> outNeighboursStrings = outNeighbours.stream().map(x -> x.label).collect(Collectors.toList());
             String outNeighboursStringJoined = String.join(", ", outNeighboursStrings);
 
