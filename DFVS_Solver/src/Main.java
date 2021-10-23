@@ -18,18 +18,12 @@ public class Main {
         // Custom Tests
         if(true) {
 
-            List<List<Node>> components = TarjanAlgorithm.findComponents(TestCreator.createSimpleDAG());
-            System.out.println("Simple DAG: ");
-            components.forEach(System.out::println);
-            components = TarjanAlgorithm.findComponents(TestCreator.createSimpleNonDAG());
-            System.out.println("Simple Non-DAG: ");
-            components.forEach(System.out::println);
-            components = TarjanAlgorithm.findComponents(TestCreator.createComplexNonDAG());
-            System.out.println("Complex Non-DAG: ");
-            components.forEach(System.out::println);
-            components = TarjanAlgorithm.findComponents(TestCreator.createK3Test());
-            System.out.println("K3: ");
-            components.forEach(System.out::println);
+            List<List<Node>> components = Preprocessing.findAllCycles(TestCreator.createSimpleNonDAG());
+            components = Preprocessing.findAllCycles(TestCreator.createSimpleNonDAG2());
+            components = Preprocessing.findAllCycles(TestCreator.createSimpleNonDAG3());
+            components = Preprocessing.findAllCycles(TestCreator.createSimpleNonDAG4());
+            components = Preprocessing.findAllCycles(TestCreator.createComplexNonDAG());
+            components = Preprocessing.findAllCycles(TestCreator.createK3Test());
 
             //solveSelectedGraphs();
             return;

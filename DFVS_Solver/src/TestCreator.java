@@ -89,7 +89,7 @@ public abstract class TestCreator {
      * Graph with circles A-B-C and E-F-G
      */
     public static Graph createSimpleNonDAG3(){
-        Graph result = new Graph("S5");
+        Graph result = new Graph("S6");
 
         Node a = new Node("A");
         Node b = new Node("B");
@@ -115,6 +115,35 @@ public abstract class TestCreator {
         result.nodes.add(e);
         result.nodes.add(f);
         result.nodes.add(g);
+
+        return result;
+    }
+
+
+    /**
+     * Graph with circles A-B-C and E-F-G, but the circles are connected
+     */
+    public static Graph createSimpleNonDAG4(){
+        Graph result = new Graph("S7");
+
+        Node a = new Node("A");
+        Node b = new Node("B");
+        Node c = new Node("C");
+        Node d = new Node("D");
+        Node e = new Node("E");
+
+        a.addNeighbour(b);
+        b.addNeighbour(c);
+        c.addNeighbour(a);
+        a.addNeighbour(d);
+        d.addNeighbour(e);
+        e.addNeighbour(a);
+
+        result.nodes.add(a);
+        result.nodes.add(b);
+        result.nodes.add(c);
+        result.nodes.add(d);
+        result.nodes.add(e);
 
         return result;
     }

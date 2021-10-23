@@ -15,7 +15,7 @@ public class Graph {
     }
 
     public void unvisitAllNodes() {
-        nodes.forEach(node -> node.visited = -1);
+        nodes.forEach(node -> node.visitIndex = -1);
     }
 
     public void addArc(String from, String to){

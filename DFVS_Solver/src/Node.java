@@ -9,7 +9,7 @@ public class Node {
 
         private final List<Node> outNeighbours;
 
-        public int visited;
+        public int visitIndex;
 
         // Attributes for Tarjan's Algorithm
         public int index;
