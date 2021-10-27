@@ -16,7 +16,7 @@ public abstract class Preprocessing {
 
     public static List<List<Node>> findAllCycles(Graph graph) {
 
-        Log.log(Log.LogDetail.Important, graph.name, "----------Starting preprocessing of graph " + graph.name + "... ----------");
+        Log.log(Log.LogDetail.Important, graph.name, "----------Starting preprocessing of graph " + graph.name + " with " + graph.nodes.size() + " nodes... ----------");
         cycles = new ArrayList<>();
 
         // Find cyclic components
@@ -39,7 +39,7 @@ public abstract class Preprocessing {
                 subGraphs.add(subGraph);
             }
         }
-        Log.log(Log.LogDetail.Important, graph.name, "Found " + subGraphs.size() + " cyclic sub graphs: " + subGraphs.stream().map(s -> s.nodes).collect(Collectors.toList()));
+        Log.log(Log.LogDetail.Important, graph.name, "Found " + subGraphs.size() + " cyclic sub graphs"); // + subGraphs.stream().map(s -> s.nodes).collect(Collectors.toList()));
 
         for(Graph subGraph: subGraphs) {
             findCyclesInComponent(subGraph);

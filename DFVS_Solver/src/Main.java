@@ -17,15 +17,7 @@ public class Main {
 
         // Custom Tests
         if(true) {
-
-            List<List<Node>> components = Preprocessing.findAllCycles(TestCreator.createSimpleNonDAG());
-            components = Preprocessing.findAllCycles(TestCreator.createSimpleNonDAG2());
-            components = Preprocessing.findAllCycles(TestCreator.createSimpleNonDAG3());
-            components = Preprocessing.findAllCycles(TestCreator.createSimpleNonDAG4());
-            components = Preprocessing.findAllCycles(TestCreator.createSimpleNonDAG5());
-            components = Preprocessing.findAllCycles(TestCreator.createK3Test());
-
-            //solveSelectedGraphs();
+            solveSelectedGraphs();
             return;
         }
 

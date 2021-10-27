@@ -7,12 +7,10 @@ import java.util.*;
 
 public abstract class Solver {
 
-    public static LocalDateTime startTime;
-
     private static List<Node> dfvs_branch(Graph graph, int k, int recursionLevel) throws TimeoutException {
 
         //Timer
-        if(ChronoUnit.MINUTES.between(startTime, LocalDateTime.now()) == 3) throw new TimeoutException("The programm stopped after 60 seconds");
+        if(Timer.isTimeout()) throw new TimeoutException("The programm stopped after 60 seconds");
         //if(ChronoUnit.SECONDS.between(startTime, LocalDateTime.now()) > 10) throw new Exception();
 
         //Break
@@ -48,7 +46,7 @@ public abstract class Solver {
         Log.log(Log.LogDetail.Important, graph.name, 0, "Start solving for graph " + graph.name);
 
         //Timer
-        startTime = LocalDateTime.now();
+        Timer.start();
 
         int k = 0;
         List<Node> S = null;
@@ -64,12 +62,10 @@ public abstract class Solver {
             k++;
         }
 
-        long seconds = ChronoUnit.SECONDS.between(startTime, LocalDateTime.now());
-        long millis = ChronoUnit.MILLIS.between(startTime, LocalDateTime.now());
-        String timer = seconds == 0 ? millis + "ms" : seconds + "." + millis + "s";
-        Log.log(Log.LogDetail.Important, graph.name, 0,"Success with k = " + (k - 1) + " in " + timer);
+
+        Log.log(Log.LogDetail.Important, graph.name, 0,"Success with k = " + (k - 1) + " in " + Timer.getTimeString());
         Log.log(Log.LogDetail.Normal, graph.name, 0,"Nodes to remove: " + S);
-        Log.TimeLog((k - 1), millis);
+        Log.TimeLog((k - 1), Timer.getMillis());
         return S;
     }
 
