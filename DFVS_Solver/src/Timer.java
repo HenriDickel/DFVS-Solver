@@ -5,10 +5,16 @@ public class Timer {
 
     private static LocalDateTime startTime;
 
-    private static final long timeout = 4; // in minutes
+    public static final long timeout = 3; // in minutes
 
     public static void start() {
         startTime = LocalDateTime.now();
+    }
+
+    public static Long stop(){
+        Long time = getMillis();
+        startTime = LocalDateTime.now();
+        return time;
     }
 
     public static boolean isTimeout() {

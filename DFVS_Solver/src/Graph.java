@@ -32,43 +32,6 @@ public class Graph {
         a.addNeighbour(b);
     }
 
-    public boolean isDAG(){
-        Log.log(Log.LogDetail.Unimportant, name, "Test if graph is DAG...");
-
-        //Start Recursion
-        boolean isDag = isDAGRecursive(new ArrayList<>());
-        Log.log(Log.LogDetail.Unimportant, name, isDag ? "Graph is a DAG" : "Graph is not a DAG");
-
-        return isDag;
-    }
-    private boolean isDAGRecursive(List<Node> checked){
-
-        if(checked.size() == nodes.size()) return true;
-
-        //Check if something can be removed
-        for(Node node : nodes){
-
-            //Skip those already checked
-            if(checked.contains(node)) continue;
-
-            //Get all out going arcs
-            List<Node> outArcs = node.getOutNeighbours();
-
-            //Remove those with no arcs
-            if(outArcs.size() == 0){
-                checked.add(node);
-                return isDAGRecursive(checked);
-            }
-
-            //Remove those where all neighbours are already checked
-            if(checked.containsAll(outArcs)){
-                checked.add(node);
-                return isDAGRecursive(checked);
-            }
-        }
-        return false;
-    }
-
     public List<Node> getActiveNodes() {
         return nodes.stream().filter(node -> !node.deleted).collect(Collectors.toList());
     }

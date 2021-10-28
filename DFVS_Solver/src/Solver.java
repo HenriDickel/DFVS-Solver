@@ -1,20 +1,22 @@
 import log.Log;
 
 
-import java.time.LocalDateTime;
-import java.time.temporal.ChronoUnit;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.util.*;
+import java.util.stream.Collectors;
 
 public abstract class Solver {
 
     private static List<Node> dfvs_branch(Graph graph, int k, int recursionLevel) throws TimeoutException {
 
         //Timer
-        if(Timer.isTimeout()) throw new TimeoutException("The programm stopped after 60 seconds");
+        if(Timer.isTimeout()) throw new TimeoutException("The program stopped after " + Timer.timeout + " minutes.");
 
         //Break
         if(k < 0) return null;
 
+        //Return if graph has no circles
         if(graph.isDAG()) return new ArrayList<>();
 
         // Break to skip the redundant dfvs_branch()-call when k = 0
@@ -40,39 +42,57 @@ public abstract class Solver {
         return null;
     }
 
-    public static List<Node> dfvs_solve(Graph graph){
-        Log.log(Log.LogDetail.Important, graph.name, 0, "Start solving for graph " + graph.name);
-
+    public static List<Node> dfvsSolve(Graph graph){
+        //Start k
         int k = 0;
+
+        //Solution
         List<Node> S = null;
+
+        //Loop
         while(S == null){
-            Log.log(Log.LogDetail.Unimportant, graph.name, 0, "Try solving with k = " + k + "...");
-            try{
-                S = dfvs_branch(graph, k, 0);
-            }
-           catch (TimeoutException e){
-               Log.log(Log.LogDetail.Important, graph.name, 0,"Failed with k = " + (k - 1) + " because of the timelimit");
-               return new ArrayList<>();
-           }
+            S = dfvs_branch(graph, k, 0);
             k++;
         }
 
-
-        Log.log(Log.LogDetail.Important, graph.name, 0,"Success with k = " + (k - 1) + " in " + Timer.getTimeString());
-        Log.log(Log.LogDetail.Normal, graph.name, 0,"Nodes to remove: " + S);
-        Log.TimeLog((k - 1), Timer.getMillis());
+        //Return solution
         return S;
     }
 
-    public static List<Node> solveSubGraphs(List<Graph> subGraphs) {
+    public static List<Node> dfvsSolveSubgraphs(Graph graph) {
 
-        //Timer
+        //Start Timer
         Timer.start();
 
+        //Create Sub Graphs
+        List<Graph> cyclicSubGraphs = Preprocessing.findCyclicSubGraphs(graph);
+
         List<Node> nodes = new ArrayList<>();
-        for(Graph subGraph: subGraphs) {
-            nodes.addAll(dfvs_solve(subGraph));
+        for(Graph subGraph: cyclicSubGraphs) {
+            nodes.addAll(dfvsSolve(subGraph));
         }
+
+        //Node Labels
+        List<String> nodeLabels = nodes.stream().map(node -> node.label).collect(Collectors.toList());
+
+        //Stop Timer
+        Long time = Timer.stop();
+
+        //Verify
+        boolean verified = false;
+        try{
+            String command = "py src/python/dfvs-verify.py " + graph + " " + String.join("\n", nodeLabels);
+            Process p = Runtime.getRuntime().exec(command);
+
+            BufferedReader in = new BufferedReader(new InputStreamReader(p.getInputStream()));
+            verified = Objects.equals(in.readLine(), "true");
+        }
+        catch(Exception ignored){}
+
+        //Log
+        Log.MainLog(graph.name, nodes.size(), time, verified);
+
+        //Return
         return nodes;
     }
 

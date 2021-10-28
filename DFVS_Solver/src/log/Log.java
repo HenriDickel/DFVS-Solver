@@ -8,69 +8,55 @@ import java.time.format.DateTimeFormatter;
 
 public abstract class Log {
 
-    private static final String LOG_PATH = "src/log/log.txt";
-    private static final String TIME_LOG_PATH = "src/log/timeLog.csv";
+    private static final String DEBUG_LOG_PATH = "src/log/DebugLog.txt";
+    private static final String MAIN_LOG_PATH = "src/log/MainLog.csv";
 
-    public enum LogType {Ignore, Console, File}
-    public enum LogDetail {Important, Normal, Unimportant}
+    public static boolean Ignore;
 
-    public static LogType type = LogType.Console;
-    public static LogDetail detail = LogDetail.Important;
-
-    private static int recursionLevel;
-
-    public static void log(LogDetail detailLevel, String graphName, int recursionLevel, String message) {
-        Log.recursionLevel = recursionLevel;
-        log(detailLevel, graphName, message);
+    public static void log(String graphName, String message){
+        log(graphName, message, false);
     }
 
-    public static void log(LogDetail detailLevel, String graphName, String message){
+    public static void log(String graphName, String message, boolean error){
 
-        //Don't Log
-        if(type == LogType.Ignore) return;
-        if(detailLevel == LogDetail.Normal && detail == LogDetail.Important) return;
-        if(detailLevel == LogDetail.Unimportant && detail == LogDetail.Important) return;
-        if(detailLevel == LogDetail.Unimportant && detail == LogDetail.Normal) return;
+        //Ignore Log
+        if(Ignore) return;
 
         //Create log string
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS");
-        String recursionGap = new String(new char[recursionLevel]).replace("\0", "  ⋅  ");
-        String logMessage = "[" + LocalDateTime.now().format(dtf) + "]" +  " " + graphName + ": \t" + recursionGap + message + "\n";
+        String logMessage = "[" + LocalDateTime.now().format(dtf) + "]" +  " " + graphName + ": \t" + message + "\n";
 
         //Console Log
-        if(type == LogType.Console || type == LogType.File){
-            System.out.print(logMessage);
-        }
+        if(error) System.err.println(logMessage);
+        else System.out.println(logMessage);
 
         //Log File
-        if(type == LogType.File){
-            try(PrintWriter output = new PrintWriter(new FileWriter(LOG_PATH,true)))
-            {
-                output.printf(logMessage);
-            }
-            catch (Exception ignored) {}
-        }
-
-    }
-
-    public static void TimeLog(int k, long timeInMilli){
-        try(PrintWriter output = new PrintWriter(new FileWriter(TIME_LOG_PATH,true)))
+        try(PrintWriter output = new PrintWriter(new FileWriter(DEBUG_LOG_PATH,true)))
         {
-            output.println(k + " " + timeInMilli);
+            output.printf(logMessage);
         }
         catch (Exception ignored) {}
+
     }
 
     public static void Clear() {
         try {
-            new PrintWriter(LOG_PATH).close();
-            new PrintWriter(TIME_LOG_PATH).close();
+            new PrintWriter(DEBUG_LOG_PATH).close();
+            new PrintWriter(MAIN_LOG_PATH).close();
         } catch (IOException e) {
             e.printStackTrace();
         }
-        try(PrintWriter output = new PrintWriter(new FileWriter(TIME_LOG_PATH,true)))
+        try(PrintWriter output = new PrintWriter(new FileWriter(MAIN_LOG_PATH,true)))
         {
-            output.println("k millis");
+            output.println("name,k,millis,verified");
+        }
+        catch (Exception ignored) {}
+    }
+
+    public static void MainLog(String name, int k, long millis, boolean verified){
+        try(PrintWriter output = new PrintWriter(new FileWriter(MAIN_LOG_PATH,true)))
+        {
+            output.println(name + "," + k + "," + millis + "," + verified);
         }
         catch (Exception ignored) {}
     }
