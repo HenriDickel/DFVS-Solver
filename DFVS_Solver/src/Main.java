@@ -80,7 +80,8 @@ public class Main {
         graphs.add(GraphFileManager.CreateFromFile(PATH_SYNTHETIC_FOLDER, "synth-n_50-m_357-k_20-p_0.2.txt"));
 
         graphs.forEach(graph -> {
-            List<Node> nodes = Solver.dfvs_solve(graph);
+            List<Graph> subGraphs = Preprocessing.findCyclicSubGraphs(graph);
+            List<Node> nodes = Solver.solveSubGraphs(subGraphs);
             GraphFileManager.SaveSolution(PATH_SYNTHETIC_SOLUTION_FOLDER, graph.name, nodes);
             verify(graph.name, PATH_SYNTHETIC_FOLDER + graph.name, PATH_SYNTHETIC_SOLUTION_FOLDER + graph.name);
         } );

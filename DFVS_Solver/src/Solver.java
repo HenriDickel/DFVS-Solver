@@ -11,7 +11,6 @@ public abstract class Solver {
 
         //Timer
         if(Timer.isTimeout()) throw new TimeoutException("The programm stopped after 60 seconds");
-        //if(ChronoUnit.SECONDS.between(startTime, LocalDateTime.now()) > 10) throw new Exception();
 
         //Break
         if(k < 0) return null;
@@ -42,11 +41,7 @@ public abstract class Solver {
     }
 
     public static List<Node> dfvs_solve(Graph graph){
-        Log.log(Log.LogDetail.Important, graph.name, 0, "");
         Log.log(Log.LogDetail.Important, graph.name, 0, "Start solving for graph " + graph.name);
-
-        //Timer
-        Timer.start();
 
         int k = 0;
         List<Node> S = null;
@@ -67,6 +62,18 @@ public abstract class Solver {
         Log.log(Log.LogDetail.Normal, graph.name, 0,"Nodes to remove: " + S);
         Log.TimeLog((k - 1), Timer.getMillis());
         return S;
+    }
+
+    public static List<Node> solveSubGraphs(List<Graph> subGraphs) {
+
+        //Timer
+        Timer.start();
+
+        List<Node> nodes = new ArrayList<>();
+        for(Graph subGraph: subGraphs) {
+            nodes.addAll(dfvs_solve(subGraph));
+        }
+        return nodes;
     }
 
 }
