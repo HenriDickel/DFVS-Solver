@@ -34,8 +34,8 @@ def work(in_file):
     else:
     	opt_size = "-1"
     #opt_size = "-1"
-    print(in_file, args.solver, args.solver+".res", opt_size, split_line+".log", split_line+".time")
-    sp.call(["bash","test-instance",in_file, args.solver, str(args.time_limit), args.solver+".res", opt_size, split_line+".log", split_line+".time"])
+    print(in_file, args.solver, args.solver+".res", opt_size, split_line+".program.log", split_line+".time")
+    sp.call(["bash","test-instance",in_file, args.solver, str(args.time_limit), args.solver+".res", opt_size, split_line+".program.log", split_line+".time"])
     return 0
  
 if __name__ == '__main__':
