@@ -8,11 +8,11 @@ public class Main {
 
     public static void main(String[] args) {
 
-        //Ignore Log
-        Log.Ignore = false;
-
         //As args
         if(args.length > 0){
+
+            //Ignore Log
+            Log.Ignore = false;
 
             //Path
             String fileName = args[0];
@@ -28,6 +28,12 @@ public class Main {
                 System.out.println(node.label);
             }
         } else {
+
+            //Ignore Log
+            Log.Clear();
+            Log.Ignore = false;
+
+            //Test Graphs
             List<Graph> graphs = TestCreator.createComplexGraphs();
 
             //Solve

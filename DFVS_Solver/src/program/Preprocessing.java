@@ -5,6 +5,7 @@ import program.log.Log;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public abstract class Preprocessing {
 
@@ -31,7 +32,7 @@ public abstract class Preprocessing {
                 subGraphs.add(subGraph);
             }
         }
-        Log.debugLog(graph.name, "Found " + subGraphs.size() + " cyclic sub graphs"); // + subGraphs.stream().map(s -> s.nodes).collect(Collectors.toList()));
+        Log.debugLog(graph.name, "Found " + subGraphs.size() + " cyclic sub graphs: " + subGraphs.stream().map(Graph::getActiveNodes).collect(Collectors.toList()));
         return subGraphs;
     }
 

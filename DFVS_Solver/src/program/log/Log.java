@@ -1,5 +1,6 @@
 package program.log;
 
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -8,8 +9,8 @@ import java.time.format.DateTimeFormatter;
 
 public abstract class Log {
 
-    private static final String DEBUG_LOG_PATH = "src/program.log/DebugLog.txt";
-    private static final String MAIN_LOG_PATH = "src/program.log/MainLog.csv";
+    private static final String DEBUG_LOG_PATH = "src/program/log/DebugLog.txt";
+    private static final String MAIN_LOG_PATH = "src/program/log/MainLog.csv";
 
     public static boolean Ignore;
 
@@ -33,7 +34,7 @@ public abstract class Log {
         //Log File
         try(PrintWriter output = new PrintWriter(new FileWriter(DEBUG_LOG_PATH,true)))
         {
-            output.printf(logMessage);
+            output.println(logMessage);
         }
         catch (Exception ignored) {}
 
@@ -41,6 +42,8 @@ public abstract class Log {
 
     public static void Clear() {
         try {
+            new File(DEBUG_LOG_PATH).createNewFile();
+            new File(MAIN_LOG_PATH).createNewFile();
             new PrintWriter(DEBUG_LOG_PATH).close();
             new PrintWriter(MAIN_LOG_PATH).close();
         } catch (IOException e) {

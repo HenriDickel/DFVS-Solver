@@ -7,7 +7,7 @@ public class Timer {
 
     private static LocalDateTime startTime;
 
-    public static final long timeout = 3; // in minutes
+    public static final long timeout = 1; // in minutes
 
     public static void start() {
         startTime = LocalDateTime.now();
@@ -23,13 +23,11 @@ public class Timer {
         return ChronoUnit.MINUTES.between(startTime, LocalDateTime.now()) >= timeout;
     }
 
-    public static String getTimeString() {
-        long seconds = ChronoUnit.SECONDS.between(startTime, LocalDateTime.now());
-        long millis = ChronoUnit.MILLIS.between(startTime, LocalDateTime.now());
-        return (seconds == 0) ? millis + "ms" : seconds + "." + millis + "s";
-    }
-
     public static long getMillis() {
         return ChronoUnit.MILLIS.between(startTime, LocalDateTime.now());
+    }
+
+    public static String format(Long millis) {
+        return (millis > 1000) ? millis / 1000 + "s" :  millis + "ms";
     }
 }

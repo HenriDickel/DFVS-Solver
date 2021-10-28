@@ -6,9 +6,15 @@ import program.log.Log;
 
 
 import java.io.BufferedReader;
+import java.io.File;
+import java.io.IOException;
 import java.io.InputStreamReader;
+import java.nio.charset.Charset;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.*;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public abstract class Solver {
 
@@ -62,11 +68,23 @@ public abstract class Solver {
         Timer.start();
 
         //Create Sub Graphs
-        List<Graph> cyclicSubGraphs = Preprocessing.findCyclicSubGraphs(graph);
+        //List<Graph> cyclicSubGraphs = Preprocessing.findCyclicSubGraphs(graph);
 
+        //Result
         List<Node> nodes = new ArrayList<>();
-        for(Graph subGraph: cyclicSubGraphs) {
-            nodes.addAll(dfvsSolve(subGraph));
+
+        //Run for all sub graphs
+        try{
+            //for(Graph subGraph: cyclicSubGraphs) {
+                //nodes.addAll(dfvsSolve(subGraph));
+                nodes.addAll(dfvsSolve(graph));
+            //}
+        }
+        catch(TimeoutException timeoutException){
+            Long time = Timer.stop();
+            Log.mainLog(graph.name, nodes.size(), time, false);
+            Log.debugLog(graph.name, "Found no solution in " + Timer.format(time), true);
+            return new ArrayList<>();
         }
 
         //program.Node Labels
@@ -78,20 +96,21 @@ public abstract class Solver {
         //Verify
         boolean verified = false;
         try{
-            String command = "py src/python/dfvs-verify.py " + graph + " " + String.join("\n", nodeLabels);
-            Process p = Runtime.getRuntime().exec(command);
-
-            BufferedReader in = new BufferedReader(new InputStreamReader(p.getInputStream()));
-            System.out.println(in.readLine());
-            verified = Objects.equals(in.readLine(), "1");
-        }
-        catch(Exception error){
-            Log.debugLog(graph.name, "Could not verify because python error");
+            Scanner scan = new Scanner(new File("src/inputs/optimal_solution_sizes.txt"));
+            while(scan.hasNextLine()){
+                String line = scan.nextLine();
+                if(line.startsWith(graph.name)){
+                    String optimalK = line.split("     ")[1];
+                    verified = Integer.parseInt(optimalK) == nodeLabels.size();
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
         }
 
         //Log
         Log.mainLog(graph.name, nodes.size(), time, verified);
-        Log.debugLog(graph.name, "Found solution with k = " + nodes.size() + " in " + time + "ms", !verified);
+        Log.debugLog(graph.name, "Found solution with k = " + nodes.size() + " in " + Timer.format(time), !verified);
 
         //Return
         return nodes;
