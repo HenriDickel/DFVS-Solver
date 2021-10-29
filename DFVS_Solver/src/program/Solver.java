@@ -3,6 +3,7 @@ package program;
 import program.utils.DAG;
 import program.utils.FirstCycle;
 import program.log.Log;
+import program.utils.SmallestK;
 
 
 import java.io.BufferedReader;
@@ -47,7 +48,7 @@ public abstract class Solver {
 
     public static List<Node> dfvsSolve(Graph graph){
         //Start k
-        int k = 0;
+        int k = SmallestK.findSmallestK(graph);
 
         //Solution
         List<Node> S = null;
@@ -68,17 +69,16 @@ public abstract class Solver {
         Timer.start();
 
         //Create Sub Graphs
-        //List<Graph> cyclicSubGraphs = Preprocessing.findCyclicSubGraphs(graph);
+        List<Graph> cyclicSubGraphs = Preprocessing.findCyclicSubGraphs(graph);
 
         //Result
         List<Node> nodes = new ArrayList<>();
 
         //Run for all sub graphs
         try{
-            //for(Graph subGraph: cyclicSubGraphs) {
-                //nodes.addAll(dfvsSolve(subGraph));
-                nodes.addAll(dfvsSolve(graph));
-            //}
+            for(Graph subGraph: cyclicSubGraphs) {
+                nodes.addAll(dfvsSolve(subGraph));
+            }
         }
         catch(TimeoutException timeoutException){
             Long time = Timer.stop();

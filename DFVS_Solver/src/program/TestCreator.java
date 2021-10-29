@@ -72,6 +72,37 @@ public abstract class TestCreator {
         return graph;
     }
 
+    public static Graph createFullConnected3(){
+        Graph graph = new Graph("FullConnected3");
+
+        graph.addArc("A", "B");
+        graph.addArc("A", "C");
+        graph.addArc("B", "A");
+        graph.addArc("B", "C");
+        graph.addArc("C", "A");
+        graph.addArc("C", "B");
+
+        return graph;
+    }
+
+    public static Graph createFullConnected4(){
+        Graph graph = new Graph("FullConnected4");
+
+        graph.addArc("A", "B");
+        graph.addArc("A", "C");
+        graph.addArc("A", "D");
+        graph.addArc("B", "A");
+        graph.addArc("B", "C");
+        graph.addArc("B", "D");
+        graph.addArc("C", "A");
+        graph.addArc("C", "B");
+        graph.addArc("C", "D");
+        graph.addArc("D", "A");
+        graph.addArc("D", "B");
+        graph.addArc("D", "C");
+
+        return graph;
+    }
 
     /**
      * program.Graph with circle A-B-C
