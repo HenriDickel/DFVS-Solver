@@ -30,7 +30,7 @@ public class Main {
             }
         } else {
 
-            //Ignore Log
+            //Reset Log
             Log.Clear();
             Log.Ignore = false;
 

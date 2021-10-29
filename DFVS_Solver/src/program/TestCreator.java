@@ -34,6 +34,10 @@ public abstract class TestCreator {
         return createFromFolder("src/inputs/complex");
     }
 
+    public static List<Graph> createSyntheticGraphs() {
+        return createFromFolder("src/inputs/synthetic");
+    }
+
     public static List<Graph> createFromFolder(String path) {
         File folder = new File(path);
         File[] listOfFiles = folder.listFiles();
