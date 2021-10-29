@@ -3,19 +3,13 @@ package program;
 import program.utils.DAG;
 import program.utils.FirstCycle;
 import program.log.Log;
-import program.utils.SmallestK;
+import program.utils.OptimalK;
 
 
-import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.nio.charset.Charset;
-import java.nio.file.Files;
-import java.nio.file.Path;
 import java.util.*;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public abstract class Solver {
 
@@ -48,7 +42,7 @@ public abstract class Solver {
 
     public static List<Node> dfvsSolve(Graph graph){
         //Start k
-        int k = SmallestK.findSmallestK(graph);
+        int k = OptimalK.minK(graph);
 
         //Solution
         List<Node> S = null;

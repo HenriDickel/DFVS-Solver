@@ -1,9 +1,14 @@
 package program;
 
 import program.log.Log;
-import program.utils.SmallestK;
+import program.utils.OptimalK;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.List;
+import java.util.Scanner;
 
 public class Main {
 
@@ -35,7 +40,7 @@ public class Main {
             Log.Ignore = false;
 
             //Test Graphs
-            List<Graph> graphs = TestCreator.createComplexGraphs();
+            List<Graph> graphs = TestCreator.createSyntheticGraphs();
 
             //Solve
             graphs.forEach(Solver::dfvsSolveSubGraphs);

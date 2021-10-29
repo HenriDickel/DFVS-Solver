@@ -6,9 +6,9 @@ import program.Node;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SmallestK {
+public class OptimalK {
 
-    public static int findSmallestK(Graph graph){
+    public static int minK(Graph graph){
 
         int n = graph.getActiveNodes().size();
         int m = graph.getActiveNodes().stream().mapToInt(node -> node.getOutNeighbours().size()).sum();
@@ -26,6 +26,13 @@ public class SmallestK {
         }
 
         return smallestKList.get(m);
+    }
+
+    public static int maxK(Graph graph){
+
+        int m = graph.getActiveNodes().stream().mapToInt(node -> node.getOutNeighbours().size()).sum();
+
+        return m / 2;
     }
 
 }
