@@ -18,7 +18,7 @@ public class Main {
         if(args.length > 0){
 
             //Ignore Log
-            Log.Ignore = false;
+            Log.Ignore = true;
 
             //Path
             String fileName = args[0];
