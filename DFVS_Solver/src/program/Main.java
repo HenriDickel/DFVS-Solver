@@ -41,9 +41,24 @@ public class Main {
 
             //Test Graphs
             List<Graph> graphs = TestCreator.createSyntheticGraphs();
+            graphs.addAll(TestCreator.createComplexGraphs());
+
+            for(Graph graph : graphs){
+                int n = graph.getActiveNodes().size();
+                int m = graph.getActiveNodes().stream().mapToInt(node -> node.getOutNeighbours().size()).sum();
+
+                try(PrintWriter output = new PrintWriter(new FileWriter("src/program/log/NodesAndEdgesCount.csv",true)))
+                {
+                    output.println(graph.name + "," + n + "," + m);
+                }
+                catch (Exception ignored){
+
+                }
+            }
+
 
             //Solve
-            graphs.forEach(Solver::dfvsSolveSubGraphs);
+            //graphs.forEach(Solver::dfvsSolveSubGraphs);
         }
 
     }
