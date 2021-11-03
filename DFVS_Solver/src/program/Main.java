@@ -1,6 +1,7 @@
 package program;
 
 import program.log.Log;
+import program.log.Statistics;
 
 import java.util.List;
 
@@ -33,12 +34,17 @@ public class Main {
             Log.Clear();
             Log.Ignore = false;
 
-            //Test Graphs
             List<Graph> graphs = TestCreator.createSyntheticGraphs();
             graphs.addAll(TestCreator.createComplexGraphs());
 
+            Statistics.CreateOverviewMinMaxK(graphs);
+
+            //Test Graphs
+            //List<Graph> graphs = TestCreator.createSyntheticGraphs();
+            //graphs.addAll(TestCreator.createComplexGraphs());
+
             //Solve
-            graphs.forEach(Solver::dfvsSolveSubGraphs);
+            //graphs.forEach(Solver::dfvsSolveSubGraphs);
         }
 
     }

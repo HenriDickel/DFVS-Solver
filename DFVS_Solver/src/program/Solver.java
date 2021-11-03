@@ -88,19 +88,7 @@ public abstract class Solver {
         Long time = Timer.stop();
 
         //Verify
-        boolean verified = false;
-        try{
-            Scanner scan = new Scanner(new File("src/inputs/optimal_solution_sizes.txt"));
-            while(scan.hasNextLine()){
-                String line = scan.nextLine();
-                if(line.startsWith(graph.name)){
-                    String optimalK = line.split("     ")[1];
-                    verified = Integer.parseInt(optimalK) == nodeLabels.size();
-                }
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        boolean verified = nodeLabels.size() == MinMaxK.optimalK(graph);
 
         //Log
         Log.mainLog(graph.name, nodes.size(), time, verified);

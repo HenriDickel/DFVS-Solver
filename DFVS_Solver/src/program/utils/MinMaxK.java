@@ -3,8 +3,11 @@ package program.utils;
 import program.Graph;
 import program.Node;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class MinMaxK {
 
@@ -36,6 +39,24 @@ public class MinMaxK {
         if(m == n * (n-1)) return n - 1;
 
         return Math.min(n - 2, m / 2);
+    }
+
+    public static int optimalK(Graph graph){
+        try{
+            Scanner scan = new Scanner(new File("src/inputs/optimal_solution_sizes.txt"));
+            while(scan.hasNextLine()){
+                String line = scan.nextLine();
+                if(line.startsWith(graph.name)){
+                    String optimalK = line.split("     ")[1];
+                    return Integer.parseInt(optimalK);
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        //Not in optimal solutions
+        return -1;
     }
 
 }
