@@ -3,7 +3,7 @@ package program;
 import program.utils.DAG;
 import program.utils.FirstCycle;
 import program.log.Log;
-import program.utils.OptimalK;
+import program.utils.MinMaxK;
 
 
 import java.io.File;
@@ -42,7 +42,7 @@ public abstract class Solver {
 
     public static List<Node> dfvsSolve(Graph graph){
         //Start k
-        int k = OptimalK.minK(graph);
+        int k = MinMaxK.minK(graph);
 
         //Solution
         List<Node> S = null;

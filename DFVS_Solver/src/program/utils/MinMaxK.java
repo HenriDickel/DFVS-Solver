@@ -6,7 +6,7 @@ import program.Node;
 import java.util.ArrayList;
 import java.util.List;
 
-public class OptimalK {
+public class MinMaxK {
 
     public static int minK(Graph graph){
 
@@ -30,9 +30,12 @@ public class OptimalK {
 
     public static int maxK(Graph graph){
 
+        int n = graph.getActiveNodes().size();
         int m = graph.getActiveNodes().stream().mapToInt(node -> node.getOutNeighbours().size()).sum();
 
-        return m / 2;
+        if(m == n * (n-1)) return n - 1;
+
+        return Math.min(n - 2, m / 2);
     }
 
 }
