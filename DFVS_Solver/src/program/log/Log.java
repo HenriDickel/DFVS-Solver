@@ -57,6 +57,10 @@ public abstract class Log {
     }
 
     public static void mainLog(String name, int k, long millis, boolean verified){
+
+        //Ignore Log
+        if(Ignore) return;
+
         try(PrintWriter output = new PrintWriter(new FileWriter(MAIN_LOG_PATH,true)))
         {
             output.println(name + "," + k + "," + millis + "," + verified);
