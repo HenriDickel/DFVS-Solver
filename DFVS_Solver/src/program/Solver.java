@@ -59,6 +59,8 @@ public abstract class Solver {
 
     public static List<Node> dfvsSolveSubGraphs(Graph graph) {
 
+        int optimalK = MinMaxK.optimalK(graph);
+
         //Start program.Timer
         Timer.start();
 
@@ -76,7 +78,7 @@ public abstract class Solver {
         }
         catch(TimeoutException timeoutException){
             Long time = Timer.stop();
-            Log.mainLog(graph.name, nodes.size(), time, false);
+            Log.mainLog(graph.name, optimalK, nodes.size(), time, false);
             Log.debugLog(graph.name, "Found no solution in " + Timer.format(time), true);
             return new ArrayList<>();
         }
@@ -88,10 +90,10 @@ public abstract class Solver {
         Long time = Timer.stop();
 
         //Verify
-        boolean verified = nodeLabels.size() == MinMaxK.optimalK(graph);
+        boolean verified = nodeLabels.size() == optimalK;
 
         //Log
-        Log.mainLog(graph.name, nodes.size(), time, verified);
+        Log.mainLog(graph.name, optimalK, nodes.size(), time, verified);
         Log.debugLog(graph.name, "Found solution with k = " + nodes.size() + " in " + Timer.format(time), !verified);
 
         //Return

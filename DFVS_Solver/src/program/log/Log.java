@@ -51,19 +51,19 @@ public abstract class Log {
         }
         try(PrintWriter output = new PrintWriter(new FileWriter(MAIN_LOG_PATH,true)))
         {
-            output.println("name,k,millis,verified");
+            output.println("name,optimalK,k,millis,verified");
         }
         catch (Exception ignored) {}
     }
 
-    public static void mainLog(String name, int k, long millis, boolean verified){
+    public static void mainLog(String name, int optimalK, int k, long millis, boolean verified){
 
         //Ignore Log
         if(Ignore) return;
 
         try(PrintWriter output = new PrintWriter(new FileWriter(MAIN_LOG_PATH,true)))
         {
-            output.println(name + "," + k + "," + millis + "," + verified);
+            output.println(name + "," + optimalK + "," + k + "," + millis + "," + verified);
         }
         catch (Exception ignored) {}
     }

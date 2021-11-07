@@ -44,7 +44,7 @@ public class Main {
             //graphs.addAll(TestCreator.createComplexGraphs());
 
             //Solve
-            //graphs.forEach(Solver::dfvsSolveSubGraphs);
+            graphs.forEach(Solver::dfvsSolveSubGraphs);
         }
 
     }
