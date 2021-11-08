@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
-public abstract class TarjanAlgorithm {
+public abstract class Tarjan {
 
     private static int index;
     private static Stack<Node> stack;

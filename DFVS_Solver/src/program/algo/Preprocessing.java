@@ -14,7 +14,7 @@ public abstract class Preprocessing {
         Log.debugLog(graph.name, "----------Starting preprocessing of graph " + graph.name + " with " + graph.getActiveNodes().size() + " nodes... ----------");
 
         // Find cyclic components
-        List<List<Node>> components = TarjanAlgorithm.findComponents(graph);
+        List<List<Node>> components = Tarjan.findComponents(graph);
 
         Log.debugLog(graph.name, "Found " + components.size() + " components: " + components);
 
