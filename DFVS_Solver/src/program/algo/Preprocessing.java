@@ -1,6 +1,7 @@
-package program;
+package program.algo;
 
-import program.utils.TarjanAlgorithm;
+import program.model.Graph;
+import program.model.Node;
 import program.log.Log;
 
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package program;
+package program.utils;
 
 public class TimeoutException extends RuntimeException {
 

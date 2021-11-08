@@ -1,7 +1,7 @@
 package program.log;
 
-import program.Graph;
-import program.utils.MinMaxK;
+import program.model.Graph;
+import program.algo.MinMaxK;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -11,7 +11,7 @@ import java.util.List;
 
 public class Statistics {
 
-    private static final String OVERVIEW_MIN_MAX_K_PATH = "src/program/log/OverviewMinMaxK.csv";
+    private static final String OVERVIEW_MIN_MAX_K_PATH = "src/logs/OverviewMinMaxK.csv";
 
     public static void CreateOverviewMinMaxK(List<Graph> graphs){
         //Create File

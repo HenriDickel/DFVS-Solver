@@ -9,8 +9,8 @@ import java.time.format.DateTimeFormatter;
 
 public abstract class Log {
 
-    private static final String DEBUG_LOG_PATH = "src/program/log/DebugLog.txt";
-    private static final String MAIN_LOG_PATH = "src/program/log/MainLog.csv";
+    private static final String DEBUG_LOG_PATH = "src/logs/DebugLog.txt";
+    private static final String MAIN_LOG_PATH = "src/logs/MainLog.csv";
 
     public static boolean Ignore;
 

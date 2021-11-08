@@ -1,7 +1,6 @@
-package program.utils;
+package program.algo;
 
-import program.Graph;
-import program.Node;
+import program.model.Graph;
 
 import java.io.File;
 import java.io.IOException;
@@ -9,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class MinMaxK {
+public abstract class MinMaxK {
 
     public static int minK(Graph graph){
 

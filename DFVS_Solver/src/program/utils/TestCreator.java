@@ -1,4 +1,6 @@
-package program;
+package program.utils;
+
+import program.model.Graph;
 
 import java.io.File;
 import java.io.IOException;
@@ -109,7 +111,7 @@ public abstract class TestCreator {
     }
 
     /**
-     * program.Graph with circle A-B-C
+     * program.model.Graph with circle A-B-C
      */
     public static Graph createSimpleNonDAG2(){
         Graph graph = new Graph("S3");
@@ -126,7 +128,7 @@ public abstract class TestCreator {
 
 
     /**
-     * program.Graph with circles A-B-C and E-F-G
+     * program.model.Graph with circles A-B-C and E-F-G
      */
     public static Graph createSimpleNonDAG3(){
         Graph graph = new Graph("S4");
@@ -145,7 +147,7 @@ public abstract class TestCreator {
 
 
     /**
-     * program.Graph with circles A-B-C and E-F-G, but the circles are connected
+     * program.model.Graph with circles A-B-C and E-F-G, but the circles are connected
      */
     public static Graph createSimpleNonDAG4(){
         Graph graph = new Graph("S4");

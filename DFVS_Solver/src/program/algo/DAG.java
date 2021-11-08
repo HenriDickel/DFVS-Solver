@@ -1,13 +1,13 @@
-package program.utils;
+package program.algo;
 
-import program.Graph;
-import program.Node;
+import program.model.Graph;
+import program.model.Node;
 
 import java.util.ArrayList;
 import java.util.List;
 
 
-public class DAG {
+public abstract class DAG {
 
     private static List<Node> nodes;
 

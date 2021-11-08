@@ -1,13 +1,12 @@
-package program;
+package program.algo;
 
-import program.utils.DAG;
-import program.utils.FirstCycle;
+import program.utils.TimeoutException;
+import program.model.Graph;
+import program.model.Node;
 import program.log.Log;
-import program.utils.MinMaxK;
+import program.utils.Timer;
 
 
-import java.io.File;
-import java.io.IOException;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -15,8 +14,8 @@ public abstract class Solver {
 
     private static List<Node> dfvsBranch(Graph graph, int k) throws TimeoutException {
 
-        //program.Timer
-        if(Timer.isTimeout()) throw new TimeoutException("The program stopped after " + Timer.timeout + " minutes.");
+        //program.utils.Timer
+        if(program.utils.Timer.isTimeout()) throw new TimeoutException("The program stopped after " + Timer.timeout + " minutes.");
 
         //Return if graph has no circles
         if(DAG.isDAG(graph)) return new ArrayList<>();
@@ -61,8 +60,8 @@ public abstract class Solver {
 
         int optimalK = MinMaxK.optimalK(graph);
 
-        //Start program.Timer
-        Timer.start();
+        //Start program.utils.Timer
+        program.utils.Timer.start();
 
         //Create Sub Graphs
         List<Graph> cyclicSubGraphs = Preprocessing.findCyclicSubGraphs(graph);
@@ -77,24 +76,24 @@ public abstract class Solver {
             }
         }
         catch(TimeoutException timeoutException){
-            Long time = Timer.stop();
+            Long time = program.utils.Timer.stop();
             Log.mainLog(graph.name, optimalK, nodes.size(), time, false);
-            Log.debugLog(graph.name, "Found no solution in " + Timer.format(time), true);
+            Log.debugLog(graph.name, "Found no solution in " + program.utils.Timer.format(time), true);
             return new ArrayList<>();
         }
 
-        //program.Node Labels
+        //program.model.Node Labels
         List<String> nodeLabels = nodes.stream().map(node -> node.label).collect(Collectors.toList());
 
-        //Stop program.Timer
-        Long time = Timer.stop();
+        //Stop program.utils.Timer
+        Long time = program.utils.Timer.stop();
 
         //Verify
         boolean verified = nodeLabels.size() == optimalK;
 
         //Log
         Log.mainLog(graph.name, optimalK, nodes.size(), time, verified);
-        Log.debugLog(graph.name, "Found solution with k = " + nodes.size() + " in " + Timer.format(time), !verified);
+        Log.debugLog(graph.name, "Found solution with k = " + nodes.size() + " in " + program.utils.Timer.format(time), !verified);
 
         //Return
         return nodes;

@@ -1,7 +1,11 @@
 package program;
 
+import program.algo.Solver;
 import program.log.Log;
 import program.log.Statistics;
+import program.model.Graph;
+import program.model.Node;
+import program.utils.TestCreator;
 
 import java.util.List;
 
@@ -18,7 +22,7 @@ public class Main {
             //Path
             String fileName = args[0];
 
-            //Create program.Graph
+            //Create program.model.Graph
             Graph graph = TestCreator.createFromFile("", fileName);
 
             //Solve
