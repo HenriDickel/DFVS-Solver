@@ -51,7 +51,7 @@ public abstract class Log {
         }
         try(PrintWriter output = new PrintWriter(new FileWriter(MAIN_LOG_PATH,true)))
         {
-            output.println("name,optimalK,k,millis,verified");
+            output.println("name,k_optimal,k_solved,millis,verified");
         }
         catch (Exception ignored) {}
     }
