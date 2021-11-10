@@ -2,10 +2,9 @@ package program;
 
 import program.algo.Solver;
 import program.log.Log;
-import program.log.Statistics;
-import program.model.Graph;
+import program.model.Instance;
 import program.model.Node;
-import program.utils.TestCreator;
+import program.utils.InstanceCreator;
 
 import java.util.List;
 
@@ -13,23 +12,22 @@ public class Main {
 
     public static void main(String[] args) {
 
-        //As args
         if(args.length > 0){
 
-            //Ignore Log
+            // Ignore Log
             Log.Ignore = true;
 
-            //Path
+            // Path
             String fileName = args[0];
 
-            //Create program.model.Graph
-            Graph graph = TestCreator.createFromFile("", fileName);
+            // Create instance
+            Instance instance = InstanceCreator.createFromFile("", fileName);
 
-            //Solve
-            List<Node> nodes = Solver.dfvsSolveSubGraphs(graph);
+            // Solve
+            Solver.dfvsSolveInstance(instance);
 
-            //Print solution
-            for(Node node : nodes){
+            // Print solution
+            for(Node node : instance.S){
                 System.out.println(node.label);
             }
         } else {
@@ -38,19 +36,24 @@ public class Main {
             Log.Clear();
             Log.Ignore = false;
 
-            List<Graph> graphs = TestCreator.createSyntheticGraphs();
-            graphs.addAll(TestCreator.createComplexGraphs());
+            // Solve test instances
 
-            Statistics.CreateOverviewMinMaxK(graphs);
+            List<Instance> instances = InstanceCreator.createSyntheticInstances();
+            instances.addAll(InstanceCreator.createComplexInstances());
+            instances.forEach(Solver::dfvsSolveInstance);
 
-            //Test Graphs
-            //List<Graph> graphs = TestCreator.createSyntheticGraphs();
-            //graphs.addAll(TestCreator.createComplexGraphs());
+            // Solve own test instances
 
-            //Solve
-            graphs.forEach(Solver::dfvsSolveSubGraphs);
+            //List<Instance> instances = InstanceCreator.createTestInstances();
+            //instances.forEach(Solver::dfvsSolveInstance);
+
+            // Solve instance from file
+
+            //Graph graph = TestCreator.createFromFile("src/inputs/complex/", "GD-n_73-m_96.mtx");
+            //List<Node> S = Solver.dfvsSolveSubGraphs(graph);
+            //S.forEach(s -> System.out.println(s.label));
+
         }
 
     }
-
 }

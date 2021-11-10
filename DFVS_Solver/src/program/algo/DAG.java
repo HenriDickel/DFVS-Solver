@@ -29,7 +29,7 @@ public abstract class DAG {
             if(checked.contains(node)) continue;
 
             //Get all out going arcs
-            List<Node> outArcs = node.getOutNeighbours();
+            List<Node> outArcs = node.getOutNeighbors();
 
             //Remove those with no arcs
             if(outArcs.size() == 0){

@@ -1,7 +1,7 @@
 package program.log;
 
-import program.model.Graph;
 import program.algo.MinMaxK;
+import program.model.Instance;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -13,21 +13,17 @@ public class Statistics {
 
     private static final String OVERVIEW_MIN_MAX_K_PATH = "src/logs/OverviewMinMaxK.csv";
 
-    public static void CreateOverviewMinMaxK(List<Graph> graphs){
+    public static void CreateOverviewMinMaxK(List<Instance> instances){
         //Create File
         CreateFileAndClear(OVERVIEW_MIN_MAX_K_PATH, "name,n,m,min,optimal,max");
 
         //Fill File
         try(PrintWriter output = new PrintWriter(new FileWriter(OVERVIEW_MIN_MAX_K_PATH,true)))
         {
-            for(Graph graph : graphs){
-                String name = graph.name;
-                int n = graph.getActiveNodes().size();
-                int m = graph.getActiveNodes().stream().mapToInt(node -> node.getOutNeighbours().size()).sum();
-                int min = MinMaxK.minK(graph);
-                int optimal = MinMaxK.optimalK(graph);
-                int max = MinMaxK.maxK(graph);
-                output.println(name + "," + n + "," + m + "," + min + "," + optimal + "," + max);
+            for(Instance instance : instances){
+                int min = MinMaxK.minK(instance.N, instance.M);
+                int max = MinMaxK.maxK(instance.N, instance.M);
+                output.println(instance.NAME + "," + instance.N + "," + instance.M + "," + min + "," + instance.OPTIMAL_K + "," + max);
             }
         } catch (IOException e) {
             e.printStackTrace();

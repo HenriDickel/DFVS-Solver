@@ -5,17 +5,11 @@ import java.util.stream.Collectors;
 
 public class Graph {
 
-    //Name of the graph for logging
-    public String name;
-
-    private List<Node> nodes = new ArrayList<>();
-
-    public Graph(String name) {
-        this.name = name;
-    }
+    public List<Node> nodes = new ArrayList<>();
 
     public void unvisitAllNodes() {
         nodes.forEach(node -> node.visitIndex = -1);
+        nodes.forEach(node -> node.parent = null);
     }
 
     public void addArc(String from, String to){
@@ -29,11 +23,26 @@ public class Graph {
         Node b = nodes.stream().filter(x -> x.label.equals(to)).findFirst().get();
 
         //Add to neighbours
-        a.addNeighbour(b);
+        a.addNeighbor(b);
     }
 
     public List<Node> getActiveNodes() {
         return nodes.stream().filter(node -> !node.deleted).collect(Collectors.toList());
+    }
+
+    public List<Node> getInactiveNodes() {
+        return nodes.stream().filter(node -> node.deleted).collect(Collectors.toList());
+    }
+
+    public int getEdgeCount() {
+        return getActiveNodes().stream().mapToInt(node -> node.getOutNeighbors().size()).sum();
+    }
+
+    public void fullyRemoveNode(Node nodeToRemove) {
+        for (Node node : nodes) {
+            node.removeNeighbor(nodeToRemove);
+        }
+        nodes.remove(nodeToRemove);
     }
 
     @Override

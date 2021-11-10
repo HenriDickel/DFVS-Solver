@@ -1,5 +1,7 @@
 package program.log;
 
+import program.model.Instance;
+
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -56,14 +58,14 @@ public abstract class Log {
         catch (Exception ignored) {}
     }
 
-    public static void mainLog(String name, int optimalK, int k, long millis, boolean verified){
+    public static void mainLog(Instance instance, long millis, boolean verified){
 
         //Ignore Log
         if(Ignore) return;
 
         try(PrintWriter output = new PrintWriter(new FileWriter(MAIN_LOG_PATH,true)))
         {
-            output.println(name + "," + optimalK + "," + k + "," + millis + "," + verified);
+            output.println(instance.NAME + "," + instance.OPTIMAL_K + "," + instance.solvedK + "," + millis + "," + verified);
         }
         catch (Exception ignored) {}
     }

@@ -18,7 +18,7 @@ public abstract class Tarjan {
      * @param graph The graph.
      * @return The strong connected components.
      */
-    public static List<List<Node>> findComponents(Graph graph) {
+    public static List<List<Node>> run(Graph graph) {
 
         index = 0;
         stack = new Stack<>();
@@ -57,7 +57,7 @@ public abstract class Tarjan {
 
         // Loop over all out neighbors. Recursively call strongConnect() if they are not visited yet and update the lowLink-attribute
         // LowLink is the lowest index of all nodes in the component of the selected node
-        for(Node out: node.getOutNeighbours()) {
+        for(Node out: node.getOutNeighbors()) {
             if(out.index == -1) {
                 strongConnect(out);
                 node.lowLink = Math.min(node.lowLink, out.lowLink);

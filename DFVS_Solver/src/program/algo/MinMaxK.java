@@ -10,10 +10,7 @@ import java.util.Scanner;
 
 public abstract class MinMaxK {
 
-    public static int minK(Graph graph){
-
-        int n = graph.getActiveNodes().size();
-        int m = graph.getActiveNodes().stream().mapToInt(node -> node.getOutNeighbours().size()).sum();
+    public static int minK(int n, int m){
 
         List<Integer> smallestKList = new ArrayList<>();
 
@@ -30,32 +27,11 @@ public abstract class MinMaxK {
         return smallestKList.get(m);
     }
 
-    public static int maxK(Graph graph){
-
-        int n = graph.getActiveNodes().size();
-        int m = graph.getActiveNodes().stream().mapToInt(node -> node.getOutNeighbours().size()).sum();
+    public static int maxK(int n, int m){
 
         if(m == n * (n-1)) return n - 1;
 
         return Math.min(n - 2, m / 2);
-    }
-
-    public static int optimalK(Graph graph){
-        try{
-            Scanner scan = new Scanner(new File("src/inputs/optimal_solution_sizes.txt"));
-            while(scan.hasNextLine()){
-                String line = scan.nextLine();
-                if(line.startsWith(graph.name)){
-                    String optimalK = line.split("     ")[1];
-                    return Integer.parseInt(optimalK);
-                }
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        //Not in optimal solutions
-        return -1;
     }
 
 }

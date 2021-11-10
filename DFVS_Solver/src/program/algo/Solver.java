@@ -1,5 +1,7 @@
 package program.algo;
 
+import program.model.Cycle;
+import program.model.Instance;
 import program.utils.TimeoutException;
 import program.model.Graph;
 import program.model.Node;
@@ -8,13 +10,12 @@ import program.utils.Timer;
 
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 public abstract class Solver {
 
     private static List<Node> dfvsBranch(Graph graph, int k) throws TimeoutException {
 
-        //program.utils.Timer
+        //Check Timer
         if(program.utils.Timer.isTimeout()) throw new TimeoutException("The program stopped after " + Timer.timeout + " minutes.");
 
         //Return if graph has no circles
@@ -24,10 +25,10 @@ public abstract class Solver {
         if(k <= 0) return null;
 
         //Next Circle
-        List<Node> cycle = FirstCycle.findFirstCycle(graph);
+        Cycle cycle = ShortestCycle.run(graph);
 
         //Loop
-        for(Node node : cycle.subList(0, cycle.size())){
+        for(Node node : cycle.getNodes()){
             node.delete();
             List<Node> S = dfvsBranch(graph, k - 1);
             node.unDelete();
@@ -40,63 +41,63 @@ public abstract class Solver {
     }
 
     public static List<Node> dfvsSolve(Graph graph){
-        //Start k
-        int k = MinMaxK.minK(graph);
+        // Start k
+        int m = graph.getEdgeCount();
+        int n = graph.getActiveNodes().size();
+        int k = MinMaxK.minK(m, n);
 
-        //Solution
+        // Solution
         List<Node> S = null;
 
-        //Loop
+        // Loop
         while(S == null){
             S = dfvsBranch(graph, k);
             k++;
         }
 
-        //Return solution
+        // Return solution
         return S;
     }
 
-    public static List<Node> dfvsSolveSubGraphs(Graph graph) {
+    public static void dfvsSolveInstance(Instance instance) {
 
-        int optimalK = MinMaxK.optimalK(graph);
+        // Start Timer
+        Timer.start();
 
-        //Start program.utils.Timer
-        program.utils.Timer.start();
+        // Fully remove nodes with self edges
+        Preprocessing.fullyRemoveSelfEdges(instance);
 
-        //Create Sub Graphs
-        List<Graph> cyclicSubGraphs = Preprocessing.findCyclicSubGraphs(graph);
+        // Create sub graphs
+        Graph initialGraph = instance.subGraphs.get(0);
+        instance.subGraphs = Preprocessing.findCyclicSubGraphs(instance.NAME, initialGraph);
 
-        //Result
-        List<Node> nodes = new ArrayList<>();
+        // Sort nodes in sub graphs
+        Preprocessing.sortNodesByEdgeCount(instance);
 
-        //Run for all sub graphs
+        // Run for all sub graphs
         try{
-            for(Graph subGraph: cyclicSubGraphs) {
-                nodes.addAll(dfvsSolve(subGraph));
+            for(Graph subGraph: instance.subGraphs) {
+                List<Node> S = dfvsSolve(subGraph);
+                instance.S.addAll(S);
+                instance.solvedK += S.size();
             }
         }
         catch(TimeoutException timeoutException){
-            Long time = program.utils.Timer.stop();
-            Log.mainLog(graph.name, optimalK, nodes.size(), time, false);
-            Log.debugLog(graph.name, "Found no solution in " + program.utils.Timer.format(time), true);
-            return new ArrayList<>();
+            Long time = Timer.stop();
+            Log.mainLog(instance, time, false);
+            Log.debugLog(instance.NAME, "Found no solution in " + Timer.format(time), false);
+            return;
         }
 
-        //program.model.Node Labels
-        List<String> nodeLabels = nodes.stream().map(node -> node.label).collect(Collectors.toList());
+        // Stop Timer
+        Long time = Timer.stop();
 
-        //Stop program.utils.Timer
-        Long time = program.utils.Timer.stop();
+        // Verify
+        boolean verified = instance.solvedK == instance.OPTIMAL_K;
 
-        //Verify
-        boolean verified = nodeLabels.size() == optimalK;
-
-        //Log
-        Log.mainLog(graph.name, optimalK, nodes.size(), time, verified);
-        Log.debugLog(graph.name, "Found solution with k = " + nodes.size() + " in " + program.utils.Timer.format(time), !verified);
-
-        //Return
-        return nodes;
+        // Log
+        Log.mainLog(instance, time, verified);
+        Log.debugLog(instance.NAME, "Found solution with k = " + instance.solvedK + " in " + Timer.format(time), !verified);
     }
 
 }

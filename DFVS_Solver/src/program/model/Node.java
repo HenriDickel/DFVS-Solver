@@ -6,48 +6,54 @@ import java.util.stream.Collectors;
 
 public class Node {
 
-        public String label;
-        public boolean deleted = false;
+    public String label;
+    public boolean deleted = false;
+    private final List<Node> outNeighbours;
+    public int weight;
 
-        private final List<Node> outNeighbours;
+    // Attributes for Tarjan
+    public int index;
+    public int lowLink;
+    public boolean onStack;
 
-        public int visitIndex;
+    // Attributes for BFS
+    public Node parent;
+    public int visitIndex;
 
-        // Attributes for Tarjan's Algorithm
-        public int index;
-        public int lowLink;
-        public boolean onStack;
+    public Node(String label) {
+        this.label = label;
+        outNeighbours = new ArrayList<>();
+    }
 
-        public Node(String label){
-            this.label = label;
-            outNeighbours = new ArrayList<>();
-        }
+    public void addNeighbor(Node neighbor) {
+        outNeighbours.add(neighbor);
+    }
 
-        public void addNeighbour(Node neighbour){
-            outNeighbours.add(neighbour);
-        }
+    public void removeNeighbor(Node neighbor) {
+        outNeighbours.remove(neighbor);
+    }
 
-        public List<Node> getOutNeighbours(){
-            return outNeighbours.stream().filter(x -> !x.deleted).collect(Collectors.toList());
-        }
+    public List<Node> getOutNeighbors() {
+        return outNeighbours.stream().filter(x -> !x.deleted).collect(Collectors.toList());
+    }
 
-        public void delete(){
-            deleted = true;
-        }
+    public void delete() {
+        deleted = true;
+    }
 
-        public void unDelete(){
-            deleted = false;
-        }
+    public void unDelete() {
+        deleted = false;
+    }
 
-        @Override
-        public String toString(){
-            String nodeString = label;
-            List<String> outNeighboursStrings = outNeighbours.stream().map(x -> x.label).collect(Collectors.toList());
-            String outNeighboursStringJoined = String.join(", ", outNeighboursStrings);
+    @Override
+    public String toString() {
+        String nodeString = label;
+        List<String> outNeighborsStrings = outNeighbours.stream().map(x -> x.label).collect(Collectors.toList());
+        String outNeighborsStringJoined = String.join(", ", outNeighborsStrings);
 
-            if(!outNeighboursStrings.isEmpty()) outNeighboursStringJoined = " {" + outNeighboursStringJoined + "}";
+        if (!outNeighborsStrings.isEmpty()) outNeighborsStringJoined = " {" + outNeighborsStringJoined + "}";
 
-            return nodeString + outNeighboursStringJoined;
-        }
+        return nodeString + outNeighborsStringJoined;
+    }
 
 }
