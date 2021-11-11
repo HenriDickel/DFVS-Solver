@@ -16,13 +16,15 @@ public abstract class Solver {
     private static List<Node> dfvsBranch(Graph graph, int k, int level) throws TimeoutException {
 
         // Check Timer
-        if(program.utils.Timer.isTimeout()) throw new TimeoutException("The program stopped after " + Timer.timeout + " minutes.");
+        if(Timer.isTimeout()) throw new TimeoutException("The program stopped after " + Timer.timeout + " minutes.");
 
-        // Return if graph has no circles
-        if(DAG.isDAG(graph)) return new ArrayList<>();
 
         // Break to skip the redundant dfvs_branch()-call when k = 0
-        if(k <= 0) return null;
+        if(k <= 0) {
+            // Return if graph has no circles
+            if(DAG.isDAG(graph)) return new ArrayList<>();
+            else return null;
+        }
 
         // Next Cycle
         Cycle cycle = ShortestCycle.run(graph);

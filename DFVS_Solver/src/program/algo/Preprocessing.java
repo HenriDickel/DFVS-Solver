@@ -50,7 +50,7 @@ public abstract class Preprocessing {
         for(Graph component: instance.subGraphs) {
             for(Node node: component.getActiveNodes()) {
                 if(node.getOutNeighbors().contains(node)) {
-                    System.out.println(node);
+
                     fullyRemoveNode(instance, node);
                     instance.S.add(node);
                     instance.solvedK++;
