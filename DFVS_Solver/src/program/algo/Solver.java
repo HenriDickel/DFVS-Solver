@@ -13,29 +13,36 @@ import java.util.*;
 
 public abstract class Solver {
 
-    private static List<Node> dfvsBranch(Graph graph, int k) throws TimeoutException {
+    private static List<Node> dfvsBranch(Graph graph, int k, int level) throws TimeoutException {
 
-        //Check Timer
+        // Check Timer
         if(program.utils.Timer.isTimeout()) throw new TimeoutException("The program stopped after " + Timer.timeout + " minutes.");
 
-        //Return if graph has no circles
+        // Return if graph has no circles
         if(DAG.isDAG(graph)) return new ArrayList<>();
 
         // Break to skip the redundant dfvs_branch()-call when k = 0
         if(k <= 0) return null;
 
-        //Next Circle
+        // Next Cycle
         Cycle cycle = ShortestCycle.run(graph);
 
-        //Loop
-        for(Node node : cycle.getNodes()){
+        // Loop
+        for(Node node: cycle.getNodes()){
+            if(node.forbidden < level) continue;
+            node.forbidden = level;
             node.delete();
-            List<Node> S = dfvsBranch(graph, k - 1);
+            List<Node> S = dfvsBranch(graph, k - 1, level + 1);
             node.unDelete();
             if(S != null){
                 S.add(node);
                 return S;
             }
+        }
+
+        // Reset forbidden (for nodes forbidden on this level)
+        for(Node node: cycle.getNodes()) {
+            if(node.forbidden == level) node.forbidden = Integer.MAX_VALUE;
         }
         return null;
     }
@@ -51,7 +58,7 @@ public abstract class Solver {
 
         // Loop
         while(S == null){
-            S = dfvsBranch(graph, k);
+            S = dfvsBranch(graph, k, 0);
             k++;
         }
 
@@ -85,7 +92,7 @@ public abstract class Solver {
         catch(TimeoutException timeoutException){
             Long time = Timer.stop();
             Log.mainLog(instance, time, false);
-            Log.debugLog(instance.NAME, "Found no solution in " + Timer.format(time), false);
+            Log.debugLog(instance.NAME, "Found no solution in " + Timer.format(time), true);
             return;
         }
 

@@ -10,6 +10,7 @@ public class Node {
     public boolean deleted = false;
     private final List<Node> outNeighbours;
     public int weight;
+    public int forbidden = Integer.MAX_VALUE;
 
     // Attributes for Tarjan
     public int index;

@@ -1,44 +1,44 @@
-[2021-11-11 00:22:08.401] simple_n4_m5_k0: 	----------Starting preprocessing of graph simple_n4_m5_k0 with 5 nodes... ----------
-[2021-11-11 00:22:08.412] simple_n4_m5_k0: 	Found 5 components: [[D], [C {D}], [E], [B {C, E}], [A {B, C}]]
-[2021-11-11 00:22:08.413] simple_n4_m5_k0: 	Found 0 cyclic sub graphs: []
-[2021-11-11 00:22:08.420] simple_n4_m5_k0: 	Found solution with k = 0 in 24ms
-[2021-11-11 00:22:08.421] simple-n6_m8_k2: 	----------Starting preprocessing of graph simple-n6_m8_k2 with 5 nodes... ----------
-[2021-11-11 00:22:08.421] simple-n6_m8_k2: 	Found 1 components: [[F {E}, E {A, F}, C {A}, B {C, E}, A {B, C}]]
-[2021-11-11 00:22:08.422] simple-n6_m8_k2: 	Found 1 cyclic sub graphs: [[F {E}, E {A, F}, A {B, C}, C {A}, B {C, E}]]
-[2021-11-11 00:22:08.426] simple-n6_m8_k2: 	Found solution with k = 2 in 4ms
-[2021-11-11 00:22:08.426] simple_n6_m6_k1: 	----------Starting preprocessing of graph simple_n6_m6_k1 with 6 nodes... ----------
-[2021-11-11 00:22:08.426] simple_n6_m6_k1: 	Found 4 components: [[F], [E], [D], [C {A, F}, B {C, E}, A {B, D}]]
-[2021-11-11 00:22:08.427] simple_n6_m6_k1: 	Found 1 cyclic sub graphs: [[C {A}, A {B}, B {C}]]
-[2021-11-11 00:22:08.427] simple_n6_m6_k1: 	Found solution with k = 1 in 1ms
-[2021-11-11 00:22:08.428] simple-n7_m8_k2: 	----------Starting preprocessing of graph simple-n7_m8_k2 with 7 nodes... ----------
-[2021-11-11 00:22:08.428] simple-n7_m8_k2: 	Found 3 components: [[G {E}, F {G}, E {F}], [D {E}], [C {A}, B {C}, A {B, D}]]
-[2021-11-11 00:22:08.428] simple-n7_m8_k2: 	Found 2 cyclic sub graphs: [[G {E}, E {F}, F {G}], [C {A}, A {B}, B {C}]]
-[2021-11-11 00:22:08.429] simple-n7_m8_k2: 	Found solution with k = 2 in 1ms
-[2021-11-11 00:22:08.430] simple-n5_m6_k1: 	----------Starting preprocessing of graph simple-n5_m6_k1 with 5 nodes... ----------
-[2021-11-11 00:22:08.430] simple-n5_m6_k1: 	Found 1 components: [[E {A}, D {E}, C {A}, B {C}, A {B, D}]]
-[2021-11-11 00:22:08.430] simple-n5_m6_k1: 	Found 1 cyclic sub graphs: [[E {A}, A {B, D}, D {E}, C {A}, B {C}]]
-[2021-11-11 00:22:08.431] simple-n5_m6_k1: 	Found solution with k = 1 in 0ms
-[2021-11-11 00:22:08.431] simple-n6_m6_k3: 	----------Starting preprocessing of graph simple-n6_m6_k3 with 6 nodes... ----------
-[2021-11-11 00:22:08.432] simple-n6_m6_k3: 	Found 3 components: [[B {A}, A {B}], [D {C}, C {D}], [F {E}, E {F}]]
-[2021-11-11 00:22:08.432] simple-n6_m6_k3: 	Found 3 cyclic sub graphs: [[B {A}, A {B}], [D {C}, C {D}], [F {E}, E {F}]]
-[2021-11-11 00:22:08.433] simple-n6_m6_k3: 	Found solution with k = 3 in 1ms
-[2021-11-11 00:22:08.433] full-n3_m6_k2: 	----------Starting preprocessing of graph full-n3_m6_k2 with 3 nodes... ----------
-[2021-11-11 00:22:08.433] full-n3_m6_k2: 	Found 1 components: [[C {A, B}, B {A, C}, A {B, C}]]
-[2021-11-11 00:22:08.434] full-n3_m6_k2: 	Found 1 cyclic sub graphs: [[C {A, B}, A {B, C}, B {A, C}]]
-[2021-11-11 00:22:08.434] full-n3_m6_k2: 	Found solution with k = 2 in 0ms
-[2021-11-11 00:22:08.435] full-n4_m12_k3: 	----------Starting preprocessing of graph full-n4_m12_k3 with 4 nodes... ----------
-[2021-11-11 00:22:08.435] full-n4_m12_k3: 	Found 1 components: [[D {A, B, C}, C {A, B, D}, B {A, C, D}, A {B, C, D}]]
-[2021-11-11 00:22:08.435] full-n4_m12_k3: 	Found 1 cyclic sub graphs: [[D {A, B, C}, A {B, C, D}, B {A, C, D}, C {A, B, D}]]
-[2021-11-11 00:22:08.436] full-n4_m12_k3: 	Found solution with k = 3 in 1ms
-[2021-11-11 00:22:08.437] bfs-n7_m9_k1: 	----------Starting preprocessing of graph bfs-n7_m9_k1 with 7 nodes... ----------
-[2021-11-11 00:22:08.437] bfs-n7_m9_k1: 	Found 1 components: [[D {E}, G {A}, E {G}, C {E}, F {A}, B {F}, A {B, C, D}]]
-[2021-11-11 00:22:08.438] bfs-n7_m9_k1: 	Found 1 cyclic sub graphs: [[D {E}, E {G}, G {A}, A {B, C, D}, C {E}, F {A}, B {F}]]
-[2021-11-11 00:22:08.438] bfs-n7_m9_k1: 	Found solution with k = 1 in 1ms
-[2021-11-11 00:22:08.439] bfs-n4_m4_k1: 	----------Starting preprocessing of graph bfs-n4_m4_k1 with 4 nodes... ----------
-[2021-11-11 00:22:08.439] bfs-n4_m4_k1: 	Found 2 components: [[D {B}, C {D}, B {C}], [A {B}]]
-[2021-11-11 00:22:08.439] bfs-n4_m4_k1: 	Found 1 cyclic sub graphs: [[D {B}, B {C}, C {D}]]
-[2021-11-11 00:22:08.439] bfs-n4_m4_k1: 	Found solution with k = 1 in 0ms
-[2021-11-11 00:22:08.440] bfs-n4_m5_k1: 	----------Starting preprocessing of graph bfs-n4_m5_k1 with 4 nodes... ----------
-[2021-11-11 00:22:08.440] bfs-n4_m5_k1: 	Found 1 components: [[D {A}, C {D, B}, B {C}, A {B}]]
-[2021-11-11 00:22:08.440] bfs-n4_m5_k1: 	Found 1 cyclic sub graphs: [[D {A}, A {B}, C {D, B}, B {C}]]
-[2021-11-11 00:22:08.441] bfs-n4_m5_k1: 	Found solution with k = 1 in 0ms
+[2021-11-11 00:52:18.356] simple_n4_m5_k0: 	----------Starting preprocessing of graph simple_n4_m5_k0 with 5 nodes... ----------
+[2021-11-11 00:52:18.367] simple_n4_m5_k0: 	Found 5 components: [[D], [C {D}], [E], [B {C, E}], [A {B, C}]]
+[2021-11-11 00:52:18.368] simple_n4_m5_k0: 	Found 0 cyclic sub graphs: []
+[2021-11-11 00:52:18.375] simple_n4_m5_k0: 	Found solution with k = 0 in 25ms
+[2021-11-11 00:52:18.375] simple-n6_m8_k2: 	----------Starting preprocessing of graph simple-n6_m8_k2 with 5 nodes... ----------
+[2021-11-11 00:52:18.376] simple-n6_m8_k2: 	Found 1 components: [[F {E}, E {A, F}, C {A}, B {C, E}, A {B, C}]]
+[2021-11-11 00:52:18.376] simple-n6_m8_k2: 	Found 1 cyclic sub graphs: [[F {E}, E {A, F}, A {B, C}, C {A}, B {C, E}]]
+[2021-11-11 00:52:18.380] simple-n6_m8_k2: 	Found solution with k = 2 in 4ms
+[2021-11-11 00:52:18.381] simple_n6_m6_k1: 	----------Starting preprocessing of graph simple_n6_m6_k1 with 6 nodes... ----------
+[2021-11-11 00:52:18.381] simple_n6_m6_k1: 	Found 4 components: [[F], [E], [D], [C {A, F}, B {C, E}, A {B, D}]]
+[2021-11-11 00:52:18.382] simple_n6_m6_k1: 	Found 1 cyclic sub graphs: [[C {A}, A {B}, B {C}]]
+[2021-11-11 00:52:18.383] simple_n6_m6_k1: 	Found solution with k = 1 in 1ms
+[2021-11-11 00:52:18.383] simple-n7_m8_k2: 	----------Starting preprocessing of graph simple-n7_m8_k2 with 7 nodes... ----------
+[2021-11-11 00:52:18.383] simple-n7_m8_k2: 	Found 3 components: [[G {E}, F {G}, E {F}], [D {E}], [C {A}, B {C}, A {B, D}]]
+[2021-11-11 00:52:18.384] simple-n7_m8_k2: 	Found 2 cyclic sub graphs: [[G {E}, E {F}, F {G}], [C {A}, A {B}, B {C}]]
+[2021-11-11 00:52:18.385] simple-n7_m8_k2: 	Found solution with k = 2 in 1ms
+[2021-11-11 00:52:18.385] simple-n5_m6_k1: 	----------Starting preprocessing of graph simple-n5_m6_k1 with 5 nodes... ----------
+[2021-11-11 00:52:18.385] simple-n5_m6_k1: 	Found 1 components: [[E {A}, D {E}, C {A}, B {C}, A {B, D}]]
+[2021-11-11 00:52:18.386] simple-n5_m6_k1: 	Found 1 cyclic sub graphs: [[E {A}, A {B, D}, D {E}, C {A}, B {C}]]
+[2021-11-11 00:52:18.386] simple-n5_m6_k1: 	Found solution with k = 1 in 1ms
+[2021-11-11 00:52:18.387] simple-n6_m6_k3: 	----------Starting preprocessing of graph simple-n6_m6_k3 with 6 nodes... ----------
+[2021-11-11 00:52:18.387] simple-n6_m6_k3: 	Found 3 components: [[B {A}, A {B}], [D {C}, C {D}], [F {E}, E {F}]]
+[2021-11-11 00:52:18.387] simple-n6_m6_k3: 	Found 3 cyclic sub graphs: [[B {A}, A {B}], [D {C}, C {D}], [F {E}, E {F}]]
+[2021-11-11 00:52:18.388] simple-n6_m6_k3: 	Found solution with k = 3 in 0ms
+[2021-11-11 00:52:18.388] full-n3_m6_k2: 	----------Starting preprocessing of graph full-n3_m6_k2 with 3 nodes... ----------
+[2021-11-11 00:52:18.389] full-n3_m6_k2: 	Found 1 components: [[C {A, B}, B {A, C}, A {B, C}]]
+[2021-11-11 00:52:18.389] full-n3_m6_k2: 	Found 1 cyclic sub graphs: [[C {A, B}, A {B, C}, B {A, C}]]
+[2021-11-11 00:52:18.390] full-n3_m6_k2: 	Found solution with k = 2 in 0ms
+[2021-11-11 00:52:18.390] full-n4_m12_k3: 	----------Starting preprocessing of graph full-n4_m12_k3 with 4 nodes... ----------
+[2021-11-11 00:52:18.390] full-n4_m12_k3: 	Found 1 components: [[D {A, B, C}, C {A, B, D}, B {A, C, D}, A {B, C, D}]]
+[2021-11-11 00:52:18.390] full-n4_m12_k3: 	Found 1 cyclic sub graphs: [[D {A, B, C}, A {B, C, D}, B {A, C, D}, C {A, B, D}]]
+[2021-11-11 00:52:18.391] full-n4_m12_k3: 	Found solution with k = 3 in 1ms
+[2021-11-11 00:52:18.391] bfs-n7_m9_k1: 	----------Starting preprocessing of graph bfs-n7_m9_k1 with 7 nodes... ----------
+[2021-11-11 00:52:18.391] bfs-n7_m9_k1: 	Found 1 components: [[D {E}, G {A}, E {G}, C {E}, F {A}, B {F}, A {B, C, D}]]
+[2021-11-11 00:52:18.392] bfs-n7_m9_k1: 	Found 1 cyclic sub graphs: [[D {E}, E {G}, G {A}, A {B, C, D}, C {E}, F {A}, B {F}]]
+[2021-11-11 00:52:18.393] bfs-n7_m9_k1: 	Found solution with k = 1 in 0ms
+[2021-11-11 00:52:18.393] bfs-n4_m4_k1: 	----------Starting preprocessing of graph bfs-n4_m4_k1 with 4 nodes... ----------
+[2021-11-11 00:52:18.393] bfs-n4_m4_k1: 	Found 2 components: [[D {B}, C {D}, B {C}], [A {B}]]
+[2021-11-11 00:52:18.394] bfs-n4_m4_k1: 	Found 1 cyclic sub graphs: [[D {B}, B {C}, C {D}]]
+[2021-11-11 00:52:18.395] bfs-n4_m4_k1: 	Found solution with k = 1 in 1ms
+[2021-11-11 00:52:18.395] bfs-n4_m5_k1: 	----------Starting preprocessing of graph bfs-n4_m5_k1 with 4 nodes... ----------
+[2021-11-11 00:52:18.395] bfs-n4_m5_k1: 	Found 1 components: [[D {A}, C {D, B}, B {C}, A {B}]]
+[2021-11-11 00:52:18.396] bfs-n4_m5_k1: 	Found 1 cyclic sub graphs: [[D {A}, A {B}, C {D, B}, B {C}]]
+[2021-11-11 00:52:18.396] bfs-n4_m5_k1: 	Found solution with k = 1 in 1ms
