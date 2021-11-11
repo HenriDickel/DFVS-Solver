@@ -51,14 +51,14 @@ public abstract class ShortestCycle {
     private static Cycle visitNode(Node node) {
 
         for(Node outNeighbor: node.getOutNeighbors()) {
-            if(outNeighbor.parent == null && outNeighbor.visitIndex == -1) { // Node was not visited and is not on stack
+            if(outNeighbor.parent == null && outNeighbor.visitIndex == -1) { // Node was not visited and is not in queue
                 outNeighbor.parent = node;
                 queue.add(outNeighbor);
             } else if(outNeighbor.visitIndex > -1){ // Node is already visited
                 Cycle cycle = findCycle(outNeighbor, node);
                 if(cycle != null) return cycle;
             } else {
-                // Node is on stack, but not visited (= out neighbor is on same depth as node))
+                // Node is in queue, but not visited (= out neighbor is on same depth as node))
             }
         }
         return null;

@@ -7,9 +7,7 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 import java.util.stream.Stream;
 
 public abstract class InstanceCreator {
@@ -23,22 +21,23 @@ public abstract class InstanceCreator {
         return new Instance(name, graph, optimalK);
     }
 
-    public static int readOptimalKFromFile(String graphName){
-        try{
-            Scanner scan = new Scanner(new File("src/inputs/optimal_solution_sizes.txt"));
-            while(scan.hasNextLine()){
-                String line = scan.nextLine();
-                if(line.startsWith(graphName)){
-                    String optimalK = line.split(" {5}")[1];
-                    return Integer.parseInt(optimalK);
-                }
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+    public static Map<String, Integer> optimalKMap = new HashMap<>();
 
-        //Not in optimal solutions
-        return -1;
+    public static int readOptimalKFromFile(String graphName){
+        if(optimalKMap.isEmpty()) {
+            try{
+                Scanner scan = new Scanner(new File("src/inputs/optimal_solution_sizes.txt"));
+                while(scan.hasNextLine()){
+                    String line = scan.nextLine();
+                    String name = line.split(" {5}")[0];
+                    String optimalK = line.split(" {5}")[1];
+                    optimalKMap.put(name, Integer.parseInt(optimalK));
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        return optimalKMap.get(graphName);
     }
 
     public static Instance createFromFile(String path, String filename){
