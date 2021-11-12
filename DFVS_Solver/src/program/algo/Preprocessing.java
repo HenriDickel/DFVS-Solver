@@ -4,6 +4,7 @@ import program.model.Graph;
 import program.model.Instance;
 import program.model.Node;
 import program.log.Log;
+import program.model.Pair;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -16,12 +17,9 @@ public abstract class Preprocessing {
      * Splits up the graph into it's cyclic components by using the Tarjan's algorithm.
      */
     public static List<Graph> findCyclicSubGraphs(String name, Graph graph) {
-        Log.debugLog(name, "----------Starting preprocessing of graph " + name + " with " + graph.getActiveNodes().size() + " nodes... ----------");
 
         // Find cyclic components
         List<List<Node>> components = Tarjan.run(graph);
-
-        Log.debugLog(name, "Found " + components.size() + " components: " + components);
 
         // Generate sub graphs
         List<Graph> subGraphs = new ArrayList<>();
@@ -38,7 +36,7 @@ public abstract class Preprocessing {
                 subGraphs.add(subGraph);
             }
         }
-        Log.debugLog(name, "Found " + subGraphs.size() + " cyclic sub graphs: " + subGraphs.stream().map(Graph::getActiveNodes).collect(Collectors.toList()));
+        Log.debugLog(name, "Found " + subGraphs.size() + " cyclic sub graph(s) with n = " + subGraphs.stream().map(g -> g.nodes.size()).collect(Collectors.toList()));
         return subGraphs;
     }
 
@@ -50,7 +48,6 @@ public abstract class Preprocessing {
         for(Graph component: instance.subGraphs) {
             for(Node node: component.getActiveNodes()) {
                 if(node.getOutNeighbors().contains(node)) {
-
                     fullyRemoveNode(instance, node);
                     instance.S.add(node);
                     instance.solvedK++;
@@ -80,4 +77,64 @@ public abstract class Preprocessing {
             subGraph.nodes.sort(Comparator.comparingInt(n -> -n.weight));
         }
     }
+
+    public static List<Pair> findPairs(Graph graph) {
+
+        List<Pair> pairs = new ArrayList<>();
+        for(Node A: graph.nodes) {
+            for(Node B: A.getOutNeighbors()) {
+                if(B.getOutNeighbors().contains(A)) {
+                    pairs.add(new Pair(A, B));
+                }
+            }
+        }
+        return pairs;
+    }
+
+    public static void fullyRemovePairs(Instance instance) {
+        for(Graph subGraph: instance.subGraphs) {
+            for(Node A: subGraph.getActiveNodes()) {
+                if(A.getOutNeighbors().size() == 1) { // If the node A has exactly one out neighbor B
+                    Node B = A.getOutNeighbors().get(0);
+                    if(B.getOutNeighbors().contains(A)) { // If there is an edge back from B to A
+                        long inEdgeCount = subGraph.getActiveNodes().stream().filter(n -> n.getOutNeighbors().contains(A)).count();
+                        if(inEdgeCount == 1) { // if there are no other edges to A
+                            fullyRemoveNode(instance, B);
+                            instance.S.add(B);
+                            instance.solvedK++;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

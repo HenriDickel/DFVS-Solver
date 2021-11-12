@@ -73,8 +73,11 @@ public abstract class Solver {
         // Start Timer
         Timer.start();
 
-        // Fully remove nodes with self edges
+        // Preprocessing
+        Log.debugLog(instance.NAME, "---------- " + instance.NAME + " (n = " + instance.N + ", m = " + instance.M + ", k = " + instance.OPTIMAL_K + ") ----------");
         Preprocessing.fullyRemoveSelfEdges(instance);
+        Preprocessing.fullyRemovePairs(instance);
+        Log.debugLog(instance.NAME, "Removed " + instance.solvedK + " nodes in preprocessing");
 
         // Create sub graphs
         Graph initialGraph = instance.subGraphs.get(0);
