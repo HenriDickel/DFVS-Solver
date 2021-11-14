@@ -102,6 +102,45 @@ public abstract class InstanceCreator {
     }
 
     /**
+     * Creates a BFS test graph.
+     */
+    public static Instance createBFSTest1(){
+        Graph graph = new Graph();
+
+        graph.addArc("A", "B");
+        graph.addArc("B", "C");
+        graph.addArc("C", "D");
+        graph.addArc("D", "A");
+
+        graph.addArc("B", "E");
+        graph.addArc("E", "F");
+        graph.addArc("F", "C");
+
+        return createTestInstance("bfs_test_1", graph, 1);
+    }
+
+    /**
+     * Creates a BFS test graph.
+     */
+    public static Instance createBFSTest2(){
+        Graph graph = new Graph();
+
+        graph.addArc("A", "B");
+        graph.addArc("B", "C");
+        graph.addArc("C", "D");
+        graph.addArc("D", "A");
+
+        graph.addArc("B", "E");
+        graph.addArc("E", "F");
+        graph.addArc("F", "C");
+
+        graph.addArc("E", "G");
+        graph.addArc("G", "E");
+
+        return createTestInstance("bfs_test_1", graph, 1);
+    }
+
+    /**
      * Creates a simple acyclic graph.
      */
     public static Instance createSimpleDAG(){

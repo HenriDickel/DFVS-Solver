@@ -26,6 +26,15 @@ public class Graph {
         a.addNeighbor(b);
     }
 
+    public void unexploreAllNodes() {
+
+    }
+
+    public void resetBFS() {
+        nodes.forEach(node -> node.explored = false);
+        nodes.forEach(node -> node.parent = null);
+    }
+
     public List<Node> getActiveNodes() {
         return nodes.stream().filter(node -> !node.deleted).collect(Collectors.toList());
     }

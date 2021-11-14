@@ -7,7 +7,7 @@ public class Timer {
 
     private static LocalDateTime startTime;
 
-    public static final long timeout = 3; // in minutes
+    public static final long timeout = 1; // in minutes
 
     public static void start() {
         startTime = LocalDateTime.now();

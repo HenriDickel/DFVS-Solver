@@ -21,6 +21,9 @@ public class Node {
     public Node parent;
     public int visitIndex;
 
+    // New BFS
+    public boolean explored;
+
     public Node(String label) {
         this.label = label;
         outNeighbours = new ArrayList<>();
@@ -36,6 +39,10 @@ public class Node {
 
     public List<Node> getOutNeighbors() {
         return outNeighbours.stream().filter(x -> !x.deleted).collect(Collectors.toList());
+    }
+
+    public List<Node> getUnexploredNeighbors() {
+        return outNeighbours.stream().filter(x -> !x.explored && !x.deleted).collect(Collectors.toList());
     }
 
     public void delete() {

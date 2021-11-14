@@ -1,5 +1,6 @@
 package program;
 
+import program.algo.BFSShortestCircle;
 import program.algo.Solver;
 import program.log.Log;
 import program.model.Instance;
@@ -37,9 +38,12 @@ public class Main {
             Log.Ignore = false;
 
             // Solve test instances
+            Instance instance = InstanceCreator.createBFSTest2();
+            List<Node> bfs = BFSShortestCircle.ShortestCircleBFS(instance.subGraphs.get(0));
+            List<Node> bfstest = bfs;
 
-            List<Instance> instances = InstanceCreator.createSyntheticInstances();
-            instances.addAll(InstanceCreator.createComplexInstances());
+            List<Instance> instances = InstanceCreator.createComplexInstances();
+            //instances.addAll(InstanceCreator.createComplexInstances());
             instances.forEach(Solver::dfvsSolveInstance);
 
             // Solve own test instances

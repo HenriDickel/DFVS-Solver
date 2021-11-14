@@ -1,39 +1,7 @@
-[2021-11-13 00:15:01.196] synth-n_10-m_12-k_2-p_0.2.txt: 	---------- synth-n_10-m_12-k_2-p_0.2.txt (n = 10, m = 12, k = 0) ----------
-[2021-11-13 00:15:01.202] synth-n_10-m_12-k_2-p_0.2.txt: 	Removed 0 nodes in preprocessing
-[2021-11-13 00:15:01.203] synth-n_10-m_12-k_2-p_0.2.txt: 	Found 10 components
-[2021-11-13 00:15:01.206] synth-n_10-m_12-k_2-p_0.2.txt: 	Found 0 cyclic sub graphs with n = []
-[2021-11-13 00:15:01.213] synth-n_10-m_12-k_2-p_0.2.txt: 	Found solution with k = 0 in 22ms
-[2021-11-13 00:15:01.213] synth-n_10-m_12-k_4-p_0.2.txt: 	---------- synth-n_10-m_12-k_4-p_0.2.txt (n = 10, m = 12, k = 1) ----------
-[2021-11-13 00:15:01.213] synth-n_10-m_12-k_4-p_0.2.txt: 	Removed 0 nodes in preprocessing
-[2021-11-13 00:15:01.214] synth-n_10-m_12-k_4-p_0.2.txt: 	Found 9 components
-[2021-11-13 00:15:01.214] synth-n_10-m_12-k_4-p_0.2.txt: 	Found 1 cyclic sub graphs with n = [2]
-[2021-11-13 00:15:01.217] synth-n_10-m_12-k_4-p_0.2.txt: 	Found solution with k = 1 in 3ms
-[2021-11-13 00:15:01.218] synth-n_100-m_1009-k_2-p_0.2.txt: 	---------- synth-n_100-m_1009-k_2-p_0.2.txt (n = 100, m = 1009, k = 2) ----------
-[2021-11-13 00:15:01.218] synth-n_100-m_1009-k_2-p_0.2.txt: 	Removed 0 nodes in preprocessing
-[2021-11-13 00:15:01.219] synth-n_100-m_1009-k_2-p_0.2.txt: 	Found 6 components
-[2021-11-13 00:15:01.221] synth-n_100-m_1009-k_2-p_0.2.txt: 	Found 1 cyclic sub graphs with n = [95]
-[2021-11-13 00:15:01.249] synth-n_100-m_1009-k_2-p_0.2.txt: 	Found solution with k = 2 in 30ms
-[2021-11-13 00:15:01.249] synth-n_100-m_1028-k_4-p_0.2.txt: 	---------- synth-n_100-m_1028-k_4-p_0.2.txt (n = 100, m = 1028, k = 4) ----------
-[2021-11-13 00:15:01.249] synth-n_100-m_1028-k_4-p_0.2.txt: 	Removed 0 nodes in preprocessing
-[2021-11-13 00:15:01.250] synth-n_100-m_1028-k_4-p_0.2.txt: 	Found 13 components
-[2021-11-13 00:15:01.251] synth-n_100-m_1028-k_4-p_0.2.txt: 	Found 1 cyclic sub graphs with n = [88]
-[2021-11-13 00:15:01.273] synth-n_100-m_1028-k_4-p_0.2.txt: 	Found solution with k = 4 in 23ms
-[2021-11-13 00:15:01.273] synth-n_100-m_1107-k_6-p_0.2.txt: 	---------- synth-n_100-m_1107-k_6-p_0.2.txt (n = 100, m = 1107, k = 6) ----------
-[2021-11-13 00:15:01.273] synth-n_100-m_1107-k_6-p_0.2.txt: 	Removed 0 nodes in preprocessing
-[2021-11-13 00:15:01.274] synth-n_100-m_1107-k_6-p_0.2.txt: 	Found 2 components
-[2021-11-13 00:15:01.276] synth-n_100-m_1107-k_6-p_0.2.txt: 	Found 1 cyclic sub graphs with n = [99]
-[2021-11-13 00:15:01.343] synth-n_100-m_1107-k_6-p_0.2.txt: 	Found solution with k = 6 in 69ms
-[2021-11-13 00:15:01.343] synth-n_100-m_1119-k_8-p_0.2.txt: 	---------- synth-n_100-m_1119-k_8-p_0.2.txt (n = 100, m = 1119, k = 8) ----------
-[2021-11-13 00:15:01.344] synth-n_100-m_1119-k_8-p_0.2.txt: 	Removed 0 nodes in preprocessing
-[2021-11-13 00:15:01.344] synth-n_100-m_1119-k_8-p_0.2.txt: 	Found 2 components
-[2021-11-13 00:15:01.346] synth-n_100-m_1119-k_8-p_0.2.txt: 	Found 1 cyclic sub graphs with n = [99]
-[2021-11-13 00:15:01.796] synth-n_100-m_1119-k_8-p_0.2.txt: 	Found solution with k = 8 in 452ms
-[2021-11-13 00:15:01.796] synth-n_100-m_1129-k_10-p_0.2.txt: 	---------- synth-n_100-m_1129-k_10-p_0.2.txt (n = 100, m = 1129, k = 10) ----------
-[2021-11-13 00:15:01.797] synth-n_100-m_1129-k_10-p_0.2.txt: 	Removed 0 nodes in preprocessing
-[2021-11-13 00:15:01.797] synth-n_100-m_1129-k_10-p_0.2.txt: 	Found 1 components
-[2021-11-13 00:15:01.800] synth-n_100-m_1129-k_10-p_0.2.txt: 	Found 1 cyclic sub graphs with n = [100]
-[2021-11-13 00:15:02.883] synth-n_100-m_1129-k_10-p_0.2.txt: 	Found solution with k = 10 in 1s
-[2021-11-13 00:15:02.883] synth-n_100-m_1220-k_15-p_0.2.txt: 	---------- synth-n_100-m_1220-k_15-p_0.2.txt (n = 100, m = 1220, k = 15) ----------
-[2021-11-13 00:15:02.883] synth-n_100-m_1220-k_15-p_0.2.txt: 	Removed 0 nodes in preprocessing
-[2021-11-13 00:15:02.884] synth-n_100-m_1220-k_15-p_0.2.txt: 	Found 3 components
-[2021-11-13 00:15:02.886] synth-n_100-m_1220-k_15-p_0.2.txt: 	Found 1 cyclic sub graphs with n = [98]
+[2021-11-14 12:57:11.441] advotogo-n_100: 	---------- advotogo-n_100 (n = 16, m = 12, k = 3) ----------
+[2021-11-14 12:57:11.446] advotogo-n_100: 	Removed 3 nodes in preprocessing
+[2021-11-14 12:57:11.449] advotogo-n_100: 	Found 0 cyclic sub graph(s) with n = []
+[2021-11-14 12:57:11.453] advotogo-n_100: 	Found solution with k = 3 in 18ms
+[2021-11-14 12:57:11.454] advotogo-n_1000: 	---------- advotogo-n_1000 (n = 578, m = 1500, k = 112) ----------
+[2021-11-14 12:57:11.466] advotogo-n_1000: 	Removed 42 nodes in preprocessing
+[2021-11-14 12:57:11.469] advotogo-n_1000: 	Found 15 cyclic sub graph(s) with n = [3, 2, 2, 2, 2, 152, 3, 3, 7, 3, 6, 3, 2, 2, 2]
