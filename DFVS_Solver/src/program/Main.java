@@ -46,6 +46,9 @@ public class Main {
             //instances.addAll(InstanceCreator.createComplexInstances());
             //instances.forEach(Solver::dfvsSolveInstance);
 
+            List<Instance> instances = InstanceCreator.createSelectedInstances();
+            instances.forEach(Solver::dfvsSolveInstance);
+
             // Solve own test instances
 
             //List<Instance> instances = InstanceCreator.createTestInstances();
@@ -53,9 +56,9 @@ public class Main {
 
             // Solve instance from file
 
-            Instance instance = InstanceCreator.createFromFile("src/inputs/complex/", "biology-n_12-m_33-p_0.9-15");
-            Solver.dfvsSolveInstance(instance);
-            System.out.println(instance.S);
+            //Instance instance = InstanceCreator.createFromFile("src/inputs/complex/", "biology-n_12-m_33-p_0.9-15");
+            //Solver.dfvsSolveInstance(instance);
+            //System.out.println(instance.S);
 
         }
 

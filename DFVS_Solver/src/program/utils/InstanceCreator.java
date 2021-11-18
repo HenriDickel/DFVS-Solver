@@ -68,6 +68,45 @@ public abstract class InstanceCreator {
         return createFromFolder("src/inputs/synthetic");
     }
 
+    public static List<Instance> createSelectedInstances() {
+        List<Instance> instances = new ArrayList<>();
+
+        instances.add(createFromFile("src/inputs/complex/", "biology-n_35-m_315-p_0.75-18"));
+        instances.add(createFromFile("src/inputs/complex/", "biology-n_42-m_297-p_0.5-23"));
+        instances.add(createFromFile("src/inputs/complex/", "biology-n_42-m_297-p_0.75-23"));
+        instances.add(createFromFile("src/inputs/complex/", "biology-n_49-m_689-p_0.9-14"));
+        instances.add(createFromFile("src/inputs/complex/", "biology-n_59-m_624-p_0.75-1"));
+        instances.add(createFromFile("src/inputs/complex/", "blogs-n_200"));
+        instances.add(createFromFile("src/inputs/complex/", "GD-n_80-m_232.mtx"));
+        instances.add(createFromFile("src/inputs/complex/", "openflights-n_300"));
+        instances.add(createFromFile("src/inputs/complex/", "temporalGraph-n_700"));
+        instances.add(createFromFile("src/inputs/complex/", "ucsocial-n_200"));
+        instances.add(createFromFile("src/inputs/complex/", "usairport-n_200"));
+        instances.add(createFromFile("src/inputs/synthetic/", "synth-n_100-m_305-k_20-p_0.05.txt"));
+        instances.add(createFromFile("src/inputs/synthetic/", "synth-n_100-m_319-k_15-p_0.05.txt"));
+        instances.add(createFromFile("src/inputs/synthetic/", "synth-n_100-m_568-k_10-p_0.1.txt"));
+        instances.add(createFromFile("src/inputs/synthetic/", "synth-n_120-m_1530-k_10-p_0.2.txt"));
+        instances.add(createFromFile("src/inputs/synthetic/", "synth-n_120-m_455-k_15-p_0.05.txt"));
+        instances.add(createFromFile("src/inputs/synthetic/", "synth-n_140-m_1070-k_10-p_0.1.txt"));
+        instances.add(createFromFile("src/inputs/synthetic/", "synth-n_160-m_731-k_10-p_0.05.txt"));
+        instances.add(createFromFile("src/inputs/synthetic/", "synth-n_180-m_3481-k_10-p_0.2.txt"));
+        instances.add(createFromFile("src/inputs/synthetic/", "synth-n_180-m_902-k_10-p_0.05.txt"));
+        instances.add(createFromFile("src/inputs/synthetic/", "synth-n_200-m_1075-k_10-p_0.05.txt"));
+        instances.add(createFromFile("src/inputs/synthetic/", "synth-n_225-m_1390-k_10-p_0.05.txt"));
+        instances.add(createFromFile("src/inputs/synthetic/", "synth-n_250-m_1694-k_10-p_0.05.txt"));
+        instances.add(createFromFile("src/inputs/synthetic/", "synth-n_275-m_2051-k_10-p_0.05.txt"));
+        instances.add(createFromFile("src/inputs/synthetic/", "synth-n_300-m_2418-k_10-p_0.05.txt"));
+        instances.add(createFromFile("src/inputs/synthetic/", "synth-n_300-m_4844-k_10-p_0.1.txt"));
+        instances.add(createFromFile("src/inputs/synthetic/", "synth-n_300-m_9436-k_10-p_0.2.txt"));
+        instances.add(createFromFile("src/inputs/synthetic/", "synth-n_50-m_357-k_20-p_0.2.txt"));
+        instances.add(createFromFile("src/inputs/synthetic/", "synth-n_60-m_243-k_25-p_0.1.txt"));
+        instances.add(createFromFile("src/inputs/synthetic/", "synth-n_60-m_271-k_20-p_0.1.txt"));
+        instances.add(createFromFile("src/inputs/synthetic/", "synth-n_60-m_468-k_15-p_0.2.txt"));
+        instances.add(createFromFile("src/inputs/synthetic/", "synth-n_80-m_818-k_15-p_0.2.txt"));
+
+        return instances;
+    }
+
     private static List<Instance> createFromFolder(String path) {
         File folder = new File(path);
         File[] listOfFiles = folder.listFiles();
