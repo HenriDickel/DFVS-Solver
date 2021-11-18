@@ -1,0 +1,4 @@
+[2021-11-18 13:59:06.739] biology-n_12-m_33-p_0.9-15: 	---------- biology-n_12-m_33-p_0.9-15 (n = 12, m = 33, k = 3) ----------
+[2021-11-18 13:59:06.746] biology-n_12-m_33-p_0.9-15: 	Removed 0 nodes in preprocessing
+[2021-11-18 13:59:06.751] biology-n_12-m_33-p_0.9-15: 	Found 1 cyclic sub graph(s) with n = [10]
+[2021-11-18 13:59:06.769] biology-n_12-m_33-p_0.9-15: 	Found solution with k = 3 in 38ms

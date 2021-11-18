@@ -28,10 +28,10 @@ public abstract class Solver {
 
         // Next Cycle
         //Cycle cycle = ShortestCycle.run(graph);
-        List<Node> cycle = BFSShortestCircle.ShortestCircleBFS(graph);
+        Cycle cycle = BFSShortestCircle.ShortestCircleBFS(graph);
 
         // Loop
-        for(Node node: cycle){
+        for(Node node: cycle.getNodes()){
             if(node.forbidden < level) continue;
             node.forbidden = level;
             node.delete();
@@ -44,7 +44,7 @@ public abstract class Solver {
         }
 
         // Reset forbidden (for nodes forbidden on this level)
-        for(Node node: cycle) {
+        for(Node node: cycle.getNodes()) {
             if(node.forbidden == level) node.forbidden = Integer.MAX_VALUE;
         }
         return null;

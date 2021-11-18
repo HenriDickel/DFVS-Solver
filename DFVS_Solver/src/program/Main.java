@@ -38,13 +38,13 @@ public class Main {
             Log.Ignore = false;
 
             // Solve test instances
-            Instance instance = InstanceCreator.createBFSTest2();
-            List<Node> bfs = BFSShortestCircle.ShortestCircleBFS(instance.subGraphs.get(0));
-            List<Node> bfstest = bfs;
+            //Instance instance = InstanceCreator.createBFSTest2();
+            //List<Node> bfs = BFSShortestCircle.ShortestCircleBFS(instance.subGraphs.get(0));
+            //List<Node> bfstest = bfs;
 
-            List<Instance> instances = InstanceCreator.createComplexInstances();
+            //List<Instance> instances = InstanceCreator.createComplexInstances();
             //instances.addAll(InstanceCreator.createComplexInstances());
-            instances.forEach(Solver::dfvsSolveInstance);
+            //instances.forEach(Solver::dfvsSolveInstance);
 
             // Solve own test instances
 
@@ -53,9 +53,9 @@ public class Main {
 
             // Solve instance from file
 
-            //Graph graph = TestCreator.createFromFile("src/inputs/complex/", "GD-n_73-m_96.mtx");
-            //List<Node> S = Solver.dfvsSolveSubGraphs(graph);
-            //S.forEach(s -> System.out.println(s.label));
+            Instance instance = InstanceCreator.createFromFile("src/inputs/complex/", "biology-n_12-m_33-p_0.9-15");
+            Solver.dfvsSolveInstance(instance);
+            System.out.println(instance.S);
 
         }
 
