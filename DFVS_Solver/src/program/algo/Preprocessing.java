@@ -91,6 +91,11 @@ public abstract class Preprocessing {
         return pairs;
     }
 
+    /**
+     * Using a slightly adjusted chaining rule remove Nodes with only one ingoing our only one outgoing Edge and improve performance where this might help
+     * @param instance The current Graph instance
+     */
+
     public static void removeChain(Instance instance){
         for(Graph subGraph: instance.subGraphs) {
             List<Node> oneInNodes;
@@ -98,6 +103,7 @@ public abstract class Preprocessing {
             do{
                 oneInNodes = new ArrayList<>();
                 oneOutNodes = new ArrayList<>();
+                // Collect Nodes with either only one outgoing or one ingoing Edge
                 for (Node A : subGraph.getActiveNodes()) {
                     if (A.getOutNeighbors().size() <= 1) {
                         if (A.getOutNeighbors().size() == 0) {
@@ -116,47 +122,79 @@ public abstract class Preprocessing {
                         }
                     }
                 }
-                for(Node A :oneOutNodes) {
-                    List<Node> inEdgeNodes = subGraph.getActiveNodes().stream().filter(n -> n.getOutNeighbors().contains(A)).toList();
-                    if(A.getOutNeighbors().size()>0) {
-                        Node C = A.getOutNeighbors().get(0);
-                        for (Node B : inEdgeNodes) {
-                            if(B.label == C.label ){
-                                fullyRemoveNode(instance,C);
-                                instance.S.add(B);
-                                instance.solvedK++;
-                                break;
-                            }else{
-                                if (!B.getOutNeighbors().contains(C)) {
-                                    B.addNeighbor(C);
-                                }
-                            }
-                        }
-                    }
-                    fullyRemoveNode(instance, A);
-                }
-                for (Node A :oneInNodes) {
-                    List<Node> inEdgeNodes = subGraph.getActiveNodes().stream().filter(n -> n.getOutNeighbors().contains(A)).toList();
-                    if (inEdgeNodes.size() > 0) {
-                        Node C = inEdgeNodes.get(0);
-                        for (Node B : A.getOutNeighbors()) {
-                            if(C.label==B.label){
-                                fullyRemoveNode(instance,C);
-                                instance.S.add(B);
-                                instance.solvedK++;
-                                break;
-                            }else{
-                                if (!C.getOutNeighbors().contains(B)) ;
-                                C.addNeighbor(B);
-                            }
-                        }
-                        fullyRemoveNode(instance, A);
-                    }
-                }
-
+                //Call methodes for removing the specific nodes
+                removeOneOutNodes(instance,subGraph,oneOutNodes);
+                removeOneInNodes(instance,subGraph,oneInNodes);
             }while(!oneInNodes.isEmpty() || !oneOutNodes.isEmpty());
         }
     }
+
+    /**
+     * Function for removing Nodes with only one outgoing edge
+     * @param instance The current Graph instance
+     * @param subGraph The current subGraph
+     * @param oneOutNodes The List of Nodes that needs to be deleted
+     */
+    private static  void removeOneOutNodes(Instance instance,Graph subGraph, List<Node>oneOutNodes){
+        for(Node A :oneOutNodes) {
+            List<Node> inEdgeNodes = subGraph.getActiveNodes().stream().filter(n -> n.getOutNeighbors().contains(A)).toList();
+            //Needed because Nodes can be deleted in the whole process
+            if(A.getOutNeighbors().size()>0) {
+                Node C = A.getOutNeighbors().get(0);
+                for (Node B : inEdgeNodes) {
+                    //If a self-circle is about to be created, delete the node
+                    if(B.label == C.label ){
+                        fullyRemoveNode(instance,C);
+                        instance.S.add(B);
+                        instance.solvedK++;
+                        break;
+                    }else{
+                        //Only add Neighbor if it isn't already in the list
+                        if (!B.getOutNeighbors().contains(C)) {
+                            B.addNeighbor(C);
+                        }
+                    }
+                }
+            }
+            fullyRemoveNode(instance, A);
+        }
+    }
+
+    /**
+     * Function for removing Nodes with only one ingoing edge
+     * @param instance The current Graph instance
+     * @param subGraph The current subGraph
+     * @param oneInNodes The List of Nodes that needs to be deleted
+     */
+    private static void removeOneInNodes(Instance instance, Graph subGraph, List<Node> oneInNodes){
+        for (Node A :oneInNodes) {
+            List<Node> inEdgeNodes = subGraph.getActiveNodes().stream().filter(n -> n.getOutNeighbors().contains(A)).toList();
+            //Needed because Nodes can be deleted in the whole process
+            if (inEdgeNodes.size() > 0) {
+                Node C = inEdgeNodes.get(0);
+                for (Node B : A.getOutNeighbors()) {
+                    //If a self-circle is about to be created, delete the node
+                    if(C.label==B.label){
+                        fullyRemoveNode(instance,C);
+                        instance.S.add(B);
+                        instance.solvedK++;
+                        break;
+                    }else{
+                        //Only add Neighbor if it isn't already in the list
+                        if (!C.getOutNeighbors().contains(B)) {
+                            C.addNeighbor(B);
+                        }
+                    }
+                }
+                fullyRemoveNode(instance, A);
+            }
+        }
+    }
+
+    /**
+     * Using the pendant full triangle rule delete the Nodes ahead of time so they don't have to be looked at later
+     * @param instance
+     */
 
     public static void removePendantFullTriangle(Instance instance){
             for(Graph subgraph: instance.subGraphs){
@@ -186,6 +224,11 @@ public abstract class Preprocessing {
                 }
             }
     }
+
+    /**
+     * Improvement of the normal triangle rule that only needs one Node to only be in the fully connected graph
+     * @param instance
+     */
 
     public static void removePendantFullTrianglePP(Instance instance){
         for( Graph subgraph: instance.subGraphs){
