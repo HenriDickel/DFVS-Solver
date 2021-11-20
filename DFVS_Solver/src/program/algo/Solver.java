@@ -77,7 +77,9 @@ public abstract class Solver {
         // Preprocessing
         Log.debugLog(instance.NAME, "---------- " + instance.NAME + " (n = " + instance.N + ", m = " + instance.M + ", k = " + instance.OPTIMAL_K + ") ----------");
         Preprocessing.fullyRemoveSelfEdges(instance);
-        Preprocessing.fullyRemovePairs(instance);
+        Preprocessing.removeChain(instance);
+        //Preprocessing.removePendantFullTriangle(instance);
+        Preprocessing.removePendantFullTrianglePP(instance);
         Log.debugLog(instance.NAME, "Removed " + instance.solvedK + " nodes in preprocessing");
 
         // Create sub graphs

@@ -91,17 +91,120 @@ public abstract class Preprocessing {
         return pairs;
     }
 
-    public static void fullyRemovePairs(Instance instance) {
+    public static void removeChain(Instance instance){
         for(Graph subGraph: instance.subGraphs) {
-            for(Node A: subGraph.getActiveNodes()) {
-                if(A.getOutNeighbors().size() == 1) { // If the node A has exactly one out neighbor B
-                    Node B = A.getOutNeighbors().get(0);
-                    if(B.getOutNeighbors().contains(A)) { // If there is an edge back from B to A
-                        long inEdgeCount = subGraph.getActiveNodes().stream().filter(n -> n.getOutNeighbors().contains(A)).count();
-                        if(inEdgeCount == 1) { // if there are no other edges to A
-                            fullyRemoveNode(instance, B);
-                            instance.S.add(B);
-                            instance.solvedK++;
+            List<Node> oneInNodes;
+            List<Node> oneOutNodes;
+            do{
+                oneInNodes = new ArrayList<>();
+                oneOutNodes = new ArrayList<>();
+                for (Node A : subGraph.getActiveNodes()) {
+                    if (A.getOutNeighbors().size() <= 1) {
+                        if (A.getOutNeighbors().size() == 0) {
+                            fullyRemoveNode(instance,A);
+                        }else{
+                            oneOutNodes.add(A);
+                        }
+                    } else {
+                        List<Node> inEdgeNodes = subGraph.getActiveNodes().stream().filter(n -> n.getOutNeighbors().contains(A)).toList();
+                        if (inEdgeNodes.size() <= 1) {
+                            if(inEdgeNodes.size()==0){
+                                fullyRemoveNode(instance,A);
+                            }else{
+                                oneInNodes.add(A);
+                            }
+                        }
+                    }
+                }
+                for(Node A :oneOutNodes) {
+                    List<Node> inEdgeNodes = subGraph.getActiveNodes().stream().filter(n -> n.getOutNeighbors().contains(A)).toList();
+                    if(A.getOutNeighbors().size()>0) {
+                        Node C = A.getOutNeighbors().get(0);
+                        for (Node B : inEdgeNodes) {
+                            if(B.label == C.label ){
+                                fullyRemoveNode(instance,C);
+                                instance.S.add(B);
+                                instance.solvedK++;
+                                break;
+                            }else{
+                                if (!B.getOutNeighbors().contains(C)) {
+                                    B.addNeighbor(C);
+                                }
+                            }
+                        }
+                    }
+                    fullyRemoveNode(instance, A);
+                }
+                for (Node A :oneInNodes) {
+                    List<Node> inEdgeNodes = subGraph.getActiveNodes().stream().filter(n -> n.getOutNeighbors().contains(A)).toList();
+                    if (inEdgeNodes.size() > 0) {
+                        Node C = inEdgeNodes.get(0);
+                        for (Node B : A.getOutNeighbors()) {
+                            if(C.label==B.label){
+                                fullyRemoveNode(instance,C);
+                                instance.S.add(B);
+                                instance.solvedK++;
+                                break;
+                            }else{
+                                if (!C.getOutNeighbors().contains(B)) ;
+                                C.addNeighbor(B);
+                            }
+                        }
+                        fullyRemoveNode(instance, A);
+                    }
+                }
+
+            }while(!oneInNodes.isEmpty() || !oneOutNodes.isEmpty());
+        }
+    }
+
+    public static void removePendantFullTriangle(Instance instance){
+            for(Graph subgraph: instance.subGraphs){
+                for(Node A: subgraph.getActiveNodes()){
+                    if(A.getOutNeighbors().size()==2) {
+                        int inEdges = (int) subgraph.getActiveNodes().stream().filter(n -> n.getOutNeighbors().contains(A)).count();
+                        if (inEdges == 2) {
+                            Node B = A.getOutNeighbors().get(0);
+                            Node C = A.getOutNeighbors().get(1);
+                            int inEdgesB = (int) subgraph.getActiveNodes().stream().filter(n -> n.getOutNeighbors().contains(B)).count();
+                            int inEdgesC = (int) subgraph.getActiveNodes().stream().filter(n -> n.getOutNeighbors().contains(C)).count();
+                            if((B.getOutNeighbors().size() ==2 && inEdgesB==2) || (C.getOutNeighbors().size()==2 && inEdgesC==2)) {
+                                if (B.getOutNeighbors().contains(A) && B.getOutNeighbors().contains(C)) {
+                                    if (C.getOutNeighbors().contains(B) && C.getOutNeighbors().contains(A)) {
+                                        fullyRemoveNode(instance, A);
+                                        fullyRemoveNode(instance, B);
+                                        fullyRemoveNode(instance, C);
+                                        instance.S.add(B);
+                                        instance.solvedK++;
+                                        instance.S.add(C);
+                                        instance.solvedK++;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+    }
+
+    public static void removePendantFullTrianglePP(Instance instance){
+        for( Graph subgraph: instance.subGraphs){
+            for(Node A: subgraph.getActiveNodes()){
+                if(A.getOutNeighbors().size()==2) {
+                    int inEdges = (int) subgraph.getActiveNodes().stream().filter(n -> n.getOutNeighbors().contains(A)).count();
+                    if (inEdges == 2) {
+                        Node B = A.getOutNeighbors().get(0);
+                        Node C = A.getOutNeighbors().get(1);
+                        if (B.getOutNeighbors().contains(A) && B.getOutNeighbors().contains(C)) {
+                            if (C.getOutNeighbors().contains(B) && C.getOutNeighbors().contains(A)) {
+                                fullyRemoveNode(instance, A);
+                                fullyRemoveNode(instance, B);
+                                fullyRemoveNode(instance, C);
+                                instance.S.add(B);
+                                instance.solvedK++;
+                                instance.S.add(C);
+                                instance.solvedK++;
+                            }
                         }
                     }
                 }
