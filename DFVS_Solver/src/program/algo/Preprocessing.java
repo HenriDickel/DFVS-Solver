@@ -97,12 +97,8 @@ public abstract class Preprocessing {
                         }
                     } else {
                         List<Node> inEdgeNodes = subGraph.getActiveNodes().stream().filter(n -> n.getOutNeighbors().contains(A)).toList();
-                        if (inEdgeNodes.size() <= 1) {
-                            if(inEdgeNodes.size()==0){
-                                fullyRemoveNode(instance,A);
-                            }else{
-                                oneInNodes.add(A);
-                            }
+                        if (inEdgeNodes.size() == 1) {
+                            oneInNodes.add(A);
                         }
                     }
                 }
