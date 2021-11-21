@@ -1,28 +1,39 @@
 package program.algo;
 
+import program.log.Log;
 import program.model.Graph;
 import program.model.Node;
 
 import java.util.*;
+import java.util.stream.Collectors;
+import program.utils.Timer;
 
 public abstract class Flower {
 
     private static Graph maxFlowGraph;
+    private static int[][] maxFlowGraphMatrix;
     private static int N;
 
+    /**
+     * Set Petal Value for each node of the graph
+     * @param graph
+     */
     public static void SetAllPetals(Graph graph){
+
         Node previousNode = null;
         for(Node node : graph.getActiveNodes()){
             node.petal = GetPetal(graph, node, previousNode);
             node.maxPetal =  node.petal;
             previousNode = node;
         }
+
     }
 
     private static int GetPetal(Graph graph, Node u, Node previousU){
 
         //Only create graph from scratch if there is no graph
         if(previousU == null){
+
             //Copies
             maxFlowGraph = new Graph();
 
@@ -48,26 +59,40 @@ public abstract class Flower {
                     }
                 }
             }
+
+            //Values for algorithm
+            N = maxFlowGraph.getActiveNodes().size();
+            maxFlowGraphMatrix = convertToMatrix(maxFlowGraph, N);
         }
         else{
+
             //Change prev u
-            maxFlowGraph.addArc(previousU.label + "-", previousU.label + "+");
+            Node prev_u_plus = maxFlowGraph.nodes.stream().filter(x -> Objects.equals(x.label, previousU.label + "+")).findFirst().get();
+            Node prev_u_minus = maxFlowGraph.nodes.stream().filter(x -> Objects.equals(x.label, previousU.label + "-")).findFirst().get();
+            int prev_index_u_plus = maxFlowGraph.nodes.indexOf(prev_u_plus);
+            int prev_index_u_minus = maxFlowGraph.nodes.indexOf(prev_u_minus);
+            maxFlowGraphMatrix[prev_index_u_minus][prev_index_u_plus] = 1;
 
-            //Change new u
-            maxFlowGraph.removeArc(u.label + "-", u.label + "+");
+            ////Change new u
+            Node u_plus = maxFlowGraph.nodes.stream().filter(x -> Objects.equals(x.label, u.label + "+")).findFirst().get();
+            Node u_minus = maxFlowGraph.nodes.stream().filter(x -> Objects.equals(x.label, u.label + "-")).findFirst().get();
+            int index_u_plus = maxFlowGraph.nodes.indexOf(u_plus);
+            int index_u_minus = maxFlowGraph.nodes.indexOf(u_minus);
+            maxFlowGraphMatrix[index_u_minus][index_u_plus] = 0;
+
         }
-
-
-        //Set N
-        N = maxFlowGraph.getActiveNodes().size();
 
         //Find u
         try{
+            //Indexes
             Node u_plus = maxFlowGraph.getActiveNodes().stream().filter(x -> Objects.equals(x.label, u.label + "+")).findFirst().get();
             Node u_minus = maxFlowGraph.getActiveNodes().stream().filter(x -> Objects.equals(x.label, u.label + "-")).findFirst().get();
+            int index_u_plus = maxFlowGraph.nodes.indexOf(u_plus);
+            int index_u_minus = maxFlowGraph.nodes.indexOf(u_minus);
 
             //Get paths
-            return findDisjointPaths(convertToMatrix(), maxFlowGraph.getActiveNodes().indexOf(u_plus), maxFlowGraph.getActiveNodes().indexOf(u_minus));
+            return findDisjointPaths(maxFlowGraphMatrix, index_u_plus, index_u_minus);
+
 
         }
         catch (NoSuchElementException noSuchElementException){
@@ -164,10 +189,11 @@ public abstract class Flower {
 
         // Return the overall flow (max_flow is equal to
         // maximum number of edge-disjoint paths)
+
         return max_flow;
     }
 
-    static private int[][] convertToMatrix(){
+    static private int[][] convertToMatrix(Graph maxFlowGraph, int N){
         int[][] graph = new int[N][N];
 
         for(int i = 0; i < N; i++){
@@ -204,9 +230,13 @@ public abstract class Flower {
     }
 
     private static Node findRemoveNode(Graph graph, int k){
+        Node removeNode = null;
+
         for(Node node :  graph.getActiveNodes()){
-            if(node.petal > k) return node;
+            if(node.petal > k){
+                if(removeNode == null || removeNode.petal > node.petal) removeNode = node;
+            }
         }
-        return null;
+        return removeNode;
     }
 }

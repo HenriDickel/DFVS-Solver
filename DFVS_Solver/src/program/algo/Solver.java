@@ -55,20 +55,20 @@ public abstract class Solver {
         // Start k
         int k = 0;
 
+        // Solution
+        List<Node> S = null;
+
+        /*Old-Loop
+        while(S == null){
+            S = dfvsBranch(graph, k, 0);
+            k++;
+        }*/
+
         //Set Petals
         Flower.SetAllPetals(graph);
         List<Node> flowers = new ArrayList<>();
 
-        // Solution
-        List<Node> S = null;
-
-        /* Old-Loop
-        while(S == null){
-            S = dfvsBranch(graph, k - flowers.size(), 0);
-            k++;
-        }*/
-
-        // Loop
+        //Loop
         while(S == null){
 
             //No need to recalculate flowers if there were none in previous step
@@ -76,8 +76,6 @@ public abstract class Solver {
                 //Use Petal Rule
                 flowers = Flower.UsePetalRule(graph, k);
             }
-
-            Log.debugLog(instance.NAME, "Found " + flowers.size() + " flowers that need to be removed for k = " + k);
 
             //No need to use algorithm if we found to many flowers
             if(flowers.size() <= k){
@@ -89,6 +87,7 @@ public abstract class Solver {
         }
 
         // Return solution
+        Log.debugLog(instance.NAME, "Removed " + flowers.size() + " flower nodes by petal rule");
         S.addAll(flowers);
         return S;
     }
@@ -105,7 +104,6 @@ public abstract class Solver {
         Log.debugLog(instance.NAME, "---------- " + instance.NAME + " (n = " + instance.N + ", m = " + instance.M + ", k = " + instance.OPTIMAL_K + ") ----------");
         Preprocessing.fullyRemoveSelfEdges(instance);
         Preprocessing.removeChain(instance);
-        //Preprocessing.removePendantFullTriangle(instance);
         Preprocessing.removePendantFullTrianglePP(instance);
         Log.debugLog(instance.NAME, "Removed " + instance.solvedK + " nodes in preprocessing");
 

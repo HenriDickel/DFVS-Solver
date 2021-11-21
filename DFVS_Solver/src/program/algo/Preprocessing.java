@@ -172,6 +172,22 @@ public abstract class Preprocessing {
     }
 
     /**
+     * Sorts the edges of each component by their number of edges.
+     */
+    public static void sortNodesByEdgeCount(Instance instance) {
+        for(Graph subGraph: instance.subGraphs) {
+            for(Node node: subGraph.getActiveNodes()) {
+                int weight = node.getOutNeighbors().size();
+                for(Node other: subGraph.getActiveNodes()) {
+                    if(other.getOutNeighbors().contains(node)) weight++;
+                }
+                node.weight = weight;
+            }
+            subGraph.nodes.sort(Comparator.comparingInt(n -> n.weight));
+        }
+    }
+
+    /**
      * Using the pendant full triangle rule delete the Nodes ahead of time so they don't have to be looked at later
      * @param instance
      */

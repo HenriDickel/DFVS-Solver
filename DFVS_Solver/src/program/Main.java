@@ -42,11 +42,11 @@ public class Main {
             //List<Node> bfs = BFSShortestCircle.ShortestCircleBFS(instance.subGraphs.get(0));
             //List<Node> bfstest = bfs;
 
-            List<Instance> instances = InstanceCreator.createComplexInstances();
+            //List<Instance> instances = InstanceCreator.createComplexInstances();
             //instances.addAll(InstanceCreator.createComplexInstances());
             //instances.forEach(Solver::dfvsSolveInstance);
 
-            //List<Instance> instances = InstanceCreator.createSelectedInstances();
+            List<Instance> instances = InstanceCreator.createSelectedInstances();
             instances.forEach(Solver::dfvsSolveInstance);
 
             // Solve own test instances
@@ -57,6 +57,7 @@ public class Main {
             // Solve instance from file
 
             //Instance instance = InstanceCreator.createFromFile("src/inputs/complex/", "biology-n_12-m_33-p_0.9-15");
+            //Instance instance = InstanceCreator.createFromFile("src/inputs/synthetic/", "synth-n_300-m_9436-k_10-p_0.2.txt");
             //Solver.dfvsSolveInstance(instance);
             //System.out.println(instance.S);
 
