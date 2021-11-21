@@ -10,12 +10,15 @@ import program.utils.Timer;
 
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public abstract class Solver {
 
-    static Instance instance;
+    private static Instance instance;
 
     private static List<Node> dfvsBranch(Graph graph, int k, int level) throws TimeoutException {
+
+        instance.recursiveSteps++;
 
         // Check Timer
         if(Timer.isTimeout()) throw new TimeoutException("The program stopped after " + Timer.timeout + " minutes.");
@@ -58,12 +61,6 @@ public abstract class Solver {
         // Solution
         List<Node> S = null;
 
-        /*Old-Loop
-        while(S == null){
-            S = dfvsBranch(graph, k, 0);
-            k++;
-        }*/
-
         //Set Petals
         Flower.SetAllPetals(graph);
         List<Node> flowers = new ArrayList<>();
@@ -94,7 +91,7 @@ public abstract class Solver {
 
     public static void dfvsSolveInstance(Instance instance) {
 
-        //Set instance
+        //Set instance & branch count
         Solver.instance = instance;
 
         // Start Timer
@@ -109,7 +106,8 @@ public abstract class Solver {
 
         // Create sub graphs
         Graph initialGraph = instance.subGraphs.get(0);
-        instance.subGraphs = Preprocessing.findCyclicSubGraphs(instance.NAME, initialGraph);
+        instance.subGraphs = Preprocessing.findCyclicSubGraphs(initialGraph);
+        Log.debugLog(instance.NAME, "Found " + instance.subGraphs.size() + " cyclic sub graph(s) with n = " + instance.subGraphs.stream().map(g -> g.nodes.size()).collect(Collectors.toList()));
 
         // Run for all sub graphs
         try{
@@ -122,7 +120,7 @@ public abstract class Solver {
         catch(TimeoutException timeoutException){
             Long time = Timer.stop();
             Log.mainLog(instance, time, false);
-            Log.debugLog(instance.NAME, "Found no solution in " + Timer.format(time), true);
+            Log.debugLog(instance.NAME, "Found no solution in " + Timer.format(time) + " (recursive steps: " + instance.recursiveSteps + ")", true);
             return;
         }
 
@@ -134,7 +132,7 @@ public abstract class Solver {
 
         // Log
         Log.mainLog(instance, time, verified);
-        Log.debugLog(instance.NAME, "Found solution with k = " + instance.solvedK + " in " + Timer.format(time), !verified);
+        Log.debugLog(instance.NAME, "Found solution with k = " + instance.solvedK + " in " + Timer.format(time) + " (recursive steps: " + instance.recursiveSteps + ")", !verified);
     }
 
 }

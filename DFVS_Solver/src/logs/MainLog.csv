@@ -1,2 +1,5 @@
 name,k_optimal,k_solved,millis,verified
-biology-n_35-m_315-p_0.75-18,15,15,435,true
+biology-n_35-m_315-p_0.75-18,15,15,529,true
+biology-n_42-m_297-p_0.5-23,21,21,10354,true
+biology-n_42-m_297-p_0.75-23,19,19,15241,true
+biology-n_49-m_689-p_0.9-14,19,19,4307,true

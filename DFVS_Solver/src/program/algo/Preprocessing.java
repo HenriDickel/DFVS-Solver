@@ -3,20 +3,18 @@ package program.algo;
 import program.model.Graph;
 import program.model.Instance;
 import program.model.Node;
-import program.log.Log;
 import program.model.Pair;
 
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public abstract class Preprocessing {
 
     /**
      * Splits up the graph into it's cyclic components by using the Tarjan's algorithm.
      */
-    public static List<Graph> findCyclicSubGraphs(String name, Graph graph) {
+    public static List<Graph> findCyclicSubGraphs(Graph graph) {
 
         // Find cyclic components
         List<List<Node>> components = Tarjan.run(graph);
@@ -36,7 +34,6 @@ public abstract class Preprocessing {
                 subGraphs.add(subGraph);
             }
         }
-        Log.debugLog(name, "Found " + subGraphs.size() + " cyclic sub graph(s) with n = " + subGraphs.stream().map(g -> g.nodes.size()).collect(Collectors.toList()));
         return subGraphs;
     }
 

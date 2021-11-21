@@ -1,13 +1,8 @@
-[2021-11-21 17:52:02.239] biology-n_35-m_315-p_0.75-18: 	---------- biology-n_35-m_315-p_0.75-18 (n = 35, m = 315, k = 15) ----------
-[2021-11-21 17:52:02.250] biology-n_35-m_315-p_0.75-18: 	Removed 0 nodes in preprocessing
-[2021-11-21 17:52:02.253] biology-n_35-m_315-p_0.75-18: 	Found 1 cyclic sub graph(s) with n = [28]
-[2021-11-21 17:52:04.659] biology-n_35-m_315-p_0.75-18: 	Removed 0 flower nodes by petal rule
-[2021-11-21 17:52:04.665] biology-n_35-m_315-p_0.75-18: 	Found solution with k = 15 in 2s
-[2021-11-21 17:52:04.665] biology-n_42-m_297-p_0.5-23: 	---------- biology-n_42-m_297-p_0.5-23 (n = 42, m = 297, k = 21) ----------
-[2021-11-21 17:52:04.666] biology-n_42-m_297-p_0.5-23: 	Removed 1 nodes in preprocessing
-[2021-11-21 17:52:04.667] biology-n_42-m_297-p_0.5-23: 	Found 1 cyclic sub graph(s) with n = [38]
-[2021-11-21 17:52:39.801] biology-n_42-m_297-p_0.5-23: 	Removed 0 flower nodes by petal rule
-[2021-11-21 17:52:39.802] biology-n_42-m_297-p_0.5-23: 	Found solution with k = 21 in 35s
-[2021-11-21 17:52:39.802] biology-n_42-m_297-p_0.75-23: 	---------- biology-n_42-m_297-p_0.75-23 (n = 42, m = 297, k = 19) ----------
-[2021-11-21 17:52:39.803] biology-n_42-m_297-p_0.75-23: 	Removed 0 nodes in preprocessing
-[2021-11-21 17:52:39.804] biology-n_42-m_297-p_0.75-23: 	Found 1 cyclic sub graph(s) with n = [40]
+[2021-11-21 22:05:32.159] biology-n_35-m_315-p_0.75-18: 	---------- biology-n_35-m_315-p_0.75-18 (n = 35, m = 315, k = 15) ----------
+[2021-11-21 22:05:32.172] biology-n_35-m_315-p_0.75-18: 	Removed 0 nodes in preprocessing
+[2021-11-21 22:05:32.177] biology-n_35-m_315-p_0.75-18: 	Found 1 cyclic sub graph(s) with n = [28]
+[2021-11-21 22:05:32.696] biology-n_35-m_315-p_0.75-18: 	Removed 0 flower nodes by petal rule
+[2021-11-21 22:05:32.707] biology-n_35-m_315-p_0.75-18: 	Found solution with k = 15 in 552ms (branches: 103041)
+[2021-11-21 22:05:32.707] biology-n_42-m_297-p_0.5-23: 	---------- biology-n_42-m_297-p_0.5-23 (n = 42, m = 297, k = 21) ----------
+[2021-11-21 22:05:32.708] biology-n_42-m_297-p_0.5-23: 	Removed 1 nodes in preprocessing
+[2021-11-21 22:05:32.709] biology-n_42-m_297-p_0.5-23: 	Found 1 cyclic sub graph(s) with n = [38]

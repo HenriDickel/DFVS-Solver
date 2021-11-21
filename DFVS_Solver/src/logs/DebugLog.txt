@@ -1,8 +1,23 @@
-[2021-11-21 17:53:30.649] biology-n_35-m_315-p_0.75-18: 	---------- biology-n_35-m_315-p_0.75-18 (n = 35, m = 315, k = 15) ----------
-[2021-11-21 17:53:30.660] biology-n_35-m_315-p_0.75-18: 	Removed 0 nodes in preprocessing
-[2021-11-21 17:53:30.664] biology-n_35-m_315-p_0.75-18: 	Found 1 cyclic sub graph(s) with n = [28]
-[2021-11-21 17:53:31.070] biology-n_35-m_315-p_0.75-18: 	Removed 0 flower nodes by petal rule
-[2021-11-21 17:53:31.075] biology-n_35-m_315-p_0.75-18: 	Found solution with k = 15 in 435ms
-[2021-11-21 17:53:31.076] biology-n_42-m_297-p_0.5-23: 	---------- biology-n_42-m_297-p_0.5-23 (n = 42, m = 297, k = 21) ----------
-[2021-11-21 17:53:31.077] biology-n_42-m_297-p_0.5-23: 	Removed 1 nodes in preprocessing
-[2021-11-21 17:53:31.077] biology-n_42-m_297-p_0.5-23: 	Found 1 cyclic sub graph(s) with n = [38]
+[2021-11-21 22:05:54.312] biology-n_35-m_315-p_0.75-18: 	---------- biology-n_35-m_315-p_0.75-18 (n = 35, m = 315, k = 15) ----------
+[2021-11-21 22:05:54.327] biology-n_35-m_315-p_0.75-18: 	Removed 0 nodes in preprocessing
+[2021-11-21 22:05:54.332] biology-n_35-m_315-p_0.75-18: 	Found 1 cyclic sub graph(s) with n = [28]
+[2021-11-21 22:05:54.827] biology-n_35-m_315-p_0.75-18: 	Removed 0 flower nodes by petal rule
+[2021-11-21 22:05:54.836] biology-n_35-m_315-p_0.75-18: 	Found solution with k = 15 in 529ms (recursive steps: 103041)
+[2021-11-21 22:05:54.836] biology-n_42-m_297-p_0.5-23: 	---------- biology-n_42-m_297-p_0.5-23 (n = 42, m = 297, k = 21) ----------
+[2021-11-21 22:05:54.837] biology-n_42-m_297-p_0.5-23: 	Removed 1 nodes in preprocessing
+[2021-11-21 22:05:54.838] biology-n_42-m_297-p_0.5-23: 	Found 1 cyclic sub graph(s) with n = [38]
+[2021-11-21 22:06:05.190] biology-n_42-m_297-p_0.5-23: 	Removed 0 flower nodes by petal rule
+[2021-11-21 22:06:05.192] biology-n_42-m_297-p_0.5-23: 	Found solution with k = 21 in 10s (recursive steps: 1574894)
+[2021-11-21 22:06:05.192] biology-n_42-m_297-p_0.75-23: 	---------- biology-n_42-m_297-p_0.75-23 (n = 42, m = 297, k = 19) ----------
+[2021-11-21 22:06:05.193] biology-n_42-m_297-p_0.75-23: 	Removed 0 nodes in preprocessing
+[2021-11-21 22:06:05.194] biology-n_42-m_297-p_0.75-23: 	Found 1 cyclic sub graph(s) with n = [40]
+[2021-11-21 22:06:20.433] biology-n_42-m_297-p_0.75-23: 	Removed 0 flower nodes by petal rule
+[2021-11-21 22:06:20.434] biology-n_42-m_297-p_0.75-23: 	Found solution with k = 19 in 15s (recursive steps: 2880422)
+[2021-11-21 22:06:20.434] biology-n_49-m_689-p_0.9-14: 	---------- biology-n_49-m_689-p_0.9-14 (n = 49, m = 689, k = 19) ----------
+[2021-11-21 22:06:20.436] biology-n_49-m_689-p_0.9-14: 	Removed 0 nodes in preprocessing
+[2021-11-21 22:06:20.437] biology-n_49-m_689-p_0.9-14: 	Found 1 cyclic sub graph(s) with n = [37]
+[2021-11-21 22:06:24.741] biology-n_49-m_689-p_0.9-14: 	Removed 0 flower nodes by petal rule
+[2021-11-21 22:06:24.741] biology-n_49-m_689-p_0.9-14: 	Found solution with k = 19 in 4s (recursive steps: 848944)
+[2021-11-21 22:06:24.742] biology-n_59-m_624-p_0.75-1: 	---------- biology-n_59-m_624-p_0.75-1 (n = 59, m = 624, k = 26) ----------
+[2021-11-21 22:06:24.746] biology-n_59-m_624-p_0.75-1: 	Removed 1 nodes in preprocessing
+[2021-11-21 22:06:24.747] biology-n_59-m_624-p_0.75-1: 	Found 2 cyclic sub graph(s) with n = [34, 12]

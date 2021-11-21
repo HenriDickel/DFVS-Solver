@@ -281,6 +281,63 @@ public abstract class InstanceCreator {
     }
 
     /**
+     *
+     */
+    public static Instance createSimpleNonDAG6(){
+        Graph graph = new Graph();
+
+        graph.addArc("A", "B");
+        graph.addArc("B", "A");
+        graph.addArc("B", "C");
+        graph.addArc("C", "B");
+
+        graph.addArc("D", "E");
+        graph.addArc("E", "D");
+        graph.addArc("E", "F");
+        graph.addArc("F", "E");
+
+        graph.addArc("G", "H");
+        graph.addArc("H", "G");
+        graph.addArc("H", "I");
+        graph.addArc("I", "H");
+
+        graph.addArc("X", "A");
+        graph.addArc("A", "X");
+        graph.addArc("X", "D");
+        graph.addArc("D", "X");
+        graph.addArc("X", "G");
+        graph.addArc("G", "X");
+
+        return createTestInstance("simple-n7_m12_k3", graph, 3);
+    }
+
+    /**
+     *
+     */
+    public static Instance createSimpleNonDAG7(){
+        Graph graph = new Graph();
+
+        graph.addArc("X", "A");
+        graph.addArc("C", "X");
+        graph.addArc("X", "D");
+        graph.addArc("F", "X");
+
+        graph.addArc("A", "C");
+        graph.addArc("C", "A");
+
+        graph.addArc("D", "F");
+        graph.addArc("F", "D");
+
+        graph.addArc("C", "F");
+        graph.addArc("F", "C");
+
+        graph.addArc("A", "D");
+        graph.addArc("D", "A");
+
+        return createTestInstance("simple-n6_m6_k3", graph, 3);
+    }
+
+    /**
      * Creates a fully connected graph with 3 nodes.
      */
     public static Instance createFullConnected3(){

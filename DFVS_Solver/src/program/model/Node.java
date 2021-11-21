@@ -67,6 +67,10 @@ public class Node {
         deleted = false;
     }
 
+    public int getMaxPetal() {
+        return maxPetal;
+    }
+
     @Override
     public String toString() {
         String nodeString = label;

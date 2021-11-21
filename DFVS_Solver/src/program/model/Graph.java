@@ -40,6 +40,16 @@ public class Graph {
         return nodes.stream().filter(node -> node.deleted).collect(Collectors.toList());
     }
 
+    public int getDestroyedPetalCount() {
+        int count = 0;
+        List<Node> deletedNodes = getInactiveNodes();
+        deletedNodes.sort(Comparator.comparing(Node::getMaxPetal));
+        for(int i = 0; i < deletedNodes.size(); i++) {
+            count += deletedNodes.get(i).maxPetal - i;
+        }
+        return count;
+    }
+
     public int getEdgeCount() {
         return getActiveNodes().stream().mapToInt(node -> node.getOutNeighbors().size()).sum();
     }

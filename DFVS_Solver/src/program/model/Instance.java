@@ -16,6 +16,7 @@ public class Instance {
     public List<Graph> subGraphs;
     public int solvedK = 0;
     public List<Node> S = new ArrayList<>();    //Result
+    public int recursiveSteps = 0;
 
     public Instance(String NAME, Graph graph, int OPTIMAL_K) {
         this.NAME = NAME;

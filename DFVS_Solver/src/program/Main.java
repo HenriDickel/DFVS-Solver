@@ -1,7 +1,6 @@
 package program;
 
-import program.algo.BFSShortestCircle;
-import program.algo.Solver;
+import program.algo.*;
 import program.log.Log;
 import program.model.Instance;
 import program.model.Node;
@@ -31,6 +30,9 @@ public class Main {
             for(Node node : instance.S){
                 System.out.println(node.label);
             }
+
+            // Print recursive steps
+            System.out.println("#recursive steps: " + instance.recursiveSteps);
         } else {
 
             //Reset Log
@@ -49,17 +51,18 @@ public class Main {
             List<Instance> instances = InstanceCreator.createSelectedInstances();
             instances.forEach(Solver::dfvsSolveInstance);
 
-            // Solve own test instances
-
+            // Solve all test instances
             //List<Instance> instances = InstanceCreator.createTestInstances();
             //instances.forEach(Solver::dfvsSolveInstance);
 
-            // Solve instance from file
-
-            //Instance instance = InstanceCreator.createFromFile("src/inputs/complex/", "biology-n_12-m_33-p_0.9-15");
-            //Instance instance = InstanceCreator.createFromFile("src/inputs/synthetic/", "synth-n_300-m_9436-k_10-p_0.2.txt");
+            // Solve test instance
+            //Instance instance = InstanceCreator.createSimpleNonDAG6();
             //Solver.dfvsSolveInstance(instance);
-            //System.out.println(instance.S);
+
+            // Solve instance from file
+            //Instance instance = InstanceCreator.createFromFile("src/inputs/complex/", "biology-n_35-m_315-p_0.75-18");
+            //Instance instance = InstanceCreator.createFromFile("src/inputs/synthetic/", "synth-n_80-m_818-k_15-p_0.2.txt");
+            //Solver.dfvsSolveInstance(instance);
 
         }
 
