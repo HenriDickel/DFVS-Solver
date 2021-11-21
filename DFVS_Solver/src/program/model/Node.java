@@ -27,6 +27,7 @@ public class Node {
 
     //Flower
     public int petal;
+    public int maxPetal;
 
     public Node(String label) {
         this.label = label;

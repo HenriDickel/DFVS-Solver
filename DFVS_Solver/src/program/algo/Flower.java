@@ -13,6 +13,7 @@ public abstract class Flower {
     public static void SetAllPetals(Graph graph){
         for(Node node : graph.getActiveNodes()){
             node.petal = GetPetal(graph, node);
+            node.maxPetal =  node.petal;
         }
     }
 
@@ -169,5 +170,31 @@ public abstract class Flower {
     }
 
 
+    public static List<Node> UsePetalRule(Graph graph, int k) {
+        List<Node> haveToBeRemoved = new ArrayList<>();
 
+        Node removeNode = findRemoveNode(graph, k);
+        while(removeNode != null){
+            haveToBeRemoved.add(removeNode);
+            removeNode.delete();
+
+            //Get next node
+            graph.getActiveNodes().forEach(x -> x.petal--);
+            removeNode = findRemoveNode(graph, k);
+        }
+
+        return haveToBeRemoved;
+    }
+
+    public static void ResetPetalValues(Graph graph){
+        graph.getInactiveNodes().forEach(Node::unDelete);
+        graph.getActiveNodes().forEach(x -> x.petal = x.maxPetal);
+    }
+
+    private static Node findRemoveNode(Graph graph, int k){
+        for(Node node :  graph.getActiveNodes()){
+            if(node.petal > k) return node;
+        }
+        return null;
+    }
 }

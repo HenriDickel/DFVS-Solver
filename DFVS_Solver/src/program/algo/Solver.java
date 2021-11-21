@@ -13,6 +13,8 @@ import java.util.*;
 
 public abstract class Solver {
 
+    static Instance instance;
+
     private static List<Node> dfvsBranch(Graph graph, int k, int level) throws TimeoutException {
 
         // Check Timer
@@ -27,8 +29,7 @@ public abstract class Solver {
         }
 
         // Next Cycle
-        //Cycle cycle = ShortestCycle.run(graph);
-        Cycle cycle = BFSShortestCircle.ShortestCircleBFS(graph);
+        Cycle cycle = ShortestCycle.run(graph);
 
         // Loop
         for(Node node: cycle.getNodes()){
@@ -54,20 +55,44 @@ public abstract class Solver {
         // Start k
         int k = 0;
 
+        //Set Petals
+        Flower.SetAllPetals(graph);
+        List<Node> flowers = new ArrayList<>();
+
         // Solution
         List<Node> S = null;
 
+        /* Old-Loop
+        while(S == null){
+            S = dfvsBranch(graph, k - flowers.size(), 0);
+            k++;
+        }*/
+
         // Loop
         while(S == null){
-            S = dfvsBranch(graph, k, 0);
+
+            //Use Petal Rule
+            flowers = Flower.UsePetalRule(graph, k);
+            Log.debugLog(instance.NAME, "Found " + flowers.size() + " flowers that need to be removed for k = " + k);
+
+            //No need to use algorithm if we found to many flowers
+            if(flowers.size() <= k){
+                S = dfvsBranch(graph, k - flowers.size(), 0);
+            }
+            //Reset Petal values to initial values and undelete all nodes
+            Flower.ResetPetalValues(graph);
             k++;
         }
 
         // Return solution
+        S.addAll(flowers);
         return S;
     }
 
     public static void dfvsSolveInstance(Instance instance) {
+
+        //Set instance
+        Solver.instance = instance;
 
         // Start Timer
         Timer.start();
