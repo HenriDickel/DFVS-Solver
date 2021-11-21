@@ -46,7 +46,7 @@ public class Graph {
 
     public void fullyRemoveNode(Node nodeToRemove) {
         for (Node node : nodes) {
-            node.removeNeighbor(nodeToRemove);
+            node.removeOutNeighbor(nodeToRemove);
         }
         nodes.remove(nodeToRemove);
     }
@@ -95,4 +95,9 @@ public class Graph {
         return String.join("\n", nodesStrings);
     }
 
+    public void removeArc(String from, String to) {
+        Node fromNode = nodes.stream().filter(x -> x.label.equals(from)).findFirst().get();
+        Node toNode = nodes.stream().filter(x -> x.label.equals(to)).findFirst().get();
+        fromNode.removeOutNeighbor(toNode);
+    }
 }

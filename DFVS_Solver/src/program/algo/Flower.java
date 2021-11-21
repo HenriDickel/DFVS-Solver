@@ -7,43 +7,56 @@ import java.util.*;
 
 public abstract class Flower {
 
-    private  static Graph maxFlowGraph;
+    private static Graph maxFlowGraph;
     private static int N;
 
     public static void SetAllPetals(Graph graph){
+        Node previousNode = null;
         for(Node node : graph.getActiveNodes()){
-            node.petal = GetPetal(graph, node);
+            node.petal = GetPetal(graph, node, previousNode);
             node.maxPetal =  node.petal;
+            previousNode = node;
         }
     }
 
-    private static int GetPetal(Graph graph, Node u){
+    private static int GetPetal(Graph graph, Node u, Node previousU){
 
-        //Copies
-        maxFlowGraph = new Graph();
+        //Only create graph from scratch if there is no graph
+        if(previousU == null){
+            //Copies
+            maxFlowGraph = new Graph();
 
-        //Step 1: Replace u
-        for(Node node : graph.getActiveNodes()){
-            //Ingoing to node-
-            if(node.getOutNeighbors().contains(u)){
-                maxFlowGraph.addArc(node.label + "+", u.label + "-");
-            }
-        }
-
-        //Step 2: Replace each w (that is not u)
-        for(Node w : graph.getActiveNodes()){
-            if(w == u) continue;
-
-            //Add connection
-            maxFlowGraph.addArc(w.label + "-", w.label + "+");
-
+            //Step 1: Replace u
             for(Node node : graph.getActiveNodes()){
                 //Ingoing to node-
-                if(node.getOutNeighbors().contains(w)){
-                    maxFlowGraph.addArc(node.label + "+", w.label + "-");
+                if(node.getOutNeighbors().contains(u)){
+                    maxFlowGraph.addArc(node.label + "+", u.label + "-");
+                }
+            }
+
+            //Step 2: Replace each w (that is not u)
+            for(Node w : graph.getActiveNodes()){
+                if(w == u) continue;
+
+                //Add connection
+                maxFlowGraph.addArc(w.label + "-", w.label + "+");
+
+                for(Node node : graph.getActiveNodes()){
+                    //Ingoing to node-
+                    if(node.getOutNeighbors().contains(w)){
+                        maxFlowGraph.addArc(node.label + "+", w.label + "-");
+                    }
                 }
             }
         }
+        else{
+            //Change prev u
+            maxFlowGraph.addArc(previousU.label + "-", previousU.label + "+");
+
+            //Change new u
+            maxFlowGraph.removeArc(u.label + "-", u.label + "+");
+        }
+
 
         //Set N
         N = maxFlowGraph.getActiveNodes().size();
@@ -60,7 +73,6 @@ public abstract class Flower {
         catch (NoSuchElementException noSuchElementException){
             return 0;
         }
-
 
     }
 

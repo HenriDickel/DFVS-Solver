@@ -71,8 +71,12 @@ public abstract class Solver {
         // Loop
         while(S == null){
 
-            //Use Petal Rule
-            flowers = Flower.UsePetalRule(graph, k);
+            //No need to recalculate flowers if there were none in previous step
+            if(k == 0 || flowers.size() > 0){
+                //Use Petal Rule
+                flowers = Flower.UsePetalRule(graph, k);
+            }
+
             Log.debugLog(instance.NAME, "Found " + flowers.size() + " flowers that need to be removed for k = " + k);
 
             //No need to use algorithm if we found to many flowers

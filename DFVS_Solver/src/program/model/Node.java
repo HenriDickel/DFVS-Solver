@@ -43,7 +43,7 @@ public class Node {
         inNeighbours.add(neighbor);
     }
 
-    public void removeNeighbor(Node neighbor) {
+    public void removeOutNeighbor(Node neighbor) {
         outNeighbours.remove(neighbor);
     }
 
