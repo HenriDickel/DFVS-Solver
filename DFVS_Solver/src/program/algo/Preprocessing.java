@@ -62,22 +62,6 @@ public abstract class Preprocessing {
         }
     }
 
-    /**
-     * Sorts the edges of each component by their number of edges.
-     */
-    public static void sortNodesByEdgeCount(Instance instance) {
-        for(Graph subGraph: instance.subGraphs) {
-            for(Node node: subGraph.getActiveNodes()) {
-                int weight = node.getOutNeighbors().size();
-                for(Node other: subGraph.getActiveNodes()) {
-                    if(other.getOutNeighbors().contains(node)) weight++;
-                }
-                node.weight = weight;
-            }
-            subGraph.nodes.sort(Comparator.comparingInt(n -> -n.weight));
-        }
-    }
-
     public static List<Pair> findPairs(Graph graph) {
 
         List<Pair> pairs = new ArrayList<>();
@@ -151,7 +135,7 @@ public abstract class Preprocessing {
                     }else{
                         //Only add Neighbor if it isn't already in the list
                         if (!B.getOutNeighbors().contains(C)) {
-                            B.addNeighbor(C);
+                            B.addOutgoingNeighbor(C);
                         }
                     }
                 }
@@ -182,7 +166,7 @@ public abstract class Preprocessing {
                     }else{
                         //Only add Neighbor if it isn't already in the list
                         if (!C.getOutNeighbors().contains(B)) {
-                            C.addNeighbor(B);
+                            C.addOutgoingNeighbor(B);
                         }
                     }
                 }

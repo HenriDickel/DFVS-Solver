@@ -9,6 +9,7 @@ public class Node {
     public String label;
     public boolean deleted = false;
     private final List<Node> outNeighbours;
+    private final List<Node> inNeighbours;
     public int weight;
     public int forbidden = Integer.MAX_VALUE;
 
@@ -24,13 +25,21 @@ public class Node {
     // New BFS
     public boolean explored;
 
+    //Flower
+    public int petal;
+
     public Node(String label) {
         this.label = label;
         outNeighbours = new ArrayList<>();
+        inNeighbours = new ArrayList<>();
     }
 
-    public void addNeighbor(Node neighbor) {
+    public void addOutgoingNeighbor(Node neighbor) {
         outNeighbours.add(neighbor);
+    }
+
+    public void addIngoingNeighbor(Node neighbor) {
+        inNeighbours.add(neighbor);
     }
 
     public void removeNeighbor(Node neighbor) {
@@ -39,6 +48,10 @@ public class Node {
 
     public List<Node> getOutNeighbors() {
         return outNeighbours.stream().filter(x -> !x.deleted).collect(Collectors.toList());
+    }
+
+    public List<Node> getInNeighbors() {
+        return inNeighbours.stream().filter(x -> !x.deleted).collect(Collectors.toList());
     }
 
     public List<Node> getUnexploredNeighbors() {

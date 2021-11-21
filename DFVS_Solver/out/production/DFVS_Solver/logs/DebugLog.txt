@@ -1,128 +1,128 @@
-[2021-11-18 14:10:18.777] biology-n_35-m_315-p_0.75-18: 	---------- biology-n_35-m_315-p_0.75-18 (n = 35, m = 315, k = 15) ----------
-[2021-11-18 14:10:18.784] biology-n_35-m_315-p_0.75-18: 	Removed 0 nodes in preprocessing
-[2021-11-18 14:10:18.787] biology-n_35-m_315-p_0.75-18: 	Found 1 cyclic sub graph(s) with n = [28]
-[2021-11-18 14:10:34.106] biology-n_35-m_315-p_0.75-18: 	Found solution with k = 15 in 15s
-[2021-11-18 14:10:34.107] biology-n_42-m_297-p_0.5-23: 	---------- biology-n_42-m_297-p_0.5-23 (n = 42, m = 297, k = 21) ----------
-[2021-11-18 14:10:34.107] biology-n_42-m_297-p_0.5-23: 	Removed 0 nodes in preprocessing
-[2021-11-18 14:10:34.108] biology-n_42-m_297-p_0.5-23: 	Found 1 cyclic sub graph(s) with n = [42]
-[2021-11-18 14:13:34.107] biology-n_42-m_297-p_0.5-23: 	Found no solution in 180s
-[2021-11-18 14:13:34.108] biology-n_42-m_297-p_0.75-23: 	---------- biology-n_42-m_297-p_0.75-23 (n = 42, m = 297, k = 19) ----------
-[2021-11-18 14:13:34.108] biology-n_42-m_297-p_0.75-23: 	Removed 0 nodes in preprocessing
-[2021-11-18 14:13:34.109] biology-n_42-m_297-p_0.75-23: 	Found 1 cyclic sub graph(s) with n = [40]
-[2021-11-18 14:15:29.169] biology-n_42-m_297-p_0.75-23: 	Found solution with k = 19 in 115s
-[2021-11-18 14:15:29.169] biology-n_49-m_689-p_0.9-14: 	---------- biology-n_49-m_689-p_0.9-14 (n = 49, m = 689, k = 19) ----------
-[2021-11-18 14:15:29.170] biology-n_49-m_689-p_0.9-14: 	Removed 0 nodes in preprocessing
-[2021-11-18 14:15:29.171] biology-n_49-m_689-p_0.9-14: 	Found 1 cyclic sub graph(s) with n = [40]
-[2021-11-18 14:18:29.170] biology-n_49-m_689-p_0.9-14: 	Found no solution in 180s
-[2021-11-18 14:18:29.170] biology-n_59-m_624-p_0.75-1: 	---------- biology-n_59-m_624-p_0.75-1 (n = 59, m = 624, k = 26) ----------
-[2021-11-18 14:18:29.171] biology-n_59-m_624-p_0.75-1: 	Removed 0 nodes in preprocessing
-[2021-11-18 14:18:29.171] biology-n_59-m_624-p_0.75-1: 	Found 2 cyclic sub graph(s) with n = [34, 16]
-[2021-11-18 14:21:29.171] biology-n_59-m_624-p_0.75-1: 	Found no solution in 180s
-[2021-11-18 14:21:29.172] blogs-n_200: 	---------- blogs-n_200 (n = 140, m = 598, k = 25) ----------
-[2021-11-18 14:21:29.175] blogs-n_200: 	Removed 1 nodes in preprocessing
-[2021-11-18 14:21:29.177] blogs-n_200: 	Found 3 cyclic sub graph(s) with n = [58, 2, 2]
-[2021-11-18 14:21:55.043] blogs-n_200: 	Found solution with k = 25 in 25s
-[2021-11-18 14:21:55.043] GD-n_80-m_232.mtx: 	---------- GD-n_80-m_232.mtx (n = 80, m = 232, k = 20) ----------
-[2021-11-18 14:21:55.044] GD-n_80-m_232.mtx: 	Removed 0 nodes in preprocessing
-[2021-11-18 14:21:55.045] GD-n_80-m_232.mtx: 	Found 6 cyclic sub graph(s) with n = [3, 3, 3, 3, 3, 60]
-[2021-11-18 14:24:06.781] GD-n_80-m_232.mtx: 	Found solution with k = 20 in 131s
-[2021-11-18 14:24:06.782] openflights-n_300: 	---------- openflights-n_300 (n = 119, m = 324, k = 37) ----------
-[2021-11-18 14:24:06.783] openflights-n_300: 	Removed 30 nodes in preprocessing
-[2021-11-18 14:24:06.783] openflights-n_300: 	Found 4 cyclic sub graph(s) with n = [7, 2, 3, 3]
-[2021-11-18 14:24:06.783] openflights-n_300: 	Found solution with k = 37 in 1ms
-[2021-11-18 14:24:06.784] temporalGraph-n_700: 	---------- temporalGraph-n_700 (n = 339, m = 638, k = 26) ----------
-[2021-11-18 14:24:06.786] temporalGraph-n_700: 	Removed 13 nodes in preprocessing
-[2021-11-18 14:24:06.786] temporalGraph-n_700: 	Found 6 cyclic sub graph(s) with n = [10, 3, 18, 2, 4, 3]
-[2021-11-18 14:24:06.788] temporalGraph-n_700: 	Found solution with k = 26 in 3ms
-[2021-11-18 14:24:06.788] ucsocial-n_200: 	---------- ucsocial-n_200 (n = 106, m = 268, k = 24) ----------
-[2021-11-18 14:24:06.788] ucsocial-n_200: 	Removed 16 nodes in preprocessing
-[2021-11-18 14:24:06.789] ucsocial-n_200: 	Found 3 cyclic sub graph(s) with n = [11, 6, 2]
-[2021-11-18 14:24:06.789] ucsocial-n_200: 	Found solution with k = 24 in 1ms
-[2021-11-18 14:24:06.790] usairport-n_200: 	---------- usairport-n_200 (n = 101, m = 346, k = 29) ----------
-[2021-11-18 14:24:06.790] usairport-n_200: 	Removed 17 nodes in preprocessing
-[2021-11-18 14:24:06.791] usairport-n_200: 	Found 3 cyclic sub graph(s) with n = [7, 22, 3]
-[2021-11-18 14:24:06.795] usairport-n_200: 	Found solution with k = 29 in 5ms
-[2021-11-18 14:24:06.796] synth-n_100-m_305-k_20-p_0.05.txt: 	---------- synth-n_100-m_305-k_20-p_0.05.txt (n = 100, m = 305, k = 10) ----------
-[2021-11-18 14:24:06.796] synth-n_100-m_305-k_20-p_0.05.txt: 	Removed 0 nodes in preprocessing
-[2021-11-18 14:24:06.796] synth-n_100-m_305-k_20-p_0.05.txt: 	Found 1 cyclic sub graph(s) with n = [68]
-[2021-11-18 14:24:22.966] synth-n_100-m_305-k_20-p_0.05.txt: 	Found solution with k = 10 in 16s
-[2021-11-18 14:24:22.966] synth-n_100-m_319-k_15-p_0.05.txt: 	---------- synth-n_100-m_319-k_15-p_0.05.txt (n = 100, m = 319, k = 9) ----------
-[2021-11-18 14:24:22.967] synth-n_100-m_319-k_15-p_0.05.txt: 	Removed 0 nodes in preprocessing
-[2021-11-18 14:24:22.967] synth-n_100-m_319-k_15-p_0.05.txt: 	Found 1 cyclic sub graph(s) with n = [76]
-[2021-11-18 14:24:31.678] synth-n_100-m_319-k_15-p_0.05.txt: 	Found solution with k = 9 in 8s
-[2021-11-18 14:24:31.678] synth-n_100-m_568-k_10-p_0.1.txt: 	---------- synth-n_100-m_568-k_10-p_0.1.txt (n = 100, m = 568, k = 10) ----------
-[2021-11-18 14:24:31.678] synth-n_100-m_568-k_10-p_0.1.txt: 	Removed 0 nodes in preprocessing
-[2021-11-18 14:24:31.679] synth-n_100-m_568-k_10-p_0.1.txt: 	Found 1 cyclic sub graph(s) with n = [89]
-[2021-11-18 14:24:47.990] synth-n_100-m_568-k_10-p_0.1.txt: 	Found solution with k = 10 in 16s
-[2021-11-18 14:24:47.991] synth-n_120-m_1530-k_10-p_0.2.txt: 	---------- synth-n_120-m_1530-k_10-p_0.2.txt (n = 120, m = 1530, k = 10) ----------
-[2021-11-18 14:24:47.991] synth-n_120-m_1530-k_10-p_0.2.txt: 	Removed 0 nodes in preprocessing
-[2021-11-18 14:24:47.994] synth-n_120-m_1530-k_10-p_0.2.txt: 	Found 1 cyclic sub graph(s) with n = [120]
-[2021-11-18 14:25:20.663] synth-n_120-m_1530-k_10-p_0.2.txt: 	Found solution with k = 10 in 32s
-[2021-11-18 14:25:20.663] synth-n_120-m_455-k_15-p_0.05.txt: 	---------- synth-n_120-m_455-k_15-p_0.05.txt (n = 120, m = 455, k = 10) ----------
-[2021-11-18 14:25:20.664] synth-n_120-m_455-k_15-p_0.05.txt: 	Removed 0 nodes in preprocessing
-[2021-11-18 14:25:20.664] synth-n_120-m_455-k_15-p_0.05.txt: 	Found 1 cyclic sub graph(s) with n = [88]
-[2021-11-18 14:25:28.205] synth-n_120-m_455-k_15-p_0.05.txt: 	Found solution with k = 10 in 7s
-[2021-11-18 14:25:28.205] synth-n_140-m_1070-k_10-p_0.1.txt: 	---------- synth-n_140-m_1070-k_10-p_0.1.txt (n = 140, m = 1070, k = 10) ----------
-[2021-11-18 14:25:28.205] synth-n_140-m_1070-k_10-p_0.1.txt: 	Removed 0 nodes in preprocessing
-[2021-11-18 14:25:28.207] synth-n_140-m_1070-k_10-p_0.1.txt: 	Found 1 cyclic sub graph(s) with n = [127]
-[2021-11-18 14:26:16.037] synth-n_140-m_1070-k_10-p_0.1.txt: 	Found solution with k = 10 in 47s
-[2021-11-18 14:26:16.038] synth-n_160-m_731-k_10-p_0.05.txt: 	---------- synth-n_160-m_731-k_10-p_0.05.txt (n = 160, m = 731, k = 10) ----------
-[2021-11-18 14:26:16.038] synth-n_160-m_731-k_10-p_0.05.txt: 	Removed 0 nodes in preprocessing
-[2021-11-18 14:26:16.039] synth-n_160-m_731-k_10-p_0.05.txt: 	Found 1 cyclic sub graph(s) with n = [126]
-[2021-11-18 14:27:04.738] synth-n_160-m_731-k_10-p_0.05.txt: 	Found solution with k = 10 in 48s
-[2021-11-18 14:27:04.738] synth-n_180-m_3481-k_10-p_0.2.txt: 	---------- synth-n_180-m_3481-k_10-p_0.2.txt (n = 180, m = 3481, k = 10) ----------
-[2021-11-18 14:27:04.739] synth-n_180-m_3481-k_10-p_0.2.txt: 	Removed 0 nodes in preprocessing
-[2021-11-18 14:27:04.749] synth-n_180-m_3481-k_10-p_0.2.txt: 	Found 1 cyclic sub graph(s) with n = [175]
-[2021-11-18 14:29:06.318] synth-n_180-m_3481-k_10-p_0.2.txt: 	Found solution with k = 10 in 121s
-[2021-11-18 14:29:06.319] synth-n_180-m_902-k_10-p_0.05.txt: 	---------- synth-n_180-m_902-k_10-p_0.05.txt (n = 180, m = 902, k = 10) ----------
-[2021-11-18 14:29:06.319] synth-n_180-m_902-k_10-p_0.05.txt: 	Removed 0 nodes in preprocessing
-[2021-11-18 14:29:06.321] synth-n_180-m_902-k_10-p_0.05.txt: 	Found 1 cyclic sub graph(s) with n = [145]
-[2021-11-18 14:30:22.422] synth-n_180-m_902-k_10-p_0.05.txt: 	Found solution with k = 10 in 76s
-[2021-11-18 14:30:22.422] synth-n_200-m_1075-k_10-p_0.05.txt: 	---------- synth-n_200-m_1075-k_10-p_0.05.txt (n = 200, m = 1075, k = 10) ----------
-[2021-11-18 14:30:22.423] synth-n_200-m_1075-k_10-p_0.05.txt: 	Removed 0 nodes in preprocessing
-[2021-11-18 14:30:22.425] synth-n_200-m_1075-k_10-p_0.05.txt: 	Found 1 cyclic sub graph(s) with n = [145]
-[2021-11-18 14:32:49.465] synth-n_200-m_1075-k_10-p_0.05.txt: 	Found solution with k = 10 in 147s
-[2021-11-18 14:32:49.465] synth-n_225-m_1390-k_10-p_0.05.txt: 	---------- synth-n_225-m_1390-k_10-p_0.05.txt (n = 225, m = 1390, k = 10) ----------
-[2021-11-18 14:32:49.466] synth-n_225-m_1390-k_10-p_0.05.txt: 	Removed 0 nodes in preprocessing
-[2021-11-18 14:32:49.469] synth-n_225-m_1390-k_10-p_0.05.txt: 	Found 1 cyclic sub graph(s) with n = [187]
-[2021-11-18 14:34:45.843] synth-n_225-m_1390-k_10-p_0.05.txt: 	Found solution with k = 10 in 116s
-[2021-11-18 14:34:45.843] synth-n_250-m_1694-k_10-p_0.05.txt: 	---------- synth-n_250-m_1694-k_10-p_0.05.txt (n = 250, m = 1694, k = 10) ----------
-[2021-11-18 14:34:45.844] synth-n_250-m_1694-k_10-p_0.05.txt: 	Removed 0 nodes in preprocessing
-[2021-11-18 14:34:45.849] synth-n_250-m_1694-k_10-p_0.05.txt: 	Found 1 cyclic sub graph(s) with n = [215]
-[2021-11-18 14:37:03.820] synth-n_250-m_1694-k_10-p_0.05.txt: 	Found solution with k = 10 in 137s
-[2021-11-18 14:37:03.820] synth-n_275-m_2051-k_10-p_0.05.txt: 	---------- synth-n_275-m_2051-k_10-p_0.05.txt (n = 275, m = 2051, k = 10) ----------
-[2021-11-18 14:37:03.821] synth-n_275-m_2051-k_10-p_0.05.txt: 	Removed 0 nodes in preprocessing
-[2021-11-18 14:37:03.827] synth-n_275-m_2051-k_10-p_0.05.txt: 	Found 1 cyclic sub graph(s) with n = [231]
-[2021-11-18 14:39:22.826] synth-n_275-m_2051-k_10-p_0.05.txt: 	Found solution with k = 10 in 139s
-[2021-11-18 14:39:22.826] synth-n_300-m_2418-k_10-p_0.05.txt: 	---------- synth-n_300-m_2418-k_10-p_0.05.txt (n = 300, m = 2418, k = 10) ----------
-[2021-11-18 14:39:22.827] synth-n_300-m_2418-k_10-p_0.05.txt: 	Removed 0 nodes in preprocessing
-[2021-11-18 14:39:22.836] synth-n_300-m_2418-k_10-p_0.05.txt: 	Found 1 cyclic sub graph(s) with n = [268]
-[2021-11-18 14:42:22.827] synth-n_300-m_2418-k_10-p_0.05.txt: 	Found no solution in 180s
-[2021-11-18 14:42:22.827] synth-n_300-m_4844-k_10-p_0.1.txt: 	---------- synth-n_300-m_4844-k_10-p_0.1.txt (n = 300, m = 4844, k = 10) ----------
-[2021-11-18 14:42:22.828] synth-n_300-m_4844-k_10-p_0.1.txt: 	Removed 0 nodes in preprocessing
-[2021-11-18 14:42:22.852] synth-n_300-m_4844-k_10-p_0.1.txt: 	Found 1 cyclic sub graph(s) with n = [297]
-[2021-11-18 14:45:22.829] synth-n_300-m_4844-k_10-p_0.1.txt: 	Found no solution in 180s
-[2021-11-18 14:45:22.830] synth-n_300-m_9436-k_10-p_0.2.txt: 	---------- synth-n_300-m_9436-k_10-p_0.2.txt (n = 300, m = 9436, k = 10) ----------
-[2021-11-18 14:45:22.830] synth-n_300-m_9436-k_10-p_0.2.txt: 	Removed 0 nodes in preprocessing
-[2021-11-18 14:45:22.881] synth-n_300-m_9436-k_10-p_0.2.txt: 	Found 1 cyclic sub graph(s) with n = [299]
-[2021-11-18 14:48:22.835] synth-n_300-m_9436-k_10-p_0.2.txt: 	Found no solution in 180s
-[2021-11-18 14:48:22.836] synth-n_50-m_357-k_20-p_0.2.txt: 	---------- synth-n_50-m_357-k_20-p_0.2.txt (n = 50, m = 357, k = 20) ----------
-[2021-11-18 14:48:22.836] synth-n_50-m_357-k_20-p_0.2.txt: 	Removed 0 nodes in preprocessing
-[2021-11-18 14:48:22.837] synth-n_50-m_357-k_20-p_0.2.txt: 	Found 1 cyclic sub graph(s) with n = [50]
-[2021-11-18 14:51:22.836] synth-n_50-m_357-k_20-p_0.2.txt: 	Found no solution in 180s
-[2021-11-18 14:51:22.836] synth-n_60-m_243-k_25-p_0.1.txt: 	---------- synth-n_60-m_243-k_25-p_0.1.txt (n = 60, m = 243, k = 14) ----------
-[2021-11-18 14:51:22.837] synth-n_60-m_243-k_25-p_0.1.txt: 	Removed 0 nodes in preprocessing
-[2021-11-18 14:51:22.837] synth-n_60-m_243-k_25-p_0.1.txt: 	Found 1 cyclic sub graph(s) with n = [55]
-[2021-11-18 14:52:37.303] synth-n_60-m_243-k_25-p_0.1.txt: 	Found solution with k = 14 in 74s
-[2021-11-18 14:52:37.303] synth-n_60-m_271-k_20-p_0.1.txt: 	---------- synth-n_60-m_271-k_20-p_0.1.txt (n = 60, m = 271, k = 15) ----------
-[2021-11-18 14:52:37.303] synth-n_60-m_271-k_20-p_0.1.txt: 	Removed 0 nodes in preprocessing
-[2021-11-18 14:52:37.304] synth-n_60-m_271-k_20-p_0.1.txt: 	Found 1 cyclic sub graph(s) with n = [57]
-[2021-11-18 14:55:37.303] synth-n_60-m_271-k_20-p_0.1.txt: 	Found no solution in 180s
-[2021-11-18 14:55:37.303] synth-n_60-m_468-k_15-p_0.2.txt: 	---------- synth-n_60-m_468-k_15-p_0.2.txt (n = 60, m = 468, k = 15) ----------
-[2021-11-18 14:55:37.304] synth-n_60-m_468-k_15-p_0.2.txt: 	Removed 0 nodes in preprocessing
-[2021-11-18 14:55:37.304] synth-n_60-m_468-k_15-p_0.2.txt: 	Found 1 cyclic sub graph(s) with n = [59]
-[2021-11-18 14:58:37.304] synth-n_60-m_468-k_15-p_0.2.txt: 	Found no solution in 180s
-[2021-11-18 14:58:37.304] synth-n_80-m_818-k_15-p_0.2.txt: 	---------- synth-n_80-m_818-k_15-p_0.2.txt (n = 80, m = 818, k = 15) ----------
-[2021-11-18 14:58:37.305] synth-n_80-m_818-k_15-p_0.2.txt: 	Removed 0 nodes in preprocessing
-[2021-11-18 14:58:37.306] synth-n_80-m_818-k_15-p_0.2.txt: 	Found 1 cyclic sub graph(s) with n = [80]
-[2021-11-18 15:01:37.306] synth-n_80-m_818-k_15-p_0.2.txt: 	Found no solution in 180s
+[2021-11-18 15:02:11.440] biology-n_35-m_315-p_0.75-18: 	---------- biology-n_35-m_315-p_0.75-18 (n = 35, m = 315, k = 15) ----------
+[2021-11-18 15:02:11.448] biology-n_35-m_315-p_0.75-18: 	Removed 0 nodes in preprocessing
+[2021-11-18 15:02:11.453] biology-n_35-m_315-p_0.75-18: 	Found 1 cyclic sub graph(s) with n = [28]
+[2021-11-18 15:02:13.818] biology-n_35-m_315-p_0.75-18: 	Found solution with k = 15 in 2s
+[2021-11-18 15:02:13.818] biology-n_42-m_297-p_0.5-23: 	---------- biology-n_42-m_297-p_0.5-23 (n = 42, m = 297, k = 21) ----------
+[2021-11-18 15:02:13.819] biology-n_42-m_297-p_0.5-23: 	Removed 0 nodes in preprocessing
+[2021-11-18 15:02:13.820] biology-n_42-m_297-p_0.5-23: 	Found 1 cyclic sub graph(s) with n = [42]
+[2021-11-18 15:03:00.729] biology-n_42-m_297-p_0.5-23: 	Found solution with k = 21 in 46s
+[2021-11-18 15:03:00.730] biology-n_42-m_297-p_0.75-23: 	---------- biology-n_42-m_297-p_0.75-23 (n = 42, m = 297, k = 19) ----------
+[2021-11-18 15:03:00.730] biology-n_42-m_297-p_0.75-23: 	Removed 0 nodes in preprocessing
+[2021-11-18 15:03:00.731] biology-n_42-m_297-p_0.75-23: 	Found 1 cyclic sub graph(s) with n = [40]
+[2021-11-18 15:03:22.845] biology-n_42-m_297-p_0.75-23: 	Found solution with k = 19 in 22s
+[2021-11-18 15:03:22.846] biology-n_49-m_689-p_0.9-14: 	---------- biology-n_49-m_689-p_0.9-14 (n = 49, m = 689, k = 19) ----------
+[2021-11-18 15:03:22.846] biology-n_49-m_689-p_0.9-14: 	Removed 0 nodes in preprocessing
+[2021-11-18 15:03:22.847] biology-n_49-m_689-p_0.9-14: 	Found 1 cyclic sub graph(s) with n = [40]
+[2021-11-18 15:04:53.816] biology-n_49-m_689-p_0.9-14: 	Found solution with k = 19 in 90s
+[2021-11-18 15:04:53.816] biology-n_59-m_624-p_0.75-1: 	---------- biology-n_59-m_624-p_0.75-1 (n = 59, m = 624, k = 26) ----------
+[2021-11-18 15:04:53.817] biology-n_59-m_624-p_0.75-1: 	Removed 0 nodes in preprocessing
+[2021-11-18 15:04:53.818] biology-n_59-m_624-p_0.75-1: 	Found 2 cyclic sub graph(s) with n = [34, 16]
+[2021-11-18 15:05:37.277] biology-n_59-m_624-p_0.75-1: 	Found solution with k = 26 in 43s
+[2021-11-18 15:05:37.277] blogs-n_200: 	---------- blogs-n_200 (n = 140, m = 598, k = 25) ----------
+[2021-11-18 15:05:37.280] blogs-n_200: 	Removed 1 nodes in preprocessing
+[2021-11-18 15:05:37.281] blogs-n_200: 	Found 3 cyclic sub graph(s) with n = [58, 2, 2]
+[2021-11-18 15:05:45.486] blogs-n_200: 	Found solution with k = 25 in 8s
+[2021-11-18 15:05:45.487] GD-n_80-m_232.mtx: 	---------- GD-n_80-m_232.mtx (n = 80, m = 232, k = 20) ----------
+[2021-11-18 15:05:45.487] GD-n_80-m_232.mtx: 	Removed 0 nodes in preprocessing
+[2021-11-18 15:05:45.488] GD-n_80-m_232.mtx: 	Found 6 cyclic sub graph(s) with n = [3, 3, 3, 3, 3, 60]
+[2021-11-18 15:08:45.489] GD-n_80-m_232.mtx: 	Found no solution in 180s
+[2021-11-18 15:08:45.489] openflights-n_300: 	---------- openflights-n_300 (n = 119, m = 324, k = 37) ----------
+[2021-11-18 15:08:45.490] openflights-n_300: 	Removed 30 nodes in preprocessing
+[2021-11-18 15:08:45.491] openflights-n_300: 	Found 4 cyclic sub graph(s) with n = [7, 2, 3, 3]
+[2021-11-18 15:08:45.492] openflights-n_300: 	Found solution with k = 37 in 2ms
+[2021-11-18 15:08:45.492] temporalGraph-n_700: 	---------- temporalGraph-n_700 (n = 339, m = 638, k = 26) ----------
+[2021-11-18 15:08:45.494] temporalGraph-n_700: 	Removed 13 nodes in preprocessing
+[2021-11-18 15:08:45.495] temporalGraph-n_700: 	Found 6 cyclic sub graph(s) with n = [10, 3, 18, 2, 4, 3]
+[2021-11-18 15:08:45.497] temporalGraph-n_700: 	Found solution with k = 26 in 3ms
+[2021-11-18 15:08:45.497] ucsocial-n_200: 	---------- ucsocial-n_200 (n = 106, m = 268, k = 24) ----------
+[2021-11-18 15:08:45.498] ucsocial-n_200: 	Removed 16 nodes in preprocessing
+[2021-11-18 15:08:45.498] ucsocial-n_200: 	Found 3 cyclic sub graph(s) with n = [11, 6, 2]
+[2021-11-18 15:08:45.499] ucsocial-n_200: 	Found solution with k = 24 in 1ms
+[2021-11-18 15:08:45.500] usairport-n_200: 	---------- usairport-n_200 (n = 101, m = 346, k = 29) ----------
+[2021-11-18 15:08:45.501] usairport-n_200: 	Removed 17 nodes in preprocessing
+[2021-11-18 15:08:45.501] usairport-n_200: 	Found 3 cyclic sub graph(s) with n = [7, 22, 3]
+[2021-11-18 15:08:45.505] usairport-n_200: 	Found solution with k = 29 in 4ms
+[2021-11-18 15:08:45.505] synth-n_100-m_305-k_20-p_0.05.txt: 	---------- synth-n_100-m_305-k_20-p_0.05.txt (n = 100, m = 305, k = 10) ----------
+[2021-11-18 15:08:45.505] synth-n_100-m_305-k_20-p_0.05.txt: 	Removed 0 nodes in preprocessing
+[2021-11-18 15:08:45.506] synth-n_100-m_305-k_20-p_0.05.txt: 	Found 1 cyclic sub graph(s) with n = [68]
+[2021-11-18 15:09:04.842] synth-n_100-m_305-k_20-p_0.05.txt: 	Found solution with k = 10 in 19s
+[2021-11-18 15:09:04.843] synth-n_100-m_319-k_15-p_0.05.txt: 	---------- synth-n_100-m_319-k_15-p_0.05.txt (n = 100, m = 319, k = 9) ----------
+[2021-11-18 15:09:04.843] synth-n_100-m_319-k_15-p_0.05.txt: 	Removed 0 nodes in preprocessing
+[2021-11-18 15:09:04.844] synth-n_100-m_319-k_15-p_0.05.txt: 	Found 1 cyclic sub graph(s) with n = [76]
+[2021-11-18 15:09:08.029] synth-n_100-m_319-k_15-p_0.05.txt: 	Found solution with k = 9 in 3s
+[2021-11-18 15:09:08.030] synth-n_100-m_568-k_10-p_0.1.txt: 	---------- synth-n_100-m_568-k_10-p_0.1.txt (n = 100, m = 568, k = 10) ----------
+[2021-11-18 15:09:08.030] synth-n_100-m_568-k_10-p_0.1.txt: 	Removed 0 nodes in preprocessing
+[2021-11-18 15:09:08.032] synth-n_100-m_568-k_10-p_0.1.txt: 	Found 1 cyclic sub graph(s) with n = [89]
+[2021-11-18 15:09:12.075] synth-n_100-m_568-k_10-p_0.1.txt: 	Found solution with k = 10 in 4s
+[2021-11-18 15:09:12.075] synth-n_120-m_1530-k_10-p_0.2.txt: 	---------- synth-n_120-m_1530-k_10-p_0.2.txt (n = 120, m = 1530, k = 10) ----------
+[2021-11-18 15:09:12.076] synth-n_120-m_1530-k_10-p_0.2.txt: 	Removed 0 nodes in preprocessing
+[2021-11-18 15:09:12.079] synth-n_120-m_1530-k_10-p_0.2.txt: 	Found 1 cyclic sub graph(s) with n = [120]
+[2021-11-18 15:09:14.709] synth-n_120-m_1530-k_10-p_0.2.txt: 	Found solution with k = 10 in 2s
+[2021-11-18 15:09:14.709] synth-n_120-m_455-k_15-p_0.05.txt: 	---------- synth-n_120-m_455-k_15-p_0.05.txt (n = 120, m = 455, k = 10) ----------
+[2021-11-18 15:09:14.709] synth-n_120-m_455-k_15-p_0.05.txt: 	Removed 0 nodes in preprocessing
+[2021-11-18 15:09:14.710] synth-n_120-m_455-k_15-p_0.05.txt: 	Found 1 cyclic sub graph(s) with n = [88]
+[2021-11-18 15:09:19.077] synth-n_120-m_455-k_15-p_0.05.txt: 	Found solution with k = 10 in 4s
+[2021-11-18 15:09:19.077] synth-n_140-m_1070-k_10-p_0.1.txt: 	---------- synth-n_140-m_1070-k_10-p_0.1.txt (n = 140, m = 1070, k = 10) ----------
+[2021-11-18 15:09:19.078] synth-n_140-m_1070-k_10-p_0.1.txt: 	Removed 0 nodes in preprocessing
+[2021-11-18 15:09:19.082] synth-n_140-m_1070-k_10-p_0.1.txt: 	Found 1 cyclic sub graph(s) with n = [127]
+[2021-11-18 15:09:25.244] synth-n_140-m_1070-k_10-p_0.1.txt: 	Found solution with k = 10 in 6s
+[2021-11-18 15:09:25.244] synth-n_160-m_731-k_10-p_0.05.txt: 	---------- synth-n_160-m_731-k_10-p_0.05.txt (n = 160, m = 731, k = 10) ----------
+[2021-11-18 15:09:25.244] synth-n_160-m_731-k_10-p_0.05.txt: 	Removed 0 nodes in preprocessing
+[2021-11-18 15:09:25.246] synth-n_160-m_731-k_10-p_0.05.txt: 	Found 1 cyclic sub graph(s) with n = [126]
+[2021-11-18 15:09:39.212] synth-n_160-m_731-k_10-p_0.05.txt: 	Found solution with k = 10 in 13s
+[2021-11-18 15:09:39.212] synth-n_180-m_3481-k_10-p_0.2.txt: 	---------- synth-n_180-m_3481-k_10-p_0.2.txt (n = 180, m = 3481, k = 10) ----------
+[2021-11-18 15:09:39.213] synth-n_180-m_3481-k_10-p_0.2.txt: 	Removed 0 nodes in preprocessing
+[2021-11-18 15:09:39.224] synth-n_180-m_3481-k_10-p_0.2.txt: 	Found 1 cyclic sub graph(s) with n = [175]
+[2021-11-18 15:09:49.487] synth-n_180-m_3481-k_10-p_0.2.txt: 	Found solution with k = 10 in 10s
+[2021-11-18 15:09:49.487] synth-n_180-m_902-k_10-p_0.05.txt: 	---------- synth-n_180-m_902-k_10-p_0.05.txt (n = 180, m = 902, k = 10) ----------
+[2021-11-18 15:09:49.487] synth-n_180-m_902-k_10-p_0.05.txt: 	Removed 0 nodes in preprocessing
+[2021-11-18 15:09:49.489] synth-n_180-m_902-k_10-p_0.05.txt: 	Found 1 cyclic sub graph(s) with n = [145]
+[2021-11-18 15:10:08.928] synth-n_180-m_902-k_10-p_0.05.txt: 	Found solution with k = 10 in 19s
+[2021-11-18 15:10:08.928] synth-n_200-m_1075-k_10-p_0.05.txt: 	---------- synth-n_200-m_1075-k_10-p_0.05.txt (n = 200, m = 1075, k = 10) ----------
+[2021-11-18 15:10:08.928] synth-n_200-m_1075-k_10-p_0.05.txt: 	Removed 0 nodes in preprocessing
+[2021-11-18 15:10:08.931] synth-n_200-m_1075-k_10-p_0.05.txt: 	Found 1 cyclic sub graph(s) with n = [145]
+[2021-11-18 15:11:25.177] synth-n_200-m_1075-k_10-p_0.05.txt: 	Found solution with k = 10 in 76s
+[2021-11-18 15:11:25.177] synth-n_225-m_1390-k_10-p_0.05.txt: 	---------- synth-n_225-m_1390-k_10-p_0.05.txt (n = 225, m = 1390, k = 10) ----------
+[2021-11-18 15:11:25.177] synth-n_225-m_1390-k_10-p_0.05.txt: 	Removed 0 nodes in preprocessing
+[2021-11-18 15:11:25.183] synth-n_225-m_1390-k_10-p_0.05.txt: 	Found 1 cyclic sub graph(s) with n = [187]
+[2021-11-18 15:12:14.800] synth-n_225-m_1390-k_10-p_0.05.txt: 	Found solution with k = 10 in 49s
+[2021-11-18 15:12:14.800] synth-n_250-m_1694-k_10-p_0.05.txt: 	---------- synth-n_250-m_1694-k_10-p_0.05.txt (n = 250, m = 1694, k = 10) ----------
+[2021-11-18 15:12:14.801] synth-n_250-m_1694-k_10-p_0.05.txt: 	Removed 0 nodes in preprocessing
+[2021-11-18 15:12:14.807] synth-n_250-m_1694-k_10-p_0.05.txt: 	Found 1 cyclic sub graph(s) with n = [215]
+[2021-11-18 15:12:33.208] synth-n_250-m_1694-k_10-p_0.05.txt: 	Found solution with k = 10 in 18s
+[2021-11-18 15:12:33.208] synth-n_275-m_2051-k_10-p_0.05.txt: 	---------- synth-n_275-m_2051-k_10-p_0.05.txt (n = 275, m = 2051, k = 10) ----------
+[2021-11-18 15:12:33.209] synth-n_275-m_2051-k_10-p_0.05.txt: 	Removed 0 nodes in preprocessing
+[2021-11-18 15:12:33.219] synth-n_275-m_2051-k_10-p_0.05.txt: 	Found 1 cyclic sub graph(s) with n = [231]
+[2021-11-18 15:12:51.401] synth-n_275-m_2051-k_10-p_0.05.txt: 	Found solution with k = 10 in 18s
+[2021-11-18 15:12:51.401] synth-n_300-m_2418-k_10-p_0.05.txt: 	---------- synth-n_300-m_2418-k_10-p_0.05.txt (n = 300, m = 2418, k = 10) ----------
+[2021-11-18 15:12:51.402] synth-n_300-m_2418-k_10-p_0.05.txt: 	Removed 0 nodes in preprocessing
+[2021-11-18 15:12:51.412] synth-n_300-m_2418-k_10-p_0.05.txt: 	Found 1 cyclic sub graph(s) with n = [268]
+[2021-11-18 15:13:31.810] synth-n_300-m_2418-k_10-p_0.05.txt: 	Found solution with k = 10 in 40s
+[2021-11-18 15:13:31.810] synth-n_300-m_4844-k_10-p_0.1.txt: 	---------- synth-n_300-m_4844-k_10-p_0.1.txt (n = 300, m = 4844, k = 10) ----------
+[2021-11-18 15:13:31.811] synth-n_300-m_4844-k_10-p_0.1.txt: 	Removed 0 nodes in preprocessing
+[2021-11-18 15:13:31.841] synth-n_300-m_4844-k_10-p_0.1.txt: 	Found 1 cyclic sub graph(s) with n = [297]
+[2021-11-18 15:13:55.164] synth-n_300-m_4844-k_10-p_0.1.txt: 	Found solution with k = 10 in 23s
+[2021-11-18 15:13:55.164] synth-n_300-m_9436-k_10-p_0.2.txt: 	---------- synth-n_300-m_9436-k_10-p_0.2.txt (n = 300, m = 9436, k = 10) ----------
+[2021-11-18 15:13:55.164] synth-n_300-m_9436-k_10-p_0.2.txt: 	Removed 0 nodes in preprocessing
+[2021-11-18 15:13:55.221] synth-n_300-m_9436-k_10-p_0.2.txt: 	Found 1 cyclic sub graph(s) with n = [299]
+[2021-11-18 15:14:23.383] synth-n_300-m_9436-k_10-p_0.2.txt: 	Found solution with k = 10 in 28s
+[2021-11-18 15:14:23.383] synth-n_50-m_357-k_20-p_0.2.txt: 	---------- synth-n_50-m_357-k_20-p_0.2.txt (n = 50, m = 357, k = 20) ----------
+[2021-11-18 15:14:23.383] synth-n_50-m_357-k_20-p_0.2.txt: 	Removed 0 nodes in preprocessing
+[2021-11-18 15:14:23.384] synth-n_50-m_357-k_20-p_0.2.txt: 	Found 1 cyclic sub graph(s) with n = [50]
+[2021-11-18 15:16:41.806] synth-n_50-m_357-k_20-p_0.2.txt: 	Found solution with k = 20 in 138s
+[2021-11-18 15:16:41.806] synth-n_60-m_243-k_25-p_0.1.txt: 	---------- synth-n_60-m_243-k_25-p_0.1.txt (n = 60, m = 243, k = 14) ----------
+[2021-11-18 15:16:41.807] synth-n_60-m_243-k_25-p_0.1.txt: 	Removed 0 nodes in preprocessing
+[2021-11-18 15:16:41.807] synth-n_60-m_243-k_25-p_0.1.txt: 	Found 1 cyclic sub graph(s) with n = [55]
+[2021-11-18 15:17:56.825] synth-n_60-m_243-k_25-p_0.1.txt: 	Found solution with k = 14 in 75s
+[2021-11-18 15:17:56.825] synth-n_60-m_271-k_20-p_0.1.txt: 	---------- synth-n_60-m_271-k_20-p_0.1.txt (n = 60, m = 271, k = 15) ----------
+[2021-11-18 15:17:56.826] synth-n_60-m_271-k_20-p_0.1.txt: 	Removed 0 nodes in preprocessing
+[2021-11-18 15:17:56.826] synth-n_60-m_271-k_20-p_0.1.txt: 	Found 1 cyclic sub graph(s) with n = [57]
+[2021-11-18 15:20:56.826] synth-n_60-m_271-k_20-p_0.1.txt: 	Found no solution in 180s
+[2021-11-18 15:20:56.827] synth-n_60-m_468-k_15-p_0.2.txt: 	---------- synth-n_60-m_468-k_15-p_0.2.txt (n = 60, m = 468, k = 15) ----------
+[2021-11-18 15:20:56.827] synth-n_60-m_468-k_15-p_0.2.txt: 	Removed 0 nodes in preprocessing
+[2021-11-18 15:20:56.828] synth-n_60-m_468-k_15-p_0.2.txt: 	Found 1 cyclic sub graph(s) with n = [59]
+[2021-11-18 15:21:28.478] synth-n_60-m_468-k_15-p_0.2.txt: 	Found solution with k = 15 in 31s
+[2021-11-18 15:21:28.479] synth-n_80-m_818-k_15-p_0.2.txt: 	---------- synth-n_80-m_818-k_15-p_0.2.txt (n = 80, m = 818, k = 15) ----------
+[2021-11-18 15:21:28.479] synth-n_80-m_818-k_15-p_0.2.txt: 	Removed 0 nodes in preprocessing
+[2021-11-18 15:21:28.482] synth-n_80-m_818-k_15-p_0.2.txt: 	Found 1 cyclic sub graph(s) with n = [80]
+[2021-11-18 15:22:17.203] synth-n_80-m_818-k_15-p_0.2.txt: 	Found solution with k = 15 in 48s

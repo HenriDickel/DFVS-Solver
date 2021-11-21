@@ -52,9 +52,7 @@ public abstract class Solver {
 
     public static List<Node> dfvsSolve(Graph graph){
         // Start k
-        int m = graph.getEdgeCount();
-        int n = graph.getActiveNodes().size();
-        int k = MinMaxK.minK(m, n);
+        int k = 0;
 
         // Solution
         List<Node> S = null;
@@ -85,9 +83,6 @@ public abstract class Solver {
         // Create sub graphs
         Graph initialGraph = instance.subGraphs.get(0);
         instance.subGraphs = Preprocessing.findCyclicSubGraphs(instance.NAME, initialGraph);
-
-        // Sort nodes in sub graphs
-        Preprocessing.sortNodesByEdgeCount(instance);
 
         // Run for all sub graphs
         try{

@@ -366,4 +366,50 @@ public abstract class InstanceCreator {
 
         return createTestInstance("bfs-n4_m5_k1", graph, 1);
     }
+
+    public static Instance createFlower1() {
+        Graph graph = new Graph();
+
+        graph.addArc("U", "Z");
+        graph.addArc("U", "X");
+        graph.addArc("Y", "U");
+        graph.addArc("Z", "U");
+        graph.addArc("X", "Y");
+
+        return createTestInstance("flower1", graph, 1);
+    }
+
+    public static Instance createFlower2() {
+        Graph graph = new Graph();
+
+        graph.addArc("A", "B");
+        graph.addArc("B", "A");
+
+        graph.addArc("A", "C");
+        graph.addArc("C", "A");
+
+        graph.addArc("A", "D");
+        graph.addArc("D", "A");
+
+        return createTestInstance("flower2", graph, 1);
+    }
+
+    public static Instance createFlower3() {
+        Graph graph = new Graph();
+
+        graph.addArc("A", "B");
+        graph.addArc("B", "A");
+
+        graph.addArc("A", "C");
+        graph.addArc("C", "A");
+
+        graph.addArc("A", "D");
+        graph.addArc("D", "A");
+
+        graph.addArc("D", "E");
+        graph.addArc("E", "F");
+        graph.addArc("F", "D");
+
+        return createTestInstance("flower3", graph, 1);
+    }
 }

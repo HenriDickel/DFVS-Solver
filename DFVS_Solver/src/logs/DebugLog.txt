@@ -1,128 +1,235 @@
-[2021-11-18 15:02:11.440] biology-n_35-m_315-p_0.75-18: 	---------- biology-n_35-m_315-p_0.75-18 (n = 35, m = 315, k = 15) ----------
-[2021-11-18 15:02:11.448] biology-n_35-m_315-p_0.75-18: 	Removed 0 nodes in preprocessing
-[2021-11-18 15:02:11.453] biology-n_35-m_315-p_0.75-18: 	Found 1 cyclic sub graph(s) with n = [28]
-[2021-11-18 15:02:13.818] biology-n_35-m_315-p_0.75-18: 	Found solution with k = 15 in 2s
-[2021-11-18 15:02:13.818] biology-n_42-m_297-p_0.5-23: 	---------- biology-n_42-m_297-p_0.5-23 (n = 42, m = 297, k = 21) ----------
-[2021-11-18 15:02:13.819] biology-n_42-m_297-p_0.5-23: 	Removed 0 nodes in preprocessing
-[2021-11-18 15:02:13.820] biology-n_42-m_297-p_0.5-23: 	Found 1 cyclic sub graph(s) with n = [42]
-[2021-11-18 15:03:00.729] biology-n_42-m_297-p_0.5-23: 	Found solution with k = 21 in 46s
-[2021-11-18 15:03:00.730] biology-n_42-m_297-p_0.75-23: 	---------- biology-n_42-m_297-p_0.75-23 (n = 42, m = 297, k = 19) ----------
-[2021-11-18 15:03:00.730] biology-n_42-m_297-p_0.75-23: 	Removed 0 nodes in preprocessing
-[2021-11-18 15:03:00.731] biology-n_42-m_297-p_0.75-23: 	Found 1 cyclic sub graph(s) with n = [40]
-[2021-11-18 15:03:22.845] biology-n_42-m_297-p_0.75-23: 	Found solution with k = 19 in 22s
-[2021-11-18 15:03:22.846] biology-n_49-m_689-p_0.9-14: 	---------- biology-n_49-m_689-p_0.9-14 (n = 49, m = 689, k = 19) ----------
-[2021-11-18 15:03:22.846] biology-n_49-m_689-p_0.9-14: 	Removed 0 nodes in preprocessing
-[2021-11-18 15:03:22.847] biology-n_49-m_689-p_0.9-14: 	Found 1 cyclic sub graph(s) with n = [40]
-[2021-11-18 15:04:53.816] biology-n_49-m_689-p_0.9-14: 	Found solution with k = 19 in 90s
-[2021-11-18 15:04:53.816] biology-n_59-m_624-p_0.75-1: 	---------- biology-n_59-m_624-p_0.75-1 (n = 59, m = 624, k = 26) ----------
-[2021-11-18 15:04:53.817] biology-n_59-m_624-p_0.75-1: 	Removed 0 nodes in preprocessing
-[2021-11-18 15:04:53.818] biology-n_59-m_624-p_0.75-1: 	Found 2 cyclic sub graph(s) with n = [34, 16]
-[2021-11-18 15:05:37.277] biology-n_59-m_624-p_0.75-1: 	Found solution with k = 26 in 43s
-[2021-11-18 15:05:37.277] blogs-n_200: 	---------- blogs-n_200 (n = 140, m = 598, k = 25) ----------
-[2021-11-18 15:05:37.280] blogs-n_200: 	Removed 1 nodes in preprocessing
-[2021-11-18 15:05:37.281] blogs-n_200: 	Found 3 cyclic sub graph(s) with n = [58, 2, 2]
-[2021-11-18 15:05:45.486] blogs-n_200: 	Found solution with k = 25 in 8s
-[2021-11-18 15:05:45.487] GD-n_80-m_232.mtx: 	---------- GD-n_80-m_232.mtx (n = 80, m = 232, k = 20) ----------
-[2021-11-18 15:05:45.487] GD-n_80-m_232.mtx: 	Removed 0 nodes in preprocessing
-[2021-11-18 15:05:45.488] GD-n_80-m_232.mtx: 	Found 6 cyclic sub graph(s) with n = [3, 3, 3, 3, 3, 60]
-[2021-11-18 15:08:45.489] GD-n_80-m_232.mtx: 	Found no solution in 180s
-[2021-11-18 15:08:45.489] openflights-n_300: 	---------- openflights-n_300 (n = 119, m = 324, k = 37) ----------
-[2021-11-18 15:08:45.490] openflights-n_300: 	Removed 30 nodes in preprocessing
-[2021-11-18 15:08:45.491] openflights-n_300: 	Found 4 cyclic sub graph(s) with n = [7, 2, 3, 3]
-[2021-11-18 15:08:45.492] openflights-n_300: 	Found solution with k = 37 in 2ms
-[2021-11-18 15:08:45.492] temporalGraph-n_700: 	---------- temporalGraph-n_700 (n = 339, m = 638, k = 26) ----------
-[2021-11-18 15:08:45.494] temporalGraph-n_700: 	Removed 13 nodes in preprocessing
-[2021-11-18 15:08:45.495] temporalGraph-n_700: 	Found 6 cyclic sub graph(s) with n = [10, 3, 18, 2, 4, 3]
-[2021-11-18 15:08:45.497] temporalGraph-n_700: 	Found solution with k = 26 in 3ms
-[2021-11-18 15:08:45.497] ucsocial-n_200: 	---------- ucsocial-n_200 (n = 106, m = 268, k = 24) ----------
-[2021-11-18 15:08:45.498] ucsocial-n_200: 	Removed 16 nodes in preprocessing
-[2021-11-18 15:08:45.498] ucsocial-n_200: 	Found 3 cyclic sub graph(s) with n = [11, 6, 2]
-[2021-11-18 15:08:45.499] ucsocial-n_200: 	Found solution with k = 24 in 1ms
-[2021-11-18 15:08:45.500] usairport-n_200: 	---------- usairport-n_200 (n = 101, m = 346, k = 29) ----------
-[2021-11-18 15:08:45.501] usairport-n_200: 	Removed 17 nodes in preprocessing
-[2021-11-18 15:08:45.501] usairport-n_200: 	Found 3 cyclic sub graph(s) with n = [7, 22, 3]
-[2021-11-18 15:08:45.505] usairport-n_200: 	Found solution with k = 29 in 4ms
-[2021-11-18 15:08:45.505] synth-n_100-m_305-k_20-p_0.05.txt: 	---------- synth-n_100-m_305-k_20-p_0.05.txt (n = 100, m = 305, k = 10) ----------
-[2021-11-18 15:08:45.505] synth-n_100-m_305-k_20-p_0.05.txt: 	Removed 0 nodes in preprocessing
-[2021-11-18 15:08:45.506] synth-n_100-m_305-k_20-p_0.05.txt: 	Found 1 cyclic sub graph(s) with n = [68]
-[2021-11-18 15:09:04.842] synth-n_100-m_305-k_20-p_0.05.txt: 	Found solution with k = 10 in 19s
-[2021-11-18 15:09:04.843] synth-n_100-m_319-k_15-p_0.05.txt: 	---------- synth-n_100-m_319-k_15-p_0.05.txt (n = 100, m = 319, k = 9) ----------
-[2021-11-18 15:09:04.843] synth-n_100-m_319-k_15-p_0.05.txt: 	Removed 0 nodes in preprocessing
-[2021-11-18 15:09:04.844] synth-n_100-m_319-k_15-p_0.05.txt: 	Found 1 cyclic sub graph(s) with n = [76]
-[2021-11-18 15:09:08.029] synth-n_100-m_319-k_15-p_0.05.txt: 	Found solution with k = 9 in 3s
-[2021-11-18 15:09:08.030] synth-n_100-m_568-k_10-p_0.1.txt: 	---------- synth-n_100-m_568-k_10-p_0.1.txt (n = 100, m = 568, k = 10) ----------
-[2021-11-18 15:09:08.030] synth-n_100-m_568-k_10-p_0.1.txt: 	Removed 0 nodes in preprocessing
-[2021-11-18 15:09:08.032] synth-n_100-m_568-k_10-p_0.1.txt: 	Found 1 cyclic sub graph(s) with n = [89]
-[2021-11-18 15:09:12.075] synth-n_100-m_568-k_10-p_0.1.txt: 	Found solution with k = 10 in 4s
-[2021-11-18 15:09:12.075] synth-n_120-m_1530-k_10-p_0.2.txt: 	---------- synth-n_120-m_1530-k_10-p_0.2.txt (n = 120, m = 1530, k = 10) ----------
-[2021-11-18 15:09:12.076] synth-n_120-m_1530-k_10-p_0.2.txt: 	Removed 0 nodes in preprocessing
-[2021-11-18 15:09:12.079] synth-n_120-m_1530-k_10-p_0.2.txt: 	Found 1 cyclic sub graph(s) with n = [120]
-[2021-11-18 15:09:14.709] synth-n_120-m_1530-k_10-p_0.2.txt: 	Found solution with k = 10 in 2s
-[2021-11-18 15:09:14.709] synth-n_120-m_455-k_15-p_0.05.txt: 	---------- synth-n_120-m_455-k_15-p_0.05.txt (n = 120, m = 455, k = 10) ----------
-[2021-11-18 15:09:14.709] synth-n_120-m_455-k_15-p_0.05.txt: 	Removed 0 nodes in preprocessing
-[2021-11-18 15:09:14.710] synth-n_120-m_455-k_15-p_0.05.txt: 	Found 1 cyclic sub graph(s) with n = [88]
-[2021-11-18 15:09:19.077] synth-n_120-m_455-k_15-p_0.05.txt: 	Found solution with k = 10 in 4s
-[2021-11-18 15:09:19.077] synth-n_140-m_1070-k_10-p_0.1.txt: 	---------- synth-n_140-m_1070-k_10-p_0.1.txt (n = 140, m = 1070, k = 10) ----------
-[2021-11-18 15:09:19.078] synth-n_140-m_1070-k_10-p_0.1.txt: 	Removed 0 nodes in preprocessing
-[2021-11-18 15:09:19.082] synth-n_140-m_1070-k_10-p_0.1.txt: 	Found 1 cyclic sub graph(s) with n = [127]
-[2021-11-18 15:09:25.244] synth-n_140-m_1070-k_10-p_0.1.txt: 	Found solution with k = 10 in 6s
-[2021-11-18 15:09:25.244] synth-n_160-m_731-k_10-p_0.05.txt: 	---------- synth-n_160-m_731-k_10-p_0.05.txt (n = 160, m = 731, k = 10) ----------
-[2021-11-18 15:09:25.244] synth-n_160-m_731-k_10-p_0.05.txt: 	Removed 0 nodes in preprocessing
-[2021-11-18 15:09:25.246] synth-n_160-m_731-k_10-p_0.05.txt: 	Found 1 cyclic sub graph(s) with n = [126]
-[2021-11-18 15:09:39.212] synth-n_160-m_731-k_10-p_0.05.txt: 	Found solution with k = 10 in 13s
-[2021-11-18 15:09:39.212] synth-n_180-m_3481-k_10-p_0.2.txt: 	---------- synth-n_180-m_3481-k_10-p_0.2.txt (n = 180, m = 3481, k = 10) ----------
-[2021-11-18 15:09:39.213] synth-n_180-m_3481-k_10-p_0.2.txt: 	Removed 0 nodes in preprocessing
-[2021-11-18 15:09:39.224] synth-n_180-m_3481-k_10-p_0.2.txt: 	Found 1 cyclic sub graph(s) with n = [175]
-[2021-11-18 15:09:49.487] synth-n_180-m_3481-k_10-p_0.2.txt: 	Found solution with k = 10 in 10s
-[2021-11-18 15:09:49.487] synth-n_180-m_902-k_10-p_0.05.txt: 	---------- synth-n_180-m_902-k_10-p_0.05.txt (n = 180, m = 902, k = 10) ----------
-[2021-11-18 15:09:49.487] synth-n_180-m_902-k_10-p_0.05.txt: 	Removed 0 nodes in preprocessing
-[2021-11-18 15:09:49.489] synth-n_180-m_902-k_10-p_0.05.txt: 	Found 1 cyclic sub graph(s) with n = [145]
-[2021-11-18 15:10:08.928] synth-n_180-m_902-k_10-p_0.05.txt: 	Found solution with k = 10 in 19s
-[2021-11-18 15:10:08.928] synth-n_200-m_1075-k_10-p_0.05.txt: 	---------- synth-n_200-m_1075-k_10-p_0.05.txt (n = 200, m = 1075, k = 10) ----------
-[2021-11-18 15:10:08.928] synth-n_200-m_1075-k_10-p_0.05.txt: 	Removed 0 nodes in preprocessing
-[2021-11-18 15:10:08.931] synth-n_200-m_1075-k_10-p_0.05.txt: 	Found 1 cyclic sub graph(s) with n = [145]
-[2021-11-18 15:11:25.177] synth-n_200-m_1075-k_10-p_0.05.txt: 	Found solution with k = 10 in 76s
-[2021-11-18 15:11:25.177] synth-n_225-m_1390-k_10-p_0.05.txt: 	---------- synth-n_225-m_1390-k_10-p_0.05.txt (n = 225, m = 1390, k = 10) ----------
-[2021-11-18 15:11:25.177] synth-n_225-m_1390-k_10-p_0.05.txt: 	Removed 0 nodes in preprocessing
-[2021-11-18 15:11:25.183] synth-n_225-m_1390-k_10-p_0.05.txt: 	Found 1 cyclic sub graph(s) with n = [187]
-[2021-11-18 15:12:14.800] synth-n_225-m_1390-k_10-p_0.05.txt: 	Found solution with k = 10 in 49s
-[2021-11-18 15:12:14.800] synth-n_250-m_1694-k_10-p_0.05.txt: 	---------- synth-n_250-m_1694-k_10-p_0.05.txt (n = 250, m = 1694, k = 10) ----------
-[2021-11-18 15:12:14.801] synth-n_250-m_1694-k_10-p_0.05.txt: 	Removed 0 nodes in preprocessing
-[2021-11-18 15:12:14.807] synth-n_250-m_1694-k_10-p_0.05.txt: 	Found 1 cyclic sub graph(s) with n = [215]
-[2021-11-18 15:12:33.208] synth-n_250-m_1694-k_10-p_0.05.txt: 	Found solution with k = 10 in 18s
-[2021-11-18 15:12:33.208] synth-n_275-m_2051-k_10-p_0.05.txt: 	---------- synth-n_275-m_2051-k_10-p_0.05.txt (n = 275, m = 2051, k = 10) ----------
-[2021-11-18 15:12:33.209] synth-n_275-m_2051-k_10-p_0.05.txt: 	Removed 0 nodes in preprocessing
-[2021-11-18 15:12:33.219] synth-n_275-m_2051-k_10-p_0.05.txt: 	Found 1 cyclic sub graph(s) with n = [231]
-[2021-11-18 15:12:51.401] synth-n_275-m_2051-k_10-p_0.05.txt: 	Found solution with k = 10 in 18s
-[2021-11-18 15:12:51.401] synth-n_300-m_2418-k_10-p_0.05.txt: 	---------- synth-n_300-m_2418-k_10-p_0.05.txt (n = 300, m = 2418, k = 10) ----------
-[2021-11-18 15:12:51.402] synth-n_300-m_2418-k_10-p_0.05.txt: 	Removed 0 nodes in preprocessing
-[2021-11-18 15:12:51.412] synth-n_300-m_2418-k_10-p_0.05.txt: 	Found 1 cyclic sub graph(s) with n = [268]
-[2021-11-18 15:13:31.810] synth-n_300-m_2418-k_10-p_0.05.txt: 	Found solution with k = 10 in 40s
-[2021-11-18 15:13:31.810] synth-n_300-m_4844-k_10-p_0.1.txt: 	---------- synth-n_300-m_4844-k_10-p_0.1.txt (n = 300, m = 4844, k = 10) ----------
-[2021-11-18 15:13:31.811] synth-n_300-m_4844-k_10-p_0.1.txt: 	Removed 0 nodes in preprocessing
-[2021-11-18 15:13:31.841] synth-n_300-m_4844-k_10-p_0.1.txt: 	Found 1 cyclic sub graph(s) with n = [297]
-[2021-11-18 15:13:55.164] synth-n_300-m_4844-k_10-p_0.1.txt: 	Found solution with k = 10 in 23s
-[2021-11-18 15:13:55.164] synth-n_300-m_9436-k_10-p_0.2.txt: 	---------- synth-n_300-m_9436-k_10-p_0.2.txt (n = 300, m = 9436, k = 10) ----------
-[2021-11-18 15:13:55.164] synth-n_300-m_9436-k_10-p_0.2.txt: 	Removed 0 nodes in preprocessing
-[2021-11-18 15:13:55.221] synth-n_300-m_9436-k_10-p_0.2.txt: 	Found 1 cyclic sub graph(s) with n = [299]
-[2021-11-18 15:14:23.383] synth-n_300-m_9436-k_10-p_0.2.txt: 	Found solution with k = 10 in 28s
-[2021-11-18 15:14:23.383] synth-n_50-m_357-k_20-p_0.2.txt: 	---------- synth-n_50-m_357-k_20-p_0.2.txt (n = 50, m = 357, k = 20) ----------
-[2021-11-18 15:14:23.383] synth-n_50-m_357-k_20-p_0.2.txt: 	Removed 0 nodes in preprocessing
-[2021-11-18 15:14:23.384] synth-n_50-m_357-k_20-p_0.2.txt: 	Found 1 cyclic sub graph(s) with n = [50]
-[2021-11-18 15:16:41.806] synth-n_50-m_357-k_20-p_0.2.txt: 	Found solution with k = 20 in 138s
-[2021-11-18 15:16:41.806] synth-n_60-m_243-k_25-p_0.1.txt: 	---------- synth-n_60-m_243-k_25-p_0.1.txt (n = 60, m = 243, k = 14) ----------
-[2021-11-18 15:16:41.807] synth-n_60-m_243-k_25-p_0.1.txt: 	Removed 0 nodes in preprocessing
-[2021-11-18 15:16:41.807] synth-n_60-m_243-k_25-p_0.1.txt: 	Found 1 cyclic sub graph(s) with n = [55]
-[2021-11-18 15:17:56.825] synth-n_60-m_243-k_25-p_0.1.txt: 	Found solution with k = 14 in 75s
-[2021-11-18 15:17:56.825] synth-n_60-m_271-k_20-p_0.1.txt: 	---------- synth-n_60-m_271-k_20-p_0.1.txt (n = 60, m = 271, k = 15) ----------
-[2021-11-18 15:17:56.826] synth-n_60-m_271-k_20-p_0.1.txt: 	Removed 0 nodes in preprocessing
-[2021-11-18 15:17:56.826] synth-n_60-m_271-k_20-p_0.1.txt: 	Found 1 cyclic sub graph(s) with n = [57]
-[2021-11-18 15:20:56.826] synth-n_60-m_271-k_20-p_0.1.txt: 	Found no solution in 180s
-[2021-11-18 15:20:56.827] synth-n_60-m_468-k_15-p_0.2.txt: 	---------- synth-n_60-m_468-k_15-p_0.2.txt (n = 60, m = 468, k = 15) ----------
-[2021-11-18 15:20:56.827] synth-n_60-m_468-k_15-p_0.2.txt: 	Removed 0 nodes in preprocessing
-[2021-11-18 15:20:56.828] synth-n_60-m_468-k_15-p_0.2.txt: 	Found 1 cyclic sub graph(s) with n = [59]
-[2021-11-18 15:21:28.478] synth-n_60-m_468-k_15-p_0.2.txt: 	Found solution with k = 15 in 31s
-[2021-11-18 15:21:28.479] synth-n_80-m_818-k_15-p_0.2.txt: 	---------- synth-n_80-m_818-k_15-p_0.2.txt (n = 80, m = 818, k = 15) ----------
-[2021-11-18 15:21:28.479] synth-n_80-m_818-k_15-p_0.2.txt: 	Removed 0 nodes in preprocessing
-[2021-11-18 15:21:28.482] synth-n_80-m_818-k_15-p_0.2.txt: 	Found 1 cyclic sub graph(s) with n = [80]
-[2021-11-18 15:22:17.203] synth-n_80-m_818-k_15-p_0.2.txt: 	Found solution with k = 15 in 48s
+[2021-11-21 09:35:43.919] advotogo-n_100: 	---------- advotogo-n_100 (n = 16, m = 12, k = 3) ----------
+[2021-11-21 09:35:43.927] advotogo-n_100: 	Removed 3 nodes in preprocessing
+[2021-11-21 09:35:43.929] advotogo-n_100: 	Found 0 cyclic sub graph(s) with n = []
+[2021-11-21 09:35:43.933] advotogo-n_100: 	Found solution with k = 3 in 21ms
+[2021-11-21 09:35:43.934] advotogo-n_1000: 	---------- advotogo-n_1000 (n = 578, m = 1500, k = 112) ----------
+[2021-11-21 09:35:43.986] advotogo-n_1000: 	Removed 111 nodes in preprocessing
+[2021-11-21 09:35:43.987] advotogo-n_1000: 	Found 1 cyclic sub graph(s) with n = [2]
+[2021-11-21 09:35:43.989] advotogo-n_1000: 	Found solution with k = 112 in 54ms
+[2021-11-21 09:35:43.989] advotogo-n_200: 	---------- advotogo-n_200 (n = 54, m = 52, k = 5) ----------
+[2021-11-21 09:35:43.989] advotogo-n_200: 	Removed 5 nodes in preprocessing
+[2021-11-21 09:35:43.990] advotogo-n_200: 	Found 0 cyclic sub graph(s) with n = []
+[2021-11-21 09:35:43.990] advotogo-n_200: 	Found solution with k = 5 in 1ms
+[2021-11-21 09:35:43.990] advotogo-n_300: 	---------- advotogo-n_300 (n = 113, m = 150, k = 15) ----------
+[2021-11-21 09:35:43.992] advotogo-n_300: 	Removed 15 nodes in preprocessing
+[2021-11-21 09:35:43.992] advotogo-n_300: 	Found 0 cyclic sub graph(s) with n = []
+[2021-11-21 09:35:43.992] advotogo-n_300: 	Found solution with k = 15 in 2ms
+[2021-11-21 09:35:43.993] advotogo-n_400: 	---------- advotogo-n_400 (n = 158, m = 235, k = 22) ----------
+[2021-11-21 09:35:43.995] advotogo-n_400: 	Removed 22 nodes in preprocessing
+[2021-11-21 09:35:43.995] advotogo-n_400: 	Found 0 cyclic sub graph(s) with n = []
+[2021-11-21 09:35:43.996] advotogo-n_400: 	Found solution with k = 22 in 3ms
+[2021-11-21 09:35:43.996] advotogo-n_500: 	---------- advotogo-n_500 (n = 271, m = 628, k = 36) ----------
+[2021-11-21 09:35:44.004] advotogo-n_500: 	Removed 36 nodes in preprocessing
+[2021-11-21 09:35:44.005] advotogo-n_500: 	Found 0 cyclic sub graph(s) with n = []
+[2021-11-21 09:35:44.005] advotogo-n_500: 	Found solution with k = 36 in 9ms
+[2021-11-21 09:35:44.005] advotogo-n_700: 	---------- advotogo-n_700 (n = 402, m = 942, k = 64) ----------
+[2021-11-21 09:35:44.027] advotogo-n_700: 	Removed 61 nodes in preprocessing
+[2021-11-21 09:35:44.028] advotogo-n_700: 	Found 1 cyclic sub graph(s) with n = [5]
+[2021-11-21 09:35:44.028] advotogo-n_700: 	Found solution with k = 64 in 23ms
+[2021-11-21 09:35:44.028] advotogo-n_800: 	---------- advotogo-n_800 (n = 458, m = 1211, k = 79) ----------
+[2021-11-21 09:35:44.040] advotogo-n_800: 	Removed 79 nodes in preprocessing
+[2021-11-21 09:35:44.041] advotogo-n_800: 	Found 0 cyclic sub graph(s) with n = []
+[2021-11-21 09:35:44.041] advotogo-n_800: 	Found solution with k = 79 in 13ms
+[2021-11-21 09:35:44.041] baydry: 	---------- baydry (n = 128, m = 2137, k = 7) ----------
+[2021-11-21 09:35:44.050] baydry: 	Removed 7 nodes in preprocessing
+[2021-11-21 09:35:44.050] baydry: 	Found 0 cyclic sub graph(s) with n = []
+[2021-11-21 09:35:44.050] baydry: 	Found solution with k = 7 in 9ms
+[2021-11-21 09:35:44.051] baywet: 	---------- baywet (n = 128, m = 2106, k = 7) ----------
+[2021-11-21 09:35:44.056] baywet: 	Removed 7 nodes in preprocessing
+[2021-11-21 09:35:44.057] baywet: 	Found 0 cyclic sub graph(s) with n = []
+[2021-11-21 09:35:44.057] baywet: 	Found solution with k = 7 in 6ms
+[2021-11-21 09:35:44.057] biology-n_12-m_33-p_0.5-15: 	---------- biology-n_12-m_33-p_0.5-15 (n = 12, m = 33, k = 3) ----------
+[2021-11-21 09:35:44.058] biology-n_12-m_33-p_0.5-15: 	Removed 0 nodes in preprocessing
+[2021-11-21 09:35:44.058] biology-n_12-m_33-p_0.5-15: 	Found 1 cyclic sub graph(s) with n = [10]
+[2021-11-21 09:35:44.059] biology-n_12-m_33-p_0.5-15: 	Found solution with k = 3 in 2ms
+[2021-11-21 09:35:44.059] biology-n_12-m_33-p_0.75-15: 	---------- biology-n_12-m_33-p_0.75-15 (n = 12, m = 33, k = 3) ----------
+[2021-11-21 09:35:44.059] biology-n_12-m_33-p_0.75-15: 	Removed 2 nodes in preprocessing
+[2021-11-21 09:35:44.060] biology-n_12-m_33-p_0.75-15: 	Found 1 cyclic sub graph(s) with n = [3]
+[2021-11-21 09:35:44.060] biology-n_12-m_33-p_0.75-15: 	Found solution with k = 3 in 1ms
+[2021-11-21 09:35:44.060] biology-n_12-m_33-p_0.9-15: 	---------- biology-n_12-m_33-p_0.9-15 (n = 12, m = 33, k = 3) ----------
+[2021-11-21 09:35:44.060] biology-n_12-m_33-p_0.9-15: 	Removed 3 nodes in preprocessing
+[2021-11-21 09:35:44.061] biology-n_12-m_33-p_0.9-15: 	Found 0 cyclic sub graph(s) with n = []
+[2021-11-21 09:35:44.061] biology-n_12-m_33-p_0.9-15: 	Found solution with k = 3 in 1ms
+[2021-11-21 09:35:44.061] biology-n_12-m_43-p_0.5-25: 	---------- biology-n_12-m_43-p_0.5-25 (n = 12, m = 43, k = 4) ----------
+[2021-11-21 09:35:44.061] biology-n_12-m_43-p_0.5-25: 	Removed 0 nodes in preprocessing
+[2021-11-21 09:35:44.062] biology-n_12-m_43-p_0.5-25: 	Found 1 cyclic sub graph(s) with n = [10]
+[2021-11-21 09:35:44.063] biology-n_12-m_43-p_0.5-25: 	Found solution with k = 4 in 1ms
+[2021-11-21 09:35:44.063] biology-n_12-m_43-p_0.75-25: 	---------- biology-n_12-m_43-p_0.75-25 (n = 12, m = 43, k = 3) ----------
+[2021-11-21 09:35:44.063] biology-n_12-m_43-p_0.75-25: 	Removed 3 nodes in preprocessing
+[2021-11-21 09:35:44.063] biology-n_12-m_43-p_0.75-25: 	Found 0 cyclic sub graph(s) with n = []
+[2021-11-21 09:35:44.064] biology-n_12-m_43-p_0.75-25: 	Found solution with k = 3 in 0ms
+[2021-11-21 09:35:44.064] biology-n_12-m_43-p_0.9-25: 	---------- biology-n_12-m_43-p_0.9-25 (n = 12, m = 43, k = 1) ----------
+[2021-11-21 09:35:44.064] biology-n_12-m_43-p_0.9-25: 	Removed 1 nodes in preprocessing
+[2021-11-21 09:35:44.064] biology-n_12-m_43-p_0.9-25: 	Found 0 cyclic sub graph(s) with n = []
+[2021-11-21 09:35:44.065] biology-n_12-m_43-p_0.9-25: 	Found solution with k = 1 in 0ms
+[2021-11-21 09:35:44.065] biology-n_12-m_45-p_0.5-19: 	---------- biology-n_12-m_45-p_0.5-19 (n = 12, m = 45, k = 3) ----------
+[2021-11-21 09:35:44.065] biology-n_12-m_45-p_0.5-19: 	Removed 0 nodes in preprocessing
+[2021-11-21 09:35:44.065] biology-n_12-m_45-p_0.5-19: 	Found 1 cyclic sub graph(s) with n = [9]
+[2021-11-21 09:35:44.066] biology-n_12-m_45-p_0.5-19: 	Found solution with k = 3 in 0ms
+[2021-11-21 09:35:44.066] biology-n_12-m_45-p_0.75-19: 	---------- biology-n_12-m_45-p_0.75-19 (n = 12, m = 45, k = 3) ----------
+[2021-11-21 09:35:44.066] biology-n_12-m_45-p_0.75-19: 	Removed 0 nodes in preprocessing
+[2021-11-21 09:35:44.066] biology-n_12-m_45-p_0.75-19: 	Found 1 cyclic sub graph(s) with n = [9]
+[2021-11-21 09:35:44.067] biology-n_12-m_45-p_0.75-19: 	Found solution with k = 3 in 1ms
+[2021-11-21 09:35:44.067] biology-n_12-m_45-p_0.9-19: 	---------- biology-n_12-m_45-p_0.9-19 (n = 12, m = 45, k = 1) ----------
+[2021-11-21 09:35:44.068] biology-n_12-m_45-p_0.9-19: 	Removed 1 nodes in preprocessing
+[2021-11-21 09:35:44.068] biology-n_12-m_45-p_0.9-19: 	Found 0 cyclic sub graph(s) with n = []
+[2021-11-21 09:35:44.068] biology-n_12-m_45-p_0.9-19: 	Found solution with k = 1 in 0ms
+[2021-11-21 09:35:44.068] biology-n_13-m_39-p_0.5-4: 	---------- biology-n_13-m_39-p_0.5-4 (n = 13, m = 39, k = 2) ----------
+[2021-11-21 09:35:44.068] biology-n_13-m_39-p_0.5-4: 	Removed 0 nodes in preprocessing
+[2021-11-21 09:35:44.069] biology-n_13-m_39-p_0.5-4: 	Found 1 cyclic sub graph(s) with n = [8]
+[2021-11-21 09:35:44.069] biology-n_13-m_39-p_0.5-4: 	Found solution with k = 2 in 1ms
+[2021-11-21 09:35:44.069] biology-n_13-m_39-p_0.75-4: 	---------- biology-n_13-m_39-p_0.75-4 (n = 13, m = 39, k = 3) ----------
+[2021-11-21 09:35:44.070] biology-n_13-m_39-p_0.75-4: 	Removed 3 nodes in preprocessing
+[2021-11-21 09:35:44.070] biology-n_13-m_39-p_0.75-4: 	Found 0 cyclic sub graph(s) with n = []
+[2021-11-21 09:35:44.070] biology-n_13-m_39-p_0.75-4: 	Found solution with k = 3 in 1ms
+[2021-11-21 09:35:44.070] biology-n_13-m_39-p_0.9-4: 	---------- biology-n_13-m_39-p_0.9-4 (n = 13, m = 39, k = 4) ----------
+[2021-11-21 09:35:44.071] biology-n_13-m_39-p_0.9-4: 	Removed 4 nodes in preprocessing
+[2021-11-21 09:35:44.071] biology-n_13-m_39-p_0.9-4: 	Found 0 cyclic sub graph(s) with n = []
+[2021-11-21 09:35:44.071] biology-n_13-m_39-p_0.9-4: 	Found solution with k = 4 in 0ms
+[2021-11-21 09:35:44.071] biology-n_13-m_51-p_0.5-22: 	---------- biology-n_13-m_51-p_0.5-22 (n = 13, m = 51, k = 4) ----------
+[2021-11-21 09:35:44.072] biology-n_13-m_51-p_0.5-22: 	Removed 0 nodes in preprocessing
+[2021-11-21 09:35:44.072] biology-n_13-m_51-p_0.5-22: 	Found 1 cyclic sub graph(s) with n = [9]
+[2021-11-21 09:35:44.073] biology-n_13-m_51-p_0.5-22: 	Found solution with k = 4 in 0ms
+[2021-11-21 09:35:44.073] biology-n_13-m_51-p_0.75-22: 	---------- biology-n_13-m_51-p_0.75-22 (n = 13, m = 51, k = 3) ----------
+[2021-11-21 09:35:44.073] biology-n_13-m_51-p_0.75-22: 	Removed 0 nodes in preprocessing
+[2021-11-21 09:35:44.073] biology-n_13-m_51-p_0.75-22: 	Found 1 cyclic sub graph(s) with n = [8]
+[2021-11-21 09:35:44.074] biology-n_13-m_51-p_0.75-22: 	Found solution with k = 3 in 0ms
+[2021-11-21 09:35:44.074] biology-n_13-m_51-p_0.9-22: 	---------- biology-n_13-m_51-p_0.9-22 (n = 13, m = 51, k = 3) ----------
+[2021-11-21 09:35:44.074] biology-n_13-m_51-p_0.9-22: 	Removed 3 nodes in preprocessing
+[2021-11-21 09:35:44.074] biology-n_13-m_51-p_0.9-22: 	Found 0 cyclic sub graph(s) with n = []
+[2021-11-21 09:35:44.074] biology-n_13-m_51-p_0.9-22: 	Found solution with k = 3 in 0ms
+[2021-11-21 09:35:44.075] biology-n_16-m_79-p_0.5-3: 	---------- biology-n_16-m_79-p_0.5-3 (n = 16, m = 79, k = 6) ----------
+[2021-11-21 09:35:44.075] biology-n_16-m_79-p_0.5-3: 	Removed 0 nodes in preprocessing
+[2021-11-21 09:35:44.075] biology-n_16-m_79-p_0.5-3: 	Found 1 cyclic sub graph(s) with n = [13]
+[2021-11-21 09:35:44.079] biology-n_16-m_79-p_0.5-3: 	Found solution with k = 6 in 3ms
+[2021-11-21 09:35:44.079] biology-n_16-m_79-p_0.75-3: 	---------- biology-n_16-m_79-p_0.75-3 (n = 16, m = 79, k = 6) ----------
+[2021-11-21 09:35:44.079] biology-n_16-m_79-p_0.75-3: 	Removed 0 nodes in preprocessing
+[2021-11-21 09:35:44.079] biology-n_16-m_79-p_0.75-3: 	Found 1 cyclic sub graph(s) with n = [15]
+[2021-11-21 09:35:44.083] biology-n_16-m_79-p_0.75-3: 	Found solution with k = 6 in 4ms
+[2021-11-21 09:35:44.083] biology-n_16-m_79-p_0.9-3: 	---------- biology-n_16-m_79-p_0.9-3 (n = 16, m = 79, k = 4) ----------
+[2021-11-21 09:35:44.083] biology-n_16-m_79-p_0.9-3: 	Removed 0 nodes in preprocessing
+[2021-11-21 09:35:44.084] biology-n_16-m_79-p_0.9-3: 	Found 1 cyclic sub graph(s) with n = [10]
+[2021-11-21 09:35:44.084] biology-n_16-m_79-p_0.9-3: 	Found solution with k = 4 in 0ms
+[2021-11-21 09:35:44.085] biology-n_17-m_89-p_0.5-10: 	---------- biology-n_17-m_89-p_0.5-10 (n = 17, m = 89, k = 6) ----------
+[2021-11-21 09:35:44.085] biology-n_17-m_89-p_0.5-10: 	Removed 0 nodes in preprocessing
+[2021-11-21 09:35:44.085] biology-n_17-m_89-p_0.5-10: 	Found 1 cyclic sub graph(s) with n = [15]
+[2021-11-21 09:35:44.089] biology-n_17-m_89-p_0.5-10: 	Found solution with k = 6 in 4ms
+[2021-11-21 09:35:44.089] biology-n_17-m_89-p_0.75-10: 	---------- biology-n_17-m_89-p_0.75-10 (n = 17, m = 89, k = 6) ----------
+[2021-11-21 09:35:44.089] biology-n_17-m_89-p_0.75-10: 	Removed 0 nodes in preprocessing
+[2021-11-21 09:35:44.090] biology-n_17-m_89-p_0.75-10: 	Found 1 cyclic sub graph(s) with n = [15]
+[2021-11-21 09:35:44.093] biology-n_17-m_89-p_0.75-10: 	Found solution with k = 6 in 4ms
+[2021-11-21 09:35:44.093] biology-n_17-m_89-p_0.9-10: 	---------- biology-n_17-m_89-p_0.9-10 (n = 17, m = 89, k = 4) ----------
+[2021-11-21 09:35:44.093] biology-n_17-m_89-p_0.9-10: 	Removed 0 nodes in preprocessing
+[2021-11-21 09:35:44.094] biology-n_17-m_89-p_0.9-10: 	Found 1 cyclic sub graph(s) with n = [12]
+[2021-11-21 09:35:44.094] biology-n_17-m_89-p_0.9-10: 	Found solution with k = 4 in 1ms
+[2021-11-21 09:35:44.094] biology-n_19-m_99-p_0.5-20: 	---------- biology-n_19-m_99-p_0.5-20 (n = 19, m = 99, k = 7) ----------
+[2021-11-21 09:35:44.095] biology-n_19-m_99-p_0.5-20: 	Removed 0 nodes in preprocessing
+[2021-11-21 09:35:44.095] biology-n_19-m_99-p_0.5-20: 	Found 1 cyclic sub graph(s) with n = [17]
+[2021-11-21 09:35:44.103] biology-n_19-m_99-p_0.5-20: 	Found solution with k = 7 in 9ms
+[2021-11-21 09:35:44.103] biology-n_19-m_99-p_0.75-20: 	---------- biology-n_19-m_99-p_0.75-20 (n = 19, m = 99, k = 6) ----------
+[2021-11-21 09:35:44.103] biology-n_19-m_99-p_0.75-20: 	Removed 0 nodes in preprocessing
+[2021-11-21 09:35:44.104] biology-n_19-m_99-p_0.75-20: 	Found 1 cyclic sub graph(s) with n = [13]
+[2021-11-21 09:35:44.105] biology-n_19-m_99-p_0.75-20: 	Found solution with k = 6 in 2ms
+[2021-11-21 09:35:44.105] biology-n_19-m_99-p_0.9-20: 	---------- biology-n_19-m_99-p_0.9-20 (n = 19, m = 99, k = 3) ----------
+[2021-11-21 09:35:44.106] biology-n_19-m_99-p_0.9-20: 	Removed 3 nodes in preprocessing
+[2021-11-21 09:35:44.106] biology-n_19-m_99-p_0.9-20: 	Found 0 cyclic sub graph(s) with n = []
+[2021-11-21 09:35:44.106] biology-n_19-m_99-p_0.9-20: 	Found solution with k = 3 in 1ms
+[2021-11-21 09:35:44.106] biology-n_20-m_125-p_0.5-24: 	---------- biology-n_20-m_125-p_0.5-24 (n = 20, m = 125, k = 8) ----------
+[2021-11-21 09:35:44.107] biology-n_20-m_125-p_0.5-24: 	Removed 0 nodes in preprocessing
+[2021-11-21 09:35:44.107] biology-n_20-m_125-p_0.5-24: 	Found 1 cyclic sub graph(s) with n = [18]
+[2021-11-21 09:35:44.124] biology-n_20-m_125-p_0.5-24: 	Found solution with k = 8 in 18ms
+[2021-11-21 09:35:44.124] biology-n_20-m_125-p_0.5-7: 	---------- biology-n_20-m_125-p_0.5-7 (n = 20, m = 125, k = 9) ----------
+[2021-11-21 09:35:44.125] biology-n_20-m_125-p_0.5-7: 	Removed 0 nodes in preprocessing
+[2021-11-21 09:35:44.125] biology-n_20-m_125-p_0.5-7: 	Found 1 cyclic sub graph(s) with n = [19]
+[2021-11-21 09:35:44.143] biology-n_20-m_125-p_0.5-7: 	Found solution with k = 9 in 18ms
+[2021-11-21 09:35:44.143] biology-n_20-m_125-p_0.75-24: 	---------- biology-n_20-m_125-p_0.75-24 (n = 20, m = 125, k = 9) ----------
+[2021-11-21 09:35:44.143] biology-n_20-m_125-p_0.75-24: 	Removed 0 nodes in preprocessing
+[2021-11-21 09:35:44.144] biology-n_20-m_125-p_0.75-24: 	Found 1 cyclic sub graph(s) with n = [18]
+[2021-11-21 09:35:44.170] biology-n_20-m_125-p_0.75-24: 	Found solution with k = 9 in 27ms
+[2021-11-21 09:35:44.170] biology-n_20-m_125-p_0.75-7: 	---------- biology-n_20-m_125-p_0.75-7 (n = 20, m = 125, k = 5) ----------
+[2021-11-21 09:35:44.171] biology-n_20-m_125-p_0.75-7: 	Removed 0 nodes in preprocessing
+[2021-11-21 09:35:44.171] biology-n_20-m_125-p_0.75-7: 	Found 1 cyclic sub graph(s) with n = [17]
+[2021-11-21 09:35:44.172] biology-n_20-m_125-p_0.75-7: 	Found solution with k = 5 in 2ms
+[2021-11-21 09:35:44.172] biology-n_20-m_125-p_0.9-24: 	---------- biology-n_20-m_125-p_0.9-24 (n = 20, m = 125, k = 3) ----------
+[2021-11-21 09:35:44.173] biology-n_20-m_125-p_0.9-24: 	Removed 0 nodes in preprocessing
+[2021-11-21 09:35:44.173] biology-n_20-m_125-p_0.9-24: 	Found 1 cyclic sub graph(s) with n = [16]
+[2021-11-21 09:35:44.174] biology-n_20-m_125-p_0.9-24: 	Found solution with k = 3 in 2ms
+[2021-11-21 09:35:44.174] biology-n_20-m_125-p_0.9-7: 	---------- biology-n_20-m_125-p_0.9-7 (n = 20, m = 125, k = 4) ----------
+[2021-11-21 09:35:44.174] biology-n_20-m_125-p_0.9-7: 	Removed 1 nodes in preprocessing
+[2021-11-21 09:35:44.175] biology-n_20-m_125-p_0.9-7: 	Found 1 cyclic sub graph(s) with n = [13]
+[2021-11-21 09:35:44.175] biology-n_20-m_125-p_0.9-7: 	Found solution with k = 4 in 1ms
+[2021-11-21 09:35:44.175] biology-n_22-m_76-p_0.5-9: 	---------- biology-n_22-m_76-p_0.5-9 (n = 22, m = 76, k = 4) ----------
+[2021-11-21 09:35:44.175] biology-n_22-m_76-p_0.5-9: 	Removed 0 nodes in preprocessing
+[2021-11-21 09:35:44.176] biology-n_22-m_76-p_0.5-9: 	Found 1 cyclic sub graph(s) with n = [9]
+[2021-11-21 09:35:44.176] biology-n_22-m_76-p_0.5-9: 	Found solution with k = 4 in 0ms
+[2021-11-21 09:35:44.176] biology-n_22-m_76-p_0.75-9: 	---------- biology-n_22-m_76-p_0.75-9 (n = 22, m = 76, k = 4) ----------
+[2021-11-21 09:35:44.177] biology-n_22-m_76-p_0.75-9: 	Removed 0 nodes in preprocessing
+[2021-11-21 09:35:44.177] biology-n_22-m_76-p_0.75-9: 	Found 1 cyclic sub graph(s) with n = [11]
+[2021-11-21 09:35:44.177] biology-n_22-m_76-p_0.75-9: 	Found solution with k = 4 in 1ms
+[2021-11-21 09:35:44.178] biology-n_22-m_76-p_0.9-9: 	---------- biology-n_22-m_76-p_0.9-9 (n = 22, m = 76, k = 3) ----------
+[2021-11-21 09:35:44.178] biology-n_22-m_76-p_0.9-9: 	Removed 0 nodes in preprocessing
+[2021-11-21 09:35:44.178] biology-n_22-m_76-p_0.9-9: 	Found 1 cyclic sub graph(s) with n = [8]
+[2021-11-21 09:35:44.178] biology-n_22-m_76-p_0.9-9: 	Found solution with k = 3 in 0ms
+[2021-11-21 09:35:44.179] biology-n_23-m_166-p_0.5-17: 	---------- biology-n_23-m_166-p_0.5-17 (n = 23, m = 166, k = 12) ----------
+[2021-11-21 09:35:44.179] biology-n_23-m_166-p_0.5-17: 	Removed 0 nodes in preprocessing
+[2021-11-21 09:35:44.179] biology-n_23-m_166-p_0.5-17: 	Found 1 cyclic sub graph(s) with n = [23]
+[2021-11-21 09:35:44.855] biology-n_23-m_166-p_0.5-17: 	Found solution with k = 12 in 676ms
+[2021-11-21 09:35:44.856] biology-n_23-m_166-p_0.75-17: 	---------- biology-n_23-m_166-p_0.75-17 (n = 23, m = 166, k = 10) ----------
+[2021-11-21 09:35:44.856] biology-n_23-m_166-p_0.75-17: 	Removed 0 nodes in preprocessing
+[2021-11-21 09:35:44.856] biology-n_23-m_166-p_0.75-17: 	Found 1 cyclic sub graph(s) with n = [21]
+[2021-11-21 09:35:44.946] biology-n_23-m_166-p_0.75-17: 	Found solution with k = 10 in 89ms
+[2021-11-21 09:35:44.946] biology-n_23-m_166-p_0.9-17: 	---------- biology-n_23-m_166-p_0.9-17 (n = 23, m = 166, k = 6) ----------
+[2021-11-21 09:35:44.946] biology-n_23-m_166-p_0.9-17: 	Removed 1 nodes in preprocessing
+[2021-11-21 09:35:44.947] biology-n_23-m_166-p_0.9-17: 	Found 1 cyclic sub graph(s) with n = [15]
+[2021-11-21 09:35:44.948] biology-n_23-m_166-p_0.9-17: 	Found solution with k = 6 in 2ms
+[2021-11-21 09:35:44.948] biology-n_25-m_231-p_0.5-6: 	---------- biology-n_25-m_231-p_0.5-6 (n = 25, m = 231, k = 13) ----------
+[2021-11-21 09:35:44.948] biology-n_25-m_231-p_0.5-6: 	Removed 0 nodes in preprocessing
+[2021-11-21 09:35:44.949] biology-n_25-m_231-p_0.5-6: 	Found 1 cyclic sub graph(s) with n = [24]
+[2021-11-21 09:35:46.216] biology-n_25-m_231-p_0.5-6: 	Found solution with k = 13 in 1s
+[2021-11-21 09:35:46.216] biology-n_25-m_231-p_0.75-6: 	---------- biology-n_25-m_231-p_0.75-6 (n = 25, m = 231, k = 13) ----------
+[2021-11-21 09:35:46.216] biology-n_25-m_231-p_0.75-6: 	Removed 0 nodes in preprocessing
+[2021-11-21 09:35:46.216] biology-n_25-m_231-p_0.75-6: 	Found 1 cyclic sub graph(s) with n = [24]
+[2021-11-21 09:35:46.931] biology-n_25-m_231-p_0.75-6: 	Found solution with k = 13 in 714ms
+[2021-11-21 09:35:46.931] biology-n_25-m_231-p_0.9-6: 	---------- biology-n_25-m_231-p_0.9-6 (n = 25, m = 231, k = 8) ----------
+[2021-11-21 09:35:46.932] biology-n_25-m_231-p_0.9-6: 	Removed 0 nodes in preprocessing
+[2021-11-21 09:35:46.932] biology-n_25-m_231-p_0.9-6: 	Found 1 cyclic sub graph(s) with n = [21]
+[2021-11-21 09:35:46.943] biology-n_25-m_231-p_0.9-6: 	Found solution with k = 8 in 11ms
+[2021-11-21 09:35:46.943] biology-n_28-m_163-p_0.5-11: 	---------- biology-n_28-m_163-p_0.5-11 (n = 28, m = 163, k = 10) ----------
+[2021-11-21 09:35:46.943] biology-n_28-m_163-p_0.5-11: 	Removed 1 nodes in preprocessing
+[2021-11-21 09:35:46.943] biology-n_28-m_163-p_0.5-11: 	Found 1 cyclic sub graph(s) with n = [20]
+[2021-11-21 09:35:46.976] biology-n_28-m_163-p_0.5-11: 	Found solution with k = 10 in 33ms
+[2021-11-21 09:35:46.976] biology-n_28-m_163-p_0.75-11: 	---------- biology-n_28-m_163-p_0.75-11 (n = 28, m = 163, k = 8) ----------
+[2021-11-21 09:35:46.977] biology-n_28-m_163-p_0.75-11: 	Removed 1 nodes in preprocessing
+[2021-11-21 09:35:46.977] biology-n_28-m_163-p_0.75-11: 	Found 1 cyclic sub graph(s) with n = [18]
+[2021-11-21 09:35:46.981] biology-n_28-m_163-p_0.75-11: 	Found solution with k = 8 in 5ms
+[2021-11-21 09:35:46.981] biology-n_28-m_163-p_0.9-11: 	---------- biology-n_28-m_163-p_0.9-11 (n = 28, m = 163, k = 5) ----------
+[2021-11-21 09:35:46.981] biology-n_28-m_163-p_0.9-11: 	Removed 1 nodes in preprocessing
+[2021-11-21 09:35:46.982] biology-n_28-m_163-p_0.9-11: 	Found 1 cyclic sub graph(s) with n = [14]
+[2021-11-21 09:35:46.982] biology-n_28-m_163-p_0.9-11: 	Found solution with k = 5 in 1ms
+[2021-11-21 09:35:46.983] biology-n_28-m_249-p_0.5-8: 	---------- biology-n_28-m_249-p_0.5-8 (n = 28, m = 249, k = 15) ----------
+[2021-11-21 09:35:46.983] biology-n_28-m_249-p_0.5-8: 	Removed 0 nodes in preprocessing
+[2021-11-21 09:35:46.983] biology-n_28-m_249-p_0.5-8: 	Found 1 cyclic sub graph(s) with n = [28]
+[2021-11-21 09:35:47.842] biology-n_28-m_249-p_0.5-8: 	Found solution with k = 15 in 859ms
+[2021-11-21 09:35:47.842] biology-n_28-m_249-p_0.75-8: 	---------- biology-n_28-m_249-p_0.75-8 (n = 28, m = 249, k = 13) ----------
+[2021-11-21 09:35:47.843] biology-n_28-m_249-p_0.75-8: 	Removed 0 nodes in preprocessing
+[2021-11-21 09:35:47.843] biology-n_28-m_249-p_0.75-8: 	Found 1 cyclic sub graph(s) with n = [28]
+[2021-11-21 09:35:48.318] biology-n_28-m_249-p_0.75-8: 	Found solution with k = 13 in 475ms
+[2021-11-21 09:35:48.318] biology-n_28-m_249-p_0.9-8: 	---------- biology-n_28-m_249-p_0.9-8 (n = 28, m = 249, k = 6) ----------
+[2021-11-21 09:35:48.318] biology-n_28-m_249-p_0.9-8: 	Removed 1 nodes in preprocessing
+[2021-11-21 09:35:48.319] biology-n_28-m_249-p_0.9-8: 	Found 1 cyclic sub graph(s) with n = [19]
+[2021-11-21 09:35:48.320] biology-n_28-m_249-p_0.9-8: 	Found solution with k = 6 in 1ms
+[2021-11-21 09:35:48.320] biology-n_29-m_153-p_0.5-21: 	---------- biology-n_29-m_153-p_0.5-21 (n = 29, m = 153, k = 11) ----------
+[2021-11-21 09:35:48.321] biology-n_29-m_153-p_0.5-21: 	Removed 1 nodes in preprocessing
+[2021-11-21 09:35:48.321] biology-n_29-m_153-p_0.5-21: 	Found 1 cyclic sub graph(s) with n = [22]
+[2021-11-21 09:35:48.381] biology-n_29-m_153-p_0.5-21: 	Found solution with k = 11 in 61ms
+[2021-11-21 09:35:48.381] biology-n_29-m_153-p_0.75-21: 	---------- biology-n_29-m_153-p_0.75-21 (n = 29, m = 153, k = 11) ----------
+[2021-11-21 09:35:48.382] biology-n_29-m_153-p_0.75-21: 	Removed 0 nodes in preprocessing
+[2021-11-21 09:35:48.382] biology-n_29-m_153-p_0.75-21: 	Found 1 cyclic sub graph(s) with n = [26]
+[2021-11-21 09:35:48.575] biology-n_29-m_153-p_0.75-21: 	Found solution with k = 11 in 194ms
+[2021-11-21 09:35:48.575] biology-n_29-m_153-p_0.9-21: 	---------- biology-n_29-m_153-p_0.9-21 (n = 29, m = 153, k = 5) ----------
+[2021-11-21 09:35:48.576] biology-n_29-m_153-p_0.9-21: 	Removed 1 nodes in preprocessing
+[2021-11-21 09:35:48.576] biology-n_29-m_153-p_0.9-21: 	Found 1 cyclic sub graph(s) with n = [15]
+[2021-11-21 09:35:48.577] biology-n_29-m_153-p_0.9-21: 	Found solution with k = 5 in 1ms
+[2021-11-21 09:35:48.577] biology-n_30-m_287-p_0.5-5: 	---------- biology-n_30-m_287-p_0.5-5 (n = 30, m = 287, k = 15) ----------
+[2021-11-21 09:35:48.577] biology-n_30-m_287-p_0.5-5: 	Removed 0 nodes in preprocessing
+[2021-11-21 09:35:48.578] biology-n_30-m_287-p_0.5-5: 	Found 1 cyclic sub graph(s) with n = [27]

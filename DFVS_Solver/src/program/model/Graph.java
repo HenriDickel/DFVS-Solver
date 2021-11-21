@@ -23,11 +23,8 @@ public class Graph {
         Node b = nodes.stream().filter(x -> x.label.equals(to)).findFirst().get();
 
         //Add to neighbours
-        a.addNeighbor(b);
-    }
-
-    public void unexploreAllNodes() {
-
+        a.addOutgoingNeighbor(b);
+        b.addIngoingNeighbor(a);
     }
 
     public void resetBFS() {
@@ -52,6 +49,44 @@ public class Graph {
             node.removeNeighbor(nodeToRemove);
         }
         nodes.remove(nodeToRemove);
+    }
+
+    //------------------------------------------------------------------Flowers-----------------------------------------
+    public void replaceNode(Node node, boolean isU){
+
+        //Remove node
+        nodes.remove(node);
+
+        List<Node> copyNodes = new ArrayList<>(nodes);
+
+        //For each node add edges
+        for(Node a : copyNodes){
+            //Ingoing to node-
+            if(a.getOutNeighbors().contains(node)){
+                addArc(a.label, node.label + "-");
+                a.getOutNeighbors().remove(node);
+            }
+            //Outgoing to node+
+            if(a.getInNeighbors().contains(node)){
+                addArc(a.label, node.label + "+");
+                a.getInNeighbors().remove(node);
+            }
+        }
+
+        //Add node- to node+
+        if(!isU) addArc(node.label + "-", node.label + "+");
+    }
+
+    public Graph copy(){
+        Graph graph = new Graph();
+        graph.nodes = new ArrayList<>();
+
+        for(Node node : nodes){
+            for(Node out : node.getOutNeighbors()){
+                graph.addArc(node.label, out.label);
+            }
+        }
+        return graph;
     }
 
     @Override
