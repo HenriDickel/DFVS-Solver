@@ -72,11 +72,63 @@ public abstract class Preprocessing {
         return pairs;
     }
 
+    private static void checkSelfEdge(Graph graph, Node node) {
+        if(node.getOutNeighbors().contains(node)) {
+            graph.fullyRemoveNode(node);
+            Solver.instance.S.add(node);
+            Solver.instance.solvedK++;
+            System.out.println("Remove self node " + node.label + " with in = " + node.getInNeighbors() + " and out = " + node.getOutNeighbors());
+        }
+    }
+
+    private static Node findNextNode(Graph graph) {
+        for(Node node: graph.nodes) {
+            if(node.getOutNeighbors().isEmpty() || node.getInNeighbors().isEmpty()) { // trivial vertex rule
+                return node;
+            } else if(node.getOutNeighbors().contains(node)) { // self loop rule
+                return node;
+            } else if(node.getOutNeighbors().size() == 1) {
+                return node;
+            } else if(node.getInNeighbors().size() == 1) {
+                return node;
+            }
+        }
+        return null;
+    }
+
+    public static void applyRules(Graph graph) {
+        Node node;
+        while((node = findNextNode(graph)) != null) {
+            if(node.getOutNeighbors().isEmpty() || node.getInNeighbors().isEmpty()) { // remove trivial vertices
+                graph.fullyRemoveNode(node);
+            } else if(node.getOutNeighbors().contains(node)) { // remove self loops
+                graph.fullyRemoveNode(node);
+                Solver.instance.S.add(node);
+                Solver.instance.solvedK++;
+            } else if(node.getOutNeighbors().size() == 1) { // chain rule (single out neighbor) in >>> node -> out
+                Node out = node.getOutNeighbors().get(0);
+                for(Node in: node.getInNeighbors()) {
+                    in.addOutNeighbor(out);
+                    out.addInNeighbor(in);
+                }
+                graph.fullyRemoveNode(node);
+            } else if(node.getInNeighbors().size() == 1) { // chain rule (single in neighbor) in -> node >>> out
+                Node in = node.getInNeighbors().get(0);
+                for(Node out: node.getOutNeighbors()) {
+                    out.addInNeighbor(in);
+                    in.addOutNeighbor(out);
+                }
+                graph.fullyRemoveNode(node);
+            } else {
+                System.out.println("Never reached");
+            }
+        }
+    }
+
     /**
      * Using a slightly adjusted chaining rule remove Nodes with only one ingoing our only one outgoing Edge and improve performance where this might help
      * @param instance The current Graph instance
      */
-
     public static void removeChain(Instance instance){
         for(Graph subGraph: instance.subGraphs) {
             List<Node> oneInNodes;
@@ -128,7 +180,7 @@ public abstract class Preprocessing {
                     }else{
                         //Only add Neighbor if it isn't already in the list
                         if (!B.getOutNeighbors().contains(C)) {
-                            B.addOutgoingNeighbor(C);
+                            B.addOutNeighbor(C);
                         }
                     }
                 }
@@ -159,7 +211,7 @@ public abstract class Preprocessing {
                     }else{
                         //Only add Neighbor if it isn't already in the list
                         if (!C.getOutNeighbors().contains(B)) {
-                            C.addOutgoingNeighbor(B);
+                            C.addOutNeighbor(B);
                         }
                     }
                 }

@@ -23,8 +23,8 @@ public class Graph {
         Node b = nodes.stream().filter(x -> x.label.equals(to)).findFirst().get();
 
         //Add to neighbours
-        a.addOutgoingNeighbor(b);
-        b.addIngoingNeighbor(a);
+        a.addOutNeighbor(b);
+        b.addInNeighbor(a);
     }
 
     public void resetBFS() {
@@ -57,6 +57,9 @@ public class Graph {
     public void fullyRemoveNode(Node nodeToRemove) {
         for (Node node : nodes) {
             node.removeOutNeighbor(nodeToRemove);
+        }
+        for (Node node : nodes) {
+            node.removeInNeighbor(nodeToRemove);
         }
         nodes.remove(nodeToRemove);
     }

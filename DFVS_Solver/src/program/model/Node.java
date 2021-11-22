@@ -35,16 +35,24 @@ public class Node {
         inNeighbours = new ArrayList<>();
     }
 
-    public void addOutgoingNeighbor(Node neighbor) {
-        outNeighbours.add(neighbor);
+    public void addOutNeighbor(Node neighbor) {
+        if(!outNeighbours.contains(neighbor)) {
+            outNeighbours.add(neighbor);
+        }
     }
 
-    public void addIngoingNeighbor(Node neighbor) {
-        inNeighbours.add(neighbor);
+    public void addInNeighbor(Node neighbor) {
+        if(!inNeighbours.contains(neighbor)) {
+            inNeighbours.add(neighbor);
+        }
     }
 
     public void removeOutNeighbor(Node neighbor) {
         outNeighbours.remove(neighbor);
+    }
+
+    public void removeInNeighbor(Node neighbor) {
+        inNeighbours.remove(neighbor);
     }
 
     public List<Node> getOutNeighbors() {

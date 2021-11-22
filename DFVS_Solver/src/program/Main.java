@@ -44,7 +44,7 @@ public class Main {
             //List<Node> bfs = BFSShortestCircle.ShortestCircleBFS(instance.subGraphs.get(0));
             //List<Node> bfstest = bfs;
 
-            //List<Instance> instances = InstanceCreator.createComplexInstances();
+            //List<Instance> instances = InstanceCreator.createSyntheticInstances();
             //instances.addAll(InstanceCreator.createComplexInstances());
             //instances.forEach(Solver::dfvsSolveInstance);
 
@@ -56,14 +56,14 @@ public class Main {
             //instances.forEach(Solver::dfvsSolveInstance);
 
             // Solve test instance
-            //Instance instance = InstanceCreator.createSimpleNonDAG6();
+            //Instance instance = InstanceCreator.createSimpleNonDAG1();
             //Solver.dfvsSolveInstance(instance);
 
             // Solve instance from file
-            //Instance instance = InstanceCreator.createFromFile("src/inputs/complex/", "biology-n_35-m_315-p_0.75-18");
-            //Instance instance = InstanceCreator.createFromFile("src/inputs/synthetic/", "synth-n_80-m_818-k_15-p_0.2.txt");
+            //Instance instance = InstanceCreator.createFromFile("src/inputs/complex/", "biology-n_49-m_689-p_0.9-14");
+            //Instance instance = InstanceCreator.createFromFile("src/inputs/complex/", "chess-n_700");
+            //Instance instance = InstanceCreator.createFromFile("src/inputs/synthetic/", "synth-n_225-m_1390-k_10-p_0.05.txt");
             //Solver.dfvsSolveInstance(instance);
-
         }
 
     }

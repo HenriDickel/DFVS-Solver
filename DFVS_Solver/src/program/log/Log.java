@@ -27,7 +27,8 @@ public abstract class Log {
 
         //Create program.log string
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS");
-        String logMessage = "[" + LocalDateTime.now().format(dtf) + "]" +  " " + graphName + ": \t" + message;
+        String gap = " ".repeat(Math.max(0, 34 - graphName.length()));
+        String logMessage = "[" + LocalDateTime.now().format(dtf) + "]" +  " " + graphName + ":" + gap + "\t" + message;
 
         //Console Log
         if(error) System.err.println(logMessage);

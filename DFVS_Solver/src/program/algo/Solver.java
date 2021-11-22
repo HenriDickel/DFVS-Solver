@@ -14,7 +14,7 @@ import java.util.stream.Collectors;
 
 public abstract class Solver {
 
-    private static Instance instance;
+    public static Instance instance;
 
     private static List<Node> dfvsBranch(Graph graph, int k, int level) throws TimeoutException {
 
@@ -97,21 +97,23 @@ public abstract class Solver {
         // Start Timer
         Timer.start();
 
+        Graph initialGraph = instance.subGraphs.get(0);
+
         // Preprocessing
         Log.debugLog(instance.NAME, "---------- " + instance.NAME + " (n = " + instance.N + ", m = " + instance.M + ", k = " + instance.OPTIMAL_K + ") ----------");
         Preprocessing.fullyRemoveSelfEdges(instance);
-        Preprocessing.removeChain(instance);
+        Preprocessing.applyRules(initialGraph);
         Preprocessing.removePendantFullTrianglePP(instance);
-        Log.debugLog(instance.NAME, "Removed " + instance.solvedK + " nodes in preprocessing");
+        Log.debugLog(instance.NAME, "Removed " + (instance.N - initialGraph.nodes.size()) + " nodes in preprocessing, starting with k = " + instance.solvedK);
 
         // Create sub graphs
-        Graph initialGraph = instance.subGraphs.get(0);
         instance.subGraphs = Preprocessing.findCyclicSubGraphs(initialGraph);
         Log.debugLog(instance.NAME, "Found " + instance.subGraphs.size() + " cyclic sub graph(s) with n = " + instance.subGraphs.stream().map(g -> g.nodes.size()).collect(Collectors.toList()));
 
         // Run for all sub graphs
         try{
             for(Graph subGraph: instance.subGraphs) {
+                Preprocessing.applyRules(subGraph);
                 List<Node> S = dfvsSolve(subGraph);
                 instance.S.addAll(S);
                 instance.solvedK += S.size();
