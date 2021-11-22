@@ -37,7 +37,8 @@ public abstract class InstanceCreator {
                 e.printStackTrace();
             }
         }
-        return optimalKMap.get(graphName);
+        Integer optimalK = optimalKMap.get(graphName);
+        return (optimalK != null) ? optimalK : -1;
     }
 
     public static Instance createFromFile(String path, String filename){
