@@ -54,7 +54,7 @@ public abstract class Log {
         }
         try(PrintWriter output = new PrintWriter(new FileWriter(MAIN_LOG_PATH,true)))
         {
-            output.println("name,k_optimal,k_solved,millis,verified");
+            output.println("name,k_optimal,k_solved,millis,verified,recursive_steps");
         }
         catch (Exception ignored) {}
     }
@@ -66,7 +66,7 @@ public abstract class Log {
 
         try(PrintWriter output = new PrintWriter(new FileWriter(MAIN_LOG_PATH,true)))
         {
-            output.println(instance.NAME + "," + instance.OPTIMAL_K + "," + instance.solvedK + "," + millis + "," + verified);
+            output.println(instance.NAME + "," + instance.OPTIMAL_K + "," + instance.solvedK + "," + millis + "," + verified + "," + instance.recursiveSteps);
         }
         catch (Exception ignored) {}
     }
