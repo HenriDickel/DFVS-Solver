@@ -53,7 +53,9 @@ public abstract class ShortestCycle {
         for(Node outNeighbor: node.getOutNeighbors()) {
             if(outNeighbor.parent == null && outNeighbor.visitIndex == -1) { // Node was not visited and is not in queue
                 outNeighbor.parent = node;
-                queue.add(outNeighbor);
+                // Add forbidden nodes to the start of the queue, since they don't count in cycle length
+                if(outNeighbor.forbidden < Integer.MAX_VALUE) queue.add(0, outNeighbor);
+                else queue.add(outNeighbor);
             } else if(outNeighbor.visitIndex > -1){ // Node is already visited
                 Cycle cycle = findCycle(outNeighbor, node);
                 if(cycle != null) return cycle;
