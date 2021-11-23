@@ -20,6 +20,10 @@ public class Cycle {
         return nodes;
     }
 
+    public int unforbiddenSize() {
+        return (int) nodes.stream().filter(node -> node.forbidden == Integer.MAX_VALUE).count();
+    }
+
     @Override
     public String toString() {
         List<String> nodeLabels = nodes.stream().map(node -> node.label).collect(Collectors.toList());

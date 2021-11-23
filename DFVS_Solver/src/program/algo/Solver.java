@@ -32,7 +32,8 @@ public abstract class Solver {
         }
 
         // Next Cycle
-        Cycle cycle = ShortestCycle.run(graph);
+        Cycle cycle = BFSShortestCircle.ShortestCircleBFS(graph);
+
 
         // Loop
         for(Node node: cycle.getNodes()){

@@ -22,7 +22,7 @@ public class BFSShortestCircle {
 
             //Replace the shortest if shorter
             if(circle != null) {
-                if(shortestCircle == null || circle.getNodes().size() < shortestCircle.getNodes().size()) {
+                if(shortestCircle == null || circle.unforbiddenSize() < shortestCircle.unforbiddenSize()) {
                     shortestCircle = circle;
                 }
             }
@@ -51,7 +51,8 @@ public class BFSShortestCircle {
             for(Node node : v.getUnexploredNeighbors()){
                 node.explored = true;
                 node.parent = v;
-                Q.add(node);
+                if(node.forbidden < Integer.MAX_VALUE) Q.add(0, node);
+                else Q.add(node);
             }
         }
 

@@ -44,8 +44,8 @@ public class Main {
             //List<Node> bfs = BFSShortestCircle.ShortestCircleBFS(instance.subGraphs.get(0));
             //List<Node> bfstest = bfs;
 
-            List<Instance> instances = InstanceCreator.createSyntheticInstances();
-            instances.addAll(InstanceCreator.createComplexInstances());
+            List<Instance> instances = InstanceCreator.createComplexInstances();
+            instances.addAll(InstanceCreator.createSyntheticInstances());
             instances.forEach(Solver::dfvsSolveInstance);
 
             //List<Instance> instances = InstanceCreator.createSelectedInstances();
