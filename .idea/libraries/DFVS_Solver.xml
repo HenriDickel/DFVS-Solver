@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="DFVS_Solver">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/DFVS_Solver/out/artifacts/DFVS_Solver_jar/DFVS_Solver.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

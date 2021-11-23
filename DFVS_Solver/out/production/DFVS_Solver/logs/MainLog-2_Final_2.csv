@@ -660,3 +660,12 @@ wikispeedia-n_400,39,39,4,true,0
 wikispeedia-n_500,59,59,13,true,204
 wikispeedia-n_700,77,77,59,true,1591
 wikispeedia-n_800,110,82,180000,false,11718780
+synth-n_10-m_12-k_2-p_0.2.txt,0,0,0,true,0
+synth-n_10-m_12-k_4-p_0.2.txt,1,1,0,true,0
+synth-n_100-m_1009-k_2-p_0.2.txt,2,2,3,true,0
+synth-n_100-m_1028-k_4-p_0.2.txt,4,4,31,true,1
+synth-n_100-m_1107-k_6-p_0.2.txt,6,6,38,true,1
+synth-n_100-m_1119-k_8-p_0.2.txt,8,8,81,true,1
+synth-n_100-m_1129-k_10-p_0.2.txt,10,10,89,true,6
+synth-n_100-m_1220-k_15-p_0.2.txt,15,15,316,true,8797
+synth-n_100-m_1231-k_25-p_0.2.txt,25,0,180000,false,9544694
