@@ -1,5 +1,6 @@
 package program.utils;
 
+import program.log.Log;
 import program.model.Graph;
 import program.model.Instance;
 
@@ -34,7 +35,8 @@ public abstract class InstanceCreator {
                     optimalKMap.put(name, Integer.parseInt(optimalK));
                 }
             } catch (IOException e) {
-                e.printStackTrace();
+                Log.debugLog(graphName, "Couldn't read  file 'optimal_solution_sizes.txt'", true);
+                return -1;
             }
         }
         Integer optimalK = optimalKMap.get(graphName);

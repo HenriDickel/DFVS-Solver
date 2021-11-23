@@ -2,6 +2,9 @@
   <artifact type="jar" build-on-make="true" name="DFVS_Solver:jar">
     <output-path>$PROJECT_DIR$/out/artifacts/DFVS_Solver_jar</output-path>
     <root id="archive" name="DFVS_Solver.jar">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/../../../DFVS-Solver/DFVS_Solver/src/program/META-INF/MANIFEST.MF" />
+      </element>
       <element id="module-output" name="DFVS_Solver" />
     </root>
   </artifact>
