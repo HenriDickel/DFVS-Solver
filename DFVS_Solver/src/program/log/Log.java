@@ -13,6 +13,7 @@ public abstract class Log {
 
     private static final String DEBUG_LOG_PATH = "src/logs/DebugLog.txt";
     private static final String MAIN_LOG_PATH = "src/logs/MainLog.csv";
+    private static final String DETAIL_LOG_PATH = "src/logs/DetailLog.csv";
 
     public static boolean Ignore;
 
@@ -47,14 +48,21 @@ public abstract class Log {
         try {
             new File(DEBUG_LOG_PATH).createNewFile();
             new File(MAIN_LOG_PATH).createNewFile();
+            new File(DETAIL_LOG_PATH).createNewFile();
             new PrintWriter(DEBUG_LOG_PATH).close();
             new PrintWriter(MAIN_LOG_PATH).close();
+            new PrintWriter(DETAIL_LOG_PATH).close();
         } catch (IOException e) {
             e.printStackTrace();
         }
         try(PrintWriter output = new PrintWriter(new FileWriter(MAIN_LOG_PATH,true)))
         {
-            output.println("name,k_optimal,k_solved,millis,verified,recursive_steps");
+            output.println("name,n,m,k_optimal,k_solved,millis,verified,recursive_steps,k_start,pre_deleted_nodes,flower_deleted_nodes");
+        }
+        catch (Exception ignored) {}
+        try(PrintWriter output = new PrintWriter(new FileWriter(DETAIL_LOG_PATH,true)))
+        {
+            output.println("name,level,cycle_size,branch_size,recursive_steps");
         }
         catch (Exception ignored) {}
     }
@@ -66,9 +74,22 @@ public abstract class Log {
 
         try(PrintWriter output = new PrintWriter(new FileWriter(MAIN_LOG_PATH,true)))
         {
-            output.println(instance.NAME + "," + instance.OPTIMAL_K + "," + instance.solvedK + "," + millis + "," + verified + "," + instance.recursiveSteps);
+            output.println(instance.NAME + "," + instance.N + "," + instance.M + "," + instance.OPTIMAL_K + "," + instance.solvedK + "," + millis + "," + verified + "," + instance.recursiveSteps + "," + instance.startK + "," + instance.preDeletedNodes + "," + instance.flowerDeletedNodes);
         }
         catch (Exception ignored) {}
     }
 
+    public static void detailLog(Instance instance) {
+
+        //Ignore Log
+        if(Ignore) return;
+
+        try(PrintWriter output = new PrintWriter(new FileWriter(DETAIL_LOG_PATH,true)))
+        {
+            for(int i = 0; i < instance.averageCycleSize.length; i++) {
+                output.println(instance.NAME + "," + i + "," + instance.averageCycleSize[i] + "," + instance.averageBranchSize[i] + "," + instance.recursiveStepsPerK[i]);
+            }
+        }
+        catch (Exception ignored) {}
+    }
 }

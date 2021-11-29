@@ -7,7 +7,7 @@ public class Graph {
 
     public List<Node> nodes = new ArrayList<>();
 
-    public void unvisitAllNodes() {
+    public void resetBFS() {
         nodes.forEach(node -> node.visitIndex = -1);
         nodes.forEach(node -> node.parent = null);
     }
@@ -25,11 +25,6 @@ public class Graph {
         //Add to neighbours
         a.addOutNeighbor(b);
         b.addInNeighbor(a);
-    }
-
-    public void resetBFS() {
-        nodes.forEach(node -> node.explored = false);
-        nodes.forEach(node -> node.parent = null);
     }
 
     public List<Node> getActiveNodes() {

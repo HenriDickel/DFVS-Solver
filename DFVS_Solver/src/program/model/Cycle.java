@@ -24,6 +24,14 @@ public class Cycle {
         return (int) nodes.stream().filter(node -> node.forbidden == Integer.MAX_VALUE).count();
     }
 
+    public int size() {
+        return nodes.size();
+    }
+
+    public boolean contains(Node node) {
+        return nodes.contains(node);
+    }
+
     @Override
     public String toString() {
         List<String> nodeLabels = nodes.stream().map(node -> node.label).collect(Collectors.toList());

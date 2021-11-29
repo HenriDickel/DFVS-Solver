@@ -1,8 +1,6 @@
 package program.model;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class Instance {
 
@@ -16,7 +14,15 @@ public class Instance {
     public List<Graph> subGraphs;
     public int solvedK = 0;
     public List<Node> S = new ArrayList<>();    //Result
+
+    // Log variables
+    public int startK = 0;
+    public int preDeletedNodes = 0;
+    public int flowerDeletedNodes = 0;
     public int recursiveSteps = 0;
+    public float[] averageCycleSize;
+    public float[] averageBranchSize;
+    public int[] recursiveStepsPerK;
 
     public Instance(String NAME, Graph graph, int OPTIMAL_K) {
         this.NAME = NAME;

@@ -13,6 +13,10 @@ import java.util.stream.Stream;
 
 public abstract class InstanceCreator {
 
+    private static final String DATASET = "dataset_2";
+    private static final String COMPLEX_PATH = "src/inputs/" + DATASET + "/complex/";
+    private static final String SYNTHETIC_PATH = "src/inputs/" + DATASET + "/synthetic/";
+
     private static Instance createInstance(String name, Graph graph) {
         int optimalK = readOptimalKFromFile(name);
         return new Instance(name, graph, optimalK);
@@ -27,7 +31,7 @@ public abstract class InstanceCreator {
     public static int readOptimalKFromFile(String graphName){
         if(optimalKMap.isEmpty()) {
             try{
-                Scanner scan = new Scanner(new File("src/inputs/optimal_solution_sizes.txt"));
+                Scanner scan = new Scanner(new File("src/inputs/" + DATASET + "/optimal_solution_sizes.txt"));
                 while(scan.hasNextLine()){
                     String line = scan.nextLine();
                     String name = line.split(" {5}")[0];
@@ -63,30 +67,42 @@ public abstract class InstanceCreator {
         return createInstance(filename, graph);
     }
 
+    public static List<Instance> createBenchmarkInstances(String startFilename) {
+        List<Instance> instances = createSyntheticInstances();
+        instances.addAll(createComplexInstances());
+        if(startFilename == null) return instances;
+        for(int i = 0; i < instances.size(); i++) {
+            if(instances.get(i).NAME.equals(startFilename)) {
+                return instances.subList(i, instances.size());
+            }
+        }
+        throw new RuntimeException("Didn't found instance with name '" + startFilename + "'");
+    }
+
     public static List<Instance> createComplexInstances() {
-        return createFromFolder("src/inputs/complex");
+        return createFromFolder(COMPLEX_PATH);
     }
 
     public static List<Instance> createSyntheticInstances() {
-        return createFromFolder("src/inputs/synthetic");
+        return createFromFolder(SYNTHETIC_PATH);
     }
 
     public static List<Instance> createSelectedInstances() {
         List<Instance> instances = new ArrayList<>();
 
-        instances.add(createFromFile("src/inputs/complex/", "biology-n_35-m_315-p_0.75-18"));
-        instances.add(createFromFile("src/inputs/complex/", "biology-n_42-m_297-p_0.5-23"));
-        instances.add(createFromFile("src/inputs/complex/", "biology-n_42-m_297-p_0.75-23"));
-        instances.add(createFromFile("src/inputs/complex/", "biology-n_49-m_689-p_0.9-14"));
-        instances.add(createFromFile("src/inputs/complex/", "biology-n_59-m_624-p_0.75-1"));
-        instances.add(createFromFile("src/inputs/synthetic/", "synth-n_100-m_305-k_20-p_0.05.txt"));
-        instances.add(createFromFile("src/inputs/synthetic/", "synth-n_120-m_455-k_15-p_0.05.txt"));
-        instances.add(createFromFile("src/inputs/synthetic/", "synth-n_160-m_731-k_10-p_0.05.txt"));
-        instances.add(createFromFile("src/inputs/synthetic/", "synth-n_50-m_357-k_20-p_0.2.txt"));
-        instances.add(createFromFile("src/inputs/synthetic/", "synth-n_60-m_243-k_25-p_0.1.txt"));
-        instances.add(createFromFile("src/inputs/synthetic/", "synth-n_60-m_271-k_20-p_0.1.txt"));
-        instances.add(createFromFile("src/inputs/synthetic/", "synth-n_60-m_468-k_15-p_0.2.txt"));
-        instances.add(createFromFile("src/inputs/synthetic/", "synth-n_80-m_818-k_15-p_0.2.txt"));
+        instances.add(createFromFile(COMPLEX_PATH, "biology-n_35-m_315-p_0.75-18"));
+        instances.add(createFromFile(COMPLEX_PATH, "biology-n_42-m_297-p_0.5-23"));
+        instances.add(createFromFile(COMPLEX_PATH, "biology-n_42-m_297-p_0.75-23"));
+        instances.add(createFromFile(COMPLEX_PATH, "biology-n_49-m_689-p_0.9-14"));
+        instances.add(createFromFile(COMPLEX_PATH, "biology-n_59-m_624-p_0.75-1"));
+        instances.add(createFromFile(SYNTHETIC_PATH, "synth-n_100-m_305-k_20-p_0.05.txt"));
+        instances.add(createFromFile(SYNTHETIC_PATH, "synth-n_120-m_455-k_15-p_0.05.txt"));
+        instances.add(createFromFile(SYNTHETIC_PATH, "synth-n_160-m_731-k_10-p_0.05.txt"));
+        instances.add(createFromFile(SYNTHETIC_PATH, "synth-n_50-m_357-k_20-p_0.2.txt"));
+        instances.add(createFromFile(SYNTHETIC_PATH, "synth-n_60-m_243-k_25-p_0.1.txt"));
+        instances.add(createFromFile(SYNTHETIC_PATH, "synth-n_60-m_271-k_20-p_0.1.txt"));
+        instances.add(createFromFile(SYNTHETIC_PATH, "synth-n_60-m_468-k_15-p_0.2.txt"));
+        instances.add(createFromFile(SYNTHETIC_PATH, "synth-n_80-m_818-k_15-p_0.2.txt"));
 
         return instances;
     }

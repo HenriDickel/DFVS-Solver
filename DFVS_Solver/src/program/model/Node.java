@@ -22,9 +22,6 @@ public class Node {
     public Node parent;
     public int visitIndex;
 
-    // New BFS
-    public boolean explored;
-
     //Flower
     public int petal;
     public int maxPetal;
@@ -61,10 +58,6 @@ public class Node {
 
     public List<Node> getInNeighbors() {
         return inNeighbours.stream().filter(x -> !x.deleted).collect(Collectors.toList());
-    }
-
-    public List<Node> getUnexploredNeighbors() {
-        return outNeighbours.stream().filter(x -> !x.explored && !x.deleted).collect(Collectors.toList());
     }
 
     public void delete() {
