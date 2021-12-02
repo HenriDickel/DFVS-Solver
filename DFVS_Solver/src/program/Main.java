@@ -39,16 +39,16 @@ public class Main {
             Log.Clear();
             Log.Ignore = false;
 
-            List<Instance> instances = InstanceCreator.createBenchmarkInstances(null);
-            instances.forEach(Solver::dfvsSolveInstance);
+            //List<Instance> instances = InstanceCreator.createBenchmarkInstances(null);
+            //instances.forEach(Solver::dfvsSolveInstance);
 
             // Solve test instances
             //Instance instance = InstanceCreator.createBFSTest2();
             //List<Node> bfs = BFSShortestCircle.ShortestCircleBFS(instance.subGraphs.get(0));
             //List<Node> bfstest = bfs;
 
-            //List<Instance> instances = InstanceCreator.createSelectedInstances();
-            //instances.forEach(Solver::dfvsSolveInstance);
+            List<Instance> instances = InstanceCreator.createSelectedInstances();
+            instances.forEach(Solver::dfvsSolveInstance);
 
             // Solve all test instances
             //List<Instance> instances = InstanceCreator.createTestInstances();
