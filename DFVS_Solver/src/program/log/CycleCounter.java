@@ -22,7 +22,7 @@ public abstract  class CycleCounter {
 
     public static void count(Cycle cycle, int level) {
         sizeAcc[level] += cycle.size();
-        branchSizeAcc[level] += cycle.unforbiddenSize();
+        branchSizeAcc[level] += cycle.getBranchSize();
         count[level]++;
     }
 

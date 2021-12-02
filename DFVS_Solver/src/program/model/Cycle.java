@@ -20,7 +20,7 @@ public class Cycle {
         return nodes;
     }
 
-    public int unforbiddenSize() {
+    public int getBranchSize() {
         return (int) nodes.stream().filter(node -> node.forbidden == Integer.MAX_VALUE).count();
     }
 

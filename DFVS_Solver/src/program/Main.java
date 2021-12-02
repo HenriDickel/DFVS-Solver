@@ -15,7 +15,7 @@ public class Main {
         if(args.length > 0){
 
             // Ignore Log
-            Log.Ignore = true;
+            Log.ignore = true;
 
             // Path
             String fileName = args[0];
@@ -37,18 +37,18 @@ public class Main {
 
             //Reset Log
             Log.Clear();
-            Log.Ignore = false;
+            Log.ignore = false;
 
-            List<Instance> instances = InstanceCreator.createBenchmarkInstances(null);
+            //List<Instance> instances = InstanceCreator.createBenchmarkInstances("synth-n_120-m_950-k_20-p_0.1.txt");
+            //instances.forEach(Solver::dfvsSolveInstance);
+
+            List<Instance> instances = InstanceCreator.createSelectedInstances();
             instances.forEach(Solver::dfvsSolveInstance);
 
             // Solve test instances
             //Instance instance = InstanceCreator.createBFSTest2();
             //List<Node> bfs = BFSShortestCircle.ShortestCircleBFS(instance.subGraphs.get(0));
             //List<Node> bfstest = bfs;
-
-            //List<Instance> instances = InstanceCreator.createSelectedInstances();
-            //instances.forEach(Solver::dfvsSolveInstance);
 
             // Solve all test instances
             //List<Instance> instances = InstanceCreator.createTestInstances();
@@ -61,7 +61,7 @@ public class Main {
             // Solve instance from file
             //Instance instance = InstanceCreator.createFromFile("src/inputs/complex/", "biology-n_49-m_689-p_0.9-14");
             //Instance instance = InstanceCreator.createFromFile("src/inputs/complex/", "chess-n_700");
-            //Instance instance = InstanceCreator.createFromFile("src/inputs/synthetic/", "synth-n_100-m_1235-k_20-p_0.2.txt");
+            //Instance instance = InstanceCreator.createFromFile("src/inputs/dataset_2/synthetic/", "synth-n_100-m_1220-k_15-p_0.2.txt");
             //Solver.dfvsSolveInstance(instance);
         }
     }

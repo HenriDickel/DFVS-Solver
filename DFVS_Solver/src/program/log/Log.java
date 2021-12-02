@@ -15,7 +15,8 @@ public abstract class Log {
     private static final String MAIN_LOG_PATH = "src/logs/MainLog.csv";
     private static final String DETAIL_LOG_PATH = "src/logs/DetailLog.csv";
 
-    public static boolean Ignore;
+    public static boolean ignore;
+    public static int level = 0;
 
     public static void debugLog(String graphName, String message){
         debugLog(graphName, message, false);
@@ -24,12 +25,13 @@ public abstract class Log {
     public static void debugLog(String graphName, String message, boolean error){
 
         //Ignore Log
-        if(Ignore) return;
+        if(ignore) return;
 
         //Create program.log string
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS");
         String gap = " ".repeat(Math.max(0, 34 - graphName.length()));
-        String logMessage = "[" + LocalDateTime.now().format(dtf) + "]" +  " " + graphName + ":" + gap + "\t" + message;
+        String recursionGap = " - ".repeat(level);
+        String logMessage = "[" + LocalDateTime.now().format(dtf) + "] " + gap + graphName + ": " +  recursionGap + message;
 
         //Console Log
         if(error) System.err.println(logMessage);
@@ -70,7 +72,7 @@ public abstract class Log {
     public static void mainLog(Instance instance, long millis, boolean verified){
 
         //Ignore Log
-        if(Ignore) return;
+        if(ignore) return;
 
         try(PrintWriter output = new PrintWriter(new FileWriter(MAIN_LOG_PATH,true)))
         {
@@ -82,7 +84,7 @@ public abstract class Log {
     public static void detailLog(Instance instance) {
 
         //Ignore Log
-        if(Ignore) return;
+        if(ignore) return;
 
         try(PrintWriter output = new PrintWriter(new FileWriter(DETAIL_LOG_PATH,true)))
         {

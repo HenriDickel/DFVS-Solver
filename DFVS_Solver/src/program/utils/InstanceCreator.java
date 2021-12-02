@@ -89,20 +89,28 @@ public abstract class InstanceCreator {
 
     public static List<Instance> createSelectedInstances() {
         List<Instance> instances = new ArrayList<>();
-
-        instances.add(createFromFile(COMPLEX_PATH, "biology-n_35-m_315-p_0.75-18"));
+        instances.add(createFromFile(SYNTHETIC_PATH,"synth-n_100-m_1220-k_15-p_0.2.txt"));
+        instances.add(createFromFile(SYNTHETIC_PATH, "synth-n_100-m_1235-k_20-p_0.2.txt"));
+        instances.add(createFromFile(SYNTHETIC_PATH, "synth-n_100-m_1231-k_25-p_0.2.txt"));
+        instances.add(createFromFile(SYNTHETIC_PATH, "synth-n_100-m_346-k_30-p_0.05.txt"));
+        instances.add(createFromFile(SYNTHETIC_PATH, "synth-n_120-m_1775-k_20-p_0.2.txt"));
+        instances.add(createFromFile(SYNTHETIC_PATH, "synth-n_120-m_871-k_15-p_0.1.txt"));
+        instances.add(createFromFile(SYNTHETIC_PATH, "synth-n_140-m_1184-k_15-p_0.1.txt"));
+        instances.add(createFromFile(SYNTHETIC_PATH, "synth-n_140-m_2379-k_25-p_0.2.txt"));
+        instances.add(createFromFile(SYNTHETIC_PATH, "synth-n_180-m_1968-k_20-p_0.1.txt"));
+        instances.add(createFromFile(SYNTHETIC_PATH,"synth-n_250-m_3475-k_20-p_0.1.txt"));
+        instances.add(createFromFile(SYNTHETIC_PATH, "synth-n_200-m_2270-k_20-p_0.1.txt"));
+        instances.add(createFromFile(SYNTHETIC_PATH, "synth-n_225-m_2884-k_20-p_0.1.txt"));
+        instances.add(createFromFile(SYNTHETIC_PATH, "synth-n_250-m_7252-k_30-p_0.2.txt"));
+        instances.add(createFromFile(SYNTHETIC_PATH, "synth-n_275-m_2130-k_20-p_0.05.txt"));
+        instances.add(createFromFile(SYNTHETIC_PATH, "synth-n_300-m_9999-k_25-p_0.2.txt"));
         instances.add(createFromFile(COMPLEX_PATH, "biology-n_42-m_297-p_0.5-23"));
-        instances.add(createFromFile(COMPLEX_PATH, "biology-n_42-m_297-p_0.75-23"));
-        instances.add(createFromFile(COMPLEX_PATH, "biology-n_49-m_689-p_0.9-14"));
-        instances.add(createFromFile(COMPLEX_PATH, "biology-n_59-m_624-p_0.75-1"));
-        instances.add(createFromFile(SYNTHETIC_PATH, "synth-n_100-m_305-k_20-p_0.05.txt"));
-        instances.add(createFromFile(SYNTHETIC_PATH, "synth-n_120-m_455-k_15-p_0.05.txt"));
-        instances.add(createFromFile(SYNTHETIC_PATH, "synth-n_160-m_731-k_10-p_0.05.txt"));
-        instances.add(createFromFile(SYNTHETIC_PATH, "synth-n_50-m_357-k_20-p_0.2.txt"));
-        instances.add(createFromFile(SYNTHETIC_PATH, "synth-n_60-m_243-k_25-p_0.1.txt"));
-        instances.add(createFromFile(SYNTHETIC_PATH, "synth-n_60-m_271-k_20-p_0.1.txt"));
-        instances.add(createFromFile(SYNTHETIC_PATH, "synth-n_60-m_468-k_15-p_0.2.txt"));
-        instances.add(createFromFile(SYNTHETIC_PATH, "synth-n_80-m_818-k_15-p_0.2.txt"));
+        instances.add(createFromFile(COMPLEX_PATH, "biology-n_56-m_1372-p_0.5-4"));
+        instances.add(createFromFile(COMPLEX_PATH, "biology-n_77-m_1411-p_0.75-5"));
+        instances.add(createFromFile(COMPLEX_PATH, "biology-n_81-m_1292-p_0.9-3"));
+        instances.add(createFromFile(COMPLEX_PATH, "GD-n_62-m_287.mtx"));
+        instances.add(createFromFile(COMPLEX_PATH, "usairport-n_700"));
+        instances.add(createFromFile(COMPLEX_PATH, "usairport-n_800"));
 
         return instances;
     }

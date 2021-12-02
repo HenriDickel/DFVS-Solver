@@ -8,10 +8,14 @@ public class Node {
 
     public String label;
     public boolean deleted = false;
+    public int forbidden = Integer.MAX_VALUE;
+
     private final List<Node> outNeighbours;
     private final List<Node> inNeighbours;
-    public int weight;
-    public int forbidden = Integer.MAX_VALUE;
+
+    //Flower
+    public int petal;
+    public int maxPetal;
 
     // Attributes for Tarjan
     public int index;
@@ -21,10 +25,13 @@ public class Node {
     // Attributes for BFS
     public Node parent;
     public int visitIndex;
+    public boolean explored;
 
-    //Flower
-    public int petal;
-    public int maxPetal;
+    public int otherCycles;
+
+    public int getOtherCycles() {
+        return otherCycles;
+    }
 
     public Node(String label) {
         this.label = label;
@@ -42,6 +49,10 @@ public class Node {
         if(!inNeighbours.contains(neighbor)) {
             inNeighbours.add(neighbor);
         }
+    }
+
+    public List<Node> getUnexploredNeighbors() {
+        return outNeighbours.stream().filter(x -> !x.explored && !x.deleted).collect(Collectors.toList());
     }
 
     public void removeOutNeighbor(Node neighbor) {

@@ -17,7 +17,7 @@ public abstract class Solver {
 
     public static Instance instance;
 
-    private static List<Node> dfvsBranch(Graph graph, int k, int level, CycleManager cycleManager) throws TimeoutException {
+    private static List<Node> dfvsBranch(Graph graph, int k, int level) throws TimeoutException {
 
         instance.recursiveSteps++;
 
@@ -33,7 +33,8 @@ public abstract class Solver {
         }
 
         // Next Cycle
-        Cycle cycle = cycleManager.getShortestCycle();
+        Cycle cycle = FullBFS.findBestCycle(graph);
+
         // Log cycle
         CycleCounter.count(cycle, level);
 
@@ -42,7 +43,7 @@ public abstract class Solver {
             if (node.forbidden < level) continue;
             node.forbidden = level;
             node.delete();
-            List<Node> S = dfvsBranch(graph, k - 1, level + 1, new CycleManager(cycleManager, graph, node));
+            List<Node> S = dfvsBranch(graph, k - 1, level + 1);
             node.unDelete();
             if (S != null) {
                 S.add(node);
@@ -77,8 +78,9 @@ public abstract class Solver {
             // No need to use algorithm if we found too many flowers
             if (flowers.size() <= k) {
                 int kBudget = k - flowers.size();
+                //Log.debugLog(instance.NAME, "Branching with " + kBudget + " (" + k + " - " + flowers.size() + " flowers)");
                 CycleCounter.init(kBudget);
-                S = dfvsBranch(graph, kBudget, 0, new CycleManager(graph));
+                S = dfvsBranch(graph, kBudget, 0);
                 if (S == null) {
                     // Log detail logs
                     instance.averageCycleSize = CycleCounter.getAverageCycleSize();

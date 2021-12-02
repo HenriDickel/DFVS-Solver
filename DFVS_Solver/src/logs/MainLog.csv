@@ -1,9 +1,2 @@
 name,n,m,k_optimal,k_solved,millis,verified,recursive_steps,k_start,pre_deleted_nodes,flower_deleted_nodes
-synth-n_10-m_12-k_2-p_0.2.txt,10,12,0,0,23,true,0,0,10,0
-synth-n_10-m_12-k_4-p_0.2.txt,10,12,1,1,0,true,0,1,10,0
-synth-n_100-m_1009-k_2-p_0.2.txt,100,1009,2,2,6,true,0,2,100,0
-synth-n_100-m_1028-k_4-p_0.2.txt,100,1028,4,4,84,true,1,0,26,4
-synth-n_100-m_1107-k_6-p_0.2.txt,100,1107,6,6,48,true,1,2,21,4
-synth-n_100-m_1119-k_8-p_0.2.txt,100,1119,8,8,103,true,1,0,6,8
-synth-n_100-m_1129-k_10-p_0.2.txt,100,1129,10,10,116,true,9,0,5,8
-synth-n_100-m_1220-k_15-p_0.2.txt,100,1220,15,15,533,true,5001,0,3,4
+synth-n_100-m_1220-k_15-p_0.2.txt,100,1220,15,15,369,true,591,0,3,4

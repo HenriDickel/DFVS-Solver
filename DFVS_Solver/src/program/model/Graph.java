@@ -1,5 +1,6 @@
 package program.model;
 
+import javax.imageio.plugins.jpeg.JPEGHuffmanTable;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -7,9 +8,16 @@ public class Graph {
 
     public List<Node> nodes = new ArrayList<>();
 
+    public Graph() {}
+
+    public Graph(List<Node> nodes) {
+        this.nodes = nodes;
+    }
+
     public void resetBFS() {
         nodes.forEach(node -> node.visitIndex = -1);
         nodes.forEach(node -> node.parent = null);
+        nodes.forEach(node -> node.explored = false);
     }
 
     public void addArc(String from, String to){
@@ -57,6 +65,56 @@ public class Graph {
             node.removeInNeighbor(nodeToRemove);
         }
         nodes.remove(nodeToRemove);
+    }
+
+    public Graph reducedCopy() {
+        Graph copy = new Graph();
+
+        for(Node node: nodes) {
+            if(!node.deleted && !(node.forbidden < Integer.MAX_VALUE)) { // if node is not deleted of forbidden
+                for(Node out: node.getOutNeighbors()) {
+                     if(out.deleted) {
+                         // Skip
+                     } else if(out.forbidden < Integer.MAX_VALUE) {
+                         for(Node outOut: out.getOutNeighbors()) {
+                             if(outOut.deleted) {
+                                 // Skip
+                             } else {
+                                 copy.addArc(node.label, outOut.label);
+                             }
+                         }
+                     } else {
+                         copy.addArc(node.label, out.label);
+                     }
+                }
+            }
+        }
+
+        return copy;
+    }
+
+    public Graph clone() {
+        List<Node> copyNodes = new ArrayList<>();
+        for(int i = 0; i < nodes.size(); i++) {
+            Node node = nodes.get(i);
+            Node copyNode = new Node(node.label);
+            copyNode.forbidden = node.forbidden;
+            copyNode.deleted = node.deleted;
+            copyNode.petal = node.petal;
+            copyNode.maxPetal = node.maxPetal;
+            copyNodes.add(copyNode);
+        }
+        for(int i = 0; i < nodes.size(); i++) {
+            Node node = nodes.get(i);
+            Node copyNode = copyNodes.get(i);
+            for(Node outNeighbor: node.getOutNeighbors()) {
+                int index = nodes.indexOf(outNeighbor);
+                Node copyOutNeighbor = copyNodes.get(index);
+                copyNode.addOutNeighbor(copyOutNeighbor);
+                copyOutNeighbor.addInNeighbor(copyNode);
+            }
+        }
+        return new Graph(copyNodes);
     }
 
     //------------------------------------------------------------------Flowers-----------------------------------------

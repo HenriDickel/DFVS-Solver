@@ -6,7 +6,6 @@ import program.model.Node;
 import program.model.Pair;
 
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
 
 public abstract class Preprocessing {
@@ -217,22 +216,6 @@ public abstract class Preprocessing {
                 }
                 fullyRemoveNode(instance, A);
             }
-        }
-    }
-
-    /**
-     * Sorts the edges of each component by their number of edges.
-     */
-    public static void sortNodesByEdgeCount(Instance instance) {
-        for(Graph subGraph: instance.subGraphs) {
-            for(Node node: subGraph.getActiveNodes()) {
-                int weight = node.getOutNeighbors().size();
-                for(Node other: subGraph.getActiveNodes()) {
-                    if(other.getOutNeighbors().contains(node)) weight++;
-                }
-                node.weight = weight;
-            }
-            subGraph.nodes.sort(Comparator.comparingInt(n -> n.weight));
         }
     }
 

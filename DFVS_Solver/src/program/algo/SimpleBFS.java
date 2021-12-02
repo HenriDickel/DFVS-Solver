@@ -11,15 +11,18 @@ public abstract class SimpleBFS {
 
     private static final List<Node> queue = new LinkedList<>();
 
-    public static Cycle findBestCycle(Graph graph, Node root) {
+    public static Cycle findBestCycle(Graph graph, Node root, int maxBranchSize) {
 
         // Reset node attributes
         graph.resetBFS();
         queue.clear();
         queue.add(root);
+        root.visitIndex = 0;
 
         while(!queue.isEmpty()) {
-            Cycle cycle = visitNode(queue.remove(0), root);
+            Node nextNode = queue.remove(0);
+            if(nextNode.visitIndex >= maxBranchSize) return null;
+            Cycle cycle = visitNode(nextNode, root);
             if(cycle != null) return cycle;
         }
         return null;
@@ -31,17 +34,29 @@ public abstract class SimpleBFS {
                 return pathToRoot(node, root);
             } else if(outNeighbor.parent == null){
                 outNeighbor.parent = node;
-                if(outNeighbor.forbidden < Integer.MAX_VALUE) queue.add(0, outNeighbor);
-                else queue.add(outNeighbor);
+                if(outNeighbor.forbidden < Integer.MAX_VALUE) {
+                    queue.add(0, outNeighbor);
+                } else {
+                    outNeighbor.visitIndex = node.visitIndex + 1;
+                    queue.add(outNeighbor);
+                }
             }
         }
         return null;
     }
 
     private static Cycle pathToRoot(Node node, Node root) {
-        Cycle cycle = new Cycle(root);
+        /*Cycle cycle = new Cycle(root);
         Node pointer = node;
         while(!pointer.equals(root)) {
+            cycle.add(pointer);
+            pointer = pointer.parent;
+        }
+        return cycle;*/
+
+        Cycle cycle = new Cycle(node);
+        Node pointer = node.parent;
+        while(pointer != null) {
             cycle.add(pointer);
             pointer = pointer.parent;
         }
