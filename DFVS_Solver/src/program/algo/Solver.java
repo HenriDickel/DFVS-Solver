@@ -64,6 +64,26 @@ public abstract class Solver {
         Flower.SetAllPetals(graph);
         List<Node> flowers = new ArrayList<>();
 
+        /*
+        String petalsString = "{" + graph.getActiveNodes().stream().map(node -> String.valueOf(node.petal)).collect(Collectors.joining(",")) + "}";
+
+         Use flower rule 1
+        int removedByRule1Count = 0;
+        for(Node node : graph.getActiveNodes()){
+            if(node.petal == 1){
+                for(Node out : node.getInNeighbors()){
+                    for(Node in : node.getInNeighbors()){
+                        in.addOutNeighbor(out);
+                    }
+                }
+                graph.fullyRemoveNode(node);
+                removedByRule1Count++;
+            }
+        }
+        Log.debugLog(instance.NAME, "Petal Values: " + petalsString);
+        Log.debugLog(instance.NAME, "Removed " + removedByRule1Count + " nodes by petal rule 1");
+        */
+
         // Loop
         int k = 0;
         List<Node> S = null;
@@ -94,7 +114,7 @@ public abstract class Solver {
         }
 
         // Return solution
-        Log.debugLog(instance.NAME, "Removed " + flowers.size() + " flower nodes by petal rule");
+        Log.debugLog(instance.NAME, "Removed " + flowers.size() + " flower nodes by petal rule 2");
         instance.flowerDeletedNodes += flowers.size();
         S.addAll(flowers);
         return S;
