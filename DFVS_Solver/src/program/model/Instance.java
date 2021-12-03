@@ -17,8 +17,8 @@ public class Instance {
 
     // Log variables
     public int startK = 0;
-    public int preDeletedNodes = 0;
-    public int flowerDeletedNodes = 0;
+    public int preRemovedNodes = 0;
+    public int removedFlowers = 0;
     public int recursiveSteps = 0;
     public float[] averageCycleSize;
     public int[] recursiveStepsPerK;

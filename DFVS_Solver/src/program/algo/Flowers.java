@@ -205,11 +205,11 @@ public abstract class Flowers {
     }
 
     public static List<Node> UsePetalRule(Graph graph, int k) {
-        List<Node> haveToBeRemoved = new ArrayList<>();
+        List<Node> removedFlowers = new ArrayList<>();
 
         Node removeNode = findRemoveNode(graph, k);
         while(removeNode != null){
-            haveToBeRemoved.add(removeNode);
+            removedFlowers.add(removeNode);
             graph.removeNode(removeNode);
 
             //Get next node
@@ -217,7 +217,7 @@ public abstract class Flowers {
             removeNode = findRemoveNode(graph, k);
         }
 
-        return haveToBeRemoved;
+        return removedFlowers;
     }
 
     private static Node findRemoveNode(Graph graph, int k){

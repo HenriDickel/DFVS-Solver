@@ -1,68 +1,38 @@
-[2021-12-03 19:16:22.667]  synth-n_100-m_1220-k_15-p_0.2.txt: ---------- synth-n_100-m_1220-k_15-p_0.2.txt (n = 100, m = 100, k = 15) ----------
-[2021-12-03 19:16:22.692]  synth-n_100-m_1220-k_15-p_0.2.txt: Found 1 cyclic sub graph(s) with n = [97]
-[2021-12-03 19:16:22.697]  synth-n_100-m_1220-k_15-p_0.2.txt: Removed 3 nodes in preprocessing, starting with k = 0
-[2021-12-03 19:16:23.095]  synth-n_100-m_1220-k_15-p_0.2.txt: Removed 4 flower nodes by petal rule 2
-[2021-12-03 19:16:23.113]  synth-n_100-m_1220-k_15-p_0.2.txt: Found solution with k = 15 in 442ms (recursive steps: 597)
-[2021-12-03 19:16:23.113]  synth-n_100-m_1235-k_20-p_0.2.txt: ---------- synth-n_100-m_1235-k_20-p_0.2.txt (n = 100, m = 100, k = 20) ----------
-[2021-12-03 19:16:23.118]  synth-n_100-m_1235-k_20-p_0.2.txt: Found 1 cyclic sub graph(s) with n = [99]
-[2021-12-03 19:16:23.119]  synth-n_100-m_1235-k_20-p_0.2.txt: Removed 1 nodes in preprocessing, starting with k = 0
-[2021-12-03 19:16:26.729]  synth-n_100-m_1235-k_20-p_0.2.txt: Removed 0 flower nodes by petal rule 2
-[2021-12-03 19:16:26.731]  synth-n_100-m_1235-k_20-p_0.2.txt: Found solution with k = 20 in 3s (recursive steps: 27389)
-[2021-12-03 19:16:26.731]  synth-n_100-m_1231-k_25-p_0.2.txt: ---------- synth-n_100-m_1231-k_25-p_0.2.txt (n = 100, m = 100, k = 25) ----------
-[2021-12-03 19:16:26.734]  synth-n_100-m_1231-k_25-p_0.2.txt: Found 1 cyclic sub graph(s) with n = [97]
-[2021-12-03 19:16:26.735]  synth-n_100-m_1231-k_25-p_0.2.txt: Removed 3 nodes in preprocessing, starting with k = 0
-[2021-12-03 19:16:47.077]  synth-n_100-m_1231-k_25-p_0.2.txt: Removed 0 flower nodes by petal rule 2
-[2021-12-03 19:16:47.078]  synth-n_100-m_1231-k_25-p_0.2.txt: Found solution with k = 25 in 20s (recursive steps: 186791)
-[2021-12-03 19:16:47.079]  synth-n_100-m_346-k_30-p_0.05.txt: ---------- synth-n_100-m_346-k_30-p_0.05.txt (n = 100, m = 100, k = 17) ----------
-[2021-12-03 19:16:47.080]  synth-n_100-m_346-k_30-p_0.05.txt: Found 1 cyclic sub graph(s) with n = [62]
-[2021-12-03 19:16:47.081]  synth-n_100-m_346-k_30-p_0.05.txt: Removed 38 nodes in preprocessing, starting with k = 0
-[2021-12-03 19:17:04.049]  synth-n_100-m_346-k_30-p_0.05.txt: Removed 0 flower nodes by petal rule 2
-[2021-12-03 19:17:04.051]  synth-n_100-m_346-k_30-p_0.05.txt: Found solution with k = 17 in 16s (recursive steps: 574238)
-[2021-12-03 19:17:04.051]  synth-n_120-m_1775-k_20-p_0.2.txt: ---------- synth-n_120-m_1775-k_20-p_0.2.txt (n = 120, m = 120, k = 20) ----------
-[2021-12-03 19:17:04.056]  synth-n_120-m_1775-k_20-p_0.2.txt: Found 1 cyclic sub graph(s) with n = [119]
-[2021-12-03 19:17:04.056]  synth-n_120-m_1775-k_20-p_0.2.txt: Removed 1 nodes in preprocessing, starting with k = 0
-[2021-12-03 19:17:05.256]  synth-n_120-m_1775-k_20-p_0.2.txt: Removed 3 flower nodes by petal rule 2
-[2021-12-03 19:17:05.257]  synth-n_120-m_1775-k_20-p_0.2.txt: Found solution with k = 20 in 1s (recursive steps: 4742)
-[2021-12-03 19:17:05.258]   synth-n_120-m_871-k_15-p_0.1.txt: ---------- synth-n_120-m_871-k_15-p_0.1.txt (n = 120, m = 120, k = 15) ----------
-[2021-12-03 19:17:05.260]   synth-n_120-m_871-k_15-p_0.1.txt: Found 1 cyclic sub graph(s) with n = [102]
-[2021-12-03 19:17:05.260]   synth-n_120-m_871-k_15-p_0.1.txt: Removed 18 nodes in preprocessing, starting with k = 0
-[2021-12-03 19:17:06.804]   synth-n_120-m_871-k_15-p_0.1.txt: Removed 0 flower nodes by petal rule 2
-[2021-12-03 19:17:06.805]   synth-n_120-m_871-k_15-p_0.1.txt: Found solution with k = 15 in 1s (recursive steps: 13947)
-[2021-12-03 19:17:06.805]  synth-n_140-m_1184-k_15-p_0.1.txt: ---------- synth-n_140-m_1184-k_15-p_0.1.txt (n = 140, m = 140, k = 15) ----------
-[2021-12-03 19:17:06.808]  synth-n_140-m_1184-k_15-p_0.1.txt: Found 1 cyclic sub graph(s) with n = [120]
-[2021-12-03 19:17:06.809]  synth-n_140-m_1184-k_15-p_0.1.txt: Removed 20 nodes in preprocessing, starting with k = 1
-[2021-12-03 19:17:07.187]  synth-n_140-m_1184-k_15-p_0.1.txt: Removed 2 flower nodes by petal rule 2
-[2021-12-03 19:17:07.187]  synth-n_140-m_1184-k_15-p_0.1.txt: Found solution with k = 15 in 381ms (recursive steps: 1072)
-[2021-12-03 19:17:07.188]  synth-n_140-m_2379-k_25-p_0.2.txt: ---------- synth-n_140-m_2379-k_25-p_0.2.txt (n = 140, m = 140, k = 25) ----------
-[2021-12-03 19:17:07.195]  synth-n_140-m_2379-k_25-p_0.2.txt: Found 1 cyclic sub graph(s) with n = [139]
-[2021-12-03 19:17:07.196]  synth-n_140-m_2379-k_25-p_0.2.txt: Removed 1 nodes in preprocessing, starting with k = 0
-[2021-12-03 19:17:13.770]  synth-n_140-m_2379-k_25-p_0.2.txt: Removed 3 flower nodes by petal rule 2
-[2021-12-03 19:17:13.771]  synth-n_140-m_2379-k_25-p_0.2.txt: Found solution with k = 25 in 6s (recursive steps: 23033)
-[2021-12-03 19:17:13.771]  synth-n_180-m_1968-k_20-p_0.1.txt: ---------- synth-n_180-m_1968-k_20-p_0.1.txt (n = 180, m = 180, k = 20) ----------
-[2021-12-03 19:17:13.779]  synth-n_180-m_1968-k_20-p_0.1.txt: Found 1 cyclic sub graph(s) with n = [176]
-[2021-12-03 19:17:13.780]  synth-n_180-m_1968-k_20-p_0.1.txt: Removed 4 nodes in preprocessing, starting with k = 0
-[2021-12-03 19:17:17.302]  synth-n_180-m_1968-k_20-p_0.1.txt: Removed 3 flower nodes by petal rule 2
-[2021-12-03 19:17:17.303]  synth-n_180-m_1968-k_20-p_0.1.txt: Found solution with k = 20 in 3s (recursive steps: 7962)
-[2021-12-03 19:17:17.303]  synth-n_250-m_3475-k_20-p_0.1.txt: ---------- synth-n_250-m_3475-k_20-p_0.1.txt (n = 250, m = 250, k = 20) ----------
-[2021-12-03 19:17:17.323]  synth-n_250-m_3475-k_20-p_0.1.txt: Found 1 cyclic sub graph(s) with n = [234]
-[2021-12-03 19:17:17.323]  synth-n_250-m_3475-k_20-p_0.1.txt: Removed 16 nodes in preprocessing, starting with k = 0
-[2021-12-03 19:17:19.986]  synth-n_250-m_3475-k_20-p_0.1.txt: Removed 6 flower nodes by petal rule 2
-[2021-12-03 19:17:19.987]  synth-n_250-m_3475-k_20-p_0.1.txt: Found solution with k = 20 in 2s (recursive steps: 961)
-[2021-12-03 19:17:19.988]  synth-n_200-m_2270-k_20-p_0.1.txt: ---------- synth-n_200-m_2270-k_20-p_0.1.txt (n = 200, m = 200, k = 20) ----------
-[2021-12-03 19:17:19.998]  synth-n_200-m_2270-k_20-p_0.1.txt: Found 1 cyclic sub graph(s) with n = [190]
-[2021-12-03 19:17:19.998]  synth-n_200-m_2270-k_20-p_0.1.txt: Removed 10 nodes in preprocessing, starting with k = 0
-[2021-12-03 19:17:28.007]  synth-n_200-m_2270-k_20-p_0.1.txt: Removed 1 flower nodes by petal rule 2
-[2021-12-03 19:17:28.008]  synth-n_200-m_2270-k_20-p_0.1.txt: Found solution with k = 20 in 8s (recursive steps: 16999)
-[2021-12-03 19:17:28.008]  synth-n_225-m_2884-k_20-p_0.1.txt: ---------- synth-n_225-m_2884-k_20-p_0.1.txt (n = 225, m = 225, k = 20) ----------
-[2021-12-03 19:17:28.022]  synth-n_225-m_2884-k_20-p_0.1.txt: Found 1 cyclic sub graph(s) with n = [212]
-[2021-12-03 19:17:28.023]  synth-n_225-m_2884-k_20-p_0.1.txt: Removed 13 nodes in preprocessing, starting with k = 0
-[2021-12-03 19:17:31.117]  synth-n_225-m_2884-k_20-p_0.1.txt: Removed 3 flower nodes by petal rule 2
-[2021-12-03 19:17:31.117]  synth-n_225-m_2884-k_20-p_0.1.txt: Found solution with k = 20 in 3s (recursive steps: 3106)
-[2021-12-03 19:17:31.118]  synth-n_250-m_7252-k_30-p_0.2.txt: ---------- synth-n_250-m_7252-k_30-p_0.2.txt (n = 250, m = 250, k = 30) ----------
-[2021-12-03 19:17:31.162]  synth-n_250-m_7252-k_30-p_0.2.txt: Found 1 cyclic sub graph(s) with n = [249]
-[2021-12-03 19:17:31.162]  synth-n_250-m_7252-k_30-p_0.2.txt: Removed 1 nodes in preprocessing, starting with k = 0
-[2021-12-03 19:17:35.832]  synth-n_250-m_7252-k_30-p_0.2.txt: Removed 18 flower nodes by petal rule 2
-[2021-12-03 19:17:35.833]  synth-n_250-m_7252-k_30-p_0.2.txt: Found solution with k = 30 in 4s (recursive steps: 698)
-[2021-12-03 19:17:35.833] synth-n_275-m_2130-k_20-p_0.05.txt: ---------- synth-n_275-m_2130-k_20-p_0.05.txt (n = 275, m = 275, k = 20) ----------
-[2021-12-03 19:17:35.845] synth-n_275-m_2130-k_20-p_0.05.txt: Found 1 cyclic sub graph(s) with n = [227]
-[2021-12-03 19:17:35.845] synth-n_275-m_2130-k_20-p_0.05.txt: Removed 48 nodes in preprocessing, starting with k = 0
+[2021-12-03 19:19:45.006]  synth-n_100-m_1220-k_15-p_0.2.txt: ---------- synth-n_100-m_1220-k_15-p_0.2.txt (n = 100, m = 100, k = 15) ----------
+[2021-12-03 19:19:45.035]  synth-n_100-m_1220-k_15-p_0.2.txt: Found 1 cyclic sub graph(s) with n = [97]
+[2021-12-03 19:19:45.040]  synth-n_100-m_1220-k_15-p_0.2.txt: Removed 3 nodes in preprocessing, starting with k = 0
+[2021-12-03 19:19:45.443]  synth-n_100-m_1220-k_15-p_0.2.txt: Removed 4 flower nodes by petal rule 2
+[2021-12-03 19:19:45.468]  synth-n_100-m_1220-k_15-p_0.2.txt: Found solution with k = 15 in 453ms (recursive steps: 597)
+[2021-12-03 19:19:45.468]  synth-n_100-m_1235-k_20-p_0.2.txt: ---------- synth-n_100-m_1235-k_20-p_0.2.txt (n = 100, m = 100, k = 20) ----------
+[2021-12-03 19:19:45.475]  synth-n_100-m_1235-k_20-p_0.2.txt: Found 1 cyclic sub graph(s) with n = [99]
+[2021-12-03 19:19:45.476]  synth-n_100-m_1235-k_20-p_0.2.txt: Removed 1 nodes in preprocessing, starting with k = 0
+[2021-12-03 19:19:49.180]  synth-n_100-m_1235-k_20-p_0.2.txt: Removed 0 flower nodes by petal rule 2
+[2021-12-03 19:19:49.181]  synth-n_100-m_1235-k_20-p_0.2.txt: Found solution with k = 20 in 3s (recursive steps: 27389)
+[2021-12-03 19:19:49.182]  synth-n_100-m_1231-k_25-p_0.2.txt: ---------- synth-n_100-m_1231-k_25-p_0.2.txt (n = 100, m = 100, k = 25) ----------
+[2021-12-03 19:19:49.185]  synth-n_100-m_1231-k_25-p_0.2.txt: Found 1 cyclic sub graph(s) with n = [97]
+[2021-12-03 19:19:49.185]  synth-n_100-m_1231-k_25-p_0.2.txt: Removed 3 nodes in preprocessing, starting with k = 0
+[2021-12-03 19:20:09.992]  synth-n_100-m_1231-k_25-p_0.2.txt: Removed 0 flower nodes by petal rule 2
+[2021-12-03 19:20:09.993]  synth-n_100-m_1231-k_25-p_0.2.txt: Found solution with k = 25 in 20s (recursive steps: 186791)
+[2021-12-03 19:20:09.994]  synth-n_100-m_346-k_30-p_0.05.txt: ---------- synth-n_100-m_346-k_30-p_0.05.txt (n = 100, m = 100, k = 17) ----------
+[2021-12-03 19:20:09.995]  synth-n_100-m_346-k_30-p_0.05.txt: Found 1 cyclic sub graph(s) with n = [62]
+[2021-12-03 19:20:09.995]  synth-n_100-m_346-k_30-p_0.05.txt: Removed 38 nodes in preprocessing, starting with k = 0
+[2021-12-03 19:20:27.011]  synth-n_100-m_346-k_30-p_0.05.txt: Removed 0 flower nodes by petal rule 2
+[2021-12-03 19:20:27.012]  synth-n_100-m_346-k_30-p_0.05.txt: Found solution with k = 17 in 17s (recursive steps: 574238)
+[2021-12-03 19:20:27.013]  synth-n_120-m_1775-k_20-p_0.2.txt: ---------- synth-n_120-m_1775-k_20-p_0.2.txt (n = 120, m = 120, k = 20) ----------
+[2021-12-03 19:20:27.018]  synth-n_120-m_1775-k_20-p_0.2.txt: Found 1 cyclic sub graph(s) with n = [119]
+[2021-12-03 19:20:27.018]  synth-n_120-m_1775-k_20-p_0.2.txt: Removed 1 nodes in preprocessing, starting with k = 0
+[2021-12-03 19:20:28.226]  synth-n_120-m_1775-k_20-p_0.2.txt: Removed 3 flower nodes by petal rule 2
+[2021-12-03 19:20:28.227]  synth-n_120-m_1775-k_20-p_0.2.txt: Found solution with k = 20 in 1s (recursive steps: 4742)
+[2021-12-03 19:20:28.227]   synth-n_120-m_871-k_15-p_0.1.txt: ---------- synth-n_120-m_871-k_15-p_0.1.txt (n = 120, m = 120, k = 15) ----------
+[2021-12-03 19:20:28.231]   synth-n_120-m_871-k_15-p_0.1.txt: Found 1 cyclic sub graph(s) with n = [102]
+[2021-12-03 19:20:28.231]   synth-n_120-m_871-k_15-p_0.1.txt: Removed 18 nodes in preprocessing, starting with k = 0
+[2021-12-03 19:20:29.831]   synth-n_120-m_871-k_15-p_0.1.txt: Removed 0 flower nodes by petal rule 2
+[2021-12-03 19:20:29.832]   synth-n_120-m_871-k_15-p_0.1.txt: Found solution with k = 15 in 1s (recursive steps: 13947)
+[2021-12-03 19:20:29.832]  synth-n_140-m_1184-k_15-p_0.1.txt: ---------- synth-n_140-m_1184-k_15-p_0.1.txt (n = 140, m = 140, k = 15) ----------
+[2021-12-03 19:20:29.836]  synth-n_140-m_1184-k_15-p_0.1.txt: Found 1 cyclic sub graph(s) with n = [120]
+[2021-12-03 19:20:29.837]  synth-n_140-m_1184-k_15-p_0.1.txt: Removed 20 nodes in preprocessing, starting with k = 1
+[2021-12-03 19:20:30.206]  synth-n_140-m_1184-k_15-p_0.1.txt: Removed 2 flower nodes by petal rule 2
+[2021-12-03 19:20:30.207]  synth-n_140-m_1184-k_15-p_0.1.txt: Found solution with k = 15 in 373ms (recursive steps: 1072)
+[2021-12-03 19:20:30.207]  synth-n_140-m_2379-k_25-p_0.2.txt: ---------- synth-n_140-m_2379-k_25-p_0.2.txt (n = 140, m = 140, k = 25) ----------
+[2021-12-03 19:20:30.215]  synth-n_140-m_2379-k_25-p_0.2.txt: Found 1 cyclic sub graph(s) with n = [139]
+[2021-12-03 19:20:30.215]  synth-n_140-m_2379-k_25-p_0.2.txt: Removed 1 nodes in preprocessing, starting with k = 0

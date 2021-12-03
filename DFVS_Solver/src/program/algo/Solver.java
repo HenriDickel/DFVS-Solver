@@ -58,7 +58,7 @@ public abstract class Solver {
 
         // Set Petals
         Flowers.SetAllPetals(initialGraph);
-        List<Node> flowers = new ArrayList<>();
+        List<Node> removedFlowers = new ArrayList<>();
 
         /*
         String petalsString = "{" + graph.getActiveNodes().stream().map(node -> String.valueOf(node.petal)).collect(Collectors.joining(",")) + "}";
@@ -88,14 +88,14 @@ public abstract class Solver {
             Graph copy = initialGraph.copy();
 
             // No need to recalculate flowers if there were none in previous step
-            if (k == 0 || flowers.size() > 0) {
+            if (k == 0 || removedFlowers.size() > 0) {
                 // Use Petal Rule
-                flowers = Flowers.UsePetalRule(copy, k);
+                removedFlowers = Flowers.UsePetalRule(copy, k);
             }
 
             // No need to use algorithm if we found too many flowers
-            if (flowers.size() <= k) {
-                int kBudget = k - flowers.size();
+            if (removedFlowers.size() <= k) {
+                int kBudget = k - removedFlowers.size();
                 CycleCounter.init(kBudget);
 
                 S = dfvsBranch(copy, kBudget, 0);
@@ -109,9 +109,9 @@ public abstract class Solver {
         }
 
         // Return solution
-        Log.debugLog(instance.NAME, "Removed " + flowers.size() + " flower nodes by petal rule 2");
-        instance.flowerDeletedNodes += flowers.size();
-        S.addAll(flowers);
+        Log.debugLog(instance.NAME, "Removed " + removedFlowers.size() + " flower nodes by petal rule 2");
+        instance.removedFlowers += removedFlowers.size();
+        S.addAll(removedFlowers);
         return S;
     }
 
@@ -136,9 +136,9 @@ public abstract class Solver {
 
         // Apply rules on each sub graph
         instance.subGraphs.forEach(Preprocessing::applyRules);
-        instance.preDeletedNodes = instance.N - instance.subGraphs.stream().mapToInt(Graph::getNodeCount).sum();
+        instance.preRemovedNodes = instance.N - instance.subGraphs.stream().mapToInt(Graph::getNodeCount).sum();
         instance.startK = instance.solvedK;
-        Log.debugLog(instance.NAME, "Removed " + instance.preDeletedNodes + " nodes in preprocessing, starting with k = " + instance.startK);
+        Log.debugLog(instance.NAME, "Removed " + instance.preRemovedNodes + " nodes in preprocessing, starting with k = " + instance.startK);
 
         // Run for all sub graphs
         try {
