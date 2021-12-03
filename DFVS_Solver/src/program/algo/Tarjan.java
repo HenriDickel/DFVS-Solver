@@ -25,16 +25,16 @@ public abstract class Tarjan {
         components = new ArrayList<>();
 
         // Initialize attributes
-        for(Node node: graph.getActiveNodes()) {
+        for(Node node: graph.getNodes()) {
             node.index = -1;
             node.lowLink = -1;
             node.onStack = false;
         }
 
         // Loop over all nodes, skip the ones already visited (index != -1)
-        for(Node node: graph.getActiveNodes()) {
+        for(Node node: graph.getNodes()) {
             if(node.index == -1) {
-                strongConnect(node);
+                strongConnect(node, graph);
             }
         }
 
@@ -46,7 +46,7 @@ public abstract class Tarjan {
      * Stores the found cyclic component in "components".
      * @param node The start node.
      */
-    private static void strongConnect(Node node) {
+    private static void strongConnect(Node node, Graph graph) {
 
         // Set the node's index to the current index and increment it.
         node.index = index;
@@ -57,9 +57,10 @@ public abstract class Tarjan {
 
         // Loop over all out neighbors. Recursively call strongConnect() if they are not visited yet and update the lowLink-attribute
         // LowLink is the lowest index of all nodes in the component of the selected node
-        for(Node out: node.getOutNeighbors()) {
+        for(Integer outId: node.getOutIds()) {
+            Node out = graph.getNode(outId);
             if(out.index == -1) {
-                strongConnect(out);
+                strongConnect(out, graph);
                 node.lowLink = Math.min(node.lowLink, out.lowLink);
             } else if(out.onStack) {
                 node.lowLink = Math.min(node.lowLink, out.index);
@@ -67,7 +68,7 @@ public abstract class Tarjan {
         }
 
         // If lowLink == index, all nodes of the component are found. The component is build from the nodes on the stack and is stored in "components".
-        if(node.lowLink == node.index) {
+        if(node.lowLink.equals(node.index)) {
             List<Node> component = new ArrayList<>();
             Node nodeFromStack;
             do {

@@ -1,15 +1,9 @@
 package program.algo;
 
-import program.model.Cycle;
-import program.model.Graph;
-import program.model.Node;
-
-import java.util.*;
-
 
 public class CycleManager {
 
-    private final Map<Node, Cycle> bestCycles = new LinkedHashMap<>();
+    /*private final Map<Node, Cycle> bestCycles = new LinkedHashMap<>();
 
     public CycleManager(Graph graph) {
         initShortestCycles(graph, graph.nodes);
@@ -45,5 +39,5 @@ public class CycleManager {
                 if(shortestCycle != null) bestCycles.put(node, shortestCycle);
             }
         }
-    }
+    }*/
 }

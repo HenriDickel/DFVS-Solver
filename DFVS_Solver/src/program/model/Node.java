@@ -2,96 +2,88 @@ package program.model;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class Node {
 
+    // Main attributes
+    public Integer id;
     public String label;
-    public boolean deleted = false;
-    public int forbidden = Integer.MAX_VALUE;
 
-    private final List<Node> outNeighbours;
-    private final List<Node> inNeighbours;
+    // Neighbor indices
+    private final List<Integer> outIds = new ArrayList<>();
+    private final List<Integer> inIds = new ArrayList<>();
 
-    //Flower
-    public int petal;
-    public int maxPetal;
-
-    // Attributes for Tarjan
-    public int index;
-    public int lowLink;
-    public boolean onStack;
-
-    // Attributes for BFS
+    // BFS attributes
+    public Integer visitIndex;
     public Node parent;
-    public int visitIndex;
-    public boolean explored;
+    public Integer cycleCount;
 
-    public int otherCycles;
+    // Tarjan attributes
+    public Integer index;
+    public Integer lowLink;
+    public Boolean onStack;
 
-    public int getOtherCycles() {
-        return otherCycles;
-    }
+    // Flower attributes
+    public Integer petal;
+    public Integer maxPetal;
 
-    public Node(String label) {
+    public Node(int id, String label) {
+        this.id = id;
         this.label = label;
-        outNeighbours = new ArrayList<>();
-        inNeighbours = new ArrayList<>();
     }
 
-    public void addOutNeighbor(Node neighbor) {
-        if(!outNeighbours.contains(neighbor)) {
-            outNeighbours.add(neighbor);
+    public List<Integer> getOutIds() {
+        return outIds;
+    }
+
+    public List<Integer> getInIds() {
+        return inIds;
+    }
+
+    public void addOutId(int id) {
+        if(!outIds.contains(id)) {
+            outIds.add(id);
         }
     }
 
-    public void addInNeighbor(Node neighbor) {
-        if(!inNeighbours.contains(neighbor)) {
-            inNeighbours.add(neighbor);
+    public void addInId(int id) {
+        if(!inIds.contains(id)) {
+            inIds.add(id);
         }
     }
 
-    public List<Node> getUnexploredNeighbors() {
-        return outNeighbours.stream().filter(x -> !x.explored && !x.deleted).collect(Collectors.toList());
+    public void removeOutId(Integer id) {
+        outIds.remove(id);
     }
 
-    public void removeOutNeighbor(Node neighbor) {
-        outNeighbours.remove(neighbor);
+    public void removeInId(Integer id) {
+        inIds.remove(id);
     }
 
-    public void removeInNeighbor(Node neighbor) {
-        inNeighbours.remove(neighbor);
+    public int getOutIdCount() {
+        return outIds.size();
     }
 
-    public List<Node> getOutNeighbors() {
-        return outNeighbours.stream().filter(x -> !x.deleted).collect(Collectors.toList());
+    public int getInIdCount() {
+        return inIds.size();
     }
 
-    public List<Node> getInNeighbors() {
-        return inNeighbours.stream().filter(x -> !x.deleted).collect(Collectors.toList());
+    public int getCycleCount() {
+        return cycleCount;
     }
 
-    public void delete() {
-        deleted = true;
-    }
-
-    public void unDelete() {
-        deleted = false;
-    }
-
-    public int getMaxPetal() {
-        return maxPetal;
+    public Node copy() {
+        Node copy = new Node(id, label);
+        copy.maxPetal = maxPetal;
+        copy.petal = petal;
+        // Clone out ids and in ids
+        copy.outIds.addAll(outIds);
+        copy.inIds.addAll(inIds);
+        return copy;
     }
 
     @Override
     public String toString() {
-        String nodeString = label;
-        List<String> outNeighborsStrings = outNeighbours.stream().map(x -> x.label).collect(Collectors.toList());
-        String outNeighborsStringJoined = String.join(", ", outNeighborsStrings);
-
-        if (!outNeighborsStrings.isEmpty()) outNeighborsStringJoined = " {" + outNeighborsStringJoined + "}";
-
-        return nodeString + outNeighborsStringJoined;
+        return "" + id;
     }
-
 }

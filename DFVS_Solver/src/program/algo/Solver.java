@@ -1,11 +1,8 @@
 package program.algo;
 
 import program.log.CycleCounter;
-import program.model.Cycle;
-import program.model.Instance;
+import program.model.*;
 import program.utils.TimeoutException;
-import program.model.Graph;
-import program.model.Node;
 import program.log.Log;
 import program.utils.Timer;
 
@@ -19,49 +16,48 @@ public abstract class Solver {
 
     private static List<Node> dfvsBranch(Graph graph, int k, int level) throws TimeoutException {
 
+        // Log recursive steps
         instance.recursiveSteps++;
 
         // Check Timer
         if (Timer.isTimeout()) throw new TimeoutException("The program stopped after " + Timer.timeout + " minutes.");
 
-
         // Break to skip the redundant dfvs_branch()-call when k = 0
         if (k <= 0) {
             // Return if graph has no circles
-            if (DAG.isDAG(graph)) return new ArrayList<>();
+            if (DAG.isDAG(graph)) {
+                return new ArrayList<>();
+            }
             else return null;
         }
 
         // Next Cycle
-        Cycle cycle = FullBFS.findBestCycle(graph);
+        Cycle cycle = FullBFS.findShortestCycle(graph);
 
         // Log cycle
         CycleCounter.count(cycle, level);
 
-        // Loop
-        for (Node node : cycle.getNodes()) {
-            if (node.forbidden < level) continue;
-            node.forbidden = level;
-            node.delete();
-            List<Node> S = dfvsBranch(graph, k - 1, level + 1);
-            node.unDelete();
+        List<Integer> forbiddenIds = new ArrayList<>();
+        for (Node node: cycle.getNodes()) {
+            // Create a copy of the graph and remove deleted & forbidden nodes
+            Graph copy = graph.copy();
+            copy.removeNode(node);
+            copy.removeForbiddenNodes(forbiddenIds);
+            // Recursive call
+            List<Node> S = dfvsBranch(copy, k - 1, level + 1);
             if (S != null) {
                 S.add(node);
                 return S;
             }
-        }
-
-        // Reset forbidden (for nodes forbidden on this level)
-        for (Node node : cycle.getNodes()) {
-            if (node.forbidden == level) node.forbidden = Integer.MAX_VALUE;
+            forbiddenIds.add(node.id);
         }
         return null;
     }
 
-    public static List<Node> dfvsSolve(Graph graph) {
+    public static List<Node> dfvsSolve(Graph initialGraph) {
 
         // Set Petals
-        Flower.SetAllPetals(graph);
+        Flowers.SetAllPetals(initialGraph);
         List<Node> flowers = new ArrayList<>();
 
         /*
@@ -88,28 +84,27 @@ public abstract class Solver {
         int k = 0;
         List<Node> S = null;
         while (S == null) { // Loop
+            // copy graph (to remove nodes with flower rule)
+            Graph copy = initialGraph.copy();
 
             // No need to recalculate flowers if there were none in previous step
             if (k == 0 || flowers.size() > 0) {
-                //Use Petal Rule
-                flowers = Flower.UsePetalRule(graph, k);
+                // Use Petal Rule
+                flowers = Flowers.UsePetalRule(copy, k);
             }
 
             // No need to use algorithm if we found too many flowers
             if (flowers.size() <= k) {
                 int kBudget = k - flowers.size();
-                //Log.debugLog(instance.NAME, "Branching with " + kBudget + " (" + k + " - " + flowers.size() + " flowers)");
                 CycleCounter.init(kBudget);
-                S = dfvsBranch(graph, kBudget, 0);
+
+                S = dfvsBranch(copy, kBudget, 0);
                 if (S == null) {
                     // Log detail logs
                     instance.averageCycleSize = CycleCounter.getAverageCycleSize();
-                    instance.averageBranchSize = CycleCounter.getAverageBranchSize();
                     instance.recursiveStepsPerK = CycleCounter.getRecursiveSteps();
                 }
             }
-            // Reset Petal values to initial values and undelete all nodes
-            Flower.ResetPetalValues(graph);
             k++;
         }
 
@@ -133,15 +128,15 @@ public abstract class Solver {
         // Preprocessing
         Log.debugLog(instance.NAME, "---------- " + instance.NAME + " (n = " + instance.N + ", m = " + instance.M + ", k = " + instance.OPTIMAL_K + ") ----------");
         Preprocessing.applyRules(initialGraph);
-        Preprocessing.removePendantFullTrianglePP(instance);
+        Preprocessing.removePendantFullTrianglePP(initialGraph);
 
         // Create sub graphs
         instance.subGraphs = Preprocessing.findCyclicSubGraphs(initialGraph);
-        Log.debugLog(instance.NAME, "Found " + instance.subGraphs.size() + " cyclic sub graph(s) with n = " + instance.subGraphs.stream().map(g -> g.nodes.size()).collect(Collectors.toList()));
+        Log.debugLog(instance.NAME, "Found " + instance.subGraphs.size() + " cyclic sub graph(s) with n = " + instance.subGraphs.stream().map(Graph::getNodeCount).collect(Collectors.toList()));
 
         // Apply rules on each sub graph
         instance.subGraphs.forEach(Preprocessing::applyRules);
-        instance.preDeletedNodes = instance.N - instance.subGraphs.stream().mapToInt(subGraph -> subGraph.nodes.size()).sum();
+        instance.preDeletedNodes = instance.N - instance.subGraphs.stream().mapToInt(Graph::getNodeCount).sum();
         instance.startK = instance.solvedK;
         Log.debugLog(instance.NAME, "Removed " + instance.preDeletedNodes + " nodes in preprocessing, starting with k = " + instance.startK);
 

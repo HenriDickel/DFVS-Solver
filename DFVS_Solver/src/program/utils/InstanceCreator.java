@@ -1,7 +1,7 @@
 package program.utils;
 
-import program.log.Log;
 import program.model.Graph;
+import program.log.Log;
 import program.model.Instance;
 
 import java.io.File;

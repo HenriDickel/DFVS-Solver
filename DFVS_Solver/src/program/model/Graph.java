@@ -1,169 +1,99 @@
 package program.model;
 
-import javax.imageio.plugins.jpeg.JPEGHuffmanTable;
-import java.util.*;
+
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 public class Graph {
 
-    public List<Node> nodes = new ArrayList<>();
+    private final Map<Integer, Node> nodes = new LinkedHashMap<>();
 
-    public Graph() {}
-
-    public Graph(List<Node> nodes) {
-        this.nodes = nodes;
+    public List<Node> getNodes() {
+        return nodes.values().stream().toList();
     }
 
-    public void resetBFS() {
-        nodes.forEach(node -> node.visitIndex = -1);
-        nodes.forEach(node -> node.parent = null);
-        nodes.forEach(node -> node.explored = false);
+    public Node getNode(int id) {
+
+        Node node = nodes.get(id);
+        if(node == null) throw new RuntimeException("Couldn't find node with id " + id);
+        return node;
     }
 
-    public void addArc(String from, String to){
-
-        //Add nodes if not existing
-        if(nodes.stream().noneMatch(x -> x.label.equals(from))) nodes.add(new Node(from));
-        if(nodes.stream().noneMatch(x -> x.label.equals(to))) nodes.add(new Node(to));
-
-        //Get Nodes
-        Node a = nodes.stream().filter(x -> x.label.equals(from)).findFirst().get();
-        Node b = nodes.stream().filter(x -> x.label.equals(to)).findFirst().get();
-
-        //Add to neighbours
-        a.addOutNeighbor(b);
-        b.addInNeighbor(a);
+    public List<Node> getOutNodes(Node node) {
+        return node.getOutIds().stream().map(this::getNode).collect(Collectors.toList());
     }
 
-    public List<Node> getActiveNodes() {
-        return nodes.stream().filter(node -> !node.deleted).collect(Collectors.toList());
-    }
-
-    public List<Node> getInactiveNodes() {
-        return nodes.stream().filter(node -> node.deleted).collect(Collectors.toList());
-    }
-
-    public int getDestroyedPetalCount() {
-        int count = 0;
-        List<Node> deletedNodes = getInactiveNodes();
-        deletedNodes.sort(Comparator.comparing(Node::getMaxPetal));
-        for(int i = 0; i < deletedNodes.size(); i++) {
-            count += deletedNodes.get(i).maxPetal - i;
-        }
-        return count;
+    public int getNodeCount() {
+        return nodes.size();
     }
 
     public int getEdgeCount() {
-        return getActiveNodes().stream().mapToInt(node -> node.getOutNeighbors().size()).sum();
+        return (int) nodes.values().stream().map(Node::getOutIdCount).count();
     }
 
-    public void fullyRemoveNode(Node nodeToRemove) {
-        for (Node node : nodes) {
-            node.removeOutNeighbor(nodeToRemove);
-        }
-        for (Node node : nodes) {
-            node.removeInNeighbor(nodeToRemove);
-        }
-        nodes.remove(nodeToRemove);
+    public void resetBFS() {
+        nodes.values().forEach(node -> node.visitIndex = -1);
+        nodes.values().forEach(node -> node.parent = null);
     }
 
-    public Graph reducedCopy() {
-        Graph copy = new Graph();
+    public Graph copy() {
+        Graph copyGraph = new Graph();
 
-        for(Node node: nodes) {
-            if(!node.deleted && !(node.forbidden < Integer.MAX_VALUE)) { // if node is not deleted of forbidden
-                for(Node out: node.getOutNeighbors()) {
-                     if(out.deleted) {
-                         // Skip
-                     } else if(out.forbidden < Integer.MAX_VALUE) {
-                         for(Node outOut: out.getOutNeighbors()) {
-                             if(outOut.deleted) {
-                                 // Skip
-                             } else {
-                                 copy.addArc(node.label, outOut.label);
-                             }
-                         }
-                     } else {
-                         copy.addArc(node.label, out.label);
-                     }
+        for (Node node : getNodes()) {
+            Node copyNode = node.copy();
+            copyGraph.nodes.put(copyNode.id, copyNode);
+        }
+        return copyGraph;
+    }
+
+    public void removeNode(Node nodeToRemove) {
+        for (Node node : getNodes()) {
+            node.removeOutId(nodeToRemove.id);
+            node.removeInId(nodeToRemove.id);
+        }
+        nodes.remove(nodeToRemove.id);
+    }
+
+    public void removeForbiddenNodes(List<Integer> forbiddenNodeIds) {
+        for(Integer forbiddenId: forbiddenNodeIds) {
+            removeForbiddenNode(forbiddenId);
+        }
+    }
+
+    private void removeForbiddenNode(Integer forbiddenId) {
+        Node forbidden = getNode(forbiddenId);
+        for(Node node: getNodes()) {
+            if(node.getOutIds().contains(forbiddenId)) {
+                for(Node out: getOutNodes(forbidden)) {
+                    out.addInId(node.id);
+                    node.addOutId(out.id);
                 }
+                node.removeOutId(forbidden.id);
+            }
+            if(node.getInIds().contains(forbidden.id)) {
+                // Transferring edges already happened above
+                node.removeOutId(forbidden.id);
             }
         }
-
-        return copy;
+        nodes.remove(forbidden.id);
     }
 
-    public Graph clone() {
-        List<Node> copyNodes = new ArrayList<>();
-        for(int i = 0; i < nodes.size(); i++) {
-            Node node = nodes.get(i);
-            Node copyNode = new Node(node.label);
-            copyNode.forbidden = node.forbidden;
-            copyNode.deleted = node.deleted;
-            copyNode.petal = node.petal;
-            copyNode.maxPetal = node.maxPetal;
-            copyNodes.add(copyNode);
-        }
-        for(int i = 0; i < nodes.size(); i++) {
-            Node node = nodes.get(i);
-            Node copyNode = copyNodes.get(i);
-            for(Node outNeighbor: node.getOutNeighbors()) {
-                int index = nodes.indexOf(outNeighbor);
-                Node copyOutNeighbor = copyNodes.get(index);
-                copyNode.addOutNeighbor(copyOutNeighbor);
-                copyOutNeighbor.addInNeighbor(copyNode);
-            }
-        }
-        return new Graph(copyNodes);
-    }
+    public void addArc(String a, String b) {
 
-    //------------------------------------------------------------------Flowers-----------------------------------------
-    public void replaceNode(Node node, boolean isU){
+        // Add nodes if not existing
+        int nextId = nodes.size();
+        if(nodes.values().stream().noneMatch(x -> x.label.equals(a))) nodes.put(nextId, new Node(nextId, a));
+        nextId = nodes.size();
+        if(nodes.values().stream().noneMatch(x -> x.label.equals(b))) nodes.put(nextId, new Node(nextId, b));
 
-        //Remove node
-        nodes.remove(node);
+        //Get Nodes
+        Node aNode = nodes.values().stream().filter(x -> x.label.equals(a)).findFirst().get();
+        Node bNode = nodes.values().stream().filter(x -> x.label.equals(b)).findFirst().get();
 
-        List<Node> copyNodes = new ArrayList<>(nodes);
-
-        //For each node add edges
-        for(Node a : copyNodes){
-            //Ingoing to node-
-            if(a.getOutNeighbors().contains(node)){
-                addArc(a.label, node.label + "-");
-                a.getOutNeighbors().remove(node);
-            }
-            //Outgoing to node+
-            if(a.getInNeighbors().contains(node)){
-                addArc(a.label, node.label + "+");
-                a.getInNeighbors().remove(node);
-            }
-        }
-
-        //Add node- to node+
-        if(!isU) addArc(node.label + "-", node.label + "+");
-    }
-
-    public Graph copy(){
-        Graph graph = new Graph();
-        graph.nodes = new ArrayList<>();
-
-        for(Node node : nodes){
-            for(Node out : node.getOutNeighbors()){
-                graph.addArc(node.label, out.label);
-            }
-        }
-        return graph;
-    }
-
-    @Override
-    public String toString() {
-        List<String> nodesStrings = getActiveNodes().stream().map(Object::toString).collect(Collectors.toList());
-        return String.join("\n", nodesStrings);
-    }
-
-    public void removeArc(String from, String to) {
-        Node fromNode = nodes.stream().filter(x -> x.label.equals(from)).findFirst().get();
-        Node toNode = nodes.stream().filter(x -> x.label.equals(to)).findFirst().get();
-        fromNode.removeOutNeighbor(toNode);
+        //Add to neighbours
+        aNode.addOutId(bNode.id);
+        bNode.addInId(aNode.id);
     }
 }

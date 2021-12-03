@@ -59,12 +59,12 @@ public abstract class Log {
         }
         try(PrintWriter output = new PrintWriter(new FileWriter(MAIN_LOG_PATH,true)))
         {
-            output.println("name,n,m,k_optimal,k_solved,millis,verified,recursive_steps,k_start,pre_deleted_nodes,flower_deleted_nodes");
+            output.println("name,n,m,k_optimal,k_solved,verified,k_start,pre_deleted_nodes,flower_deleted_nodes,recursive_steps,millis");
         }
         catch (Exception ignored) {}
         try(PrintWriter output = new PrintWriter(new FileWriter(DETAIL_LOG_PATH,true)))
         {
-            output.println("name,level,cycle_size,branch_size,recursive_steps");
+            output.println("name,level,cycle_size,recursive_steps");
         }
         catch (Exception ignored) {}
     }
@@ -76,7 +76,7 @@ public abstract class Log {
 
         try(PrintWriter output = new PrintWriter(new FileWriter(MAIN_LOG_PATH,true)))
         {
-            output.println(instance.NAME + "," + instance.N + "," + instance.M + "," + instance.OPTIMAL_K + "," + instance.solvedK + "," + millis + "," + verified + "," + instance.recursiveSteps + "," + instance.startK + "," + instance.preDeletedNodes + "," + instance.flowerDeletedNodes);
+            output.println(instance.NAME + "," + instance.N + "," + instance.M + "," + instance.OPTIMAL_K + "," + instance.solvedK + "," + verified + "," + instance.startK + "," + instance.preDeletedNodes + "," + instance.flowerDeletedNodes + "," + instance.recursiveSteps + "," + millis);
         }
         catch (Exception ignored) {}
     }
@@ -89,7 +89,7 @@ public abstract class Log {
         try(PrintWriter output = new PrintWriter(new FileWriter(DETAIL_LOG_PATH,true)))
         {
             for(int i = 0; i < instance.averageCycleSize.length; i++) {
-                output.println(instance.NAME + "," + i + "," + instance.averageCycleSize[i] + "," + instance.averageBranchSize[i] + "," + instance.recursiveStepsPerK[i]);
+                output.println(instance.NAME + "," + i + "," + instance.averageCycleSize[i] + "," + instance.recursiveStepsPerK[i]);
             }
         }
         catch (Exception ignored) {}

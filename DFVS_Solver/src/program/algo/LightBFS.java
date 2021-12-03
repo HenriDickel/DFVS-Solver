@@ -4,7 +4,6 @@ import program.model.Cycle;
 import program.model.Graph;
 import program.model.Node;
 
-
 import java.util.LinkedList;
 import java.util.List;
 
@@ -14,7 +13,7 @@ public abstract class LightBFS {
 
     public static Cycle findBestCycle(Graph graph) {
 
-        for(Node node: graph.getActiveNodes()) {
+        for(Node node: graph.getNodes()) {
 
             // Reset node attributes
             queue.clear();
@@ -23,7 +22,7 @@ public abstract class LightBFS {
             // Visit the start node
             node.visitIndex = 0;
 
-            Cycle cycle = visitNode(node);
+            Cycle cycle = visitNode(node, graph);
             if(cycle != null) {
                 return cycle;
             }
@@ -31,7 +30,7 @@ public abstract class LightBFS {
             while(!queue.isEmpty()) {
                 Node next = queue.remove(0);
                 next.visitIndex = next.parent.visitIndex + 1;
-                cycle = visitNode(next);
+                cycle = visitNode(next, graph);
                 if(cycle != null) {
                     return cycle;
                 }
@@ -47,16 +46,15 @@ public abstract class LightBFS {
      * @param node node A.
      * @return a cycle when found.
      */
-    private static Cycle visitNode(Node node) {
+    private static Cycle visitNode(Node node, Graph graph) {
 
-        for(Node outNeighbor: node.getOutNeighbors()) {
-            if(outNeighbor.parent == null && outNeighbor.visitIndex == -1) { // Node was not visited and is not in queue
-                outNeighbor.parent = node;
-                // Add forbidden nodes to the start of the queue, since they don't count in cycle length
-                if(outNeighbor.forbidden < Integer.MAX_VALUE) queue.add(0, outNeighbor);
-                else queue.add(outNeighbor);
-            } else if(outNeighbor.visitIndex > -1){ // Node is already visited
-                Cycle cycle = findCycle(outNeighbor, node);
+        for(Integer outId: node.getOutIds()) {
+            Node out = graph.getNode(outId);
+            if(out.parent == null && out.visitIndex == -1) { // Node was not visited and is not in queue
+                out.parent = node;
+                queue.add(out);
+            } else if(out.visitIndex > -1){ // Node is already visited
+                Cycle cycle = findCycle(out, node);
                 if(cycle != null) return cycle;
             } else {
                 // Node is in queue, but not visited (= out neighbor is on same depth as node))

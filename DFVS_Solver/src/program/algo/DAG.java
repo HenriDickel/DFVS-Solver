@@ -9,38 +9,35 @@ import java.util.List;
 
 public abstract class DAG {
 
-    private static List<Node> nodes;
-
     public static boolean isDAG(Graph graph){
 
-        nodes = graph.getActiveNodes();
         //Start Recursion
-        return isDAGRecursive(new ArrayList<>());
+        return isDAGRecursive(new ArrayList<>(), graph);
     }
 
-    private static boolean isDAGRecursive(List<Node> checked){
+    private static boolean isDAGRecursive(List<Node> checked, Graph graph){
 
-        if(checked.size() == nodes.size()) return true;
+        if(checked.size() == graph.getNodeCount()) return true;
 
         //Check if something can be removed
-        for(Node node : nodes){
+        for(Node node : graph.getNodes()){
 
             //Skip those already checked
             if(checked.contains(node)) continue;
 
             //Get all out going arcs
-            List<Node> outArcs = node.getOutNeighbors();
+            List<Node> outNodes = graph.getOutNodes(node);
 
             //Remove those with no arcs
-            if(outArcs.size() == 0){
+            if(outNodes.size() == 0){
                 checked.add(node);
-                return isDAGRecursive(checked);
+                return isDAGRecursive(checked, graph);
             }
 
             //Remove those where all neighbours are already checked
-            if(checked.containsAll(outArcs)){
+            if(checked.containsAll(outNodes)){
                 checked.add(node);
-                return isDAGRecursive(checked);
+                return isDAGRecursive(checked, graph);
             }
         }
         return false;
