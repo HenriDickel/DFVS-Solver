@@ -7,7 +7,6 @@ public class Node {
 
     // Main attributes
     public Integer id;
-    public String label;
 
     // Neighbor indices
     private final List<Integer> outIds = new ArrayList<>();
@@ -27,9 +26,8 @@ public class Node {
     public Integer petal;
     public Integer maxPetal;
 
-    public Node(int id, String label) {
+    public Node(Integer id) {
         this.id = id;
-        this.label = label;
     }
 
     public List<Integer> getOutIds() {
@@ -40,13 +38,13 @@ public class Node {
         return inIds;
     }
 
-    public void addOutId(int id) {
+    public void addOutId(Integer id) {
         if(!outIds.contains(id)) {
             outIds.add(id);
         }
     }
 
-    public void addInId(int id) {
+    public void addInId(Integer id) {
         if(!inIds.contains(id)) {
             inIds.add(id);
         }
@@ -73,7 +71,7 @@ public class Node {
     }
 
     public Node copy() {
-        Node copy = new Node(id, label);
+        Node copy = new Node(id);
         copy.maxPetal = maxPetal;
         copy.petal = petal;
         // Clone out ids and in ids

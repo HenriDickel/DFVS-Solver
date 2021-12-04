@@ -57,8 +57,15 @@ public abstract class InstanceCreator {
 
                 //Add Line
                 String[] split = str.trim().split(" ");
-                graph.addArc(split[0], split[1]);
-
+                try {
+                    Integer nodeId1 = Integer.parseInt(split[0]);
+                    Integer nodeId2 = Integer.parseInt(split[1]);
+                    graph.addArc(nodeId1, nodeId2);
+                }
+                catch (NumberFormatException e)
+                {
+                    throw new RuntimeException("Couldn't parse file '" + filename + "' to Integer");
+                }
             });
         } catch (IOException e) {
             e.printStackTrace();
@@ -154,14 +161,14 @@ public abstract class InstanceCreator {
     public static Instance createBFSTest1(){
         Graph graph = new Graph();
 
-        graph.addArc("A", "B");
-        graph.addArc("B", "C");
-        graph.addArc("C", "D");
-        graph.addArc("D", "A");
+        graph.addArc(1, 2);
+        graph.addArc(2, 3);
+        graph.addArc(3, 4);
+        graph.addArc(4, 1);
 
-        graph.addArc("B", "E");
-        graph.addArc("E", "F");
-        graph.addArc("F", "C");
+        graph.addArc(2, 5);
+        graph.addArc(5, 6);
+        graph.addArc(6, 3);
 
         return createTestInstance("bfs_test_1", graph, 1);
     }
@@ -172,17 +179,17 @@ public abstract class InstanceCreator {
     public static Instance createBFSTest2(){
         Graph graph = new Graph();
 
-        graph.addArc("A", "B");
-        graph.addArc("B", "C");
-        graph.addArc("C", "D");
-        graph.addArc("D", "A");
+        graph.addArc(1, 2);
+        graph.addArc(2, 3);
+        graph.addArc(3, 4);
+        graph.addArc(4, 1);
 
-        graph.addArc("B", "E");
-        graph.addArc("E", "F");
-        graph.addArc("F", "C");
+        graph.addArc(2, 5);
+        graph.addArc(5, 6);
+        graph.addArc(6, 3);
 
-        graph.addArc("E", "G");
-        graph.addArc("G", "E");
+        graph.addArc(5, 7);
+        graph.addArc(7, 5);
 
         return createTestInstance("bfs_test_1", graph, 1);
     }
@@ -193,11 +200,11 @@ public abstract class InstanceCreator {
     public static Instance createSimpleDAG(){
         Graph graph = new Graph();
 
-        graph.addArc("A", "B");
-        graph.addArc("A", "C");
-        graph.addArc("B", "C");
-        graph.addArc("B", "E");
-        graph.addArc("C", "D");
+        graph.addArc(1, 2);
+        graph.addArc(1, 3);
+        graph.addArc(2, 3);
+        graph.addArc(2, 5);
+        graph.addArc(3, 4);
 
         return createTestInstance("simple_n4_m5_k0", graph, 0);
     }
@@ -208,14 +215,14 @@ public abstract class InstanceCreator {
     public static Instance createSimpleNonDAG1(){
         Graph graph = new Graph();
 
-        graph.addArc("A", "B");
-        graph.addArc("A", "C");
-        graph.addArc("B", "C");
-        graph.addArc("B", "E");
-        graph.addArc("C", "A");
-        graph.addArc("E", "A");
-        graph.addArc("E", "F");
-        graph.addArc("F", "E");
+        graph.addArc(1, 2);
+        graph.addArc(1, 3);
+        graph.addArc(2, 3);
+        graph.addArc(2, 5);
+        graph.addArc(3, 1);
+        graph.addArc(5, 1);
+        graph.addArc(5, 6);
+        graph.addArc(6, 5);
 
         return createTestInstance("simple-n6_m8_k2", graph, 2);
     }
@@ -226,12 +233,12 @@ public abstract class InstanceCreator {
     public static Instance createSimpleNonDAG2(){
         Graph graph = new Graph();
 
-        graph.addArc("A", "B");
-        graph.addArc("B", "C");
-        graph.addArc("C", "A");
-        graph.addArc("A", "D");
-        graph.addArc("B", "E");
-        graph.addArc("C", "F");
+        graph.addArc(1, 2);
+        graph.addArc(2, 3);
+        graph.addArc(3, 1);
+        graph.addArc(1, 4);
+        graph.addArc(2, 5);
+        graph.addArc(3, 6);
 
         return createTestInstance("simple_n6_m6_k1", graph, 1);
     }
@@ -243,14 +250,14 @@ public abstract class InstanceCreator {
     public static Instance createSimpleNonDAG3(){
         Graph graph = new Graph();
 
-        graph.addArc("A", "B");
-        graph.addArc("B", "C");
-        graph.addArc("C", "A");
-        graph.addArc("A", "D");
-        graph.addArc("D", "E");
-        graph.addArc("E", "F");
-        graph.addArc("F", "G");
-        graph.addArc("G", "E");
+        graph.addArc(1, 2);
+        graph.addArc(2, 3);
+        graph.addArc(3, 1);
+        graph.addArc(1, 4);
+        graph.addArc(4, 5);
+        graph.addArc(5, 6);
+        graph.addArc(6, 7);
+        graph.addArc(7, 5);
 
         return createTestInstance("simple-n7_m8_k2", graph, 2);
     }
@@ -262,12 +269,12 @@ public abstract class InstanceCreator {
     public static Instance createSimpleNonDAG4(){
         Graph graph = new Graph();
 
-        graph.addArc("A", "B");
-        graph.addArc("B", "C");
-        graph.addArc("C", "A");
-        graph.addArc("A", "D");
-        graph.addArc("D", "E");
-        graph.addArc("E", "A");
+        graph.addArc(1, 2);
+        graph.addArc(2, 3);
+        graph.addArc(3, 1);
+        graph.addArc(1, 4);
+        graph.addArc(4, 5);
+        graph.addArc(5, 1);
 
         return createTestInstance("simple-n5_m6_k1", graph, 1);
     }
@@ -278,12 +285,12 @@ public abstract class InstanceCreator {
     public static Instance createSimpleNonDAG5(){
         Graph graph = new Graph();
 
-        graph.addArc("A", "B");
-        graph.addArc("B", "A");
-        graph.addArc("C", "D");
-        graph.addArc("D", "C");
-        graph.addArc("E", "F");
-        graph.addArc("F", "E");
+        graph.addArc(1, 2);
+        graph.addArc(2, 1);
+        graph.addArc(3, 4);
+        graph.addArc(4, 3);
+        graph.addArc(5, 6);
+        graph.addArc(6, 5);
 
         return createTestInstance("simple-n6_m6_k3", graph, 3);
     }
@@ -294,27 +301,27 @@ public abstract class InstanceCreator {
     public static Instance createSimpleNonDAG6(){
         Graph graph = new Graph();
 
-        graph.addArc("A", "B");
-        graph.addArc("B", "A");
-        graph.addArc("B", "C");
-        graph.addArc("C", "B");
+        graph.addArc(1, 2);
+        graph.addArc(2, 1);
+        graph.addArc(2, 3);
+        graph.addArc(3, 2);
 
-        graph.addArc("D", "E");
-        graph.addArc("E", "D");
-        graph.addArc("E", "F");
-        graph.addArc("F", "E");
+        graph.addArc(4, 5);
+        graph.addArc(5, 4);
+        graph.addArc(5, 6);
+        graph.addArc(6, 5);
 
-        graph.addArc("G", "H");
-        graph.addArc("H", "G");
-        graph.addArc("H", "I");
-        graph.addArc("I", "H");
+        graph.addArc(7, 8);
+        graph.addArc(8, 7);
+        graph.addArc(8, 9);
+        graph.addArc(9, 8);
 
-        graph.addArc("X", "A");
-        graph.addArc("A", "X");
-        graph.addArc("X", "D");
-        graph.addArc("D", "X");
-        graph.addArc("X", "G");
-        graph.addArc("G", "X");
+        graph.addArc(0, 1);
+        graph.addArc(1, 0);
+        graph.addArc(0, 4);
+        graph.addArc(4, 0);
+        graph.addArc(0, 7);
+        graph.addArc(7, 0);
 
         return createTestInstance("simple-n7_m12_k3", graph, 3);
     }
@@ -325,22 +332,22 @@ public abstract class InstanceCreator {
     public static Instance createSimpleNonDAG7(){
         Graph graph = new Graph();
 
-        graph.addArc("X", "A");
-        graph.addArc("C", "X");
-        graph.addArc("X", "D");
-        graph.addArc("F", "X");
+        graph.addArc(0, 1);
+        graph.addArc(3, 0);
+        graph.addArc(0, 4);
+        graph.addArc(6, 0);
 
-        graph.addArc("A", "C");
-        graph.addArc("C", "A");
+        graph.addArc(1, 3);
+        graph.addArc(3, 1);
 
-        graph.addArc("D", "F");
-        graph.addArc("F", "D");
+        graph.addArc(4, 6);
+        graph.addArc(6, 4);
 
-        graph.addArc("C", "F");
-        graph.addArc("F", "C");
+        graph.addArc(3, 6);
+        graph.addArc(6, 3);
 
-        graph.addArc("A", "D");
-        graph.addArc("D", "A");
+        graph.addArc(1, 4);
+        graph.addArc(4, 1);
 
         return createTestInstance("simple-n6_m6_k3", graph, 3);
     }
@@ -351,12 +358,12 @@ public abstract class InstanceCreator {
     public static Instance createFullConnected3(){
         Graph graph = new Graph();
 
-        graph.addArc("A", "B");
-        graph.addArc("A", "C");
-        graph.addArc("B", "A");
-        graph.addArc("B", "C");
-        graph.addArc("C", "A");
-        graph.addArc("C", "B");
+        graph.addArc(1, 2);
+        graph.addArc(1, 3);
+        graph.addArc(2, 1);
+        graph.addArc(2, 3);
+        graph.addArc(3, 1);
+        graph.addArc(3, 2);
 
         return createTestInstance("full-n3_m6_k2", graph, 2);
     }
@@ -367,18 +374,18 @@ public abstract class InstanceCreator {
     public static Instance createFullConnected4(){
         Graph graph = new Graph();
 
-        graph.addArc("A", "B");
-        graph.addArc("A", "C");
-        graph.addArc("A", "D");
-        graph.addArc("B", "A");
-        graph.addArc("B", "C");
-        graph.addArc("B", "D");
-        graph.addArc("C", "A");
-        graph.addArc("C", "B");
-        graph.addArc("C", "D");
-        graph.addArc("D", "A");
-        graph.addArc("D", "B");
-        graph.addArc("D", "C");
+        graph.addArc(1, 2);
+        graph.addArc(1, 3);
+        graph.addArc(1, 4);
+        graph.addArc(2, 1);
+        graph.addArc(2, 3);
+        graph.addArc(2, 4);
+        graph.addArc(3, 1);
+        graph.addArc(3, 2);
+        graph.addArc(3, 4);
+        graph.addArc(4, 1);
+        graph.addArc(4, 2);
+        graph.addArc(4, 3);
 
         return createTestInstance("full-n4_m12_k3", graph, 3);
     }
@@ -389,15 +396,15 @@ public abstract class InstanceCreator {
     public static Instance createBFSDAG1() {
         Graph graph = new Graph();
 
-        graph.addArc("A", "B");
-        graph.addArc("A", "C");
-        graph.addArc("A", "D");
-        graph.addArc("B", "F");
-        graph.addArc("C", "E");
-        graph.addArc("D", "E");
-        graph.addArc("E", "G");
-        graph.addArc("F", "A");
-        graph.addArc("G", "A");
+        graph.addArc(1, 2);
+        graph.addArc(1, 3);
+        graph.addArc(1, 4);
+        graph.addArc(2, 6);
+        graph.addArc(3, 5);
+        graph.addArc(4, 5);
+        graph.addArc(5, 7);
+        graph.addArc(6, 1);
+        graph.addArc(7, 1);
 
         return createTestInstance("bfs-n7_m9_k1", graph, 1);
     }
@@ -408,10 +415,10 @@ public abstract class InstanceCreator {
     public static Instance createBFSDAG2() {
         Graph graph = new Graph();
 
-        graph.addArc("A", "B");
-        graph.addArc("B", "C");
-        graph.addArc("C", "D");
-        graph.addArc("D", "B");
+        graph.addArc(1, 2);
+        graph.addArc(2, 3);
+        graph.addArc(3, 4);
+        graph.addArc(4, 2);
 
         return createTestInstance("bfs-n4_m4_k1", graph, 1);
     }
@@ -423,11 +430,11 @@ public abstract class InstanceCreator {
     public static Instance createBFSDAG3() {
         Graph graph = new Graph();
 
-        graph.addArc("A", "B");
-        graph.addArc("B", "C");
-        graph.addArc("C", "D");
-        graph.addArc("D", "A");
-        graph.addArc("C", "B");
+        graph.addArc(1, 2);
+        graph.addArc(2, 3);
+        graph.addArc(3, 4);
+        graph.addArc(4, 1);
+        graph.addArc(3, 2);
 
         return createTestInstance("bfs-n4_m5_k1", graph, 1);
     }
@@ -435,11 +442,11 @@ public abstract class InstanceCreator {
     public static Instance createFlower1() {
         Graph graph = new Graph();
 
-        graph.addArc("U", "Z");
-        graph.addArc("U", "X");
-        graph.addArc("Y", "U");
-        graph.addArc("Z", "U");
-        graph.addArc("X", "Y");
+        graph.addArc(1, 2);
+        graph.addArc(1, 0);
+        graph.addArc(3, 1);
+        graph.addArc(2, 1);
+        graph.addArc(0, 3);
 
         return createTestInstance("flower1", graph, 1);
     }
@@ -447,14 +454,14 @@ public abstract class InstanceCreator {
     public static Instance createFlower2() {
         Graph graph = new Graph();
 
-        graph.addArc("A", "B");
-        graph.addArc("B", "A");
+        graph.addArc(1, 2);
+        graph.addArc(2, 1);
 
-        graph.addArc("A", "C");
-        graph.addArc("C", "A");
+        graph.addArc(1, 3);
+        graph.addArc(3, 1);
 
-        graph.addArc("A", "D");
-        graph.addArc("D", "A");
+        graph.addArc(1, 4);
+        graph.addArc(4, 1);
 
         return createTestInstance("flower2", graph, 1);
     }
@@ -462,18 +469,18 @@ public abstract class InstanceCreator {
     public static Instance createFlower3() {
         Graph graph = new Graph();
 
-        graph.addArc("A", "B");
-        graph.addArc("B", "A");
+        graph.addArc(1, 2);
+        graph.addArc(2, 1);
 
-        graph.addArc("A", "C");
-        graph.addArc("C", "A");
+        graph.addArc(1, 3);
+        graph.addArc(3, 1);
 
-        graph.addArc("A", "D");
-        graph.addArc("D", "A");
+        graph.addArc(1, 4);
+        graph.addArc(4, 1);
 
-        graph.addArc("D", "E");
-        graph.addArc("E", "F");
-        graph.addArc("F", "D");
+        graph.addArc(4, 5);
+        graph.addArc(5, 6);
+        graph.addArc(6, 4);
 
         return createTestInstance("flower3", graph, 1);
     }

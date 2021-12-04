@@ -1,13 +1,15 @@
 package program.algo;
 
 import program.model.Graph;
+import program.model.MaxFlowGraph;
+import program.model.MaxFlowNode;
 import program.model.Node;
 
 import java.util.*;
 
 public abstract class Flowers {
 
-    private static Graph maxFlowGraph;
+    private static MaxFlowGraph maxFlowGraph;
     private static int[][] maxFlowGraphMatrix;
     private static int N;
 
@@ -32,13 +34,13 @@ public abstract class Flowers {
         if(previousU == null){
 
             //Copies
-            maxFlowGraph = new Graph();
+            maxFlowGraph = new MaxFlowGraph();
 
             //Step 1: Replace u
             for(Node node : graph.getNodes()){
                 //Ingoing to node-
                 if(node.getOutIds().contains(u.id)){
-                    maxFlowGraph.addArc(node.label + "+", u.label + "-");
+                    maxFlowGraph.addArc(node.id + "+", u.id + "-");
                 }
             }
 
@@ -47,12 +49,12 @@ public abstract class Flowers {
                 if(w == u) continue;
 
                 //Add connection
-                maxFlowGraph.addArc(w.label + "-", w.label + "+");
+                maxFlowGraph.addArc(w.id + "-", w.id + "+");
 
                 for(Node node : graph.getNodes()){
                     //Ingoing to node-
                     if(node.getOutIds().contains(w.id)){
-                        maxFlowGraph.addArc(node.label + "+", w.label + "-");
+                        maxFlowGraph.addArc(node.id + "+", w.id + "-");
                     }
                 }
             }
@@ -64,15 +66,15 @@ public abstract class Flowers {
         else{
 
             //Change prev u
-            Node prev_u_plus = maxFlowGraph.getNodes().stream().filter(x -> Objects.equals(x.label, previousU.label + "+")).findFirst().get();
-            Node prev_u_minus = maxFlowGraph.getNodes().stream().filter(x -> Objects.equals(x.label, previousU.label + "-")).findFirst().get();
+            MaxFlowNode prev_u_plus = maxFlowGraph.getNodes().stream().filter(x -> Objects.equals(x.label, previousU.id + "+")).findFirst().get();
+            MaxFlowNode prev_u_minus = maxFlowGraph.getNodes().stream().filter(x -> Objects.equals(x.label, previousU.id + "-")).findFirst().get();
             int prev_index_u_plus = maxFlowGraph.getNodes().indexOf(prev_u_plus);
             int prev_index_u_minus = maxFlowGraph.getNodes().indexOf(prev_u_minus);
             maxFlowGraphMatrix[prev_index_u_minus][prev_index_u_plus] = 1;
 
             ////Change new u
-            Node u_plus = maxFlowGraph.getNodes().stream().filter(x -> Objects.equals(x.label, u.label + "+")).findFirst().get();
-            Node u_minus = maxFlowGraph.getNodes().stream().filter(x -> Objects.equals(x.label, u.label + "-")).findFirst().get();
+            MaxFlowNode u_plus = maxFlowGraph.getNodes().stream().filter(x -> Objects.equals(x.label, u.id + "+")).findFirst().get();
+            MaxFlowNode u_minus = maxFlowGraph.getNodes().stream().filter(x -> Objects.equals(x.label, u.id + "-")).findFirst().get();
             int index_u_plus = maxFlowGraph.getNodes().indexOf(u_plus);
             int index_u_minus = maxFlowGraph.getNodes().indexOf(u_minus);
             maxFlowGraphMatrix[index_u_minus][index_u_plus] = 0;
@@ -82,8 +84,8 @@ public abstract class Flowers {
         //Find u
         try{
             //Indexes
-            Node u_plus = maxFlowGraph.getNodes().stream().filter(x -> Objects.equals(x.label, u.label + "+")).findFirst().get();
-            Node u_minus = maxFlowGraph.getNodes().stream().filter(x -> Objects.equals(x.label, u.label + "-")).findFirst().get();
+            MaxFlowNode u_plus = maxFlowGraph.getNodes().stream().filter(x -> Objects.equals(x.label, u.id + "+")).findFirst().get();
+            MaxFlowNode u_minus = maxFlowGraph.getNodes().stream().filter(x -> Objects.equals(x.label, u.id + "-")).findFirst().get();
             int index_u_plus = maxFlowGraph.getNodes().indexOf(u_plus);
             int index_u_minus = maxFlowGraph.getNodes().indexOf(u_minus);
 
@@ -190,14 +192,14 @@ public abstract class Flowers {
         return max_flow;
     }
 
-    static private int[][] convertToMatrix(Graph maxFlowGraph, int N){
+    static private int[][] convertToMatrix(MaxFlowGraph maxFlowGraph, int N){
         int[][] graph = new int[N][N];
 
         for(int i = 0; i < N; i++){
             for(int j = 0; j < N; j++){
-                Node node_i = maxFlowGraph.getNodes().get(i);
-                Node node_j = maxFlowGraph.getNodes().get(j);
-                if(node_i.getOutIds().contains(node_j.id)) graph[i][j] = 1;
+                MaxFlowNode node_i = maxFlowGraph.getNodes().get(i);
+                MaxFlowNode node_j = maxFlowGraph.getNodes().get(j);
+                if(node_i.getOutLabels().contains(node_j.label)) graph[i][j] = 1;
             }
         }
 

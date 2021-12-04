@@ -80,20 +80,19 @@ public class Graph {
         nodes.remove(forbidden.id);
     }
 
-    public void addArc(String a, String b) {
+    public void addArc(Integer nodeId1, Integer nodeId2) {
 
-        // Add nodes if not existing
-        int nextId = nodes.size();
-        if(nodes.values().stream().noneMatch(x -> x.label.equals(a))) nodes.put(nextId, new Node(nextId, a));
-        nextId = nodes.size();
-        if(nodes.values().stream().noneMatch(x -> x.label.equals(b))) nodes.put(nextId, new Node(nextId, b));
-
-        //Get Nodes
-        Node aNode = nodes.values().stream().filter(x -> x.label.equals(a)).findFirst().get();
-        Node bNode = nodes.values().stream().filter(x -> x.label.equals(b)).findFirst().get();
-
-        //Add to neighbours
-        aNode.addOutId(bNode.id);
-        bNode.addInId(aNode.id);
+        Node node1 = nodes.get(nodeId1);
+        if(node1 == null) {
+            node1 = new Node(nodeId1);
+            nodes.put(nodeId1, node1);
+        }
+        Node node2 = nodes.get(nodeId2);
+        if(node2 == null) {
+            node2 = new Node(nodeId2);
+            nodes.put(nodeId2, node2);
+        }
+        node1.addOutId(nodeId2);
+        node2.addInId(nodeId1);
     }
 }

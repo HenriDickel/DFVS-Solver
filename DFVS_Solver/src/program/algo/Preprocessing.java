@@ -25,7 +25,7 @@ public abstract class Preprocessing {
                     for(Integer outId: node.getOutIds()) {
                         Node out = graph.getNode(outId);
                         if(component.contains(out)) { // Only add the arcs which are part of the subgraph
-                            subGraph.addArc(node.label, out.label);
+                            subGraph.addArc(node.id, out.id);
                         }
                     }
                 }
