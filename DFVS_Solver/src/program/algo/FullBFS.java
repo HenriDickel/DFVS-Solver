@@ -12,12 +12,12 @@ import java.util.stream.Collectors;
 
 public class FullBFS {
 
-    public static Cycle findShortestCycle(Graph g){
+    public static Cycle findShortestCycle(Graph graph){
 
         int minBranchSize = Integer.MAX_VALUE;
         List<Cycle> cycles = new ArrayList<>();
-        for (Node node : g.getNodes()) { // Find the best cycle for each node
-            Cycle cycle = SimpleBFS.findBestCycle(g, node, minBranchSize);
+        for (Node node : graph.getNodes()) { // Find the best cycle for each node
+            Cycle cycle = SimpleBFS.findBestCycle(graph, node, minBranchSize);
 
             // Replace the min branch size when found better one
             if (cycle != null) {
