@@ -74,7 +74,7 @@ public class Graph {
             }
             if(node.getInIds().contains(forbidden.id)) {
                 // Transferring edges already happened above
-                node.removeOutId(forbidden.id);
+                node.removeInId(forbidden.id);
             }
         }
         nodes.remove(forbidden.id);

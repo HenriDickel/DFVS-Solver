@@ -76,7 +76,7 @@ public abstract class Log {
 
         try(PrintWriter output = new PrintWriter(new FileWriter(MAIN_LOG_PATH,true)))
         {
-            output.println(instance.NAME + "," + instance.N + "," + instance.M + "," + instance.OPTIMAL_K + "," + instance.solvedK + "," + instance.startK + "," + verified + "," + instance.preRemovedNodes + "," + instance.removedFlowers + "," + instance.recursiveSteps + "," + millis);
+            output.println(instance.NAME + "," + instance.N + "," + instance.M + "," + instance.OPTIMAL_K + "," + instance.S.size() + "," + instance.startK + "," + verified + "," + instance.preRemovedNodes + "," + instance.removedFlowers + "," + instance.recursiveSteps + "," + millis);
         }
         catch (Exception ignored) {}
     }

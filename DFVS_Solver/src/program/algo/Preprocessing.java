@@ -35,30 +35,15 @@ public abstract class Preprocessing {
         return subGraphs;
     }
 
-    private static Node findNextNode(Graph graph) {
-        for(Node node: graph.getNodes()) {
-            if(node.getOutIdCount() == 0 || node.getInIdCount() == 0) { // trivial vertex rule
-                return node;
-            } else if(node.getOutIds().contains(node.id)) { // self loop rule
-                return node;
-            } else if(node.getOutIdCount() == 1) {
-                return node;
-            } else if(node.getInIdCount() == 1) {
-                return node;
-            }
-        }
-        return null;
-    }
-
-    public static void applyRules(Graph graph) {
+    public static List<Node> applyRules(Graph graph) {
+        List<Node> S = new ArrayList<>();
         Node node;
         while((node = findNextNode(graph)) != null) {
             if(node.getOutIdCount() == 0 || node.getInIdCount() == 0) { // remove trivial vertices
                 graph.removeNode(node);
             } else if(node.getOutIds().contains(node.id)) { // remove self loops
                 graph.removeNode(node);
-                Solver.instance.S.add(node);
-                Solver.instance.solvedK++;
+                S.add(node);
             } else if(node.getOutIdCount() == 1) { // chain rule (single out neighbor) in >>> node -> out
                 Integer outId = node.getOutIds().get(0);
                 Node out = graph.getNode(outId);
@@ -81,6 +66,22 @@ public abstract class Preprocessing {
                 System.out.println("Never reached");
             }
         }
+        return S;
+    }
+
+    private static Node findNextNode(Graph graph) {
+        for(Node node: graph.getNodes()) {
+            if(node.getOutIdCount() == 0 || node.getInIdCount() == 0) { // trivial vertex rule
+                return node;
+            } else if(node.getOutIds().contains(node.id)) { // self loop rule
+                return node;
+            } else if(node.getOutIdCount() == 1) {
+                return node;
+            } else if(node.getInIdCount() == 1) {
+                return node;
+            }
+        }
+        return null;
     }
 
     /**
@@ -102,9 +103,7 @@ public abstract class Preprocessing {
                             graph.removeNode(B);
                             graph.removeNode(C);
                             Solver.instance.S.add(B);
-                            Solver.instance.solvedK++;
                             Solver.instance.S.add(C);
-                            Solver.instance.solvedK++;
                         }
                     }
                 }

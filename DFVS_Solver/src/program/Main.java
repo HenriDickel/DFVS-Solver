@@ -39,7 +39,7 @@ public class Main {
             Log.Clear();
             Log.ignore = false;
 
-            //List<Instance> instances = InstanceCreator.createBenchmarkInstances("synth-n_120-m_950-k_20-p_0.1.txt");
+            //List<Instance> instances = InstanceCreator.createBenchmarkInstances(null);
             //instances.forEach(Solver::dfvsSolveInstance);
 
             List<Instance> instances = InstanceCreator.createSelectedInstances();

@@ -43,10 +43,14 @@ public abstract class Solver {
             Graph copy = graph.copy();
             copy.removeNode(node);
             copy.removeForbiddenNodes(forbiddenIds);
+            List<Node> reduceS = Preprocessing.applyRules(copy);
+            int nextK = k - 1 - reduceS.size();
+            if(nextK < 0) return null;
             // Recursive call
-            List<Node> S = dfvsBranch(copy, k - 1, level + 1);
+            List<Node> S = dfvsBranch(copy, nextK, level + 1);
             if (S != null) {
                 S.add(node);
+                S.addAll(reduceS);
                 return S;
             }
             forbiddenIds.add(node.id);
@@ -127,7 +131,8 @@ public abstract class Solver {
 
         // Preprocessing
         Log.debugLog(instance.NAME, "---------- " + instance.NAME + " (n = " + instance.N + ", m = " + instance.M + ", k = " + instance.OPTIMAL_K + ") ----------");
-        Preprocessing.applyRules(initialGraph);
+        List<Node> reduceS = Preprocessing.applyRules(initialGraph);
+        instance.S.addAll(reduceS);
         Preprocessing.removePendantFullTrianglePP(initialGraph);
 
         // Create sub graphs
@@ -135,9 +140,12 @@ public abstract class Solver {
         Log.debugLog(instance.NAME, "Found " + instance.subGraphs.size() + " cyclic sub graph(s) with n = " + instance.subGraphs.stream().map(Graph::getNodeCount).collect(Collectors.toList()));
 
         // Apply rules on each sub graph
-        instance.subGraphs.forEach(Preprocessing::applyRules);
+        for(Graph subGraph: instance.subGraphs) {
+            List<Node> reduceSubS = Preprocessing.applyRules(subGraph);
+            instance.S.addAll(reduceSubS);
+        }
         instance.preRemovedNodes = instance.N - instance.subGraphs.stream().mapToInt(Graph::getNodeCount).sum();
-        instance.startK = instance.solvedK;
+        instance.startK = instance.S.size();
         Log.debugLog(instance.NAME, "Removed " + instance.preRemovedNodes + " nodes in preprocessing, starting with k = " + instance.startK);
 
         // Run for all sub graphs
@@ -145,7 +153,6 @@ public abstract class Solver {
             for (Graph subGraph : instance.subGraphs) {
                 List<Node> S = dfvsSolve(subGraph);
                 instance.S.addAll(S);
-                instance.solvedK += S.size();
             }
         } catch (TimeoutException timeoutException) {
             Long time = Timer.stop();
@@ -159,12 +166,12 @@ public abstract class Solver {
         Long time = Timer.stop();
 
         // Verify
-        boolean verified = instance.solvedK == instance.OPTIMAL_K;
+        boolean verified = instance.S.size() == instance.OPTIMAL_K;
 
         // Log
         Log.mainLog(instance, time, verified);
         Log.detailLog(instance);
-        Log.debugLog(instance.NAME, "Found solution with k = " + instance.solvedK + " in " + Timer.format(time) + " (recursive steps: " + instance.recursiveSteps + ")", !verified);
+        Log.debugLog(instance.NAME, "Found solution with k = " + instance.S.size() + " in " + Timer.format(time) + " (recursive steps: " + instance.recursiveSteps + ")", !verified);
     }
 
 }
