@@ -206,13 +206,13 @@ public abstract class Flowers {
         return graph;
     }
 
-    public static List<Node> UsePetalRule(Graph graph, int k) {
-        List<Node> removedFlowers = new ArrayList<>();
+    public static List<Integer> UsePetalRule(Graph graph, int k) {
+        List<Integer> removedFlowers = new ArrayList<>();
 
         Node removeNode = findRemoveNode(graph, k);
         while(removeNode != null){
-            removedFlowers.add(removeNode);
-            graph.removeNode(removeNode);
+            removedFlowers.add(removeNode.id);
+            graph.removeNode(removeNode.id);
 
             //Get next node
             graph.getNodes().forEach(x -> x.petal--);

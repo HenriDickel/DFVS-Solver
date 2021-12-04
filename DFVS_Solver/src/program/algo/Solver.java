@@ -14,7 +14,7 @@ public abstract class Solver {
 
     public static Instance instance;
 
-    private static List<Node> dfvsBranch(Graph graph, int k, int level) throws TimeoutException {
+    private static List<Integer> dfvsBranch(Graph graph, int k, int level) throws TimeoutException {
 
         // Log recursive steps
         instance.recursiveSteps++;
@@ -41,15 +41,15 @@ public abstract class Solver {
         for (Node node: cycle.getNodes()) {
             // Create a copy of the graph and remove deleted & forbidden nodes
             Graph copy = graph.copy();
-            copy.removeNode(node);
+            copy.removeNode(node.id);
             copy.removeForbiddenNodes(forbiddenIds);
-            List<Node> reduceS = Preprocessing.applyRules(copy);
+            List<Integer> reduceS = Preprocessing.applyRules(copy);
             int nextK = k - 1 - reduceS.size();
             if(nextK < 0) return null;
             // Recursive call
-            List<Node> S = dfvsBranch(copy, nextK, level + 1);
+            List<Integer> S = dfvsBranch(copy, nextK, level + 1);
             if (S != null) {
-                S.add(node);
+                S.add(node.id);
                 S.addAll(reduceS);
                 return S;
             }
@@ -58,11 +58,11 @@ public abstract class Solver {
         return null;
     }
 
-    public static List<Node> dfvsSolve(Graph initialGraph) {
+    public static List<Integer> dfvsSolve(Graph initialGraph) {
 
         // Set Petals
         Flowers.SetAllPetals(initialGraph);
-        List<Node> removedFlowers = new ArrayList<>();
+        List<Integer> removedFlowers = new ArrayList<>();
 
         /*
         String petalsString = "{" + graph.getActiveNodes().stream().map(node -> String.valueOf(node.petal)).collect(Collectors.joining(",")) + "}";
@@ -86,7 +86,7 @@ public abstract class Solver {
 
         // Loop
         int k = 0;
-        List<Node> S = null;
+        List<Integer> S = null;
         while (S == null) { // Loop
             // copy graph (to remove nodes with flower rule)
             Graph copy = initialGraph.copy();
@@ -131,7 +131,7 @@ public abstract class Solver {
 
         // Preprocessing
         Log.debugLog(instance.NAME, "---------- " + instance.NAME + " (n = " + instance.N + ", m = " + instance.M + ", k = " + instance.OPTIMAL_K + ") ----------");
-        List<Node> reduceS = Preprocessing.applyRules(initialGraph);
+        List<Integer> reduceS = Preprocessing.applyRules(initialGraph);
         instance.S.addAll(reduceS);
         Preprocessing.removePendantFullTrianglePP(initialGraph);
 
@@ -141,7 +141,7 @@ public abstract class Solver {
 
         // Apply rules on each sub graph
         for(Graph subGraph: instance.subGraphs) {
-            List<Node> reduceSubS = Preprocessing.applyRules(subGraph);
+            List<Integer> reduceSubS = Preprocessing.applyRules(subGraph);
             instance.S.addAll(reduceSubS);
         }
         instance.preRemovedNodes = instance.N - instance.subGraphs.stream().mapToInt(Graph::getNodeCount).sum();
@@ -151,7 +151,7 @@ public abstract class Solver {
         // Run for all sub graphs
         try {
             for (Graph subGraph : instance.subGraphs) {
-                List<Node> S = dfvsSolve(subGraph);
+                List<Integer> S = dfvsSolve(subGraph);
                 instance.S.addAll(S);
             }
         } catch (TimeoutException timeoutException) {

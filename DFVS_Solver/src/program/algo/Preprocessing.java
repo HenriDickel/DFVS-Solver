@@ -35,15 +35,15 @@ public abstract class Preprocessing {
         return subGraphs;
     }
 
-    public static List<Node> applyRules(Graph graph) {
-        List<Node> S = new ArrayList<>();
+    public static List<Integer> applyRules(Graph graph) {
+        List<Integer> S = new ArrayList<>();
         Node node;
         while((node = findNextNode(graph)) != null) {
             if(node.getOutIdCount() == 0 || node.getInIdCount() == 0) { // remove trivial vertices
-                graph.removeNode(node);
+                graph.removeNode(node.id);
             } else if(node.getOutIds().contains(node.id)) { // remove self loops
-                graph.removeNode(node);
-                S.add(node);
+                graph.removeNode(node.id);
+                S.add(node.id);
             } else if(node.getOutIdCount() == 1) { // chain rule (single out neighbor) in >>> node -> out
                 Integer outId = node.getOutIds().get(0);
                 Node out = graph.getNode(outId);
@@ -52,7 +52,7 @@ public abstract class Preprocessing {
                     in.addOutId(outId);
                     out.addInId(inId);
                 }
-                graph.removeNode(node);
+                graph.removeNode(node.id);
             } else if(node.getInIdCount() == 1) { // chain rule (single in neighbor) in -> node >>> out
                 Integer inId = node.getInIds().get(0);
                 Node in = graph.getNode(inId);
@@ -61,7 +61,7 @@ public abstract class Preprocessing {
                     out.addInId(inId);
                     in.addOutId(outId);
                 }
-                graph.removeNode(node);
+                graph.removeNode(node.id);
             } else {
                 System.out.println("Never reached");
             }
@@ -99,11 +99,11 @@ public abstract class Preprocessing {
                     Node C = graph.getNode(cId);
                     if (B.getOutIds().contains(A.id) && B.getOutIds().contains(C.id)) {
                         if (C.getOutIds().contains(B.id) && C.getOutIds().contains(A.id)) {
-                            graph.removeNode(A);
-                            graph.removeNode(B);
-                            graph.removeNode(C);
-                            Solver.instance.S.add(B);
-                            Solver.instance.S.add(C);
+                            graph.removeNode(A.id);
+                            graph.removeNode(B.id);
+                            graph.removeNode(C.id);
+                            Solver.instance.S.add(B.id);
+                            Solver.instance.S.add(C.id);
                         }
                     }
                 }

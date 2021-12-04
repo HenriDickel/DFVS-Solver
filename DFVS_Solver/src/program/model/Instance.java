@@ -12,7 +12,7 @@ public class Instance {
 
     // Algorithm variables
     public List<Graph> subGraphs;
-    public List<Node> S = new ArrayList<>(); // Result
+    public List<Integer> S = new ArrayList<>(); // Result
 
     // Log variables
     public int startK = 0;

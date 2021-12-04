@@ -48,12 +48,12 @@ public class Graph {
         return copyGraph;
     }
 
-    public void removeNode(Node nodeToRemove) {
+    public void removeNode(Integer nodeId) {
         for (Node node : getNodes()) {
-            node.removeOutId(nodeToRemove.id);
-            node.removeInId(nodeToRemove.id);
+            node.removeOutId(nodeId);
+            node.removeInId(nodeId);
         }
-        nodes.remove(nodeToRemove.id);
+        nodes.remove(nodeId);
     }
 
     public void removeForbiddenNodes(List<Integer> forbiddenNodeIds) {

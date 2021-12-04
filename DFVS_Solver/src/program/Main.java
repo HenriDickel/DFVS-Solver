@@ -27,8 +27,8 @@ public class Main {
             Solver.dfvsSolveInstance(instance);
 
             // Print solution
-            for(Node node : instance.S){
-                System.out.println(node.id);
+            for(Integer nodeId : instance.S){
+                System.out.println(nodeId);
             }
 
             // Print recursive steps
