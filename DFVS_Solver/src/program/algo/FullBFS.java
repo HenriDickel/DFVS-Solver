@@ -10,7 +10,7 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class FullBFS {
+public abstract class FullBFS {
 
     public static Cycle findShortestCycle(Graph graph){
 

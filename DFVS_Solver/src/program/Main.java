@@ -63,6 +63,7 @@ public class Main {
             //Instance instance = InstanceCreator.createFromFile("src/inputs/complex/", "chess-n_700");
             //Instance instance = InstanceCreator.createFromFile("src/inputs/dataset_2/synthetic/", "synth-n_225-m_1390-k_10-p_0.05.txt");
             //Solver.dfvsSolveInstance(instance);
+            //System.out.println(instance.S);
         }
     }
 }

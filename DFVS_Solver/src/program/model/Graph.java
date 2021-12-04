@@ -48,10 +48,21 @@ public class Graph {
         return copyGraph;
     }
 
+    public List<Integer> getUpdatedNodeIds() {
+        return nodes.values().stream().filter(node -> node.updated).map(node -> node.id).collect(Collectors.toList());
+    }
+
     public void removeNode(Integer nodeId) {
-        for (Node node : getNodes()) {
-            node.removeOutId(nodeId);
-            node.removeInId(nodeId);
+        Node node = nodes.get(nodeId);
+        for(Integer outId: node.getOutIds()) {
+            Node out = getNode(outId);
+            out.removeInId(nodeId);
+            out.updated = true;
+        }
+        for(Integer inId: node.getInIds()) {
+            Node in = getNode(inId);
+            in.removeOutId(nodeId);
+            in.updated = true;
         }
         nodes.remove(nodeId);
     }

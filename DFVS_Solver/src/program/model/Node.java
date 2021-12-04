@@ -26,6 +26,9 @@ public class Node {
     public Integer petal;
     public Integer maxPetal;
 
+    // Reduction attribute
+    public Boolean updated = false;
+
     public Node(Integer id) {
         this.id = id;
     }

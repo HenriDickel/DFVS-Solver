@@ -45,7 +45,7 @@ public abstract class Solver {
             copy.removeForbiddenNodes(forbiddenIds);
             List<Integer> reduceS = Preprocessing.applyRules(copy);
             int nextK = k - 1 - reduceS.size();
-            if(nextK < 0) return null;
+            if(nextK < 0) continue;
             // Recursive call
             List<Integer> S = dfvsBranch(copy, nextK, level + 1);
             if (S != null) {
