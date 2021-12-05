@@ -3,7 +3,6 @@ package program;
 import program.algo.*;
 import program.log.Log;
 import program.model.Instance;
-import program.model.Node;
 import program.utils.InstanceCreator;
 
 import java.util.List;
@@ -39,11 +38,11 @@ public class Main {
             Log.Clear();
             Log.ignore = false;
 
-            //List<Instance> instances = InstanceCreator.createBenchmarkInstances("synth-n_225-m_1390-k_10-p_0.05.txt");
-            //instances.forEach(Solver::dfvsSolveInstance);
-
-            List<Instance> instances = InstanceCreator.createSelectedInstances();
+            List<Instance> instances = InstanceCreator.createBenchmarkInstances(null);
             instances.forEach(Solver::dfvsSolveInstance);
+
+            //List<Instance> instances = InstanceCreator.createSelectedInstances();
+            //instances.forEach(Solver::dfvsSolveInstance);
 
             // Solve test instances
             //Instance instance = InstanceCreator.createBFSTest2();
