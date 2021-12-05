@@ -122,6 +122,35 @@ public abstract class InstanceCreator {
         return instances;
     }
 
+    public static List<Instance> createUnsolvedInstances() {
+        List<Instance> instances = new ArrayList<>();
+        instances.add(createFromFile(SYNTHETIC_PATH,"synth-n_275-m_2220-k_30-p_0.05.txt"));
+        instances.add(createFromFile(SYNTHETIC_PATH, "synth-n_120-m_935-k_30-p_0.1.txt"));
+        instances.add(createFromFile(SYNTHETIC_PATH, "synth-n_80-m_483-k_30-p_0.1.txt"));
+        instances.add(createFromFile(SYNTHETIC_PATH, "synth-n_80-m_837-k_30-p_0.2.txt"));
+        instances.add(createFromFile(SYNTHETIC_PATH, "synth-n_160-m_810-k_25-p_0.05.txt"));
+        instances.add(createFromFile(SYNTHETIC_PATH, "synth-n_200-m_2488-k_30-p_0.1.txt"));
+        instances.add(createFromFile(SYNTHETIC_PATH, "synth-n_160-m_1648-k_30-p_0.1.txt"));
+        instances.add(createFromFile(SYNTHETIC_PATH, "synth-n_160-m_800-k_30-p_0.05.txt"));
+        instances.add(createFromFile(SYNTHETIC_PATH, "synth-n_250-m_3681-k_30-p_0.1.txt"));
+        instances.add(createFromFile(SYNTHETIC_PATH,"synth-n_300-m_2561-k_30-p_0.05.txt"));
+        instances.add(createFromFile(SYNTHETIC_PATH, "synth-n_200-m_1319-k_30-p_0.05.txt"));
+        instances.add(createFromFile(SYNTHETIC_PATH, "synth-n_180-m_1022-k_30-p_0.05.txt"));
+        instances.add(createFromFile(SYNTHETIC_PATH, "synth-n_140-m_1284-k_30-p_0.1.txt"));
+        instances.add(createFromFile(SYNTHETIC_PATH, "synth-n_100-m_670-k_30-p_0.1.txt"));
+        instances.add(createFromFile(SYNTHETIC_PATH, "synth-n_180-m_2037-k_30-p_0.1.txt"));
+        instances.add(createFromFile(SYNTHETIC_PATH, "synth-n_250-m_1916-k_30-p_0.05.txt"));
+        instances.add(createFromFile(SYNTHETIC_PATH, "synth-n_225-m_2964-k_30-p_0.1.txt"));
+        instances.add(createFromFile(SYNTHETIC_PATH, "synth-n_275-m_4371-k_30-p_0.1.txt"));
+        instances.add(createFromFile(SYNTHETIC_PATH, "synth-n_225-m_1517-k_30-p_0.05.txt"));
+        instances.add(createFromFile(COMPLEX_PATH, "blogs-n_1000"));
+        instances.add(createFromFile(COMPLEX_PATH, "oz"));
+        instances.add(createFromFile(COMPLEX_PATH, "celegansneural"));
+
+        return instances;
+    }
+
+
     private static List<Instance> createFromFolder(String path) {
         File folder = new File(path);
         File[] listOfFiles = folder.listFiles();

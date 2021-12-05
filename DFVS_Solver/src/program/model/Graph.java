@@ -30,7 +30,7 @@ public class Graph {
     }
 
     public int getEdgeCount() {
-        return (int) nodes.values().stream().map(Node::getOutIdCount).count();
+        return nodes.values().stream().map(Node::getOutIdCount).mapToInt(Integer::valueOf).sum();
     }
 
     public void resetBFS() {
