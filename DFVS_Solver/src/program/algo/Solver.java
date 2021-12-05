@@ -2,6 +2,7 @@ package program.algo;
 
 import program.log.CycleCounter;
 import program.model.*;
+import program.utils.PerformanceTimer;
 import program.utils.TimeoutException;
 import program.log.Log;
 import program.utils.Timer;
@@ -25,14 +26,19 @@ public abstract class Solver {
         // Break to skip the redundant dfvs_branch()-call when k = 0
         if (k <= 0) {
             // Return if graph has no circles
-            if (DAG.isDAG(graph)) {
+            PerformanceTimer.start();
+            boolean isDAG = DAG.isDAG(graph);
+            PerformanceTimer.log(PerformanceTimer.MethodType.DAG);
+            if (isDAG) {
                 return new ArrayList<>();
             }
             else return null;
         }
 
         // Next Cycle
+        PerformanceTimer.start();
         Cycle cycle = FullBFS.findShortestCycle(graph);
+        PerformanceTimer.log(PerformanceTimer.MethodType.BFS);
 
         // Log cycle
         CycleCounter.count(cycle, level);
@@ -40,10 +46,14 @@ public abstract class Solver {
         List<Integer> forbiddenIds = new ArrayList<>();
         for (Node node: cycle.getNodes()) {
             // Create a copy of the graph and remove deleted & forbidden nodes
+            PerformanceTimer.start();
             Graph copy = graph.copy();
             copy.removeNode(node.id);
             copy.removeForbiddenNodes(forbiddenIds);
+            PerformanceTimer.log(PerformanceTimer.MethodType.COPY);
+            PerformanceTimer.start();
             List<Integer> reduceS = Preprocessing.applyRules(copy);
+            PerformanceTimer.log(PerformanceTimer.MethodType.REDUCTION);
             int nextK = k - 1 - reduceS.size();
             if(nextK < 0) continue;
             // Recursive call
@@ -61,8 +71,10 @@ public abstract class Solver {
     public static List<Integer> dfvsSolve(Graph initialGraph) {
 
         // Set Petals
+        PerformanceTimer.start();
         Flowers.SetAllPetals(initialGraph);
         List<Integer> removedFlowers = new ArrayList<>();
+        PerformanceTimer.log(PerformanceTimer.MethodType.FLOWERS);
 
         /*
         String petalsString = "{" + graph.getActiveNodes().stream().map(node -> String.valueOf(node.petal)).collect(Collectors.joining(",")) + "}";
@@ -129,6 +141,9 @@ public abstract class Solver {
 
         Graph initialGraph = instance.subGraphs.get(0);
 
+        PerformanceTimer.reset();
+        PerformanceTimer.start();
+
         // Preprocessing
         Log.debugLog(instance.NAME, "---------- " + instance.NAME + " (n = " + instance.N + ", m = " + instance.M + ", k = " + instance.OPTIMAL_K + ") ----------");
         List<Integer> reduceS = Preprocessing.applyRules(initialGraph);
@@ -144,6 +159,8 @@ public abstract class Solver {
             List<Integer> reduceSubS = Preprocessing.applyRules(subGraph);
             instance.S.addAll(reduceSubS);
         }
+        PerformanceTimer.log(PerformanceTimer.MethodType.PREPROCESSING);
+
         instance.preRemovedNodes = instance.N - instance.subGraphs.stream().mapToInt(Graph::getNodeCount).sum();
         instance.startK = instance.S.size();
         Log.debugLog(instance.NAME, "Removed " + instance.preRemovedNodes + " nodes in preprocessing, starting with k = " + instance.startK);
@@ -169,6 +186,7 @@ public abstract class Solver {
         boolean verified = instance.S.size() == instance.OPTIMAL_K;
 
         // Log
+        PerformanceTimer.printResult();
         Log.mainLog(instance, time, verified);
         Log.detailLog(instance);
         Log.debugLog(instance.NAME, "Found solution with k = " + instance.S.size() + " in " + Timer.format(time) + " (recursive steps: " + instance.recursiveSteps + ")", !verified);

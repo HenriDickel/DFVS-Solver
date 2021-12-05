@@ -3,7 +3,7 @@ package program.utils;
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
 
-public class Timer {
+public abstract class Timer {
 
     private static LocalDateTime startTime;
 
