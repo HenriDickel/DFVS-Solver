@@ -52,12 +52,12 @@ public abstract class PerformanceTimer {
     }
 
     public static void printResult() {
-        System.out.println("Preprocessing: " + millisPreprocessing / 1000000.0f + " ms");
-        System.out.println("Flowers: " + millisFlowers / 1000000.0f + " ms");
-        System.out.println("BFS: " + millisBFS / 1000000.0f + " ms");
-        System.out.println("DAG: " + millisDAG / 1000000.0f + " ms");
-        System.out.println("Copy: " + millisCopy / 1000000.0f + " ms");
-        System.out.println("Reduction: " + millisReduction / 1000000.0f + " ms");
+        System.out.println("# Preprocessing: " + millisPreprocessing / 1000000.0f + " ms");
+        System.out.println("# Flowers: " + millisFlowers / 1000000.0f + " ms");
+        System.out.println("# BFS: " + millisBFS / 1000000.0f + " ms");
+        System.out.println("# DAG: " + millisDAG / 1000000.0f + " ms");
+        System.out.println("# Copy: " + millisCopy / 1000000.0f + " ms");
+        System.out.println("# Reduction: " + millisReduction / 1000000.0f + " ms");
     }
 
     public static void reset() {
