@@ -25,10 +25,11 @@ public abstract class Solver {
                 packingCopy.removeNode(node.id);
             }
             lowerBound++;
+            if(lowerBound>k){
+                return null;
+            }
         }
-        if(lowerBound>k){
-            return null;
-        }
+
         //////////////////////
         // Log recursive steps
         instance.recursiveSteps++;
