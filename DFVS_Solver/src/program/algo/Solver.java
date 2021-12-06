@@ -16,7 +16,21 @@ public abstract class Solver {
     public static Instance instance;
 
     private static List<Integer> dfvsBranch(Graph graph, int k, int level) throws TimeoutException {
+        //Testin if the lower bound is higher than the given k, not counted as recursive step because it prevents them from happening
+        int lowerBound=0;
+        Graph packingCopy = graph.copy();
+        while (LightBFS.findBestCycle(packingCopy) != null) {
+            Cycle tempCycle = LightBFS.findBestCycle(packingCopy);
+            for (Node node : tempCycle.getNodes()) {
+                packingCopy.removeNode(node.id);
+            }
+            lowerBound++;
+            if(lowerBound>k){
+                return null;
+            }
+        }
 
+        //////////////////////
         // Log recursive steps
         instance.recursiveSteps++;
 
@@ -77,18 +91,18 @@ public abstract class Solver {
         PerformanceTimer.log(PerformanceTimer.MethodType.FLOWERS);
 
         /*
-        String petalsString = "{" + graph.getActiveNodes().stream().map(node -> String.valueOf(node.petal)).collect(Collectors.joining(",")) + "}";
+        String petalsString = "{" + initialGraph.getNodes().stream().map(node -> String.valueOf(node.petal)).collect(Collectors.joining(",")) + "}";
 
-         Use flower rule 1
+         //Use flower rule 1
         int removedByRule1Count = 0;
-        for(Node node : graph.getActiveNodes()){
+        for(Node node : initialGraph.getNodes()){
             if(node.petal == 1){
-                for(Node out : node.getInNeighbors()){
-                    for(Node in : node.getInNeighbors()){
-                        in.addOutNeighbor(out);
+                for(Integer out : node.getOutIds()){
+                    for(Integer in : node.getInIds()){
+                        initialGraph.getNode(in).addOutId(out);
                     }
                 }
-                graph.fullyRemoveNode(node);
+                initialGraph.removeNode(node.id);
                 removedByRule1Count++;
             }
         }
@@ -98,6 +112,14 @@ public abstract class Solver {
 
         // Loop
         int k = 0;
+        Graph packingCopy = initialGraph.copy();
+        while (LightBFS.findBestCycle(packingCopy) != null) {
+            Cycle tempCycle = LightBFS.findBestCycle(packingCopy);
+            for (Node node : tempCycle.getNodes()) {
+                packingCopy.removeNode(node.id);
+            }
+            k++;
+        }
         List<Integer> S = null;
         while (S == null) { // Loop
             // copy graph (to remove nodes with flower rule)

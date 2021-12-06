@@ -36,7 +36,7 @@ public abstract class LightBFS {
                 }
             }
         }
-        throw new RuntimeException("Didnt found cycle");
+        return null;
     }
 
     /**
