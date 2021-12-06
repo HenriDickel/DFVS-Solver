@@ -16,26 +16,17 @@ public abstract class Solver {
     public static Instance instance;
 
     private static List<Integer> dfvsBranch(Graph graph, int k, int level) throws TimeoutException {
-        //Testin if the lower bound is higher than the given k, not counted as recursive step because it prevents them from happening
-        int lowerBound=0;
-        Graph packingCopy = graph.copy();
-        while (LightBFS.findBestCycle(packingCopy) != null) {
-            Cycle tempCycle = LightBFS.findBestCycle(packingCopy);
-            for (Node node : tempCycle.getNodes()) {
-                packingCopy.removeNode(node.id);
-            }
-            lowerBound++;
-            if(lowerBound>k){
-                return null;
-            }
-        }
 
-        //////////////////////
         // Log recursive steps
         instance.recursiveSteps++;
 
         // Check Timer
         if (Timer.isTimeout()) throw new TimeoutException("The program stopped after " + Timer.timeout + " minutes.");
+
+        // Checks, if k is within the lower bounds
+        PerformanceTimer.start();
+        if(CyclePacking.checkLowerBounds(graph, k)) return null;
+        PerformanceTimer.log(PerformanceTimer.MethodType.PACKING);
 
         // Break to skip the redundant dfvs_branch()-call when k = 0
         if (k <= 0) {
@@ -112,16 +103,10 @@ public abstract class Solver {
 
         // Loop
         int k = 0;
-        Graph packingCopy = initialGraph.copy();
-        while (LightBFS.findBestCycle(packingCopy) != null) {
-            Cycle tempCycle = LightBFS.findBestCycle(packingCopy);
-            for (Node node : tempCycle.getNodes()) {
-                packingCopy.removeNode(node.id);
-            }
-            k++;
-        }
+
         List<Integer> S = null;
         while (S == null) { // Loop
+
             // copy graph (to remove nodes with flower rule)
             Graph copy = initialGraph.copy();
 
