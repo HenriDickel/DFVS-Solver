@@ -11,7 +11,7 @@ public abstract class LightBFS {
 
     private final static List<Node> queue = new LinkedList<>();
 
-    public static Cycle findBestCycle(Graph graph) {
+    public static Cycle findShortestCycle(Graph graph) {
 
         for(Node node: graph.getNodes()) {
 

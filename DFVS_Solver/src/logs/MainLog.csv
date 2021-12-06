@@ -1,0 +1,3 @@
+name,n,m,k_optimal,k_solved,k_start,verified,pre_removed_nodes,removed_flowers,recursive_steps,millis
+oz,217,2672,138,2,2,false,7,0,433828,180000
+celegansneural,297,4296,187,6,6,false,25,0,403355,180000

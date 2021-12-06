@@ -179,6 +179,7 @@ public abstract class Solver {
             }
         } catch (TimeoutException timeoutException) {
             Long time = Timer.stop();
+            PerformanceTimer.printResult();
             Log.mainLog(instance, time, false);
             Log.detailLog(instance);
             Log.debugLog(instance.NAME, "Found no solution in " + Timer.format(time) + " (recursive steps: " + instance.recursiveSteps + ")", true);

@@ -11,7 +11,7 @@ public abstract class CyclePacking {
         Graph packingCopy = graph.copy();
         int lowerBound = 0;
         Cycle cycle;
-        while ((cycle = LightBFS.findBestCycle(packingCopy)) != null) {
+        while ((cycle = LightBFS.findShortestCycle(packingCopy)) != null) {
             for (Node node : cycle.getNodes()) {
                 packingCopy.removeNode(node.id);
             }
