@@ -1,0 +1,9 @@
+name,n,m,k_optimal,k_solved,k_start,verified,pre_removed_nodes,removed_flowers,recursive_steps,millis
+synth-n_100-m_1231-k_25-p_0.2.txt,100,1231,25,25,0,true,3,0,33592,5856
+synth-n_100-m_643-k_25-p_0.1.txt,100,643,25,25,0,true,15,0,375439,17966
+synth-n_120-m_492-k_30-p_0.05.txt,120,492,21,21,0,true,31,0,341997,14074
+synth-n_120-m_921-k_25-p_0.1.txt,120,921,25,25,0,true,12,0,234438,27178
+synth-n_140-m_2487-k_30-p_0.2.txt,140,2487,30,30,0,true,1,0,41733,20781
+synth-n_140-m_625-k_25-p_0.05.txt,140,625,22,22,0,true,44,0,32312,1831
+synth-n_160-m_3134-k_30-p_0.2.txt,160,3134,30,30,0,true,0,1,30462,22391
+synth-n_180-m_1057-k_25-p_0.05.txt,180,1057,22,22,0,true,41,0,124097,19795

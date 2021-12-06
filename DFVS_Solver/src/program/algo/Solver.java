@@ -52,7 +52,7 @@ public abstract class Solver {
             copy.removeForbiddenNodes(forbiddenIds);
             PerformanceTimer.log(PerformanceTimer.MethodType.COPY);
             PerformanceTimer.start();
-            List<Integer> reduceS = Preprocessing.applyRules(copy);
+            List<Integer> reduceS = Reduction.applyRules(copy, false);
             PerformanceTimer.log(PerformanceTimer.MethodType.REDUCTION);
             int nextK = k - 1 - reduceS.size();
             if(nextK < 0) continue;
@@ -146,9 +146,8 @@ public abstract class Solver {
 
         // Preprocessing
         Log.debugLog(instance.NAME, "---------- " + instance.NAME + " (n = " + instance.N + ", m = " + instance.M + ", k = " + instance.OPTIMAL_K + ") ----------");
-        List<Integer> reduceS = Preprocessing.applyRules(initialGraph);
+        List<Integer> reduceS = Reduction.applyRules(initialGraph, true);
         instance.S.addAll(reduceS);
-        Preprocessing.removePendantFullTrianglePP(initialGraph);
 
         // Create sub graphs
         instance.subGraphs = Preprocessing.findCyclicSubGraphs(initialGraph);
@@ -156,7 +155,7 @@ public abstract class Solver {
 
         // Apply rules on each sub graph
         for(Graph subGraph: instance.subGraphs) {
-            List<Integer> reduceSubS = Preprocessing.applyRules(subGraph);
+            List<Integer> reduceSubS = Reduction.applyRules(subGraph, true);
             instance.S.addAll(reduceSubS);
         }
         PerformanceTimer.log(PerformanceTimer.MethodType.PREPROCESSING);

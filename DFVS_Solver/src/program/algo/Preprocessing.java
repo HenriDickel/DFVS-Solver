@@ -35,55 +35,6 @@ public abstract class Preprocessing {
         return subGraphs;
     }
 
-    public static List<Integer> applyRules(Graph graph) {
-        List<Integer> S = new ArrayList<>();
-        Node node;
-        while((node = findNextNode(graph)) != null) {
-            if(node.getOutIdCount() == 0 || node.getInIdCount() == 0) { // remove trivial vertices
-                graph.removeNode(node.id);
-            } else if(node.getOutIds().contains(node.id)) { // remove self loops
-                graph.removeNode(node.id);
-                S.add(node.id);
-            } else if(node.getOutIdCount() == 1) { // chain rule (single out neighbor) in >>> node -> out
-                Integer outId = node.getOutIds().get(0);
-                Node out = graph.getNode(outId);
-                for(Integer inId: node.getInIds()) {
-                    Node in = graph.getNode(inId);
-                    in.addOutId(outId);
-                    out.addInId(inId);
-                }
-                graph.removeNode(node.id);
-            } else if(node.getInIdCount() == 1) { // chain rule (single in neighbor) in -> node >>> out
-                Integer inId = node.getInIds().get(0);
-                Node in = graph.getNode(inId);
-                for(Integer outId: node.getOutIds()) {
-                    Node out = graph.getNode(outId);
-                    out.addInId(inId);
-                    in.addOutId(outId);
-                }
-                graph.removeNode(node.id);
-            } else {
-                System.out.println("Never reached");
-            }
-        }
-        return S;
-    }
-
-    private static Node findNextNode(Graph graph) {
-        for(Node node: graph.getNodes()) {
-            if(node.getOutIdCount() == 0 || node.getInIdCount() == 0) { // trivial vertex rule
-                return node;
-            } else if(node.getOutIds().contains(node.id)) { // self loop rule
-                return node;
-            } else if(node.getOutIdCount() == 1) {
-                return node;
-            } else if(node.getInIdCount() == 1) {
-                return node;
-            }
-        }
-        return null;
-    }
-
     /**
      * Improvement of the normal triangle rule that only needs one Node to only be in the fully connected graph
      */

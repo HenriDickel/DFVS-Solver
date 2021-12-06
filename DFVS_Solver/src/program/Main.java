@@ -38,11 +38,11 @@ public class Main {
             Log.Clear();
             Log.ignore = false;
 
-            List<Instance> instances = InstanceCreator.createBenchmarkInstances(null);
-            instances.forEach(Solver::dfvsSolveInstance);
-
-            //List<Instance> instances = InstanceCreator.createSelectedInstances();
+            //List<Instance> instances = InstanceCreator.createBenchmarkInstances(null);
             //instances.forEach(Solver::dfvsSolveInstance);
+
+            List<Instance> instances = InstanceCreator.createSelectedInstances();
+            instances.forEach(Solver::dfvsSolveInstance);
 
             // Solve test instances
             //Instance instance = InstanceCreator.createBFSTest2();
@@ -59,8 +59,8 @@ public class Main {
 
             // Solve instance from file
             //Instance instance = InstanceCreator.createFromFile("src/inputs/complex/", "biology-n_49-m_689-p_0.9-14");
-            //Instance instance = InstanceCreator.createFromFile("src/inputs/complex/", "chess-n_700");
-            //Instance instance = InstanceCreator.createFromFile("src/inputs/dataset_2/synthetic/", "synth-n_225-m_1390-k_10-p_0.05.txt");
+            //Instance instance = InstanceCreator.createFromFile("src/inputs/dataset_2/complex/", "oz");
+            //Instance instance = InstanceCreator.createFromFile("src/inputs/dataset_2/synthetic/", "synth-n_120-m_921-k_25-p_0.1.txt");
             //Solver.dfvsSolveInstance(instance);
             //System.out.println(instance.S);
         }

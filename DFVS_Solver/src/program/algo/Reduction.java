@@ -8,23 +8,42 @@ import java.util.List;
 
 public abstract class Reduction {
 
+    public static List<Integer> applyRules(Graph graph, boolean updateAll) {
 
-    public static List<Integer> applyRules(Graph graph) {
+        if(updateAll) graph.setAllNodesUpdated();
 
         List<Integer> reduceS = new ArrayList<>();
         List<Integer> updatedNodeIds;
         while(!(updatedNodeIds = graph.getUpdatedNodeIds()).isEmpty()) {
-            for(Integer nodeId: updatedNodeIds) {
-                Node node = graph.getNode(nodeId);
-                if(node.getOutIds().contains(nodeId)) { // self loop
-                    graph.removeNode(nodeId);
-                    reduceS.add(nodeId);
-                } else {
-                    node.updated = false;
+            for(Integer id: updatedNodeIds) {
+                Node node = graph.getNode(id);
+                node.updated = false;
+                if(node.getOutIdCount() == 0 || node.getInIdCount() == 0) { // trivial vertex
+                    graph.removeNode(node.id);
+                } else if(node.getOutIds().contains(node.id)) { // self loop
+                    graph.removeNode(node.id);
+                    reduceS.add(node.id);
+                } else if(node.getOutIdCount() == 1) { // chain rule (in >>> node -> out)
+                    Integer outId = node.getOutIds().get(0);
+                    Node out = graph.getNode(outId);
+                    for(Integer inId: node.getInIds()) {
+                        Node in = graph.getNode(inId);
+                        in.addOutId(outId);
+                        out.addInId(inId);
+                    }
+                    graph.removeNode(node.id);
+                } else if(node.getInIdCount() == 1) { // chain rule (in -> node >>> out)
+                    Integer inId = node.getInIds().get(0);
+                    Node in = graph.getNode(inId);
+                    for(Integer outId: node.getOutIds()) {
+                        Node out = graph.getNode(outId);
+                        out.addInId(inId);
+                        in.addOutId(outId);
+                    }
+                    graph.removeNode(node.id);
                 }
             }
         }
         return reduceS;
     }
-
 }

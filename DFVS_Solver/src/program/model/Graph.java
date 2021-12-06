@@ -48,10 +48,18 @@ public class Graph {
         return copyGraph;
     }
 
+    public void setAllNodesUpdated() {
+        nodes.values().forEach(node -> node.updated = true);
+    }
+
     public List<Integer> getUpdatedNodeIds() {
         return nodes.values().stream().filter(node -> node.updated).map(node -> node.id).collect(Collectors.toList());
     }
 
+    /**
+     * Fully removes a node from the graph. Also removes the node id from the neighbors inIds and outIds.
+     * @param nodeId The node id.
+     */
     public void removeNode(Integer nodeId) {
         Node node = nodes.get(nodeId);
         for(Integer outId: node.getOutIds()) {
@@ -81,14 +89,9 @@ public class Graph {
                     out.addInId(node.id);
                     node.addOutId(out.id);
                 }
-                node.removeOutId(forbidden.id);
-            }
-            if(node.getInIds().contains(forbidden.id)) {
-                // Transferring edges already happened above
-                node.removeInId(forbidden.id);
             }
         }
-        nodes.remove(forbidden.id);
+        removeNode(forbidden.id);
     }
 
     public void addArc(Integer nodeId1, Integer nodeId2) {
