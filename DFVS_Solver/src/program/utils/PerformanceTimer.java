@@ -60,13 +60,8 @@ public abstract class PerformanceTimer {
     }
 
     public static void printResult() {
-        Log.debugLog(Solver.instance.NAME, "Preprocessing: " + millisPreprocessing / 1000000 + " ms");
-        Log.debugLog(Solver.instance.NAME, "Flowers: " + millisFlowers / 1000000 + " ms");
-        Log.debugLog(Solver.instance.NAME, "BFS: " + millisBFS / 1000000 + " ms");
-        Log.debugLog(Solver.instance.NAME, "DAG: " + millisDAG / 1000000 + " ms");
-        Log.debugLog(Solver.instance.NAME, "Copy: " + millisCopy / 1000000 + " ms");
-        Log.debugLog(Solver.instance.NAME, "Reduction: " + millisReduction / 1000000 + " ms");
-        Log.debugLog(Solver.instance.NAME, "Packing: " + millisPacking / 1000000 + " ms");
+        Log.debugLog(Solver.instance.NAME, "Preprocessing: " + millisPreprocessing / 1000000 + " ms, Flowers: " + millisFlowers / 1000000 + " ms, BFS: " + millisBFS / 1000000 +
+        " ms, DAG: " + millisDAG / 1000000 + " ms, Copy: " + millisCopy / 1000000 + " ms, Reduction: " + millisReduction / 1000000 + " ms, Packing: " + millisPacking / 1000000 + " ms");
     }
 
     public static void reset() {

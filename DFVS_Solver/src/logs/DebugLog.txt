@@ -1,22 +1,128 @@
-[2021-12-06 16:37:20.094]                                 oz: ---------- oz (n = 217, m = 2672, k = 138) ----------
-[2021-12-06 16:37:20.117]                                 oz: Found 1 cyclic sub graph(s) with n = [210]
-[2021-12-06 16:37:20.121]                                 oz: Removed 7 nodes in preprocessing, starting with k = 2
-[2021-12-06 16:40:20.080]                                 oz: Preprocessing: 37 ms
-[2021-12-06 16:40:20.080]                                 oz: Flowers: 1804 ms
-[2021-12-06 16:40:20.081]                                 oz: BFS: 82062 ms
-[2021-12-06 16:40:20.081]                                 oz: DAG: 0 ms
-[2021-12-06 16:40:20.081]                                 oz: Copy: 15140 ms
-[2021-12-06 16:40:20.082]                                 oz: Reduction: 5232 ms
-[2021-12-06 16:40:20.082]                                 oz: Packing: 40899 ms
-[2021-12-06 16:40:20.096]                                 oz: Found no solution in 180s (recursive steps: 433828)
-[2021-12-06 16:40:20.096]                     celegansneural: ---------- celegansneural (n = 297, m = 4296, k = 187) ----------
-[2021-12-06 16:40:20.101]                     celegansneural: Found 1 cyclic sub graph(s) with n = [272]
-[2021-12-06 16:40:20.101]                     celegansneural: Removed 25 nodes in preprocessing, starting with k = 6
-[2021-12-06 16:43:20.097]                     celegansneural: Preprocessing: 5 ms
-[2021-12-06 16:43:20.097]                     celegansneural: Flowers: 4048 ms
-[2021-12-06 16:43:20.097]                     celegansneural: BFS: 84684 ms
-[2021-12-06 16:43:20.097]                     celegansneural: DAG: 0 ms
-[2021-12-06 16:43:20.097]                     celegansneural: Copy: 13995 ms
-[2021-12-06 16:43:20.098]                     celegansneural: Reduction: 5493 ms
-[2021-12-06 16:43:20.098]                     celegansneural: Packing: 40290 ms
-[2021-12-06 16:43:20.100]                     celegansneural: Found no solution in 180s (recursive steps: 403355)
+[2021-12-08 15:47:59.964]       synth-n_100-m_1093-k_5-p_0.2.txt: Couldn't read  file 'optimal_solution_sizes.txt'
+[2021-12-08 15:47:59.987]       synth-n_100-m_1093-k_5-p_0.2.txt: ---------- synth-n_100-m_1093-k_5-p_0.2.txt (n = 100, m = 1093, k = -1) ----------
+[2021-12-08 15:48:00.001]       synth-n_100-m_1093-k_5-p_0.2.txt: Found 0 cyclic sub graph(s) with n = []
+[2021-12-08 15:48:00.004]       synth-n_100-m_1093-k_5-p_0.2.txt: Removed 100 nodes in preprocessing, starting with k = 5
+[2021-12-08 15:48:00.009]       synth-n_100-m_1093-k_5-p_0.2.txt: Preprocessing: 20 ms, Flowers: 0 ms, BFS: 0 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 0 ms
+[2021-12-08 15:48:00.023]       synth-n_100-m_1093-k_5-p_0.2.txt: Found solution with k = 5 in 23ms (recursive steps: 0)
+[2021-12-08 15:48:00.025]      synth-n_100-m_1146-k_10-p_0.2.txt: Couldn't read  file 'optimal_solution_sizes.txt'
+[2021-12-08 15:48:00.025]      synth-n_100-m_1146-k_10-p_0.2.txt: ---------- synth-n_100-m_1146-k_10-p_0.2.txt (n = 100, m = 1146, k = -1) ----------
+[2021-12-08 15:48:00.029]      synth-n_100-m_1146-k_10-p_0.2.txt: Found 1 cyclic sub graph(s) with n = [92]
+[2021-12-08 15:48:00.029]      synth-n_100-m_1146-k_10-p_0.2.txt: Removed 8 nodes in preprocessing, starting with k = 0
+[2021-12-08 15:48:00.248]      synth-n_100-m_1146-k_10-p_0.2.txt: Removed 7 flower nodes by petal rule 2
+[2021-12-08 15:48:00.248]      synth-n_100-m_1146-k_10-p_0.2.txt: Preprocessing: 3 ms, Flowers: 198 ms, BFS: 6 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 2 ms
+[2021-12-08 15:48:00.254]      synth-n_100-m_1146-k_10-p_0.2.txt: Found solution with k = 10 in 223ms (recursive steps: 3)
+[2021-12-08 15:48:00.256]      synth-n_100-m_1151-k_15-p_0.2.txt: Couldn't read  file 'optimal_solution_sizes.txt'
+[2021-12-08 15:48:00.256]      synth-n_100-m_1151-k_15-p_0.2.txt: ---------- synth-n_100-m_1151-k_15-p_0.2.txt (n = 100, m = 1151, k = -1) ----------
+[2021-12-08 15:48:00.257]      synth-n_100-m_1151-k_15-p_0.2.txt: Found 1 cyclic sub graph(s) with n = [97]
+[2021-12-08 15:48:00.258]      synth-n_100-m_1151-k_15-p_0.2.txt: Removed 3 nodes in preprocessing, starting with k = 0
+[2021-12-08 15:48:00.469]      synth-n_100-m_1151-k_15-p_0.2.txt: Removed 1 flower nodes by petal rule 2
+[2021-12-08 15:48:00.469]      synth-n_100-m_1151-k_15-p_0.2.txt: Preprocessing: 1 ms, Flowers: 195 ms, BFS: 5 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 4 ms
+[2021-12-08 15:48:00.470]      synth-n_100-m_1151-k_15-p_0.2.txt: Found solution with k = 15 in 213ms (recursive steps: 18)
+[2021-12-08 15:48:00.472]      synth-n_100-m_1229-k_20-p_0.2.txt: Couldn't read  file 'optimal_solution_sizes.txt'
+[2021-12-08 15:48:00.472]      synth-n_100-m_1229-k_20-p_0.2.txt: ---------- synth-n_100-m_1229-k_20-p_0.2.txt (n = 100, m = 1229, k = -1) ----------
+[2021-12-08 15:48:00.473]      synth-n_100-m_1229-k_20-p_0.2.txt: Found 1 cyclic sub graph(s) with n = [100]
+[2021-12-08 15:48:00.474]      synth-n_100-m_1229-k_20-p_0.2.txt: Removed 0 nodes in preprocessing, starting with k = 0
+[2021-12-08 15:48:00.700]      synth-n_100-m_1229-k_20-p_0.2.txt: Removed 0 flower nodes by petal rule 2
+[2021-12-08 15:48:00.701]      synth-n_100-m_1229-k_20-p_0.2.txt: Preprocessing: 1 ms, Flowers: 209 ms, BFS: 6 ms, DAG: 0 ms, Copy: 1 ms, Reduction: 0 ms, Packing: 4 ms
+[2021-12-08 15:48:00.701]      synth-n_100-m_1229-k_20-p_0.2.txt: Found solution with k = 20 in 228ms (recursive steps: 27)
+[2021-12-08 15:48:00.703]      synth-n_100-m_1263-k_25-p_0.2.txt: Couldn't read  file 'optimal_solution_sizes.txt'
+[2021-12-08 15:48:00.703]      synth-n_100-m_1263-k_25-p_0.2.txt: ---------- synth-n_100-m_1263-k_25-p_0.2.txt (n = 100, m = 1263, k = -1) ----------
+[2021-12-08 15:48:00.704]      synth-n_100-m_1263-k_25-p_0.2.txt: Found 1 cyclic sub graph(s) with n = [100]
+[2021-12-08 15:48:00.704]      synth-n_100-m_1263-k_25-p_0.2.txt: Removed 0 nodes in preprocessing, starting with k = 0
+[2021-12-08 15:48:00.934]      synth-n_100-m_1263-k_25-p_0.2.txt: Removed 0 flower nodes by petal rule 2
+[2021-12-08 15:48:00.935]      synth-n_100-m_1263-k_25-p_0.2.txt: Preprocessing: 1 ms, Flowers: 184 ms, BFS: 20 ms, DAG: 0 ms, Copy: 5 ms, Reduction: 2 ms, Packing: 7 ms
+[2021-12-08 15:48:00.937]      synth-n_100-m_1263-k_25-p_0.2.txt: Found solution with k = 25 in 232ms (recursive steps: 91)
+[2021-12-08 15:48:00.942]      synth-n_100-m_1275-k_30-p_0.2.txt: Couldn't read  file 'optimal_solution_sizes.txt'
+[2021-12-08 15:48:00.943]      synth-n_100-m_1275-k_30-p_0.2.txt: ---------- synth-n_100-m_1275-k_30-p_0.2.txt (n = 100, m = 1275, k = -1) ----------
+[2021-12-08 15:48:00.944]      synth-n_100-m_1275-k_30-p_0.2.txt: Found 1 cyclic sub graph(s) with n = [100]
+[2021-12-08 15:48:00.944]      synth-n_100-m_1275-k_30-p_0.2.txt: Removed 0 nodes in preprocessing, starting with k = 0
+[2021-12-08 15:48:01.260]      synth-n_100-m_1275-k_30-p_0.2.txt: Removed 0 flower nodes by petal rule 2
+[2021-12-08 15:48:01.261]      synth-n_100-m_1275-k_30-p_0.2.txt: Preprocessing: 1 ms, Flowers: 166 ms, BFS: 53 ms, DAG: 0 ms, Copy: 27 ms, Reduction: 6 ms, Packing: 26 ms
+[2021-12-08 15:48:01.262]      synth-n_100-m_1275-k_30-p_0.2.txt: Found solution with k = 30 in 317ms (recursive steps: 458)
+[2021-12-08 15:48:01.262]       synth-n_100-m_263-k_5-p_0.05.txt: Couldn't read  file 'optimal_solution_sizes.txt'
+[2021-12-08 15:48:01.263]       synth-n_100-m_263-k_5-p_0.05.txt: ---------- synth-n_100-m_263-k_5-p_0.05.txt (n = 99, m = 263, k = -1) ----------
+[2021-12-08 15:48:01.263]       synth-n_100-m_263-k_5-p_0.05.txt: Found 0 cyclic sub graph(s) with n = []
+[2021-12-08 15:48:01.263]       synth-n_100-m_263-k_5-p_0.05.txt: Removed 99 nodes in preprocessing, starting with k = 5
+[2021-12-08 15:48:01.263]       synth-n_100-m_263-k_5-p_0.05.txt: Preprocessing: 0 ms, Flowers: 0 ms, BFS: 0 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 0 ms
+[2021-12-08 15:48:01.264]       synth-n_100-m_263-k_5-p_0.05.txt: Found solution with k = 5 in 0ms (recursive steps: 0)
+[2021-12-08 15:48:01.265]      synth-n_100-m_289-k_10-p_0.05.txt: Couldn't read  file 'optimal_solution_sizes.txt'
+[2021-12-08 15:48:01.265]      synth-n_100-m_289-k_10-p_0.05.txt: ---------- synth-n_100-m_289-k_10-p_0.05.txt (n = 99, m = 289, k = -1) ----------
+[2021-12-08 15:48:01.265]      synth-n_100-m_289-k_10-p_0.05.txt: Found 1 cyclic sub graph(s) with n = [13]
+[2021-12-08 15:48:01.265]      synth-n_100-m_289-k_10-p_0.05.txt: Removed 86 nodes in preprocessing, starting with k = 1
+[2021-12-08 15:48:01.266]      synth-n_100-m_289-k_10-p_0.05.txt: Removed 0 flower nodes by petal rule 2
+[2021-12-08 15:48:01.266]      synth-n_100-m_289-k_10-p_0.05.txt: Preprocessing: 0 ms, Flowers: 0 ms, BFS: 0 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 0 ms
+[2021-12-08 15:48:01.267]      synth-n_100-m_289-k_10-p_0.05.txt: Found solution with k = 4 in 1ms (recursive steps: 3)
+[2021-12-08 15:48:01.267]      synth-n_100-m_302-k_15-p_0.05.txt: Couldn't read  file 'optimal_solution_sizes.txt'
+[2021-12-08 15:48:01.268]      synth-n_100-m_302-k_15-p_0.05.txt: ---------- synth-n_100-m_302-k_15-p_0.05.txt (n = 100, m = 302, k = -1) ----------
+[2021-12-08 15:48:01.268]      synth-n_100-m_302-k_15-p_0.05.txt: Found 1 cyclic sub graph(s) with n = [13]
+[2021-12-08 15:48:01.268]      synth-n_100-m_302-k_15-p_0.05.txt: Removed 87 nodes in preprocessing, starting with k = 4
+[2021-12-08 15:48:01.269]      synth-n_100-m_302-k_15-p_0.05.txt: Removed 1 flower nodes by petal rule 2
+[2021-12-08 15:48:01.269]      synth-n_100-m_302-k_15-p_0.05.txt: Preprocessing: 0 ms, Flowers: 0 ms, BFS: 0 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 0 ms
+[2021-12-08 15:48:01.270]      synth-n_100-m_302-k_15-p_0.05.txt: Found solution with k = 8 in 1ms (recursive steps: 4)
+[2021-12-08 15:48:01.270]      synth-n_100-m_332-k_20-p_0.05.txt: Couldn't read  file 'optimal_solution_sizes.txt'
+[2021-12-08 15:48:01.271]      synth-n_100-m_332-k_20-p_0.05.txt: ---------- synth-n_100-m_332-k_20-p_0.05.txt (n = 100, m = 332, k = -1) ----------
+[2021-12-08 15:48:01.271]      synth-n_100-m_332-k_20-p_0.05.txt: Found 1 cyclic sub graph(s) with n = [43]
+[2021-12-08 15:48:01.271]      synth-n_100-m_332-k_20-p_0.05.txt: Removed 57 nodes in preprocessing, starting with k = 3
+[2021-12-08 15:48:01.283]      synth-n_100-m_332-k_20-p_0.05.txt: Removed 0 flower nodes by petal rule 2
+[2021-12-08 15:48:01.283]      synth-n_100-m_332-k_20-p_0.05.txt: Preprocessing: 0 ms, Flowers: 9 ms, BFS: 0 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 0 ms
+[2021-12-08 15:48:01.284]      synth-n_100-m_332-k_20-p_0.05.txt: Found solution with k = 14 in 12ms (recursive steps: 32)
+[2021-12-08 15:48:01.285]      synth-n_100-m_336-k_30-p_0.05.txt: Couldn't read  file 'optimal_solution_sizes.txt'
+[2021-12-08 15:48:01.285]      synth-n_100-m_336-k_30-p_0.05.txt: ---------- synth-n_100-m_336-k_30-p_0.05.txt (n = 100, m = 336, k = -1) ----------
+[2021-12-08 15:48:01.285]      synth-n_100-m_336-k_30-p_0.05.txt: Found 1 cyclic sub graph(s) with n = [58]
+[2021-12-08 15:48:01.286]      synth-n_100-m_336-k_30-p_0.05.txt: Removed 42 nodes in preprocessing, starting with k = 1
+[2021-12-08 15:48:01.324]      synth-n_100-m_336-k_30-p_0.05.txt: Removed 0 flower nodes by petal rule 2
+[2021-12-08 15:48:01.324]      synth-n_100-m_336-k_30-p_0.05.txt: Preprocessing: 0 ms, Flowers: 24 ms, BFS: 3 ms, DAG: 0 ms, Copy: 2 ms, Reduction: 1 ms, Packing: 2 ms
+[2021-12-08 15:48:01.325]      synth-n_100-m_336-k_30-p_0.05.txt: Found solution with k = 15 in 39ms (recursive steps: 280)
+[2021-12-08 15:48:01.325]      synth-n_100-m_343-k_25-p_0.05.txt: Couldn't read  file 'optimal_solution_sizes.txt'
+[2021-12-08 15:48:01.325]      synth-n_100-m_343-k_25-p_0.05.txt: ---------- synth-n_100-m_343-k_25-p_0.05.txt (n = 100, m = 343, k = -1) ----------
+[2021-12-08 15:48:01.326]      synth-n_100-m_343-k_25-p_0.05.txt: Found 1 cyclic sub graph(s) with n = [57]
+[2021-12-08 15:48:01.326]      synth-n_100-m_343-k_25-p_0.05.txt: Removed 43 nodes in preprocessing, starting with k = 0
+[2021-12-08 15:48:01.355]      synth-n_100-m_343-k_25-p_0.05.txt: Removed 0 flower nodes by petal rule 2
+[2021-12-08 15:48:01.355]      synth-n_100-m_343-k_25-p_0.05.txt: Preprocessing: 0 ms, Flowers: 21 ms, BFS: 1 ms, DAG: 0 ms, Copy: 1 ms, Reduction: 1 ms, Packing: 1 ms
+[2021-12-08 15:48:01.356]      synth-n_100-m_343-k_25-p_0.05.txt: Found solution with k = 14 in 29ms (recursive steps: 127)
+[2021-12-08 15:48:01.357]        synth-n_100-m_515-k_5-p_0.1.txt: Couldn't read  file 'optimal_solution_sizes.txt'
+[2021-12-08 15:48:01.357]        synth-n_100-m_515-k_5-p_0.1.txt: ---------- synth-n_100-m_515-k_5-p_0.1.txt (n = 100, m = 515, k = -1) ----------
+[2021-12-08 15:48:01.357]        synth-n_100-m_515-k_5-p_0.1.txt: Found 1 cyclic sub graph(s) with n = [63]
+[2021-12-08 15:48:01.358]        synth-n_100-m_515-k_5-p_0.1.txt: Removed 37 nodes in preprocessing, starting with k = 0
+[2021-12-08 15:48:01.387]        synth-n_100-m_515-k_5-p_0.1.txt: Removed 2 flower nodes by petal rule 2
+[2021-12-08 15:48:01.387]        synth-n_100-m_515-k_5-p_0.1.txt: Preprocessing: 0 ms, Flowers: 28 ms, BFS: 0 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 0 ms
+[2021-12-08 15:48:01.388]        synth-n_100-m_515-k_5-p_0.1.txt: Found solution with k = 5 in 30ms (recursive steps: 3)
+[2021-12-08 15:48:01.389]       synth-n_100-m_591-k_15-p_0.1.txt: Couldn't read  file 'optimal_solution_sizes.txt'
+[2021-12-08 15:48:01.389]       synth-n_100-m_591-k_15-p_0.1.txt: ---------- synth-n_100-m_591-k_15-p_0.1.txt (n = 100, m = 591, k = -1) ----------
+[2021-12-08 15:48:01.389]       synth-n_100-m_591-k_15-p_0.1.txt: Found 1 cyclic sub graph(s) with n = [83]
+[2021-12-08 15:48:01.390]       synth-n_100-m_591-k_15-p_0.1.txt: Removed 17 nodes in preprocessing, starting with k = 0
+[2021-12-08 15:48:01.465]       synth-n_100-m_591-k_15-p_0.1.txt: Removed 0 flower nodes by petal rule 2
+[2021-12-08 15:48:01.465]       synth-n_100-m_591-k_15-p_0.1.txt: Preprocessing: 0 ms, Flowers: 70 ms, BFS: 1 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 1 ms
+[2021-12-08 15:48:01.466]       synth-n_100-m_591-k_15-p_0.1.txt: Found solution with k = 15 in 76ms (recursive steps: 43)
+[2021-12-08 15:48:01.467]       synth-n_100-m_611-k_10-p_0.1.txt: Couldn't read  file 'optimal_solution_sizes.txt'
+[2021-12-08 15:48:01.467]       synth-n_100-m_611-k_10-p_0.1.txt: ---------- synth-n_100-m_611-k_10-p_0.1.txt (n = 100, m = 611, k = -1) ----------
+[2021-12-08 15:48:01.468]       synth-n_100-m_611-k_10-p_0.1.txt: Found 1 cyclic sub graph(s) with n = [81]
+[2021-12-08 15:48:01.468]       synth-n_100-m_611-k_10-p_0.1.txt: Removed 19 nodes in preprocessing, starting with k = 0
+[2021-12-08 15:48:01.542]       synth-n_100-m_611-k_10-p_0.1.txt: Removed 1 flower nodes by petal rule 2
+[2021-12-08 15:48:01.542]       synth-n_100-m_611-k_10-p_0.1.txt: Preprocessing: 0 ms, Flowers: 71 ms, BFS: 0 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 0 ms
+[2021-12-08 15:48:01.543]       synth-n_100-m_611-k_10-p_0.1.txt: Found solution with k = 10 in 74ms (recursive steps: 13)
+[2021-12-08 15:48:01.543]       synth-n_100-m_628-k_20-p_0.1.txt: Couldn't read  file 'optimal_solution_sizes.txt'
+[2021-12-08 15:48:01.544]       synth-n_100-m_628-k_20-p_0.1.txt: ---------- synth-n_100-m_628-k_20-p_0.1.txt (n = 100, m = 628, k = -1) ----------
+[2021-12-08 15:48:01.544]       synth-n_100-m_628-k_20-p_0.1.txt: Found 1 cyclic sub graph(s) with n = [88]
+[2021-12-08 15:48:01.544]       synth-n_100-m_628-k_20-p_0.1.txt: Removed 12 nodes in preprocessing, starting with k = 0
+[2021-12-08 15:48:01.649]       synth-n_100-m_628-k_20-p_0.1.txt: Removed 0 flower nodes by petal rule 2
+[2021-12-08 15:48:01.650]       synth-n_100-m_628-k_20-p_0.1.txt: Preprocessing: 0 ms, Flowers: 89 ms, BFS: 4 ms, DAG: 0 ms, Copy: 2 ms, Reduction: 1 ms, Packing: 3 ms
+[2021-12-08 15:48:01.651]       synth-n_100-m_628-k_20-p_0.1.txt: Found solution with k = 20 in 106ms (recursive steps: 117)
+[2021-12-08 15:48:01.651]       synth-n_100-m_691-k_25-p_0.1.txt: Couldn't read  file 'optimal_solution_sizes.txt'
+[2021-12-08 15:48:01.652]       synth-n_100-m_691-k_25-p_0.1.txt: ---------- synth-n_100-m_691-k_25-p_0.1.txt (n = 100, m = 691, k = -1) ----------
+[2021-12-08 15:48:01.652]       synth-n_100-m_691-k_25-p_0.1.txt: Found 1 cyclic sub graph(s) with n = [97]
+[2021-12-08 15:48:01.652]       synth-n_100-m_691-k_25-p_0.1.txt: Removed 3 nodes in preprocessing, starting with k = 0
+[2021-12-08 15:48:01.922]       synth-n_100-m_691-k_25-p_0.1.txt: Removed 0 flower nodes by petal rule 2
+[2021-12-08 15:48:01.923]       synth-n_100-m_691-k_25-p_0.1.txt: Preprocessing: 0 ms, Flowers: 120 ms, BFS: 47 ms, DAG: 0 ms, Copy: 21 ms, Reduction: 12 ms, Packing: 36 ms
+[2021-12-08 15:48:01.923]       synth-n_100-m_691-k_25-p_0.1.txt: Found solution with k = 25 in 271ms (recursive steps: 1066)
+[2021-12-08 15:48:01.924]       synth-n_100-m_732-k_30-p_0.1.txt: Couldn't read  file 'optimal_solution_sizes.txt'
+[2021-12-08 15:48:01.924]       synth-n_100-m_732-k_30-p_0.1.txt: ---------- synth-n_100-m_732-k_30-p_0.1.txt (n = 100, m = 732, k = -1) ----------
+[2021-12-08 15:48:01.925]       synth-n_100-m_732-k_30-p_0.1.txt: Found 1 cyclic sub graph(s) with n = [99]
+[2021-12-08 15:48:01.925]       synth-n_100-m_732-k_30-p_0.1.txt: Removed 1 nodes in preprocessing, starting with k = 0
+[2021-12-08 15:48:03.431]       synth-n_100-m_732-k_30-p_0.1.txt: Removed 0 flower nodes by petal rule 2
+[2021-12-08 15:48:03.431]       synth-n_100-m_732-k_30-p_0.1.txt: Preprocessing: 0 ms, Flowers: 130 ms, BFS: 433 ms, DAG: 0 ms, Copy: 185 ms, Reduction: 74 ms, Packing: 367 ms
+[2021-12-08 15:48:03.433]       synth-n_100-m_732-k_30-p_0.1.txt: Found solution with k = 30 in 1s (recursive steps: 9429)
+[2021-12-08 15:48:03.512]   synth-n_1000-m_107005-k_50-p_0.2.txt: Couldn't read  file 'optimal_solution_sizes.txt'
+[2021-12-08 15:48:03.512]   synth-n_1000-m_107005-k_50-p_0.2.txt: ---------- synth-n_1000-m_107005-k_50-p_0.2.txt (n = 1000, m = 107005, k = -1) ----------
+[2021-12-08 15:48:03.717]   synth-n_1000-m_107005-k_50-p_0.2.txt: Found 1 cyclic sub graph(s) with n = [1000]
+[2021-12-08 15:48:03.717]   synth-n_1000-m_107005-k_50-p_0.2.txt: Removed 0 nodes in preprocessing, starting with k = 0

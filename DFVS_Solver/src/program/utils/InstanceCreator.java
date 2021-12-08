@@ -2,6 +2,7 @@ package program.utils;
 
 import program.model.Graph;
 import program.log.Log;
+import program.model.GraphFile;
 import program.model.Instance;
 
 import java.io.File;
@@ -13,7 +14,7 @@ import java.util.stream.Stream;
 
 public abstract class InstanceCreator {
 
-    private static final String DATASET = "dataset_2";
+    private static final String DATASET = "dataset_3";
     private static final String COMPLEX_PATH = "src/inputs/" + DATASET + "/complex/";
     private static final String SYNTHETIC_PATH = "src/inputs/" + DATASET + "/synthetic/";
 
@@ -47,10 +48,10 @@ public abstract class InstanceCreator {
         return (optimalK != null) ? optimalK : -1;
     }
 
-    public static Instance createFromFile(String path, String filename){
+    public static Instance createFromFile(GraphFile file){
         Graph graph = new Graph();
 
-        try (Stream<String> stream = Files.lines(Paths.get(path + filename))) {
+        try (Stream<String> stream = Files.lines(Paths.get(file.path + file.name))) {
             stream.forEach(str -> {
                 if(str.startsWith("#")) return;
                 if(str.startsWith("%")) return;
@@ -64,85 +65,44 @@ public abstract class InstanceCreator {
                 }
                 catch (NumberFormatException e)
                 {
-                    throw new RuntimeException("Couldn't parse file '" + filename + "' to Integer");
+                    throw new RuntimeException("Couldn't parse file '" + file.name + "' to Integer");
                 }
             });
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        return createInstance(filename, graph);
+        return createInstance(file.name, graph);
     }
 
-    public static List<Instance> createBenchmarkInstances(String startFilename) {
-        List<Instance> instances = createSyntheticInstances();
-        instances.addAll(createComplexInstances());
-        if(startFilename == null) return instances;
-        for(int i = 0; i < instances.size(); i++) {
-            if(instances.get(i).NAME.equals(startFilename)) {
-                return instances.subList(i, instances.size());
+    public static List<GraphFile> getSelectedFiles() {
+        List<GraphFile> files = new ArrayList<>();
+        files.add(new GraphFile(SYNTHETIC_PATH, "synth-n_100-m_1231-k_25-p_0.2.txt"));
+        return files;
+    }
+
+    public static List<GraphFile> getSyntheticAndComplexFiles(String startFilename) {
+        List<GraphFile> files = getFiles(SYNTHETIC_PATH);
+        files.addAll(getFiles(COMPLEX_PATH));
+        if(startFilename == null) return files;
+        for(int i = 0; i < files.size(); i++) {
+            if(files.get(i).name.equals(startFilename)) {
+                return files.subList(i, files.size());
             }
         }
         throw new RuntimeException("Didn't found instance with name '" + startFilename + "'");
     }
 
-    public static List<Instance> createComplexInstances() {
-        return createFromFolder(COMPLEX_PATH);
-    }
-
-    public static List<Instance> createSyntheticInstances() {
-        return createFromFolder(SYNTHETIC_PATH);
-    }
-
-    public static List<Instance> createSelectedInstances() {
-        List<Instance> instances = new ArrayList<>();
-        instances.add(createFromFile(SYNTHETIC_PATH,"synth-n_100-m_1231-k_25-p_0.2.txt"));
-        instances.add(createFromFile(SYNTHETIC_PATH,"synth-n_100-m_643-k_25-p_0.1.txt"));
-        instances.add(createFromFile(SYNTHETIC_PATH,"synth-n_120-m_492-k_30-p_0.05.txt"));
-        instances.add(createFromFile(SYNTHETIC_PATH,"synth-n_120-m_921-k_25-p_0.1.txt"));
-        instances.add(createFromFile(SYNTHETIC_PATH,"synth-n_140-m_2487-k_30-p_0.2.txt"));
-        instances.add(createFromFile(SYNTHETIC_PATH,"synth-n_140-m_625-k_25-p_0.05.txt"));
-        instances.add(createFromFile(SYNTHETIC_PATH,"synth-n_160-m_3134-k_30-p_0.2.txt"));
-        instances.add(createFromFile(SYNTHETIC_PATH,"synth-n_180-m_1057-k_25-p_0.05.txt"));
-        instances.add(createFromFile(SYNTHETIC_PATH,"synth-n_180-m_4031-k_30-p_0.2.txt"));
-        instances.add(createFromFile(SYNTHETIC_PATH,"synth-n_200-m_1151-k_25-p_0.05.txt"));
-        instances.add(createFromFile(SYNTHETIC_PATH,"synth-n_200-m_2356-k_25-p_0.1.txt"));
-        instances.add(createFromFile(SYNTHETIC_PATH,"synth-n_225-m_1484-k_25-p_0.05.txt"));
-        instances.add(createFromFile(SYNTHETIC_PATH,"synth-n_250-m_1814-k_25-p_0.05.txt"));
-        instances.add(createFromFile(SYNTHETIC_PATH,"synth-n_275-m_2121-k_25-p_0.05.txt"));
-        instances.add(createFromFile(SYNTHETIC_PATH,"synth-n_275-m_8461-k_30-p_0.2.txt"));
-        instances.add(createFromFile(SYNTHETIC_PATH,"synth-n_300-m_2495-k_25-p_0.05.txt"));
-        instances.add(createFromFile(SYNTHETIC_PATH,"synth-n_300-m_9999-k_25-p_0.2.txt"));
-        instances.add(createFromFile(SYNTHETIC_PATH,"synth-n_60-m_520-k_25-p_0.2.txt"));
-        instances.add(createFromFile(SYNTHETIC_PATH,"synth-n_70-m_342-k_30-p_0.1.txt"));
-        instances.add(createFromFile(SYNTHETIC_PATH,"synth-n_90-m_1075-k_30-p_0.2.txt"));
-        instances.add(createFromFile(COMPLEX_PATH, "biology-n_56-m_1372-p_0.75-4"));
-        instances.add(createFromFile(COMPLEX_PATH, "biology-n_77-m_1411-p_0.9-5"));
-        instances.add(createFromFile(COMPLEX_PATH, "blogs-n_700"));
-        instances.add(createFromFile(COMPLEX_PATH, "email"));
-        instances.add(createFromFile(COMPLEX_PATH, "usairport-n_1000"));
-        return instances;
-    }
-
-    public static List<Instance> createUnsolvedInstances() {
-        List<Instance> instances = new ArrayList<>();
-        instances.add(createFromFile(COMPLEX_PATH, "oz"));
-        instances.add(createFromFile(COMPLEX_PATH, "celegansneural"));
-
-        return instances;
-    }
-
-
-    private static List<Instance> createFromFolder(String path) {
+    public static List<GraphFile> getFiles(String path) {
         File folder = new File(path);
         File[] listOfFiles = folder.listFiles();
         if(listOfFiles == null) throw new RuntimeException("File path '" + path + "' does not exist!");
 
-        List<Instance> instances = new ArrayList<>();
+        List<GraphFile> files = new ArrayList<>();
         for (File listOfFile : listOfFiles) {
-            instances.add(createFromFile(path + "/" , listOfFile.getName()));
+            files.add(new GraphFile(path, listOfFile.getName()));
         }
-        return instances;
+        return files;
     }
 
     /**

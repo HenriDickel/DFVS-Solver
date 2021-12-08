@@ -198,5 +198,4 @@ public abstract class Solver {
         Log.detailLog(instance);
         Log.debugLog(instance.NAME, "Found solution with k = " + instance.S.size() + " in " + Timer.format(time) + " (recursive steps: " + instance.recursiveSteps + ")", !verified);
     }
-
 }

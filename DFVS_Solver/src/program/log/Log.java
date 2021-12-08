@@ -29,7 +29,7 @@ public abstract class Log {
 
         //Create program.log string
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS");
-        String gap = " ".repeat(Math.max(0, 34 - graphName.length()));
+        String gap = " ".repeat(Math.max(0, 38 - graphName.length()));
         String recursionGap = " - ".repeat(level);
         String logMessage = "[" + LocalDateTime.now().format(dtf) + "] " + gap + graphName + ": " +  recursionGap + message;
 
