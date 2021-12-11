@@ -22,4 +22,16 @@ public abstract class CyclePacking {
         }
         return false;
     }
+
+    public static int getLowerBound(Graph graph) {
+        int lowerBound = 0;
+        Cycle cycle;
+        while ((cycle = LightBFS.findShortestCycle(graph)) != null) {
+            for (Node node : cycle.getNodes()) {
+                graph.removeNode(node.id);
+            }
+            lowerBound++;
+        }
+        return lowerBound;
+    }
 }

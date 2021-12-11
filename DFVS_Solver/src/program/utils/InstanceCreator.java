@@ -14,7 +14,7 @@ import java.util.stream.Stream;
 
 public abstract class InstanceCreator {
 
-    private static final String DATASET = "dataset_3";
+    private static final String DATASET = "dataset_2";
     private static final String COMPLEX_PATH = "src/inputs/" + DATASET + "/complex/";
     private static final String SYNTHETIC_PATH = "src/inputs/" + DATASET + "/synthetic/";
 
@@ -75,9 +75,33 @@ public abstract class InstanceCreator {
         return createInstance(file.name, graph);
     }
 
-    public static List<GraphFile> getSelectedFiles() {
+    public static List<GraphFile> getSelectedFilesDataset2() {
         List<GraphFile> files = new ArrayList<>();
         files.add(new GraphFile(SYNTHETIC_PATH, "synth-n_100-m_1231-k_25-p_0.2.txt"));
+        files.add(new GraphFile(SYNTHETIC_PATH, "synth-n_100-m_643-k_25-p_0.1.txt"));
+        files.add(new GraphFile(SYNTHETIC_PATH, "synth-n_120-m_492-k_30-p_0.05.txt"));
+        files.add(new GraphFile(SYNTHETIC_PATH, "synth-n_120-m_921-k_25-p_0.1.txt"));
+        files.add(new GraphFile(SYNTHETIC_PATH, "synth-n_140-m_2487-k_30-p_0.2.txt"));
+        files.add(new GraphFile(SYNTHETIC_PATH, "synth-n_140-m_625-k_25-p_0.05.txt"));
+        files.add(new GraphFile(SYNTHETIC_PATH, "synth-n_160-m_3134-k_30-p_0.2.txt"));
+        files.add(new GraphFile(SYNTHETIC_PATH, "synth-n_180-m_1057-k_25-p_0.05.txt"));
+        files.add(new GraphFile(SYNTHETIC_PATH, "synth-n_180-m_4031-k_30-p_0.2.txt"));
+        files.add(new GraphFile(SYNTHETIC_PATH, "synth-n_200-m_1151-k_25-p_0.05.txt"));
+        files.add(new GraphFile(SYNTHETIC_PATH, "synth-n_200-m_2356-k_25-p_0.1.txt"));
+        files.add(new GraphFile(SYNTHETIC_PATH, "synth-n_225-m_1484-k_25-p_0.05.txt"));
+        files.add(new GraphFile(SYNTHETIC_PATH, "synth-n_250-m_1814-k_25-p_0.05.txt"));
+        files.add(new GraphFile(SYNTHETIC_PATH, "synth-n_275-m_2121-k_25-p_0.05.txt"));
+        files.add(new GraphFile(SYNTHETIC_PATH, "synth-n_275-m_8461-k_30-p_0.2.txt"));
+        files.add(new GraphFile(SYNTHETIC_PATH, "synth-n_300-m_2495-k_25-p_0.05.txt"));
+        files.add(new GraphFile(SYNTHETIC_PATH, "synth-n_300-m_9999-k_25-p_0.2.txt"));
+        files.add(new GraphFile(SYNTHETIC_PATH, "synth-n_60-m_520-k_25-p_0.2.txt"));
+        files.add(new GraphFile(SYNTHETIC_PATH, "synth-n_70-m_342-k_30-p_0.1.txt"));
+        files.add(new GraphFile(SYNTHETIC_PATH, "synth-n_90-m_1075-k_30-p_0.2.txt"));
+        files.add(new GraphFile(COMPLEX_PATH, "biology-n_56-m_1372-p_0.75-4"));
+        files.add(new GraphFile(COMPLEX_PATH, "biology-n_77-m_1411-p_0.9-5"));
+        files.add(new GraphFile(COMPLEX_PATH, "blogs-n_700"));
+        files.add(new GraphFile(COMPLEX_PATH, "email"));
+        files.add(new GraphFile(COMPLEX_PATH, "usairport-n_1000"));
         return files;
     }
 
