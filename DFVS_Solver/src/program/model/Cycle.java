@@ -11,6 +11,11 @@ public class Cycle {
         nodes.add(start);
     }
 
+    public Cycle(Node a, Node b) {
+        nodes.add(a);
+        nodes.add(b);
+    }
+
     public void add(Node node) {
         nodes.add(node);
     }

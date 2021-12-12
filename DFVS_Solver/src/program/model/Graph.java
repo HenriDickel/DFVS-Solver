@@ -21,6 +21,10 @@ public class Graph {
         return node;
     }
 
+    public boolean hasNode(int id) {
+        return nodes.get(id) != null;
+    }
+
     public List<Node> getOutNodes(Node node) {
         return node.getOutIds().stream().map(this::getNode).collect(Collectors.toList());
     }

@@ -14,21 +14,35 @@ public abstract class FullBFS {
 
     public static Cycle findShortestCycle(Graph graph){
 
-        int minBranchSize = Integer.MAX_VALUE;
         List<Cycle> cycles = new ArrayList<>();
-        for (Node node : graph.getNodes()) { // Find the best cycle for each node
-            Cycle cycle = SimpleBFS.findBestCycle(graph, node, minBranchSize);
+        int minSize = Integer.MAX_VALUE;
 
-            // Replace the min branch size when found better one
-            if (cycle != null) {
-                cycles.add(cycle);
-                minBranchSize = Math.min(cycle.size(), minBranchSize);
+        // Look for all cycles of size 2
+        for (Node node : graph.getNodes()) {
+            for(Integer outId: node.getOutIds()) {
+                if(node.getInIds().contains(outId)) {
+                    cycles.add(new Cycle(node, graph.getNode(outId)));
+                    minSize = 2;
+                }
+            }
+        }
+
+        // When there are no cycles of size 2, look for shortest cycles with BFS
+        if(cycles.size() == 0) {
+            for (Node node : graph.getNodes()) { // Find the best cycle for each node
+                Cycle cycle = SimpleBFS.findBestCycle(graph, node, minSize);
+
+                // Replace the min branch size when found better one
+                if (cycle != null) {
+                    cycles.add(cycle);
+                    minSize = Math.min(cycle.size(), minSize);
+                }
             }
         }
 
         // Filter out all cycles which are longer than the min branch size
-        final int finalMinBranchSize = minBranchSize;
-        List<Cycle> minCycles = cycles.stream().filter(cycle -> cycle.size() == finalMinBranchSize).collect(Collectors.toList());
+        final int finalMinSize = minSize;
+        List<Cycle> minCycles = cycles.stream().filter(cycle -> cycle.size() == finalMinSize).collect(Collectors.toList());
 
         // Find the cycle, whose nodes appear most in other cycles
         Cycle shortestCycle = null;
