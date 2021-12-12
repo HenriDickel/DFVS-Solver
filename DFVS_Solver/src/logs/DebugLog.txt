@@ -1,128 +1,663 @@
-[2021-12-08 15:47:59.964]       synth-n_100-m_1093-k_5-p_0.2.txt: Couldn't read  file 'optimal_solution_sizes.txt'
-[2021-12-08 15:47:59.987]       synth-n_100-m_1093-k_5-p_0.2.txt: ---------- synth-n_100-m_1093-k_5-p_0.2.txt (n = 100, m = 1093, k = -1) ----------
-[2021-12-08 15:48:00.001]       synth-n_100-m_1093-k_5-p_0.2.txt: Found 0 cyclic sub graph(s) with n = []
-[2021-12-08 15:48:00.004]       synth-n_100-m_1093-k_5-p_0.2.txt: Removed 100 nodes in preprocessing, starting with k = 5
-[2021-12-08 15:48:00.009]       synth-n_100-m_1093-k_5-p_0.2.txt: Preprocessing: 20 ms, Flowers: 0 ms, BFS: 0 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 0 ms
-[2021-12-08 15:48:00.023]       synth-n_100-m_1093-k_5-p_0.2.txt: Found solution with k = 5 in 23ms (recursive steps: 0)
-[2021-12-08 15:48:00.025]      synth-n_100-m_1146-k_10-p_0.2.txt: Couldn't read  file 'optimal_solution_sizes.txt'
-[2021-12-08 15:48:00.025]      synth-n_100-m_1146-k_10-p_0.2.txt: ---------- synth-n_100-m_1146-k_10-p_0.2.txt (n = 100, m = 1146, k = -1) ----------
-[2021-12-08 15:48:00.029]      synth-n_100-m_1146-k_10-p_0.2.txt: Found 1 cyclic sub graph(s) with n = [92]
-[2021-12-08 15:48:00.029]      synth-n_100-m_1146-k_10-p_0.2.txt: Removed 8 nodes in preprocessing, starting with k = 0
-[2021-12-08 15:48:00.248]      synth-n_100-m_1146-k_10-p_0.2.txt: Removed 7 flower nodes by petal rule 2
-[2021-12-08 15:48:00.248]      synth-n_100-m_1146-k_10-p_0.2.txt: Preprocessing: 3 ms, Flowers: 198 ms, BFS: 6 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 2 ms
-[2021-12-08 15:48:00.254]      synth-n_100-m_1146-k_10-p_0.2.txt: Found solution with k = 10 in 223ms (recursive steps: 3)
-[2021-12-08 15:48:00.256]      synth-n_100-m_1151-k_15-p_0.2.txt: Couldn't read  file 'optimal_solution_sizes.txt'
-[2021-12-08 15:48:00.256]      synth-n_100-m_1151-k_15-p_0.2.txt: ---------- synth-n_100-m_1151-k_15-p_0.2.txt (n = 100, m = 1151, k = -1) ----------
-[2021-12-08 15:48:00.257]      synth-n_100-m_1151-k_15-p_0.2.txt: Found 1 cyclic sub graph(s) with n = [97]
-[2021-12-08 15:48:00.258]      synth-n_100-m_1151-k_15-p_0.2.txt: Removed 3 nodes in preprocessing, starting with k = 0
-[2021-12-08 15:48:00.469]      synth-n_100-m_1151-k_15-p_0.2.txt: Removed 1 flower nodes by petal rule 2
-[2021-12-08 15:48:00.469]      synth-n_100-m_1151-k_15-p_0.2.txt: Preprocessing: 1 ms, Flowers: 195 ms, BFS: 5 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 4 ms
-[2021-12-08 15:48:00.470]      synth-n_100-m_1151-k_15-p_0.2.txt: Found solution with k = 15 in 213ms (recursive steps: 18)
-[2021-12-08 15:48:00.472]      synth-n_100-m_1229-k_20-p_0.2.txt: Couldn't read  file 'optimal_solution_sizes.txt'
-[2021-12-08 15:48:00.472]      synth-n_100-m_1229-k_20-p_0.2.txt: ---------- synth-n_100-m_1229-k_20-p_0.2.txt (n = 100, m = 1229, k = -1) ----------
-[2021-12-08 15:48:00.473]      synth-n_100-m_1229-k_20-p_0.2.txt: Found 1 cyclic sub graph(s) with n = [100]
-[2021-12-08 15:48:00.474]      synth-n_100-m_1229-k_20-p_0.2.txt: Removed 0 nodes in preprocessing, starting with k = 0
-[2021-12-08 15:48:00.700]      synth-n_100-m_1229-k_20-p_0.2.txt: Removed 0 flower nodes by petal rule 2
-[2021-12-08 15:48:00.701]      synth-n_100-m_1229-k_20-p_0.2.txt: Preprocessing: 1 ms, Flowers: 209 ms, BFS: 6 ms, DAG: 0 ms, Copy: 1 ms, Reduction: 0 ms, Packing: 4 ms
-[2021-12-08 15:48:00.701]      synth-n_100-m_1229-k_20-p_0.2.txt: Found solution with k = 20 in 228ms (recursive steps: 27)
-[2021-12-08 15:48:00.703]      synth-n_100-m_1263-k_25-p_0.2.txt: Couldn't read  file 'optimal_solution_sizes.txt'
-[2021-12-08 15:48:00.703]      synth-n_100-m_1263-k_25-p_0.2.txt: ---------- synth-n_100-m_1263-k_25-p_0.2.txt (n = 100, m = 1263, k = -1) ----------
-[2021-12-08 15:48:00.704]      synth-n_100-m_1263-k_25-p_0.2.txt: Found 1 cyclic sub graph(s) with n = [100]
-[2021-12-08 15:48:00.704]      synth-n_100-m_1263-k_25-p_0.2.txt: Removed 0 nodes in preprocessing, starting with k = 0
-[2021-12-08 15:48:00.934]      synth-n_100-m_1263-k_25-p_0.2.txt: Removed 0 flower nodes by petal rule 2
-[2021-12-08 15:48:00.935]      synth-n_100-m_1263-k_25-p_0.2.txt: Preprocessing: 1 ms, Flowers: 184 ms, BFS: 20 ms, DAG: 0 ms, Copy: 5 ms, Reduction: 2 ms, Packing: 7 ms
-[2021-12-08 15:48:00.937]      synth-n_100-m_1263-k_25-p_0.2.txt: Found solution with k = 25 in 232ms (recursive steps: 91)
-[2021-12-08 15:48:00.942]      synth-n_100-m_1275-k_30-p_0.2.txt: Couldn't read  file 'optimal_solution_sizes.txt'
-[2021-12-08 15:48:00.943]      synth-n_100-m_1275-k_30-p_0.2.txt: ---------- synth-n_100-m_1275-k_30-p_0.2.txt (n = 100, m = 1275, k = -1) ----------
-[2021-12-08 15:48:00.944]      synth-n_100-m_1275-k_30-p_0.2.txt: Found 1 cyclic sub graph(s) with n = [100]
-[2021-12-08 15:48:00.944]      synth-n_100-m_1275-k_30-p_0.2.txt: Removed 0 nodes in preprocessing, starting with k = 0
-[2021-12-08 15:48:01.260]      synth-n_100-m_1275-k_30-p_0.2.txt: Removed 0 flower nodes by petal rule 2
-[2021-12-08 15:48:01.261]      synth-n_100-m_1275-k_30-p_0.2.txt: Preprocessing: 1 ms, Flowers: 166 ms, BFS: 53 ms, DAG: 0 ms, Copy: 27 ms, Reduction: 6 ms, Packing: 26 ms
-[2021-12-08 15:48:01.262]      synth-n_100-m_1275-k_30-p_0.2.txt: Found solution with k = 30 in 317ms (recursive steps: 458)
-[2021-12-08 15:48:01.262]       synth-n_100-m_263-k_5-p_0.05.txt: Couldn't read  file 'optimal_solution_sizes.txt'
-[2021-12-08 15:48:01.263]       synth-n_100-m_263-k_5-p_0.05.txt: ---------- synth-n_100-m_263-k_5-p_0.05.txt (n = 99, m = 263, k = -1) ----------
-[2021-12-08 15:48:01.263]       synth-n_100-m_263-k_5-p_0.05.txt: Found 0 cyclic sub graph(s) with n = []
-[2021-12-08 15:48:01.263]       synth-n_100-m_263-k_5-p_0.05.txt: Removed 99 nodes in preprocessing, starting with k = 5
-[2021-12-08 15:48:01.263]       synth-n_100-m_263-k_5-p_0.05.txt: Preprocessing: 0 ms, Flowers: 0 ms, BFS: 0 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 0 ms
-[2021-12-08 15:48:01.264]       synth-n_100-m_263-k_5-p_0.05.txt: Found solution with k = 5 in 0ms (recursive steps: 0)
-[2021-12-08 15:48:01.265]      synth-n_100-m_289-k_10-p_0.05.txt: Couldn't read  file 'optimal_solution_sizes.txt'
-[2021-12-08 15:48:01.265]      synth-n_100-m_289-k_10-p_0.05.txt: ---------- synth-n_100-m_289-k_10-p_0.05.txt (n = 99, m = 289, k = -1) ----------
-[2021-12-08 15:48:01.265]      synth-n_100-m_289-k_10-p_0.05.txt: Found 1 cyclic sub graph(s) with n = [13]
-[2021-12-08 15:48:01.265]      synth-n_100-m_289-k_10-p_0.05.txt: Removed 86 nodes in preprocessing, starting with k = 1
-[2021-12-08 15:48:01.266]      synth-n_100-m_289-k_10-p_0.05.txt: Removed 0 flower nodes by petal rule 2
-[2021-12-08 15:48:01.266]      synth-n_100-m_289-k_10-p_0.05.txt: Preprocessing: 0 ms, Flowers: 0 ms, BFS: 0 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 0 ms
-[2021-12-08 15:48:01.267]      synth-n_100-m_289-k_10-p_0.05.txt: Found solution with k = 4 in 1ms (recursive steps: 3)
-[2021-12-08 15:48:01.267]      synth-n_100-m_302-k_15-p_0.05.txt: Couldn't read  file 'optimal_solution_sizes.txt'
-[2021-12-08 15:48:01.268]      synth-n_100-m_302-k_15-p_0.05.txt: ---------- synth-n_100-m_302-k_15-p_0.05.txt (n = 100, m = 302, k = -1) ----------
-[2021-12-08 15:48:01.268]      synth-n_100-m_302-k_15-p_0.05.txt: Found 1 cyclic sub graph(s) with n = [13]
-[2021-12-08 15:48:01.268]      synth-n_100-m_302-k_15-p_0.05.txt: Removed 87 nodes in preprocessing, starting with k = 4
-[2021-12-08 15:48:01.269]      synth-n_100-m_302-k_15-p_0.05.txt: Removed 1 flower nodes by petal rule 2
-[2021-12-08 15:48:01.269]      synth-n_100-m_302-k_15-p_0.05.txt: Preprocessing: 0 ms, Flowers: 0 ms, BFS: 0 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 0 ms
-[2021-12-08 15:48:01.270]      synth-n_100-m_302-k_15-p_0.05.txt: Found solution with k = 8 in 1ms (recursive steps: 4)
-[2021-12-08 15:48:01.270]      synth-n_100-m_332-k_20-p_0.05.txt: Couldn't read  file 'optimal_solution_sizes.txt'
-[2021-12-08 15:48:01.271]      synth-n_100-m_332-k_20-p_0.05.txt: ---------- synth-n_100-m_332-k_20-p_0.05.txt (n = 100, m = 332, k = -1) ----------
-[2021-12-08 15:48:01.271]      synth-n_100-m_332-k_20-p_0.05.txt: Found 1 cyclic sub graph(s) with n = [43]
-[2021-12-08 15:48:01.271]      synth-n_100-m_332-k_20-p_0.05.txt: Removed 57 nodes in preprocessing, starting with k = 3
-[2021-12-08 15:48:01.283]      synth-n_100-m_332-k_20-p_0.05.txt: Removed 0 flower nodes by petal rule 2
-[2021-12-08 15:48:01.283]      synth-n_100-m_332-k_20-p_0.05.txt: Preprocessing: 0 ms, Flowers: 9 ms, BFS: 0 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 0 ms
-[2021-12-08 15:48:01.284]      synth-n_100-m_332-k_20-p_0.05.txt: Found solution with k = 14 in 12ms (recursive steps: 32)
-[2021-12-08 15:48:01.285]      synth-n_100-m_336-k_30-p_0.05.txt: Couldn't read  file 'optimal_solution_sizes.txt'
-[2021-12-08 15:48:01.285]      synth-n_100-m_336-k_30-p_0.05.txt: ---------- synth-n_100-m_336-k_30-p_0.05.txt (n = 100, m = 336, k = -1) ----------
-[2021-12-08 15:48:01.285]      synth-n_100-m_336-k_30-p_0.05.txt: Found 1 cyclic sub graph(s) with n = [58]
-[2021-12-08 15:48:01.286]      synth-n_100-m_336-k_30-p_0.05.txt: Removed 42 nodes in preprocessing, starting with k = 1
-[2021-12-08 15:48:01.324]      synth-n_100-m_336-k_30-p_0.05.txt: Removed 0 flower nodes by petal rule 2
-[2021-12-08 15:48:01.324]      synth-n_100-m_336-k_30-p_0.05.txt: Preprocessing: 0 ms, Flowers: 24 ms, BFS: 3 ms, DAG: 0 ms, Copy: 2 ms, Reduction: 1 ms, Packing: 2 ms
-[2021-12-08 15:48:01.325]      synth-n_100-m_336-k_30-p_0.05.txt: Found solution with k = 15 in 39ms (recursive steps: 280)
-[2021-12-08 15:48:01.325]      synth-n_100-m_343-k_25-p_0.05.txt: Couldn't read  file 'optimal_solution_sizes.txt'
-[2021-12-08 15:48:01.325]      synth-n_100-m_343-k_25-p_0.05.txt: ---------- synth-n_100-m_343-k_25-p_0.05.txt (n = 100, m = 343, k = -1) ----------
-[2021-12-08 15:48:01.326]      synth-n_100-m_343-k_25-p_0.05.txt: Found 1 cyclic sub graph(s) with n = [57]
-[2021-12-08 15:48:01.326]      synth-n_100-m_343-k_25-p_0.05.txt: Removed 43 nodes in preprocessing, starting with k = 0
-[2021-12-08 15:48:01.355]      synth-n_100-m_343-k_25-p_0.05.txt: Removed 0 flower nodes by petal rule 2
-[2021-12-08 15:48:01.355]      synth-n_100-m_343-k_25-p_0.05.txt: Preprocessing: 0 ms, Flowers: 21 ms, BFS: 1 ms, DAG: 0 ms, Copy: 1 ms, Reduction: 1 ms, Packing: 1 ms
-[2021-12-08 15:48:01.356]      synth-n_100-m_343-k_25-p_0.05.txt: Found solution with k = 14 in 29ms (recursive steps: 127)
-[2021-12-08 15:48:01.357]        synth-n_100-m_515-k_5-p_0.1.txt: Couldn't read  file 'optimal_solution_sizes.txt'
-[2021-12-08 15:48:01.357]        synth-n_100-m_515-k_5-p_0.1.txt: ---------- synth-n_100-m_515-k_5-p_0.1.txt (n = 100, m = 515, k = -1) ----------
-[2021-12-08 15:48:01.357]        synth-n_100-m_515-k_5-p_0.1.txt: Found 1 cyclic sub graph(s) with n = [63]
-[2021-12-08 15:48:01.358]        synth-n_100-m_515-k_5-p_0.1.txt: Removed 37 nodes in preprocessing, starting with k = 0
-[2021-12-08 15:48:01.387]        synth-n_100-m_515-k_5-p_0.1.txt: Removed 2 flower nodes by petal rule 2
-[2021-12-08 15:48:01.387]        synth-n_100-m_515-k_5-p_0.1.txt: Preprocessing: 0 ms, Flowers: 28 ms, BFS: 0 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 0 ms
-[2021-12-08 15:48:01.388]        synth-n_100-m_515-k_5-p_0.1.txt: Found solution with k = 5 in 30ms (recursive steps: 3)
-[2021-12-08 15:48:01.389]       synth-n_100-m_591-k_15-p_0.1.txt: Couldn't read  file 'optimal_solution_sizes.txt'
-[2021-12-08 15:48:01.389]       synth-n_100-m_591-k_15-p_0.1.txt: ---------- synth-n_100-m_591-k_15-p_0.1.txt (n = 100, m = 591, k = -1) ----------
-[2021-12-08 15:48:01.389]       synth-n_100-m_591-k_15-p_0.1.txt: Found 1 cyclic sub graph(s) with n = [83]
-[2021-12-08 15:48:01.390]       synth-n_100-m_591-k_15-p_0.1.txt: Removed 17 nodes in preprocessing, starting with k = 0
-[2021-12-08 15:48:01.465]       synth-n_100-m_591-k_15-p_0.1.txt: Removed 0 flower nodes by petal rule 2
-[2021-12-08 15:48:01.465]       synth-n_100-m_591-k_15-p_0.1.txt: Preprocessing: 0 ms, Flowers: 70 ms, BFS: 1 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 1 ms
-[2021-12-08 15:48:01.466]       synth-n_100-m_591-k_15-p_0.1.txt: Found solution with k = 15 in 76ms (recursive steps: 43)
-[2021-12-08 15:48:01.467]       synth-n_100-m_611-k_10-p_0.1.txt: Couldn't read  file 'optimal_solution_sizes.txt'
-[2021-12-08 15:48:01.467]       synth-n_100-m_611-k_10-p_0.1.txt: ---------- synth-n_100-m_611-k_10-p_0.1.txt (n = 100, m = 611, k = -1) ----------
-[2021-12-08 15:48:01.468]       synth-n_100-m_611-k_10-p_0.1.txt: Found 1 cyclic sub graph(s) with n = [81]
-[2021-12-08 15:48:01.468]       synth-n_100-m_611-k_10-p_0.1.txt: Removed 19 nodes in preprocessing, starting with k = 0
-[2021-12-08 15:48:01.542]       synth-n_100-m_611-k_10-p_0.1.txt: Removed 1 flower nodes by petal rule 2
-[2021-12-08 15:48:01.542]       synth-n_100-m_611-k_10-p_0.1.txt: Preprocessing: 0 ms, Flowers: 71 ms, BFS: 0 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 0 ms
-[2021-12-08 15:48:01.543]       synth-n_100-m_611-k_10-p_0.1.txt: Found solution with k = 10 in 74ms (recursive steps: 13)
-[2021-12-08 15:48:01.543]       synth-n_100-m_628-k_20-p_0.1.txt: Couldn't read  file 'optimal_solution_sizes.txt'
-[2021-12-08 15:48:01.544]       synth-n_100-m_628-k_20-p_0.1.txt: ---------- synth-n_100-m_628-k_20-p_0.1.txt (n = 100, m = 628, k = -1) ----------
-[2021-12-08 15:48:01.544]       synth-n_100-m_628-k_20-p_0.1.txt: Found 1 cyclic sub graph(s) with n = [88]
-[2021-12-08 15:48:01.544]       synth-n_100-m_628-k_20-p_0.1.txt: Removed 12 nodes in preprocessing, starting with k = 0
-[2021-12-08 15:48:01.649]       synth-n_100-m_628-k_20-p_0.1.txt: Removed 0 flower nodes by petal rule 2
-[2021-12-08 15:48:01.650]       synth-n_100-m_628-k_20-p_0.1.txt: Preprocessing: 0 ms, Flowers: 89 ms, BFS: 4 ms, DAG: 0 ms, Copy: 2 ms, Reduction: 1 ms, Packing: 3 ms
-[2021-12-08 15:48:01.651]       synth-n_100-m_628-k_20-p_0.1.txt: Found solution with k = 20 in 106ms (recursive steps: 117)
-[2021-12-08 15:48:01.651]       synth-n_100-m_691-k_25-p_0.1.txt: Couldn't read  file 'optimal_solution_sizes.txt'
-[2021-12-08 15:48:01.652]       synth-n_100-m_691-k_25-p_0.1.txt: ---------- synth-n_100-m_691-k_25-p_0.1.txt (n = 100, m = 691, k = -1) ----------
-[2021-12-08 15:48:01.652]       synth-n_100-m_691-k_25-p_0.1.txt: Found 1 cyclic sub graph(s) with n = [97]
-[2021-12-08 15:48:01.652]       synth-n_100-m_691-k_25-p_0.1.txt: Removed 3 nodes in preprocessing, starting with k = 0
-[2021-12-08 15:48:01.922]       synth-n_100-m_691-k_25-p_0.1.txt: Removed 0 flower nodes by petal rule 2
-[2021-12-08 15:48:01.923]       synth-n_100-m_691-k_25-p_0.1.txt: Preprocessing: 0 ms, Flowers: 120 ms, BFS: 47 ms, DAG: 0 ms, Copy: 21 ms, Reduction: 12 ms, Packing: 36 ms
-[2021-12-08 15:48:01.923]       synth-n_100-m_691-k_25-p_0.1.txt: Found solution with k = 25 in 271ms (recursive steps: 1066)
-[2021-12-08 15:48:01.924]       synth-n_100-m_732-k_30-p_0.1.txt: Couldn't read  file 'optimal_solution_sizes.txt'
-[2021-12-08 15:48:01.924]       synth-n_100-m_732-k_30-p_0.1.txt: ---------- synth-n_100-m_732-k_30-p_0.1.txt (n = 100, m = 732, k = -1) ----------
-[2021-12-08 15:48:01.925]       synth-n_100-m_732-k_30-p_0.1.txt: Found 1 cyclic sub graph(s) with n = [99]
-[2021-12-08 15:48:01.925]       synth-n_100-m_732-k_30-p_0.1.txt: Removed 1 nodes in preprocessing, starting with k = 0
-[2021-12-08 15:48:03.431]       synth-n_100-m_732-k_30-p_0.1.txt: Removed 0 flower nodes by petal rule 2
-[2021-12-08 15:48:03.431]       synth-n_100-m_732-k_30-p_0.1.txt: Preprocessing: 0 ms, Flowers: 130 ms, BFS: 433 ms, DAG: 0 ms, Copy: 185 ms, Reduction: 74 ms, Packing: 367 ms
-[2021-12-08 15:48:03.433]       synth-n_100-m_732-k_30-p_0.1.txt: Found solution with k = 30 in 1s (recursive steps: 9429)
-[2021-12-08 15:48:03.512]   synth-n_1000-m_107005-k_50-p_0.2.txt: Couldn't read  file 'optimal_solution_sizes.txt'
-[2021-12-08 15:48:03.512]   synth-n_1000-m_107005-k_50-p_0.2.txt: ---------- synth-n_1000-m_107005-k_50-p_0.2.txt (n = 1000, m = 107005, k = -1) ----------
-[2021-12-08 15:48:03.717]   synth-n_1000-m_107005-k_50-p_0.2.txt: Found 1 cyclic sub graph(s) with n = [1000]
-[2021-12-08 15:48:03.717]   synth-n_1000-m_107005-k_50-p_0.2.txt: Removed 0 nodes in preprocessing, starting with k = 0
+[2021-12-11 19:18:57.449]          synth-n_10-m_12-k_2-p_0.2.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:57.462]          synth-n_10-m_12-k_4-p_0.2.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:57.468]       synth-n_100-m_1009-k_2-p_0.2.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:57.476]       synth-n_100-m_1028-k_4-p_0.2.txt: Lower bound: 4 / 4
+[2021-12-11 19:18:57.481]       synth-n_100-m_1107-k_6-p_0.2.txt: Lower bound: 4 / 4
+[2021-12-11 19:18:57.486]       synth-n_100-m_1119-k_8-p_0.2.txt: Lower bound: 8 / 8
+[2021-12-11 19:18:57.490]      synth-n_100-m_1129-k_10-p_0.2.txt: Lower bound: 10 / 10
+[2021-12-11 19:18:57.493]      synth-n_100-m_1220-k_15-p_0.2.txt: Lower bound: 15 / 15
+[2021-12-11 19:18:57.495]      synth-n_100-m_1231-k_25-p_0.2.txt: Lower bound: 21 / 25
+[2021-12-11 19:18:57.497]      synth-n_100-m_1235-k_20-p_0.2.txt: Lower bound: 18 / 20
+[2021-12-11 19:18:57.500]      synth-n_100-m_1374-k_30-p_0.2.txt: Lower bound: 26 / 30
+[2021-12-11 19:18:57.501]       synth-n_100-m_262-k_6-p_0.05.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:57.502]      synth-n_100-m_275-k_10-p_0.05.txt: Lower bound: 4 / 4
+[2021-12-11 19:18:57.503]       synth-n_100-m_277-k_8-p_0.05.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:57.504]       synth-n_100-m_282-k_2-p_0.05.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:57.505]      synth-n_100-m_305-k_20-p_0.05.txt: Lower bound: 8 / 10
+[2021-12-11 19:18:57.506]       synth-n_100-m_305-k_4-p_0.05.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:57.507]      synth-n_100-m_319-k_15-p_0.05.txt: Lower bound: 4 / 6
+[2021-12-11 19:18:57.508]      synth-n_100-m_344-k_25-p_0.05.txt: Lower bound: 10 / 12
+[2021-12-11 19:18:57.510]      synth-n_100-m_346-k_30-p_0.05.txt: Lower bound: 12 / 17
+[2021-12-11 19:18:57.512]        synth-n_100-m_491-k_2-p_0.1.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:57.513]        synth-n_100-m_542-k_4-p_0.1.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:57.515]        synth-n_100-m_546-k_8-p_0.1.txt: Lower bound: 4 / 5
+[2021-12-11 19:18:57.516]        synth-n_100-m_565-k_6-p_0.1.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:57.517]       synth-n_100-m_568-k_10-p_0.1.txt: Lower bound: 9 / 10
+[2021-12-11 19:18:57.518]       synth-n_100-m_596-k_15-p_0.1.txt: Lower bound: 12 / 15
+[2021-12-11 19:18:57.520]       synth-n_100-m_643-k_25-p_0.1.txt: Lower bound: 20 / 25
+[2021-12-11 19:18:57.521]       synth-n_100-m_645-k_20-p_0.1.txt: Lower bound: 15 / 20
+[2021-12-11 19:18:57.523]       synth-n_100-m_670-k_30-p_0.1.txt: Lower bound: 19 / 29
+[2021-12-11 19:18:57.526]       synth-n_120-m_1409-k_2-p_0.2.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:57.531]       synth-n_120-m_1485-k_6-p_0.2.txt: Lower bound: 6 / 6
+[2021-12-11 19:18:57.535]       synth-n_120-m_1520-k_4-p_0.2.txt: Lower bound: 3 / 3
+[2021-12-11 19:18:57.539]      synth-n_120-m_1530-k_10-p_0.2.txt: Lower bound: 10 / 10
+[2021-12-11 19:18:57.546]       synth-n_120-m_1600-k_8-p_0.2.txt: Lower bound: 7 / 8
+[2021-12-11 19:18:57.549]      synth-n_120-m_1738-k_15-p_0.2.txt: Lower bound: 15 / 15
+[2021-12-11 19:18:57.552]      synth-n_120-m_1775-k_20-p_0.2.txt: Lower bound: 19 / 20
+[2021-12-11 19:18:57.554]      synth-n_120-m_1825-k_25-p_0.2.txt: Lower bound: 24 / 25
+[2021-12-11 19:18:57.556]      synth-n_120-m_1829-k_30-p_0.2.txt: Lower bound: 26 / 30
+[2021-12-11 19:18:57.557]       synth-n_120-m_368-k_2-p_0.05.txt: Lower bound: 1 / 2
+[2021-12-11 19:18:57.558]       synth-n_120-m_372-k_4-p_0.05.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:57.559]       synth-n_120-m_391-k_6-p_0.05.txt: Lower bound: 4 / 4
+[2021-12-11 19:18:57.560]       synth-n_120-m_395-k_8-p_0.05.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:57.561]      synth-n_120-m_420-k_10-p_0.05.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:57.563]      synth-n_120-m_432-k_20-p_0.05.txt: Lower bound: 11 / 13
+[2021-12-11 19:18:57.564]      synth-n_120-m_455-k_15-p_0.05.txt: Lower bound: 7 / 10
+[2021-12-11 19:18:57.565]      synth-n_120-m_482-k_25-p_0.05.txt: Lower bound: 13 / 17
+[2021-12-11 19:18:57.567]      synth-n_120-m_492-k_30-p_0.05.txt: Lower bound: 16 / 21
+[2021-12-11 19:18:57.568]        synth-n_120-m_724-k_4-p_0.1.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:57.569]        synth-n_120-m_788-k_6-p_0.1.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:57.572]       synth-n_120-m_790-k_10-p_0.1.txt: Lower bound: 9 / 10
+[2021-12-11 19:18:57.573]        synth-n_120-m_791-k_2-p_0.1.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:57.574]        synth-n_120-m_828-k_8-p_0.1.txt: Lower bound: 7 / 7
+[2021-12-11 19:18:57.576]       synth-n_120-m_871-k_15-p_0.1.txt: Lower bound: 14 / 15
+[2021-12-11 19:18:57.577]       synth-n_120-m_921-k_25-p_0.1.txt: Lower bound: 20 / 25
+[2021-12-11 19:18:57.578]       synth-n_120-m_935-k_30-p_0.1.txt: Lower bound: 23 / 29
+[2021-12-11 19:18:57.579]       synth-n_120-m_950-k_20-p_0.1.txt: Lower bound: 16 / 20
+[2021-12-11 19:18:57.582]       synth-n_140-m_1028-k_2-p_0.1.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:57.583]       synth-n_140-m_1046-k_6-p_0.1.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:57.584]       synth-n_140-m_1047-k_4-p_0.1.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:57.586]       synth-n_140-m_1056-k_8-p_0.1.txt: Lower bound: 4 / 4
+[2021-12-11 19:18:57.587]      synth-n_140-m_1070-k_10-p_0.1.txt: Lower bound: 10 / 10
+[2021-12-11 19:18:57.589]      synth-n_140-m_1181-k_20-p_0.1.txt: Lower bound: 19 / 20
+[2021-12-11 19:18:57.591]      synth-n_140-m_1184-k_15-p_0.1.txt: Lower bound: 13 / 14
+[2021-12-11 19:18:57.594]      synth-n_140-m_1225-k_25-p_0.1.txt: Lower bound: 22 / 25
+[2021-12-11 19:18:57.596]      synth-n_140-m_1284-k_30-p_0.1.txt: Lower bound: 26 / 30
+[2021-12-11 19:18:57.598]       synth-n_140-m_2032-k_2-p_0.2.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:57.602]       synth-n_140-m_2038-k_4-p_0.2.txt: Lower bound: 4 / 4
+[2021-12-11 19:18:57.605]       synth-n_140-m_2080-k_6-p_0.2.txt: Lower bound: 6 / 6
+[2021-12-11 19:18:57.610]       synth-n_140-m_2149-k_8-p_0.2.txt: Lower bound: 7 / 8
+[2021-12-11 19:18:57.615]      synth-n_140-m_2195-k_10-p_0.2.txt: Lower bound: 10 / 10
+[2021-12-11 19:18:57.619]      synth-n_140-m_2205-k_15-p_0.2.txt: Lower bound: 15 / 15
+[2021-12-11 19:18:57.622]      synth-n_140-m_2299-k_20-p_0.2.txt: Lower bound: 20 / 20
+[2021-12-11 19:18:57.625]      synth-n_140-m_2379-k_25-p_0.2.txt: Lower bound: 24 / 25
+[2021-12-11 19:18:57.628]      synth-n_140-m_2487-k_30-p_0.2.txt: Lower bound: 29 / 30
+[2021-12-11 19:18:57.629]       synth-n_140-m_508-k_2-p_0.05.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:57.630]       synth-n_140-m_511-k_4-p_0.05.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:57.631]       synth-n_140-m_511-k_6-p_0.05.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:57.632]       synth-n_140-m_531-k_8-p_0.05.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:57.633]      synth-n_140-m_542-k_15-p_0.05.txt: Lower bound: 9 / 11
+[2021-12-11 19:18:57.634]      synth-n_140-m_547-k_10-p_0.05.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:57.635]      synth-n_140-m_625-k_25-p_0.05.txt: Lower bound: 18 / 22
+[2021-12-11 19:18:57.637]      synth-n_140-m_632-k_20-p_0.05.txt: Lower bound: 12 / 15
+[2021-12-11 19:18:57.639]      synth-n_140-m_632-k_30-p_0.05.txt: Lower bound: 16 / 25
+[2021-12-11 19:18:57.640]       synth-n_160-m_1318-k_4-p_0.1.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:57.642]       synth-n_160-m_1324-k_2-p_0.1.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:57.643]       synth-n_160-m_1346-k_6-p_0.1.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:57.645]      synth-n_160-m_1409-k_10-p_0.1.txt: Lower bound: 9 / 9
+[2021-12-11 19:18:57.647]       synth-n_160-m_1412-k_8-p_0.1.txt: Lower bound: 8 / 8
+[2021-12-11 19:18:57.648]      synth-n_160-m_1447-k_15-p_0.1.txt: Lower bound: 12 / 14
+[2021-12-11 19:18:57.651]      synth-n_160-m_1523-k_20-p_0.1.txt: Lower bound: 20 / 20
+[2021-12-11 19:18:57.653]      synth-n_160-m_1595-k_25-p_0.1.txt: Lower bound: 23 / 25
+[2021-12-11 19:18:57.654]      synth-n_160-m_1648-k_30-p_0.1.txt: Lower bound: 29 / 30
+[2021-12-11 19:18:57.656]       synth-n_160-m_2577-k_2-p_0.2.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:57.658]       synth-n_160-m_2611-k_4-p_0.2.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:57.662]       synth-n_160-m_2705-k_6-p_0.2.txt: Lower bound: 6 / 6
+[2021-12-11 19:18:57.665]      synth-n_160-m_2720-k_10-p_0.2.txt: Lower bound: 10 / 10
+[2021-12-11 19:18:57.670]       synth-n_160-m_2776-k_8-p_0.2.txt: Lower bound: 8 / 8
+[2021-12-11 19:18:57.674]      synth-n_160-m_2910-k_15-p_0.2.txt: Lower bound: 14 / 15
+[2021-12-11 19:18:57.678]      synth-n_160-m_3006-k_20-p_0.2.txt: Lower bound: 18 / 20
+[2021-12-11 19:18:57.680]      synth-n_160-m_3034-k_25-p_0.2.txt: Lower bound: 24 / 25
+[2021-12-11 19:18:57.682]      synth-n_160-m_3134-k_30-p_0.2.txt: Lower bound: 30 / 30
+[2021-12-11 19:18:57.683]       synth-n_160-m_641-k_2-p_0.05.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:57.684]       synth-n_160-m_663-k_4-p_0.05.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:57.685]       synth-n_160-m_683-k_8-p_0.05.txt: Lower bound: 5 / 5
+[2021-12-11 19:18:57.686]       synth-n_160-m_693-k_6-p_0.05.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:57.686]      synth-n_160-m_731-k_10-p_0.05.txt: Lower bound: 8 / 10
+[2021-12-11 19:18:57.687]      synth-n_160-m_743-k_20-p_0.05.txt: Lower bound: 14 / 18
+[2021-12-11 19:18:57.688]      synth-n_160-m_746-k_15-p_0.05.txt: Lower bound: 12 / 12
+[2021-12-11 19:18:57.689]      synth-n_160-m_800-k_30-p_0.05.txt: Lower bound: 20 / 26
+[2021-12-11 19:18:57.690]      synth-n_160-m_810-k_25-p_0.05.txt: Lower bound: 20 / 25
+[2021-12-11 19:18:57.691]     synth-n_180-m_1022-k_30-p_0.05.txt: Lower bound: 21 / 28
+[2021-12-11 19:18:57.692]     synth-n_180-m_1057-k_25-p_0.05.txt: Lower bound: 19 / 22
+[2021-12-11 19:18:57.693]       synth-n_180-m_1627-k_4-p_0.1.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:57.694]       synth-n_180-m_1658-k_2-p_0.1.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:57.696]       synth-n_180-m_1683-k_6-p_0.1.txt: Lower bound: 4 / 4
+[2021-12-11 19:18:57.698]       synth-n_180-m_1717-k_8-p_0.1.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:57.701]      synth-n_180-m_1738-k_10-p_0.1.txt: Lower bound: 10 / 10
+[2021-12-11 19:18:57.704]      synth-n_180-m_1958-k_15-p_0.1.txt: Lower bound: 14 / 14
+[2021-12-11 19:18:57.707]      synth-n_180-m_1962-k_25-p_0.1.txt: Lower bound: 25 / 25
+[2021-12-11 19:18:57.709]      synth-n_180-m_1968-k_20-p_0.1.txt: Lower bound: 18 / 20
+[2021-12-11 19:18:57.712]      synth-n_180-m_2037-k_30-p_0.1.txt: Lower bound: 27 / 30
+[2021-12-11 19:18:57.714]       synth-n_180-m_3254-k_2-p_0.2.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:57.717]       synth-n_180-m_3302-k_4-p_0.2.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:57.725]       synth-n_180-m_3396-k_8-p_0.2.txt: Lower bound: 7 / 7
+[2021-12-11 19:18:57.733]       synth-n_180-m_3408-k_6-p_0.2.txt: Lower bound: 6 / 6
+[2021-12-11 19:18:57.740]      synth-n_180-m_3481-k_10-p_0.2.txt: Lower bound: 10 / 10
+[2021-12-11 19:18:57.747]      synth-n_180-m_3631-k_15-p_0.2.txt: Lower bound: 14 / 15
+[2021-12-11 19:18:57.752]      synth-n_180-m_3690-k_20-p_0.2.txt: Lower bound: 19 / 20
+[2021-12-11 19:18:57.757]      synth-n_180-m_3812-k_25-p_0.2.txt: Lower bound: 23 / 25
+[2021-12-11 19:18:57.761]      synth-n_180-m_4031-k_30-p_0.2.txt: Lower bound: 28 / 30
+[2021-12-11 19:18:57.763]       synth-n_180-m_804-k_2-p_0.05.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:57.764]       synth-n_180-m_827-k_6-p_0.05.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:57.765]      synth-n_180-m_855-k_15-p_0.05.txt: Lower bound: 10 / 11
+[2021-12-11 19:18:57.766]       synth-n_180-m_867-k_8-p_0.05.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:57.766]       synth-n_180-m_881-k_4-p_0.05.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:57.767]      synth-n_180-m_895-k_20-p_0.05.txt: Lower bound: 13 / 15
+[2021-12-11 19:18:57.768]      synth-n_180-m_902-k_10-p_0.05.txt: Lower bound: 7 / 7
+[2021-12-11 19:18:57.768]         synth-n_20-m_18-k_4-p_0.05.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:57.769]          synth-n_20-m_20-k_4-p_0.1.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:57.769]          synth-n_20-m_25-k_2-p_0.1.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:57.769]          synth-n_20-m_25-k_8-p_0.1.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:57.770]          synth-n_20-m_38-k_6-p_0.1.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:57.770]          synth-n_20-m_48-k_2-p_0.2.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:57.771]          synth-n_20-m_54-k_8-p_0.2.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:57.771]          synth-n_20-m_58-k_4-p_0.2.txt: Lower bound: 3 / 4
+[2021-12-11 19:18:57.771]          synth-n_20-m_59-k_6-p_0.2.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:57.772]          synth-n_20-m_9-k_8-p_0.05.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:57.773]      synth-n_200-m_1059-k_8-p_0.05.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:57.774]      synth-n_200-m_1063-k_2-p_0.05.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:57.775]     synth-n_200-m_1075-k_10-p_0.05.txt: Lower bound: 9 / 9
+[2021-12-11 19:18:57.776]      synth-n_200-m_1093-k_4-p_0.05.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:57.777]      synth-n_200-m_1096-k_6-p_0.05.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:57.778]     synth-n_200-m_1115-k_15-p_0.05.txt: Lower bound: 14 / 15
+[2021-12-11 19:18:57.779]     synth-n_200-m_1151-k_25-p_0.05.txt: Lower bound: 21 / 25
+[2021-12-11 19:18:57.780]     synth-n_200-m_1172-k_20-p_0.05.txt: Lower bound: 17 / 18
+[2021-12-11 19:18:57.782]     synth-n_200-m_1319-k_30-p_0.05.txt: Lower bound: 26 / 30
+[2021-12-11 19:18:57.785]      synth-n_200-m_2075-k_10-p_0.1.txt: Lower bound: 9 / 9
+[2021-12-11 19:18:57.786]       synth-n_200-m_2076-k_6-p_0.1.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:57.788]       synth-n_200-m_2088-k_4-p_0.1.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:57.789]       synth-n_200-m_2096-k_2-p_0.1.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:57.792]       synth-n_200-m_2119-k_8-p_0.1.txt: Lower bound: 6 / 6
+[2021-12-11 19:18:57.794]      synth-n_200-m_2270-k_20-p_0.1.txt: Lower bound: 19 / 20
+[2021-12-11 19:18:57.798]      synth-n_200-m_2275-k_15-p_0.1.txt: Lower bound: 15 / 15
+[2021-12-11 19:18:57.801]      synth-n_200-m_2356-k_25-p_0.1.txt: Lower bound: 23 / 25
+[2021-12-11 19:18:57.803]      synth-n_200-m_2488-k_30-p_0.1.txt: Lower bound: 28 / 30
+[2021-12-11 19:18:57.806]       synth-n_200-m_4097-k_2-p_0.2.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:57.818]      synth-n_200-m_4160-k_10-p_0.2.txt: Lower bound: 10 / 10
+[2021-12-11 19:18:57.829]       synth-n_200-m_4165-k_4-p_0.2.txt: Lower bound: 2 / 2
+[2021-12-11 19:18:57.841]       synth-n_200-m_4241-k_6-p_0.2.txt: Lower bound: 6 / 6
+[2021-12-11 19:18:57.852]       synth-n_200-m_4270-k_8-p_0.2.txt: Lower bound: 8 / 8
+[2021-12-11 19:18:57.861]      synth-n_200-m_4411-k_15-p_0.2.txt: Lower bound: 14 / 15
+[2021-12-11 19:18:57.868]      synth-n_200-m_4591-k_20-p_0.2.txt: Lower bound: 20 / 20
+[2021-12-11 19:18:57.874]      synth-n_200-m_4629-k_25-p_0.2.txt: Lower bound: 24 / 25
+[2021-12-11 19:18:57.879]      synth-n_200-m_4765-k_30-p_0.2.txt: Lower bound: 29 / 30
+[2021-12-11 19:18:57.880]      synth-n_225-m_1274-k_4-p_0.05.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:57.881]      synth-n_225-m_1286-k_2-p_0.05.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:57.882]      synth-n_225-m_1352-k_6-p_0.05.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:57.883]      synth-n_225-m_1385-k_8-p_0.05.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:57.885]     synth-n_225-m_1390-k_10-p_0.05.txt: Lower bound: 9 / 9
+[2021-12-11 19:18:57.886]     synth-n_225-m_1391-k_15-p_0.05.txt: Lower bound: 15 / 15
+[2021-12-11 19:18:57.888]     synth-n_225-m_1470-k_20-p_0.05.txt: Lower bound: 17 / 19
+[2021-12-11 19:18:57.890]     synth-n_225-m_1484-k_25-p_0.05.txt: Lower bound: 19 / 23
+[2021-12-11 19:18:57.892]     synth-n_225-m_1517-k_30-p_0.05.txt: Lower bound: 24 / 30
+[2021-12-11 19:18:57.893]       synth-n_225-m_2523-k_2-p_0.1.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:57.898]      synth-n_225-m_2681-k_10-p_0.1.txt: Lower bound: 10 / 10
+[2021-12-11 19:18:57.902]       synth-n_225-m_2685-k_6-p_0.1.txt: Lower bound: 5 / 5
+[2021-12-11 19:18:57.908]       synth-n_225-m_2691-k_8-p_0.1.txt: Lower bound: 8 / 8
+[2021-12-11 19:18:57.909]       synth-n_225-m_2732-k_4-p_0.1.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:57.913]      synth-n_225-m_2816-k_15-p_0.1.txt: Lower bound: 14 / 14
+[2021-12-11 19:18:57.918]      synth-n_225-m_2884-k_20-p_0.1.txt: Lower bound: 18 / 20
+[2021-12-11 19:18:57.922]      synth-n_225-m_2884-k_25-p_0.1.txt: Lower bound: 25 / 25
+[2021-12-11 19:18:57.926]      synth-n_225-m_2964-k_30-p_0.1.txt: Lower bound: 28 / 30
+[2021-12-11 19:18:57.929]       synth-n_225-m_4993-k_2-p_0.2.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:57.944]       synth-n_225-m_5212-k_6-p_0.2.txt: Lower bound: 6 / 6
+[2021-12-11 19:18:57.959]       synth-n_225-m_5223-k_4-p_0.2.txt: Lower bound: 4 / 4
+[2021-12-11 19:18:57.972]       synth-n_225-m_5291-k_8-p_0.2.txt: Lower bound: 8 / 8
+[2021-12-11 19:18:57.986]      synth-n_225-m_5365-k_10-p_0.2.txt: Lower bound: 10 / 10
+[2021-12-11 19:18:57.997]      synth-n_225-m_5504-k_15-p_0.2.txt: Lower bound: 15 / 15
+[2021-12-11 19:18:58.007]      synth-n_225-m_5734-k_20-p_0.2.txt: Lower bound: 19 / 20
+[2021-12-11 19:18:58.012]      synth-n_225-m_5854-k_25-p_0.2.txt: Lower bound: 24 / 25
+[2021-12-11 19:18:58.018]      synth-n_225-m_5936-k_30-p_0.2.txt: Lower bound: 29 / 30
+[2021-12-11 19:18:58.019]      synth-n_250-m_1512-k_2-p_0.05.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.019]      synth-n_250-m_1569-k_4-p_0.05.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.020]      synth-n_250-m_1575-k_6-p_0.05.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.022]      synth-n_250-m_1667-k_8-p_0.05.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.023]     synth-n_250-m_1694-k_10-p_0.05.txt: Lower bound: 10 / 10
+[2021-12-11 19:18:58.024]     synth-n_250-m_1710-k_15-p_0.05.txt: Lower bound: 15 / 15
+[2021-12-11 19:18:58.026]     synth-n_250-m_1757-k_20-p_0.05.txt: Lower bound: 18 / 19
+[2021-12-11 19:18:58.027]     synth-n_250-m_1814-k_25-p_0.05.txt: Lower bound: 23 / 25
+[2021-12-11 19:18:58.028]     synth-n_250-m_1916-k_30-p_0.05.txt: Lower bound: 27 / 30
+[2021-12-11 19:18:58.030]       synth-n_250-m_3124-k_4-p_0.1.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.031]       synth-n_250-m_3161-k_2-p_0.1.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.035]       synth-n_250-m_3199-k_8-p_0.1.txt: Lower bound: 5 / 5
+[2021-12-11 19:18:58.037]       synth-n_250-m_3249-k_6-p_0.1.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.042]      synth-n_250-m_3387-k_10-p_0.1.txt: Lower bound: 10 / 10
+[2021-12-11 19:18:58.047]      synth-n_250-m_3436-k_15-p_0.1.txt: Lower bound: 12 / 14
+[2021-12-11 19:18:58.051]      synth-n_250-m_3475-k_20-p_0.1.txt: Lower bound: 20 / 20
+[2021-12-11 19:18:58.055]      synth-n_250-m_3612-k_25-p_0.1.txt: Lower bound: 25 / 25
+[2021-12-11 19:18:58.058]      synth-n_250-m_3681-k_30-p_0.1.txt: Lower bound: 29 / 30
+[2021-12-11 19:18:58.061]       synth-n_250-m_6262-k_2-p_0.2.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.074]       synth-n_250-m_6353-k_4-p_0.2.txt: Lower bound: 4 / 4
+[2021-12-11 19:18:58.077]       synth-n_250-m_6493-k_6-p_0.2.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.090]       synth-n_250-m_6538-k_8-p_0.2.txt: Lower bound: 8 / 8
+[2021-12-11 19:18:58.101]      synth-n_250-m_6557-k_10-p_0.2.txt: Lower bound: 10 / 10
+[2021-12-11 19:18:58.112]      synth-n_250-m_6833-k_15-p_0.2.txt: Lower bound: 15 / 15
+[2021-12-11 19:18:58.121]      synth-n_250-m_7048-k_20-p_0.2.txt: Lower bound: 20 / 20
+[2021-12-11 19:18:58.129]      synth-n_250-m_7157-k_25-p_0.2.txt: Lower bound: 25 / 25
+[2021-12-11 19:18:58.137]      synth-n_250-m_7252-k_30-p_0.2.txt: Lower bound: 29 / 30
+[2021-12-11 19:18:58.138]      synth-n_275-m_1895-k_2-p_0.05.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.139]      synth-n_275-m_1958-k_4-p_0.05.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.141]      synth-n_275-m_2019-k_8-p_0.05.txt: Lower bound: 7 / 7
+[2021-12-11 19:18:58.142]      synth-n_275-m_2025-k_6-p_0.05.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.143]     synth-n_275-m_2051-k_10-p_0.05.txt: Lower bound: 5 / 5
+[2021-12-11 19:18:58.145]     synth-n_275-m_2121-k_25-p_0.05.txt: Lower bound: 25 / 25
+[2021-12-11 19:18:58.147]     synth-n_275-m_2122-k_15-p_0.05.txt: Lower bound: 14 / 15
+[2021-12-11 19:18:58.149]     synth-n_275-m_2130-k_20-p_0.05.txt: Lower bound: 18 / 20
+[2021-12-11 19:18:58.151]     synth-n_275-m_2220-k_30-p_0.05.txt: Lower bound: 30 / 30
+[2021-12-11 19:18:58.153]       synth-n_275-m_3808-k_2-p_0.1.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.158]       synth-n_275-m_3815-k_6-p_0.1.txt: Lower bound: 5 / 5
+[2021-12-11 19:18:58.160]       synth-n_275-m_3851-k_4-p_0.1.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.164]      synth-n_275-m_3928-k_10-p_0.1.txt: Lower bound: 4 / 4
+[2021-12-11 19:18:58.166]       synth-n_275-m_3928-k_8-p_0.1.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.172]      synth-n_275-m_4227-k_15-p_0.1.txt: Lower bound: 14 / 14
+[2021-12-11 19:18:58.177]      synth-n_275-m_4276-k_20-p_0.1.txt: Lower bound: 20 / 20
+[2021-12-11 19:18:58.182]      synth-n_275-m_4371-k_30-p_0.1.txt: Lower bound: 28 / 30
+[2021-12-11 19:18:58.188]      synth-n_275-m_4399-k_25-p_0.1.txt: Lower bound: 24 / 25
+[2021-12-11 19:18:58.192]       synth-n_275-m_7607-k_2-p_0.2.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.208]       synth-n_275-m_7697-k_4-p_0.2.txt: Lower bound: 4 / 4
+[2021-12-11 19:18:58.223]       synth-n_275-m_7718-k_8-p_0.2.txt: Lower bound: 8 / 8
+[2021-12-11 19:18:58.240]       synth-n_275-m_7787-k_6-p_0.2.txt: Lower bound: 6 / 6
+[2021-12-11 19:18:58.255]      synth-n_275-m_7982-k_10-p_0.2.txt: Lower bound: 10 / 10
+[2021-12-11 19:18:58.268]      synth-n_275-m_8114-k_15-p_0.2.txt: Lower bound: 15 / 15
+[2021-12-11 19:18:58.280]      synth-n_275-m_8401-k_20-p_0.2.txt: Lower bound: 20 / 20
+[2021-12-11 19:18:58.290]      synth-n_275-m_8453-k_25-p_0.2.txt: Lower bound: 25 / 25
+[2021-12-11 19:18:58.299]      synth-n_275-m_8461-k_30-p_0.2.txt: Lower bound: 29 / 30
+[2021-12-11 19:18:58.299]         synth-n_30-m_111-k_8-p_0.2.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.300]         synth-n_30-m_114-k_6-p_0.2.txt: Lower bound: 3 / 4
+[2021-12-11 19:18:58.300]        synth-n_30-m_117-k_10-p_0.2.txt: Lower bound: 5 / 6
+[2021-12-11 19:18:58.301]         synth-n_30-m_25-k_2-p_0.05.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.301]         synth-n_30-m_28-k_4-p_0.05.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.301]         synth-n_30-m_28-k_6-p_0.05.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.301]         synth-n_30-m_28-k_8-p_0.05.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.302]        synth-n_30-m_35-k_10-p_0.05.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.302]          synth-n_30-m_55-k_4-p_0.1.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.302]          synth-n_30-m_58-k_6-p_0.1.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.303]          synth-n_30-m_60-k_2-p_0.1.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.303]          synth-n_30-m_64-k_8-p_0.1.txt: Lower bound: 1 / 2
+[2021-12-11 19:18:58.303]         synth-n_30-m_73-k_10-p_0.1.txt: Lower bound: 2 / 3
+[2021-12-11 19:18:58.303]          synth-n_30-m_97-k_2-p_0.2.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.304]          synth-n_30-m_99-k_4-p_0.2.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.317]     synth-n_300-m_10263-k_30-p_0.2.txt: Lower bound: 30 / 30
+[2021-12-11 19:18:58.319]      synth-n_300-m_2234-k_4-p_0.05.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.320]      synth-n_300-m_2261-k_2-p_0.05.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.321]      synth-n_300-m_2382-k_6-p_0.05.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.323]     synth-n_300-m_2418-k_10-p_0.05.txt: Lower bound: 7 / 7
+[2021-12-11 19:18:58.325]      synth-n_300-m_2429-k_8-p_0.05.txt: Lower bound: 6 / 6
+[2021-12-11 19:18:58.327]     synth-n_300-m_2479-k_15-p_0.05.txt: Lower bound: 13 / 13
+[2021-12-11 19:18:58.329]     synth-n_300-m_2480-k_20-p_0.05.txt: Lower bound: 17 / 18
+[2021-12-11 19:18:58.332]     synth-n_300-m_2495-k_25-p_0.05.txt: Lower bound: 24 / 25
+[2021-12-11 19:18:58.334]     synth-n_300-m_2561-k_30-p_0.05.txt: Lower bound: 29 / 30
+[2021-12-11 19:18:58.337]       synth-n_300-m_4553-k_2-p_0.1.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.344]       synth-n_300-m_4565-k_4-p_0.1.txt: Lower bound: 3 / 3
+[2021-12-11 19:18:58.346]       synth-n_300-m_4664-k_6-p_0.1.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.354]       synth-n_300-m_4762-k_8-p_0.1.txt: Lower bound: 7 / 7
+[2021-12-11 19:18:58.363]      synth-n_300-m_4844-k_10-p_0.1.txt: Lower bound: 10 / 10
+[2021-12-11 19:18:58.370]      synth-n_300-m_4893-k_15-p_0.1.txt: Lower bound: 15 / 15
+[2021-12-11 19:18:58.378]      synth-n_300-m_5040-k_20-p_0.1.txt: Lower bound: 20 / 20
+[2021-12-11 19:18:58.384]      synth-n_300-m_5040-k_25-p_0.1.txt: Lower bound: 24 / 25
+[2021-12-11 19:18:58.391]      synth-n_300-m_5197-k_30-p_0.1.txt: Lower bound: 30 / 30
+[2021-12-11 19:18:58.396]       synth-n_300-m_8966-k_2-p_0.2.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.418]       synth-n_300-m_9050-k_4-p_0.2.txt: Lower bound: 3 / 3
+[2021-12-11 19:18:58.439]       synth-n_300-m_9125-k_6-p_0.2.txt: Lower bound: 6 / 6
+[2021-12-11 19:18:58.460]       synth-n_300-m_9325-k_8-p_0.2.txt: Lower bound: 8 / 8
+[2021-12-11 19:18:58.481]      synth-n_300-m_9436-k_10-p_0.2.txt: Lower bound: 10 / 10
+[2021-12-11 19:18:58.499]      synth-n_300-m_9694-k_15-p_0.2.txt: Lower bound: 15 / 15
+[2021-12-11 19:18:58.515]      synth-n_300-m_9819-k_20-p_0.2.txt: Lower bound: 20 / 20
+[2021-12-11 19:18:58.530]      synth-n_300-m_9999-k_25-p_0.2.txt: Lower bound: 24 / 25
+[2021-12-11 19:18:58.531]         synth-n_40-m_112-k_8-p_0.1.txt: Lower bound: 3 / 3
+[2021-12-11 19:18:58.531]        synth-n_40-m_114-k_10-p_0.1.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.531]        synth-n_40-m_114-k_15-p_0.1.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.532]         synth-n_40-m_176-k_2-p_0.2.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.532]         synth-n_40-m_185-k_4-p_0.2.txt: Lower bound: 4 / 4
+[2021-12-11 19:18:58.532]        synth-n_40-m_192-k_10-p_0.2.txt: Lower bound: 8 / 10
+[2021-12-11 19:18:58.533]        synth-n_40-m_192-k_15-p_0.2.txt: Lower bound: 11 / 13
+[2021-12-11 19:18:58.533]         synth-n_40-m_194-k_6-p_0.2.txt: Lower bound: 5 / 5
+[2021-12-11 19:18:58.533]         synth-n_40-m_203-k_8-p_0.2.txt: Lower bound: 6 / 6
+[2021-12-11 19:18:58.534]         synth-n_40-m_36-k_2-p_0.05.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.534]         synth-n_40-m_47-k_6-p_0.05.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.534]         synth-n_40-m_50-k_4-p_0.05.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.535]        synth-n_40-m_58-k_15-p_0.05.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.535]         synth-n_40-m_61-k_8-p_0.05.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.535]        synth-n_40-m_62-k_10-p_0.05.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.535]          synth-n_40-m_88-k_4-p_0.1.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.536]          synth-n_40-m_92-k_2-p_0.1.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.536]          synth-n_40-m_95-k_6-p_0.1.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.536]         synth-n_50-m_139-k_2-p_0.1.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.537]         synth-n_50-m_139-k_4-p_0.1.txt: Lower bound: 2 / 2
+[2021-12-11 19:18:58.537]         synth-n_50-m_154-k_8-p_0.1.txt: Lower bound: 4 / 4
+[2021-12-11 19:18:58.537]        synth-n_50-m_159-k_10-p_0.1.txt: Lower bound: 6 / 8
+[2021-12-11 19:18:58.538]         synth-n_50-m_169-k_6-p_0.1.txt: Lower bound: 3 / 4
+[2021-12-11 19:18:58.538]        synth-n_50-m_192-k_20-p_0.1.txt: Lower bound: 8 / 11
+[2021-12-11 19:18:58.538]        synth-n_50-m_195-k_15-p_0.1.txt: Lower bound: 6 / 7
+[2021-12-11 19:18:58.539]         synth-n_50-m_275-k_2-p_0.2.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.539]         synth-n_50-m_278-k_4-p_0.2.txt: Lower bound: 3 / 3
+[2021-12-11 19:18:58.539]         synth-n_50-m_302-k_6-p_0.2.txt: Lower bound: 5 / 5
+[2021-12-11 19:18:58.540]        synth-n_50-m_320-k_15-p_0.2.txt: Lower bound: 12 / 14
+[2021-12-11 19:18:58.540]        synth-n_50-m_327-k_10-p_0.2.txt: Lower bound: 10 / 10
+[2021-12-11 19:18:58.541]         synth-n_50-m_334-k_8-p_0.2.txt: Lower bound: 6 / 6
+[2021-12-11 19:18:58.541]        synth-n_50-m_357-k_20-p_0.2.txt: Lower bound: 15 / 20
+[2021-12-11 19:18:58.541]         synth-n_50-m_66-k_2-p_0.05.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.541]         synth-n_50-m_70-k_4-p_0.05.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.542]         synth-n_50-m_71-k_8-p_0.05.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.542]        synth-n_50-m_81-k_10-p_0.05.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.542]        synth-n_50-m_90-k_20-p_0.05.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.543]         synth-n_50-m_91-k_6-p_0.05.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.543]        synth-n_50-m_97-k_15-p_0.05.txt: Lower bound: 1 / 2
+[2021-12-11 19:18:58.543]        synth-n_60-m_110-k_2-p_0.05.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.544]        synth-n_60-m_114-k_6-p_0.05.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.544]       synth-n_60-m_121-k_10-p_0.05.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.544]       synth-n_60-m_122-k_15-p_0.05.txt: Lower bound: 5 / 5
+[2021-12-11 19:18:58.545]       synth-n_60-m_124-k_25-p_0.05.txt: Lower bound: 5 / 5
+[2021-12-11 19:18:58.545]        synth-n_60-m_126-k_8-p_0.05.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.545]       synth-n_60-m_134-k_20-p_0.05.txt: Lower bound: 1 / 2
+[2021-12-11 19:18:58.546]         synth-n_60-m_196-k_2-p_0.1.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.546]         synth-n_60-m_196-k_4-p_0.1.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.546]         synth-n_60-m_207-k_8-p_0.1.txt: Lower bound: 5 / 6
+[2021-12-11 19:18:58.547]        synth-n_60-m_211-k_10-p_0.1.txt: Lower bound: 5 / 7
+[2021-12-11 19:18:58.547]         synth-n_60-m_222-k_6-p_0.1.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.547]        synth-n_60-m_226-k_15-p_0.1.txt: Lower bound: 8 / 9
+[2021-12-11 19:18:58.547]        synth-n_60-m_243-k_25-p_0.1.txt: Lower bound: 10 / 14
+[2021-12-11 19:18:58.548]        synth-n_60-m_271-k_20-p_0.1.txt: Lower bound: 11 / 15
+[2021-12-11 19:18:58.548]         synth-n_60-m_380-k_2-p_0.2.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.549]         synth-n_60-m_386-k_4-p_0.2.txt: Lower bound: 2 / 2
+[2021-12-11 19:18:58.549]         synth-n_60-m_428-k_8-p_0.2.txt: Lower bound: 8 / 8
+[2021-12-11 19:18:58.549]        synth-n_60-m_437-k_10-p_0.2.txt: Lower bound: 9 / 10
+[2021-12-11 19:18:58.550]         synth-n_60-m_442-k_6-p_0.2.txt: Lower bound: 6 / 6
+[2021-12-11 19:18:58.550]        synth-n_60-m_463-k_20-p_0.2.txt: Lower bound: 14 / 20
+[2021-12-11 19:18:58.551]        synth-n_60-m_468-k_15-p_0.2.txt: Lower bound: 12 / 15
+[2021-12-11 19:18:58.551]        synth-n_60-m_520-k_25-p_0.2.txt: Lower bound: 17 / 25
+[2021-12-11 19:18:58.551]         synth-n_60-m_94-k_4-p_0.05.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.552]        synth-n_70-m_125-k_4-p_0.05.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.552]        synth-n_70-m_135-k_8-p_0.05.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.552]       synth-n_70-m_156-k_10-p_0.05.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.553]        synth-n_70-m_156-k_2-p_0.05.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.553]        synth-n_70-m_157-k_6-p_0.05.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.553]       synth-n_70-m_159-k_15-p_0.05.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.553]       synth-n_70-m_167-k_20-p_0.05.txt: Lower bound: 7 / 8
+[2021-12-11 19:18:58.554]       synth-n_70-m_180-k_25-p_0.05.txt: Lower bound: 5 / 6
+[2021-12-11 19:18:58.554]       synth-n_70-m_191-k_30-p_0.05.txt: Lower bound: 7 / 8
+[2021-12-11 19:18:58.554]         synth-n_70-m_258-k_2-p_0.1.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.555]         synth-n_70-m_274-k_4-p_0.1.txt: Lower bound: 1 / 2
+[2021-12-11 19:18:58.555]         synth-n_70-m_303-k_8-p_0.1.txt: Lower bound: 7 / 8
+[2021-12-11 19:18:58.555]         synth-n_70-m_304-k_6-p_0.1.txt: Lower bound: 6 / 6
+[2021-12-11 19:18:58.556]        synth-n_70-m_308-k_10-p_0.1.txt: Lower bound: 7 / 9
+[2021-12-11 19:18:58.556]        synth-n_70-m_312-k_20-p_0.1.txt: Lower bound: 9 / 15
+[2021-12-11 19:18:58.557]        synth-n_70-m_328-k_15-p_0.1.txt: Lower bound: 9 / 12
+[2021-12-11 19:18:58.557]        synth-n_70-m_342-k_30-p_0.1.txt: Lower bound: 13 / 19
+[2021-12-11 19:18:58.557]        synth-n_70-m_347-k_25-p_0.1.txt: Lower bound: 12 / 18
+[2021-12-11 19:18:58.558]         synth-n_70-m_494-k_2-p_0.2.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.558]         synth-n_70-m_538-k_4-p_0.2.txt: Lower bound: 4 / 4
+[2021-12-11 19:18:58.559]         synth-n_70-m_553-k_8-p_0.2.txt: Lower bound: 6 / 6
+[2021-12-11 19:18:58.559]        synth-n_70-m_560-k_10-p_0.2.txt: Lower bound: 9 / 10
+[2021-12-11 19:18:58.560]         synth-n_70-m_591-k_6-p_0.2.txt: Lower bound: 5 / 5
+[2021-12-11 19:18:58.561]        synth-n_70-m_626-k_15-p_0.2.txt: Lower bound: 13 / 15
+[2021-12-11 19:18:58.561]        synth-n_70-m_644-k_25-p_0.2.txt: Lower bound: 16 / 23
+[2021-12-11 19:18:58.562]        synth-n_70-m_645-k_20-p_0.2.txt: Lower bound: 16 / 20
+[2021-12-11 19:18:58.562]        synth-n_70-m_702-k_30-p_0.2.txt: Lower bound: 16 / 28
+[2021-12-11 19:18:58.563]        synth-n_80-m_167-k_2-p_0.05.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.563]       synth-n_80-m_169-k_10-p_0.05.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.563]        synth-n_80-m_170-k_4-p_0.05.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.564]        synth-n_80-m_186-k_8-p_0.05.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.564]       synth-n_80-m_189-k_15-p_0.05.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.564]        synth-n_80-m_193-k_6-p_0.05.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.565]       synth-n_80-m_214-k_20-p_0.05.txt: Lower bound: 7 / 9
+[2021-12-11 19:18:58.565]       synth-n_80-m_222-k_30-p_0.05.txt: Lower bound: 8 / 11
+[2021-12-11 19:18:58.565]       synth-n_80-m_226-k_25-p_0.05.txt: Lower bound: 5 / 5
+[2021-12-11 19:18:58.566]         synth-n_80-m_305-k_2-p_0.1.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.566]         synth-n_80-m_319-k_4-p_0.1.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.566]        synth-n_80-m_343-k_10-p_0.1.txt: Lower bound: 7 / 7
+[2021-12-11 19:18:58.567]         synth-n_80-m_350-k_6-p_0.1.txt: Lower bound: 4 / 4
+[2021-12-11 19:18:58.567]         synth-n_80-m_369-k_8-p_0.1.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.568]        synth-n_80-m_400-k_15-p_0.1.txt: Lower bound: 10 / 14
+[2021-12-11 19:18:58.568]        synth-n_80-m_402-k_20-p_0.1.txt: Lower bound: 12 / 15
+[2021-12-11 19:18:58.568]        synth-n_80-m_444-k_25-p_0.1.txt: Lower bound: 15 / 20
+[2021-12-11 19:18:58.569]        synth-n_80-m_483-k_30-p_0.1.txt: Lower bound: 19 / 25
+[2021-12-11 19:18:58.569]         synth-n_80-m_636-k_4-p_0.2.txt: Lower bound: 4 / 4
+[2021-12-11 19:18:58.570]         synth-n_80-m_667-k_2-p_0.2.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.570]         synth-n_80-m_690-k_6-p_0.2.txt: Lower bound: 6 / 6
+[2021-12-11 19:18:58.571]         synth-n_80-m_700-k_8-p_0.2.txt: Lower bound: 8 / 8
+[2021-12-11 19:18:58.571]        synth-n_80-m_753-k_10-p_0.2.txt: Lower bound: 8 / 9
+[2021-12-11 19:18:58.572]        synth-n_80-m_780-k_20-p_0.2.txt: Lower bound: 16 / 20
+[2021-12-11 19:18:58.572]        synth-n_80-m_818-k_15-p_0.2.txt: Lower bound: 13 / 15
+[2021-12-11 19:18:58.574]        synth-n_80-m_837-k_30-p_0.2.txt: Lower bound: 21 / 30
+[2021-12-11 19:18:58.575]        synth-n_80-m_854-k_25-p_0.2.txt: Lower bound: 20 / 25
+[2021-12-11 19:18:58.576]       synth-n_90-m_1018-k_20-p_0.2.txt: Lower bound: 19 / 20
+[2021-12-11 19:18:58.576]       synth-n_90-m_1019-k_15-p_0.2.txt: Lower bound: 15 / 15
+[2021-12-11 19:18:58.577]       synth-n_90-m_1054-k_25-p_0.2.txt: Lower bound: 20 / 25
+[2021-12-11 19:18:58.578]       synth-n_90-m_1075-k_30-p_0.2.txt: Lower bound: 25 / 30
+[2021-12-11 19:18:58.578]        synth-n_90-m_188-k_2-p_0.05.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.578]        synth-n_90-m_214-k_8-p_0.05.txt: Lower bound: 2 / 3
+[2021-12-11 19:18:58.579]        synth-n_90-m_216-k_4-p_0.05.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.579]        synth-n_90-m_239-k_6-p_0.05.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.579]       synth-n_90-m_248-k_10-p_0.05.txt: Lower bound: 3 / 4
+[2021-12-11 19:18:58.580]       synth-n_90-m_258-k_20-p_0.05.txt: Lower bound: 7 / 8
+[2021-12-11 19:18:58.580]       synth-n_90-m_269-k_15-p_0.05.txt: Lower bound: 5 / 8
+[2021-12-11 19:18:58.580]       synth-n_90-m_273-k_25-p_0.05.txt: Lower bound: 9 / 11
+[2021-12-11 19:18:58.581]       synth-n_90-m_327-k_30-p_0.05.txt: Lower bound: 10 / 14
+[2021-12-11 19:18:58.581]         synth-n_90-m_410-k_4-p_0.1.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.581]        synth-n_90-m_445-k_10-p_0.1.txt: Lower bound: 5 / 6
+[2021-12-11 19:18:58.582]         synth-n_90-m_450-k_2-p_0.1.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.582]         synth-n_90-m_470-k_8-p_0.1.txt: Lower bound: 6 / 6
+[2021-12-11 19:18:58.583]         synth-n_90-m_486-k_6-p_0.1.txt: Lower bound: 5 / 5
+[2021-12-11 19:18:58.583]        synth-n_90-m_504-k_15-p_0.1.txt: Lower bound: 12 / 15
+[2021-12-11 19:18:58.584]        synth-n_90-m_527-k_20-p_0.1.txt: Lower bound: 15 / 19
+[2021-12-11 19:18:58.584]        synth-n_90-m_555-k_30-p_0.1.txt: Lower bound: 16 / 23
+[2021-12-11 19:18:58.584]        synth-n_90-m_558-k_25-p_0.1.txt: Lower bound: 16 / 23
+[2021-12-11 19:18:58.585]         synth-n_90-m_855-k_6-p_0.2.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.586]         synth-n_90-m_863-k_2-p_0.2.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.586]         synth-n_90-m_870-k_4-p_0.2.txt: Lower bound: 0 / 0
+[2021-12-11 19:18:58.587]         synth-n_90-m_888-k_8-p_0.2.txt: Lower bound: 8 / 8
+[2021-12-11 19:18:58.587]        synth-n_90-m_980-k_10-p_0.2.txt: Lower bound: 10 / 10
+[2021-12-11 19:18:58.588]                         advotogo-n_100: Lower bound: 0 / 0
+[2021-12-11 19:18:58.589]                        advotogo-n_1000: Lower bound: 4 / 7
+[2021-12-11 19:18:58.589]                         advotogo-n_200: Lower bound: 0 / 0
+[2021-12-11 19:18:58.589]                         advotogo-n_300: Lower bound: 0 / 0
+[2021-12-11 19:18:58.590]                         advotogo-n_400: Lower bound: 0 / 0
+[2021-12-11 19:18:58.590]                         advotogo-n_500: Lower bound: 0 / 0
+[2021-12-11 19:18:58.591]                         advotogo-n_700: Lower bound: 2 / 3
+[2021-12-11 19:18:58.592]                         advotogo-n_800: Lower bound: 0 / 0
+[2021-12-11 19:18:58.593]                                 baydry: Lower bound: 0 / 0
+[2021-12-11 19:18:58.594]                                 baywet: Lower bound: 0 / 0
+[2021-12-11 19:18:58.595]             biology-n_12-m_33-p_0.5-15: Lower bound: 3 / 3
+[2021-12-11 19:18:58.595]            biology-n_12-m_33-p_0.75-15: Lower bound: 3 / 3
+[2021-12-11 19:18:58.595]             biology-n_12-m_33-p_0.9-15: Lower bound: 0 / 0
+[2021-12-11 19:18:58.596]             biology-n_12-m_43-p_0.5-25: Lower bound: 3 / 4
+[2021-12-11 19:18:58.596]            biology-n_12-m_43-p_0.75-25: Lower bound: 0 / 0
+[2021-12-11 19:18:58.596]             biology-n_12-m_43-p_0.9-25: Lower bound: 0 / 0
+[2021-12-11 19:18:58.596]             biology-n_12-m_45-p_0.5-19: Lower bound: 2 / 3
+[2021-12-11 19:18:58.597]            biology-n_12-m_45-p_0.75-19: Lower bound: 2 / 3
+[2021-12-11 19:18:58.597]             biology-n_12-m_45-p_0.9-19: Lower bound: 0 / 0
+[2021-12-11 19:18:58.597]              biology-n_13-m_39-p_0.5-4: Lower bound: 2 / 2
+[2021-12-11 19:18:58.597]             biology-n_13-m_39-p_0.75-4: Lower bound: 0 / 0
+[2021-12-11 19:18:58.598]              biology-n_13-m_39-p_0.9-4: Lower bound: 0 / 0
+[2021-12-11 19:18:58.598]             biology-n_13-m_51-p_0.5-22: Lower bound: 3 / 4
+[2021-12-11 19:18:58.598]            biology-n_13-m_51-p_0.75-22: Lower bound: 2 / 3
+[2021-12-11 19:18:58.599]             biology-n_13-m_51-p_0.9-22: Lower bound: 0 / 0
+[2021-12-11 19:18:58.599]              biology-n_16-m_79-p_0.5-3: Lower bound: 4 / 6
+[2021-12-11 19:18:58.599]             biology-n_16-m_79-p_0.75-3: Lower bound: 4 / 6
+[2021-12-11 19:18:58.599]              biology-n_16-m_79-p_0.9-3: Lower bound: 2 / 4
+[2021-12-11 19:18:58.600]             biology-n_17-m_89-p_0.5-10: Lower bound: 3 / 6
+[2021-12-11 19:18:58.600]            biology-n_17-m_89-p_0.75-10: Lower bound: 5 / 6
+[2021-12-11 19:18:58.600]             biology-n_17-m_89-p_0.9-10: Lower bound: 2 / 4
+[2021-12-11 19:18:58.600]             biology-n_19-m_99-p_0.5-20: Lower bound: 5 / 7
+[2021-12-11 19:18:58.601]            biology-n_19-m_99-p_0.75-20: Lower bound: 3 / 6
+[2021-12-11 19:18:58.601]             biology-n_19-m_99-p_0.9-20: Lower bound: 0 / 0
+[2021-12-11 19:18:58.601]            biology-n_20-m_125-p_0.5-24: Lower bound: 4 / 8
+[2021-12-11 19:18:58.602]             biology-n_20-m_125-p_0.5-7: Lower bound: 5 / 9
+[2021-12-11 19:18:58.602]           biology-n_20-m_125-p_0.75-24: Lower bound: 5 / 9
+[2021-12-11 19:18:58.602]            biology-n_20-m_125-p_0.75-7: Lower bound: 4 / 5
+[2021-12-11 19:18:58.603]            biology-n_20-m_125-p_0.9-24: Lower bound: 3 / 3
+[2021-12-11 19:18:58.603]             biology-n_20-m_125-p_0.9-7: Lower bound: 3 / 3
+[2021-12-11 19:18:58.603]              biology-n_22-m_76-p_0.5-9: Lower bound: 3 / 4
+[2021-12-11 19:18:58.603]             biology-n_22-m_76-p_0.75-9: Lower bound: 3 / 4
+[2021-12-11 19:18:58.604]              biology-n_22-m_76-p_0.9-9: Lower bound: 3 / 3
+[2021-12-11 19:18:58.604]            biology-n_23-m_166-p_0.5-17: Lower bound: 5 / 12
+[2021-12-11 19:18:58.604]           biology-n_23-m_166-p_0.75-17: Lower bound: 6 / 10
+[2021-12-11 19:18:58.605]            biology-n_23-m_166-p_0.9-17: Lower bound: 4 / 5
+[2021-12-11 19:18:58.605]             biology-n_25-m_231-p_0.5-6: Lower bound: 7 / 13
+[2021-12-11 19:18:58.605]            biology-n_25-m_231-p_0.75-6: Lower bound: 7 / 13
+[2021-12-11 19:18:58.606]             biology-n_25-m_231-p_0.9-6: Lower bound: 5 / 8
+[2021-12-11 19:18:58.606]            biology-n_28-m_163-p_0.5-11: Lower bound: 5 / 9
+[2021-12-11 19:18:58.606]           biology-n_28-m_163-p_0.75-11: Lower bound: 6 / 7
+[2021-12-11 19:18:58.607]            biology-n_28-m_163-p_0.9-11: Lower bound: 4 / 4
+[2021-12-11 19:18:58.607]             biology-n_28-m_249-p_0.5-8: Lower bound: 8 / 15
+[2021-12-11 19:18:58.607]            biology-n_28-m_249-p_0.75-8: Lower bound: 6 / 13
+[2021-12-11 19:18:58.608]             biology-n_28-m_249-p_0.9-8: Lower bound: 4 / 5
+[2021-12-11 19:18:58.608]            biology-n_29-m_153-p_0.5-21: Lower bound: 6 / 10
+[2021-12-11 19:18:58.608]           biology-n_29-m_153-p_0.75-21: Lower bound: 7 / 11
+[2021-12-11 19:18:58.609]            biology-n_29-m_153-p_0.9-21: Lower bound: 3 / 4
+[2021-12-11 19:18:58.609]             biology-n_30-m_287-p_0.5-5: Lower bound: 7 / 15
+[2021-12-11 19:18:58.609]            biology-n_30-m_287-p_0.75-5: Lower bound: 7 / 12
+[2021-12-11 19:18:58.609]             biology-n_30-m_287-p_0.9-5: Lower bound: 7 / 10
+[2021-12-11 19:18:58.610]            biology-n_35-m_315-p_0.5-18: Lower bound: 8 / 16
+[2021-12-11 19:18:58.610]           biology-n_35-m_315-p_0.75-18: Lower bound: 8 / 15
+[2021-12-11 19:18:58.610]            biology-n_35-m_315-p_0.9-18: Lower bound: 7 / 10
+[2021-12-11 19:18:58.611]            biology-n_36-m_219-p_0.5-12: Lower bound: 9 / 17
+[2021-12-11 19:18:58.611]           biology-n_36-m_219-p_0.75-12: Lower bound: 9 / 14
+[2021-12-11 19:18:58.611]            biology-n_36-m_219-p_0.9-12: Lower bound: 6 / 7
+[2021-12-11 19:18:58.612]            biology-n_42-m_297-p_0.5-23: Lower bound: 10 / 20
+[2021-12-11 19:18:58.612]           biology-n_42-m_297-p_0.75-23: Lower bound: 11 / 19
+[2021-12-11 19:18:58.613]            biology-n_42-m_297-p_0.9-23: Lower bound: 8 / 11
+[2021-12-11 19:18:58.613]            biology-n_45-m_326-p_0.5-16: Lower bound: 12 / 21
+[2021-12-11 19:18:58.613]           biology-n_45-m_326-p_0.75-16: Lower bound: 11 / 18
+[2021-12-11 19:18:58.614]            biology-n_45-m_326-p_0.9-16: Lower bound: 10 / 14
+[2021-12-11 19:18:58.614]            biology-n_49-m_689-p_0.5-14: Lower bound: 11 / 27
+[2021-12-11 19:18:58.615]           biology-n_49-m_689-p_0.75-14: Lower bound: 12 / 24
+[2021-12-11 19:18:58.615]            biology-n_49-m_689-p_0.9-14: Lower bound: 12 / 19
+[2021-12-11 19:18:58.616]            biology-n_56-m_1372-p_0.5-4: Lower bound: 18 / 42
+[2021-12-11 19:18:58.617]           biology-n_56-m_1372-p_0.75-4: Lower bound: 17 / 38
+[2021-12-11 19:18:58.617]            biology-n_56-m_1372-p_0.9-4: Lower bound: 16 / 29
+[2021-12-11 19:18:58.618]             biology-n_56-m_526-p_0.5-2: Lower bound: 13 / 28
+[2021-12-11 19:18:58.618]            biology-n_56-m_526-p_0.75-2: Lower bound: 13 / 24
+[2021-12-11 19:18:58.619]             biology-n_56-m_526-p_0.9-2: Lower bound: 10 / 14
+[2021-12-11 19:18:58.619]             biology-n_59-m_624-p_0.5-1: Lower bound: 13 / 30
+[2021-12-11 19:18:58.620]            biology-n_59-m_624-p_0.75-1: Lower bound: 13 / 25
+[2021-12-11 19:18:58.620]             biology-n_59-m_624-p_0.9-1: Lower bound: 11 / 19
+[2021-12-11 19:18:58.621]            biology-n_77-m_1411-p_0.5-5: Lower bound: 21 / 47
+[2021-12-11 19:18:58.622]           biology-n_77-m_1411-p_0.75-5: Lower bound: 20 / 42
+[2021-12-11 19:18:58.623]            biology-n_77-m_1411-p_0.9-5: Lower bound: 16 / 31
+[2021-12-11 19:18:58.623]            biology-n_79-m_1381-p_0.5-2: Lower bound: 22 / 46
+[2021-12-11 19:18:58.624]           biology-n_79-m_1381-p_0.75-2: Lower bound: 21 / 43
+[2021-12-11 19:18:58.625]            biology-n_79-m_1381-p_0.9-2: Lower bound: 19 / 34
+[2021-12-11 19:18:58.626]            biology-n_81-m_1292-p_0.5-3: Lower bound: 21 / 45
+[2021-12-11 19:18:58.626]           biology-n_81-m_1292-p_0.75-3: Lower bound: 21 / 42
+[2021-12-11 19:18:58.627]            biology-n_81-m_1292-p_0.9-3: Lower bound: 16 / 32
+[2021-12-11 19:18:58.627]               biology-n_9-m_23-p_0.5-1: Lower bound: 0 / 0
+[2021-12-11 19:18:58.628]              biology-n_9-m_23-p_0.75-1: Lower bound: 0 / 0
+[2021-12-11 19:18:58.628]               biology-n_9-m_23-p_0.9-1: Lower bound: 0 / 0
+[2021-12-11 19:18:58.628]                     bitcoinalpha-n_100: Lower bound: 0 / 0
+[2021-12-11 19:18:58.629]                    bitcoinalpha-n_1000: Lower bound: 0 / 0
+[2021-12-11 19:18:58.629]                     bitcoinalpha-n_200: Lower bound: 0 / 0
+[2021-12-11 19:18:58.630]                     bitcoinalpha-n_300: Lower bound: 0 / 0
+[2021-12-11 19:18:58.630]                     bitcoinalpha-n_400: Lower bound: 0 / 0
+[2021-12-11 19:18:58.630]                     bitcoinalpha-n_500: Lower bound: 1 / 2
+[2021-12-11 19:18:58.631]                     bitcoinalpha-n_700: Lower bound: 1 / 2
+[2021-12-11 19:18:58.631]                     bitcoinalpha-n_800: Lower bound: 0 / 0
+[2021-12-11 19:18:58.632]                            blogs-n_100: Lower bound: 0 / 0
+[2021-12-11 19:18:58.640]                           blogs-n_1000: Lower bound: 85 / 112
+[2021-12-11 19:18:58.640]                            blogs-n_200: Lower bound: 4 / 6
+[2021-12-11 19:18:58.641]                            blogs-n_300: Lower bound: 0 / 0
+[2021-12-11 19:18:58.642]                            blogs-n_400: Lower bound: 8 / 12
+[2021-12-11 19:18:58.643]                            blogs-n_500: Lower bound: 13 / 17
+[2021-12-11 19:18:58.646]                            blogs-n_700: Lower bound: 47 / 59
+[2021-12-11 19:18:58.650]                            blogs-n_800: Lower bound: 48 / 58
+[2021-12-11 19:18:58.652]                         celegansneural: Lower bound: 120 / 181
+[2021-12-11 19:18:58.652]                            chess-n_100: Lower bound: 0 / 0
+[2021-12-11 19:18:58.653]                           chess-n_1000: Lower bound: 25 / 29
+[2021-12-11 19:18:58.653]                            chess-n_200: Lower bound: 0 / 0
+[2021-12-11 19:18:58.653]                            chess-n_300: Lower bound: 0 / 0
+[2021-12-11 19:18:58.654]                            chess-n_400: Lower bound: 0 / 0
+[2021-12-11 19:18:58.654]                            chess-n_500: Lower bound: 0 / 0
+[2021-12-11 19:18:58.654]                            chess-n_700: Lower bound: 5 / 6
+[2021-12-11 19:18:58.655]                            chess-n_800: Lower bound: 6 / 6
+[2021-12-11 19:18:58.655]                  ChicagoRegional-n_100: Lower bound: 0 / 0
+[2021-12-11 19:18:58.656]                 ChicagoRegional-n_1000: Lower bound: 1 / 2
+[2021-12-11 19:18:58.656]                  ChicagoRegional-n_200: Lower bound: 0 / 0
+[2021-12-11 19:18:58.656]                  ChicagoRegional-n_300: Lower bound: 0 / 0
+[2021-12-11 19:18:58.657]                  ChicagoRegional-n_400: Lower bound: 0 / 0
+[2021-12-11 19:18:58.657]                  ChicagoRegional-n_500: Lower bound: 0 / 0
+[2021-12-11 19:18:58.657]                  ChicagoRegional-n_700: Lower bound: 0 / 0
+[2021-12-11 19:18:58.657]                  ChicagoRegional-n_800: Lower bound: 0 / 0
+[2021-12-11 19:18:58.658]                                convote: Lower bound: 0 / 0
+[2021-12-11 19:18:58.660]                                  email: Lower bound: 54 / 92
+[2021-12-11 19:18:58.660]                     GD-n_101-m_190.mtx: Lower bound: 0 / 0
+[2021-12-11 19:18:58.660]                     GD-n_105-m_149.mtx: Lower bound: 0 / 0
+[2021-12-11 19:18:58.661]                     GD-n_121-m_207.mtx: Lower bound: 0 / 0
+[2021-12-11 19:18:58.661]                       GD-n_18-m_37.mtx: Lower bound: 2 / 3
+[2021-12-11 19:18:58.661]                     GD-n_180-m_229.mtx: Lower bound: 0 / 0
+[2021-12-11 19:18:58.662]                       GD-n_23-m_87.mtx: Lower bound: 3 / 4
+[2021-12-11 19:18:58.662]                       GD-n_36-m_57.mtx: Lower bound: 0 / 0
+[2021-12-11 19:18:58.662]                       GD-n_38-m_50.mtx: Lower bound: 2 / 2
+[2021-12-11 19:18:58.662]                      GD-n_62-m_287.mtx: Lower bound: 29 / 38
+[2021-12-11 19:18:58.663]                       GD-n_73-m_96.mtx: Lower bound: 0 / 0
+[2021-12-11 19:18:58.663]                      GD-n_80-m_232.mtx: Lower bound: 12 / 15
+[2021-12-11 19:18:58.663]                      GD-n_84-m_196.mtx: Lower bound: 0 / 0
+[2021-12-11 19:18:58.663]                           health-n_100: Lower bound: 0 / 0
+[2021-12-11 19:18:58.665]                          health-n_1000: Lower bound: 26 / 39
+[2021-12-11 19:18:58.665]                           health-n_200: Lower bound: 0 / 0
+[2021-12-11 19:18:58.665]                           health-n_300: Lower bound: 0 / 0
+[2021-12-11 19:18:58.666]                           health-n_400: Lower bound: 0 / 0
+[2021-12-11 19:18:58.666]                           health-n_500: Lower bound: 2 / 4
+[2021-12-11 19:18:58.667]                           health-n_700: Lower bound: 7 / 13
+[2021-12-11 19:18:58.667]                           health-n_800: Lower bound: 6 / 10
+[2021-12-11 19:18:58.668]                          link-kv-n_100: Lower bound: 2 / 3
+[2021-12-11 19:18:58.670]                         link-kv-n_1000: Lower bound: 95 / 177
+[2021-12-11 19:18:58.670]                          link-kv-n_200: Lower bound: 7 / 13
+[2021-12-11 19:18:58.670]                          link-kv-n_300: Lower bound: 22 / 40
+[2021-12-11 19:18:58.671]                          link-kv-n_400: Lower bound: 32 / 58
+[2021-12-11 19:18:58.672]                          link-kv-n_500: Lower bound: 39 / 72
+[2021-12-11 19:18:58.673]                          link-kv-n_700: Lower bound: 72 / 130
+[2021-12-11 19:18:58.674]                          link-kv-n_800: Lower bound: 73 / 137
+[2021-12-11 19:18:58.674]            maayan_foodweb-n_183-m_2476: Lower bound: 6 / 9
+[2021-12-11 19:18:58.675]                moreno_bison-n_26-m_314: Lower bound: 10 / 15
+[2021-12-11 19:18:58.675]               moreno_cattle-n_28-m_217: Lower bound: 2 / 2
+[2021-12-11 19:18:58.675]                 moreno_hens-n_32-m_496: Lower bound: 8 / 11
+[2021-12-11 19:18:58.676]         moreno_innovation-n_241-m_1098: Lower bound: 26 / 32
+[2021-12-11 19:18:58.677]                 moreno_mac-n_62-m_1187: Lower bound: 9 / 11
+[2021-12-11 19:18:58.677]               moreno_rhesus-m_16-m_111: Lower bound: 5 / 8
+[2021-12-11 19:18:58.677]                moreno_sheep-n_28-m_250: Lower bound: 6 / 7
+[2021-12-11 19:18:58.677]                      openflights-n_100: Lower bound: 0 / 0
+[2021-12-11 19:18:58.679]                     openflights-n_1000: Lower bound: 7 / 12
+[2021-12-11 19:18:58.679]                      openflights-n_200: Lower bound: 0 / 0
+[2021-12-11 19:18:58.679]                      openflights-n_300: Lower bound: 1 / 2
+[2021-12-11 19:18:58.680]                      openflights-n_400: Lower bound: 2 / 4
+[2021-12-11 19:18:58.680]                      openflights-n_500: Lower bound: 2 / 4
+[2021-12-11 19:18:58.681]                      openflights-n_700: Lower bound: 9 / 13
+[2021-12-11 19:18:58.682]                      openflights-n_800: Lower bound: 13 / 20
+[2021-12-11 19:18:58.683]                                     oz: Lower bound: 95 / 136
+[2021-12-11 19:18:58.684]               polbooks-n_105-m_441.mtx: Lower bound: 0 / 0
+[2021-12-11 19:18:58.684]                          talk-oc-n_100: Lower bound: 0 / 0
+[2021-12-11 19:18:58.685]                         talk-oc-n_1000: Lower bound: 0 / 0
+[2021-12-11 19:18:58.685]                          talk-oc-n_200: Lower bound: 0 / 0
+[2021-12-11 19:18:58.686]                          talk-oc-n_300: Lower bound: 0 / 0
+[2021-12-11 19:18:58.686]                          talk-oc-n_400: Lower bound: 0 / 0
+[2021-12-11 19:18:58.686]                          talk-oc-n_500: Lower bound: 0 / 0
+[2021-12-11 19:18:58.686]                          talk-oc-n_700: Lower bound: 0 / 0
+[2021-12-11 19:18:58.687]                          talk-oc-n_800: Lower bound: 0 / 0
+[2021-12-11 19:18:58.687]                    temporalGraph-n_100: Lower bound: 1 / 2
+[2021-12-11 19:18:58.688]                   temporalGraph-n_1000: Lower bound: 5 / 9
+[2021-12-11 19:18:58.688]                    temporalGraph-n_200: Lower bound: 0 / 0
+[2021-12-11 19:18:58.688]                    temporalGraph-n_300: Lower bound: 0 / 0
+[2021-12-11 19:18:58.689]                    temporalGraph-n_400: Lower bound: 0 / 0
+[2021-12-11 19:18:58.689]                    temporalGraph-n_500: Lower bound: 4 / 6
+[2021-12-11 19:18:58.690]                    temporalGraph-n_700: Lower bound: 0 / 0
+[2021-12-11 19:18:58.690]                    temporalGraph-n_800: Lower bound: 0 / 0
+[2021-12-11 19:18:58.691]              Tina_AskCal-n_11-m_29.mtx: Lower bound: 0 / 0
+[2021-12-11 19:18:58.691]                                  trust: Lower bound: 13 / 20
+[2021-12-11 19:18:58.692]                         ucsocial-n_100: Lower bound: 0 / 0
+[2021-12-11 19:18:58.694]                        ucsocial-n_1000: Lower bound: 0 / 0
+[2021-12-11 19:18:58.694]                         ucsocial-n_200: Lower bound: 0 / 0
+[2021-12-11 19:18:58.695]                         ucsocial-n_300: Lower bound: 0 / 0
+[2021-12-11 19:18:58.695]                         ucsocial-n_400: Lower bound: 0 / 0
+[2021-12-11 19:18:58.696]                         ucsocial-n_500: Lower bound: 0 / 0
+[2021-12-11 19:18:58.697]                         ucsocial-n_700: Lower bound: 1 / 2
+[2021-12-11 19:18:58.698]                         ucsocial-n_800: Lower bound: 1 / 2
+[2021-12-11 19:18:58.699]                        usairport-n_100: Lower bound: 0 / 0
+[2021-12-11 19:18:58.703]                       usairport-n_1000: Lower bound: 66 / 95
+[2021-12-11 19:18:58.703]                        usairport-n_200: Lower bound: 3 / 4
+[2021-12-11 19:18:58.704]                        usairport-n_300: Lower bound: 9 / 12
+[2021-12-11 19:18:58.704]                        usairport-n_400: Lower bound: 26 / 32
+[2021-12-11 19:18:58.705]                        usairport-n_500: Lower bound: 25 / 35
+[2021-12-11 19:18:58.707]                        usairport-n_700: Lower bound: 33 / 49
+[2021-12-11 19:18:58.710]                        usairport-n_800: Lower bound: 44 / 61
+[2021-12-11 19:18:58.710]                      wikispeedia-n_100: Lower bound: 0 / 0
+[2021-12-11 19:18:58.712]                     wikispeedia-n_1000: Lower bound: 39 / 47
+[2021-12-11 19:18:58.712]                      wikispeedia-n_200: Lower bound: 0 / 0
+[2021-12-11 19:18:58.713]                      wikispeedia-n_300: Lower bound: 0 / 0
+[2021-12-11 19:18:58.713]                      wikispeedia-n_400: Lower bound: 1 / 2
+[2021-12-11 19:18:58.714]                      wikispeedia-n_500: Lower bound: 6 / 8
+[2021-12-11 19:18:58.714]                      wikispeedia-n_700: Lower bound: 6 / 8
+[2021-12-11 19:18:58.715]                      wikispeedia-n_800: Lower bound: 26 / 28
+[2021-12-11 19:18:58.720]                                Overall: Average lower bound quality per instance: 0.8206623
+[2021-12-11 19:18:58.720]                                Overall: Overall lower bound quality: 0.77464014

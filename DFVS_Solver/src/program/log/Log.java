@@ -18,20 +18,20 @@ public abstract class Log {
     public static boolean ignore;
     public static int level = 0;
 
-    public static void debugLog(String graphName, String message){
-        debugLog(graphName, message, false);
+    public static void debugLog(String name, String message){
+        debugLog(name, message, false);
     }
 
-    public static void debugLog(String graphName, String message, boolean error){
+    public static void debugLog(String name, String message, boolean error){
 
         //Ignore Log
         if(ignore) return;
 
         //Create program.log string
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS");
-        String gap = " ".repeat(Math.max(0, 38 - graphName.length()));
+        String gap = " ".repeat(Math.max(0, 38 - name.length()));
         String recursionGap = " - ".repeat(level);
-        String logMessage = "[" + LocalDateTime.now().format(dtf) + "] " + gap + graphName + ": " +  recursionGap + message;
+        String logMessage = "[" + LocalDateTime.now().format(dtf) + "] " + gap + name + ": " +  recursionGap + message;
 
         //Console Log
         if(error) System.err.println(logMessage);
