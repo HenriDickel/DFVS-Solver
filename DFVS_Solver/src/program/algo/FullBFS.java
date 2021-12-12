@@ -23,6 +23,7 @@ public abstract class FullBFS {
                 if(node.getInIds().contains(outId)) {
                     cycles.add(new Cycle(node, graph.getNode(outId)));
                     minSize = 2;
+                    // TODO in rare cases (e.g. 'email'), it can be beneficial to break after the first cycle is found
                 }
             }
         }

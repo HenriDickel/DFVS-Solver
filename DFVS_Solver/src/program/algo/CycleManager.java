@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 
 public class CycleManager {
 
-    private final Map<Integer, Cycle> shortestCycles = new LinkedHashMap<>();
+    /*private final Map<Integer, Cycle> shortestCycles = new LinkedHashMap<>();
     private int minSize = Integer.MAX_VALUE;
 
     public CycleManager(Graph graph) {
@@ -94,5 +94,5 @@ public class CycleManager {
             }
 
         }
-    }
+    }*/
 }
