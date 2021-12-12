@@ -41,13 +41,13 @@ public class Main {
             Log.ignore = false;
 
             List<GraphFile> files = InstanceCreator.getSyntheticAndComplexFiles(null);
-            testLowerBoundQuality(files);
+            //testLowerBoundQuality(files);
 
             //List<GraphFile> files = InstanceCreator.getSelectedFilesDataset2();
-            //for(GraphFile file: files) {
-                //Instance instance = InstanceCreator.createFromFile(file);
-                //Solver.dfvsSolveInstance(instance);
-            //}
+            for(GraphFile file: files) {
+                Instance instance = InstanceCreator.createFromFile(file);
+                Solver.dfvsSolveInstance(instance);
+            }
         }
     }
 

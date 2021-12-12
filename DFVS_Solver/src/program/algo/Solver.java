@@ -25,8 +25,9 @@ public abstract class Solver {
 
         // Checks, if k is within the lower bounds
         PerformanceTimer.start();
-        if(CyclePacking.checkLowerBounds(graph, k)) return null;
+        boolean foundPacking = CyclePacking.checkLowerBound(graph, k);
         PerformanceTimer.log(PerformanceTimer.MethodType.PACKING);
+        if(foundPacking) return null;
 
         // Break to skip the redundant dfvs_branch()-call when k = 0
         if (k <= 0) {
@@ -71,6 +72,23 @@ public abstract class Solver {
             forbiddenIds.add(node.id);
         }
         return null;
+    }
+
+    public static List<Integer> dfvsSolveWithoutFlowers(Graph initialGraph) {
+
+        int k = 0;
+        List<Integer> S = null;
+        while (S == null) {
+            CycleCounter.init(k);
+            S = dfvsBranch(initialGraph, k, 0);
+            if (S == null) {
+                // Log detail logs
+                instance.averageCycleSize = CycleCounter.getAverageCycleSize();
+                instance.recursiveStepsPerK = CycleCounter.getRecursiveSteps();
+            }
+            k++;
+        }
+        return S;
     }
 
     public static List<Integer> dfvsSolve(Graph initialGraph) {
@@ -174,7 +192,7 @@ public abstract class Solver {
         // Run for all sub graphs
         try {
             for (Graph subGraph : instance.subGraphs) {
-                List<Integer> S = dfvsSolve(subGraph);
+                List<Integer> S = dfvsSolveWithoutFlowers(subGraph);
                 instance.S.addAll(S);
             }
         } catch (TimeoutException timeoutException) {

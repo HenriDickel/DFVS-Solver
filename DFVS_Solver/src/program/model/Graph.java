@@ -1,6 +1,7 @@
 package program.model;
 
 
+import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -35,6 +36,19 @@ public class Graph {
 
     public int getEdgeCount() {
         return nodes.values().stream().map(Node::getOutIdCount).mapToInt(Integer::valueOf).sum();
+    }
+
+    public List<Cycle> getPairCycles() {
+        List<Cycle> cycles = new ArrayList<>();
+        // Look for all cycles of size 2
+        for (Node node : getNodes()) {
+            for(Integer outId: node.getOutIds()) {
+                if(node.getInIds().contains(outId)) {
+                    cycles.add(new Cycle(node, getNode(outId)));
+                }
+            }
+        }
+        return cycles;
     }
 
     public void resetBFS() {

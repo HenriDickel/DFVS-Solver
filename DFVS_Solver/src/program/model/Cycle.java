@@ -1,6 +1,7 @@
 package program.model;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -11,9 +12,8 @@ public class Cycle {
         nodes.add(start);
     }
 
-    public Cycle(Node a, Node b) {
-        nodes.add(a);
-        nodes.add(b);
+    public Cycle(Node... nodes) {
+        this.nodes.addAll(Arrays.asList(nodes));
     }
 
     public void add(Node node) {
@@ -22,6 +22,10 @@ public class Cycle {
 
     public List<Node> getNodes() {
         return nodes;
+    }
+
+    public Node get(int index) {
+        return nodes.get(index);
     }
 
     public int size() {
