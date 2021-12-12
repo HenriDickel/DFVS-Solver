@@ -81,6 +81,13 @@ public abstract class InstanceCreator {
         return files;
     }
 
+    public static List<GraphFile> getUnsolvedFiles(){
+        List<GraphFile> files = new ArrayList<>();
+        files.add(new GraphFile(COMPLEX_PATH, "oz"));
+        files.add(new GraphFile(COMPLEX_PATH, "celegansneural"));
+        return files;
+    }
+
     public static List<GraphFile> getSyntheticAndComplexFiles(String startFilename) {
         List<GraphFile> files = getFiles(SYNTHETIC_PATH);
         files.addAll(getFiles(COMPLEX_PATH));
