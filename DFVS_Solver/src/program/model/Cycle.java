@@ -8,10 +8,6 @@ import java.util.stream.Collectors;
 public class Cycle {
     private List<Node> nodes = new ArrayList<>();
 
-    public Cycle(Node start) {
-        nodes.add(start);
-    }
-
     public Cycle(Node... nodes) {
         this.nodes.addAll(Arrays.asList(nodes));
     }

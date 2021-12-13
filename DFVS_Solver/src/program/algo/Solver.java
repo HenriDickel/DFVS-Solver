@@ -74,9 +74,11 @@ public abstract class Solver {
         return null;
     }
 
-    public static List<Integer> dfvsSolveWithoutFlowers(Graph initialGraph) {
+    private static int k;
 
-        int k = 0;
+    public static List<Integer> dfvsSolve(Graph initialGraph) {
+
+        k = 0;
         List<Integer> S = null;
         while (S == null) {
             CycleCounter.init(k);
@@ -91,7 +93,7 @@ public abstract class Solver {
         return S;
     }
 
-    public static List<Integer> dfvsSolve(Graph initialGraph) {
+    public static List<Integer> dfvsSolveWithFlowers(Graph initialGraph) {
 
         // Set Petals
         PerformanceTimer.start();
@@ -99,28 +101,8 @@ public abstract class Solver {
         List<Integer> removedFlowers = new ArrayList<>();
         PerformanceTimer.log(PerformanceTimer.MethodType.FLOWERS);
 
-        /*
-        String petalsString = "{" + initialGraph.getNodes().stream().map(node -> String.valueOf(node.petal)).collect(Collectors.joining(",")) + "}";
-
-         //Use flower rule 1
-        int removedByRule1Count = 0;
-        for(Node node : initialGraph.getNodes()){
-            if(node.petal == 1){
-                for(Integer out : node.getOutIds()){
-                    for(Integer in : node.getInIds()){
-                        initialGraph.getNode(in).addOutId(out);
-                    }
-                }
-                initialGraph.removeNode(node.id);
-                removedByRule1Count++;
-            }
-        }
-        Log.debugLog(instance.NAME, "Petal Values: " + petalsString);
-        Log.debugLog(instance.NAME, "Removed " + removedByRule1Count + " nodes by petal rule 1");
-        */
-
         // Loop
-        int k = 0;
+        k = 0;
 
         List<Integer> S = null;
         while (S == null) { // Loop
@@ -150,7 +132,7 @@ public abstract class Solver {
         }
 
         // Return solution
-        Log.debugLog(instance.NAME, "Removed " + removedFlowers.size() + " flower nodes by petal rule 2");
+        Log.debugLog(instance.NAME, "Removed " + removedFlowers.size() + " flower nodes by petal rule");
         instance.removedFlowers += removedFlowers.size();
         S.addAll(removedFlowers);
         return S;
@@ -192,11 +174,13 @@ public abstract class Solver {
         // Run for all sub graphs
         try {
             for (Graph subGraph : instance.subGraphs) {
-                List<Integer> S = dfvsSolveWithoutFlowers(subGraph);
+                List<Integer> S = dfvsSolve(subGraph);
                 instance.S.addAll(S);
             }
         } catch (TimeoutException timeoutException) {
             Long time = Timer.stop();
+            // Add the current k to the solution size for better logging
+            instance.solvedK = instance.S.size() + k;
             PerformanceTimer.printResult();
             Log.mainLog(instance, time, false);
             Log.detailLog(instance);
@@ -208,7 +192,8 @@ public abstract class Solver {
         Long time = Timer.stop();
 
         // Verify
-        boolean verified = instance.S.size() == instance.OPTIMAL_K;
+        instance.solvedK = instance.S.size();
+        boolean verified = instance.solvedK == instance.OPTIMAL_K;
 
         // Log
         PerformanceTimer.printResult();

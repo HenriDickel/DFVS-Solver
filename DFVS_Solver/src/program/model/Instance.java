@@ -21,6 +21,7 @@ public class Instance {
     public int recursiveSteps = 0;
     public float[] averageCycleSize;
     public int[] recursiveStepsPerK;
+    public int solvedK = 0;
 
     public Instance(String NAME, Graph graph, int OPTIMAL_K) {
         this.NAME = NAME;

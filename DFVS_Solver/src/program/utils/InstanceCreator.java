@@ -14,7 +14,7 @@ import java.util.stream.Stream;
 
 public abstract class InstanceCreator {
 
-    private static final String DATASET = "dataset_2";
+    private static final String DATASET = "dataset_3";
     private static final String COMPLEX_PATH = "src/inputs/" + DATASET + "/complex/";
     private static final String SYNTHETIC_PATH = "src/inputs/" + DATASET + "/synthetic/";
 
@@ -108,8 +108,8 @@ public abstract class InstanceCreator {
     }
 
     public static List<GraphFile> getSyntheticAndComplexFiles(String startFilename) {
-        List<GraphFile> files = getFiles(SYNTHETIC_PATH);
-        files.addAll(getFiles(COMPLEX_PATH));
+        List<GraphFile> files = getFiles(COMPLEX_PATH);
+        files.addAll(getFiles(SYNTHETIC_PATH));
         if(startFilename == null) return files;
         for(int i = 0; i < files.size(); i++) {
             if(files.get(i).name.equals(startFilename)) {

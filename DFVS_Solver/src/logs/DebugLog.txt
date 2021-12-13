@@ -1,358 +1,40 @@
-[2021-12-12 21:30:22.424]                         advotogo-n_100: Couldn't read  file 'optimal_solution_sizes.txt'
-[2021-12-12 21:30:22.452]                         advotogo-n_100: ---------- advotogo-n_100 (n = 26, m = 31, k = -1) ----------
-[2021-12-12 21:30:22.458]                         advotogo-n_100: Found 0 cyclic sub graph(s) with n = []
-[2021-12-12 21:30:22.461]                         advotogo-n_100: Removed 26 nodes in preprocessing, starting with k = 2
-[2021-12-12 21:30:22.466]                         advotogo-n_100: Preprocessing: 12 ms, Flowers: 0 ms, BFS: 0 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 0 ms
-[2021-12-12 21:30:22.477]                         advotogo-n_100: Found solution with k = 2 in 14ms (recursive steps: 0)
-[2021-12-12 21:30:22.486]                        advotogo-n_1000: Couldn't read  file 'optimal_solution_sizes.txt'
-[2021-12-12 21:30:22.487]                        advotogo-n_1000: ---------- advotogo-n_1000 (n = 624, m = 1883, k = -1) ----------
-[2021-12-12 21:30:22.491]                        advotogo-n_1000: Found 3 cyclic sub graph(s) with n = [6, 3, 3]
-[2021-12-12 21:30:22.492]                        advotogo-n_1000: Removed 612 nodes in preprocessing, starting with k = 120
-[2021-12-12 21:30:22.502]                        advotogo-n_1000: Preprocessing: 4 ms, Flowers: 0 ms, BFS: 4 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 4 ms
-[2021-12-12 21:30:22.508]                        advotogo-n_1000: Found solution with k = 127 in 15ms (recursive steps: 13)
-[2021-12-12 21:30:22.515]                        advotogo-n_1500: Couldn't read  file 'optimal_solution_sizes.txt'
-[2021-12-12 21:30:22.516]                        advotogo-n_1500: ---------- advotogo-n_1500 (n = 1110, m = 4342, k = -1) ----------
-[2021-12-12 21:30:22.519]                        advotogo-n_1500: Found 3 cyclic sub graph(s) with n = [6, 3, 29]
-[2021-12-12 21:30:22.519]                        advotogo-n_1500: Removed 1072 nodes in preprocessing, starting with k = 196
-[2021-12-12 21:30:22.540]                        advotogo-n_1500: Preprocessing: 3 ms, Flowers: 0 ms, BFS: 0 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 18 ms
-[2021-12-12 21:30:22.541]                        advotogo-n_1500: Found solution with k = 215 in 24ms (recursive steps: 30)
-[2021-12-12 21:30:22.542]                         advotogo-n_200: Couldn't read  file 'optimal_solution_sizes.txt'
-[2021-12-12 21:30:22.543]                         advotogo-n_200: ---------- advotogo-n_200 (n = 63, m = 68, k = -1) ----------
-[2021-12-12 21:30:22.543]                         advotogo-n_200: Found 1 cyclic sub graph(s) with n = [3]
-[2021-12-12 21:30:22.544]                         advotogo-n_200: Removed 60 nodes in preprocessing, starting with k = 7
-[2021-12-12 21:30:22.544]                         advotogo-n_200: Preprocessing: 1 ms, Flowers: 0 ms, BFS: 0 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 0 ms
-[2021-12-12 21:30:22.546]                         advotogo-n_200: Found solution with k = 9 in 1ms (recursive steps: 4)
-[2021-12-12 21:30:22.553]                        advotogo-n_2000: Couldn't read  file 'optimal_solution_sizes.txt'
-[2021-12-12 21:30:22.554]                        advotogo-n_2000: ---------- advotogo-n_2000 (n = 1556, m = 6786, k = -1) ----------
-[2021-12-12 21:30:22.559]                        advotogo-n_2000: Found 8 cyclic sub graph(s) with n = [5, 3, 3, 5, 3, 3, 5, 3]
-[2021-12-12 21:30:22.560]                        advotogo-n_2000: Removed 1526 nodes in preprocessing, starting with k = 279
-[2021-12-12 21:30:22.564]                        advotogo-n_2000: Preprocessing: 5 ms, Flowers: 0 ms, BFS: 0 ms, DAG: 0 ms, Copy: 1 ms, Reduction: 0 ms, Packing: 1 ms
-[2021-12-12 21:30:22.566]                        advotogo-n_2000: Found solution with k = 297 in 10ms (recursive steps: 36)
-[2021-12-12 21:30:22.584]                        advotogo-n_3000: Couldn't read  file 'optimal_solution_sizes.txt'
-[2021-12-12 21:30:22.585]                        advotogo-n_3000: ---------- advotogo-n_3000 (n = 2657, m = 16140, k = -1) ----------
-[2021-12-12 21:30:22.594]                        advotogo-n_3000: Found 11 cyclic sub graph(s) with n = [3, 81, 5, 4, 5, 3, 3, 3, 3, 3, 3]
-[2021-12-12 21:30:22.595]                        advotogo-n_3000: Removed 2556 nodes in preprocessing, starting with k = 495
-[2021-12-12 21:30:22.689]                        advotogo-n_3000: Preprocessing: 9 ms, Flowers: 0 ms, BFS: 5 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 85 ms
-[2021-12-12 21:30:22.690]                        advotogo-n_3000: Found solution with k = 548 in 104ms (recursive steps: 85)
-[2021-12-12 21:30:22.717]                        advotogo-n_4000: Couldn't read  file 'optimal_solution_sizes.txt'
-[2021-12-12 21:30:22.719]                        advotogo-n_4000: ---------- advotogo-n_4000 (n = 3775, m = 29831, k = -1) ----------
-[2021-12-12 21:30:22.737]                        advotogo-n_4000: Found 8 cyclic sub graph(s) with n = [3, 3, 665, 3, 3, 3, 3, 3]
-[2021-12-12 21:30:22.738]                        advotogo-n_4000: Removed 3090 nodes in preprocessing, starting with k = 554
-[2021-12-12 21:32:35.301]                        advotogo-n_4000: Preprocessing: 18 ms, Flowers: 0 ms, BFS: 2177 ms, DAG: 0 ms, Copy: 310 ms, Reduction: 145 ms, Packing: 129899 ms
-[2021-12-12 21:32:35.303]                        advotogo-n_4000: Found solution with k = 863 in 132s (recursive steps: 13627)
-[2021-12-12 21:32:35.303]                          advotogo-n_50: Couldn't read  file 'optimal_solution_sizes.txt'
-[2021-12-12 21:32:35.304]                          advotogo-n_50: ---------- advotogo-n_50 (n = 0, m = 0, k = -1) ----------
-[2021-12-12 21:32:35.304]                          advotogo-n_50: Found 0 cyclic sub graph(s) with n = []
-[2021-12-12 21:32:35.304]                          advotogo-n_50: Removed 0 nodes in preprocessing, starting with k = 0
-[2021-12-12 21:32:35.305]                          advotogo-n_50: Preprocessing: 0 ms, Flowers: 0 ms, BFS: 0 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 0 ms
-[2021-12-12 21:32:35.305]                          advotogo-n_50: Found solution with k = 0 in 0ms (recursive steps: 0)
-[2021-12-12 21:32:35.306]                         advotogo-n_500: Couldn't read  file 'optimal_solution_sizes.txt'
-[2021-12-12 21:32:35.306]                         advotogo-n_500: ---------- advotogo-n_500 (n = 247, m = 446, k = -1) ----------
-[2021-12-12 21:32:35.306]                         advotogo-n_500: Found 1 cyclic sub graph(s) with n = [3]
-[2021-12-12 21:32:35.307]                         advotogo-n_500: Removed 244 nodes in preprocessing, starting with k = 37
-[2021-12-12 21:32:35.307]                         advotogo-n_500: Preprocessing: 0 ms, Flowers: 0 ms, BFS: 0 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 0 ms
-[2021-12-12 21:32:35.308]                         advotogo-n_500: Found solution with k = 39 in 0ms (recursive steps: 4)
-[2021-12-12 21:32:35.321]                        advotogo-n_5000: Couldn't read  file 'optimal_solution_sizes.txt'
-[2021-12-12 21:32:35.322]                        advotogo-n_5000: ---------- advotogo-n_5000 (n = 4962, m = 43776, k = -1) ----------
-[2021-12-12 21:32:35.353]                        advotogo-n_5000: Found 9 cyclic sub graph(s) with n = [3, 3, 3, 985, 4, 3, 3, 3, 3]
-[2021-12-12 21:32:35.353]                        advotogo-n_5000: Removed 3953 nodes in preprocessing, starting with k = 699
-[2021-12-12 21:35:35.480]                        advotogo-n_5000: Preprocessing: 30 ms, Flowers: 0 ms, BFS: 0 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 180122 ms
-[2021-12-12 21:35:35.485]                        advotogo-n_5000: Found no solution in 180s (recursive steps: 293)
-[2021-12-12 21:35:35.500]                        advotogo-n_5159: Couldn't read  file 'optimal_solution_sizes.txt'
-[2021-12-12 21:35:35.501]                        advotogo-n_5159: ---------- advotogo-n_5159 (n = 5155, m = 47135, k = -1) ----------
-[2021-12-12 21:35:35.526]                        advotogo-n_5159: Found 9 cyclic sub graph(s) with n = [3, 3, 3, 990, 4, 3, 3, 3, 3]
-[2021-12-12 21:35:35.527]                        advotogo-n_5159: Removed 4141 nodes in preprocessing, starting with k = 742
-[2021-12-12 21:38:35.915]                        advotogo-n_5159: Preprocessing: 25 ms, Flowers: 0 ms, BFS: 0 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 180385 ms
-[2021-12-12 21:38:35.917]                        advotogo-n_5159: Found no solution in 180s (recursive steps: 275)
-[2021-12-12 21:38:35.917]                     bitcoinalpha-n_100: Couldn't read  file 'optimal_solution_sizes.txt'
-[2021-12-12 21:38:35.918]                     bitcoinalpha-n_100: ---------- bitcoinalpha-n_100 (n = 5, m = 7, k = -1) ----------
-[2021-12-12 21:38:35.918]                     bitcoinalpha-n_100: Found 0 cyclic sub graph(s) with n = []
-[2021-12-12 21:38:35.918]                     bitcoinalpha-n_100: Removed 5 nodes in preprocessing, starting with k = 2
-[2021-12-12 21:38:35.918]                     bitcoinalpha-n_100: Preprocessing: 0 ms, Flowers: 0 ms, BFS: 0 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 0 ms
-[2021-12-12 21:38:35.920]                     bitcoinalpha-n_100: Found solution with k = 2 in 0ms (recursive steps: 0)
-[2021-12-12 21:38:35.921]                    bitcoinalpha-n_1000: Couldn't read  file 'optimal_solution_sizes.txt'
-[2021-12-12 21:38:35.921]                    bitcoinalpha-n_1000: ---------- bitcoinalpha-n_1000 (n = 545, m = 1878, k = -1) ----------
-[2021-12-12 21:38:35.922]                    bitcoinalpha-n_1000: Found 1 cyclic sub graph(s) with n = [3]
-[2021-12-12 21:38:35.922]                    bitcoinalpha-n_1000: Removed 542 nodes in preprocessing, starting with k = 134
-[2021-12-12 21:38:35.922]                    bitcoinalpha-n_1000: Preprocessing: 0 ms, Flowers: 0 ms, BFS: 0 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 0 ms
-[2021-12-12 21:38:35.923]                    bitcoinalpha-n_1000: Found solution with k = 136 in 0ms (recursive steps: 4)
-[2021-12-12 21:38:35.924]                    bitcoinalpha-n_1500: Couldn't read  file 'optimal_solution_sizes.txt'
-[2021-12-12 21:38:35.924]                    bitcoinalpha-n_1500: ---------- bitcoinalpha-n_1500 (n = 957, m = 3890, k = -1) ----------
-[2021-12-12 21:38:35.925]                    bitcoinalpha-n_1500: Found 1 cyclic sub graph(s) with n = [3]
-[2021-12-12 21:38:35.925]                    bitcoinalpha-n_1500: Removed 954 nodes in preprocessing, starting with k = 259
-[2021-12-12 21:38:35.925]                    bitcoinalpha-n_1500: Preprocessing: 0 ms, Flowers: 0 ms, BFS: 0 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 0 ms
-[2021-12-12 21:38:35.926]                    bitcoinalpha-n_1500: Found solution with k = 261 in 0ms (recursive steps: 4)
-[2021-12-12 21:38:35.926]                     bitcoinalpha-n_200: Couldn't read  file 'optimal_solution_sizes.txt'
-[2021-12-12 21:38:35.926]                     bitcoinalpha-n_200: ---------- bitcoinalpha-n_200 (n = 50, m = 78, k = -1) ----------
-[2021-12-12 21:38:35.927]                     bitcoinalpha-n_200: Found 0 cyclic sub graph(s) with n = []
-[2021-12-12 21:38:35.927]                     bitcoinalpha-n_200: Removed 50 nodes in preprocessing, starting with k = 11
-[2021-12-12 21:38:35.927]                     bitcoinalpha-n_200: Preprocessing: 0 ms, Flowers: 0 ms, BFS: 0 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 0 ms
-[2021-12-12 21:38:35.928]                     bitcoinalpha-n_200: Found solution with k = 11 in 0ms (recursive steps: 0)
-[2021-12-12 21:38:35.929]                    bitcoinalpha-n_2000: Couldn't read  file 'optimal_solution_sizes.txt'
-[2021-12-12 21:38:35.930]                    bitcoinalpha-n_2000: ---------- bitcoinalpha-n_2000 (n = 1450, m = 6295, k = -1) ----------
-[2021-12-12 21:38:35.931]                    bitcoinalpha-n_2000: Found 2 cyclic sub graph(s) with n = [4, 8]
-[2021-12-12 21:38:35.931]                    bitcoinalpha-n_2000: Removed 1438 nodes in preprocessing, starting with k = 386
-[2021-12-12 21:38:35.931]                    bitcoinalpha-n_2000: Preprocessing: 1 ms, Flowers: 0 ms, BFS: 0 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 0 ms
-[2021-12-12 21:38:35.932]                    bitcoinalpha-n_2000: Found solution with k = 393 in 1ms (recursive steps: 13)
-[2021-12-12 21:38:35.936]                    bitcoinalpha-n_3000: Couldn't read  file 'optimal_solution_sizes.txt'
-[2021-12-12 21:38:35.936]                    bitcoinalpha-n_3000: ---------- bitcoinalpha-n_3000 (n = 2659, m = 15429, k = -1) ----------
-[2021-12-12 21:38:35.939]                    bitcoinalpha-n_3000: Found 2 cyclic sub graph(s) with n = [18, 3]
-[2021-12-12 21:38:35.939]                    bitcoinalpha-n_3000: Removed 2638 nodes in preprocessing, starting with k = 646
-[2021-12-12 21:38:35.940]                    bitcoinalpha-n_3000: Preprocessing: 2 ms, Flowers: 0 ms, BFS: 0 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 0 ms
-[2021-12-12 21:38:35.940]                    bitcoinalpha-n_3000: Found solution with k = 658 in 3ms (recursive steps: 28)
-[2021-12-12 21:38:35.947]                    bitcoinalpha-n_3785: Couldn't read  file 'optimal_solution_sizes.txt'
-[2021-12-12 21:38:35.947]                    bitcoinalpha-n_3785: ---------- bitcoinalpha-n_3785 (n = 3783, m = 24186, k = -1) ----------
-[2021-12-12 21:38:35.950]                    bitcoinalpha-n_3785: Found 4 cyclic sub graph(s) with n = [3, 18, 16, 4]
-[2021-12-12 21:38:35.951]                    bitcoinalpha-n_3785: Removed 3744 nodes in preprocessing, starting with k = 901
-[2021-12-12 21:38:35.951]                    bitcoinalpha-n_3785: Preprocessing: 3 ms, Flowers: 0 ms, BFS: 0 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 0 ms
-[2021-12-12 21:38:35.952]                    bitcoinalpha-n_3785: Found solution with k = 921 in 3ms (recursive steps: 30)
-[2021-12-12 21:38:35.952]                      bitcoinalpha-n_50: Couldn't read  file 'optimal_solution_sizes.txt'
-[2021-12-12 21:38:35.953]                      bitcoinalpha-n_50: ---------- bitcoinalpha-n_50 (n = 5, m = 5, k = -1) ----------
-[2021-12-12 21:38:35.953]                      bitcoinalpha-n_50: Found 0 cyclic sub graph(s) with n = []
-[2021-12-12 21:38:35.953]                      bitcoinalpha-n_50: Removed 5 nodes in preprocessing, starting with k = 2
-[2021-12-12 21:38:35.953]                      bitcoinalpha-n_50: Preprocessing: 0 ms, Flowers: 0 ms, BFS: 0 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 0 ms
-[2021-12-12 21:38:35.954]                      bitcoinalpha-n_50: Found solution with k = 2 in 0ms (recursive steps: 0)
-[2021-12-12 21:38:35.954]                     bitcoinalpha-n_500: Couldn't read  file 'optimal_solution_sizes.txt'
-[2021-12-12 21:38:35.954]                     bitcoinalpha-n_500: ---------- bitcoinalpha-n_500 (n = 202, m = 465, k = -1) ----------
-[2021-12-12 21:38:35.955]                     bitcoinalpha-n_500: Found 1 cyclic sub graph(s) with n = [5]
-[2021-12-12 21:38:35.955]                     bitcoinalpha-n_500: Removed 197 nodes in preprocessing, starting with k = 51
-[2021-12-12 21:38:35.955]                     bitcoinalpha-n_500: Preprocessing: 0 ms, Flowers: 0 ms, BFS: 0 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 0 ms
-[2021-12-12 21:38:35.955]                     bitcoinalpha-n_500: Found solution with k = 54 in 0ms (recursive steps: 5)
-[2021-12-12 21:38:35.956]                            blogs-n_100: Couldn't read  file 'optimal_solution_sizes.txt'
-[2021-12-12 21:38:35.956]                            blogs-n_100: ---------- blogs-n_100 (n = 67, m = 170, k = -1) ----------
-[2021-12-12 21:38:35.956]                            blogs-n_100: Found 0 cyclic sub graph(s) with n = []
-[2021-12-12 21:38:35.956]                            blogs-n_100: Removed 67 nodes in preprocessing, starting with k = 8
-[2021-12-12 21:38:35.957]                            blogs-n_100: Preprocessing: 0 ms, Flowers: 0 ms, BFS: 0 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 0 ms
-[2021-12-12 21:38:35.957]                            blogs-n_100: Found solution with k = 8 in 0ms (recursive steps: 0)
-[2021-12-12 21:38:35.960]                           blogs-n_1000: Couldn't read  file 'optimal_solution_sizes.txt'
-[2021-12-12 21:38:35.961]                           blogs-n_1000: ---------- blogs-n_1000 (n = 977, m = 12749, k = -1) ----------
-[2021-12-12 21:38:35.966]                           blogs-n_1000: Found 2 cyclic sub graph(s) with n = [331, 3]
-[2021-12-12 21:38:35.967]                           blogs-n_1000: Removed 646 nodes in preprocessing, starting with k = 66
-[2021-12-12 21:38:46.540]                           blogs-n_1000: Preprocessing: 6 ms, Flowers: 0 ms, BFS: 39 ms, DAG: 0 ms, Copy: 1 ms, Reduction: 0 ms, Packing: 10529 ms
-[2021-12-12 21:38:46.540]                           blogs-n_1000: Found solution with k = 196 in 10s (recursive steps: 175)
-[2021-12-12 21:38:46.546]                           blogs-n_1227: Couldn't read  file 'optimal_solution_sizes.txt'
-[2021-12-12 21:38:46.546]                           blogs-n_1227: ---------- blogs-n_1227 (n = 1224, m = 19022, k = -1) ----------
-[2021-12-12 21:38:46.558]                           blogs-n_1227: Found 2 cyclic sub graph(s) with n = [451, 3]
-[2021-12-12 21:38:46.558]                           blogs-n_1227: Removed 778 nodes in preprocessing, starting with k = 87
-[2021-12-12 21:39:50.345]                           blogs-n_1227: Preprocessing: 12 ms, Flowers: 0 ms, BFS: 439 ms, DAG: 0 ms, Copy: 69 ms, Reduction: 54 ms, Packing: 63220 ms
-[2021-12-12 21:39:50.345]                           blogs-n_1227: Found solution with k = 262 in 63s (recursive steps: 771)
-[2021-12-12 21:39:50.346]                            blogs-n_200: Couldn't read  file 'optimal_solution_sizes.txt'
-[2021-12-12 21:39:50.346]                            blogs-n_200: ---------- blogs-n_200 (n = 138, m = 426, k = -1) ----------
-[2021-12-12 21:39:50.347]                            blogs-n_200: Found 0 cyclic sub graph(s) with n = []
-[2021-12-12 21:39:50.347]                            blogs-n_200: Removed 138 nodes in preprocessing, starting with k = 16
-[2021-12-12 21:39:50.347]                            blogs-n_200: Preprocessing: 0 ms, Flowers: 0 ms, BFS: 0 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 0 ms
-[2021-12-12 21:39:50.348]                            blogs-n_200: Found solution with k = 16 in 0ms (recursive steps: 0)
-[2021-12-12 21:39:50.348]                             blogs-n_50: Couldn't read  file 'optimal_solution_sizes.txt'
-[2021-12-12 21:39:50.348]                             blogs-n_50: ---------- blogs-n_50 (n = 34, m = 88, k = -1) ----------
-[2021-12-12 21:39:50.349]                             blogs-n_50: Found 0 cyclic sub graph(s) with n = []
-[2021-12-12 21:39:50.349]                             blogs-n_50: Removed 34 nodes in preprocessing, starting with k = 6
-[2021-12-12 21:39:50.349]                             blogs-n_50: Preprocessing: 0 ms, Flowers: 0 ms, BFS: 0 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 0 ms
-[2021-12-12 21:39:50.350]                             blogs-n_50: Found solution with k = 6 in 0ms (recursive steps: 0)
-[2021-12-12 21:39:50.351]                            blogs-n_500: Couldn't read  file 'optimal_solution_sizes.txt'
-[2021-12-12 21:39:50.351]                            blogs-n_500: ---------- blogs-n_500 (n = 430, m = 2918, k = -1) ----------
-[2021-12-12 21:39:50.351]                            blogs-n_500: Found 1 cyclic sub graph(s) with n = [52]
-[2021-12-12 21:39:50.352]                            blogs-n_500: Removed 378 nodes in preprocessing, starting with k = 49
-[2021-12-12 21:39:50.380]                            blogs-n_500: Preprocessing: 0 ms, Flowers: 0 ms, BFS: 1 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 24 ms
-[2021-12-12 21:39:50.380]                            blogs-n_500: Found solution with k = 76 in 28ms (recursive steps: 126)
-[2021-12-12 21:39:50.381]                            chess-n_100: Couldn't read  file 'optimal_solution_sizes.txt'
-[2021-12-12 21:39:50.381]                            chess-n_100: ---------- chess-n_100 (n = 13, m = 7, k = -1) ----------
-[2021-12-12 21:39:50.381]                            chess-n_100: Found 0 cyclic sub graph(s) with n = []
-[2021-12-12 21:39:50.381]                            chess-n_100: Removed 13 nodes in preprocessing, starting with k = 0
-[2021-12-12 21:39:50.382]                            chess-n_100: Preprocessing: 0 ms, Flowers: 0 ms, BFS: 0 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 0 ms
-[2021-12-12 21:39:50.382]                            chess-n_100: Found solution with k = 0 in 0ms (recursive steps: 0)
-[2021-12-12 21:39:50.383]                           chess-n_1000: Couldn't read  file 'optimal_solution_sizes.txt'
-[2021-12-12 21:39:50.383]                           chess-n_1000: ---------- chess-n_1000 (n = 613, m = 1295, k = -1) ----------
-[2021-12-12 21:39:50.384]                           chess-n_1000: Found 1 cyclic sub graph(s) with n = [90]
-[2021-12-12 21:39:50.384]                           chess-n_1000: Removed 523 nodes in preprocessing, starting with k = 27
-[2021-12-12 21:39:50.437]                           chess-n_1000: Preprocessing: 0 ms, Flowers: 0 ms, BFS: 2 ms, DAG: 0 ms, Copy: 1 ms, Reduction: 0 ms, Packing: 48 ms
-[2021-12-12 21:39:50.437]                           chess-n_1000: Found solution with k = 62 in 54ms (recursive steps: 158)
-[2021-12-12 21:39:50.438]                           chess-n_1500: Couldn't read  file 'optimal_solution_sizes.txt'
-[2021-12-12 21:39:50.439]                           chess-n_1500: ---------- chess-n_1500 (n = 1075, m = 2561, k = -1) ----------
-[2021-12-12 21:39:50.440]                           chess-n_1500: Found 2 cyclic sub graph(s) with n = [213, 3]
-[2021-12-12 21:39:50.440]                           chess-n_1500: Removed 859 nodes in preprocessing, starting with k = 45
-[2021-12-12 21:41:35.504]                           chess-n_1500: Preprocessing: 1 ms, Flowers: 0 ms, BFS: 5500 ms, DAG: 0 ms, Copy: 4103 ms, Reduction: 1281 ms, Packing: 94071 ms
-[2021-12-12 21:41:35.504]                           chess-n_1500: Found solution with k = 127 in 105s (recursive steps: 217818)
-[2021-12-12 21:41:35.505]                            chess-n_200: Couldn't read  file 'optimal_solution_sizes.txt'
-[2021-12-12 21:41:35.505]                            chess-n_200: ---------- chess-n_200 (n = 58, m = 47, k = -1) ----------
-[2021-12-12 21:41:35.505]                            chess-n_200: Found 0 cyclic sub graph(s) with n = []
-[2021-12-12 21:41:35.505]                            chess-n_200: Removed 58 nodes in preprocessing, starting with k = 2
-[2021-12-12 21:41:35.506]                            chess-n_200: Preprocessing: 0 ms, Flowers: 0 ms, BFS: 0 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 0 ms
-[2021-12-12 21:41:35.506]                            chess-n_200: Found solution with k = 2 in 0ms (recursive steps: 0)
-[2021-12-12 21:41:35.507]                           chess-n_2000: Couldn't read  file 'optimal_solution_sizes.txt'
-[2021-12-12 21:41:35.507]                           chess-n_2000: ---------- chess-n_2000 (n = 1531, m = 4343, k = -1) ----------
-[2021-12-12 21:41:35.510]                           chess-n_2000: Found 1 cyclic sub graph(s) with n = [400]
-[2021-12-12 21:41:35.511]                           chess-n_2000: Removed 1131 nodes in preprocessing, starting with k = 61
-[2021-12-12 21:44:35.510]                           chess-n_2000: Preprocessing: 3 ms, Flowers: 0 ms, BFS: 3621 ms, DAG: 0 ms, Copy: 1050 ms, Reduction: 208 ms, Packing: 175093 ms
-[2021-12-12 21:44:35.510]                           chess-n_2000: Found no solution in 180s (recursive steps: 16046)
-[2021-12-12 21:44:35.514]                           chess-n_3000: Couldn't read  file 'optimal_solution_sizes.txt'
-[2021-12-12 21:44:35.515]                           chess-n_3000: ---------- chess-n_3000 (n = 2586, m = 11156, k = -1) ----------
-[2021-12-12 21:44:35.536]                           chess-n_3000: Found 1 cyclic sub graph(s) with n = [970]
-[2021-12-12 21:44:35.537]                           chess-n_3000: Removed 1616 nodes in preprocessing, starting with k = 65
-[2021-12-12 21:47:35.970]                           chess-n_3000: Preprocessing: 21 ms, Flowers: 0 ms, BFS: 0 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 180431 ms
-[2021-12-12 21:47:35.971]                           chess-n_3000: Found no solution in 180s (recursive steps: 270)
-[2021-12-12 21:47:35.976]                           chess-n_4000: Couldn't read  file 'optimal_solution_sizes.txt'
-[2021-12-12 21:47:35.976]                           chess-n_4000: ---------- chess-n_4000 (n = 3620, m = 17404, k = -1) ----------
-[2021-12-12 21:47:36.018]                           chess-n_4000: Found 1 cyclic sub graph(s) with n = [1591]
-[2021-12-12 21:47:36.019]                           chess-n_4000: Removed 2029 nodes in preprocessing, starting with k = 82
-[2021-12-12 21:50:36.265]                           chess-n_4000: Preprocessing: 43 ms, Flowers: 0 ms, BFS: 0 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 180244 ms
-[2021-12-12 21:50:36.265]                           chess-n_4000: Found no solution in 180s (recursive steps: 143)
-[2021-12-12 21:50:36.270]                             chess-n_50: Couldn't read  file 'optimal_solution_sizes.txt'
-[2021-12-12 21:50:36.270]                             chess-n_50: ---------- chess-n_50 (n = 3, m = 2, k = -1) ----------
-[2021-12-12 21:50:36.271]                             chess-n_50: Found 0 cyclic sub graph(s) with n = []
-[2021-12-12 21:50:36.271]                             chess-n_50: Removed 3 nodes in preprocessing, starting with k = 0
-[2021-12-12 21:50:36.271]                             chess-n_50: Preprocessing: 0 ms, Flowers: 0 ms, BFS: 0 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 0 ms
-[2021-12-12 21:50:36.271]                             chess-n_50: Found solution with k = 0 in 0ms (recursive steps: 0)
-[2021-12-12 21:50:36.279]                            chess-n_500: Couldn't read  file 'optimal_solution_sizes.txt'
-[2021-12-12 21:50:36.279]                            chess-n_500: ---------- chess-n_500 (n = 241, m = 319, k = -1) ----------
-[2021-12-12 21:50:36.279]                            chess-n_500: Found 0 cyclic sub graph(s) with n = []
-[2021-12-12 21:50:36.280]                            chess-n_500: Removed 241 nodes in preprocessing, starting with k = 17
-[2021-12-12 21:50:36.280]                            chess-n_500: Preprocessing: 0 ms, Flowers: 0 ms, BFS: 0 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 0 ms
-[2021-12-12 21:50:36.280]                            chess-n_500: Found solution with k = 17 in 0ms (recursive steps: 0)
-[2021-12-12 21:50:36.297]                           chess-n_5000: Couldn't read  file 'optimal_solution_sizes.txt'
-[2021-12-12 21:50:36.298]                           chess-n_5000: ---------- chess-n_5000 (n = 4752, m = 27339, k = -1) ----------
-[2021-12-12 21:50:36.411]                           chess-n_5000: Found 1 cyclic sub graph(s) with n = [2425]
-[2021-12-12 21:50:36.411]                           chess-n_5000: Removed 2327 nodes in preprocessing, starting with k = 78
-[2021-12-12 21:53:39.665]                           chess-n_5000: Preprocessing: 113 ms, Flowers: 0 ms, BFS: 0 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 183252 ms
-[2021-12-12 21:53:39.666]                           chess-n_5000: Found no solution in 183s (recursive steps: 85)
-[2021-12-12 21:53:39.698]                           chess-n_6000: Couldn't read  file 'optimal_solution_sizes.txt'
-[2021-12-12 21:53:39.699]                           chess-n_6000: ---------- chess-n_6000 (n = 5854, m = 40749, k = -1) ----------
-[2021-12-12 21:53:39.809]                           chess-n_6000: Found 1 cyclic sub graph(s) with n = [3195]
-[2021-12-12 21:53:39.810]                           chess-n_6000: Removed 2659 nodes in preprocessing, starting with k = 81
-[2021-12-12 21:56:42.656]                           chess-n_6000: Preprocessing: 111 ms, Flowers: 0 ms, BFS: 0 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 182845 ms
-[2021-12-12 21:56:42.656]                           chess-n_6000: Found no solution in 182s (recursive steps: 59)
-[2021-12-12 21:56:42.680]                           chess-n_7000: Couldn't read  file 'optimal_solution_sizes.txt'
-[2021-12-12 21:56:42.681]                           chess-n_7000: ---------- chess-n_7000 (n = 6966, m = 55133, k = -1) ----------
-[2021-12-12 21:56:42.735]                           chess-n_7000: Found 1 cyclic sub graph(s) with n = [4053]
-[2021-12-12 21:56:42.736]                           chess-n_7000: Removed 2913 nodes in preprocessing, starting with k = 91
-[2021-12-12 21:59:45.810]                           chess-n_7000: Preprocessing: 55 ms, Flowers: 0 ms, BFS: 0 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 183073 ms
-[2021-12-12 21:59:45.810]                           chess-n_7000: Found no solution in 183s (recursive steps: 48)
-[2021-12-12 21:59:45.837]                           chess-n_7303: Couldn't read  file 'optimal_solution_sizes.txt'
-[2021-12-12 21:59:45.838]                           chess-n_7303: ---------- chess-n_7303 (n = 7301, m = 60046, k = -1) ----------
-[2021-12-12 21:59:45.896]                           chess-n_7303: Found 1 cyclic sub graph(s) with n = [4343]
-[2021-12-12 21:59:45.897]                           chess-n_7303: Removed 2958 nodes in preprocessing, starting with k = 85
-[2021-12-12 22:02:48.354]                           chess-n_7303: Preprocessing: 58 ms, Flowers: 0 ms, BFS: 0 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 182456 ms
-[2021-12-12 22:02:48.355]                           chess-n_7303: Found no solution in 182s (recursive steps: 44)
-[2021-12-12 22:02:48.363]                  ChicagoRegional-n_100: Couldn't read  file 'optimal_solution_sizes.txt'
-[2021-12-12 22:02:48.363]                  ChicagoRegional-n_100: ---------- ChicagoRegional-n_100 (n = 2, m = 2, k = -1) ----------
-[2021-12-12 22:02:48.363]                  ChicagoRegional-n_100: Found 0 cyclic sub graph(s) with n = []
-[2021-12-12 22:02:48.363]                  ChicagoRegional-n_100: Removed 2 nodes in preprocessing, starting with k = 1
-[2021-12-12 22:02:48.364]                  ChicagoRegional-n_100: Preprocessing: 0 ms, Flowers: 0 ms, BFS: 0 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 0 ms
-[2021-12-12 22:02:48.364]                  ChicagoRegional-n_100: Found solution with k = 1 in 0ms (recursive steps: 0)
-[2021-12-12 22:02:48.370]                 ChicagoRegional-n_1000: Couldn't read  file 'optimal_solution_sizes.txt'
-[2021-12-12 22:02:48.370]                 ChicagoRegional-n_1000: ---------- ChicagoRegional-n_1000 (n = 224, m = 245, k = -1) ----------
-[2021-12-12 22:02:48.370]                 ChicagoRegional-n_1000: Found 0 cyclic sub graph(s) with n = []
-[2021-12-12 22:02:48.370]                 ChicagoRegional-n_1000: Removed 224 nodes in preprocessing, starting with k = 92
-[2021-12-12 22:02:48.371]                 ChicagoRegional-n_1000: Preprocessing: 0 ms, Flowers: 0 ms, BFS: 0 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 0 ms
-[2021-12-12 22:02:48.371]                 ChicagoRegional-n_1000: Found solution with k = 92 in 0ms (recursive steps: 0)
-[2021-12-12 22:02:48.385]                ChicagoRegional-n_10000: Couldn't read  file 'optimal_solution_sizes.txt'
-[2021-12-12 22:02:48.386]                ChicagoRegional-n_10000: ---------- ChicagoRegional-n_10000 (n = 9579, m = 23005, k = -1) ----------
-[2021-12-12 22:02:48.390]                ChicagoRegional-n_10000: Found 111 cyclic sub graph(s) with n = [4, 17, 12, 4, 4, 4, 12, 18, 3, 17, 11, 11, 20, 11, 5, 4, 7, 18, 4, 5, 9, 4, 6, 12, 4, 44, 38, 4, 12, 12, 37, 4, 3, 4, 8, 4, 6, 9, 4, 11, 14, 4, 40, 21, 8, 3, 8, 3, 43, 21, 4, 3, 16, 36, 3, 24, 21, 6, 17, 3, 4, 4, 5, 13, 3, 24, 20, 4, 4, 61, 8, 4, 5, 12, 3, 3, 3, 3, 3, 19, 4, 5, 16, 5, 12, 33, 11, 34, 4, 4, 3, 4, 11, 3, 6, 4, 5, 42, 4, 5, 3, 3, 4, 11, 6, 4, 7, 12, 3, 4, 3]
-[2021-12-12 22:02:48.391]                ChicagoRegional-n_10000: Removed 8375 nodes in preprocessing, starting with k = 3551
-[2021-12-12 22:02:48.440]                ChicagoRegional-n_10000: Preprocessing: 5 ms, Flowers: 0 ms, BFS: 3 ms, DAG: 0 ms, Copy: 1 ms, Reduction: 0 ms, Packing: 43 ms
-[2021-12-12 22:02:48.441]                ChicagoRegional-n_10000: Found solution with k = 4193 in 54ms (recursive steps: 1106)
-[2021-12-12 22:02:48.448]                 ChicagoRegional-n_1500: Couldn't read  file 'optimal_solution_sizes.txt'
-[2021-12-12 22:02:48.449]                 ChicagoRegional-n_1500: ---------- ChicagoRegional-n_1500 (n = 457, m = 485, k = -1) ----------
-[2021-12-12 22:02:48.449]                 ChicagoRegional-n_1500: Found 1 cyclic sub graph(s) with n = [3]
-[2021-12-12 22:02:48.449]                 ChicagoRegional-n_1500: Removed 454 nodes in preprocessing, starting with k = 179
-[2021-12-12 22:02:48.449]                 ChicagoRegional-n_1500: Preprocessing: 0 ms, Flowers: 0 ms, BFS: 0 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 0 ms
-[2021-12-12 22:02:48.450]                 ChicagoRegional-n_1500: Found solution with k = 181 in 0ms (recursive steps: 4)
-[2021-12-12 22:02:48.455]                  ChicagoRegional-n_200: Couldn't read  file 'optimal_solution_sizes.txt'
-[2021-12-12 22:02:48.455]                  ChicagoRegional-n_200: ---------- ChicagoRegional-n_200 (n = 13, m = 12, k = -1) ----------
-[2021-12-12 22:02:48.455]                  ChicagoRegional-n_200: Found 0 cyclic sub graph(s) with n = []
-[2021-12-12 22:02:48.456]                  ChicagoRegional-n_200: Removed 13 nodes in preprocessing, starting with k = 5
-[2021-12-12 22:02:48.456]                  ChicagoRegional-n_200: Preprocessing: 0 ms, Flowers: 0 ms, BFS: 0 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 0 ms
-[2021-12-12 22:02:48.456]                  ChicagoRegional-n_200: Found solution with k = 5 in 0ms (recursive steps: 0)
-[2021-12-12 22:02:48.463]                 ChicagoRegional-n_2000: Couldn't read  file 'optimal_solution_sizes.txt'
-[2021-12-12 22:02:48.463]                 ChicagoRegional-n_2000: ---------- ChicagoRegional-n_2000 (n = 777, m = 888, k = -1) ----------
-[2021-12-12 22:02:48.463]                 ChicagoRegional-n_2000: Found 3 cyclic sub graph(s) with n = [3, 4, 3]
-[2021-12-12 22:02:48.463]                 ChicagoRegional-n_2000: Removed 767 nodes in preprocessing, starting with k = 301
-[2021-12-12 22:02:48.463]                 ChicagoRegional-n_2000: Preprocessing: 0 ms, Flowers: 0 ms, BFS: 0 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 0 ms
-[2021-12-12 22:02:48.464]                 ChicagoRegional-n_2000: Found solution with k = 307 in 0ms (recursive steps: 12)
-[2021-12-12 22:02:48.471]                 ChicagoRegional-n_3000: Couldn't read  file 'optimal_solution_sizes.txt'
-[2021-12-12 22:02:48.471]                 ChicagoRegional-n_3000: ---------- ChicagoRegional-n_3000 (n = 1619, m = 2022, k = -1) ----------
-[2021-12-12 22:02:48.472]                 ChicagoRegional-n_3000: Found 7 cyclic sub graph(s) with n = [3, 3, 4, 3, 4, 3, 3]
-[2021-12-12 22:02:48.472]                 ChicagoRegional-n_3000: Removed 1596 nodes in preprocessing, starting with k = 617
-[2021-12-12 22:02:48.472]                 ChicagoRegional-n_3000: Preprocessing: 0 ms, Flowers: 0 ms, BFS: 0 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 0 ms
-[2021-12-12 22:02:48.473]                 ChicagoRegional-n_3000: Found solution with k = 631 in 0ms (recursive steps: 28)
-[2021-12-12 22:02:48.481]                 ChicagoRegional-n_4000: Couldn't read  file 'optimal_solution_sizes.txt'
-[2021-12-12 22:02:48.482]                 ChicagoRegional-n_4000: ---------- ChicagoRegional-n_4000 (n = 2607, m = 3623, k = -1) ----------
-[2021-12-12 22:02:48.482]                 ChicagoRegional-n_4000: Found 8 cyclic sub graph(s) with n = [4, 3, 4, 3, 3, 3, 3, 3]
-[2021-12-12 22:02:48.483]                 ChicagoRegional-n_4000: Removed 2581 nodes in preprocessing, starting with k = 1004
-[2021-12-12 22:02:48.483]                 ChicagoRegional-n_4000: Preprocessing: 0 ms, Flowers: 0 ms, BFS: 0 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 0 ms
-[2021-12-12 22:02:48.483]                 ChicagoRegional-n_4000: Found solution with k = 1020 in 0ms (recursive steps: 32)
-[2021-12-12 22:02:48.488]                   ChicagoRegional-n_50: Couldn't read  file 'optimal_solution_sizes.txt'
-[2021-12-12 22:02:48.488]                   ChicagoRegional-n_50: ---------- ChicagoRegional-n_50 (n = 4, m = 4, k = -1) ----------
-[2021-12-12 22:02:48.488]                   ChicagoRegional-n_50: Found 0 cyclic sub graph(s) with n = []
-[2021-12-12 22:02:48.489]                   ChicagoRegional-n_50: Removed 4 nodes in preprocessing, starting with k = 2
-[2021-12-12 22:02:48.489]                   ChicagoRegional-n_50: Preprocessing: 0 ms, Flowers: 0 ms, BFS: 0 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 0 ms
-[2021-12-12 22:02:48.489]                   ChicagoRegional-n_50: Found solution with k = 2 in 0ms (recursive steps: 0)
-[2021-12-12 22:02:48.494]                  ChicagoRegional-n_500: Couldn't read  file 'optimal_solution_sizes.txt'
-[2021-12-12 22:02:48.494]                  ChicagoRegional-n_500: ---------- ChicagoRegional-n_500 (n = 52, m = 50, k = -1) ----------
-[2021-12-12 22:02:48.494]                  ChicagoRegional-n_500: Found 0 cyclic sub graph(s) with n = []
-[2021-12-12 22:02:48.494]                  ChicagoRegional-n_500: Removed 52 nodes in preprocessing, starting with k = 24
-[2021-12-12 22:02:48.495]                  ChicagoRegional-n_500: Preprocessing: 0 ms, Flowers: 0 ms, BFS: 0 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 0 ms
-[2021-12-12 22:02:48.495]                  ChicagoRegional-n_500: Found solution with k = 24 in 0ms (recursive steps: 0)
-[2021-12-12 22:02:48.503]                 ChicagoRegional-n_5000: Couldn't read  file 'optimal_solution_sizes.txt'
-[2021-12-12 22:02:48.503]                 ChicagoRegional-n_5000: ---------- ChicagoRegional-n_5000 (n = 3710, m = 5774, k = -1) ----------
-[2021-12-12 22:02:48.504]                 ChicagoRegional-n_5000: Found 20 cyclic sub graph(s) with n = [3, 4, 4, 3, 3, 4, 4, 4, 6, 3, 4, 3, 5, 4, 3, 6, 3, 3, 10, 4]
-[2021-12-12 22:02:48.505]                 ChicagoRegional-n_5000: Removed 3627 nodes in preprocessing, starting with k = 1438
-[2021-12-12 22:02:48.505]                 ChicagoRegional-n_5000: Preprocessing: 1 ms, Flowers: 0 ms, BFS: 0 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 0 ms
-[2021-12-12 22:02:48.506]                 ChicagoRegional-n_5000: Found solution with k = 1484 in 1ms (recursive steps: 87)
-[2021-12-12 22:02:48.514]                 ChicagoRegional-n_6000: Couldn't read  file 'optimal_solution_sizes.txt'
-[2021-12-12 22:02:48.515]                 ChicagoRegional-n_6000: ---------- ChicagoRegional-n_6000 (n = 4927, m = 8488, k = -1) ----------
-[2021-12-12 22:02:48.516]                 ChicagoRegional-n_6000: Found 48 cyclic sub graph(s) with n = [4, 4, 3, 5, 4, 9, 3, 4, 4, 8, 4, 4, 4, 4, 4, 13, 4, 4, 4, 3, 8, 4, 3, 3, 3, 3, 4, 6, 3, 5, 5, 4, 6, 8, 13, 3, 4, 3, 4, 3, 4, 3, 7, 4, 4, 3, 5, 3]
-[2021-12-12 22:02:48.516]                 ChicagoRegional-n_6000: Removed 4703 nodes in preprocessing, starting with k = 1865
-[2021-12-12 22:02:48.518]                 ChicagoRegional-n_6000: Preprocessing: 1 ms, Flowers: 0 ms, BFS: 0 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 0 ms
-[2021-12-12 22:02:48.518]                 ChicagoRegional-n_6000: Found solution with k = 1987 in 2ms (recursive steps: 220)
-[2021-12-12 22:02:48.530]                 ChicagoRegional-n_7000: Couldn't read  file 'optimal_solution_sizes.txt'
-[2021-12-12 22:02:48.530]                 ChicagoRegional-n_7000: ---------- ChicagoRegional-n_7000 (n = 6106, m = 11328, k = -1) ----------
-[2021-12-12 22:02:48.532]                 ChicagoRegional-n_7000: Found 52 cyclic sub graph(s) with n = [4, 7, 3, 3, 4, 9, 3, 4, 3, 7, 8, 4, 9, 4, 4, 3, 3, 3, 5, 4, 6, 3, 7, 9, 3, 3, 3, 3, 11, 3, 3, 5, 4, 3, 6, 3, 6, 3, 5, 11, 12, 3, 11, 14, 4, 3, 6, 3, 3, 4, 4, 3]
-[2021-12-12 22:02:48.532]                 ChicagoRegional-n_7000: Removed 5842 nodes in preprocessing, starting with k = 2347
-[2021-12-12 22:02:48.534]                 ChicagoRegional-n_7000: Preprocessing: 2 ms, Flowers: 0 ms, BFS: 0 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 1 ms
-[2021-12-12 22:02:48.535]                 ChicagoRegional-n_7000: Found solution with k = 2495 in 3ms (recursive steps: 260)
-[2021-12-12 22:02:48.546]                 ChicagoRegional-n_8000: Couldn't read  file 'optimal_solution_sizes.txt'
-[2021-12-12 22:02:48.547]                 ChicagoRegional-n_8000: ---------- ChicagoRegional-n_8000 (n = 7282, m = 14765, k = -1) ----------
-[2021-12-12 22:02:48.549]                 ChicagoRegional-n_8000: Found 71 cyclic sub graph(s) with n = [5, 14, 4, 19, 3, 8, 4, 5, 11, 4, 8, 8, 8, 5, 13, 4, 3, 8, 3, 3, 4, 4, 11, 6, 4, 4, 7, 7, 3, 4, 6, 4, 9, 4, 36, 14, 3, 6, 26, 3, 3, 6, 12, 9, 8, 10, 16, 3, 4, 3, 5, 8, 4, 4, 10, 3, 3, 3, 4, 6, 5, 9, 4, 4, 4, 4, 4, 3, 4, 5, 3]
-[2021-12-12 22:02:48.549]                 ChicagoRegional-n_8000: Removed 6804 nodes in preprocessing, starting with k = 2772
-[2021-12-12 22:02:48.554]                 ChicagoRegional-n_8000: Preprocessing: 2 ms, Flowers: 0 ms, BFS: 0 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 3 ms
-[2021-12-12 22:02:48.554]                 ChicagoRegional-n_8000: Found solution with k = 3028 in 7ms (recursive steps: 427)
-[2021-12-12 22:02:48.566]                 ChicagoRegional-n_9000: Couldn't read  file 'optimal_solution_sizes.txt'
-[2021-12-12 22:02:48.567]                 ChicagoRegional-n_9000: ---------- ChicagoRegional-n_9000 (n = 8479, m = 19095, k = -1) ----------
-[2021-12-12 22:02:48.571]                 ChicagoRegional-n_9000: Found 90 cyclic sub graph(s) with n = [34, 39, 10, 37, 3, 15, 4, 4, 13, 5, 36, 3, 12, 9, 4, 5, 3, 4, 5, 13, 3, 21, 8, 11, 9, 12, 6, 4, 3, 3, 7, 30, 5, 10, 50, 9, 3, 7, 11, 5, 19, 4, 8, 3, 11, 6, 5, 20, 14, 21, 4, 14, 20, 10, 4, 8, 6, 6, 13, 3, 5, 5, 7, 4, 6, 4, 6, 5, 15, 6, 9, 5, 4, 19, 4, 5, 7, 4, 9, 4, 3, 4, 5, 4, 4, 4, 5, 3, 8, 4]
-[2021-12-12 22:02:48.571]                 ChicagoRegional-n_9000: Removed 7628 nodes in preprocessing, starting with k = 3198
-[2021-12-12 22:02:48.587]                 ChicagoRegional-n_9000: Preprocessing: 4 ms, Flowers: 0 ms, BFS: 1 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 14 ms
-[2021-12-12 22:02:48.588]                 ChicagoRegional-n_9000: Found solution with k = 3651 in 20ms (recursive steps: 710)
-[2021-12-12 22:02:48.593]                           health-n_100: Couldn't read  file 'optimal_solution_sizes.txt'
-[2021-12-12 22:02:48.593]                           health-n_100: ---------- health-n_100 (n = 23, m = 18, k = -1) ----------
-[2021-12-12 22:02:48.594]                           health-n_100: Found 0 cyclic sub graph(s) with n = []
-[2021-12-12 22:02:48.594]                           health-n_100: Removed 23 nodes in preprocessing, starting with k = 4
-[2021-12-12 22:02:48.594]                           health-n_100: Preprocessing: 0 ms, Flowers: 0 ms, BFS: 0 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 0 ms
-[2021-12-12 22:02:48.594]                           health-n_100: Found solution with k = 4 in 0ms (recursive steps: 0)
-[2021-12-12 22:02:48.601]                          health-n_1000: Couldn't read  file 'optimal_solution_sizes.txt'
-[2021-12-12 22:02:48.601]                          health-n_1000: ---------- health-n_1000 (n = 934, m = 2008, k = -1) ----------
-[2021-12-12 22:02:48.602]                          health-n_1000: Found 9 cyclic sub graph(s) with n = [4, 4, 3, 3, 4, 3, 3, 3, 3]
-[2021-12-12 22:02:48.602]                          health-n_1000: Removed 904 nodes in preprocessing, starting with k = 211
-[2021-12-12 22:02:48.602]                          health-n_1000: Preprocessing: 0 ms, Flowers: 0 ms, BFS: 0 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 0 ms
-[2021-12-12 22:02:48.603]                          health-n_1000: Found solution with k = 231 in 0ms (recursive steps: 42)
-[2021-12-12 22:02:48.610]                          health-n_1500: Couldn't read  file 'optimal_solution_sizes.txt'
-[2021-12-12 22:02:48.610]                          health-n_1500: ---------- health-n_1500 (n = 1451, m = 4642, k = -1) ----------
-[2021-12-12 22:02:48.611]                          health-n_1500: Found 17 cyclic sub graph(s) with n = [5, 3, 3, 184, 4, 3, 8, 3, 3, 3, 6, 3, 3, 3, 3, 3, 3]
-[2021-12-12 22:02:48.611]                          health-n_1500: Removed 1261 nodes in preprocessing, starting with k = 341
-[2021-12-12 22:02:48.870]                          health-n_1500: Preprocessing: 1 ms, Flowers: 0 ms, BFS: 2 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 255 ms
-[2021-12-12 22:02:48.871]                          health-n_1500: Found solution with k = 446 in 259ms (recursive steps: 161)
-[2021-12-12 22:02:48.878]                           health-n_200: Couldn't read  file 'optimal_solution_sizes.txt'
-[2021-12-12 22:02:48.878]                           health-n_200: ---------- health-n_200 (n = 94, m = 87, k = -1) ----------
-[2021-12-12 22:02:48.878]                           health-n_200: Found 0 cyclic sub graph(s) with n = []
-[2021-12-12 22:02:48.878]                           health-n_200: Removed 94 nodes in preprocessing, starting with k = 17
-[2021-12-12 22:02:48.879]                           health-n_200: Preprocessing: 0 ms, Flowers: 0 ms, BFS: 0 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 0 ms
-[2021-12-12 22:02:48.879]                           health-n_200: Found solution with k = 17 in 0ms (recursive steps: 0)
-[2021-12-12 22:02:48.888]                          health-n_2000: Couldn't read  file 'optimal_solution_sizes.txt'
-[2021-12-12 22:02:48.888]                          health-n_2000: ---------- health-n_2000 (n = 1973, m = 7956, k = -1) ----------
-[2021-12-12 22:02:48.894]                          health-n_2000: Found 3 cyclic sub graph(s) with n = [795, 3, 3]
-[2021-12-12 22:02:48.895]                          health-n_2000: Removed 1172 nodes in preprocessing, starting with k = 297
-[2021-12-12 22:05:48.929]                          health-n_2000: Preprocessing: 6 ms, Flowers: 0 ms, BFS: 1645 ms, DAG: 0 ms, Copy: 96 ms, Reduction: 35 ms, Packing: 178253 ms
-[2021-12-12 22:05:48.931]                          health-n_2000: Found no solution in 180s (recursive steps: 1242)
-[2021-12-12 22:05:48.946]                          health-n_2542: Couldn't read  file 'optimal_solution_sizes.txt'
-[2021-12-12 22:05:48.947]                          health-n_2542: ---------- health-n_2542 (n = 2539, m = 12969, k = -1) ----------
-[2021-12-12 22:05:48.969]                          health-n_2542: Found 2 cyclic sub graph(s) with n = [1505, 3]
-[2021-12-12 22:05:48.969]                          health-n_2542: Removed 1031 nodes in preprocessing, starting with k = 235
+[2021-12-13 11:30:34.474]                         advotogo-n_100: Couldn't read  file 'optimal_solution_sizes.txt'
+[2021-12-13 11:30:34.504]                         advotogo-n_100: ---------- advotogo-n_100 (n = 26, m = 31, k = -1) ----------
+[2021-12-13 11:30:34.511]                         advotogo-n_100: Found 0 cyclic sub graph(s) with n = []
+[2021-12-13 11:30:34.514]                         advotogo-n_100: Removed 26 nodes in preprocessing, starting with k = 2
+[2021-12-13 11:30:34.519]                         advotogo-n_100: Preprocessing: 13 ms, Flowers: 0 ms, BFS: 0 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 0 ms
+[2021-12-13 11:30:34.530]                         advotogo-n_100: Found solution with k = 2 in 16ms (recursive steps: 0)
+[2021-12-13 11:30:34.539]                        advotogo-n_1000: Couldn't read  file 'optimal_solution_sizes.txt'
+[2021-12-13 11:30:34.539]                        advotogo-n_1000: ---------- advotogo-n_1000 (n = 624, m = 1883, k = -1) ----------
+[2021-12-13 11:30:34.543]                        advotogo-n_1000: Found 3 cyclic sub graph(s) with n = [6, 3, 3]
+[2021-12-13 11:30:34.544]                        advotogo-n_1000: Removed 612 nodes in preprocessing, starting with k = 120
+[2021-12-13 11:30:34.552]                        advotogo-n_1000: Preprocessing: 4 ms, Flowers: 0 ms, BFS: 2 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 4 ms
+[2021-12-13 11:30:34.558]                        advotogo-n_1000: Found solution with k = 127 in 12ms (recursive steps: 13)
+[2021-12-13 11:30:34.565]                        advotogo-n_1500: Couldn't read  file 'optimal_solution_sizes.txt'
+[2021-12-13 11:30:34.566]                        advotogo-n_1500: ---------- advotogo-n_1500 (n = 1110, m = 4342, k = -1) ----------
+[2021-12-13 11:30:34.569]                        advotogo-n_1500: Found 3 cyclic sub graph(s) with n = [6, 3, 29]
+[2021-12-13 11:30:34.569]                        advotogo-n_1500: Removed 1072 nodes in preprocessing, starting with k = 196
+[2021-12-13 11:30:34.587]                        advotogo-n_1500: Preprocessing: 3 ms, Flowers: 0 ms, BFS: 0 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 15 ms
+[2021-12-13 11:30:34.588]                        advotogo-n_1500: Found solution with k = 215 in 20ms (recursive steps: 30)
+[2021-12-13 11:30:34.589]                         advotogo-n_200: Couldn't read  file 'optimal_solution_sizes.txt'
+[2021-12-13 11:30:34.589]                         advotogo-n_200: ---------- advotogo-n_200 (n = 63, m = 68, k = -1) ----------
+[2021-12-13 11:30:34.590]                         advotogo-n_200: Found 1 cyclic sub graph(s) with n = [3]
+[2021-12-13 11:30:34.590]                         advotogo-n_200: Removed 60 nodes in preprocessing, starting with k = 7
+[2021-12-13 11:30:34.591]                         advotogo-n_200: Preprocessing: 0 ms, Flowers: 0 ms, BFS: 0 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 0 ms
+[2021-12-13 11:30:34.592]                         advotogo-n_200: Found solution with k = 9 in 1ms (recursive steps: 4)
+[2021-12-13 11:30:34.601]                        advotogo-n_2000: Couldn't read  file 'optimal_solution_sizes.txt'
+[2021-12-13 11:30:34.602]                        advotogo-n_2000: ---------- advotogo-n_2000 (n = 1556, m = 6786, k = -1) ----------
+[2021-12-13 11:30:34.606]                        advotogo-n_2000: Found 8 cyclic sub graph(s) with n = [5, 3, 3, 5, 3, 3, 5, 3]
+[2021-12-13 11:30:34.607]                        advotogo-n_2000: Removed 1526 nodes in preprocessing, starting with k = 279
+[2021-12-13 11:30:34.611]                        advotogo-n_2000: Preprocessing: 5 ms, Flowers: 0 ms, BFS: 0 ms, DAG: 0 ms, Copy: 1 ms, Reduction: 0 ms, Packing: 1 ms
+[2021-12-13 11:30:34.612]                        advotogo-n_2000: Found solution with k = 297 in 9ms (recursive steps: 36)
+[2021-12-13 11:30:34.627]                        advotogo-n_3000: Couldn't read  file 'optimal_solution_sizes.txt'
+[2021-12-13 11:30:34.628]                        advotogo-n_3000: ---------- advotogo-n_3000 (n = 2657, m = 16140, k = -1) ----------
+[2021-12-13 11:30:34.638]                        advotogo-n_3000: Found 11 cyclic sub graph(s) with n = [3, 81, 5, 4, 5, 3, 3, 3, 3, 3, 3]
+[2021-12-13 11:30:34.639]                        advotogo-n_3000: Removed 2556 nodes in preprocessing, starting with k = 495
+[2021-12-13 11:30:34.727]                        advotogo-n_3000: Preprocessing: 11 ms, Flowers: 0 ms, BFS: 4 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 79 ms
+[2021-12-13 11:30:34.728]                        advotogo-n_3000: Found solution with k = 548 in 99ms (recursive steps: 85)
+[2021-12-13 11:30:34.768]                        advotogo-n_4000: Couldn't read  file 'optimal_solution_sizes.txt'
+[2021-12-13 11:30:34.771]                        advotogo-n_4000: ---------- advotogo-n_4000 (n = 3775, m = 29831, k = -1) ----------
+[2021-12-13 11:30:34.795]                        advotogo-n_4000: Found 8 cyclic sub graph(s) with n = [3, 3, 665, 3, 3, 3, 3, 3]
+[2021-12-13 11:30:34.796]                        advotogo-n_4000: Removed 3090 nodes in preprocessing, starting with k = 554
