@@ -5,8 +5,9 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class Cycle {
-    private List<Node> nodes = new ArrayList<>();
+public class Cycle extends Component {
+
+    private final List<Node> nodes = new ArrayList<>();
 
     public Cycle(Node... nodes) {
         this.nodes.addAll(Arrays.asList(nodes));

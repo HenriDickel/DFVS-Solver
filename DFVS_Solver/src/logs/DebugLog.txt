@@ -1,40 +1,43 @@
-[2021-12-13 11:30:34.474]                         advotogo-n_100: Couldn't read  file 'optimal_solution_sizes.txt'
-[2021-12-13 11:30:34.504]                         advotogo-n_100: ---------- advotogo-n_100 (n = 26, m = 31, k = -1) ----------
-[2021-12-13 11:30:34.511]                         advotogo-n_100: Found 0 cyclic sub graph(s) with n = []
-[2021-12-13 11:30:34.514]                         advotogo-n_100: Removed 26 nodes in preprocessing, starting with k = 2
-[2021-12-13 11:30:34.519]                         advotogo-n_100: Preprocessing: 13 ms, Flowers: 0 ms, BFS: 0 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 0 ms
-[2021-12-13 11:30:34.530]                         advotogo-n_100: Found solution with k = 2 in 16ms (recursive steps: 0)
-[2021-12-13 11:30:34.539]                        advotogo-n_1000: Couldn't read  file 'optimal_solution_sizes.txt'
-[2021-12-13 11:30:34.539]                        advotogo-n_1000: ---------- advotogo-n_1000 (n = 624, m = 1883, k = -1) ----------
-[2021-12-13 11:30:34.543]                        advotogo-n_1000: Found 3 cyclic sub graph(s) with n = [6, 3, 3]
-[2021-12-13 11:30:34.544]                        advotogo-n_1000: Removed 612 nodes in preprocessing, starting with k = 120
-[2021-12-13 11:30:34.552]                        advotogo-n_1000: Preprocessing: 4 ms, Flowers: 0 ms, BFS: 2 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 4 ms
-[2021-12-13 11:30:34.558]                        advotogo-n_1000: Found solution with k = 127 in 12ms (recursive steps: 13)
-[2021-12-13 11:30:34.565]                        advotogo-n_1500: Couldn't read  file 'optimal_solution_sizes.txt'
-[2021-12-13 11:30:34.566]                        advotogo-n_1500: ---------- advotogo-n_1500 (n = 1110, m = 4342, k = -1) ----------
-[2021-12-13 11:30:34.569]                        advotogo-n_1500: Found 3 cyclic sub graph(s) with n = [6, 3, 29]
-[2021-12-13 11:30:34.569]                        advotogo-n_1500: Removed 1072 nodes in preprocessing, starting with k = 196
-[2021-12-13 11:30:34.587]                        advotogo-n_1500: Preprocessing: 3 ms, Flowers: 0 ms, BFS: 0 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 15 ms
-[2021-12-13 11:30:34.588]                        advotogo-n_1500: Found solution with k = 215 in 20ms (recursive steps: 30)
-[2021-12-13 11:30:34.589]                         advotogo-n_200: Couldn't read  file 'optimal_solution_sizes.txt'
-[2021-12-13 11:30:34.589]                         advotogo-n_200: ---------- advotogo-n_200 (n = 63, m = 68, k = -1) ----------
-[2021-12-13 11:30:34.590]                         advotogo-n_200: Found 1 cyclic sub graph(s) with n = [3]
-[2021-12-13 11:30:34.590]                         advotogo-n_200: Removed 60 nodes in preprocessing, starting with k = 7
-[2021-12-13 11:30:34.591]                         advotogo-n_200: Preprocessing: 0 ms, Flowers: 0 ms, BFS: 0 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 0 ms
-[2021-12-13 11:30:34.592]                         advotogo-n_200: Found solution with k = 9 in 1ms (recursive steps: 4)
-[2021-12-13 11:30:34.601]                        advotogo-n_2000: Couldn't read  file 'optimal_solution_sizes.txt'
-[2021-12-13 11:30:34.602]                        advotogo-n_2000: ---------- advotogo-n_2000 (n = 1556, m = 6786, k = -1) ----------
-[2021-12-13 11:30:34.606]                        advotogo-n_2000: Found 8 cyclic sub graph(s) with n = [5, 3, 3, 5, 3, 3, 5, 3]
-[2021-12-13 11:30:34.607]                        advotogo-n_2000: Removed 1526 nodes in preprocessing, starting with k = 279
-[2021-12-13 11:30:34.611]                        advotogo-n_2000: Preprocessing: 5 ms, Flowers: 0 ms, BFS: 0 ms, DAG: 0 ms, Copy: 1 ms, Reduction: 0 ms, Packing: 1 ms
-[2021-12-13 11:30:34.612]                        advotogo-n_2000: Found solution with k = 297 in 9ms (recursive steps: 36)
-[2021-12-13 11:30:34.627]                        advotogo-n_3000: Couldn't read  file 'optimal_solution_sizes.txt'
-[2021-12-13 11:30:34.628]                        advotogo-n_3000: ---------- advotogo-n_3000 (n = 2657, m = 16140, k = -1) ----------
-[2021-12-13 11:30:34.638]                        advotogo-n_3000: Found 11 cyclic sub graph(s) with n = [3, 81, 5, 4, 5, 3, 3, 3, 3, 3, 3]
-[2021-12-13 11:30:34.639]                        advotogo-n_3000: Removed 2556 nodes in preprocessing, starting with k = 495
-[2021-12-13 11:30:34.727]                        advotogo-n_3000: Preprocessing: 11 ms, Flowers: 0 ms, BFS: 4 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 79 ms
-[2021-12-13 11:30:34.728]                        advotogo-n_3000: Found solution with k = 548 in 99ms (recursive steps: 85)
-[2021-12-13 11:30:34.768]                        advotogo-n_4000: Couldn't read  file 'optimal_solution_sizes.txt'
-[2021-12-13 11:30:34.771]                        advotogo-n_4000: ---------- advotogo-n_4000 (n = 3775, m = 29831, k = -1) ----------
-[2021-12-13 11:30:34.795]                        advotogo-n_4000: Found 8 cyclic sub graph(s) with n = [3, 3, 665, 3, 3, 3, 3, 3]
-[2021-12-13 11:30:34.796]                        advotogo-n_4000: Removed 3090 nodes in preprocessing, starting with k = 554
+[2021-12-14 18:24:21.068]   synth-n_1000-m_107005-k_50-p_0.2.txt: Couldn't read  file 'optimal_solution_sizes.txt'
+[2021-12-14 18:24:21.093]   synth-n_1000-m_107005-k_50-p_0.2.txt: ---------- synth-n_1000-m_107005-k_50-p_0.2.txt (n = 1000, m = 107005, k = -1) ----------
+[2021-12-14 18:24:21.178]   synth-n_1000-m_107005-k_50-p_0.2.txt: Found 1 cyclic sub graph(s) with n = [1000]
+[2021-12-14 18:24:21.183]   synth-n_1000-m_107005-k_50-p_0.2.txt: Removed 0 nodes in preprocessing, starting with k = 0
+[2021-12-14 18:24:21.302]   synth-n_1000-m_107005-k_50-p_0.2.txt: Initial cycle packing has the size 49
+[2021-12-14 18:24:21.304]   synth-n_1000-m_107005-k_50-p_0.2.txt: Branching with k = 49 (+ 0)...
+[2021-12-14 18:24:22.706]   synth-n_1000-m_107005-k_50-p_0.2.txt: Branching with k = 50 (+ 0)...
+[2021-12-14 18:24:30.393]   synth-n_1000-m_107005-k_50-p_0.2.txt: Preprocessing: 92 ms, Flowers: 0 ms, BFS: 6302 ms, DAG: 0 ms, Copy: 111 ms, Reduction: 38 ms, Packing: 2745 ms
+[2021-12-14 18:24:30.409]   synth-n_1000-m_107005-k_50-p_0.2.txt: Found solution with k = 50 in 9s (recursive steps: 51)
+[2021-12-14 18:24:30.529]   synth-n_1000-m_110357-k_70-p_0.2.txt: Couldn't read  file 'optimal_solution_sizes.txt'
+[2021-12-14 18:24:30.530]   synth-n_1000-m_110357-k_70-p_0.2.txt: ---------- synth-n_1000-m_110357-k_70-p_0.2.txt (n = 1000, m = 110357, k = -1) ----------
+[2021-12-14 18:24:30.599]   synth-n_1000-m_110357-k_70-p_0.2.txt: Found 1 cyclic sub graph(s) with n = [1000]
+[2021-12-14 18:24:30.600]   synth-n_1000-m_110357-k_70-p_0.2.txt: Removed 0 nodes in preprocessing, starting with k = 0
+[2021-12-14 18:24:30.669]   synth-n_1000-m_110357-k_70-p_0.2.txt: Initial cycle packing has the size 69
+[2021-12-14 18:24:30.670]   synth-n_1000-m_110357-k_70-p_0.2.txt: Branching with k = 69 (+ 0)...
+[2021-12-14 18:24:32.522]   synth-n_1000-m_110357-k_70-p_0.2.txt: Branching with k = 70 (+ 0)...
+[2021-12-14 18:24:44.659]   synth-n_1000-m_110357-k_70-p_0.2.txt: Preprocessing: 70 ms, Flowers: 0 ms, BFS: 9673 ms, DAG: 0 ms, Copy: 120 ms, Reduction: 35 ms, Packing: 4223 ms
+[2021-12-14 18:24:44.660]   synth-n_1000-m_110357-k_70-p_0.2.txt: Found solution with k = 70 in 14s (recursive steps: 72)
+[2021-12-14 18:24:44.758]  synth-n_1000-m_114433-k_100-p_0.2.txt: Couldn't read  file 'optimal_solution_sizes.txt'
+[2021-12-14 18:24:44.759]  synth-n_1000-m_114433-k_100-p_0.2.txt: ---------- synth-n_1000-m_114433-k_100-p_0.2.txt (n = 1000, m = 114433, k = -1) ----------
+[2021-12-14 18:24:44.817]  synth-n_1000-m_114433-k_100-p_0.2.txt: Found 1 cyclic sub graph(s) with n = [1000]
+[2021-12-14 18:24:44.817]  synth-n_1000-m_114433-k_100-p_0.2.txt: Removed 0 nodes in preprocessing, starting with k = 0
+[2021-12-14 18:24:44.887]  synth-n_1000-m_114433-k_100-p_0.2.txt: Initial cycle packing has the size 100
+[2021-12-14 18:24:44.888]  synth-n_1000-m_114433-k_100-p_0.2.txt: Branching with k = 100 (+ 0)...
+[2021-12-14 18:25:02.895]  synth-n_1000-m_114433-k_100-p_0.2.txt: Preprocessing: 58 ms, Flowers: 0 ms, BFS: 13053 ms, DAG: 0 ms, Copy: 43 ms, Reduction: 34 ms, Packing: 4941 ms
+[2021-12-14 18:25:02.896]  synth-n_1000-m_114433-k_100-p_0.2.txt: Found solution with k = 100 in 18s (recursive steps: 98)
+[2021-12-14 18:25:02.964]  synth-n_1000-m_116757-k_120-p_0.2.txt: Couldn't read  file 'optimal_solution_sizes.txt'
+[2021-12-14 18:25:02.965]  synth-n_1000-m_116757-k_120-p_0.2.txt: ---------- synth-n_1000-m_116757-k_120-p_0.2.txt (n = 1000, m = 116757, k = -1) ----------
+[2021-12-14 18:25:03.023]  synth-n_1000-m_116757-k_120-p_0.2.txt: Found 1 cyclic sub graph(s) with n = [1000]
+[2021-12-14 18:25:03.023]  synth-n_1000-m_116757-k_120-p_0.2.txt: Removed 0 nodes in preprocessing, starting with k = 0
+[2021-12-14 18:25:03.100]  synth-n_1000-m_116757-k_120-p_0.2.txt: Initial cycle packing has the size 119
+[2021-12-14 18:25:03.101]  synth-n_1000-m_116757-k_120-p_0.2.txt: Branching with k = 119 (+ 0)...
+[2021-12-14 18:25:26.392]  synth-n_1000-m_116757-k_120-p_0.2.txt: Branching with k = 120 (+ 0)...
+[2021-12-14 18:25:48.377]  synth-n_1000-m_116757-k_120-p_0.2.txt: Preprocessing: 58 ms, Flowers: 0 ms, BFS: 23950 ms, DAG: 0 ms, Copy: 1011 ms, Reduction: 53 ms, Packing: 20328 ms
+[2021-12-14 18:25:48.379]  synth-n_1000-m_116757-k_120-p_0.2.txt: Found solution with k = 120 in 45s (recursive steps: 167)
+[2021-12-14 18:25:48.482]  synth-n_1000-m_119520-k_150-p_0.2.txt: Couldn't read  file 'optimal_solution_sizes.txt'
+[2021-12-14 18:25:48.482]  synth-n_1000-m_119520-k_150-p_0.2.txt: ---------- synth-n_1000-m_119520-k_150-p_0.2.txt (n = 1000, m = 119520, k = -1) ----------
+[2021-12-14 18:25:48.543]  synth-n_1000-m_119520-k_150-p_0.2.txt: Found 1 cyclic sub graph(s) with n = [1000]
+[2021-12-14 18:25:48.544]  synth-n_1000-m_119520-k_150-p_0.2.txt: Removed 0 nodes in preprocessing, starting with k = 0
+[2021-12-14 18:25:48.627]  synth-n_1000-m_119520-k_150-p_0.2.txt: Initial cycle packing has the size 143
+[2021-12-14 18:25:48.628]  synth-n_1000-m_119520-k_150-p_0.2.txt: Branching with k = 143 (+ 0)...
+[2021-12-14 18:25:49.074]  synth-n_1000-m_119520-k_150-p_0.2.txt: Branching with k = 144 (+ 0)...
+[2021-12-14 18:25:51.066]  synth-n_1000-m_119520-k_150-p_0.2.txt: Branching with k = 145 (+ 0)...

@@ -73,6 +73,10 @@ public class Node {
         return cycleCount;
     }
 
+    public int getCardinality() {
+        return Math.min(outIds.size(), inIds.size());
+    }
+
     public Node copy() {
         Node copy = new Node(id);
         copy.maxPetal = maxPetal;

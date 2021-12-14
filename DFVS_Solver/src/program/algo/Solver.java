@@ -23,12 +23,6 @@ public abstract class Solver {
         // Check Timer
         if (Timer.isTimeout()) throw new TimeoutException("The program stopped after " + Timer.timeout + " minutes.");
 
-        // Checks, if k is within the lower bounds
-        PerformanceTimer.start();
-        boolean foundPacking = CyclePacking.checkLowerBound(graph, k);
-        PerformanceTimer.log(PerformanceTimer.MethodType.PACKING);
-        if(foundPacking) return null;
-
         // Break to skip the redundant dfvs_branch()-call when k = 0
         if (k <= 0) {
             // Return if graph has no circles
@@ -62,6 +56,14 @@ public abstract class Solver {
             PerformanceTimer.log(PerformanceTimer.MethodType.REDUCTION);
             int nextK = k - 1 - reduceS.size();
             if(nextK < 0) continue;
+
+            // Calculate packing & check
+            PerformanceTimer.start();
+            CyclePacking packing = new CyclePacking(copy.copy(), nextK);
+            PerformanceTimer.log(PerformanceTimer.MethodType.PACKING);
+            //System.out.println("Next packing size (" + packing.size() + "), next k (" + nextK + ") -> " + (nextK - packing.size() + 1) + " cycles missing");
+            if(packing.size() > nextK) continue;
+
             // Recursive call
             List<Integer> S = dfvsBranch(copy, nextK, level + 1);
             if (S != null) {
@@ -78,50 +80,18 @@ public abstract class Solver {
 
     public static List<Integer> dfvsSolve(Graph initialGraph) {
 
+        PerformanceTimer.start();
+        CyclePacking packing = new CyclePacking(initialGraph.copy());
+        PerformanceTimer.log(PerformanceTimer.MethodType.PACKING);
+        Log.debugLog(instance.NAME, "Initial cycle packing has the size " + packing.size());
+
         k = 0;
         List<Integer> S = null;
         while (S == null) {
-            CycleCounter.init(k);
-            S = dfvsBranch(initialGraph, k, 0);
-            if (S == null) {
-                // Log detail logs
-                instance.averageCycleSize = CycleCounter.getAverageCycleSize();
-                instance.recursiveStepsPerK = CycleCounter.getRecursiveSteps();
-            }
-            k++;
-        }
-        return S;
-    }
-
-    public static List<Integer> dfvsSolveWithFlowers(Graph initialGraph) {
-
-        // Set Petals
-        PerformanceTimer.start();
-        Flowers.SetAllPetals(initialGraph);
-        List<Integer> removedFlowers = new ArrayList<>();
-        PerformanceTimer.log(PerformanceTimer.MethodType.FLOWERS);
-
-        // Loop
-        k = 0;
-
-        List<Integer> S = null;
-        while (S == null) { // Loop
-
-            // copy graph (to remove nodes with flower rule)
-            Graph copy = initialGraph.copy();
-
-            // No need to recalculate flowers if there were none in previous step
-            if (k == 0 || removedFlowers.size() > 0) {
-                // Use Petal Rule
-                removedFlowers = Flowers.UsePetalRule(copy, k);
-            }
-
-            // No need to use algorithm if we found too many flowers
-            if (removedFlowers.size() <= k) {
-                int kBudget = k - removedFlowers.size();
-                CycleCounter.init(kBudget);
-
-                S = dfvsBranch(copy, kBudget, 0);
+            if(k >= packing.size()) {
+                CycleCounter.init(k);
+                Log.debugLog(instance.NAME, "Branching with k = " + k + " (+ " + instance.S.size() + ")...");
+                S = dfvsBranch(initialGraph, k, 0);
                 if (S == null) {
                     // Log detail logs
                     instance.averageCycleSize = CycleCounter.getAverageCycleSize();
@@ -130,11 +100,6 @@ public abstract class Solver {
             }
             k++;
         }
-
-        // Return solution
-        Log.debugLog(instance.NAME, "Removed " + removedFlowers.size() + " flower nodes by petal rule");
-        instance.removedFlowers += removedFlowers.size();
-        S.addAll(removedFlowers);
         return S;
     }
 
@@ -182,7 +147,7 @@ public abstract class Solver {
             // Add the current k to the solution size for better logging
             instance.solvedK = instance.S.size() + k;
             PerformanceTimer.printResult();
-            Log.mainLog(instance, time, false);
+            Log.mainLog(instance, time, PerformanceTimer.getPackingMillis(), false);
             Log.detailLog(instance);
             Log.debugLog(instance.NAME, "Found no solution in " + Timer.format(time) + " (recursive steps: " + instance.recursiveSteps + ")", true);
             return;
@@ -197,7 +162,7 @@ public abstract class Solver {
 
         // Log
         PerformanceTimer.printResult();
-        Log.mainLog(instance, time, verified);
+        Log.mainLog(instance, time, PerformanceTimer.getPackingMillis(), verified);
         Log.detailLog(instance);
         Log.debugLog(instance.NAME, "Found solution with k = " + instance.S.size() + " in " + Timer.format(time) + " (recursive steps: " + instance.recursiveSteps + ")", !verified);
     }

@@ -6,7 +6,7 @@ import program.model.Node;
 
 import java.util.List;
 
-public abstract class CyclePacking {
+public abstract class CyclePackingOld {
 
     public static boolean checkLowerBounds(Graph graph, int k) {
         if(findCyclePairs(graph,k)){
@@ -14,7 +14,7 @@ public abstract class CyclePacking {
         }else{
             return  findDisjointCycles(graph,k);
         }
-        //TODO 2-Cycle Subraphs
+        //TODO 2-Cycle Subgraphs
         //TODO Bipartit Check
         //TODO Ford Fulkerson for those
         //TODO Maximal Matching
@@ -189,8 +189,8 @@ public abstract class CyclePacking {
         int bound;
         while((bound = removeNextCycle(graph)) > 0) {
             lowerBound += bound;
-            List<Integer> reduceS = Reduction.applyRules(graph, false);
-            lowerBound += reduceS.size();
+            //List<Integer> reduceS = Reduction.applyRules(graph, false);
+            //lowerBound += reduceS.size();
         }
         return lowerBound;
     }

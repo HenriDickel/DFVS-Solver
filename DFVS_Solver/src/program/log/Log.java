@@ -59,7 +59,7 @@ public abstract class Log {
         }
         try(PrintWriter output = new PrintWriter(new FileWriter(MAIN_LOG_PATH,true)))
         {
-            output.println("name,n,m,k_optimal,k_solved,k_start,verified,pre_removed_nodes,removed_flowers,recursive_steps,millis");
+            output.println("name,n,m,k_optimal,k_solved,k_start,verified,pre_removed_nodes,removed_flowers,recursive_steps,millis,packing_millis");
         }
         catch (Exception ignored) {}
         try(PrintWriter output = new PrintWriter(new FileWriter(DETAIL_LOG_PATH,true)))
@@ -69,14 +69,14 @@ public abstract class Log {
         catch (Exception ignored) {}
     }
 
-    public static void mainLog(Instance instance, long millis, boolean verified){
+    public static void mainLog(Instance instance, long millis, long packingMillis, boolean verified){
 
         //Ignore Log
         if(ignore) return;
 
         try(PrintWriter output = new PrintWriter(new FileWriter(MAIN_LOG_PATH,true)))
         {
-            output.println(instance.NAME + "," + instance.N + "," + instance.M + "," + instance.OPTIMAL_K + "," + instance.solvedK + "," + instance.startK + "," + verified + "," + instance.preRemovedNodes + "," + instance.removedFlowers + "," + instance.recursiveSteps + "," + millis);
+            output.println(instance.NAME + "," + instance.N + "," + instance.M + "," + instance.OPTIMAL_K + "," + instance.solvedK + "," + instance.startK + "," + verified + "," + instance.preRemovedNodes + "," + instance.removedFlowers + "," + instance.recursiveSteps + "," + millis + "," + packingMillis);
         }
         catch (Exception ignored) {}
     }

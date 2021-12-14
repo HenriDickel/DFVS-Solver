@@ -1,10 +1,7 @@
 package program.model;
 
 
-import java.util.ArrayList;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class Graph {
@@ -16,7 +13,6 @@ public class Graph {
     }
 
     public Node getNode(int id) {
-
         Node node = nodes.get(id);
         if(node == null) throw new RuntimeException("Couldn't find node with id " + id);
         return node;
@@ -36,6 +32,16 @@ public class Graph {
 
     public int getEdgeCount() {
         return nodes.values().stream().map(Node::getOutIdCount).mapToInt(Integer::valueOf).sum();
+    }
+
+    public Cycle getFirstPairCycle() {
+        for (Node node : getNodes()) {
+            for(Integer outId: node.getOutIds()) {
+                if(node.getInIds().contains(outId)) {
+                    return new Cycle(node, getNode(outId));
+                }
+            }
+        } return null;
     }
 
     public List<Cycle> getPairCycles() {

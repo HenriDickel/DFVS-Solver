@@ -2,9 +2,7 @@ package program;
 
 import program.algo.*;
 import program.log.Log;
-import program.model.Graph;
-import program.model.GraphFile;
-import program.model.Instance;
+import program.model.*;
 import program.utils.InstanceCreator;
 
 import java.util.List;
@@ -40,14 +38,29 @@ public class Main {
             Log.Clear();
             Log.ignore = false;
 
-            List<GraphFile> files = InstanceCreator.getSyntheticAndComplexFiles(null);
-            //testLowerBoundQuality(files);
+            //List<GraphFile> files = InstanceCreator.getErrorFilesDataset2();
+            //List<GraphFile> files = InstanceCreator.getSelectedFilesDataset3();
 
-            //List<GraphFile> files = InstanceCreator.getSelectedFilesDataset2();
+            List<GraphFile> files = InstanceCreator.getComplexAndSyntheticFiles("synth-n_1000-m_107005-k_50-p_0.2.txt");
             for(GraphFile file: files) {
                 Instance instance = InstanceCreator.createFromFile(file);
                 Solver.dfvsSolveInstance(instance);
             }
+        }
+    }
+
+    private static void testLowerBoundPerformance(List<GraphFile> files) {
+        for(GraphFile file: files) {
+            Instance instance = InstanceCreator.createFromFile(file);
+            Graph graph = instance.subGraphs.get(0);
+            List<Integer> reduceS = Reduction.applyRules(graph, true);
+            // Compute packing
+            long startTime = System.nanoTime();
+            CyclePacking packing = new CyclePacking(graph.copy());
+            int lowerBound = packing.size();
+
+            long millis = (System.nanoTime() - startTime) / 1000000;
+            Log.debugLog(instance.NAME, "Computed lower bound = " + lowerBound + " in " + millis + " ms");
         }
     }
 
@@ -62,8 +75,13 @@ public class Main {
             // Apply reduction rules and calculate remaining k for lower bounds
             List<Integer> reduceS = Reduction.applyRules(graph, true);
             int remainingK = instance.OPTIMAL_K - reduceS.size();
+            CyclePacking packing = new CyclePacking(graph.copy());
+            Solver.instance = instance;
+            Log.ignore = true;
+            //packing.applyCostTPacking();
+            Log.ignore = false;
+            int lowerBound = packing.size();
 
-            int lowerBound = CyclePacking.getLowerBound(graph);
             if(remainingK > 0) {
                 lowerBoundAgg += lowerBound;
                 remainingKAgg += remainingK;

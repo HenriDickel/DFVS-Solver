@@ -3,9 +3,6 @@ package program.utils;
 import program.algo.Solver;
 import program.log.Log;
 
-import java.time.LocalDateTime;
-import java.time.temporal.ChronoUnit;
-
 public abstract class PerformanceTimer {
 
     private static long startTime;
@@ -57,6 +54,10 @@ public abstract class PerformanceTimer {
                 millisPacking += millis;
                 break;
         }
+    }
+
+    public static long getPackingMillis() {
+        return millisPacking / 1000000;
     }
 
     public static void printResult() {
