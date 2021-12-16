@@ -37,7 +37,6 @@ public class CyclePacking {
                     Node newNode = packingGraph.getNode(outId);
                     pair.add(newNode);
                     pair.setK(pair.getK() + 1);
-                    //System.out.println("Upgraded pair" + pair + " to k = " + pair.getK());
                     upgrade = true;
                     break;
                 }
@@ -47,7 +46,7 @@ public class CyclePacking {
 
 
 
-    private void upgradeK2Quad(Cycle triangle) {
+    private void upgradeK2Penta(Cycle triangle) {
         for(int i = 0; i < 3; i++) {
             Node a = triangle.get(i);
             Node b = triangle.get((i + 1) % 3);
@@ -64,7 +63,6 @@ public class CyclePacking {
                                 triangle.add(d);
                                 triangle.add(e);
                                 triangle.setK(2);
-                                //System.out.println("Upgrade triangle to k = 2 penta: " + triangle);
                                 return;
                             }
                         }
@@ -79,7 +77,7 @@ public class CyclePacking {
         Cycle pair;
         while((pair = packingGraph.getFirstPairCycle()) != null && size() <= k) {
 
-            // Look for fully connected triangle
+            // Look for fully connected triangles, quads etc.
             upgradeFullyConnected(pair);
 
             for (Node node : pair.getNodes()) {
@@ -99,7 +97,7 @@ public class CyclePacking {
         Cycle cycle;
         while((cycle = LightBFS.findShortestCycle(packingGraph)) != null && cycles.size() <= k) {
 
-            if(cycle.size() == 3) upgradeK2Quad(cycle);
+            if(cycle.size() == 3) upgradeK2Penta(cycle);
 
             for (Node node : cycle.getNodes()) {
                 packingGraph.removeNode(node.id);

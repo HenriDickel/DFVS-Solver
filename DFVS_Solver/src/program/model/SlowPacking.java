@@ -5,7 +5,6 @@ import program.algo.Reduction;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class SlowPacking {
 
@@ -33,7 +32,6 @@ public class SlowPacking {
                     Node newNode = packingGraph.getNode(outId);
                     pair.add(newNode);
                     pair.setK(pair.getK() + 1);
-                    //System.out.println("Upgraded pair" + pair + " to k = " + pair.getK());
                     upgrade = true;
                     break;
                 }
@@ -58,7 +56,6 @@ public class SlowPacking {
                                 triangle.add(d);
                                 triangle.add(e);
                                 triangle.setK(2);
-                                //System.out.println("Upgrade triangle to k = 2 penta: " + triangle);
                                 return;
                             }
                         }
@@ -71,7 +68,6 @@ public class SlowPacking {
                                 triangle.add(d);
                                 triangle.add(e);
                                 triangle.setK(2);
-                                //System.out.println("Upgrade triangle to k = 2 penta: " + triangle);
                                 return;
                             }
                         }
@@ -81,36 +77,12 @@ public class SlowPacking {
         }
     }
 
-    private void upgradeK2Triangle(Cycle triangle) {
-
-        List<Integer> upgradeIds = new ArrayList<>();
-        for(int i = 0; i < 3; i++) {
-            Node a = triangle.get(i);
-            Node b = triangle.get((i + 1) % 3);
-            Node c = triangle.get((i + 2) % 3);
-            // Due to the structure of Light BFS, the cycle goes c -> b -> a
-
-            for(Integer outId: a.getOutIds()) {
-                if(!outId.equals(c.id) && b.getInIds().contains(outId)) {
-                    upgradeIds.add(outId);
-                    break;
-                }
-            }
-        }
-        if(upgradeIds.size() == 3) {
-            System.out.println("Upgrade triangle to k = 2 triangle");
-            List<Node> upgradeNodes = upgradeIds.stream().distinct().map(Node::new).collect(Collectors.toList());
-            for(Node upgrade: upgradeNodes) triangle.add(upgrade);
-            triangle.setK(2);
-        }
-    }
-
     private void initPacking(int k) {
 
         Cycle pair;
         while((pair = packingGraph.getFirstPairCycle()) != null && size() <= k) {
 
-            // Look for fully connected triangle
+            // Look for fully connected triangles, quads etc.
             upgradeFullyConnected(pair);
 
             for (Node node : pair.getNodes()) {
@@ -128,10 +100,8 @@ public class SlowPacking {
             for (Node node : cycle.getNodes()) {
                 packingGraph.removeNode(node.id);
             }
-            //System.out.println(cycle.size());
             cycles.add(cycle);
         }
-        //System.out.println("SLOW: graph size: n = " + packingGraph.getNodeCount() + ", m = " + packingGraph.getEdgeCount());*/
     }
 
     /**
