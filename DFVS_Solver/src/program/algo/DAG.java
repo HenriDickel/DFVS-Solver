@@ -15,6 +15,25 @@ public abstract class DAG {
         return isDAGRecursive(new ArrayList<>(), graph);
     }
 
+    public static boolean isDAGFast(Graph graph) {
+        Graph dagGraph = graph.copy();
+
+        while(true) {
+            List<Integer> checkedIds = new ArrayList<>();
+            for(Node node: dagGraph.getNodes()) {
+                if(node.getInIdCount() == 0 || node.getOutIdCount() == 0) {
+                    checkedIds.add(node.id);
+                }
+            }
+            for(Integer id: checkedIds) {
+                dagGraph.removeNode(id);
+            }
+            if(checkedIds.isEmpty()) {
+                return dagGraph.getNodeCount() == 0;
+            }
+        }
+    }
+
     private static boolean isDAGRecursive(List<Node> checked, Graph graph){
 
         if(checked.size() == graph.getNodeCount()) return true;

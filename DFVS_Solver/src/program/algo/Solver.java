@@ -15,7 +15,7 @@ public abstract class Solver {
 
     public static Instance instance;
 
-    private static List<Integer> dfvsBranch(Graph graph, int k, int level) throws TimeoutException {
+    private static List<Integer> dfvsBranch(Graph graph, int k, int level, PackingManager pm) throws TimeoutException {
 
         // Log recursive steps
         instance.recursiveSteps++;
@@ -51,27 +51,51 @@ public abstract class Solver {
             copy.removeNode(node.id);
             copy.removeForbiddenNodes(forbiddenIds);
             PerformanceTimer.log(PerformanceTimer.MethodType.COPY);
+
+            // Apply reduction rules
             PerformanceTimer.start();
             List<Integer> reduceS = Reduction.applyRules(copy, false);
             PerformanceTimer.log(PerformanceTimer.MethodType.REDUCTION);
+
+            // Calculate next k, skip if < 0
             int nextK = k - 1 - reduceS.size();
             if(nextK < 0) continue;
 
-            // Calculate packing & check
+            // Add all new deleted nodes to list
+            List<Integer> deleteIds = new ArrayList<>(reduceS);
+            deleteIds.add(node.id);
+            // Update packing manager
             PerformanceTimer.start();
-            CyclePacking packing = new CyclePacking(copy.copy(), nextK);
+            PackingManager newPm = new PackingManager(pm, deleteIds);
+            //System.out.println(" . ".repeat(level) + "(" + node + ") PM packing size = " + newPm.size());
+
+            // TODO remove
+            // Calculate slow packing
+            //SlowPacking packing = new SlowPacking(copy.copy());
+            //System.out.println(" . ".repeat(level) + "(" + node + ") packing size = " + packing.size());
+
             PerformanceTimer.log(PerformanceTimer.MethodType.PACKING);
-            //System.out.println("Next packing size (" + packing.size() + "), next k (" + nextK + ") -> " + (nextK - packing.size() + 1) + " cycles missing");
-            if(packing.size() > nextK) continue;
+
+
+            // When packing is larger than next k, skip & try upgrade packing
+            if(newPm.size() > nextK) {
+                newPm.addDeletedNodes(deleteIds);
+                if(newPm.size() > pm.size()) pm = newPm;
+                continue;
+            }
 
             // Recursive call
-            List<Integer> S = dfvsBranch(copy, nextK, level + 1);
+            List<Integer> S = dfvsBranch(copy, nextK, level + 1, newPm);
             if (S != null) {
                 S.add(node.id);
                 S.addAll(reduceS);
                 return S;
             }
             forbiddenIds.add(node.id);
+
+            // Try upgrade packing
+            newPm.addDeletedNodes(deleteIds);
+            if(newPm.size() > pm.size()) pm = newPm;
         }
         return null;
     }
@@ -81,17 +105,17 @@ public abstract class Solver {
     public static List<Integer> dfvsSolve(Graph initialGraph) {
 
         PerformanceTimer.start();
-        CyclePacking packing = new CyclePacking(initialGraph.copy());
+        PackingManager pm = new PackingManager(initialGraph);
+        Log.debugLog(instance.NAME, "PM: Initial cycle packing has the size " + pm.size());
         PerformanceTimer.log(PerformanceTimer.MethodType.PACKING);
-        Log.debugLog(instance.NAME, "Initial cycle packing has the size " + packing.size());
 
         k = 0;
         List<Integer> S = null;
         while (S == null) {
-            if(k >= packing.size()) {
+            if(k >= pm.size()) {
                 CycleCounter.init(k);
-                Log.debugLog(instance.NAME, "Branching with k = " + k + " (+ " + instance.S.size() + ")...");
-                S = dfvsBranch(initialGraph, k, 0);
+                Log.debugLog(instance.NAME, "---------------- Branching with k = " + k + " (+ " + instance.S.size() + ")... ----------------");
+                S = dfvsBranch(initialGraph, k, 0, pm);
                 if (S == null) {
                     // Log detail logs
                     instance.averageCycleSize = CycleCounter.getAverageCycleSize();

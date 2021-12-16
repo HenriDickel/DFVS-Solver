@@ -1,20 +1,20 @@
 package program.model;
 
+import program.algo.DAG;
 import program.algo.LightBFS;
-import program.algo.Reduction;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class SlowPacking {
 
-    private final List<Cycle> cycles = new ArrayList<>();
+    public final List<Cycle> cycles = new ArrayList<>();
 
     private final Graph packingGraph;
 
     public SlowPacking(Graph packingGraph) {
         this.packingGraph = packingGraph;
-        initPacking(Integer.MAX_VALUE);
+        initPacking();
     }
 
     public int size() {
@@ -77,10 +77,10 @@ public class SlowPacking {
         }
     }
 
-    private void initPacking(int k) {
+    private void initPacking() {
 
         Cycle pair;
-        while((pair = packingGraph.getFirstPairCycle()) != null && size() <= k) {
+        while((pair = packingGraph.getFirstPairCycle()) != null) {
 
             // Look for fully connected triangles, quads etc.
             upgradeFullyConnected(pair);
@@ -89,10 +89,9 @@ public class SlowPacking {
                 packingGraph.removeNode(node.id);
             }
             cycles.add(pair);
-
         }
 
-        while(hasCycle() && size() <= k) {
+        while(!DAG.isDAGFast(packingGraph)) {
             Cycle cycle = LightBFS.findShortestCycle(packingGraph);
 
             if(cycle.size() == 3) upgradeK2Penta(cycle);
@@ -102,15 +101,5 @@ public class SlowPacking {
             }
             cycles.add(cycle);
         }
-    }
-
-    /**
-     * Checks, if the graph has a cycle. Is more efficient than running a isDAG() on the not reduced graph!
-     * @return true, when the graph has a cycle.
-     */
-    private boolean hasCycle() {
-        Graph copy = packingGraph.copy();
-        List<Integer> S = Reduction.applyRules(copy, true);
-        return !S.isEmpty() || copy.getNodeCount() > 0;
     }
 }

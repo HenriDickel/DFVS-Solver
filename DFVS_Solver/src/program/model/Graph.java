@@ -12,6 +12,10 @@ public class Graph {
         return nodes.values().stream().toList();
     }
 
+    public Map<Integer, Node> getNodeMap() {
+        return nodes;
+    }
+
     public Node getNode(int id) {
         Node node = nodes.get(id);
         if(node == null) throw new RuntimeException("Couldn't find node with id " + id);
@@ -116,6 +120,25 @@ public class Graph {
             }
         }
         removeNode(forbidden.id);
+    }
+
+    public void addInitialNode(Node initialNode) {
+        Node add = new Node(initialNode.id);
+        for(Integer outId: initialNode.getOutIds()) {
+            if(hasNode(outId)) {
+                Node out = getNode(outId);
+                add.addOutId(outId);
+                out.addInId(add.id);
+            }
+        }
+        for(Integer inId: initialNode.getInIds()) {
+            if(hasNode(inId)) {
+                Node in = getNode(inId);
+                add.addInId(inId);
+                in.addOutId(add.id);
+            }
+        }
+        nodes.put(add.id, add);
     }
 
     public void addArc(Integer nodeId1, Integer nodeId2) {
