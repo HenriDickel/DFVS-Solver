@@ -33,6 +33,31 @@ public class Cycle extends Component {
         return nodes.contains(node);
     }
 
+    public boolean containsId(Integer id) {
+        for(Node node: nodes) {
+            if(node.id.equals(id)) return true;
+        }
+        return false;
+    }
+
+    public boolean isFullyConnected(Integer otherId) {
+        for(Node node: nodes) {
+            if(node.id.equals(otherId)) return false;
+            if(!node.getOutIds().contains(otherId)) return false;
+            if(!node.getInIds().contains(otherId)) return false;
+        }
+        return true;
+    }
+
+    public Cycle copy() {
+        Cycle copy = new Cycle();
+        for(Node node: nodes) {
+            copy.add(node.copy());
+        }
+        copy.setK(getK());
+        return copy;
+    }
+
     @Override
     public String toString() {
         List<String> nodeLabels = nodes.stream().map(Node::toString).collect(Collectors.toList());

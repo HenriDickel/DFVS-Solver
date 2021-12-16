@@ -26,64 +26,90 @@ public class CyclePacking {
         return cycles.stream().mapToInt(Component::getK).sum();
     }
 
-    private void initPacking(int k) {
+    private void upgradeFullyConnected(Cycle pair) {
 
-        // Add pair cycles to the packing as long as a cycle is found
-        boolean pairFound = true;
-        while(pairFound && size() <= k) {
+        Node a = pair.get(0);
+        boolean upgrade = true;
+        while(upgrade) {
+            upgrade = false;
+            for(Integer outId: a.getOutIds()) {
+                if(pair.isFullyConnected(outId)) {
+                    Node newNode = packingGraph.getNode(outId);
+                    pair.add(newNode);
+                    pair.setK(pair.getK() + 1);
+                    //System.out.println("Upgraded pair" + pair + " to k = " + pair.getK());
+                    upgrade = true;
+                    break;
+                }
+            }
+        }
+    }
 
-            // Look for pair cycle to remove
-            Cycle cycle = packingGraph.getFirstPairCycle();
 
-            if(cycle != null) {
-                // Look for fully connected triangle
-                Node a = cycle.get(0);
-                Node b = cycle.get(1);
-                for(Integer cId: a.getOutIds()) {
-                    if(a.getInIds().contains(cId)) { // b <-> node <-> a
-                        if(b.getOutIds().contains(cId) && b.getInIds().contains(cId)) { // fully connected triangle found
-                            cycle = new Cycle(a, b, packingGraph.getNode(cId));
-                            cycle.setK(2); // set k = 2 for fully connected triangle
-                            break;
+
+    private void upgradeK2Quad(Cycle triangle) {
+        for(int i = 0; i < 3; i++) {
+            Node a = triangle.get(i);
+            Node b = triangle.get((i + 1) % 3);
+            Node c = triangle.get((i + 2) % 3);
+            // Due to the structure of Light BFS, the cycle goes c -> b -> a
+
+            for (Integer dId : a.getOutIds()) {
+                if (!triangle.containsId(dId) && b.getInIds().contains(dId)) { // a -> d -> b exists
+                    if(c.getOutIds().contains(dId)) {
+                        Node d = packingGraph.getNode(dId);
+                        for(Integer eId: d.getOutIds()) {
+                            if(!triangle.containsId(eId) && c.getInIds().contains(eId)) {
+                                Node e = packingGraph.getNode(eId);
+                                triangle.add(d);
+                                triangle.add(e);
+                                triangle.setK(2);
+                                //System.out.println("Upgrade triangle to k = 2 penta: " + triangle);
+                                return;
+                            }
                         }
                     }
                 }
-
-                for (Node node : cycle.getNodes()) {
-                    packingGraph.removeNode(node.id);
-                }
-                cycles.add(cycle);
-
-                List<Integer> reduceS = Reduction.applyRules(packingGraph, false);
-                for(Integer nodeId: reduceS) {
-                    // Add dummy node
-                    cycles.add(new Cycle(new Node(nodeId)));
-                }
-            } else {
-                pairFound = false;
             }
+        }
+    }
+
+    private void initPacking(int k) {
+
+        Cycle pair;
+        while((pair = packingGraph.getFirstPairCycle()) != null && size() <= k) {
+
+            // Look for fully connected triangle
+            upgradeFullyConnected(pair);
+
+            for (Node node : pair.getNodes()) {
+                packingGraph.removeNode(node.id);
+            }
+            cycles.add(pair);
+
+            List<Integer> reduceS = Reduction.applyRules(packingGraph, false);
+            for(Integer nodeId: reduceS) {
+                // Add dummy node
+                cycles.add(new Cycle(new Node(nodeId)));
+            }
+
         }
 
         // Add cycles to the packing as long as a cycle is found
-        boolean cycleFound = true;
-        while(cycleFound && cycles.size() <= k) {
+        Cycle cycle;
+        while((cycle = LightBFS.findShortestCycle(packingGraph)) != null && cycles.size() <= k) {
 
-            // Look for cycle to remove
-            Cycle cycle = LightBFS.findShortestCycle(packingGraph);
+            if(cycle.size() == 3) upgradeK2Quad(cycle);
 
-            if(cycle != null) {
-                for (Node node : cycle.getNodes()) {
-                    packingGraph.removeNode(node.id);
-                }
-                cycles.add(cycle);
+            for (Node node : cycle.getNodes()) {
+                packingGraph.removeNode(node.id);
+            }
+            cycles.add(cycle);
 
-                List<Integer> reduceS = Reduction.applyRules(packingGraph, false);
-                for(Integer nodeId: reduceS) {
-                    // Add dummy node
-                    cycles.add(new Cycle(new Node(nodeId)));
-                }
-            } else {
-                cycleFound = false;
+            List<Integer> reduceS = Reduction.applyRules(packingGraph, false);
+            for(Integer nodeId: reduceS) {
+                // Add dummy node
+                cycles.add(new Cycle(new Node(nodeId)));
             }
         }
     }

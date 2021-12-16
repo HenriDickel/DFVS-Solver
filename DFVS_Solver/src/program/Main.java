@@ -38,10 +38,13 @@ public class Main {
             Log.Clear();
             Log.ignore = false;
 
-            //List<GraphFile> files = InstanceCreator.getErrorFilesDataset2();
-            //List<GraphFile> files = InstanceCreator.getSelectedFilesDataset3();
+            List<GraphFile> files = InstanceCreator.getSelectedFilesDataset3();
+            //testLowerBoundPerformance(files);
 
-            List<GraphFile> files = InstanceCreator.getComplexAndSyntheticFiles("synth-n_1000-m_107005-k_50-p_0.2.txt");
+            //List<GraphFile> files = InstanceCreator.getComplexAndSyntheticFiles(null);
+            //testLowerBoundQuality(files);
+
+            //List<GraphFile> files = InstanceCreator.getComplexAndSyntheticFiles("synth-n_2300-m_580179-k_150-p_0.2.txt");
             for(GraphFile file: files) {
                 Instance instance = InstanceCreator.createFromFile(file);
                 Solver.dfvsSolveInstance(instance);
@@ -58,9 +61,15 @@ public class Main {
             long startTime = System.nanoTime();
             CyclePacking packing = new CyclePacking(graph.copy());
             int lowerBound = packing.size();
-
             long millis = (System.nanoTime() - startTime) / 1000000;
-            Log.debugLog(instance.NAME, "Computed lower bound = " + lowerBound + " in " + millis + " ms");
+
+            // Compute slow packing
+            long slowStartTime = System.nanoTime();
+            SlowPacking slowPacking = new SlowPacking(graph.copy());
+            int slowLowerBound = slowPacking.size();
+            long slowMillis = (System.nanoTime() - slowStartTime) / 1000000;
+
+            Log.debugLog(instance.NAME, "Computed lower bound = (" + lowerBound + " / " + slowLowerBound + ") in (" + millis + " / " + slowMillis + ") ms");
         }
     }
 
@@ -75,11 +84,11 @@ public class Main {
             // Apply reduction rules and calculate remaining k for lower bounds
             List<Integer> reduceS = Reduction.applyRules(graph, true);
             int remainingK = instance.OPTIMAL_K - reduceS.size();
-            CyclePacking packing = new CyclePacking(graph.copy());
-            Solver.instance = instance;
-            Log.ignore = true;
-            //packing.applyCostTPacking();
-            Log.ignore = false;
+
+            //CyclePacking packing = new CyclePacking(graph.copy());
+            //int lowerBound = packing.size();
+
+            SlowPacking packing = new SlowPacking(graph.copy());
             int lowerBound = packing.size();
 
             if(remainingK > 0) {
