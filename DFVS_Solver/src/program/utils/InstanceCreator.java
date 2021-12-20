@@ -37,10 +37,11 @@ public abstract class InstanceCreator {
                     String line = scan.nextLine();
                     String name = line.split(" {5}")[0];
                     String optimalK = line.split(" {5}")[1];
-                    optimalKMap.put(name, Integer.parseInt(optimalK));
+                    if(optimalK.equals("time limit reached")) optimalKMap.put(name, -1);
+                    else optimalKMap.put(name, Integer.parseInt(optimalK));
                 }
             } catch (IOException e) {
-                //Log.debugLog(graphName, "Couldn't read  file 'optimal_solution_sizes.txt'", true);
+                Log.debugLog(graphName, "Couldn't read  file 'optimal_solution_sizes.txt'", true);
                 return -1;
             }
         }
@@ -95,9 +96,13 @@ public abstract class InstanceCreator {
 
     public static List<GraphFile> getSelectedFilesDataset3() {
         List<GraphFile> files = new ArrayList<>();
+        files.add(new GraphFile(SYNTHETIC_PATH, "synth-n_1600-m_273042-k_70-p_0.2.txt"));
         files.add(new GraphFile(SYNTHETIC_PATH, "synth-n_150-m_1423-k_30-p_0.1.txt"));
         files.add(new GraphFile(SYNTHETIC_PATH, "synth-n_1000-m_27142-k_50-p_0.05.txt"));
         files.add(new GraphFile(SYNTHETIC_PATH, "synth-n_1300-m_46137-k_70-p_0.05.txt"));
+        files.add(new GraphFile(SYNTHETIC_PATH, "synth-n_1000-m_124702-k_200-p_0.2.txt"));
+        files.add(new GraphFile(SYNTHETIC_PATH, "synth-n_1000-m_29037-k_100-p_0.05.txt"));
+        files.add(new GraphFile(SYNTHETIC_PATH, "synth-n_1000-m_30042-k_120-p_0.05.txt"));
         files.add(new GraphFile(SYNTHETIC_PATH, "synth-n_1300-m_47847-k_100-p_0.05.txt"));
         files.add(new GraphFile(SYNTHETIC_PATH, "synth-n_1000-m_116757-k_120-p_0.2.txt"));
         files.add(new GraphFile(SYNTHETIC_PATH, "synth-n_1000-m_30795-k_150-p_0.05.txt"));
@@ -105,9 +110,8 @@ public abstract class InstanceCreator {
         files.add(new GraphFile(SYNTHETIC_PATH, "synth-n_1300-m_99879-k_150-p_0.1.txt"));
         files.add(new GraphFile(SYNTHETIC_PATH, "synth-n_150-m_1561-k_70-p_0.1.txt"));
         files.add(new GraphFile(SYNTHETIC_PATH, "synth-n_200-m_1336-k_50-p_0.05.txt"));
-        /*files.add(new GraphFile(SYNTHETIC_PATH, "synth-n_1300-m_104213-k_200-p_0.1.txt"));
+        files.add(new GraphFile(SYNTHETIC_PATH, "synth-n_1300-m_104213-k_200-p_0.1.txt"));
         files.add(new GraphFile(SYNTHETIC_PATH, "synth-n_1300-m_95352-k_100-p_0.1.txt"));
-        files.add(new GraphFile(SYNTHETIC_PATH, "synth-n_1600-m_273042-k_70-p_0.2.txt"));
         files.add(new GraphFile(SYNTHETIC_PATH, "synth-n_2000-m_422023-k_70-p_0.2.txt"));
         files.add(new GraphFile(SYNTHETIC_PATH, "synth-n_2600-m_716555-k_100-p_0.2.txt"));
         files.add(new GraphFile(SYNTHETIC_PATH, "synth-n_3000-m_240581-k_120-p_0.05.txt"));
@@ -115,10 +119,11 @@ public abstract class InstanceCreator {
         files.add(new GraphFile(COMPLEX_PATH, "usairport-n_1577"));
         files.add(new GraphFile(COMPLEX_PATH, "blogs-n_1227"));
         files.add(new GraphFile(COMPLEX_PATH, "chess-n_1500"));
-        files.add(new GraphFile(COMPLEX_PATH, "chess-n_7303"));
+        files.add(new GraphFile(COMPLEX_PATH, "chess-n_2000"));
+        files.add(new GraphFile(COMPLEX_PATH, "health-n_2000"));
         files.add(new GraphFile(COMPLEX_PATH, "link-kv-n_1000"));
-        files.add(new GraphFile(COMPLEX_PATH, "link-kv-n_6916"));
-        files.add(new GraphFile(COMPLEX_PATH, "wikispeedia-n_4181"));*/
+        files.add(new GraphFile(COMPLEX_PATH, "link-kv-n_5000"));
+        files.add(new GraphFile(COMPLEX_PATH, "wikispeedia-n_4181"));
         return files;
     }
 

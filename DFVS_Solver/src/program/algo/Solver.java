@@ -66,22 +66,23 @@ public abstract class Solver {
             deleteIds.add(node.id);
             // Update packing manager
             PerformanceTimer.start();
-            PackingManager newPm = new PackingManager(pm, deleteIds);
+            PackingManager newPm = new PackingManager(pm, deleteIds, forbiddenIds);
             //System.out.println(" . ".repeat(level) + "(" + node + ") PM packing size = " + newPm.size());
-
-            // TODO remove
-            // Calculate slow packing
-            //SlowPacking packing = new SlowPacking(copy.copy());
-            //System.out.println(" . ".repeat(level) + "(" + node + ") packing size = " + packing.size());
-
+            //System.out.println("Packing time: " + (System.nanoTime() - PerformanceTimer.startTime) / 1000000);
             PerformanceTimer.log(PerformanceTimer.MethodType.PACKING);
 
 
             // When packing is larger than next k, skip & try upgrade packing
             if(newPm.size() > nextK) {
+                PerformanceTimer.start();
                 newPm.addDeletedNodes(deleteIds);
+                newPm.removeForbiddenNodes(forbiddenIds);
+                newPm.initPacking();
+                PerformanceTimer.log(PerformanceTimer.MethodType.PACKING);
                 if(newPm.size() > pm.size()) pm = newPm;
-                continue;
+                // If updated packing is > k, immediately return
+                if(pm.size() > k) return null;
+                else continue;
             }
 
             // Recursive call
@@ -91,11 +92,17 @@ public abstract class Solver {
                 S.addAll(reduceS);
                 return S;
             }
-            forbiddenIds.add(node.id);
 
             // Try upgrade packing
+            PerformanceTimer.start();
             newPm.addDeletedNodes(deleteIds);
+            newPm.removeForbiddenNodes(forbiddenIds);
+            newPm.initPacking();
+            PerformanceTimer.log(PerformanceTimer.MethodType.PACKING);
             if(newPm.size() > pm.size()) pm = newPm;
+
+            // Add new node to forbidden nodes
+            forbiddenIds.add(node.id);
         }
         return null;
     }
@@ -114,7 +121,7 @@ public abstract class Solver {
         while (S == null) {
             if(k >= pm.size()) {
                 CycleCounter.init(k);
-                Log.debugLog(instance.NAME, "---------------- Branching with k = " + k + " (+ " + instance.S.size() + ")... ----------------");
+                Log.debugLog(instance.NAME, "Branching with k = " + k + " (+ " + instance.S.size() + ")...");
                 S = dfvsBranch(initialGraph, k, 0, pm);
                 if (S == null) {
                     // Log detail logs
@@ -182,7 +189,7 @@ public abstract class Solver {
 
         // Verify
         instance.solvedK = instance.S.size();
-        boolean verified = instance.solvedK == instance.OPTIMAL_K;
+        boolean verified = instance.solvedK == instance.OPTIMAL_K || instance.OPTIMAL_K == -1;
 
         // Log
         PerformanceTimer.printResult();

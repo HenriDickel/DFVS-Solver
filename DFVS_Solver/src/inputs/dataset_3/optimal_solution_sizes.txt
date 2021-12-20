@@ -1,0 +1,452 @@
+advotogo-n_1000     127
+advotogo-n_100     2
+advotogo-n_1500     215
+advotogo-n_2000     297
+advotogo-n_200     9
+advotogo-n_3000     548
+advotogo-n_4000     863
+advotogo-n_5000     1160
+advotogo-n_500     39
+advotogo-n_50     0
+advotogo-n_5159     1208
+bitcoinalpha-n_1000     136
+bitcoinalpha-n_100     2
+bitcoinalpha-n_1500     261
+bitcoinalpha-n_2000     393
+bitcoinalpha-n_200     11
+bitcoinalpha-n_3000     658
+bitcoinalpha-n_3785     921
+bitcoinalpha-n_500     54
+bitcoinalpha-n_50     2
+blogs-n_1000     196
+blogs-n_100     8
+blogs-n_1227     262
+blogs-n_200     16
+blogs-n_500     76
+blogs-n_50     6
+chess-n_1000     62
+chess-n_100     0
+chess-n_1500     127
+chess-n_2000     204
+chess-n_200     2
+chess-n_3000     time limit reached
+chess-n_4000     time limit reached
+chess-n_5000     time limit reached
+chess-n_500     17
+chess-n_50     0
+chess-n_6000     time limit reached
+chess-n_7000     time limit reached
+chess-n_7303     time limit reached
+ChicagoRegional-n_10000     4193
+ChicagoRegional-n_1000     92
+ChicagoRegional-n_100     1
+ChicagoRegional-n_1500     181
+ChicagoRegional-n_2000     307
+ChicagoRegional-n_200     5
+ChicagoRegional-n_3000     631
+ChicagoRegional-n_4000     1020
+ChicagoRegional-n_5000     1484
+ChicagoRegional-n_500     24
+ChicagoRegional-n_50     2
+ChicagoRegional-n_6000     1987
+ChicagoRegional-n_7000     2495
+ChicagoRegional-n_8000     3028
+ChicagoRegional-n_9000     3651
+health-n_1000     231
+health-n_100     4
+health-n_1500     446
+health-n_2000     674
+health-n_200     17
+health-n_2542     960
+health-n_500     67
+health-n_50     2
+link-kv-n_1000     234
+link-kv-n_100     8
+link-kv-n_1500     391
+link-kv-n_2000     565
+link-kv-n_200     20
+link-kv-n_3000     900
+link-kv-n_4000     time limit reached
+link-kv-n_5000     time limit reached
+link-kv-n_500     83
+link-kv-n_50     0
+link-kv-n_6000     time limit reached
+link-kv-n_6916     time limit reached
+openflights-n_1000     201
+openflights-n_100     10
+openflights-n_1500     413
+openflights-n_2000     593
+openflights-n_200     26
+openflights-n_2942     998
+openflights-n_500     80
+openflights-n_50     2
+out.cfinder-google-n_10000     3133
+out.cfinder-google-n_1000     100
+out.cfinder-google-n_100     6
+out.cfinder-google-n_1500     188
+out.cfinder-google-n_2000     307
+out.cfinder-google-n_200     13
+out.cfinder-google-n_3000     574
+out.cfinder-google-n_4000     852
+out.cfinder-google-n_5000     1200
+out.cfinder-google-n_500     37
+out.cfinder-google-n_50     7
+out.cfinder-google-n_6000     1581
+out.cfinder-google-n_7000     1928
+out.cfinder-google-n_8000     2338
+out.cfinder-google-n_9000     2698
+talk-oc-n_1000     7
+talk-oc-n_100     0
+talk-oc-n_1500     15
+talk-oc-n_2000     15
+talk-oc-n_200     0
+talk-oc-n_3000     29
+talk-oc-n_3066     30
+talk-oc-n_500     3
+talk-oc-n_50     0
+temporalGraph-n_1000     40
+temporalGraph-n_100     0
+temporalGraph-n_1500     77
+temporalGraph-n_1868     106
+temporalGraph-n_200     5
+temporalGraph-n_500     17
+temporalGraph-n_50     3
+ucsocial-n_1000     258
+ucsocial-n_100     5
+ucsocial-n_1500     435
+ucsocial-n_1902     585
+ucsocial-n_200     23
+ucsocial-n_500     80
+ucsocial-n_50     3
+usairport-n_1000     253
+usairport-n_100     13
+usairport-n_1500     428
+usairport-n_1577     455
+usairport-n_200     29
+usairport-n_500     112
+usairport-n_50     5
+wikispeedia-n_1000     156
+wikispeedia-n_100     0
+wikispeedia-n_1500     271
+wikispeedia-n_2000     437
+wikispeedia-n_200     14
+wikispeedia-n_3000     time limit reached
+wikispeedia-n_4000     time limit reached
+wikispeedia-n_4181     time limit reached
+wikispeedia-n_500     56
+wikispeedia-n_50     0
+synth-n_1000-m_107005-k_50-p_0.2.txt     time limit reached
+synth-n_1000-m_110357-k_70-p_0.2.txt     time limit reached
+synth-n_1000-m_114433-k_100-p_0.2.txt     time limit reached
+synth-n_1000-m_116757-k_120-p_0.2.txt     time limit reached
+synth-n_1000-m_119520-k_150-p_0.2.txt     time limit reached
+synth-n_1000-m_124702-k_200-p_0.2.txt     time limit reached
+synth-n_1000-m_27142-k_50-p_0.05.txt     50
+synth-n_1000-m_28175-k_70-p_0.05.txt     70
+synth-n_1000-m_29037-k_100-p_0.05.txt     100
+synth-n_1000-m_30042-k_120-p_0.05.txt     120
+synth-n_1000-m_30795-k_150-p_0.05.txt     150
+synth-n_1000-m_32410-k_200-p_0.05.txt     time limit reached
+synth-n_1000-m_54531-k_50-p_0.1.txt     50
+synth-n_1000-m_55974-k_70-p_0.1.txt     70
+synth-n_1000-m_57929-k_100-p_0.1.txt     time limit reached
+synth-n_1000-m_59867-k_120-p_0.1.txt     time limit reached
+synth-n_1000-m_60934-k_150-p_0.1.txt     time limit reached
+synth-n_1000-m_64710-k_200-p_0.1.txt     time limit reached
+synth-n_100-m_1093-k_5-p_0.2.txt     5
+synth-n_100-m_1146-k_10-p_0.2.txt     10
+synth-n_100-m_1151-k_15-p_0.2.txt     15
+synth-n_100-m_1229-k_20-p_0.2.txt     20
+synth-n_100-m_1263-k_25-p_0.2.txt     25
+synth-n_100-m_1275-k_30-p_0.2.txt     30
+synth-n_100-m_263-k_5-p_0.05.txt     5
+synth-n_100-m_289-k_10-p_0.05.txt     4
+synth-n_100-m_302-k_15-p_0.05.txt     8
+synth-n_100-m_332-k_20-p_0.05.txt     14
+synth-n_100-m_336-k_30-p_0.05.txt     15
+synth-n_100-m_343-k_25-p_0.05.txt     14
+synth-n_100-m_515-k_5-p_0.1.txt     5
+synth-n_100-m_591-k_15-p_0.1.txt     15
+synth-n_100-m_611-k_10-p_0.1.txt     10
+synth-n_100-m_628-k_20-p_0.1.txt     20
+synth-n_100-m_691-k_25-p_0.1.txt     25
+synth-n_100-m_732-k_30-p_0.1.txt     30
+synth-n_1300-m_104213-k_200-p_0.1.txt     time limit reached
+synth-n_1300-m_178841-k_50-p_0.2.txt     time limit reached
+synth-n_1300-m_183367-k_70-p_0.2.txt     time limit reached
+synth-n_1300-m_188195-k_100-p_0.2.txt     time limit reached
+synth-n_1300-m_191963-k_120-p_0.2.txt     time limit reached
+synth-n_1300-m_196174-k_150-p_0.2.txt     time limit reached
+synth-n_1300-m_204142-k_200-p_0.2.txt     time limit reached
+synth-n_1300-m_45241-k_50-p_0.05.txt     50
+synth-n_1300-m_46137-k_70-p_0.05.txt     70
+synth-n_1300-m_47847-k_100-p_0.05.txt     time limit reached
+synth-n_1300-m_49172-k_120-p_0.05.txt     time limit reached
+synth-n_1300-m_50340-k_150-p_0.05.txt     time limit reached
+synth-n_1300-m_52952-k_200-p_0.05.txt     time limit reached
+synth-n_1300-m_89669-k_50-p_0.1.txt     time limit reached
+synth-n_1300-m_92255-k_70-p_0.1.txt     time limit reached
+synth-n_1300-m_95352-k_100-p_0.1.txt     time limit reached
+synth-n_1300-m_97421-k_120-p_0.1.txt     time limit reached
+synth-n_1300-m_99879-k_150-p_0.1.txt     time limit reached
+synth-n_150-m_1254-k_10-p_0.1.txt     10
+synth-n_150-m_1269-k_15-p_0.1.txt     15
+synth-n_150-m_1284-k_20-p_0.1.txt     20
+synth-n_150-m_1385-k_25-p_0.1.txt     25
+synth-n_150-m_1423-k_30-p_0.1.txt     30
+synth-n_150-m_1561-k_70-p_0.1.txt     time limit reached
+synth-n_150-m_1564-k_50-p_0.1.txt     time limit reached
+synth-n_150-m_2446-k_10-p_0.2.txt     10
+synth-n_150-m_2502-k_15-p_0.2.txt     15
+synth-n_150-m_2552-k_20-p_0.2.txt     20
+synth-n_150-m_2731-k_25-p_0.2.txt     25
+synth-n_150-m_2807-k_30-p_0.2.txt     30
+synth-n_150-m_3040-k_50-p_0.2.txt     50
+synth-n_150-m_3050-k_70-p_0.2.txt     time limit reached
+synth-n_150-m_630-k_15-p_0.05.txt     15
+synth-n_150-m_634-k_10-p_0.05.txt     7
+synth-n_150-m_666-k_20-p_0.05.txt     15
+synth-n_150-m_704-k_25-p_0.05.txt     23
+synth-n_150-m_781-k_50-p_0.05.txt     32
+synth-n_150-m_782-k_30-p_0.05.txt     28
+synth-n_150-m_805-k_70-p_0.05.txt     43
+synth-n_1600-m_137884-k_70-p_0.1.txt     time limit reached
+synth-n_1600-m_141523-k_100-p_0.1.txt     time limit reached
+synth-n_1600-m_143789-k_120-p_0.1.txt     time limit reached
+synth-n_1600-m_147721-k_150-p_0.1.txt     time limit reached
+synth-n_1600-m_152838-k_200-p_0.1.txt     time limit reached
+synth-n_1600-m_273042-k_70-p_0.2.txt     time limit reached
+synth-n_1600-m_279359-k_100-p_0.2.txt     time limit reached
+synth-n_1600-m_284773-k_120-p_0.2.txt     time limit reached
+synth-n_1600-m_290831-k_150-p_0.2.txt     time limit reached
+synth-n_1600-m_301143-k_200-p_0.2.txt     time limit reached
+synth-n_1600-m_68907-k_70-p_0.05.txt     70
+synth-n_1600-m_70865-k_100-p_0.05.txt     time limit reached
+synth-n_1600-m_72748-k_120-p_0.05.txt     time limit reached
+synth-n_1600-m_74607-k_150-p_0.05.txt     time limit reached
+synth-n_1600-m_77345-k_200-p_0.05.txt     time limit reached
+synth-n_2000-m_106592-k_70-p_0.05.txt     70
+synth-n_2000-m_108739-k_100-p_0.05.txt     time limit reached
+synth-n_2000-m_110886-k_120-p_0.05.txt     time limit reached
+synth-n_2000-m_112582-k_150-p_0.05.txt     time limit reached
+synth-n_2000-m_117145-k_200-p_0.05.txt     time limit reached
+synth-n_2000-m_212793-k_70-p_0.1.txt     time limit reached
+synth-n_2000-m_217131-k_100-p_0.1.txt     time limit reached
+synth-n_2000-m_220005-k_120-p_0.1.txt     time limit reached
+synth-n_2000-m_225391-k_150-p_0.1.txt     time limit reached
+synth-n_2000-m_233102-k_200-p_0.1.txt     time limit reached
+synth-n_2000-m_422023-k_70-p_0.2.txt     time limit reached
+synth-n_2000-m_430943-k_100-p_0.2.txt     time limit reached
+synth-n_2000-m_435643-k_120-p_0.2.txt     time limit reached
+synth-n_2000-m_444160-k_150-p_0.2.txt     time limit reached
+synth-n_2000-m_457573-k_200-p_0.2.txt     time limit reached
+synth-n_200-m_1076-k_10-p_0.05.txt     10
+synth-n_200-m_1167-k_15-p_0.05.txt     15
+synth-n_200-m_1175-k_20-p_0.05.txt     20
+synth-n_200-m_1245-k_25-p_0.05.txt     24
+synth-n_200-m_1266-k_30-p_0.05.txt     30
+synth-n_200-m_1336-k_50-p_0.05.txt     45
+synth-n_200-m_1434-k_70-p_0.05.txt     time limit reached
+synth-n_200-m_2169-k_15-p_0.1.txt     15
+synth-n_200-m_2199-k_10-p_0.1.txt     10
+synth-n_200-m_2293-k_20-p_0.1.txt     20
+synth-n_200-m_2369-k_25-p_0.1.txt     25
+synth-n_200-m_2491-k_30-p_0.1.txt     30
+synth-n_200-m_2592-k_50-p_0.1.txt     50
+synth-n_200-m_2772-k_70-p_0.1.txt     70
+synth-n_200-m_4301-k_10-p_0.2.txt     10
+synth-n_200-m_4485-k_20-p_0.2.txt     20
+synth-n_200-m_4497-k_15-p_0.2.txt     15
+synth-n_200-m_4763-k_25-p_0.2.txt     25
+synth-n_200-m_4854-k_30-p_0.2.txt     30
+synth-n_200-m_5144-k_50-p_0.2.txt     50
+synth-n_200-m_5366-k_70-p_0.2.txt     70
+synth-n_2300-m_142851-k_100-p_0.05.txt     time limit reached
+synth-n_2300-m_144829-k_120-p_0.05.txt     time limit reached
+synth-n_2300-m_147738-k_150-p_0.05.txt     time limit reached
+synth-n_2300-m_152429-k_200-p_0.05.txt     time limit reached
+synth-n_2300-m_284623-k_100-p_0.1.txt     time limit reached
+synth-n_2300-m_286796-k_120-p_0.1.txt     time limit reached
+synth-n_2300-m_292795-k_150-p_0.1.txt     time limit reached
+synth-n_2300-m_302503-k_200-p_0.1.txt     time limit reached
+synth-n_2300-m_563042-k_100-p_0.2.txt     time limit reached
+synth-n_2300-m_569928-k_120-p_0.2.txt     time limit reached
+synth-n_2300-m_580179-k_150-p_0.2.txt     time limit reached
+synth-n_2300-m_595551-k_200-p_0.2.txt     time limit reached
+synth-n_250-m_1653-k_10-p_0.05.txt     10
+synth-n_250-m_1708-k_15-p_0.05.txt     15
+synth-n_250-m_1797-k_25-p_0.05.txt     25
+synth-n_250-m_1806-k_20-p_0.05.txt     20
+synth-n_250-m_1841-k_30-p_0.05.txt     30
+synth-n_250-m_1998-k_50-p_0.05.txt     50
+synth-n_250-m_2173-k_70-p_0.05.txt     69
+synth-n_250-m_2260-k_100-p_0.05.txt     time limit reached
+synth-n_250-m_2350-k_120-p_0.05.txt     time limit reached
+synth-n_250-m_3237-k_10-p_0.1.txt     10
+synth-n_250-m_3416-k_15-p_0.1.txt     15
+synth-n_250-m_3493-k_25-p_0.1.txt     25
+synth-n_250-m_3591-k_20-p_0.1.txt     20
+synth-n_250-m_3730-k_30-p_0.1.txt     30
+synth-n_250-m_3992-k_50-p_0.1.txt     50
+synth-n_250-m_4149-k_70-p_0.1.txt     70
+synth-n_250-m_4386-k_100-p_0.1.txt     time limit reached
+synth-n_250-m_4530-k_120-p_0.1.txt     time limit reached
+synth-n_250-m_6567-k_10-p_0.2.txt     10
+synth-n_250-m_6839-k_20-p_0.2.txt     20
+synth-n_250-m_6880-k_15-p_0.2.txt     15
+synth-n_250-m_7102-k_25-p_0.2.txt     25
+synth-n_250-m_7321-k_30-p_0.2.txt     30
+synth-n_250-m_8019-k_50-p_0.2.txt     50
+synth-n_250-m_8255-k_70-p_0.2.txt     70
+synth-n_250-m_8674-k_100-p_0.2.txt     100
+synth-n_250-m_8784-k_120-p_0.2.txt     time limit reached
+synth-n_2600-m_181265-k_100-p_0.05.txt     time limit reached
+synth-n_2600-m_183371-k_120-p_0.05.txt     time limit reached
+synth-n_2600-m_186921-k_150-p_0.05.txt     time limit reached
+synth-n_2600-m_190932-k_200-p_0.05.txt     time limit reached
+synth-n_2600-m_360584-k_100-p_0.1.txt     time limit reached
+synth-n_2600-m_364394-k_120-p_0.1.txt     time limit reached
+synth-n_2600-m_370561-k_150-p_0.1.txt     time limit reached
+synth-n_2600-m_380919-k_200-p_0.1.txt     time limit reached
+synth-n_2600-m_716555-k_100-p_0.2.txt     time limit reached
+synth-n_2600-m_722675-k_120-p_0.2.txt     time limit reached
+synth-n_2600-m_735701-k_150-p_0.2.txt     time limit reached
+synth-n_2600-m_752513-k_200-p_0.2.txt     time limit reached
+synth-n_3000-m_240581-k_120-p_0.05.txt     time limit reached
+synth-n_3000-m_245845-k_150-p_0.05.txt     time limit reached
+synth-n_3000-m_251178-k_200-p_0.05.txt     time limit reached
+synth-n_3000-m_480800-k_120-p_0.1.txt     time limit reached
+synth-n_3000-m_488450-k_150-p_0.1.txt     time limit reached
+synth-n_3000-m_498304-k_200-p_0.1.txt     time limit reached
+synth-n_3000-m_954655-k_120-p_0.2.txt     time limit reached
+synth-n_3000-m_967399-k_150-p_0.2.txt     time limit reached
+synth-n_3000-m_988910-k_200-p_0.2.txt     time limit reached
+synth-n_300-m_10021-k_20-p_0.2.txt     20
+synth-n_300-m_10113-k_25-p_0.2.txt     25
+synth-n_300-m_10205-k_30-p_0.2.txt     30
+synth-n_300-m_10954-k_50-p_0.2.txt     50
+synth-n_300-m_11628-k_70-p_0.2.txt     70
+synth-n_300-m_12194-k_100-p_0.2.txt     100
+synth-n_300-m_12407-k_120-p_0.2.txt     120
+synth-n_300-m_2373-k_15-p_0.05.txt     15
+synth-n_300-m_2470-k_20-p_0.05.txt     20
+synth-n_300-m_2597-k_25-p_0.05.txt     25
+synth-n_300-m_2657-k_30-p_0.05.txt     30
+synth-n_300-m_2835-k_50-p_0.05.txt     50
+synth-n_300-m_2943-k_70-p_0.05.txt     70
+synth-n_300-m_3132-k_100-p_0.05.txt     time limit reached
+synth-n_300-m_3265-k_120-p_0.05.txt     time limit reached
+synth-n_300-m_4857-k_15-p_0.1.txt     15
+synth-n_300-m_4934-k_25-p_0.1.txt     25
+synth-n_300-m_4954-k_20-p_0.1.txt     20
+synth-n_300-m_5319-k_30-p_0.1.txt     30
+synth-n_300-m_5550-k_50-p_0.1.txt     50
+synth-n_300-m_5939-k_70-p_0.1.txt     70
+synth-n_300-m_6233-k_100-p_0.1.txt     100
+synth-n_300-m_6319-k_120-p_0.1.txt     120
+synth-n_300-m_9556-k_15-p_0.2.txt     15
+synth-n_3500-m_1289316-k_120-p_0.2.txt     time limit reached
+synth-n_3500-m_1304726-k_150-p_0.2.txt     time limit reached
+synth-n_3500-m_1330654-k_200-p_0.2.txt     time limit reached
+synth-n_3500-m_325120-k_120-p_0.05.txt     time limit reached
+synth-n_3500-m_330042-k_150-p_0.05.txt     time limit reached
+synth-n_3500-m_337087-k_200-p_0.05.txt     time limit reached
+synth-n_3500-m_649101-k_120-p_0.1.txt     time limit reached
+synth-n_3500-m_657209-k_150-p_0.1.txt     time limit reached
+synth-n_3500-m_672789-k_200-p_0.1.txt     time limit reached
+synth-n_4000-m_1691611-k_150-p_0.2.txt     time limit reached
+synth-n_4000-m_1721128-k_200-p_0.2.txt     time limit reached
+synth-n_4000-m_427463-k_150-p_0.05.txt     time limit reached
+synth-n_4000-m_437663-k_200-p_0.05.txt     time limit reached
+synth-n_4000-m_852262-k_150-p_0.1.txt     time limit reached
+synth-n_4000-m_868734-k_200-p_0.1.txt     time limit reached
+synth-n_400-m_10064-k_70-p_0.1.txt     70
+synth-n_400-m_10528-k_100-p_0.1.txt     100
+synth-n_400-m_10934-k_120-p_0.1.txt     120
+synth-n_400-m_11482-k_150-p_0.1.txt     150
+synth-n_400-m_16937-k_15-p_0.2.txt     15
+synth-n_400-m_17175-k_20-p_0.2.txt     20
+synth-n_400-m_17488-k_25-p_0.2.txt     25
+synth-n_400-m_17822-k_30-p_0.2.txt     30
+synth-n_400-m_18943-k_50-p_0.2.txt     50
+synth-n_400-m_19735-k_70-p_0.2.txt     70
+synth-n_400-m_20559-k_100-p_0.2.txt     100
+synth-n_400-m_21181-k_120-p_0.2.txt     120
+synth-n_400-m_21916-k_150-p_0.2.txt     time limit reached
+synth-n_400-m_4229-k_20-p_0.05.txt     20
+synth-n_400-m_4312-k_15-p_0.05.txt     15
+synth-n_400-m_4511-k_25-p_0.05.txt     25
+synth-n_400-m_4551-k_30-p_0.05.txt     30
+synth-n_400-m_4714-k_50-p_0.05.txt     50
+synth-n_400-m_5045-k_70-p_0.05.txt     70
+synth-n_400-m_5336-k_100-p_0.05.txt     100
+synth-n_400-m_5606-k_120-p_0.05.txt     120
+synth-n_400-m_5840-k_150-p_0.05.txt     time limit reached
+synth-n_400-m_8510-k_15-p_0.1.txt     15
+synth-n_400-m_8590-k_20-p_0.1.txt     20
+synth-n_400-m_8815-k_25-p_0.1.txt     25
+synth-n_400-m_9014-k_30-p_0.1.txt     30
+synth-n_400-m_9687-k_50-p_0.1.txt     50
+synth-n_500-m_13283-k_20-p_0.1.txt     20
+synth-n_500-m_13672-k_25-p_0.1.txt     25
+synth-n_500-m_13710-k_30-p_0.1.txt     30
+synth-n_500-m_14453-k_50-p_0.1.txt     50
+synth-n_500-m_15273-k_70-p_0.1.txt     70
+synth-n_500-m_15985-k_100-p_0.1.txt     100
+synth-n_500-m_16565-k_120-p_0.1.txt     120
+synth-n_500-m_17327-k_150-p_0.1.txt     150
+synth-n_500-m_17907-k_200-p_0.1.txt     time limit reached
+synth-n_500-m_26431-k_20-p_0.2.txt     20
+synth-n_500-m_26954-k_25-p_0.2.txt     25
+synth-n_500-m_27136-k_30-p_0.2.txt     30
+synth-n_500-m_28432-k_50-p_0.2.txt     50
+synth-n_500-m_29623-k_70-p_0.2.txt     70
+synth-n_500-m_31513-k_100-p_0.2.txt     100
+synth-n_500-m_32243-k_120-p_0.2.txt     120
+synth-n_500-m_33353-k_150-p_0.2.txt     150
+synth-n_500-m_34356-k_200-p_0.2.txt     time limit reached
+synth-n_500-m_6745-k_25-p_0.05.txt     25
+synth-n_500-m_6906-k_20-p_0.05.txt     20
+synth-n_500-m_6986-k_30-p_0.05.txt     30
+synth-n_500-m_7195-k_50-p_0.05.txt     50
+synth-n_500-m_7774-k_70-p_0.05.txt     70
+synth-n_500-m_8350-k_100-p_0.05.txt     100
+synth-n_500-m_8412-k_120-p_0.05.txt     120
+synth-n_500-m_8716-k_150-p_0.05.txt     150
+synth-n_500-m_9062-k_200-p_0.05.txt     time limit reached
+synth-n_50-m_139-k_5-p_0.1.txt     1
+synth-n_50-m_143-k_10-p_0.1.txt     5
+synth-n_50-m_164-k_15-p_0.1.txt     9
+synth-n_50-m_169-k_20-p_0.1.txt     9
+synth-n_50-m_269-k_5-p_0.2.txt     5
+synth-n_50-m_293-k_10-p_0.2.txt     10
+synth-n_50-m_325-k_15-p_0.2.txt     15
+synth-n_50-m_343-k_20-p_0.2.txt     19
+synth-n_50-m_72-k_5-p_0.05.txt     2
+synth-n_50-m_84-k_10-p_0.05.txt     1
+synth-n_50-m_92-k_20-p_0.05.txt     2
+synth-n_50-m_95-k_15-p_0.05.txt     4
+synth-n_700-m_13000-k_25-p_0.05.txt     25
+synth-n_700-m_13374-k_30-p_0.05.txt     30
+synth-n_700-m_13738-k_50-p_0.05.txt     50
+synth-n_700-m_14360-k_70-p_0.05.txt     70
+synth-n_700-m_14970-k_100-p_0.05.txt     100
+synth-n_700-m_15640-k_120-p_0.05.txt     120
+synth-n_700-m_16024-k_150-p_0.05.txt     150
+synth-n_700-m_16823-k_200-p_0.05.txt     time limit reached
+synth-n_700-m_26060-k_25-p_0.1.txt     25
+synth-n_700-m_26206-k_30-p_0.1.txt     30
+synth-n_700-m_27622-k_50-p_0.1.txt     50
+synth-n_700-m_28433-k_70-p_0.1.txt     70
+synth-n_700-m_29736-k_100-p_0.1.txt     100
+synth-n_700-m_30695-k_120-p_0.1.txt     120
+synth-n_700-m_31750-k_150-p_0.1.txt     150
+synth-n_700-m_33182-k_200-p_0.1.txt     time limit reached
+synth-n_700-m_51621-k_25-p_0.2.txt     25
+synth-n_700-m_52169-k_30-p_0.2.txt     30
+synth-n_700-m_54187-k_50-p_0.2.txt     50
+synth-n_700-m_55984-k_70-p_0.2.txt     70
+synth-n_700-m_58597-k_100-p_0.2.txt     time limit reached
+synth-n_700-m_60598-k_120-p_0.2.txt     time limit reached
+synth-n_700-m_61751-k_150-p_0.2.txt     time limit reached
+synth-n_700-m_64387-k_200-p_0.2.txt     time limit reached

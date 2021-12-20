@@ -26,7 +26,7 @@ public class PackingManager {
         initPacking();
     }
 
-    public PackingManager(PackingManager oldPm, List<Integer> deleteIds) {
+    public PackingManager(PackingManager oldPm, List<Integer> deleteIds, List<Integer> forbiddenIds) {
         this.initialNodes = oldPm.initialNodes;
         this.packingGraph = oldPm.packingGraph.copy();
 
@@ -54,7 +54,42 @@ public class PackingManager {
                 packingGraph.removeNode(deleteId);
             }
         }
+
+        for(Integer forbiddenId: forbiddenIds) {
+            if(!packingGraph.hasNode(forbiddenId)) {
+                Node forbiddenNode = initialNodes.get(forbiddenId);
+                forbiddenNode.forbidden = true;
+                packingGraph.addInitialNode(forbiddenNode);
+            } else {
+                Node forbiddenNode = packingGraph.getNode(forbiddenId);
+                forbiddenNode.forbidden = true;
+            }
+        }
         initPacking();
+    }
+
+    public void addDeletedNodes(List<Integer> deletedIds) {
+        // Re-add deleted ids
+        for(Integer deletedId: deletedIds) {
+            Node initialNode = initialNodes.get(deletedId).copy();
+            packingGraph.addInitialNode(initialNode);
+        }
+    }
+
+    public void removeForbiddenNodes(List<Integer> forbiddenIds) {
+        List<Cycle> remove = new ArrayList<>();
+        for(Cycle cycle: packing) {
+            for(Integer forbiddenId: forbiddenIds) {
+                if(cycle.containsId(forbiddenId)) remove.add(cycle);
+            }
+        }
+        for(Cycle cycle: remove) {
+            packing.remove(cycle);
+        }
+    }
+
+    public int size() {
+        return packing.stream().mapToInt(Component::getK).sum();
     }
 
     private void fillWithCostTPacking() {
@@ -78,29 +113,18 @@ public class PackingManager {
         //if(size() - startSize < S.size()) System.err.println("Didn't found the best packing");
     }
 
-    public void addDeletedNodes(List<Integer> deletedIds) {
-        // Re-add deleted ids
-        for(Integer deletedId: deletedIds) {
-            Node initialNode = initialNodes.get(deletedId).copy();
-            packingGraph.addInitialNode(initialNode);
-        }
-        initPacking();
-    }
-
-    public int size() {
-        return packing.stream().mapToInt(Component::getK).sum();
-    }
-
-    private void initPacking() {
+    public void initPacking() {
 
         Cycle pair;
         while((pair = packingGraph.getFirstPairCycle()) != null) {
 
             // Look for fully connected triangles, quads etc.
-            upgradeFullyConnected(pair);
+            PackingRules.upgradeFullyConnected(pair, packingGraph);
+            if(pair.size() == 2) PackingRules.upgradeK2Quad(pair, packingGraph);
+
 
             for (Node node : pair.getNodes()) {
-                packingGraph.removeNode(node.id);
+                if(!node.forbidden) packingGraph.removeNode(node.id);
             }
             packing.add(pair);
 
@@ -109,78 +133,13 @@ public class PackingManager {
         while(!DAG.isDAGFast(packingGraph)) {
             Cycle cycle = LightBFS.findShortestCycle(packingGraph);
 
-            if(cycle.size() == 3) upgradeK2Penta(cycle);
+            if(cycle.size() == 3) PackingRules.upgradeTriforce(cycle, packingGraph);
+            if(cycle.size() == 3) PackingRules.upgradeK2Penta(cycle, packingGraph);
 
             for (Node node : cycle.getNodes()) {
-                packingGraph.removeNode(node.id);
+                if(!node.forbidden) packingGraph.removeNode(node.id);
             }
             packing.add(cycle);
         }
-    }
-
-    private void upgradeFullyConnected(Cycle pair) {
-
-        Node a = pair.get(0);
-        boolean upgrade = true;
-        while(upgrade) {
-            upgrade = false;
-            for(Integer outId: a.getOutIds()) {
-                if(pair.isFullyConnected(outId)) {
-                    Node newNode = packingGraph.getNode(outId);
-                    pair.add(newNode);
-                    pair.setK(pair.getK() + 1);
-                    upgrade = true;
-                    break;
-                }
-            }
-        }
-    }
-
-    private void upgradeK2Penta(Cycle triangle) {
-        for(int i = 0; i < 3; i++) {
-            Node a = triangle.get(i);
-            Node b = triangle.get((i + 1) % 3);
-            Node c = triangle.get((i + 2) % 3);
-            // Due to the structure of Light BFS, the cycle goes c -> b -> a
-
-            for (Integer dId : a.getOutIds()) {
-                if (b.getInIds().contains(dId)) { // a -> d -> b exists
-                    if(c.getOutIds().contains(dId)) {
-                        Node d = packingGraph.getNode(dId);
-                        for(Integer eId: d.getOutIds()) {
-                            if(c.getInIds().contains(eId)) {
-                                Node e = packingGraph.getNode(eId);
-                                triangle.add(d);
-                                triangle.add(e);
-                                triangle.setK(2);
-                                return;
-                            }
-                        }
-                    }
-                    if(c.getInIds().contains(dId)) {
-                        Node d = packingGraph.getNode(dId);
-                        for(Integer eId: d.getInIds()) {
-                            if(c.getOutIds().contains(eId)) {
-                                Node e = packingGraph.getNode(eId);
-                                triangle.add(d);
-                                triangle.add(e);
-                                triangle.setK(2);
-                                return;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    /**
-     * Checks, if the graph has a cycle. Is more efficient than running a isDAG() on the not reduced graph!
-     * @return true, when the graph has a cycle.
-     */
-    private boolean hasCycle() {
-        Graph copy = packingGraph.copy();
-        List<Integer> S = Reduction.applyRules(copy, true);
-        return !S.isEmpty() || copy.getNodeCount() > 0;
     }
 }

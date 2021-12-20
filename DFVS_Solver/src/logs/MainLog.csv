@@ -1,4 +1,0 @@
-name,n,m,k_optimal,k_solved,k_start,verified,pre_removed_nodes,removed_flowers,recursive_steps,millis,packing_millis
-synth-n_150-m_1423-k_30-p_0.1.txt,150,1423,-1,30,0,false,8,0,386,434,115
-synth-n_1000-m_27142-k_50-p_0.05.txt,1000,27142,-1,50,0,false,13,0,44,303,200
-synth-n_1300-m_46137-k_70-p_0.05.txt,1300,46137,-1,70,0,false,10,0,65,2146,323

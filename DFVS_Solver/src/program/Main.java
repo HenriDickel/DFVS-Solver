@@ -38,13 +38,12 @@ public class Main {
             Log.Clear();
             Log.ignore = false;
 
-            List<GraphFile> files = InstanceCreator.getSelectedFilesDataset3();
+            //List<GraphFile> files = InstanceCreator.getErrorFilesDataset2();
+            //List<GraphFile> files = InstanceCreator.getSelectedFilesDataset3();
             //testLowerBoundPerformance(files);
-
-            //List<GraphFile> files = InstanceCreator.getComplexAndSyntheticFiles(null);
             //testLowerBoundQuality(files);
 
-            //List<GraphFile> files = InstanceCreator.getComplexAndSyntheticFiles("synth-n_2300-m_580179-k_150-p_0.2.txt");
+            List<GraphFile> files = InstanceCreator.getComplexAndSyntheticFiles(null);
             for(GraphFile file: files) {
                 Instance instance = InstanceCreator.createFromFile(file);
                 Solver.dfvsSolveInstance(instance);
@@ -88,7 +87,7 @@ public class Main {
             //CyclePacking packing = new CyclePacking(graph.copy());
             //int lowerBound = packing.size();
 
-            SlowPacking packing = new SlowPacking(graph.copy());
+            PackingManager packing = new PackingManager(graph.copy());
             int lowerBound = packing.size();
 
             if(remainingK > 0) {

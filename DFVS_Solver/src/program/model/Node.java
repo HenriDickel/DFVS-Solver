@@ -29,6 +29,9 @@ public class Node {
     // Reduction attribute
     public Boolean updated = false;
 
+    // Packing attribute
+    public Boolean forbidden = false;
+
     public Node(Integer id) {
         this.id = id;
     }
