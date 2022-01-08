@@ -7,7 +7,7 @@ public abstract class Timer {
 
     private static LocalDateTime startTime;
 
-    public static final long timeout = 3; // in minutes
+    public static final long timeout = 90; // in seconds
 
     public static void start() {
         startTime = LocalDateTime.now();
@@ -20,7 +20,7 @@ public abstract class Timer {
     }
 
     public static boolean isTimeout() {
-        return ChronoUnit.MINUTES.between(startTime, LocalDateTime.now()) >= timeout;
+        return ChronoUnit.SECONDS.between(startTime, LocalDateTime.now()) >= timeout;
     }
 
     public static long getMillis() {

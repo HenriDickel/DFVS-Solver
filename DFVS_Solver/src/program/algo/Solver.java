@@ -21,7 +21,7 @@ public abstract class Solver {
         instance.recursiveSteps++;
 
         // Check Timer
-        if (Timer.isTimeout()) throw new TimeoutException("The program stopped after " + Timer.timeout + " minutes.");
+        if (Timer.isTimeout()) throw new TimeoutException("The program stopped after " + Timer.timeout + " seconds.");
 
         // Break to skip the redundant dfvs_branch()-call when k = 0
         if (k <= 0) {
