@@ -64,10 +64,12 @@ public class ILPSolverOrdering{
                     instance.S.add(id);
                 }
             }
-            instance.solvedK = instance.S.size();
+            instance.solvedK = (int) model.get(GRB.DoubleAttr.ObjVal);
+            int status = model.get(GRB.IntAttr.Status);
+            boolean verified = status == GRB.Status.OPTIMAL;
             long millis = Timer.getMillis();
-            Log.mainLog(instance, millis, 0, true);
-            Log.debugLog(instance.NAME, "Found solution with k = " + instance.S.size() + " in " + Timer.format(millis), false);
+            Log.ilpLog(instance, millis, model.getConstrs().length, verified);
+            Log.debugLog(instance.NAME, "Found solution with k = " + instance.S.size() + " in " + Timer.format(millis), !verified);
 
             model.dispose();
             env.dispose();
@@ -77,7 +79,7 @@ public class ILPSolverOrdering{
 
             // Log
             long millis = Timer.getMillis();
-            Log.mainLog(instance, millis, 0, false);
+            Log.ilpLog(instance, millis, 0, false);
             Log.debugLog(instance.NAME, "Found no solution in " + Timer.format(millis), true);
 
         }

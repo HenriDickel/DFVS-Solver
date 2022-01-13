@@ -13,6 +13,7 @@ public abstract class Log {
 
     private static final String DEBUG_LOG_PATH = "src/logs/DebugLog.txt";
     private static final String MAIN_LOG_PATH = "src/logs/MainLog.csv";
+    private static final String ILP_LOG_PATH = "src/logs/ILPLog.csv";
     private static final String DETAIL_LOG_PATH = "src/logs/DetailLog.csv";
 
     public static boolean ignore;
@@ -50,9 +51,11 @@ public abstract class Log {
         try {
             new File(DEBUG_LOG_PATH).createNewFile();
             new File(MAIN_LOG_PATH).createNewFile();
+            new File(ILP_LOG_PATH).createNewFile();
             new File(DETAIL_LOG_PATH).createNewFile();
             new PrintWriter(DEBUG_LOG_PATH).close();
             new PrintWriter(MAIN_LOG_PATH).close();
+            new PrintWriter(ILP_LOG_PATH).close();
             new PrintWriter(DETAIL_LOG_PATH).close();
         } catch (IOException e) {
             e.printStackTrace();
@@ -60,6 +63,11 @@ public abstract class Log {
         try(PrintWriter output = new PrintWriter(new FileWriter(MAIN_LOG_PATH,true)))
         {
             output.println("name,n,m,k_optimal,k_solved,k_start,verified,pre_removed_nodes,removed_flowers,recursive_steps,millis,packing_millis");
+        }
+        catch (Exception ignored) {}
+        try(PrintWriter output = new PrintWriter(new FileWriter(ILP_LOG_PATH,true)))
+        {
+            output.println("name,n,m,num_constraints,pre_removed_nodes,k_start,k_optimal,k_solved,verified,millis");
         }
         catch (Exception ignored) {}
         try(PrintWriter output = new PrintWriter(new FileWriter(DETAIL_LOG_PATH,true)))
@@ -77,6 +85,18 @@ public abstract class Log {
         try(PrintWriter output = new PrintWriter(new FileWriter(MAIN_LOG_PATH,true)))
         {
             output.println(instance.NAME + "," + instance.N + "," + instance.M + "," + instance.OPTIMAL_K + "," + instance.solvedK + "," + instance.startK + "," + verified + "," + instance.preRemovedNodes + "," + instance.removedFlowers + "," + instance.recursiveSteps + "," + millis + "," + packingMillis);
+        }
+        catch (Exception ignored) {}
+    }
+
+    public static void ilpLog(Instance instance, long millis, int numConstraints, boolean verified) {
+
+        //Ignore Log
+        if(ignore) return;
+
+        try(PrintWriter output = new PrintWriter(new FileWriter(ILP_LOG_PATH,true)))
+        {
+            output.println(instance.NAME + "," + instance.N + "," + instance.M + "," + numConstraints + "," + instance.preRemovedNodes + "," + instance.startK + "," + instance.OPTIMAL_K + "," + instance.solvedK + "," + verified + "," + millis);
         }
         catch (Exception ignored) {}
     }
