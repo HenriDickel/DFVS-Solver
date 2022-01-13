@@ -1,5 +1,8 @@
 package program.algo;
 
+import gurobi.GRB;
+import gurobi.GRBException;
+import gurobi.GRBVar;
 import program.log.CycleCounter;
 import program.model.*;
 import program.utils.PerformanceTimer;
@@ -132,6 +135,33 @@ public abstract class Solver {
             k++;
         }
         return S;
+    }
+
+    public static void dfvsSolveInstanceILP(Instance instance) {
+
+        //Set instance & branch count
+        Solver.instance = instance;
+
+        // Start Timer
+        Timer.start();
+
+        Log.debugLog(instance.NAME, "---------- " + instance.NAME + " (n = " + instance.N + ", m = " + instance.M + ", k = " + instance.OPTIMAL_K + ") ----------");
+
+        Graph initialGraph = instance.subGraphs.get(0);
+
+        List<Integer> S = ILPSolverOrdering.solveGraph(initialGraph);
+        instance.S.addAll(S);
+
+        // Stop Timer
+        Long millis = Timer.stop();
+
+        // Log
+        instance.solvedK = instance.S.size();
+        //int status = model.get(GRB.IntAttr.Status);
+        //boolean verified = status == GRB.Status.OPTIMAL;
+        boolean verified = millis < Timer.timeout * 1000;
+        Log.ilpLog(instance, millis, 0, verified);
+        Log.debugLog(instance.NAME, "Found solution with k = " + instance.S.size() + " in " + Timer.format(millis), !verified);
     }
 
     public static void dfvsSolveInstance(Instance instance) {

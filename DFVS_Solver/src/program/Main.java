@@ -44,11 +44,11 @@ public class Main {
             //testLowerBoundPerformance(files);
             //testLowerBoundQuality(files);
 
-            List<GraphFile> files = InstanceCreator.getComplexAndSyntheticFiles(null);
+            List<GraphFile> files = InstanceCreator.getComplexAndSyntheticFiles("chess-n_2000");
             for(GraphFile file: files) {
                 Instance instance = InstanceCreator.createFromFile(file);
                 //ILPSolverOrdering.solveInstance(instance);
-                Solver.dfvsSolveInstance(instance);
+                Solver.dfvsSolveInstanceILP(instance);
             }
         }
     }

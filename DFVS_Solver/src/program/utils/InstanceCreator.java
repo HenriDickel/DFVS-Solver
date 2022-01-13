@@ -14,7 +14,7 @@ import java.util.stream.Stream;
 
 public abstract class InstanceCreator {
 
-    private static final String DATASET = "dataset_2";
+    private static final String DATASET = "dataset_3";
     private static final String COMPLEX_PATH = "src/inputs/" + DATASET + "/complex/";
     private static final String SYNTHETIC_PATH = "src/inputs/" + DATASET + "/synthetic/";
 
