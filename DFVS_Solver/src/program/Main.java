@@ -1,5 +1,6 @@
 package program;
 
+import gurobi.GRBException;
 import program.algo.*;
 import program.log.Log;
 import program.model.*;
@@ -9,7 +10,7 @@ import java.util.List;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws GRBException {
 
         if(args.length > 0){
 
@@ -46,7 +47,8 @@ public class Main {
             List<GraphFile> files = InstanceCreator.getComplexAndSyntheticFiles(null);
             for(GraphFile file: files) {
                 Instance instance = InstanceCreator.createFromFile(file);
-                Solver.dfvsSolveInstance(instance);
+                ILPSolverOrdering.solveInstance(instance);
+                //Solver.dfvsSolveInstance(instance);
             }
         }
     }
