@@ -47,8 +47,8 @@ public class Main {
             List<GraphFile> files = InstanceCreator.getComplexAndSyntheticFiles(null);
             for(GraphFile file: files) {
                 Instance instance = InstanceCreator.createFromFile(file);
-                ILPSolverOrdering.solveInstance(instance);
-                //Solver.dfvsSolveInstance(instance);
+                //ILPSolverOrdering.solveInstance(instance);
+                Solver.dfvsSolveInstance(instance);
             }
         }
     }

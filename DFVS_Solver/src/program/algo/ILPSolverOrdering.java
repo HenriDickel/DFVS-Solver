@@ -1,6 +1,7 @@
 package program.algo;
 import gurobi.*;
 import program.log.Log;
+import program.model.Graph;
 import program.model.Instance;
 import program.model.Node;
 import program.utils.Timer;
@@ -10,7 +11,7 @@ import java.util.List;
 
 public class ILPSolverOrdering{
 
-    public static void solveInstance(Instance instance) throws GRBException {
+    public static List<Integer> solveGraph(Graph graph){
 
         Timer.start();
 
@@ -29,7 +30,7 @@ public class ILPSolverOrdering{
             model.set(GRB.DoubleParam.Heuristics, 0.0);
 
             //Get all Nodes
-            List<Node> g = instance.subGraphs.get(0).getNodes();
+            List<Node> g = graph.getNodes();
             GRBLinExpr expr = new GRBLinExpr();
             //Add variables x and u for every Node in graph g
             for (Node node: g){
@@ -56,6 +57,7 @@ public class ILPSolverOrdering{
             model.update();
             model.optimize();
 
+            /*
             // Log
             for(GRBVar var: model.getVars()) {
                 double x = var.get(GRB.DoubleAttr.X);
@@ -69,17 +71,33 @@ public class ILPSolverOrdering{
             long millis = Timer.getMillis();
             Log.mainLog(instance, millis, 0, true);
             Log.debugLog(instance.NAME, "Found solution with k = " + instance.S.size() + " in " + Timer.format(millis), false);
+            */
+
+            List<Integer> result = new ArrayList<>();
+
+            for(GRBVar var: model.getVars()) {
+                double x = var.get(GRB.DoubleAttr.X);
+                String varName = var.get(GRB.StringAttr.VarName);
+                if(x > 0.9 && varName.startsWith("x")) {
+                    int id = Integer.parseInt(varName.substring(1));
+                    result.add(id);
+                }
+            }
 
             model.dispose();
             env.dispose();
 
-        } catch (GRBException e) {
-            System.out.println("Error code: " + e.getErrorCode() + ". " + e.getMessage());
+            return result;
 
-            // Log
+        } catch (GRBException e) {
+            System.err.println("Error code: " + e.getErrorCode() + ". " + e.getMessage());
+            return new ArrayList<>();
+            /* Log
             long millis = Timer.getMillis();
             Log.mainLog(instance, millis, 0, false);
             Log.debugLog(instance.NAME, "Found no solution in " + Timer.format(millis), true);
+            */
+
 
         }
     }
