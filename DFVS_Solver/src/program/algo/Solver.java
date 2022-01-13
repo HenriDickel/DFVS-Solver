@@ -170,7 +170,14 @@ public abstract class Solver {
         // Run for all sub graphs
         try {
             for (Graph subGraph : instance.subGraphs) {
-                List<Integer> S = dfvsSolve(subGraph);
+
+                //Check if there is no cycle
+                if(DAG.isDAG(subGraph)) continue;
+
+                //TODO
+                //List<Integer> S = dfvsSolve(subGraph);
+                List<Integer> S = ILPSolverOrdering.solveGraph(subGraph);
+                //List<Integer> S = ILPSolverLazyCycles.solveGraph(subGraph);
                 instance.S.addAll(S);
             }
         } catch (TimeoutException timeoutException) {
