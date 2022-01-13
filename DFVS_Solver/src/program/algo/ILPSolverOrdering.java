@@ -11,6 +11,7 @@ public class ILPSolverOrdering{
             // Create empty environment, set options, and start
             GRBEnv env = new GRBEnv(true);
             env.set("logFile", "DFVS.log");
+            env.set(GRB.IntParam.OutputFlag,0);
             env.start();
 
             // Create empty model

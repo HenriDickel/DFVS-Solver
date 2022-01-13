@@ -8,13 +8,13 @@ import program.model.Node;
 import java.util.LinkedList;
 import java.util.List;
 
-public class ILPSolverLazyCycles  extends GRBCallback{
+public class ILPSolverOrderedCovering  extends GRBCallback{
 
     private GRBVar[]  vars;
     private GRBModel model;
     private Instance instance;
 
-    public ILPSolverLazyCycles(GRBVar[] xvars, Instance xinstance, GRBModel xmodel) {
+    public ILPSolverOrderedCovering(GRBVar[] xvars, Instance xinstance, GRBModel xmodel) {
         vars = xvars;
         instance =xinstance;
         model = xmodel;
@@ -30,7 +30,7 @@ public class ILPSolverLazyCycles  extends GRBCallback{
                 List<Integer> solutionNodes = new LinkedList<>();
                 //Find what nodes should be deleted
                 for(int i =0; i< solutionValues.length; i++){
-                    if(solutionValues[i]>0.9){
+                    if(solutionValues[i]>0.9 && i<instance.subGraphs.get(0).getNodes().size()){
                         solutionNodes.add(Integer.parseInt(vars[i].get(GRB.StringAttr.VarName).substring(1)));
                     }
                 }
@@ -69,9 +69,11 @@ public class ILPSolverLazyCycles  extends GRBCallback{
     public static void solveInstance(Instance instance) throws GRBException {
         try {
             // Create empty environment, set options, and start
+            System.out.println(instance.NAME);
+            System.out.println(instance.OPTIMAL_K);
             GRBEnv env = new GRBEnv(true);
-            env.set("logFile", "DFVS.log");
             env.set(GRB.IntParam.OutputFlag,0);
+            env.set("logFile", "DFVS.log");
             env.start();
 
             //Get all nodes
@@ -81,7 +83,7 @@ public class ILPSolverLazyCycles  extends GRBCallback{
             // Create empty model
             GRBModel model = new GRBModel(env);
             //Set time limit and limit system output
-            model.set(GRB.IntParam.OutputFlag, 0);
+
             model.set(GRB.DoubleParam.TimeLimit, 180);
             model.set(GRB.IntParam.LazyConstraints, 1);
 
@@ -91,10 +93,22 @@ public class ILPSolverLazyCycles  extends GRBCallback{
                 GRBVar x = model.addVar(0.0, 1.0, 0.0, GRB.BINARY, "x" +node.id);
                 expr.addTerm(1.0, x);
             }
+            for(Node node: g){
+                GRBVar u = model.addVar(0.0, g.size(), 0.0, GRB.INTEGER, "u" +node.id);
+            }
             model.update();
             //Set objective to minimize the sum of all Xs
             model.setObjective(expr, GRB.MINIMIZE);
 
+            for(int i =0; i < g.size(); i++){
+                for(int j =0; j <g.get(i).getOutIds().size(); j++){
+                    expr = new GRBLinExpr();
+                    expr.addTerm(1.0, model.getVarByName("u" + g.get(i).getOutIds().get(j)));
+                    expr.addTerm(-1.0, model.getVarByName("u" + g.get(i).id));
+                    expr.addTerm(g.size(), model.getVarByName("x" + g.get(i).id));
+                    model.addConstr(expr,GRB.GREATER_EQUAL, 1.0, "c-" + g.get(i).getOutIds().get(j) + "--" + g.get(i).id);
+                }
+            }
             //Find first cycle and add its constraint, the sum of all Xs of a cycle needs to be >=1 (at least one node needs to be deleted from the cycle)
             Cycle shortCycle = FullBFS.findShortestCycle(graph);
             expr = new GRBLinExpr();
@@ -107,7 +121,7 @@ public class ILPSolverLazyCycles  extends GRBCallback{
 
             //Callback setup
             GRBVar[] vars = model.getVars();
-            ILPSolverLazyCycles cb   = new ILPSolverLazyCycles(vars, instance, model);
+            ILPSolverOrderedCovering cb   = new ILPSolverOrderedCovering(vars, instance, model);
             model.setCallback(cb);
 
             // Solve model and capture solution information
