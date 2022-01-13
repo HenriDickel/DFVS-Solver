@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <excludeFromCompile>
+      <directory url="file://$PROJECT_DIR$/src/inputs" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/src/logs" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/src/python" includeSubdirectories="true" />
+    </excludeFromCompile>
+  </component>
+</project>
