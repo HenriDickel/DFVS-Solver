@@ -1,12 +1,19 @@
 package program.algo;
 import gurobi.*;
+import program.log.Log;
 import program.model.Instance;
 import program.model.Node;
+import program.utils.Timer;
+
+import java.util.ArrayList;
 import java.util.List;
 
 public class ILPSolverOrdering{
 
     public static void solveInstance(Instance instance) throws GRBException {
+
+        Timer.start();
+
         try {
             // Create empty environment, set options, and start
             GRBEnv env = new GRBEnv(true);
@@ -17,7 +24,7 @@ public class ILPSolverOrdering{
             // Create empty model
             GRBModel model = new GRBModel(env);
             //Set time limit and limit command line output (comment out to lines of code enable it)
-            model.set(GRB.DoubleParam.TimeLimit, 180);
+            model.set(GRB.DoubleParam.TimeLimit, Timer.timeout);
             model.set(GRB.IntParam.OutputFlag, 0);
             model.set(GRB.DoubleParam.Heuristics, 0.0);
 
@@ -48,12 +55,32 @@ public class ILPSolverOrdering{
             }
             model.update();
             model.optimize();
+
+            // Log
+            for(GRBVar var: model.getVars()) {
+                double x = var.get(GRB.DoubleAttr.X);
+                String varName = var.get(GRB.StringAttr.VarName);
+                if(x > 0.9 && varName.startsWith("x")) {
+                    int id = Integer.parseInt(varName.substring(1));
+                    instance.S.add(id);
+                }
+            }
+            instance.solvedK = instance.S.size();
+            long millis = Timer.getMillis();
+            Log.mainLog(instance, millis, 0, true);
+            Log.debugLog(instance.NAME, "Found solution with k = " + instance.S.size() + " in " + Timer.format(millis), false);
+
             model.dispose();
             env.dispose();
 
         } catch (GRBException e) {
-            System.out.println("Error code: " + e.getErrorCode() + ". " +
-                    e.getMessage());
+            System.out.println("Error code: " + e.getErrorCode() + ". " + e.getMessage());
+
+            // Log
+            long millis = Timer.getMillis();
+            Log.mainLog(instance, millis, 0, false);
+            Log.debugLog(instance.NAME, "Found no solution in " + Timer.format(millis), true);
+
         }
     }
 }
