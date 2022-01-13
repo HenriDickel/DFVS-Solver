@@ -1,12 +1,18 @@
 package program.algo;
 import gurobi.*;
+import program.log.Log;
 import program.model.Instance;
 import program.model.Node;
+import program.utils.Timer;
+
 import java.util.List;
 
 public class ILPSolverOrdering{
 
     public static void solveInstance(Instance instance) throws GRBException {
+
+        Timer.start();
+
         try {
             // Create empty environment, set options, and start
             GRBEnv env = new GRBEnv(true);
@@ -47,12 +53,24 @@ public class ILPSolverOrdering{
             }
             model.update();
             model.optimize();
+
+            // Log
+            int k = (int) model.get(GRB.DoubleAttr.ObjVal);
+            long millis = Timer.getMillis();
+            Log.mainLog(instance, millis, 0, true);
+            Log.debugLog(instance.NAME, "Found solution with k = " + k + " in " + Timer.format(millis), false);
+
             model.dispose();
             env.dispose();
 
         } catch (GRBException e) {
-            System.out.println("Error code: " + e.getErrorCode() + ". " +
-                    e.getMessage());
+            System.out.println("Error code: " + e.getErrorCode() + ". " + e.getMessage());
+
+            // Log
+            long millis = Timer.getMillis();
+            Log.mainLog(instance, millis, 0, false);
+            Log.debugLog(instance.NAME, "Found no solution in " + Timer.format(millis), true);
+
         }
     }
 }
