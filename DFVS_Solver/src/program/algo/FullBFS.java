@@ -4,6 +4,7 @@ import program.model.Cycle;
 import program.model.Graph;
 import program.model.Node;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
@@ -67,5 +68,17 @@ public abstract class FullBFS {
         shortestCycle.getNodes().sort(Comparator.comparing(Node::getCycleCount));
         Collections.reverse(shortestCycle.getNodes());
         return shortestCycle;
+    }
+
+    public static List<Cycle> getAllShortestCycles(Graph graph) {
+
+        List<Cycle> cycles = new ArrayList<>();
+
+        // Find the best cycle for each node
+        for (Node node : graph.getNodes()) {
+            Cycle cycle = SimpleBFS.findBestCycle(graph, node, Integer.MAX_VALUE);
+            cycles.add(cycle);
+        }
+        return cycles;
     }
 }
