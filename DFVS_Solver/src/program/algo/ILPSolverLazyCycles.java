@@ -52,7 +52,7 @@ public class ILPSolverLazyCycles  extends GRBCallback{
                         GRBVar x = model.getVarByName("x" + node.id);
                         expr.addTerm(1.0, x);
                     }
-                    addLazy(expr, GRB.GREATER_EQUAL, 1.0);
+                    addLazy(expr, GRB.EQUAL, 1.0);
                 }
             }
         } catch (GRBException e) {

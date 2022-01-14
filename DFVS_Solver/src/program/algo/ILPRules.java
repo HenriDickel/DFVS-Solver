@@ -34,4 +34,30 @@ public abstract class ILPRules {
         model.update();
     }
 
+    public static void addInitialCircleConstraints(GRBModel model, Graph graph) throws GRBException {
+        List<Cycle> cycles = FullBFS.getAllShortestCycles(graph);
+        int index = 0;
+        for(Cycle cycle: cycles) {
+            GRBLinExpr expr = new GRBLinExpr();
+            for(Node node: cycle.getNodes()){
+                GRBVar x = model.getVarByName("x" + node.id);
+                expr.addTerm(1.0, x);
+            }
+            model.addConstr(expr,GRB.GREATER_EQUAL, 1.0, "cycle-" + index++);
+        }
+        model.update();
+    }
+
+    public static void addMaxKConstraints(GRBModel model, Graph graph, float max_k) throws GRBException {
+
+        GRBLinExpr expr = new GRBLinExpr();
+        for(Node node: graph.getNodes()) {
+            GRBVar x = model.getVarByName("x" + node.id);
+            expr.addTerm(1.0, x);
+        }
+        model.addConstr(expr,GRB.LESS_EQUAL, max_k, "max_k");
+
+        model.update();
+    }
+
 }

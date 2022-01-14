@@ -7,11 +7,46 @@ import program.model.Node;
 import program.utils.Timer;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
-public class ILPSolverOrdering{
+public class ILPSolverOrdering extends GRBCallback{
 
-    public static List<Integer> solveGraph(Graph graph, boolean useFullyUpgradedConstraints){
+    private GRBVar[]  vars;
+    private GRBModel model;
+    private Graph graph;
+
+    public ILPSolverOrdering(GRBVar[] xvars, Graph xgraph, GRBModel xmodel) {
+        vars = xvars;
+        graph = xgraph;
+        model = xmodel;
+
+    }
+
+    @Override
+    protected void callback() {
+        try {
+            if (where == GRB.CB_MIPSOL) {
+                // MIP solution callback
+                //Get the values of the current solution
+                double[] solutionValues = getSolution(vars);
+                List<Integer> solutionNodes = new LinkedList<>();
+                //Find what nodes should be deleted
+                for (int i = 0; i < solutionValues.length; i++) {
+                    if (solutionValues[i] > 0.9) {
+                        solutionNodes.add(Integer.parseInt(vars[i].get(GRB.StringAttr.VarName).substring(1)));
+                    }
+                }
+
+                System.out.println("MIP Solution: k = " + solutionNodes.size());
+            }
+        }
+        catch (Exception e){
+
+        }
+    }
+
+    public static List<Integer> solveGraph(Graph graph, boolean useFullyUpgradedConstraints, boolean useInitalCirclesConstraints, boolean useMaxKConstraint, boolean useCallback){
 
         Timer.start();
 
@@ -56,8 +91,17 @@ public class ILPSolverOrdering{
             }
             model.update();
 
-            //
+            //Additional Rules
             if(useFullyUpgradedConstraints) ILPRules.addFullyUpgradedConstraints(model, graph);
+            if(useInitalCirclesConstraints) ILPRules.addInitialCircleConstraints(model, graph);
+            if(useMaxKConstraint) ILPRules.addMaxKConstraints(model, graph, 2500f);
+
+            //Callback setup
+            if(useCallback){
+                GRBVar[] vars = model.getVars();
+                ILPSolverOrdering cb = new ILPSolverOrdering(vars, graph, model);
+                model.setCallback(cb);
+            }
 
             //Start
             model.optimize();
