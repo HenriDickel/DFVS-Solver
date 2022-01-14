@@ -59,19 +59,7 @@ public class ILPSolverOrdering{
             }
 
             if(useFullyUpgraded){
-                Cycle pair;
-                while((pair = graph.getFirstPairCycle()) != null) {
-                // Look for fully connected triangles, quads etc.
-                    upgradeFullyConnected(pair,graph);
-                    expr = new GRBLinExpr();
-                    String cName = "";
-                    for (Node node : pair.getNodes()) {
-                        expr.addTerm(1.0, model.getVarByName("x" + node.id));
-                        cName += node.id;
-                        graph.removeNode(node.id);
-                    }
-                    model.addConstr(expr,GRB.GREATER_EQUAL, pair.size()-1, cName);
-                }
+                addFullyUpgradedConstraints(model,graph);
             }
 
             model.update();
@@ -119,6 +107,23 @@ public class ILPSolverOrdering{
             */
 
 
+        }
+    }
+
+    public static void addFullyUpgradedConstraints(GRBModel model, Graph graph) throws GRBException {
+        Cycle pair;
+        GRBLinExpr expr;
+        while((pair = graph.getFirstPairCycle()) != null) {
+            // Look for fully connected triangles, quads etc.
+            upgradeFullyConnected(pair,graph);
+            expr = new GRBLinExpr();
+            String cName = "";
+            for (Node node : pair.getNodes()) {
+                expr.addTerm(1.0, model.getVarByName("x" + node.id));
+                cName += node.id;
+                graph.removeNode(node.id);
+            }
+            model.addConstr(expr,GRB.GREATER_EQUAL, pair.size()-1, cName);
         }
     }
 }

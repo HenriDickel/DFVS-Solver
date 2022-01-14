@@ -8,11 +8,14 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
+import static program.algo.ILPSolverOrdering.addFullyUpgradedConstraints;
+
 public class ILPSolverLazyCycles  extends GRBCallback{
 
     private GRBVar[]  vars;
     private GRBModel model;
     private Graph graph;
+    private static boolean useFullyUpgraded =false;
 
     public ILPSolverLazyCycles(GRBVar[] xvars, Graph xgraph, GRBModel xmodel) {
         vars = xvars;
@@ -102,6 +105,10 @@ public class ILPSolverLazyCycles  extends GRBCallback{
                 expr.addTerm(1.0, x);
             }
             model.addConstr(expr,GRB.GREATER_EQUAL, 1.0, "c-0");
+
+            if(useFullyUpgraded){
+                addFullyUpgradedConstraints(model,graph.copy());
+            }
             model.update();
 
             //Callback setup

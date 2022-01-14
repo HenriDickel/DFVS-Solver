@@ -1,2 +1,5 @@
 name,n,m,pre_removed_nodes,k_start,k_optimal,k_solved,verified,millis
-chess-n_2000,1531,4343,0,0,204,204,true,114448
+advotogo-n_100,26,31,0,0,2,2,true,79
+advotogo-n_1000,624,1883,0,0,127,127,true,2774
+advotogo-n_1500,1110,4342,0,0,215,215,true,46375
+advotogo-n_200,63,68,0,0,9,9,true,4
