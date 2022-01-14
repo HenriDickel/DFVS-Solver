@@ -1,3 +1,2 @@
 name,n,m,pre_removed_nodes,k_start,k_optimal,k_solved,verified,millis
-chess-n_2000,1531,4343,0,0,204,205,false,90181
-chess-n_3000,2586,11156,0,0,-1,468,false,90161
+chess-n_2000,1531,4343,0,0,204,204,true,114448

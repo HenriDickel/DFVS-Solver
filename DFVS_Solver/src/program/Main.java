@@ -48,7 +48,7 @@ public class Main {
             for(GraphFile file: files) {
                 Instance instance = InstanceCreator.createFromFile(file);
                 //ILPSolverOrdering.solveInstance(instance);
-                Solver.dfvsSolveInstance(instance);
+                Solver.dfvsSolveInstanceILP(instance);
             }
         }
     }
