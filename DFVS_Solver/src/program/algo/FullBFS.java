@@ -77,7 +77,7 @@ public abstract class FullBFS {
         // Find the best cycle for each node
         for (Node node : graph.getNodes()) {
             Cycle cycle = SimpleBFS.findBestCycle(graph, node, Integer.MAX_VALUE);
-            cycles.add(cycle);
+            if(cycle != null) cycles.add(cycle);
         }
         return cycles;
     }
