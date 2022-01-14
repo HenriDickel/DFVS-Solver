@@ -1,20 +1,17 @@
 package program.algo;
-
 import gurobi.*;
-import program.model.Cycle;
+import program.log.Log;
 import program.model.Graph;
+import program.model.Instance;
 import program.model.Node;
 import program.utils.Timer;
+
 import java.util.ArrayList;
 import java.util.List;
 
-import static program.algo.PackingRules.upgradeFullyConnected;
-
 public class ILPSolverOrdering{
 
-    private static boolean useFullyUpgraded =false;
-
-    public static List<Integer> solveGraph(Graph graph){
+    public static List<Integer> solveGraph(Graph graph, boolean useFullyUpgradedConstraints){
 
         Timer.start();
 
@@ -57,29 +54,13 @@ public class ILPSolverOrdering{
                     model.addConstr(expr,GRB.GREATER_EQUAL, 1.0, "c-" + g.get(i).getOutIds().get(j) + "--" + g.get(i).id);
                 }
             }
-
-            if(useFullyUpgraded){
-                addFullyUpgradedConstraints(model,graph);
-            }
-
             model.update();
-            model.optimize();
 
-            /*
-            // Log
-            for(GRBVar var: model.getVars()) {
-                double x = var.get(GRB.DoubleAttr.X);
-                String varName = var.get(GRB.StringAttr.VarName);
-                if(x > 0.9 && varName.startsWith("x")) {
-                    int id = Integer.parseInt(varName.substring(1));
-                    instance.S.add(id);
-                }
-            }
-            instance.solvedK = instance.S.size();
-            long millis = Timer.getMillis();
-            Log.mainLog(instance, millis, 0, true);
-            Log.debugLog(instance.NAME, "Found solution with k = " + instance.S.size() + " in " + Timer.format(millis), false);
-            */
+            //
+            if(useFullyUpgradedConstraints) ILPRules.addFullyUpgradedConstraints(model, graph);
+
+            //Start
+            model.optimize();
 
             List<Integer> result = new ArrayList<>();
 
@@ -100,30 +81,7 @@ public class ILPSolverOrdering{
         } catch (GRBException e) {
             System.err.println("Error code: " + e.getErrorCode() + ". " + e.getMessage());
             return new ArrayList<>();
-            /* Log
-            long millis = Timer.getMillis();
-            Log.mainLog(instance, millis, 0, false);
-            Log.debugLog(instance.NAME, "Found no solution in " + Timer.format(millis), true);
-            */
 
-
-        }
-    }
-
-    public static void addFullyUpgradedConstraints(GRBModel model, Graph graph) throws GRBException {
-        Cycle pair;
-        GRBLinExpr expr;
-        while((pair = graph.getFirstPairCycle()) != null) {
-            // Look for fully connected triangles, quads etc.
-            upgradeFullyConnected(pair,graph);
-            expr = new GRBLinExpr();
-            String cName = "";
-            for (Node node : pair.getNodes()) {
-                expr.addTerm(1.0, model.getVarByName("x" + node.id));
-                cName += node.id;
-                graph.removeNode(node.id);
-            }
-            model.addConstr(expr,GRB.GREATER_EQUAL, pair.size()-1, cName);
         }
     }
 }

@@ -137,6 +137,7 @@ public abstract class Solver {
         return S;
     }
 
+    /*
     public static void dfvsSolveInstanceILP(Instance instance) {
 
         //Set instance & branch count
@@ -162,7 +163,7 @@ public abstract class Solver {
         boolean verified = millis < Timer.timeout * 1000;
         Log.ilpLog(instance, millis, 0, verified);
         Log.debugLog(instance.NAME, "Found solution with k = " + instance.S.size() + " in " + Timer.format(millis), !verified);
-    }
+    }*/
 
     public static void dfvsSolveInstance(Instance instance) {
 
@@ -206,7 +207,7 @@ public abstract class Solver {
 
                 //TODO
                 //List<Integer> S = dfvsSolve(subGraph);
-                List<Integer> S = ILPSolverOrdering.solveGraph(subGraph);
+                List<Integer> S = ILPSolverOrdering.solveGraph(subGraph, false);
                 //List<Integer> S = ILPSolverLazyCycles.solveGraph(subGraph);
                 instance.S.addAll(S);
             }

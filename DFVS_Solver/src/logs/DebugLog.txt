@@ -1,9 +1,8 @@
-[2022-01-14 17:37:16.150]                         advotogo-n_100: ---------- advotogo-n_100 (n = 26, m = 31, k = 2) ----------
-[2022-01-14 17:37:16.221]                         advotogo-n_100: Found solution with k = 2 in 79ms
-[2022-01-14 17:37:16.232]                        advotogo-n_1000: ---------- advotogo-n_1000 (n = 624, m = 1883, k = 127) ----------
-[2022-01-14 17:37:19.009]                        advotogo-n_1000: Found solution with k = 127 in 2s
-[2022-01-14 17:37:19.015]                        advotogo-n_1500: ---------- advotogo-n_1500 (n = 1110, m = 4342, k = 215) ----------
-[2022-01-14 17:38:05.390]                        advotogo-n_1500: Found solution with k = 215 in 46s
-[2022-01-14 17:38:05.391]                         advotogo-n_200: ---------- advotogo-n_200 (n = 63, m = 68, k = 9) ----------
-[2022-01-14 17:38:05.395]                         advotogo-n_200: Found solution with k = 9 in 4ms
-[2022-01-14 17:38:05.403]                        advotogo-n_2000: ---------- advotogo-n_2000 (n = 1556, m = 6786, k = 297) ----------
+[2022-01-14 18:12:47.907]                           chess-n_2000: ---------- chess-n_2000 (n = 1531, m = 4343, k = 204) ----------
+[2022-01-14 18:12:47.925]                           chess-n_2000: Found 1 cyclic sub graph(s) with n = [400]
+[2022-01-14 18:12:47.928]                           chess-n_2000: Removed 1131 nodes in preprocessing, starting with k = 61
+[2022-01-14 18:13:05.984]                           chess-n_2000: Preprocessing: 29 ms, Flowers: 0 ms, BFS: 0 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 0 ms
+[2022-01-14 18:13:05.993]                           chess-n_2000: Found solution with k = 204 in 18s (recursive steps: 0)
+[2022-01-14 18:13:06.003]                           chess-n_3000: ---------- chess-n_3000 (n = 2586, m = 11156, k = -1) ----------
+[2022-01-14 18:13:06.020]                           chess-n_3000: Found 1 cyclic sub graph(s) with n = [970]
+[2022-01-14 18:13:06.021]                           chess-n_3000: Removed 1616 nodes in preprocessing, starting with k = 65
