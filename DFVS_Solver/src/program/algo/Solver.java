@@ -207,7 +207,7 @@ public abstract class Solver {
 
                 //TODO
                 //List<Integer> S = dfvsSolve(subGraph);
-                List<Integer> S = ILPSolverOrdering.solveGraph(subGraph, false, false, false, true);
+                List<Integer> S = ILPSolverOrdering.solveGraph(instance, subGraph, false, false, false, false);
                 //List<Integer> S = ILPSolverLazyCycles.solveGraph(subGraph);
                 instance.S.addAll(S);
             }

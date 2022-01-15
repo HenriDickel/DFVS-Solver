@@ -48,14 +48,19 @@ public abstract class ILPRules {
         model.update();
     }
 
-    public static void addMaxKConstraints(GRBModel model, Graph graph, float max_k) throws GRBException {
+    public static void addMaxKConstraints(GRBModel model, Graph graph, double max_k) throws GRBException {
 
         GRBLinExpr expr = new GRBLinExpr();
         for(Node node: graph.getNodes()) {
             GRBVar x = model.getVarByName("x" + node.id);
             expr.addTerm(1.0, x);
         }
-        model.addConstr(expr,GRB.LESS_EQUAL, max_k, "max_k");
+        //model.addConstr(expr,GRB.EQUAL, max_k, "max_k");
+        model.addConstr(expr,GRB.LESS_EQUAL, max_k + 1, "max_k_less");
+        model.addConstr(expr,GRB.GREATER_EQUAL, max_k - 1, "max_k_greater");
+
+        System.out.println("Added Rule: k < " + (max_k + 1));
+        System.out.println("Added Rule: k > " + (max_k - 1));
 
         model.update();
     }

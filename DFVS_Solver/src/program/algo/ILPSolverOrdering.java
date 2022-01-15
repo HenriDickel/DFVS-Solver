@@ -20,17 +20,20 @@ public class ILPSolverOrdering extends GRBCallback{
         vars = xvars;
         graph = xgraph;
         model = xmodel;
-
     }
 
     @Override
     protected void callback() {
         try {
+            //If we found a (non-minimal) Solution
             if (where == GRB.CB_MIPSOL) {
-                // MIP solution callback
+
                 //Get the values of the current solution
                 double[] solutionValues = getSolution(vars);
+
+                //Convert to node ids
                 List<Integer> solutionNodes = new LinkedList<>();
+
                 //Find what nodes should be deleted
                 for (int i = 0; i < solutionValues.length; i++) {
                     if (solutionValues[i] > 0.9) {
@@ -38,17 +41,16 @@ public class ILPSolverOrdering extends GRBCallback{
                     }
                 }
 
+                //Get current solution
                 System.out.println("MIP Solution: k = " + solutionNodes.size());
             }
         }
-        catch (Exception e){
-
+        catch (GRBException e){
+            System.err.println("ILP Callback Error:\nCode: " + e.getErrorCode() + "\n" + e.getMessage());
         }
     }
 
-    public static List<Integer> solveGraph(Graph graph, boolean useFullyUpgradedConstraints, boolean useInitalCirclesConstraints, boolean useMaxKConstraint, boolean useCallback){
-
-        Timer.start();
+    public static List<Integer> solveGraph(Instance instance, Graph graph, boolean useFullyUpgradedConstraints, boolean useInitalCirclesConstraints, boolean useMaxKConstraint, boolean useCallback){
 
         try {
             // Create empty environment, set options, and start
@@ -59,6 +61,7 @@ public class ILPSolverOrdering extends GRBCallback{
 
             // Create empty model
             GRBModel model = new GRBModel(env);
+
             //Set time limit and limit command line output (comment out to lines of code enable it)
             model.set(GRB.DoubleParam.TimeLimit, Timer.timeout);
             model.set(GRB.IntParam.OutputFlag, 0);
@@ -66,7 +69,10 @@ public class ILPSolverOrdering extends GRBCallback{
 
             //Get all Nodes
             List<Node> g = graph.getNodes();
+
+            //Expression Object
             GRBLinExpr expr = new GRBLinExpr();
+
             //Add variables x and u for every Node in graph g
             for (Node node: g){
                 //X is the variable that shows if a vertex is deleted or not
@@ -75,9 +81,12 @@ public class ILPSolverOrdering extends GRBCallback{
                 GRBVar u = model.addVar(0.0, g.size(), 0.0, GRB.INTEGER, "u" +node.id);
                 expr.addTerm(1.0, x);
             }
-            model.update();
+
             //Minimize the sum over all Xs
             model.setObjective(expr, GRB.MINIMIZE);
+
+            //Update Model
+            model.update();
 
             //Add constraint Uv -Uw+n*Xw >=1 for every arc(w,u)
             for(int i =0; i < g.size(); i++){
@@ -89,12 +98,14 @@ public class ILPSolverOrdering extends GRBCallback{
                     model.addConstr(expr,GRB.GREATER_EQUAL, 1.0, "c-" + g.get(i).getOutIds().get(j) + "--" + g.get(i).id);
                 }
             }
+
+            //Update Model
             model.update();
 
             //Additional Rules
             if(useFullyUpgradedConstraints) ILPRules.addFullyUpgradedConstraints(model, graph);
             if(useInitalCirclesConstraints) ILPRules.addInitialCircleConstraints(model, graph);
-            if(useMaxKConstraint) ILPRules.addMaxKConstraints(model, graph, 2500f);
+            if(useMaxKConstraint) ILPRules.addMaxKConstraints(model, graph, instance.OPTIMAL_K - instance.startK);
 
             //Callback setup
             if(useCallback){
@@ -106,8 +117,10 @@ public class ILPSolverOrdering extends GRBCallback{
             //Start
             model.optimize();
 
+            //Ids of deleted nodes
             List<Integer> result = new ArrayList<>();
 
+            //Convert model variables back to node ids
             for(GRBVar var: model.getVars()) {
                 double x = var.get(GRB.DoubleAttr.X);
                 String varName = var.get(GRB.StringAttr.VarName);
@@ -117,15 +130,18 @@ public class ILPSolverOrdering extends GRBCallback{
                 }
             }
 
+            //Dispose
             model.dispose();
             env.dispose();
 
+            //Return
             return result;
 
         } catch (GRBException e) {
-            System.err.println("Error code: " + e.getErrorCode() + ". " + e.getMessage());
+            System.err.println("ILP Error:\nCode: " + e.getErrorCode() + "\n" + e.getMessage());
             return new ArrayList<>();
 
         }
     }
+
 }

@@ -1,8 +1,8 @@
-[2022-01-14 18:46:21.979]                           chess-n_2000: ---------- chess-n_2000 (n = 1531, m = 4343, k = 204) ----------
-[2022-01-14 18:46:21.997]                           chess-n_2000: Found 1 cyclic sub graph(s) with n = [400]
-[2022-01-14 18:46:21.999]                           chess-n_2000: Removed 1131 nodes in preprocessing, starting with k = 61
-[2022-01-14 18:46:40.157]                           chess-n_2000: Preprocessing: 28 ms, Flowers: 0 ms, BFS: 0 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 0 ms
-[2022-01-14 18:46:40.166]                           chess-n_2000: Found solution with k = 204 in 18s (recursive steps: 0)
-[2022-01-14 18:46:40.176]                           chess-n_3000: ---------- chess-n_3000 (n = 2586, m = 11156, k = -1) ----------
-[2022-01-14 18:46:40.195]                           chess-n_3000: Found 1 cyclic sub graph(s) with n = [970]
-[2022-01-14 18:46:40.196]                           chess-n_3000: Removed 1616 nodes in preprocessing, starting with k = 65
+[2022-01-15 12:38:05.369]                           chess-n_2000: ---------- chess-n_2000 (n = 1531, m = 4343, k = 204) ----------
+[2022-01-15 12:38:05.387]                           chess-n_2000: Found 1 cyclic sub graph(s) with n = [400]
+[2022-01-15 12:38:05.390]                           chess-n_2000: Removed 1131 nodes in preprocessing, starting with k = 61
+[2022-01-15 12:38:23.271]                           chess-n_2000: Preprocessing: 29 ms, Flowers: 0 ms, BFS: 0 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 0 ms
+[2022-01-15 12:38:23.280]                           chess-n_2000: Found solution with k = 204 in 17s (recursive steps: 0)
+[2022-01-15 12:38:23.290]                           chess-n_3000: ---------- chess-n_3000 (n = 2586, m = 11156, k = -1) ----------
+[2022-01-15 12:38:23.310]                           chess-n_3000: Found 1 cyclic sub graph(s) with n = [970]
+[2022-01-15 12:38:23.311]                           chess-n_3000: Removed 1616 nodes in preprocessing, starting with k = 65
