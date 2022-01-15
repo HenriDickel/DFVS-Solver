@@ -50,7 +50,7 @@ public class ILPSolverOrdering extends GRBCallback{
         }
     }
 
-    public static List<Integer> solveGraph(Instance instance, Graph graph, boolean useFullyUpgradedConstraints, boolean useInitalCirclesConstraints, boolean useMaxKConstraint, boolean useCallback){
+    public static List<Integer> solveGraph(Graph graph, boolean useFullyUpgradedConstraints, boolean useInitalCirclesConstraints, boolean useCallback){
 
         try {
             // Create empty environment, set options, and start
@@ -105,7 +105,6 @@ public class ILPSolverOrdering extends GRBCallback{
             //Additional Rules
             if(useFullyUpgradedConstraints) ILPRules.addFullyUpgradedConstraints(model, graph);
             if(useInitalCirclesConstraints) ILPRules.addInitialCircleConstraints(model, graph);
-            if(useMaxKConstraint) ILPRules.addMaxKConstraints(model, graph, instance.OPTIMAL_K - instance.startK);
 
             //Callback setup
             if(useCallback){
@@ -113,6 +112,9 @@ public class ILPSolverOrdering extends GRBCallback{
                 ILPSolverOrdering cb = new ILPSolverOrdering(vars, graph, model);
                 model.setCallback(cb);
             }
+
+            //Update Model
+            model.update();
 
             //Start
             model.optimize();

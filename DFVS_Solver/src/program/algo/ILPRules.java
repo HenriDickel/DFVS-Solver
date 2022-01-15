@@ -22,13 +22,11 @@ public abstract class ILPRules {
             // Look for fully connected triangles, quads etc.
             upgradeFullyConnected(pair,graph);
             expr = new GRBLinExpr();
-            String cName = "";
             for (Node node : pair.getNodes()) {
                 expr.addTerm(1.0, model.getVarByName("x" + node.id));
-                cName += node.id;
                 graph.removeNode(node.id);
             }
-            model.addConstr(expr,GRB.GREATER_EQUAL, pair.size()-1, cName);
+            model.addConstr(expr,GRB.GREATER_EQUAL, pair.size()-1, "FullyUpgradedConstraint");
         }
 
         model.update();
@@ -45,23 +43,6 @@ public abstract class ILPRules {
             }
             model.addConstr(expr,GRB.GREATER_EQUAL, 1.0, "cycle-" + index++);
         }
-        model.update();
-    }
-
-    public static void addMaxKConstraints(GRBModel model, Graph graph, double max_k) throws GRBException {
-
-        GRBLinExpr expr = new GRBLinExpr();
-        for(Node node: graph.getNodes()) {
-            GRBVar x = model.getVarByName("x" + node.id);
-            expr.addTerm(1.0, x);
-        }
-        //model.addConstr(expr,GRB.EQUAL, max_k, "max_k");
-        model.addConstr(expr,GRB.LESS_EQUAL, max_k + 1, "max_k_less");
-        model.addConstr(expr,GRB.GREATER_EQUAL, max_k - 1, "max_k_greater");
-
-        System.out.println("Added Rule: k < " + (max_k + 1));
-        System.out.println("Added Rule: k > " + (max_k - 1));
-
         model.update();
     }
 

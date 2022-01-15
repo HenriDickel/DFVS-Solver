@@ -45,6 +45,7 @@ public class Main {
             //testLowerBoundQuality(files);
 
             List<GraphFile> files = InstanceCreator.getComplexAndSyntheticFiles("chess-n_2000");
+            //List<GraphFile> files = InstanceCreator.getComplexAndSyntheticFiles("link-kv-n_1500");
             for(GraphFile file: files) {
                 Instance instance = InstanceCreator.createFromFile(file);
                 //ILPSolverOrdering.solveInstance(instance);

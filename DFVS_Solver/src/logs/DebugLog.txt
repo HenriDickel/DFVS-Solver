@@ -1,8 +1,18 @@
-[2022-01-15 12:38:05.369]                           chess-n_2000: ---------- chess-n_2000 (n = 1531, m = 4343, k = 204) ----------
-[2022-01-15 12:38:05.387]                           chess-n_2000: Found 1 cyclic sub graph(s) with n = [400]
-[2022-01-15 12:38:05.390]                           chess-n_2000: Removed 1131 nodes in preprocessing, starting with k = 61
-[2022-01-15 12:38:23.271]                           chess-n_2000: Preprocessing: 29 ms, Flowers: 0 ms, BFS: 0 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 0 ms
-[2022-01-15 12:38:23.280]                           chess-n_2000: Found solution with k = 204 in 17s (recursive steps: 0)
-[2022-01-15 12:38:23.290]                           chess-n_3000: ---------- chess-n_3000 (n = 2586, m = 11156, k = -1) ----------
-[2022-01-15 12:38:23.310]                           chess-n_3000: Found 1 cyclic sub graph(s) with n = [970]
-[2022-01-15 12:38:23.311]                           chess-n_3000: Removed 1616 nodes in preprocessing, starting with k = 65
+[2022-01-15 13:53:28.233]                         link-kv-n_1500: ---------- link-kv-n_1500 (n = 1054, m = 8494, k = 391) ----------
+[2022-01-15 13:53:28.256]                         link-kv-n_1500: Found 15 cyclic sub graph(s) with n = [5, 256, 5, 4, 6, 7, 2, 9, 13, 6, 5, 15, 3, 7, 8]
+[2022-01-15 13:53:28.258]                         link-kv-n_1500: Removed 705 nodes in preprocessing, starting with k = 101
+[2022-01-15 13:53:28.575]                         link-kv-n_1500: Preprocessing: 35 ms, Flowers: 0 ms, BFS: 0 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 0 ms
+[2022-01-15 13:53:28.583]                         link-kv-n_1500: Found solution with k = 391 in 351ms (recursive steps: 0)
+[2022-01-15 13:53:28.584]                          link-kv-n_200: ---------- link-kv-n_200 (n = 90, m = 139, k = 20) ----------
+[2022-01-15 13:53:28.585]                          link-kv-n_200: Found 4 cyclic sub graph(s) with n = [5, 3, 3, 3]
+[2022-01-15 13:53:28.585]                          link-kv-n_200: Removed 76 nodes in preprocessing, starting with k = 10
+[2022-01-15 13:53:28.595]                          link-kv-n_200: Preprocessing: 0 ms, Flowers: 0 ms, BFS: 0 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 0 ms
+[2022-01-15 13:53:28.596]                          link-kv-n_200: Found solution with k = 20 in 11ms (recursive steps: 0)
+[2022-01-15 13:53:28.619]                         link-kv-n_2000: ---------- link-kv-n_2000 (n = 1772, m = 19901, k = 565) ----------
+[2022-01-15 13:53:28.630]                         link-kv-n_2000: Found 20 cyclic sub graph(s) with n = [6, 3, 5, 453, 6, 4, 14, 3, 6, 3, 3, 23, 3, 3, 3, 11, 3, 3, 3, 4]
+[2022-01-15 13:53:28.631]                         link-kv-n_2000: Removed 1210 nodes in preprocessing, starting with k = 112
+[2022-01-15 13:53:29.228]                         link-kv-n_2000: Preprocessing: 12 ms, Flowers: 0 ms, BFS: 0 ms, DAG: 0 ms, Copy: 0 ms, Reduction: 0 ms, Packing: 0 ms
+[2022-01-15 13:53:29.229]                         link-kv-n_2000: Found solution with k = 565 in 609ms (recursive steps: 0)
+[2022-01-15 13:53:29.242]                         link-kv-n_3000: ---------- link-kv-n_3000 (n = 2540, m = 39796, k = 900) ----------
+[2022-01-15 13:53:29.276]                         link-kv-n_3000: Found 27 cyclic sub graph(s) with n = [4, 713, 5, 4, 3, 4, 3, 4, 10, 3, 29, 25, 4, 4, 7, 13, 3, 40, 11, 3, 3, 3, 5, 6, 6, 3, 3]
+[2022-01-15 13:53:29.277]                         link-kv-n_3000: Removed 1620 nodes in preprocessing, starting with k = 174
