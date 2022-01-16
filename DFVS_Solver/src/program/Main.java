@@ -25,7 +25,7 @@ public class Main {
             Instance instance = InstanceCreator.createFromFile(new GraphFile("", fileName));
 
             // Solve
-            Solver.dfvsSolveInstance(instance);
+            ILPSolver.dfvsSolveInstance(instance);
 
             // Print solution
             for(Integer nodeId : instance.S){
