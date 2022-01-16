@@ -7,7 +7,7 @@ public abstract class Timer {
 
     private static LocalDateTime startTime;
 
-    public static final long timeout = 90; // in seconds
+    public static final long timeout = 180; // in seconds
 
     public static void start() {
         startTime = LocalDateTime.now();
