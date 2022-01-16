@@ -89,7 +89,7 @@ public abstract class Log {
         catch (Exception ignored) {}
     }
 
-    public static void ilpLog(Instance instance, long millis, int numConstraints, boolean verified) {
+    public static void ilpLog(Instance instance, long millis, boolean verified) {
 
         //Ignore Log
         if(ignore) return;

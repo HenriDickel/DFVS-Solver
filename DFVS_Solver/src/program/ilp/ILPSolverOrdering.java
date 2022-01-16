@@ -1,9 +1,9 @@
-package program.algo;
+package program.ilp;
 import gurobi.*;
-import program.log.Log;
 import program.model.Graph;
-import program.model.Instance;
 import program.model.Node;
+import program.utils.PerformanceTimer;
+import program.utils.TimeoutException;
 import program.utils.Timer;
 
 import java.util.ArrayList;
@@ -12,14 +12,13 @@ import java.util.List;
 
 public class ILPSolverOrdering extends GRBCallback{
 
-    private GRBVar[]  vars;
     private GRBModel model;
     private Graph graph;
+    private long secondsLeft;
 
-    public ILPSolverOrdering(GRBVar[] xvars, Graph xgraph, GRBModel xmodel) {
-        vars = xvars;
-        graph = xgraph;
-        model = xmodel;
+    public ILPSolverOrdering(Graph graph, long secondsLeft) {
+        this.graph = graph;
+        this.secondsLeft = secondsLeft;
     }
 
     @Override
@@ -29,7 +28,7 @@ public class ILPSolverOrdering extends GRBCallback{
             if (where == GRB.CB_MIPSOL) {
 
                 //Get the values of the current solution
-                double[] solutionValues = getSolution(vars);
+                double[] solutionValues = getSolution(model.getVars());
 
                 //Convert to node ids
                 List<Integer> solutionNodes = new LinkedList<>();
@@ -37,7 +36,7 @@ public class ILPSolverOrdering extends GRBCallback{
                 //Find what nodes should be deleted
                 for (int i = 0; i < solutionValues.length; i++) {
                     if (solutionValues[i] > 0.9) {
-                        solutionNodes.add(Integer.parseInt(vars[i].get(GRB.StringAttr.VarName).substring(1)));
+                        solutionNodes.add(Integer.parseInt(model.getVars()[i].get(GRB.StringAttr.VarName).substring(1)));
                     }
                 }
 
@@ -50,7 +49,7 @@ public class ILPSolverOrdering extends GRBCallback{
         }
     }
 
-    public static List<Integer> solveGraph(Graph graph, boolean useFullyUpgradedConstraints, boolean useInitalCirclesConstraints, boolean useCallback){
+    public List<Integer> solve(boolean useFullyUpgradedConstraints, boolean useInitalCirclesConstraints, boolean useCyclePackingConstraints, boolean useCallback){
 
         try {
             // Create empty environment, set options, and start
@@ -105,27 +104,32 @@ public class ILPSolverOrdering extends GRBCallback{
             //Additional Rules
             if(useFullyUpgradedConstraints) ILPRules.addFullyUpgradedConstraints(model, graph);
             if(useInitalCirclesConstraints) ILPRules.addInitialCircleConstraints(model, graph);
+            if(useCyclePackingConstraints) ILPRules.addCyclePackingConstraint(model, graph);
 
             //Callback setup
             if(useCallback){
-                GRBVar[] vars = model.getVars();
-                ILPSolverOrdering cb = new ILPSolverOrdering(vars, graph, model);
-                model.setCallback(cb);
+                model.setCallback(this);
             }
 
             //Update Model
             model.update();
 
             //Start
+            PerformanceTimer.start();
             model.optimize();
+            PerformanceTimer.log(PerformanceTimer.MethodType.ILP);
+
+            // Return no solution when timeout
+            int status = model.get(GRB.IntAttr.Status);
+            if(status != GRB.Status.OPTIMAL) throw new TimeoutException("Gurobi status: " + status);
 
             //Ids of deleted nodes
             List<Integer> result = new ArrayList<>();
 
             //Convert model variables back to node ids
             for(GRBVar var: model.getVars()) {
-                double x = var.get(GRB.DoubleAttr.X);
                 String varName = var.get(GRB.StringAttr.VarName);
+                double x = var.get(GRB.DoubleAttr.X);
                 if(x > 0.9 && varName.startsWith("x")) {
                     int id = Integer.parseInt(varName.substring(1));
                     result.add(id);
@@ -140,9 +144,7 @@ public class ILPSolverOrdering extends GRBCallback{
             return result;
 
         } catch (GRBException e) {
-            System.err.println("ILP Error:\nCode: " + e.getErrorCode() + "\n" + e.getMessage());
-            return new ArrayList<>();
-
+            throw new TimeoutException("ILP Error: " + e.getErrorCode() + " - " + e.getMessage());
         }
     }
 

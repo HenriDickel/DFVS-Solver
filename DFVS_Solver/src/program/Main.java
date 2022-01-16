@@ -2,6 +2,7 @@ package program;
 
 import gurobi.GRBException;
 import program.algo.*;
+import program.ilp.ILPSolver;
 import program.log.Log;
 import program.model.*;
 import program.utils.InstanceCreator;
@@ -39,17 +40,10 @@ public class Main {
             Log.Clear();
             Log.ignore = false;
 
-            //List<GraphFile> files = InstanceCreator.getErrorFilesDataset2();
-            //List<GraphFile> files = InstanceCreator.getSelectedFilesDataset3();
-            //testLowerBoundPerformance(files);
-            //testLowerBoundQuality(files);
-
-            List<GraphFile> files = InstanceCreator.getComplexAndSyntheticFiles("chess-n_2000");
-            //List<GraphFile> files = InstanceCreator.getComplexAndSyntheticFiles("link-kv-n_1500");
+            List<GraphFile> files = InstanceCreator.getComplexAndSyntheticFiles(null);
             for(GraphFile file: files) {
                 Instance instance = InstanceCreator.createFromFile(file);
-                //ILPSolverOrdering.solveInstance(instance);
-                Solver.dfvsSolveInstance(instance);
+                ILPSolver.dfvsSolveInstance(instance);
             }
         }
     }

@@ -19,6 +19,10 @@ public abstract class Timer {
         return time;
     }
 
+    public static long getSecondsLeft() {
+        return timeout - ChronoUnit.SECONDS.between(startTime, LocalDateTime.now());
+    }
+
     public static boolean isTimeout() {
         return ChronoUnit.SECONDS.between(startTime, LocalDateTime.now()) >= timeout;
     }

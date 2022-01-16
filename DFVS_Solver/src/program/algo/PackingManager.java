@@ -26,6 +26,10 @@ public class PackingManager {
         initPacking();
     }
 
+    public List<Cycle> getPacking() {
+        return packing;
+    }
+
     public PackingManager(PackingManager oldPm, List<Integer> deleteIds, List<Integer> forbiddenIds) {
         this.initialNodes = oldPm.initialNodes;
         this.packingGraph = oldPm.packingGraph.copy();

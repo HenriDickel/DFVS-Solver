@@ -1,4 +1,1 @@
 name,n,m,k_optimal,k_solved,k_start,verified,pre_removed_nodes,removed_flowers,recursive_steps,millis,packing_millis
-link-kv-n_1500,1054,8494,391,391,101,true,705,0,0,351,0
-link-kv-n_200,90,139,20,20,10,true,76,0,0,11,0
-link-kv-n_2000,1772,19901,565,565,112,true,1210,0,0,609,0

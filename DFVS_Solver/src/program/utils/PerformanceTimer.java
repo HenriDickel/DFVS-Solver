@@ -14,6 +14,7 @@ public abstract class PerformanceTimer {
     private static long millisCopy = 0;
     private static long millisReduction = 0;
     private static long millisPacking = 0;
+    private static long millisILP = 0;
 
     public enum MethodType {
         PREPROCESSING,
@@ -22,7 +23,8 @@ public abstract class PerformanceTimer {
         DAG,
         COPY,
         REDUCTION,
-        PACKING
+        PACKING,
+        ILP
     }
 
     public static void start() {
@@ -53,6 +55,9 @@ public abstract class PerformanceTimer {
             case PACKING:
                 millisPacking += millis;
                 break;
+            case ILP:
+                millisILP += millis;
+                break;
         }
     }
 
@@ -65,6 +70,10 @@ public abstract class PerformanceTimer {
         " ms, DAG: " + millisDAG / 1000000 + " ms, Copy: " + millisCopy / 1000000 + " ms, Reduction: " + millisReduction / 1000000 + " ms, Packing: " + millisPacking / 1000000 + " ms");
     }
 
+    public static void printILPResult() {
+        Log.debugLog(Solver.instance.NAME, "Preprocessing: " + millisPreprocessing / 1000000 + " ms, Packing: " + millisPacking / 1000000 + " ms, ILP: " + millisILP / 1000000 + " ms");
+    }
+
     public static void reset() {
         millisPreprocessing = 0;
         millisFlowers = 0;
@@ -73,5 +82,6 @@ public abstract class PerformanceTimer {
         millisCopy = 0;
         millisReduction = 0;
         millisPacking = 0;
+        millisILP = 0;
     }
 }

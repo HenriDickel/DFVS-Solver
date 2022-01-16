@@ -122,6 +122,17 @@ public class Graph {
         removeNode(forbidden.id);
     }
 
+    public void removeCycle(Cycle cycle) {
+        for(int i = 0; i < cycle.size(); i++) {
+            Integer toId = cycle.get(i).id;
+            Integer fromId = (i == cycle.size() - 1) ? cycle.get(0).id : cycle.get(i + 1).id;
+            Node to = getNode(toId);
+            Node from = getNode(fromId);
+            to.removeInId(fromId);
+            from.removeOutId(toId);
+        }
+    }
+
     public void addInitialNode(Node initialNode) {
         Node add = new Node(initialNode.id);
         for(Integer outId: initialNode.getOutIds()) {
