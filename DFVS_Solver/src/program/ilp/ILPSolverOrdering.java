@@ -62,7 +62,7 @@ public class ILPSolverOrdering extends GRBCallback{
             GRBModel model = new GRBModel(env);
 
             //Set time limit and limit command line output (comment out to lines of code enable it)
-            model.set(GRB.DoubleParam.TimeLimit, Timer.timeout);
+            model.set(GRB.DoubleParam.TimeLimit, secondsLeft);
             model.set(GRB.IntParam.OutputFlag, 0);
             model.set(GRB.DoubleParam.Heuristics, 0.0);
 

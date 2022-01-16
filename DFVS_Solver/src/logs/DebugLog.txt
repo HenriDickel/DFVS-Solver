@@ -181,3 +181,163 @@
 [2022-01-16 19:10:41.967]                           chess-n_6000: ---------- chess-n_6000 (n = 5854, m = 40749, k = -1) ----------
 [2022-01-16 19:10:42.078]                           chess-n_6000: Found 1 cyclic sub graph(s) with n = [3195]
 [2022-01-16 19:10:42.079]                           chess-n_6000: Removed 2659 nodes in preprocessing, starting with k = 81
+[2022-01-16 19:12:12.934]                           chess-n_6000: Preprocessing: 111 ms, Packing: 614 ms, ILP: 90069 ms
+[2022-01-16 19:12:12.934]                           chess-n_6000: Found no solution in 90s
+[2022-01-16 19:12:12.951]                           chess-n_7000: ---------- chess-n_7000 (n = 6966, m = 55133, k = -1) ----------
+[2022-01-16 19:12:13.011]                           chess-n_7000: Found 1 cyclic sub graph(s) with n = [4053]
+[2022-01-16 19:12:13.012]                           chess-n_7000: Removed 2913 nodes in preprocessing, starting with k = 91
+[2022-01-16 19:13:44.287]                           chess-n_7000: Preprocessing: 60 ms, Packing: 983 ms, ILP: 90025 ms
+[2022-01-16 19:13:44.288]                           chess-n_7000: Found no solution in 91s
+[2022-01-16 19:13:44.306]                           chess-n_7303: ---------- chess-n_7303 (n = 7301, m = 60046, k = -1) ----------
+[2022-01-16 19:13:44.374]                           chess-n_7303: Found 1 cyclic sub graph(s) with n = [4343]
+[2022-01-16 19:13:44.375]                           chess-n_7303: Removed 2958 nodes in preprocessing, starting with k = 85
+[2022-01-16 19:15:15.694]                           chess-n_7303: Preprocessing: 69 ms, Packing: 1027 ms, ILP: 90033 ms
+[2022-01-16 19:15:15.694]                           chess-n_7303: Found no solution in 91s
+[2022-01-16 19:15:15.694]                  ChicagoRegional-n_100: ---------- ChicagoRegional-n_100 (n = 2, m = 2, k = 1) ----------
+[2022-01-16 19:15:15.695]                  ChicagoRegional-n_100: Found 0 cyclic sub graph(s) with n = []
+[2022-01-16 19:15:15.695]                  ChicagoRegional-n_100: Removed 2 nodes in preprocessing, starting with k = 1
+[2022-01-16 19:15:15.695]                  ChicagoRegional-n_100: Preprocessing: 0 ms, Packing: 0 ms, ILP: 0 ms
+[2022-01-16 19:15:15.695]                  ChicagoRegional-n_100: Found solution with k = 1 in 0ms
+[2022-01-16 19:15:15.696]                 ChicagoRegional-n_1000: ---------- ChicagoRegional-n_1000 (n = 224, m = 245, k = 92) ----------
+[2022-01-16 19:15:15.696]                 ChicagoRegional-n_1000: Found 0 cyclic sub graph(s) with n = []
+[2022-01-16 19:15:15.696]                 ChicagoRegional-n_1000: Removed 224 nodes in preprocessing, starting with k = 92
+[2022-01-16 19:15:15.697]                 ChicagoRegional-n_1000: Preprocessing: 0 ms, Packing: 0 ms, ILP: 0 ms
+[2022-01-16 19:15:15.697]                 ChicagoRegional-n_1000: Found solution with k = 92 in 0ms
+[2022-01-16 19:15:15.704]                ChicagoRegional-n_10000: ---------- ChicagoRegional-n_10000 (n = 9579, m = 23005, k = 4193) ----------
+[2022-01-16 19:15:15.710]                ChicagoRegional-n_10000: Found 111 cyclic sub graph(s) with n = [4, 17, 12, 4, 4, 4, 12, 18, 3, 17, 11, 11, 20, 11, 5, 4, 7, 18, 4, 5, 9, 4, 6, 12, 4, 44, 38, 4, 12, 12, 37, 4, 3, 4, 8, 4, 6, 9, 4, 11, 14, 4, 40, 21, 8, 3, 8, 3, 43, 21, 4, 3, 16, 36, 3, 24, 21, 6, 17, 3, 4, 4, 5, 13, 3, 24, 20, 4, 4, 61, 8, 4, 5, 12, 3, 3, 3, 3, 3, 19, 4, 5, 16, 5, 12, 33, 11, 34, 4, 4, 3, 4, 11, 3, 6, 4, 5, 42, 4, 5, 3, 3, 4, 11, 6, 4, 7, 12, 3, 4, 3]
+[2022-01-16 19:15:15.711]                ChicagoRegional-n_10000: Removed 8375 nodes in preprocessing, starting with k = 3551
+[2022-01-16 19:15:16.261]                ChicagoRegional-n_10000: Preprocessing: 6 ms, Packing: 2 ms, ILP: 372 ms
+[2022-01-16 19:15:16.261]                ChicagoRegional-n_10000: Found solution with k = 4193 in 556ms
+[2022-01-16 19:15:16.262]                 ChicagoRegional-n_1500: ---------- ChicagoRegional-n_1500 (n = 457, m = 485, k = 181) ----------
+[2022-01-16 19:15:16.262]                 ChicagoRegional-n_1500: Found 1 cyclic sub graph(s) with n = [3]
+[2022-01-16 19:15:16.262]                 ChicagoRegional-n_1500: Removed 454 nodes in preprocessing, starting with k = 179
+[2022-01-16 19:15:16.266]                 ChicagoRegional-n_1500: Preprocessing: 0 ms, Packing: 0 ms, ILP: 1 ms
+[2022-01-16 19:15:16.266]                 ChicagoRegional-n_1500: Found solution with k = 181 in 3ms
+[2022-01-16 19:15:16.267]                  ChicagoRegional-n_200: ---------- ChicagoRegional-n_200 (n = 13, m = 12, k = 5) ----------
+[2022-01-16 19:15:16.267]                  ChicagoRegional-n_200: Found 0 cyclic sub graph(s) with n = []
+[2022-01-16 19:15:16.267]                  ChicagoRegional-n_200: Removed 13 nodes in preprocessing, starting with k = 5
+[2022-01-16 19:15:16.267]                  ChicagoRegional-n_200: Preprocessing: 0 ms, Packing: 0 ms, ILP: 0 ms
+[2022-01-16 19:15:16.267]                  ChicagoRegional-n_200: Found solution with k = 5 in 0ms
+[2022-01-16 19:15:16.268]                 ChicagoRegional-n_2000: ---------- ChicagoRegional-n_2000 (n = 777, m = 888, k = 307) ----------
+[2022-01-16 19:15:16.268]                 ChicagoRegional-n_2000: Found 3 cyclic sub graph(s) with n = [3, 4, 3]
+[2022-01-16 19:15:16.268]                 ChicagoRegional-n_2000: Removed 767 nodes in preprocessing, starting with k = 301
+[2022-01-16 19:15:16.277]                 ChicagoRegional-n_2000: Preprocessing: 0 ms, Packing: 0 ms, ILP: 5 ms
+[2022-01-16 19:15:16.278]                 ChicagoRegional-n_2000: Found solution with k = 307 in 9ms
+[2022-01-16 19:15:16.278]                 ChicagoRegional-n_3000: ---------- ChicagoRegional-n_3000 (n = 1619, m = 2022, k = 631) ----------
+[2022-01-16 19:15:16.279]                 ChicagoRegional-n_3000: Found 7 cyclic sub graph(s) with n = [3, 3, 4, 3, 4, 3, 3]
+[2022-01-16 19:15:16.279]                 ChicagoRegional-n_3000: Removed 1596 nodes in preprocessing, starting with k = 617
+[2022-01-16 19:15:16.302]                 ChicagoRegional-n_3000: Preprocessing: 0 ms, Packing: 0 ms, ILP: 12 ms
+[2022-01-16 19:15:16.302]                 ChicagoRegional-n_3000: Found solution with k = 631 in 22ms
+[2022-01-16 19:15:16.303]                 ChicagoRegional-n_4000: ---------- ChicagoRegional-n_4000 (n = 2607, m = 3623, k = 1020) ----------
+[2022-01-16 19:15:16.304]                 ChicagoRegional-n_4000: Found 8 cyclic sub graph(s) with n = [4, 3, 4, 3, 3, 3, 3, 3]
+[2022-01-16 19:15:16.304]                 ChicagoRegional-n_4000: Removed 2581 nodes in preprocessing, starting with k = 1004
+[2022-01-16 19:15:16.327]                 ChicagoRegional-n_4000: Preprocessing: 0 ms, Packing: 0 ms, ILP: 13 ms
+[2022-01-16 19:15:16.327]                 ChicagoRegional-n_4000: Found solution with k = 1020 in 23ms
+[2022-01-16 19:15:16.328]                   ChicagoRegional-n_50: ---------- ChicagoRegional-n_50 (n = 4, m = 4, k = 2) ----------
+[2022-01-16 19:15:16.328]                   ChicagoRegional-n_50: Found 0 cyclic sub graph(s) with n = []
+[2022-01-16 19:15:16.328]                   ChicagoRegional-n_50: Removed 4 nodes in preprocessing, starting with k = 2
+[2022-01-16 19:15:16.328]                   ChicagoRegional-n_50: Preprocessing: 0 ms, Packing: 0 ms, ILP: 0 ms
+[2022-01-16 19:15:16.329]                   ChicagoRegional-n_50: Found solution with k = 2 in 0ms
+[2022-01-16 19:15:16.329]                  ChicagoRegional-n_500: ---------- ChicagoRegional-n_500 (n = 52, m = 50, k = 24) ----------
+[2022-01-16 19:15:16.329]                  ChicagoRegional-n_500: Found 0 cyclic sub graph(s) with n = []
+[2022-01-16 19:15:16.329]                  ChicagoRegional-n_500: Removed 52 nodes in preprocessing, starting with k = 24
+[2022-01-16 19:15:16.330]                  ChicagoRegional-n_500: Preprocessing: 0 ms, Packing: 0 ms, ILP: 0 ms
+[2022-01-16 19:15:16.330]                  ChicagoRegional-n_500: Found solution with k = 24 in 0ms
+[2022-01-16 19:15:16.331]                 ChicagoRegional-n_5000: ---------- ChicagoRegional-n_5000 (n = 3710, m = 5774, k = 1484) ----------
+[2022-01-16 19:15:16.332]                 ChicagoRegional-n_5000: Found 20 cyclic sub graph(s) with n = [3, 4, 4, 3, 3, 4, 4, 4, 6, 3, 4, 3, 5, 4, 3, 6, 3, 3, 10, 4]
+[2022-01-16 19:15:16.333]                 ChicagoRegional-n_5000: Removed 3627 nodes in preprocessing, starting with k = 1438
+[2022-01-16 19:15:16.402]                 ChicagoRegional-n_5000: Preprocessing: 0 ms, Packing: 0 ms, ILP: 41 ms
+[2022-01-16 19:15:16.402]                 ChicagoRegional-n_5000: Found solution with k = 1484 in 70ms
+[2022-01-16 19:15:16.404]                 ChicagoRegional-n_6000: ---------- ChicagoRegional-n_6000 (n = 4927, m = 8488, k = 1987) ----------
+[2022-01-16 19:15:16.406]                 ChicagoRegional-n_6000: Found 48 cyclic sub graph(s) with n = [4, 4, 3, 5, 4, 9, 3, 4, 4, 8, 4, 4, 4, 4, 4, 13, 4, 4, 4, 3, 8, 4, 3, 3, 3, 3, 4, 6, 3, 5, 5, 4, 6, 8, 13, 3, 4, 3, 4, 3, 4, 3, 7, 4, 4, 3, 5, 3]
+[2022-01-16 19:15:16.406]                 ChicagoRegional-n_6000: Removed 4703 nodes in preprocessing, starting with k = 1865
+[2022-01-16 19:15:16.573]                 ChicagoRegional-n_6000: Preprocessing: 1 ms, Packing: 0 ms, ILP: 102 ms
+[2022-01-16 19:15:16.574]                 ChicagoRegional-n_6000: Found solution with k = 1987 in 168ms
+[2022-01-16 19:15:16.577]                 ChicagoRegional-n_7000: ---------- ChicagoRegional-n_7000 (n = 6106, m = 11328, k = 2495) ----------
+[2022-01-16 19:15:16.579]                 ChicagoRegional-n_7000: Found 52 cyclic sub graph(s) with n = [4, 7, 3, 3, 4, 9, 3, 4, 3, 7, 8, 4, 9, 4, 4, 3, 3, 3, 5, 4, 6, 3, 7, 9, 3, 3, 3, 3, 11, 3, 3, 5, 4, 3, 6, 3, 6, 3, 5, 11, 12, 3, 11, 14, 4, 3, 6, 3, 3, 4, 4, 3]
+[2022-01-16 19:15:16.579]                 ChicagoRegional-n_7000: Removed 5842 nodes in preprocessing, starting with k = 2347
+[2022-01-16 19:15:16.753]                 ChicagoRegional-n_7000: Preprocessing: 2 ms, Packing: 0 ms, ILP: 109 ms
+[2022-01-16 19:15:16.753]                 ChicagoRegional-n_7000: Found solution with k = 2495 in 175ms
+[2022-01-16 19:15:16.757]                 ChicagoRegional-n_8000: ---------- ChicagoRegional-n_8000 (n = 7282, m = 14765, k = 3028) ----------
+[2022-01-16 19:15:16.759]                 ChicagoRegional-n_8000: Found 71 cyclic sub graph(s) with n = [5, 14, 4, 19, 3, 8, 4, 5, 11, 4, 8, 8, 8, 5, 13, 4, 3, 8, 3, 3, 4, 4, 11, 6, 4, 4, 7, 7, 3, 4, 6, 4, 9, 4, 36, 14, 3, 6, 26, 3, 3, 6, 12, 9, 8, 10, 16, 3, 4, 3, 5, 8, 4, 4, 10, 3, 3, 3, 4, 6, 5, 9, 4, 4, 4, 4, 4, 3, 4, 5, 3]
+[2022-01-16 19:15:16.759]                 ChicagoRegional-n_8000: Removed 6804 nodes in preprocessing, starting with k = 2772
+[2022-01-16 19:15:17.032]                 ChicagoRegional-n_8000: Preprocessing: 2 ms, Packing: 0 ms, ILP: 176 ms
+[2022-01-16 19:15:17.033]                 ChicagoRegional-n_8000: Found solution with k = 3028 in 275ms
+[2022-01-16 19:15:17.038]                 ChicagoRegional-n_9000: ---------- ChicagoRegional-n_9000 (n = 8479, m = 19095, k = 3651) ----------
+[2022-01-16 19:15:17.042]                 ChicagoRegional-n_9000: Found 90 cyclic sub graph(s) with n = [34, 39, 10, 37, 3, 15, 4, 4, 13, 5, 36, 3, 12, 9, 4, 5, 3, 4, 5, 13, 3, 21, 8, 11, 9, 12, 6, 4, 3, 3, 7, 30, 5, 10, 50, 9, 3, 7, 11, 5, 19, 4, 8, 3, 11, 6, 5, 20, 14, 21, 4, 14, 20, 10, 4, 8, 6, 6, 13, 3, 5, 5, 7, 4, 6, 4, 6, 5, 15, 6, 9, 5, 4, 19, 4, 5, 7, 4, 9, 4, 3, 4, 5, 4, 4, 4, 5, 3, 8, 4]
+[2022-01-16 19:15:17.042]                 ChicagoRegional-n_9000: Removed 7628 nodes in preprocessing, starting with k = 3198
+[2022-01-16 19:15:17.426]                 ChicagoRegional-n_9000: Preprocessing: 3 ms, Packing: 1 ms, ILP: 251 ms
+[2022-01-16 19:15:17.427]                 ChicagoRegional-n_9000: Found solution with k = 3651 in 388ms
+[2022-01-16 19:15:17.427]                           health-n_100: ---------- health-n_100 (n = 23, m = 18, k = 4) ----------
+[2022-01-16 19:15:17.427]                           health-n_100: Found 0 cyclic sub graph(s) with n = []
+[2022-01-16 19:15:17.427]                           health-n_100: Removed 23 nodes in preprocessing, starting with k = 4
+[2022-01-16 19:15:17.428]                           health-n_100: Preprocessing: 0 ms, Packing: 0 ms, ILP: 0 ms
+[2022-01-16 19:15:17.428]                           health-n_100: Found solution with k = 4 in 0ms
+[2022-01-16 19:15:17.428]                          health-n_1000: ---------- health-n_1000 (n = 934, m = 2008, k = 231) ----------
+[2022-01-16 19:15:17.429]                          health-n_1000: Found 9 cyclic sub graph(s) with n = [4, 4, 3, 3, 4, 3, 3, 3, 3]
+[2022-01-16 19:15:17.429]                          health-n_1000: Removed 904 nodes in preprocessing, starting with k = 211
+[2022-01-16 19:15:17.457]                          health-n_1000: Preprocessing: 0 ms, Packing: 0 ms, ILP: 16 ms
+[2022-01-16 19:15:17.457]                          health-n_1000: Found solution with k = 231 in 28ms
+[2022-01-16 19:15:17.458]                          health-n_1500: ---------- health-n_1500 (n = 1451, m = 4642, k = 446) ----------
+[2022-01-16 19:15:17.460]                          health-n_1500: Found 17 cyclic sub graph(s) with n = [5, 3, 3, 184, 4, 3, 8, 3, 3, 3, 6, 3, 3, 3, 3, 3, 3]
+[2022-01-16 19:15:17.460]                          health-n_1500: Removed 1261 nodes in preprocessing, starting with k = 341
+[2022-01-16 19:15:17.526]                          health-n_1500: Preprocessing: 1 ms, Packing: 0 ms, ILP: 44 ms
+[2022-01-16 19:15:17.527]                          health-n_1500: Found solution with k = 446 in 67ms
+[2022-01-16 19:15:17.527]                           health-n_200: ---------- health-n_200 (n = 94, m = 87, k = 17) ----------
+[2022-01-16 19:15:17.527]                           health-n_200: Found 0 cyclic sub graph(s) with n = []
+[2022-01-16 19:15:17.527]                           health-n_200: Removed 94 nodes in preprocessing, starting with k = 17
+[2022-01-16 19:15:17.528]                           health-n_200: Preprocessing: 0 ms, Packing: 0 ms, ILP: 0 ms
+[2022-01-16 19:15:17.528]                           health-n_200: Found solution with k = 17 in 0ms
+[2022-01-16 19:15:17.530]                          health-n_2000: ---------- health-n_2000 (n = 1973, m = 7956, k = 674) ----------
+[2022-01-16 19:15:17.536]                          health-n_2000: Found 3 cyclic sub graph(s) with n = [795, 3, 3]
+[2022-01-16 19:15:17.536]                          health-n_2000: Removed 1172 nodes in preprocessing, starting with k = 297
+[2022-01-16 19:15:17.779]                          health-n_2000: Preprocessing: 6 ms, Packing: 1 ms, ILP: 213 ms
+[2022-01-16 19:15:17.779]                          health-n_2000: Found solution with k = 674 in 248ms
+[2022-01-16 19:15:17.782]                          health-n_2542: ---------- health-n_2542 (n = 2539, m = 12969, k = 960) ----------
+[2022-01-16 19:15:17.804]                          health-n_2542: Found 2 cyclic sub graph(s) with n = [1505, 3]
+[2022-01-16 19:15:17.805]                          health-n_2542: Removed 1031 nodes in preprocessing, starting with k = 235
+[2022-01-16 19:15:19.001]                          health-n_2542: Preprocessing: 22 ms, Packing: 5 ms, ILP: 1127 ms
+[2022-01-16 19:15:19.001]                          health-n_2542: Found solution with k = 960 in 1s
+[2022-01-16 19:15:19.001]                            health-n_50: ---------- health-n_50 (n = 10, m = 7, k = 2) ----------
+[2022-01-16 19:15:19.001]                            health-n_50: Found 0 cyclic sub graph(s) with n = []
+[2022-01-16 19:15:19.002]                            health-n_50: Removed 10 nodes in preprocessing, starting with k = 2
+[2022-01-16 19:15:19.002]                            health-n_50: Preprocessing: 0 ms, Packing: 0 ms, ILP: 0 ms
+[2022-01-16 19:15:19.002]                            health-n_50: Found solution with k = 2 in 0ms
+[2022-01-16 19:15:19.003]                           health-n_500: ---------- health-n_500 (n = 388, m = 490, k = 67) ----------
+[2022-01-16 19:15:19.003]                           health-n_500: Found 1 cyclic sub graph(s) with n = [4]
+[2022-01-16 19:15:19.003]                           health-n_500: Removed 384 nodes in preprocessing, starting with k = 65
+[2022-01-16 19:15:19.007]                           health-n_500: Preprocessing: 0 ms, Packing: 0 ms, ILP: 2 ms
+[2022-01-16 19:15:19.007]                           health-n_500: Found solution with k = 67 in 3ms
+[2022-01-16 19:15:19.008]                          link-kv-n_100: ---------- link-kv-n_100 (n = 18, m = 22, k = 8) ----------
+[2022-01-16 19:15:19.008]                          link-kv-n_100: Found 2 cyclic sub graph(s) with n = [3, 3]
+[2022-01-16 19:15:19.008]                          link-kv-n_100: Removed 12 nodes in preprocessing, starting with k = 4
+[2022-01-16 19:15:19.014]                          link-kv-n_100: Preprocessing: 0 ms, Packing: 0 ms, ILP: 3 ms
+[2022-01-16 19:15:19.014]                          link-kv-n_100: Found solution with k = 8 in 5ms
+[2022-01-16 19:15:19.016]                         link-kv-n_1000: ---------- link-kv-n_1000 (n = 644, m = 4081, k = 234) ----------
+[2022-01-16 19:15:19.017]                         link-kv-n_1000: Found 14 cyclic sub graph(s) with n = [9, 5, 4, 129, 6, 3, 5, 4, 5, 4, 6, 5, 16, 3]
+[2022-01-16 19:15:19.017]                         link-kv-n_1000: Removed 440 nodes in preprocessing, starting with k = 63
+[2022-01-16 19:15:19.134]                         link-kv-n_1000: Preprocessing: 1 ms, Packing: 0 ms, ILP: 82 ms
+[2022-01-16 19:15:19.134]                         link-kv-n_1000: Found solution with k = 234 in 118ms
+[2022-01-16 19:15:19.137]                         link-kv-n_1500: ---------- link-kv-n_1500 (n = 1054, m = 8494, k = 391) ----------
+[2022-01-16 19:15:19.140]                         link-kv-n_1500: Found 15 cyclic sub graph(s) with n = [5, 256, 5, 4, 6, 7, 2, 9, 13, 6, 5, 15, 3, 7, 8]
+[2022-01-16 19:15:19.140]                         link-kv-n_1500: Removed 705 nodes in preprocessing, starting with k = 101
+[2022-01-16 19:15:19.515]                         link-kv-n_1500: Preprocessing: 3 ms, Packing: 1 ms, ILP: 303 ms
+[2022-01-16 19:15:19.516]                         link-kv-n_1500: Found solution with k = 391 in 378ms
+[2022-01-16 19:15:19.516]                          link-kv-n_200: ---------- link-kv-n_200 (n = 90, m = 139, k = 20) ----------
+[2022-01-16 19:15:19.516]                          link-kv-n_200: Found 4 cyclic sub graph(s) with n = [5, 3, 3, 3]
+[2022-01-16 19:15:19.516]                          link-kv-n_200: Removed 76 nodes in preprocessing, starting with k = 10
+[2022-01-16 19:15:19.528]                          link-kv-n_200: Preprocessing: 0 ms, Packing: 0 ms, ILP: 6 ms
+[2022-01-16 19:15:19.528]                          link-kv-n_200: Found solution with k = 20 in 11ms
+[2022-01-16 19:15:19.534]                         link-kv-n_2000: ---------- link-kv-n_2000 (n = 1772, m = 19901, k = 565) ----------
+[2022-01-16 19:15:19.544]                         link-kv-n_2000: Found 20 cyclic sub graph(s) with n = [6, 3, 5, 453, 6, 4, 14, 3, 6, 3, 3, 23, 3, 3, 3, 11, 3, 3, 3, 4]
+[2022-01-16 19:15:19.545]                         link-kv-n_2000: Removed 1210 nodes in preprocessing, starting with k = 112
+[2022-01-16 19:15:20.303]                         link-kv-n_2000: Preprocessing: 10 ms, Packing: 9 ms, ILP: 661 ms
+[2022-01-16 19:15:20.303]                         link-kv-n_2000: Found solution with k = 565 in 769ms
+[2022-01-16 19:15:20.315]                         link-kv-n_3000: ---------- link-kv-n_3000 (n = 2540, m = 39796, k = 900) ----------
+[2022-01-16 19:15:20.333]                         link-kv-n_3000: Found 27 cyclic sub graph(s) with n = [4, 713, 5, 4, 3, 4, 3, 4, 10, 3, 29, 25, 4, 4, 7, 13, 3, 40, 11, 3, 3, 3, 5, 6, 6, 3, 3]
+[2022-01-16 19:15:20.334]                         link-kv-n_3000: Removed 1620 nodes in preprocessing, starting with k = 174
+[2022-01-16 19:15:25.449]                         link-kv-n_3000: Preprocessing: 18 ms, Packing: 31 ms, ILP: 4899 ms
+[2022-01-16 19:15:25.450]                         link-kv-n_3000: Found solution with k = 900 in 5s
+[2022-01-16 19:15:25.472]                         link-kv-n_4000: ---------- link-kv-n_4000 (n = 3777, m = 69389, k = -1) ----------
+[2022-01-16 19:15:25.505]                         link-kv-n_4000: Found 21 cyclic sub graph(s) with n = [5, 1256, 3, 17, 5, 4, 3, 32, 3, 10, 6, 8, 4, 3, 3, 3, 4, 9, 3, 5, 3]
+[2022-01-16 19:15:25.505]                         link-kv-n_4000: Removed 2389 nodes in preprocessing, starting with k = 200
