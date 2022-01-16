@@ -56,7 +56,7 @@ public abstract class ILPSolver {
                 //Check if there is no cycle
                 if(DAG.isDAG(subGraph)) continue;
 
-                List<Integer> S = new ILPSolverOrdering(subGraph, Timer.getSecondsLeft()).solve(false, false, true, false);
+                List<Integer> S = new ILPSolverLazyCycles(subGraph, Timer.getSecondsLeft()).solve(true);
                 instance.S.addAll(S);
             }
         } catch (TimeoutException e) {

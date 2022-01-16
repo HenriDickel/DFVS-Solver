@@ -4,7 +4,6 @@ import program.model.Graph;
 import program.model.Node;
 import program.utils.PerformanceTimer;
 import program.utils.TimeoutException;
-import program.utils.Timer;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -136,11 +135,9 @@ public class ILPSolverOrdering extends GRBCallback{
                 }
             }
 
-            //Dispose
             model.dispose();
             env.dispose();
 
-            //Return
             return result;
 
         } catch (GRBException e) {
