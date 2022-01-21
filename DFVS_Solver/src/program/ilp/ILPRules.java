@@ -32,7 +32,7 @@ public abstract class ILPRules {
     }
 
     public static void addInitialCircleConstraints(GRBModel model, Graph graph) throws GRBException {
-        List<Cycle> cycles = FullBFS.getAllShortestCycles(graph);
+        List<Cycle> cycles = new FullBFS().getAllShortestCycles(graph);
         int index = 0;
         for(Cycle cycle: cycles) {
             GRBLinExpr expr = new GRBLinExpr();

@@ -59,6 +59,7 @@ public abstract class PerformanceTimer {
                 millisILP += millis;
                 break;
         }
+        startTime = System.nanoTime();
     }
 
     public static long getPackingMillis() {
@@ -71,7 +72,7 @@ public abstract class PerformanceTimer {
     }
 
     public static void printILPResult() {
-        Log.debugLog(Solver.instance.NAME, "Preprocessing: " + millisPreprocessing / 1000000 + " ms, Packing: " + millisPacking / 1000000 + " ms, ILP: " + millisILP / 1000000 + " ms");
+        Log.debugLog(Solver.instance.NAME, "Preprocessing: " + millisPreprocessing / 1000000 + " ms, BFS: " + millisBFS / 1000000 + " ms, Packing: " + millisPacking / 1000000 + " ms, ILP: " + millisILP / 1000000 + " ms");
     }
 
     public static void reset() {
@@ -83,5 +84,6 @@ public abstract class PerformanceTimer {
         millisReduction = 0;
         millisPacking = 0;
         millisILP = 0;
+        startTime = System.nanoTime();
     }
 }

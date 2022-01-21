@@ -10,9 +10,9 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public abstract class FullBFS {
+public class FullBFS {
 
-    public static Cycle findShortestCycle(Graph graph){
+    public Cycle findShortestCycle(Graph graph){
 
         List<Cycle> cycles = graph.getPairCycles(); // TODO in rare cases (e.g. 'email'), it can be beneficial to break after the first cycle is found
         int minSize = 2;
@@ -21,7 +21,7 @@ public abstract class FullBFS {
         if(cycles.size() == 0) {
             minSize = Integer.MAX_VALUE;
             for (Node node : graph.getNodes()) { // Find the best cycle for each node
-                Cycle cycle = SimpleBFS.findBestCycle(graph, node, minSize);
+                Cycle cycle = new SimpleBFS().findBestCycle(graph, node, minSize);
 
                 // Replace the min branch size when found better one
                 if (cycle != null) {
@@ -70,13 +70,13 @@ public abstract class FullBFS {
         return shortestCycle;
     }
 
-    public static List<Cycle> getAllShortestCycles(Graph graph) {
+    public List<Cycle> getAllShortestCycles(Graph graph) {
 
         List<Cycle> cycles = new ArrayList<>();
 
         // Find the best cycle for each node
         for (Node node : graph.getNodes()) {
-            Cycle cycle = SimpleBFS.findBestCycle(graph, node, Integer.MAX_VALUE);
+            Cycle cycle = new SimpleBFS().findBestCycle(graph, node, Integer.MAX_VALUE);
             if(cycle != null) cycles.add(cycle);
         }
         return cycles;

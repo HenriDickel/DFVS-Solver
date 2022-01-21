@@ -1,3 +1,3 @@
-[2022-01-16 19:39:02.130]  synth-n_1300-m_104213-k_200-p_0.1.txt: ---------- synth-n_1300-m_104213-k_200-p_0.1.txt (n = 1300, m = 104213, k = -1) ----------
-[2022-01-16 19:39:02.227]  synth-n_1300-m_104213-k_200-p_0.1.txt: Found 1 cyclic sub graph(s) with n = [1300]
-[2022-01-16 19:39:02.234]  synth-n_1300-m_104213-k_200-p_0.1.txt: Removed 0 nodes in preprocessing, starting with k = 0
+[2022-01-21 01:17:12.031] synth-n_4000-m_1691611-k_150-p_0.2.txt: ---------- synth-n_4000-m_1691611-k_150-p_0.2.txt (n = 4000, m = 1691611, k = -1) ----------
+[2022-01-21 01:17:15.959] synth-n_4000-m_1691611-k_150-p_0.2.txt: Found 1 cyclic sub graph(s) with n = [4000]
+[2022-01-21 01:17:15.966] synth-n_4000-m_1691611-k_150-p_0.2.txt: Removed 0 nodes in preprocessing, starting with k = 0

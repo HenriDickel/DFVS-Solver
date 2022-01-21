@@ -2,6 +2,8 @@ package program.ilp;
 import gurobi.*;
 import program.algo.DAG;
 import program.algo.FullBFS;
+import program.algo.Reduction;
+import program.log.Log;
 import program.model.Cycle;
 import program.model.Graph;
 import program.model.Node;
@@ -9,6 +11,7 @@ import program.utils.PerformanceTimer;
 import program.utils.TimeoutException;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -16,11 +19,9 @@ public class ILPSolverLazyCycles  extends GRBCallback{
 
     private GRBModel model;
     private final Graph graph;
-    private final long secondsLeft;
 
-    public ILPSolverLazyCycles(Graph graph, long secondsLeft) {
+    public ILPSolverLazyCycles(Graph graph) {
         this.graph = graph;
-        this.secondsLeft = secondsLeft;
     }
 
     protected void callback() {
@@ -46,7 +47,9 @@ public class ILPSolverLazyCycles  extends GRBCallback{
                 if(!DAG.isDAG(copy)){
                     GRBLinExpr expr;
                     //Find new cycle
-                    Cycle cycle = FullBFS.findShortestCycle(copy);
+                    PerformanceTimer.log(PerformanceTimer.MethodType.ILP);
+                    Cycle cycle = new FullBFS().findShortestCycle(copy);
+                    PerformanceTimer.log(PerformanceTimer.MethodType.BFS);
                     //Add new lazy constraint
                     expr = new GRBLinExpr();
                     for(Node node: cycle.getNodes()){
@@ -61,13 +64,12 @@ public class ILPSolverLazyCycles  extends GRBCallback{
             System.out.println(e.getMessage());
             e.printStackTrace();
         } catch (Exception e) {
-            System.out.println("Error during callback");
-            e.printStackTrace();
+            Log.debugLog("GUROBI", "Error during callback: " + e.getMessage());
         }
     }
 
 
-    public List<Integer> solve(boolean useCyclePackingConstraints) {
+    public List<Integer> solve(long TIME_OUT, boolean useCyclePackingConstraints) {
 
         try {
             // Create empty environment, set options, and start
@@ -76,19 +78,17 @@ public class ILPSolverLazyCycles  extends GRBCallback{
             env.set(GRB.IntParam.OutputFlag,0);
             env.start();
 
-            //Get all nodes
-            List<Node> g = graph.getNodes();
-
             // Create empty model
             this.model = new GRBModel(env);
             //Set time limit and limit system output
             model.set(GRB.IntParam.OutputFlag, 0);
-            model.set(GRB.DoubleParam.TimeLimit, secondsLeft);
+            model.set(GRB.IntParam.Threads, 1);
+            model.set(GRB.DoubleParam.TimeLimit, TIME_OUT);
             model.set(GRB.IntParam.LazyConstraints, 1);
 
             //Add a variable X for every node in the graph
             GRBLinExpr expr = new GRBLinExpr();
-            for(Node node: g){
+            for(Node node: graph.getNodes()){
                 GRBVar x = model.addVar(0.0, 1.0, 0.0, GRB.BINARY, "x" +node.id);
                 expr.addTerm(1.0, x);
             }
@@ -98,7 +98,9 @@ public class ILPSolverLazyCycles  extends GRBCallback{
 
             //Find first cycle and add its constraint, the sum of all Xs of a cycle needs to be >=1 (at least one node needs to be deleted from the cycle)
 
-            Cycle cycle = FullBFS.findShortestCycle(graph);
+            PerformanceTimer.log(PerformanceTimer.MethodType.ILP);
+            Cycle cycle = new FullBFS().findShortestCycle(graph);
+            PerformanceTimer.log(PerformanceTimer.MethodType.BFS);
             expr = new GRBLinExpr();
             for(Node node: cycle.getNodes()){
                 GRBVar x = model.getVarByName("x" + node.id);
@@ -108,15 +110,17 @@ public class ILPSolverLazyCycles  extends GRBCallback{
 
             model.update();
 
-            if(useCyclePackingConstraints) ILPRules.addCyclePackingConstraint(model, graph);
+            if(useCyclePackingConstraints) {
+                PerformanceTimer.log(PerformanceTimer.MethodType.ILP);
+                ILPRules.addCyclePackingConstraint(model, graph);
+                PerformanceTimer.log(PerformanceTimer.MethodType.PACKING);
+            }
 
             //Callback setup
             model.setCallback(this);
 
             // Solve model and capture solution information
-            PerformanceTimer.start();
             model.optimize();
-            PerformanceTimer.log(PerformanceTimer.MethodType.ILP);
 
             // Return no solution when timeout
             int status = model.get(GRB.IntAttr.Status);
@@ -136,6 +140,7 @@ public class ILPSolverLazyCycles  extends GRBCallback{
             model.dispose();
             env.dispose();
 
+            PerformanceTimer.log(PerformanceTimer.MethodType.ILP);
             return result;
 
         } catch (GRBException e) {

@@ -8,8 +8,6 @@ import program.log.Log;
 import program.model.Graph;
 import program.model.Instance;
 import program.utils.PerformanceTimer;
-import program.utils.TimeoutException;
-import program.utils.Timer;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -17,21 +15,15 @@ import java.util.stream.Collectors;
 public abstract class ILPSolver {
 
 
-    public static void dfvsSolveInstance(Instance instance) {
+    public static void dfvsSolveInstance(Instance instance, long TIME_OUT) {
 
         //Set instance & branch count
         Solver.instance = instance;
-
-        // Start Timer
-        Timer.start();
-
-        Log.debugLog(instance.NAME, "---------- " + instance.NAME + " (n = " + instance.N + ", m = " + instance.M + ", k = " + instance.OPTIMAL_K + ") ----------");
 
         Graph initialGraph = instance.subGraphs.get(0);
 
         // Preprocessing
         PerformanceTimer.reset();
-        PerformanceTimer.start();
         List<Integer> reduceS = Reduction.applyRules(initialGraph, true);
         instance.S.addAll(reduceS);
 
@@ -50,31 +42,14 @@ public abstract class ILPSolver {
         instance.startK = instance.S.size();
         Log.debugLog(instance.NAME, "Removed " + instance.preRemovedNodes + " nodes in preprocessing, starting with k = " + instance.startK);
 
-        try {
-            for(Graph subGraph: instance.subGraphs) {
+        for(Graph subGraph: instance.subGraphs) {
 
-                //Check if there is no cycle
-                if(DAG.isDAG(subGraph)) continue;
+            //Check if there is no cycle
+            if(DAG.isDAG(subGraph)) continue;
 
-                List<Integer> S = new ILPSolverLazyCycles(subGraph, Timer.getSecondsLeft()).solve(true);
-                instance.S.addAll(S);
-            }
-        } catch (TimeoutException e) {
-            Long millis = Timer.stop();
-            Log.ilpLog(instance, millis, false);
-            Log.detailLog(instance);
-            PerformanceTimer.printILPResult();
-            Log.debugLog(instance.NAME, "Found no solution in " + Timer.format(millis), true);
-            return;
+            //List<Integer> S = new ILPSolverOrdering(subGraph).solve(false, false, true, false);
+            List<Integer> S = new ILPSolverOrdering(subGraph).solve(TIME_OUT, false, false, true, false);
+            instance.S.addAll(S);
         }
-
-        // Stop Timer
-        Long millis = Timer.stop();
-
-        // Log
-        instance.solvedK = instance.S.size();
-        Log.ilpLog(instance, millis, true);
-        PerformanceTimer.printILPResult();
-        Log.debugLog(instance.NAME, "Found solution with k = " + instance.S.size() + " in " + Timer.format(millis), false);
     }
 }

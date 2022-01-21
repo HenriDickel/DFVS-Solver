@@ -96,7 +96,7 @@ public abstract class Log {
 
         try(PrintWriter output = new PrintWriter(new FileWriter(ILP_LOG_PATH,true)))
         {
-            output.println(instance.NAME + "," + instance.N + "," + instance.M + "," + instance.preRemovedNodes + "," + instance.startK + "," + instance.OPTIMAL_K + "," + instance.solvedK + "," + verified + "," + millis);
+            output.println(instance.NAME + "," + instance.N + "," + instance.M + "," + instance.preRemovedNodes + "," + instance.startK + "," + instance.OPTIMAL_K + "," + instance.S.size() + "," + verified + "," + millis);
         }
         catch (Exception ignored) {}
     }

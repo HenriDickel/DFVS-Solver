@@ -6,10 +6,17 @@ import program.ilp.ILPSolver;
 import program.log.Log;
 import program.model.*;
 import program.utils.InstanceCreator;
+import program.utils.PerformanceTimer;
+import program.utils.Timer;
 
 import java.util.List;
+import java.util.concurrent.*;
 
 public class Main {
+
+    private static final int TIME_OUT = 90;
+
+    private static Instance instance;
 
     public static void main(String[] args) throws GRBException {
 
@@ -25,7 +32,7 @@ public class Main {
             Instance instance = InstanceCreator.createFromFile(new GraphFile("", fileName));
 
             // Solve
-            ILPSolver.dfvsSolveInstance(instance);
+            ILPSolver.dfvsSolveInstance(instance, TIME_OUT);
 
             // Print solution
             for(Integer nodeId : instance.S){
@@ -40,12 +47,57 @@ public class Main {
             Log.Clear();
             Log.ignore = false;
 
-            List<GraphFile> files = InstanceCreator.getComplexAndSyntheticFiles("synth-n_1300-m_104213-k_200-p_0.1.txt");
+            List<GraphFile> files = InstanceCreator.getComplexAndSyntheticFiles("synth-n_4000-m_1691611-k_150-p_0.2.txt");
             for(GraphFile file: files) {
+                long startTime = System.currentTimeMillis();
                 Instance instance = InstanceCreator.createFromFile(file);
-                ILPSolver.dfvsSolveInstance(instance);
+                Log.debugLog(instance.NAME, "---------- " + instance.NAME + " (n = " + instance.N + ", m = " + instance.M + ", k = " + instance.OPTIMAL_K + ") ----------");
+                ILPSolver.dfvsSolveInstance(instance, TIME_OUT);
+                long millis = (System.currentTimeMillis() - startTime);
+                if(millis > TIME_OUT * 1000) {
+                    // Log solution
+                    PerformanceTimer.printILPResult();
+                    Log.ilpLog(instance, millis, false);
+                    Log.debugLog(instance.NAME, "Found no solution in " + Timer.format(millis), true);
+                } else {
+                    // Log solution
+                    PerformanceTimer.printILPResult();
+                    Log.ilpLog(instance, millis, true);
+                    Log.debugLog(instance.NAME, "Found solution with k = " + instance.S.size() + " in " + Timer.format(millis), false);
+                }
             }
         }
+    }
+
+    private static void run(GraphFile file) {
+        ExecutorService executor = Executors.newSingleThreadExecutor();
+        Future<Long> future = executor.submit(() -> {
+            long startTime = System.currentTimeMillis();
+            instance = InstanceCreator.createFromFile(file);
+            Log.debugLog(instance.NAME, "---------- " + instance.NAME + " (n = " + instance.N + ", m = " + instance.M + ", k = " + instance.OPTIMAL_K + ") ----------");
+            ILPSolver.dfvsSolveInstance(instance, TIME_OUT);
+            return (System.currentTimeMillis() - startTime);
+        });
+
+        long millis = TIME_OUT * 1000;
+        try {
+            millis = future.get(TIME_OUT, TimeUnit.SECONDS);
+        } catch (TimeoutException | InterruptedException | ExecutionException e) {
+            future.cancel(true);
+            executor.shutdownNow();
+
+            // Log solution
+            PerformanceTimer.printILPResult();
+            Log.ilpLog(instance, millis, false);
+            Log.debugLog(instance.NAME, "Found no solution in " + Timer.format(millis), true);
+            return;
+        }
+        executor.shutdownNow();
+
+        // Log solution
+        PerformanceTimer.printILPResult();
+        Log.ilpLog(instance, millis, true);
+        Log.debugLog(instance.NAME, "Found solution with k = " + instance.S.size() + " in " + Timer.format(millis), false);
     }
 
     private static void testLowerBoundPerformance(List<GraphFile> files) {

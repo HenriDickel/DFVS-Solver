@@ -13,11 +13,9 @@ public class ILPSolverOrdering extends GRBCallback{
 
     private GRBModel model;
     private Graph graph;
-    private long secondsLeft;
 
-    public ILPSolverOrdering(Graph graph, long secondsLeft) {
+    public ILPSolverOrdering(Graph graph) {
         this.graph = graph;
-        this.secondsLeft = secondsLeft;
     }
 
     @Override
@@ -48,21 +46,22 @@ public class ILPSolverOrdering extends GRBCallback{
         }
     }
 
-    public List<Integer> solve(boolean useFullyUpgradedConstraints, boolean useInitalCirclesConstraints, boolean useCyclePackingConstraints, boolean useCallback){
+    public List<Integer> solve(long TIME_OUT, boolean useFullyUpgradedConstraints, boolean useInitalCirclesConstraints, boolean useCyclePackingConstraints, boolean useCallback){
 
         try {
             // Create empty environment, set options, and start
             GRBEnv env = new GRBEnv(true);
             env.set("logFile", "DFVS.log");
-            env.set(GRB.IntParam.OutputFlag,0);
+            env.set(GRB.IntParam.OutputFlag, 0);
             env.start();
 
             // Create empty model
             GRBModel model = new GRBModel(env);
 
             //Set time limit and limit command line output (comment out to lines of code enable it)
-            model.set(GRB.DoubleParam.TimeLimit, secondsLeft);
             model.set(GRB.IntParam.OutputFlag, 0);
+            model.set(GRB.IntParam.Threads, 1);
+            model.set(GRB.DoubleParam.TimeLimit, TIME_OUT);
             model.set(GRB.DoubleParam.Heuristics, 0.0);
 
             //Get all Nodes
