@@ -25,13 +25,14 @@ public abstract class ILPSolver {
         // Start Timer
         Timer.start();
 
+        PerformanceTimer.reset();
+        PerformanceTimer.start();
+
         Log.debugLog(instance.NAME, "---------- " + instance.NAME + " (n = " + instance.N + ", m = " + instance.M + ", k = " + instance.OPTIMAL_K + ") ----------");
 
         Graph initialGraph = instance.subGraphs.get(0);
 
         // Preprocessing
-        PerformanceTimer.reset();
-        PerformanceTimer.start();
         List<Integer> reduceS = Reduction.applyRules(initialGraph, true);
         instance.S.addAll(reduceS);
 
@@ -56,11 +57,11 @@ public abstract class ILPSolver {
                 //Check if there is no cycle
                 if(DAG.isDAG(subGraph)) continue;
 
-                List<Integer> S = new ILPSolverLazyCycles(subGraph, Timer.getSecondsLeft()).solve(true);
+                List<Integer> S = new ILPSolverLazyCycles(subGraph, Timer.getSecondsLeft()).solve(instance, true);
                 instance.S.addAll(S);
             }
         } catch (TimeoutException e) {
-            Long millis = Timer.stop();
+            long millis = Timer.timeout * 1000;
             Log.ilpLog(instance, millis, false);
             Log.detailLog(instance);
             PerformanceTimer.printILPResult();
@@ -69,12 +70,14 @@ public abstract class ILPSolver {
         }
 
         // Stop Timer
-        Long millis = Timer.stop();
+        long millis = Timer.stop();
 
         // Log
         instance.solvedK = instance.S.size();
-        Log.ilpLog(instance, millis, true);
+        boolean verified = millis < Timer.timeout * 1000;
+        if(millis > Timer.timeout * 1000) millis = Timer.timeout * 1000;
+        Log.ilpLog(instance, millis, verified);
         PerformanceTimer.printILPResult();
-        Log.debugLog(instance.NAME, "Found solution with k = " + instance.S.size() + " in " + Timer.format(millis), false);
+        Log.debugLog(instance.NAME, "Found solution with k = " + instance.S.size() + " in " + Timer.format(millis), !verified);
     }
 }

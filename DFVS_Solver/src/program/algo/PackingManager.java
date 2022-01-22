@@ -137,7 +137,6 @@ public class PackingManager {
         while(!DAG.isDAGFast(packingGraph)) {
             Cycle cycle = LightBFS.findShortestCycle(packingGraph);
 
-            if(cycle.size() == 3) PackingRules.upgradeTriforce(cycle, packingGraph);
             if(cycle.size() == 3) PackingRules.upgradeK2Penta(cycle, packingGraph);
 
             for (Node node : cycle.getNodes()) {

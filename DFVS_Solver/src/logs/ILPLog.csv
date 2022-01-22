@@ -1,1 +1,2 @@
-name,n,m,pre_removed_nodes,k_start,k_optimal,k_solved,verified,millis
+name,n,m,pre_removed_nodes,k_start,k_optimal,k_solved,num_constraints,verified,millis
+synth-n_4000-m_1721128-k_200-p_0.2.txt,4000,1721128,0,0,-1,0,109,false,90000

@@ -3,6 +3,7 @@ package program.ilp;
 import gurobi.*;
 import program.algo.FullBFS;
 import program.algo.PackingManager;
+import program.log.Log;
 import program.model.Cycle;
 import program.model.Graph;
 import program.model.Node;
@@ -59,6 +60,7 @@ public abstract class ILPRules {
             model.addConstr(expr,GRB.GREATER_EQUAL, cycle.getK(), "cycle-" + index++);
         }
         model.update();
+        Log.debugLog("GUROBI", "Added " + pm.getPacking().size() + " cycle packing constraints to ILP Solver");
     }
 
 }

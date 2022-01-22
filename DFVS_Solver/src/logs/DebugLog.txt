@@ -1,3 +1,12 @@
-[2022-01-16 19:39:02.130]  synth-n_1300-m_104213-k_200-p_0.1.txt: ---------- synth-n_1300-m_104213-k_200-p_0.1.txt (n = 1300, m = 104213, k = -1) ----------
-[2022-01-16 19:39:02.227]  synth-n_1300-m_104213-k_200-p_0.1.txt: Found 1 cyclic sub graph(s) with n = [1300]
-[2022-01-16 19:39:02.234]  synth-n_1300-m_104213-k_200-p_0.1.txt: Removed 0 nodes in preprocessing, starting with k = 0
+[2022-01-22 16:26:31.391] synth-n_4000-m_1721128-k_200-p_0.2.txt: ---------- synth-n_4000-m_1721128-k_200-p_0.2.txt (n = 4000, m = 1721128, k = -1) ----------
+[2022-01-22 16:26:34.928] synth-n_4000-m_1721128-k_200-p_0.2.txt: Found 1 cyclic sub graph(s) with n = [4000]
+[2022-01-22 16:26:34.936] synth-n_4000-m_1721128-k_200-p_0.2.txt: Removed 0 nodes in preprocessing, starting with k = 0
+[2022-01-22 16:26:46.223]                                 GUROBI: Added 1 initial constraints to ILP Solver
+[2022-01-22 16:26:48.163]                                 GUROBI: Added 100 cycle packing constraints to ILP Solver
+[2022-01-22 16:28:04.979] synth-n_4000-m_1721128-k_200-p_0.2.txt: Preprocessing: 3555 ms, BFS: 11183 ms, Packing: 3876 ms, ILP: 76805 ms
+[2022-01-22 16:28:04.981] synth-n_4000-m_1721128-k_200-p_0.2.txt: Found no solution in 90s
+[2022-01-22 16:28:05.593] synth-n_4000-m_427463-k_150-p_0.05.txt: ---------- synth-n_4000-m_427463-k_150-p_0.05.txt (n = 4000, m = 427463, k = -1) ----------
+[2022-01-22 16:28:06.472] synth-n_4000-m_427463-k_150-p_0.05.txt: Found 1 cyclic sub graph(s) with n = [4000]
+[2022-01-22 16:28:06.474] synth-n_4000-m_427463-k_150-p_0.05.txt: Removed 0 nodes in preprocessing, starting with k = 0
+[2022-01-22 16:28:08.198]                                 GUROBI: Added 1 initial constraints to ILP Solver
+[2022-01-22 16:28:08.677]                                 GUROBI: Added 136 cycle packing constraints to ILP Solver

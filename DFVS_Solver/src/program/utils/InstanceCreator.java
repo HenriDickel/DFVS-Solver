@@ -160,7 +160,7 @@ public abstract class InstanceCreator {
     }
 
     public static List<GraphFile> getComplexAndSyntheticFiles(String startFilename) {
-        List<GraphFile> files = getFiles(SYNTHETIC_PATH);
+        List<GraphFile> files = getFiles(COMPLEX_PATH);
         files.addAll(getFiles(SYNTHETIC_PATH));
         if(startFilename == null) return files;
         for(int i = 0; i < files.size(); i++) {

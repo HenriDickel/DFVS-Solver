@@ -71,7 +71,7 @@ public abstract class PerformanceTimer {
     }
 
     public static void printILPResult() {
-        Log.debugLog(Solver.instance.NAME, "Preprocessing: " + millisPreprocessing / 1000000 + " ms, Packing: " + millisPacking / 1000000 + " ms, ILP: " + millisILP / 1000000 + " ms");
+        Log.debugLog(Solver.instance.NAME, "Preprocessing: " + millisPreprocessing / 1000000 + " ms, BFS: " + millisBFS / 1000000 + " ms, Packing: " + millisPacking / 1000000 + " ms, ILP: " + millisILP / 1000000 + " ms");
     }
 
     public static void reset() {

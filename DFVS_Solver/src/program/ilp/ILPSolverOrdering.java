@@ -1,6 +1,8 @@
 package program.ilp;
 import gurobi.*;
+import program.log.Log;
 import program.model.Graph;
+import program.model.Instance;
 import program.model.Node;
 import program.utils.PerformanceTimer;
 import program.utils.TimeoutException;
@@ -48,7 +50,7 @@ public class ILPSolverOrdering extends GRBCallback{
         }
     }
 
-    public List<Integer> solve(boolean useFullyUpgradedConstraints, boolean useInitalCirclesConstraints, boolean useCyclePackingConstraints, boolean useCallback){
+    public List<Integer> solve(Instance instance, boolean useCyclePackingConstraints){
 
         try {
             // Create empty environment, set options, and start
@@ -62,6 +64,7 @@ public class ILPSolverOrdering extends GRBCallback{
 
             //Set time limit and limit command line output (comment out to lines of code enable it)
             model.set(GRB.DoubleParam.TimeLimit, secondsLeft);
+            model.set(GRB.IntParam.Threads, 1);
             model.set(GRB.IntParam.OutputFlag, 0);
             model.set(GRB.DoubleParam.Heuristics, 0.0);
 
@@ -99,19 +102,16 @@ public class ILPSolverOrdering extends GRBCallback{
 
             //Update Model
             model.update();
+            Log.debugLog("GUROBI", "Added " + model.getConstrs().length + " initial constraints to ILP Solver");
 
             //Additional Rules
-            if(useFullyUpgradedConstraints) ILPRules.addFullyUpgradedConstraints(model, graph);
-            if(useInitalCirclesConstraints) ILPRules.addInitialCircleConstraints(model, graph);
             if(useCyclePackingConstraints) ILPRules.addCyclePackingConstraint(model, graph);
-
-            //Callback setup
-            if(useCallback){
-                model.setCallback(this);
-            }
 
             //Update Model
             model.update();
+
+            // Update number of constraints in instance
+            instance.numConstraints += model.getConstrs().length;
 
             //Start
             PerformanceTimer.start();
@@ -120,7 +120,11 @@ public class ILPSolverOrdering extends GRBCallback{
 
             // Return no solution when timeout
             int status = model.get(GRB.IntAttr.Status);
-            if(status != GRB.Status.OPTIMAL) throw new TimeoutException("Gurobi status: " + status);
+            if(status != GRB.Status.OPTIMAL) {
+                model.dispose();
+                env.dispose();
+                throw new TimeoutException("Gurobi status: " + status);
+            }
 
             //Ids of deleted nodes
             List<Integer> result = new ArrayList<>();

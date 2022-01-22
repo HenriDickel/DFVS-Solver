@@ -40,7 +40,7 @@ public class Main {
             Log.Clear();
             Log.ignore = false;
 
-            List<GraphFile> files = InstanceCreator.getComplexAndSyntheticFiles("synth-n_1300-m_104213-k_200-p_0.1.txt");
+            List<GraphFile> files = InstanceCreator.getComplexAndSyntheticFiles(null); // "synth-n_2000-m_117145-k_200-p_0.05.txt"
             for(GraphFile file: files) {
                 Instance instance = InstanceCreator.createFromFile(file);
                 ILPSolver.dfvsSolveInstance(instance);

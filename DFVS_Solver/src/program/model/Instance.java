@@ -23,6 +23,8 @@ public class Instance {
     public int[] recursiveStepsPerK;
     public int solvedK = 0;
 
+    public int numConstraints = 0;
+
     public Instance(String NAME, Graph graph, int OPTIMAL_K) {
         this.NAME = NAME;
         this.subGraphs = Collections.singletonList(graph);
