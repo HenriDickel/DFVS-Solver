@@ -44,6 +44,7 @@ public abstract class ILPRules {
             model.addConstr(expr,GRB.GREATER_EQUAL, 1.0, "cycle-" + index++);
         }
         model.update();
+        Log.debugLog("GUROBI", "Added " + cycles.size() + " initial cycle constraints to ILP Solver");
     }
 
     public static void addCyclePackingConstraint(GRBModel model, Graph graph) throws GRBException {

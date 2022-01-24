@@ -2,6 +2,7 @@ package program.ilp;
 import gurobi.*;
 import program.algo.DAG;
 import program.algo.FullBFS;
+import program.algo.PackingManager;
 import program.log.Log;
 import program.model.Cycle;
 import program.model.Graph;
@@ -55,17 +56,20 @@ public class ILPSolverLazyCycles  extends GRBCallback{
 
                 //Check if the graph has been solved, if not add another constraint
                 if(!DAG.isDAG(copy)){
-                    GRBLinExpr expr;
-                    //Find new cycle
-                    Cycle cycle = FullBFS.findShortestCycle(copy);
-                    //Add new lazy constraint
-                    expr = new GRBLinExpr();
-                    for(Node node: cycle.getNodes()){
-                        GRBVar x = model.getVarByName("x" + node.id);
-                        expr.addTerm(1.0, x);
+
+                    PerformanceTimer.start();
+                    PackingManager pm = new PackingManager(copy);
+                    PerformanceTimer.log(PerformanceTimer.MethodType.PACKING);
+                    // For each cycle in packing
+                    for(Cycle cycle: pm.getPacking()) {
+                        GRBLinExpr expr = new GRBLinExpr();
+                        for(Node node: cycle.getNodes()){
+                            GRBVar x = model.getVarByName("x" + node.id);
+                            expr.addTerm(1.0, x);
+                        }
+                        addLazy(expr, GRB.GREATER_EQUAL, cycle.getK());
+                        numConstraints++;
                     }
-                    addLazy(expr, GRB.GREATER_EQUAL, 1.0);
-                    numConstraints++;
                 }
             }
         } catch (GRBException e) {
@@ -79,7 +83,7 @@ public class ILPSolverLazyCycles  extends GRBCallback{
     }
 
 
-    public List<Integer> solve(Instance instance, boolean useCyclePackingConstraints) {
+    public List<Integer> solve(Instance instance, boolean useCyclePackingConstraints, boolean useInitialCyclesConstraint) {
 
         try {
             // Create empty environment, set options, and start
@@ -127,6 +131,7 @@ public class ILPSolverLazyCycles  extends GRBCallback{
 
             PerformanceTimer.start();
             if(useCyclePackingConstraints) ILPRules.addCyclePackingConstraint(model, graph);
+            if(useInitialCyclesConstraint) ILPRules.addInitialCircleConstraints(model, graph);
             PerformanceTimer.log(PerformanceTimer.MethodType.PACKING);
 
             //Callback setup
