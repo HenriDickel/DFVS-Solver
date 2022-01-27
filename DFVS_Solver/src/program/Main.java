@@ -43,7 +43,7 @@ public class Main {
             List<GraphFile> files = InstanceCreator.getComplexAndSyntheticFiles(null);
             for(GraphFile file: files) {
                 Instance instance = InstanceCreator.createFromFile(file);
-                ILPSolver.dfvsSolveInstance(instance);
+                DFASHeuristicSolver.solveInstance(instance);
             }
         }
     }
