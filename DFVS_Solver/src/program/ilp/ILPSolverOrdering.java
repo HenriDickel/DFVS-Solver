@@ -50,7 +50,7 @@ public class ILPSolverOrdering extends GRBCallback{
         }
     }
 
-    public List<Integer> solve(Instance instance, boolean useCyclePackingConstraints){
+    public List<Integer> solve(Instance instance, boolean useCyclePackingConstraints,  boolean useInitialCyclesConstraint){
 
         try {
             // Create empty environment, set options, and start
@@ -105,7 +105,10 @@ public class ILPSolverOrdering extends GRBCallback{
             Log.debugLog("GUROBI", "Added " + model.getConstrs().length + " initial constraints to ILP Solver");
 
             //Additional Rules
+            PerformanceTimer.start();
             if(useCyclePackingConstraints) ILPRules.addCyclePackingConstraint(model, graph);
+            if(useInitialCyclesConstraint) ILPRules.addInitialCircleConstraints(model, graph);
+            PerformanceTimer.log(PerformanceTimer.MethodType.PACKING);
 
             //Update Model
             model.update();
