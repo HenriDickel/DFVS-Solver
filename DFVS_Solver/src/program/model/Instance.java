@@ -7,8 +7,8 @@ public class Instance {
     // Constants
     public final String NAME;
     public final int OPTIMAL_K;
-    public final int N;
-    public final int M;
+    public int N;
+    public int M;
 
     // Algorithm variables
     public List<Graph> subGraphs;

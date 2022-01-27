@@ -5,12 +5,12 @@ import program.model.Cycle;
 import program.model.Graph;
 import program.model.Instance;
 import program.model.Node;
-import program.utils.Timer;
+import program.utils.PerformanceTimer;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public abstract class DFASHeuristicSolver {
 
@@ -20,12 +20,14 @@ public abstract class DFASHeuristicSolver {
 
         Graph initialGraph = instance.subGraphs.get(0);
 
+        // Create DFAS arc graph
         Graph arcGraph = new Graph();
 
         int runningId = 0;
         Map<Integer, Integer> plusIds = new HashMap<>();
         Map<Integer, Integer> minusIds = new HashMap<>();
 
+        // Add minus -> plus edge for all nodes
         for(Node node: initialGraph.getNodes()) {
             int minusId = runningId;
             runningId++;
@@ -36,6 +38,7 @@ public abstract class DFASHeuristicSolver {
             arcGraph.addArc(minusId, plusId);
         }
 
+        // Add plus -> minus edge for all edges
         for(Node node: initialGraph.getNodes()) {
             int plusId = plusIds.get(node.id);
             for(Integer outId: node.getOutIds()) {
@@ -44,14 +47,35 @@ public abstract class DFASHeuristicSolver {
             }
         }
 
-        Log.debugLog(instance.NAME, "N: " + initialGraph.getNodeCount() + ", M: " + initialGraph.getEdgeCount());
-        Log.debugLog(instance.NAME, "Arc graph N: " + arcGraph.getEdgeCount());
+        instance.N = arcGraph.getNodeCount();
+        instance.M = arcGraph.getEdgeCount();
 
-        while(!DAG.isDAGFast(arcGraph)) {
-            Cycle cycle = FullBFS.findShortestCycle(arcGraph);
-            int removeId = cycle.get(0).id;
-            arcGraph.removeNode(removeId);
-            instance.S.add(removeId);
+        // Preprocessing
+        List<Integer> reduceS = Reduction.applyRules(arcGraph, true);
+        instance.S.addAll(reduceS);
+
+        // Create sub graphs
+        instance.subGraphs = Preprocessing.findCyclicSubGraphs(arcGraph);
+        Log.debugLog(instance.NAME, "Found " + instance.subGraphs.size() + " cyclic sub graph(s) with n = " + instance.subGraphs.stream().map(Graph::getNodeCount).collect(Collectors.toList()));
+
+        // Apply rules on each sub graph
+        for(Graph subGraph: instance.subGraphs) {
+            List<Integer> reduceSubS = Reduction.applyRules(subGraph, true);
+            instance.S.addAll(reduceSubS);
+        }
+        // Log preprocessing
+        instance.preRemovedNodes = instance.N - instance.subGraphs.stream().mapToInt(Graph::getNodeCount).sum();
+        instance.startK = instance.S.size();
+        Log.debugLog(instance.NAME, "Removed " + instance.preRemovedNodes + " nodes in preprocessing, starting with k = " + instance.startK);
+
+        // Destroy cycles by heuristic
+        for (Graph subGraph : instance.subGraphs) {
+            while(!DAG.isDAGFast(subGraph)) {
+                Cycle cycle = FullBFS.findShortestCycle(subGraph);
+                int removeId = cycle.get(0).id;
+                subGraph.removeNode(removeId);
+                instance.S.add(removeId);
+            }
         }
         Log.debugLog(instance.NAME, "Found solution with k = " + instance.S.size(), false);
     }
