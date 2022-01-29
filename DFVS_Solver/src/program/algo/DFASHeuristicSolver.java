@@ -68,6 +68,13 @@ public abstract class DFASHeuristicSolver {
         instance.startK = instance.S.size();
         Log.debugLog(instance.NAME, "Removed " + instance.preRemovedNodes + " nodes in preprocessing, starting with k = " + instance.startK);
 
+        //destroyCycles(instance);
+        removeNodes(instance);
+
+        Log.debugLog(instance.NAME, "Found solution with k = " + instance.S.size(), false);
+    }
+
+    private static void destroyCycles(Instance instance) {
         // Destroy cycles by heuristic
         for (Graph subGraph : instance.subGraphs) {
             while(!DAG.isDAGFast(subGraph)) {
@@ -75,8 +82,33 @@ public abstract class DFASHeuristicSolver {
                 int removeId = cycle.get(0).id;
                 subGraph.removeNode(removeId);
                 instance.S.add(removeId);
+
+                // Apply reduction rules
+                List<Integer> reduceS = Reduction.applyRules(subGraph, false);
+                instance.S.addAll(reduceS);
             }
         }
-        Log.debugLog(instance.NAME, "Found solution with k = " + instance.S.size(), false);
+    }
+
+    private static void removeNodes(Instance instance) {
+        for (Graph subGraph : instance.subGraphs) {
+            while(!DAG.isDAGFast(subGraph)) {
+                int removeId = -1;
+                int inOutMax = 0;
+                for(Node node: subGraph.getNodes()) {
+                    int inOut = Math.min(node.getOutIdCount(), node.getInIdCount());
+                    if(inOut > inOutMax) {
+                        removeId = node.id;
+                        inOutMax = inOut;
+                    }
+                }
+                subGraph.removeNode(removeId);
+                instance.S.add(removeId);
+
+                // Apply reduction rules
+                List<Integer> reduceS = Reduction.applyRules(subGraph, false);
+                instance.S.addAll(reduceS);
+            }
+        }
     }
 }
