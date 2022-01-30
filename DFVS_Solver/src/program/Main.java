@@ -41,38 +41,8 @@ public class Main {
             Log.ignore = false;
 
             List<GraphFile> files = InstanceCreator.getComplexAndSyntheticFiles(null);
-            testHeuristicsQuality(files);
-            //for(GraphFile file: files) {
-            //    Instance instance = InstanceCreator.createFromFile(file);
-            //    DFASHeuristicSolver.solveInstance(instance);
-            //}
+            Heuristics.testQuality(files);
         }
-    }
-
-    private static void testHeuristicsQuality(List<GraphFile> files) {
-        int solvedKAgg = 0;
-        int optimalKAgg = 0;
-        float qualityAgg = 0;
-        int count = 0;
-        for(GraphFile file: files) {
-            Instance instance = InstanceCreator.createFromFile(file);
-            if(instance.OPTIMAL_K == -1) continue;
-
-            DFASHeuristicSolver.solveInstance(instance);
-            int solvedK = instance.S.size();
-
-            if(instance.OPTIMAL_K > 0) {
-                solvedKAgg += solvedK;
-                optimalKAgg += instance.OPTIMAL_K;
-                qualityAgg += (float) solvedK / instance.OPTIMAL_K;
-                count++;
-            }
-            Log.debugLog(instance.NAME, "Heuristics " + solvedK + " / " + instance.OPTIMAL_K);
-        }
-        float quality = qualityAgg / count;
-        Log.debugLog("Overall (" + count + ")", "Average heuristics quality per instance: " + quality);
-        float overallSolvedK = (float) solvedKAgg / optimalKAgg;
-        Log.debugLog("Overall (" + count + ")", "Overall heuristics quality: " + overallSolvedK);
     }
 
     private static void testLowerBoundPerformance(List<GraphFile> files) {

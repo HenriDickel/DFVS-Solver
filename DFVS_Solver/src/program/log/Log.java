@@ -15,6 +15,7 @@ public abstract class Log {
     private static final String MAIN_LOG_PATH = "src/logs/MainLog.csv";
     private static final String ILP_LOG_PATH = "src/logs/ILPLog.csv";
     private static final String DETAIL_LOG_PATH = "src/logs/DetailLog.csv";
+    private static final String HEURISTIC_LOG_PATH = "src/logs/HeuristicLog.csv";
 
     public static boolean ignore;
     public static int level = 0;
@@ -53,10 +54,11 @@ public abstract class Log {
             new File(MAIN_LOG_PATH).createNewFile();
             new File(ILP_LOG_PATH).createNewFile();
             new File(DETAIL_LOG_PATH).createNewFile();
+            new File(HEURISTIC_LOG_PATH).createNewFile();
             new PrintWriter(DEBUG_LOG_PATH).close();
             new PrintWriter(MAIN_LOG_PATH).close();
             new PrintWriter(ILP_LOG_PATH).close();
-            new PrintWriter(DETAIL_LOG_PATH).close();
+            new PrintWriter(HEURISTIC_LOG_PATH).close();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -73,6 +75,23 @@ public abstract class Log {
         try(PrintWriter output = new PrintWriter(new FileWriter(DETAIL_LOG_PATH,true)))
         {
             output.println("name,level,cycle_size,recursive_steps");
+        }
+        catch (Exception ignored) {}
+        try(PrintWriter output = new PrintWriter(new FileWriter(HEURISTIC_LOG_PATH,true)))
+        {
+            output.println("name,k_optimal,k_approx,millis");
+        }
+        catch (Exception ignored) {}
+    }
+
+    public static void heuristicLog(Instance instance, int approxK, long millis) {
+
+        //Ignore Log
+        if(ignore) return;
+
+        try(PrintWriter output = new PrintWriter(new FileWriter(HEURISTIC_LOG_PATH,true)))
+        {
+            output.println(instance.NAME + "," + instance.OPTIMAL_K + "," + approxK + "," + millis);
         }
         catch (Exception ignored) {}
     }

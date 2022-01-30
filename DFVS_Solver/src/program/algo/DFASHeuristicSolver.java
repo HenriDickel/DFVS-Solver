@@ -69,7 +69,7 @@ public abstract class DFASHeuristicSolver {
         Log.debugLog(instance.NAME, "Removed " + instance.preRemovedNodes + " nodes in preprocessing, starting with k = " + instance.startK);
 
         //destroyCycles(instance);
-        removeNodes(instance);
+        destroyCycles(instance);
 
         Log.debugLog(instance.NAME, "Found solution with k = " + instance.S.size(), false);
     }
