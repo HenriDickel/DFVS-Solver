@@ -41,9 +41,9 @@ public abstract class DFVSHeuristicSolver {
         Log.debugLog(instance.NAME, "Removed " + instance.preRemovedNodes + " nodes in preprocessing, starting with k = " + instance.startK);
 
         // 5.1 remove nodes min(max(in, out))
-        //removeNodes(instance);
+        removeNodes(instance);
         // 5.2 destroy cycles
-        destroyCycles(instance);
+        //destroyCycles(instance);
 
         Log.debugLog(instance.NAME, "Found solution with k = " + instance.S.size(), false);
     }

@@ -82,6 +82,7 @@ public abstract class DFASHeuristicSolver {
 
                 Node next = null;
                 int backEdgeCountMin = Integer.MAX_VALUE;
+                int outEdgeCountMax = 0;
                 for(Node node: subGraph.getNodes()) {
                     if(node.topologicalId > -1) continue;
 
@@ -93,8 +94,19 @@ public abstract class DFASHeuristicSolver {
                             backEdgeCount++;
                         }
                     }
+                    int outEdgeCount = 0;
+                    for(Integer outId: node.getOutIds()) {
+                        Node out = subGraph.getNode(outId);
+                        if (out.topologicalId == -1) {
+                            outEdgeCount++;
+                        }
+                    }
                     if(backEdgeCount < backEdgeCountMin) {
                         backEdgeCountMin = backEdgeCount;
+                        outEdgeCountMax = outEdgeCount;
+                        next = node;
+                    } else if(backEdgeCount == backEdgeCountMin && outEdgeCount > outEdgeCountMax) {
+                        outEdgeCountMax = outEdgeCount;
                         next = node;
                     }
                 }

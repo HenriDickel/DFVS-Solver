@@ -14,25 +14,32 @@ import java.util.stream.Stream;
 
 public abstract class InstanceCreator {
 
-    private static final String DATASET = "dataset_2";
-    private static final String COMPLEX_PATH = "src/inputs/" + DATASET + "/complex/";
-    private static final String SYNTHETIC_PATH = "src/inputs/" + DATASET + "/synthetic/";
-
-    private static Instance createInstance(String name, Graph graph) {
-        int optimalK = readOptimalKFromFile(name);
-        return new Instance(name, graph, optimalK);
+    private static String getSyntheticPath(Dataset dataset) {
+        return "src/inputs/" + dataset + "/synthetic/";
     }
 
-    private static Instance createTestInstance(String name, Graph graph, int optimalK) {
+    private static String getComplexPath(Dataset dataset) {
+        return "src/inputs/" + dataset + "/complex/";
+    }
+
+    public static String getSolutionPath(Dataset dataset) {
+        return "src/inputs/" + dataset + "/optimal_solution_sizes.txt";
+    }
+
+    public static String getILPSolutionPath(Dataset dataset) {
+        return "src/inputs/" + dataset + "/ilp_solution_sizes.txt";
+    }
+
+    private static Instance createInstance(String name, Graph graph, int optimalK) {
         return new Instance(name, graph, optimalK);
     }
 
     public static Map<String, Integer> optimalKMap = new HashMap<>();
 
-    public static int readOptimalKFromFile(String graphName){
+    public static int readOptimalKFromFile(String solutionPath, String graphName){
         if(optimalKMap.isEmpty()) {
             try{
-                Scanner scan = new Scanner(new File("src/inputs/" + DATASET + "/optimal_solution_sizes.txt"));
+                Scanner scan = new Scanner(new File(solutionPath));
                 while(scan.hasNextLine()){
                     String line = scan.nextLine();
                     String name = line.split(" {5}")[0];
@@ -49,7 +56,7 @@ public abstract class InstanceCreator {
         return (optimalK != null) ? optimalK : -1;
     }
 
-    public static Instance createFromFile(GraphFile file){
+    public static Instance createFromFile(GraphFile file, int optimalK){
         Graph graph = new Graph();
 
         try (Stream<String> stream = Files.lines(Paths.get(file.path + file.name))) {
@@ -73,95 +80,12 @@ public abstract class InstanceCreator {
             e.printStackTrace();
         }
 
-        return createInstance(file.name, graph);
+        return createInstance(file.name, graph, optimalK);
     }
 
-    public static List<GraphFile> getErrorFilesDataset2() {
-        List<GraphFile> files = new ArrayList<>();
-
-        files.add(new GraphFile(SYNTHETIC_PATH, "synth-n_100-m_346-k_30-p_0.05.txt"));
-        files.add(new GraphFile(SYNTHETIC_PATH, "synth-n_160-m_810-k_25-p_0.05.txt"));
-        files.add(new GraphFile(SYNTHETIC_PATH, "synth-n_180-m_1022-k_30-p_0.05.txt"));
-        files.add(new GraphFile(SYNTHETIC_PATH, "synth-n_180-m_1057-k_25-p_0.05.txt"));
-        files.add(new GraphFile(SYNTHETIC_PATH, "synth-n_200-m_1319-k_30-p_0.05.txt"));
-        files.add(new GraphFile(SYNTHETIC_PATH, "synth-n_60-m_271-k_20-p_0.1.txt"));
-        files.add(new GraphFile(SYNTHETIC_PATH, "synth-n_70-m_312-k_20-p_0.1.txt"));
-        files.add(new GraphFile(SYNTHETIC_PATH, "synth-n_70-m_347-k_25-p_0.1.txt"));
-        files.add(new GraphFile(SYNTHETIC_PATH, "synth-n_80-m_402-k_20-p_0.1.txt"));
-        files.add(new GraphFile(SYNTHETIC_PATH, "synth-n_90-m_327-k_30-p_0.05.txt"));
-
-
-        return files;
-    }
-
-    public static List<GraphFile> getSelectedFilesDataset3() {
-        List<GraphFile> files = new ArrayList<>();
-        files.add(new GraphFile(SYNTHETIC_PATH, "synth-n_1600-m_273042-k_70-p_0.2.txt"));
-        files.add(new GraphFile(SYNTHETIC_PATH, "synth-n_150-m_1423-k_30-p_0.1.txt"));
-        files.add(new GraphFile(SYNTHETIC_PATH, "synth-n_1000-m_27142-k_50-p_0.05.txt"));
-        files.add(new GraphFile(SYNTHETIC_PATH, "synth-n_1300-m_46137-k_70-p_0.05.txt"));
-        files.add(new GraphFile(SYNTHETIC_PATH, "synth-n_1000-m_124702-k_200-p_0.2.txt"));
-        files.add(new GraphFile(SYNTHETIC_PATH, "synth-n_1000-m_29037-k_100-p_0.05.txt"));
-        files.add(new GraphFile(SYNTHETIC_PATH, "synth-n_1000-m_30042-k_120-p_0.05.txt"));
-        files.add(new GraphFile(SYNTHETIC_PATH, "synth-n_1300-m_47847-k_100-p_0.05.txt"));
-        files.add(new GraphFile(SYNTHETIC_PATH, "synth-n_1000-m_116757-k_120-p_0.2.txt"));
-        files.add(new GraphFile(SYNTHETIC_PATH, "synth-n_1000-m_30795-k_150-p_0.05.txt"));
-        files.add(new GraphFile(SYNTHETIC_PATH, "synth-n_1300-m_178841-k_50-p_0.2.txt"));
-        files.add(new GraphFile(SYNTHETIC_PATH, "synth-n_1300-m_99879-k_150-p_0.1.txt"));
-        files.add(new GraphFile(SYNTHETIC_PATH, "synth-n_150-m_1561-k_70-p_0.1.txt"));
-        files.add(new GraphFile(SYNTHETIC_PATH, "synth-n_200-m_1336-k_50-p_0.05.txt"));
-        files.add(new GraphFile(SYNTHETIC_PATH, "synth-n_1300-m_104213-k_200-p_0.1.txt"));
-        files.add(new GraphFile(SYNTHETIC_PATH, "synth-n_1300-m_95352-k_100-p_0.1.txt"));
-        files.add(new GraphFile(SYNTHETIC_PATH, "synth-n_2000-m_422023-k_70-p_0.2.txt"));
-        files.add(new GraphFile(SYNTHETIC_PATH, "synth-n_2600-m_716555-k_100-p_0.2.txt"));
-        files.add(new GraphFile(SYNTHETIC_PATH, "synth-n_3000-m_240581-k_120-p_0.05.txt"));
-        files.add(new GraphFile(SYNTHETIC_PATH, "synth-n_4000-m_1721128-k_200-p_0.2.txt"));
-        files.add(new GraphFile(COMPLEX_PATH, "usairport-n_1577"));
-        files.add(new GraphFile(COMPLEX_PATH, "blogs-n_1227"));
-        files.add(new GraphFile(COMPLEX_PATH, "chess-n_1500"));
-        files.add(new GraphFile(COMPLEX_PATH, "chess-n_2000"));
-        files.add(new GraphFile(COMPLEX_PATH, "health-n_2000"));
-        files.add(new GraphFile(COMPLEX_PATH, "link-kv-n_1000"));
-        files.add(new GraphFile(COMPLEX_PATH, "link-kv-n_5000"));
-        files.add(new GraphFile(COMPLEX_PATH, "wikispeedia-n_4181"));
-        return files;
-    }
-
-    public static List<GraphFile> getSelectedFilesDataset2() {
-        List<GraphFile> files = new ArrayList<>();
-        files.add(new GraphFile(SYNTHETIC_PATH, "synth-n_100-m_670-k_30-p_0.1.txt"));
-        files.add(new GraphFile(SYNTHETIC_PATH, "synth-n_140-m_632-k_30-p_0.05.txt"));
-        files.add(new GraphFile(SYNTHETIC_PATH, "synth-n_180-m_4031-k_30-p_0.2.txt"));
-        files.add(new GraphFile(SYNTHETIC_PATH, "synth-n_200-m_2488-k_30-p_0.1.txt"));
-        files.add(new GraphFile(SYNTHETIC_PATH, "synth-n_200-m_4765-k_30-p_0.2.txt"));
-        files.add(new GraphFile(SYNTHETIC_PATH, "synth-n_250-m_3612-k_25-p_0.1.txt"));
-        files.add(new GraphFile(SYNTHETIC_PATH, "synth-n_250-m_3681-k_30-p_0.1.txt"));
-        files.add(new GraphFile(SYNTHETIC_PATH, "synth-n_275-m_2220-k_30-p_0.05.txt"));
-        files.add(new GraphFile(SYNTHETIC_PATH, "synth-n_275-m_4371-k_30-p_0.1.txt"));
-        files.add(new GraphFile(SYNTHETIC_PATH, "synth-n_275-m_8453-k_25-p_0.2.txt"));
-        files.add(new GraphFile(SYNTHETIC_PATH, "synth-n_300-m_5197-k_30-p_0.1.txt"));
-        files.add(new GraphFile(SYNTHETIC_PATH, "synth-n_300-m_9999-k_25-p_0.2.txt"));
-        files.add(new GraphFile(SYNTHETIC_PATH, "synth-n_80-m_483-k_30-p_0.1.txt"));
-        files.add(new GraphFile(COMPLEX_PATH, "biology-n_56-m_1372-p_0.5-4"));
-        files.add(new GraphFile(COMPLEX_PATH, "biology-n_56-m_1372-p_0.75-4"));
-        files.add(new GraphFile(COMPLEX_PATH, "biology-n_77-m_1411-p_0.5-5"));
-        files.add(new GraphFile(COMPLEX_PATH, "biology-n_81-m_1292-p_0.75-3"));
-        files.add(new GraphFile(COMPLEX_PATH, "blogs-n_1000"));
-        files.add(new GraphFile(COMPLEX_PATH, "email"));
-        files.add(new GraphFile(COMPLEX_PATH, "usairport-n_1000"));
-        return files;
-    }
-
-    public static List<GraphFile> getUnsolvedFilesDataset2(){
-        List<GraphFile> files = new ArrayList<>();
-        files.add(new GraphFile(COMPLEX_PATH, "oz"));
-        files.add(new GraphFile(COMPLEX_PATH, "celegansneural"));
-        return files;
-    }
-
-    public static List<GraphFile> getComplexAndSyntheticFiles(String startFilename) {
-        List<GraphFile> files = getFiles(COMPLEX_PATH);
-        files.addAll(getFiles(SYNTHETIC_PATH));
+    public static List<GraphFile> getComplexAndSyntheticFiles(Dataset dataset, String startFilename) {
+        List<GraphFile> files = getFiles(getComplexPath(dataset));
+        files.addAll(getFiles(getSyntheticPath(dataset)));
         if(startFilename == null) return files;
         for(int i = 0; i < files.size(); i++) {
             if(files.get(i).name.equals(startFilename)) {
@@ -219,7 +143,7 @@ public abstract class InstanceCreator {
         graph.addArc(5, 6);
         graph.addArc(6, 3);
 
-        return createTestInstance("bfs_test_1", graph, 1);
+        return createInstance("bfs_test_1", graph, 1);
     }
 
     /**
@@ -240,7 +164,7 @@ public abstract class InstanceCreator {
         graph.addArc(5, 7);
         graph.addArc(7, 5);
 
-        return createTestInstance("bfs_test_1", graph, 1);
+        return createInstance("bfs_test_1", graph, 1);
     }
 
     /**
@@ -255,7 +179,7 @@ public abstract class InstanceCreator {
         graph.addArc(2, 5);
         graph.addArc(3, 4);
 
-        return createTestInstance("simple_n4_m5_k0", graph, 0);
+        return createInstance("simple_n4_m5_k0", graph, 0);
     }
 
     /**
@@ -273,7 +197,7 @@ public abstract class InstanceCreator {
         graph.addArc(5, 6);
         graph.addArc(6, 5);
 
-        return createTestInstance("simple-n6_m8_k2", graph, 2);
+        return createInstance("simple-n6_m8_k2", graph, 2);
     }
 
     /**
@@ -289,7 +213,7 @@ public abstract class InstanceCreator {
         graph.addArc(2, 5);
         graph.addArc(3, 6);
 
-        return createTestInstance("simple_n6_m6_k1", graph, 1);
+        return createInstance("simple_n6_m6_k1", graph, 1);
     }
 
 
@@ -308,7 +232,7 @@ public abstract class InstanceCreator {
         graph.addArc(6, 7);
         graph.addArc(7, 5);
 
-        return createTestInstance("simple-n7_m8_k2", graph, 2);
+        return createInstance("simple-n7_m8_k2", graph, 2);
     }
 
 
@@ -325,7 +249,7 @@ public abstract class InstanceCreator {
         graph.addArc(4, 5);
         graph.addArc(5, 1);
 
-        return createTestInstance("simple-n5_m6_k1", graph, 1);
+        return createInstance("simple-n5_m6_k1", graph, 1);
     }
 
     /**
@@ -341,7 +265,7 @@ public abstract class InstanceCreator {
         graph.addArc(5, 6);
         graph.addArc(6, 5);
 
-        return createTestInstance("simple-n6_m6_k3", graph, 3);
+        return createInstance("simple-n6_m6_k3", graph, 3);
     }
 
     /**
@@ -372,7 +296,7 @@ public abstract class InstanceCreator {
         graph.addArc(0, 7);
         graph.addArc(7, 0);
 
-        return createTestInstance("simple-n7_m12_k3", graph, 3);
+        return createInstance("simple-n7_m12_k3", graph, 3);
     }
 
     /**
@@ -398,7 +322,7 @@ public abstract class InstanceCreator {
         graph.addArc(1, 4);
         graph.addArc(4, 1);
 
-        return createTestInstance("simple-n6_m6_k3", graph, 3);
+        return createInstance("simple-n6_m6_k3", graph, 3);
     }
 
     /**
@@ -414,7 +338,7 @@ public abstract class InstanceCreator {
         graph.addArc(3, 1);
         graph.addArc(3, 2);
 
-        return createTestInstance("full-n3_m6_k2", graph, 2);
+        return createInstance("full-n3_m6_k2", graph, 2);
     }
 
     /**
@@ -436,7 +360,7 @@ public abstract class InstanceCreator {
         graph.addArc(4, 2);
         graph.addArc(4, 3);
 
-        return createTestInstance("full-n4_m12_k3", graph, 3);
+        return createInstance("full-n4_m12_k3", graph, 3);
     }
 
     /**
@@ -455,7 +379,7 @@ public abstract class InstanceCreator {
         graph.addArc(6, 1);
         graph.addArc(7, 1);
 
-        return createTestInstance("bfs-n7_m9_k1", graph, 1);
+        return createInstance("bfs-n7_m9_k1", graph, 1);
     }
 
     /**
@@ -469,7 +393,7 @@ public abstract class InstanceCreator {
         graph.addArc(3, 4);
         graph.addArc(4, 2);
 
-        return createTestInstance("bfs-n4_m4_k1", graph, 1);
+        return createInstance("bfs-n4_m4_k1", graph, 1);
     }
 
     /**
@@ -485,7 +409,7 @@ public abstract class InstanceCreator {
         graph.addArc(4, 1);
         graph.addArc(3, 2);
 
-        return createTestInstance("bfs-n4_m5_k1", graph, 1);
+        return createInstance("bfs-n4_m5_k1", graph, 1);
     }
 
     public static Instance createFlower1() {
@@ -497,7 +421,7 @@ public abstract class InstanceCreator {
         graph.addArc(2, 1);
         graph.addArc(0, 3);
 
-        return createTestInstance("flower1", graph, 1);
+        return createInstance("flower1", graph, 1);
     }
 
     public static Instance createFlower2() {
@@ -512,7 +436,7 @@ public abstract class InstanceCreator {
         graph.addArc(1, 4);
         graph.addArc(4, 1);
 
-        return createTestInstance("flower2", graph, 1);
+        return createInstance("flower2", graph, 1);
     }
 
     public static Instance createFlower3() {
@@ -531,6 +455,6 @@ public abstract class InstanceCreator {
         graph.addArc(5, 6);
         graph.addArc(6, 4);
 
-        return createTestInstance("flower3", graph, 1);
+        return createInstance("flower3", graph, 1);
     }
 }
