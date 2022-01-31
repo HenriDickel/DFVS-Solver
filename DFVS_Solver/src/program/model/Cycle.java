@@ -8,6 +8,7 @@ import java.util.stream.Collectors;
 public class Cycle extends Component {
 
     private final List<Node> nodes = new ArrayList<>();
+    public int cycleCount = 0;
 
     public Cycle(Node... nodes) {
         this.nodes.addAll(Arrays.asList(nodes));

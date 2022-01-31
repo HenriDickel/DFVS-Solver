@@ -81,4 +81,61 @@ public abstract class FullBFS {
         }
         return cycles;
     }
+
+
+    public static List<Cycle> findMultipleShortestCycles(Graph graph){
+
+        List<Cycle> cycles = graph.getPairCycles(); // TODO in rare cases (e.g. 'email'), it can be beneficial to break after the first cycle is found
+        int minSize = 2;
+
+        // When there are no cycles of size 2, look for shortest cycles with BFS
+        if(cycles.size() == 0) {
+            minSize = Integer.MAX_VALUE;
+            for (Node node : graph.getNodes()) { // Find the best cycle for each node
+                Cycle cycle = SimpleBFS.findBestCycle(graph, node, minSize);
+
+                // Replace the min branch size when found better one
+                if (cycle != null) {
+                    cycles.add(cycle);
+                    minSize = Math.min(cycle.size(), minSize);
+                }
+            }
+        }
+
+        // Filter out all cycles which are longer than the min branch size
+        final int finalMinSize = minSize;
+        List<Cycle> minCycles = cycles.stream().filter(cycle -> cycle.size() == finalMinSize).collect(Collectors.toList());
+
+        // Set cycle count for every node
+        for(Node node: graph.getNodes()) {
+            node.cycleCount = 0;
+            for(Cycle cycle: cycles) {
+                if(cycle.contains(node)) {
+                    node.cycleCount++;
+                }
+            }
+        }
+
+        for(Cycle cycle: minCycles) {
+            cycle.cycleCount = 0;
+            for(Node node: cycle.getNodes()) {
+                cycle.cycleCount += node.cycleCount;
+            }
+            cycle.getNodes().sort(Comparator.comparing(Node::getCycleCount));
+            Collections.reverse(cycle.getNodes());
+        }
+
+        List<Cycle> sol = new ArrayList<>();
+
+        for(int i = 0; i < minCycles.size(); i++) {
+            Cycle shortestCycle = Collections.max(minCycles, Comparator.comparing(x -> x.cycleCount));
+
+            sol.add(shortestCycle);
+            minCycles.remove(shortestCycle);
+        }
+
+        //Return
+        return sol;
+    }
+
 }
