@@ -1,6 +1,7 @@
 package program;
 
 import program.algo.DFASHeuristicSolver;
+import program.algo.DFVSHeuristicSolver;
 import program.log.Log;
 import program.model.GraphFile;
 import program.model.Instance;
@@ -23,7 +24,8 @@ public abstract class Heuristics {
             long startMillis = System.currentTimeMillis();
 
             // Solve instance with heuristic
-            DFASHeuristicSolver.solveInstance(instance);
+            //DFASHeuristicSolver.solveInstance(instance);
+            DFVSHeuristicSolver.solveInstance(instance);
             int approxK = instance.S.size();
 
             // Update aggregation vars

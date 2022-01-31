@@ -32,6 +32,9 @@ public class Node {
     // Packing attribute
     public Boolean forbidden = false;
 
+    // Topological order attribute
+    public Integer topologicalId;
+
     public Node(Integer id) {
         this.id = id;
     }

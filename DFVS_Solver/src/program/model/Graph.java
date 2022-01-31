@@ -66,6 +66,10 @@ public class Graph {
         nodes.values().forEach(node -> node.parent = null);
     }
 
+    public void resetTopologicalOrdering() {
+        nodes.values().forEach(node -> node.topologicalId = -1);
+    }
+
     public Graph copy() {
         Graph copyGraph = new Graph();
 
