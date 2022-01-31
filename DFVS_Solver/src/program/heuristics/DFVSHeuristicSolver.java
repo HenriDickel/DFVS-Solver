@@ -1,13 +1,17 @@
-package program.algo;
+package program.heuristics;
 
+import program.algo.DAG;
+import program.algo.FullBFS;
+import program.algo.Preprocessing;
+import program.algo.Reduction;
 import program.log.Log;
+import program.model.Cycle;
 import program.model.Graph;
 import program.model.Instance;
 import program.model.Node;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
+import java.util.Random;
 import java.util.stream.Collectors;
 
 public abstract class DFVSHeuristicSolver {
@@ -37,12 +41,12 @@ public abstract class DFVSHeuristicSolver {
         Log.debugLog(instance.NAME, "Removed " + instance.preRemovedNodes + " nodes in preprocessing, starting with k = " + instance.startK);
 
         // 5.1 remove nodes min(max(in, out))
-        removeNodes(instance);
+        //removeNodes(instance);
+        // 5.2 destroy cycles
+        destroyCycles(instance);
 
         Log.debugLog(instance.NAME, "Found solution with k = " + instance.S.size(), false);
     }
-
-
 
     private static void removeNodes(Instance instance) {
         for (Graph subGraph : instance.subGraphs) {
@@ -56,6 +60,32 @@ public abstract class DFVSHeuristicSolver {
                         inOutMax = inOut;
                     }
                 }
+                subGraph.removeNode(removeId);
+                instance.S.add(removeId);
+
+                // Apply reduction rules
+                List<Integer> reduceS = Reduction.applyRules(subGraph, false);
+                instance.S.addAll(reduceS);
+            }
+        }
+    }
+
+    private static void destroyCycles(Instance instance) {
+        // Destroy cycles by heuristic
+        for (Graph subGraph : instance.subGraphs) {
+            while(!DAG.isDAGFast(subGraph)) {
+                Cycle cycle = FullBFS.findShortestCycle(subGraph);
+
+                int removeId = -1;
+                int inOutMax = 0;
+                for(Node node: cycle.getNodes()) {
+                    int inOut = Math.min(node.getOutIdCount(), node.getInIdCount());
+                    if(inOut > inOutMax) {
+                        removeId = node.id;
+                        inOutMax = inOut;
+                    }
+                }
+
                 subGraph.removeNode(removeId);
                 instance.S.add(removeId);
 

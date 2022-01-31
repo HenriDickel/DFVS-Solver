@@ -1,7 +1,5 @@
-package program;
+package program.heuristics;
 
-import program.algo.DFASHeuristicSolver;
-import program.algo.DFVSHeuristicSolver;
 import program.log.Log;
 import program.model.GraphFile;
 import program.model.Instance;

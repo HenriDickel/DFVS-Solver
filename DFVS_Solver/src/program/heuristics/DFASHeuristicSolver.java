@@ -1,5 +1,9 @@
-package program.algo;
+package program.heuristics;
 
+import program.algo.DAG;
+import program.algo.FullBFS;
+import program.algo.Preprocessing;
+import program.algo.Reduction;
 import program.log.Log;
 import program.model.Cycle;
 import program.model.Graph;

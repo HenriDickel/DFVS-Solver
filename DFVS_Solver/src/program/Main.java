@@ -2,6 +2,7 @@ package program;
 
 import gurobi.GRBException;
 import program.algo.*;
+import program.heuristics.Heuristics;
 import program.ilp.ILPSolver;
 import program.log.Log;
 import program.model.*;
