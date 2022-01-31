@@ -6,6 +6,7 @@ import program.heuristics.Heuristics;
 import program.ilp.ILPSolver;
 import program.log.Log;
 import program.model.*;
+import program.utils.Dataset;
 import program.utils.InstanceCreator;
 
 import java.util.List;
@@ -23,7 +24,7 @@ public class Main {
             String fileName = args[0];
 
             // Create instance
-            Instance instance = InstanceCreator.createFromFile(new GraphFile("", fileName));
+            Instance instance = InstanceCreator.createFromFile(new GraphFile("", fileName), -1);
 
             // Solve
             ILPSolver.dfvsSolveInstance(instance);
@@ -41,7 +42,7 @@ public class Main {
             Log.Clear();
             Log.ignore = false;
 
-            List<GraphFile> files = InstanceCreator.getComplexAndSyntheticFiles(null);
+            List<GraphFile> files = InstanceCreator.getComplexAndSyntheticFiles(Dataset.DATASET_3, null);
             Heuristics.testQuality(files);
         }
     }
@@ -50,7 +51,7 @@ public class Main {
         int count = 0;
         long millisAgg = 0;
         for(GraphFile file: files) {
-            Instance instance = InstanceCreator.createFromFile(file);
+            Instance instance = InstanceCreator.createFromFile(file, -1);
             if(instance.OPTIMAL_K == -1) continue;
             Graph graph = instance.subGraphs.get(0);
             List<Integer> reduceS = Reduction.applyRules(graph, true);
@@ -75,7 +76,7 @@ public class Main {
         float qualityAgg = 0;
         int count = 0;
         for(GraphFile file: files) {
-            Instance instance = InstanceCreator.createFromFile(file);
+            Instance instance = InstanceCreator.createFromFile(file, -1);
             if(instance.OPTIMAL_K == -1) continue;
             Graph graph = instance.subGraphs.get(0);
             // Apply reduction rules and calculate remaining k for lower bounds
