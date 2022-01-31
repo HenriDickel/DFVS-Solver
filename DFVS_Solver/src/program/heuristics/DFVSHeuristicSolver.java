@@ -11,6 +11,7 @@ import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
 import java.util.*;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public abstract class DFVSHeuristicSolver {
     public static void solveInstance(Instance instance) {
@@ -61,7 +62,7 @@ public abstract class DFVSHeuristicSolver {
         // 5.07 FullBFS_Multiple    //1.047
         //FullBFS_Multiple(instance);
         // 5.08 FullBFS             //1.038
-        FullBFS(instance);
+        //FullBFS(instance);
 
         //---------Splits------------------
         // 5.09 Splits(1)           //1.038
@@ -81,13 +82,29 @@ public abstract class DFVSHeuristicSolver {
         // 5.15 Splits_Max_Min(5)   //1.012
         //Splits_Max_Min(instance, 5);
 
-        //---------CombinedTimer-----------
-        // 5.16 Timer(100)         //1.004
-        //Timer(instance, 100);
-        // 5.17 Timer(1000)         //1.003
-        //Timer(instance, 1000);
-        // 5.18 Timer(3000)         //1.002
-        //Timer(instance, 3000);
+        //---------TimerRandom-----------
+        // 5.16 TimerRandom(100)    //1.004 - 77ms - 49682ms
+        //TimerRandom(instance, 100);
+        // 5.17 TimerRandom(1000)   //1.003
+        //TimerRandom(instance, 1000);
+        // 5.18 TimerRandom(3000)   //1.002
+        //TimerRandom(instance, 3000);
+
+        //---------TimerBreak--------------
+        // 5.19 TimerBreak(1000)    //1.010 - 452ms
+        //TimerBreak(instance, 1000);
+
+        //---------TimerNodes--------------
+        // 5.20 TimerNodes(100)     //1.086
+        //TimerNodes(instance, 100);
+        // 5.21 TimerNodes(1000)    //1.050 - 712ms
+        //TimerNodes(instance, 1000);
+
+        //---------TimerBorder-------------
+        // 5.22 TimerBorder(100)    //1.004 - 61ms - 39547ms
+        //TimerBorder(instance, 100);
+        // 5.23 TimerBorder(1000)   //1.003 - 470ms - 302526
+        //TimerBorder(instance, 1000);
 
         Log.debugLog(instance.NAME, "Found solution with k = " + instance.S.size(), false);
     }
@@ -360,20 +377,20 @@ public abstract class DFVSHeuristicSolver {
 
     }
 
-    //---------CombinedTimer-----------
+    //---------TimerRandom-----------
 
-    private static void Timer(Instance instance, int timelimitMillis) {
+    private static void TimerRandom(Instance instance, int timeLimitMillis) {
 
         // Destroy cycles by heuristic
         for (Graph subGraph : instance.subGraphs) {
-            int timeForThisGraph = timelimitMillis / instance.subGraphs.size();
+            int timeForThisGraph = timeLimitMillis / instance.subGraphs.size();
 
             //All solutions
             List<List<Integer>> solutions = new ArrayList<>();
 
             while(timeForThisGraph > 0){
                 LocalDateTime startTime = LocalDateTime.now();
-                solutions.add(TimerRec_Random(subGraph, new ArrayList<>()));
+                solutions.add(TimerRecRandom(subGraph, new ArrayList<>()));
                 timeForThisGraph -= ChronoUnit.MILLIS.between(startTime, LocalDateTime.now());
             }
 
@@ -383,7 +400,7 @@ public abstract class DFVSHeuristicSolver {
         }
     }
 
-    private static List<Integer> TimerRec_Random(Graph graph, List<Integer> solution) {
+    private static List<Integer> TimerRecRandom(Graph graph, List<Integer> solution) {
 
         if (DAG.isDAGFast(graph)) return solution;
 
@@ -409,9 +426,137 @@ public abstract class DFVSHeuristicSolver {
         splitSolution.addAll(Reduction.applyRules(splitGraph, false));
 
         //Reduce SplitSize
-        return TimerRec_Random(splitGraph, splitSolution);
+        return TimerRecRandom(splitGraph, splitSolution);
 
     }
 
+    //---------TimerBreak------------
+
+    private static List<List<Integer>> timerBreakSolutions;
+
+    private static void TimerBreak(Instance instance, int timeLimitInMillis) {
+
+        // Destroy cycles by heuristic
+        for (Graph subGraph : instance.subGraphs) {
+            timerBreakSolutions = new ArrayList<>();
+            TimerRecBreak(subGraph, new ArrayList<>(), LocalDateTime.now(), timeLimitInMillis);
+            List<Integer> bestSolution = Collections.min(timerBreakSolutions, Comparator.comparing(List::size));
+            instance.S.addAll(bestSolution);
+        }
+    }
+
+    private static void TimerRecBreak(Graph graph, List<Integer> solution, LocalDateTime startTime, int timeLimitInMillis) {
+
+        if (DAG.isDAGFast(graph)) timerBreakSolutions.add(solution);
+
+        //All shortest
+        List<Cycle> allShortestCycles = FullBFS.findMultipleShortestCycles(graph);
+
+        //Foreach
+        for(Cycle cycle : allShortestCycles){
+
+            //Check if break
+            if(ChronoUnit.MILLIS.between(startTime, LocalDateTime.now()) > timeLimitInMillis) return;
+
+            //Get best node
+            Node node = Collections.max(cycle.getNodes(), Comparator.comparing(x -> Math.min(x.getOutIdCount(), x.getInIdCount())));
+
+            //Copy
+            Graph splitGraph = graph.copy();
+            splitGraph.removeNode(node.id);
+
+            //Solution
+            List<Integer> splitSolution = new ArrayList<>(solution);
+            splitSolution.add(node.id);
+
+            //Reduction
+            splitSolution.addAll(Reduction.applyRules(splitGraph, false));
+
+            //Next call
+            TimerRecBreak(splitGraph, splitSolution, startTime, timeLimitInMillis);
+
+        }
+
+    }
+
+
+    //---------TimerNodes------------
+
+    private static void TimerNodes(Instance instance, int timeLimitMillis) {
+
+        // Destroy cycles by heuristic
+        for (Graph subGraph : instance.subGraphs) {
+            int timeForThisGraph = timeLimitMillis / instance.subGraphs.size();
+
+            //All solutions
+            List<List<Integer>> solutions = new ArrayList<>();
+
+            while(timeForThisGraph > 0){
+                LocalDateTime startTime = LocalDateTime.now();
+                solutions.add(TimerRecNodes(subGraph, new ArrayList<>()));
+                timeForThisGraph -= ChronoUnit.MILLIS.between(startTime, LocalDateTime.now());
+            }
+
+            //Best solution
+            List<Integer> sol = Collections.min(solutions, Comparator.comparing(List::size));
+            instance.S.addAll(sol);
+        }
+    }
+
+    private static List<Integer> TimerRecNodes(Graph graph, List<Integer> solution) {
+
+        if (DAG.isDAGFast(graph)) return solution;
+
+        //All shortest
+        List<Cycle> allShortestCycles = FullBFS.findMultipleShortestCycles(graph);
+
+        //Random
+        Random random = new Random();
+        Cycle randomCycle = allShortestCycles.get(random.nextInt(allShortestCycles.size()));
+
+        //Get best node
+        Node node = randomCycle.getNodes().get(random.nextInt(randomCycle.getNodes().size()));
+
+        //Copy
+        Graph splitGraph = graph.copy();
+        splitGraph.removeNode(node.id);
+
+        //Solution
+        List<Integer> splitSolution = new ArrayList<>(solution);
+        splitSolution.add(node.id);
+
+        //Reduction
+        splitSolution.addAll(Reduction.applyRules(splitGraph, false));
+
+        //Reduce SplitSize
+        return TimerRecNodes(splitGraph, splitSolution);
+
+    }
+
+    //---------TimerBorder-----------
+
+    private static void TimerBorder(Instance instance, int timeLimitMillis) {
+
+        // Destroy cycles by heuristic
+        for (Graph subGraph : instance.subGraphs) {
+            int timeForThisGraph = timeLimitMillis / instance.subGraphs.size();
+
+            //All solutions
+            List<List<Integer>> solutions = new ArrayList<>();
+
+            while(timeForThisGraph > 0){
+                //Check if there are enough solutions
+                if(solutions.size() > subGraph.getNodeCount() * subGraph.getEdgeCount()) break;
+
+                LocalDateTime startTime = LocalDateTime.now();
+                solutions.add(TimerRecRandom(subGraph, new ArrayList<>()));
+                timeForThisGraph -= ChronoUnit.MILLIS.between(startTime, LocalDateTime.now());
+            }
+
+            //Best solution
+            List<Integer> sol = Collections.min(solutions, Comparator.comparing(List::size));
+            instance.S.addAll(sol);
+        }
+    }
 
 }
