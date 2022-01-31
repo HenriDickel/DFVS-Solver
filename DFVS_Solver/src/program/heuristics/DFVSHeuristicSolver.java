@@ -61,7 +61,7 @@ public abstract class DFVSHeuristicSolver {
         // 5.07 FullBFS_Multiple    //1.047
         //FullBFS_Multiple(instance);
         // 5.08 FullBFS             //1.038
-        //FullBFS(instance);
+        FullBFS(instance);
 
         //---------Splits------------------
         // 5.09 Splits(1)           //1.038

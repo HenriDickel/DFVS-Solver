@@ -15,9 +15,10 @@ public abstract class Heuristics {
         int approxKAgg = 0;
         int optimalKAgg = 0;
         float qualityAgg = 0;
+        long millisAgg = 0;
         int count = 0;
         for(GraphFile file: files) {
-            int optimalK = InstanceCreator.readOptimalKFromFile(InstanceCreator.getILPSolutionPath(Dataset.DATASET_3), file.name);
+            int optimalK = InstanceCreator.readOptimalKFromFile(InstanceCreator.getSolutionPath(Dataset.DATASET_2), file.name);
             if(optimalK <= 0) continue;
             Instance instance = InstanceCreator.createFromFile(file, optimalK);
 
@@ -32,16 +33,18 @@ public abstract class Heuristics {
             approxKAgg += approxK;
             optimalKAgg += instance.OPTIMAL_K;
             qualityAgg += (float) approxK / instance.OPTIMAL_K;
+            long millis = System.currentTimeMillis() - startMillis;
+            millisAgg += millis;
             count++;
 
             // Log
-            long millis = System.currentTimeMillis() - startMillis;
-            Log.debugLog(instance.NAME, "Heuristics " + approxK + " / " + instance.OPTIMAL_K);
+            Log.debugLog(instance.NAME, "Heuristics: " + approxK + " / " + instance.OPTIMAL_K + " (in " + millis + " ms)");
             Log.heuristicLog(instance, approxK, millis);
         }
         float quality = qualityAgg / count;
-        Log.debugLog("Overall (" + count + ")", "Average heuristics quality per instance: " + quality);
+        float averageMillis = (float) millisAgg / count;
+        Log.debugLog("Overall (" + count + ")", "Average heuristics quality per instance: " + quality  + " (in " + averageMillis + " ms)");
         float overallSolvedK = (float) approxKAgg / optimalKAgg;
-        Log.debugLog("Overall (" + count + ")", "Overall heuristics quality: " + overallSolvedK);
+        Log.debugLog("Overall (" + count + ")", "Overall heuristics quality: " + overallSolvedK + " (in " + millisAgg + " ms)");
     }
 }
