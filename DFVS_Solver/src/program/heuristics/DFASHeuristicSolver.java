@@ -114,22 +114,6 @@ public abstract class DFASHeuristicSolver {
 
     }
 
-    private static void destroyCycles(Instance instance) {
-        // Destroy cycles by heuristic
-        for (Graph subGraph : instance.subGraphs) {
-            while(!DAG.isDAGFast(subGraph)) {
-                Cycle cycle = FullBFS.findShortestCycle(subGraph);
-                int removeId = cycle.get(0).id;
-                subGraph.removeNode(removeId);
-                instance.S.add(removeId);
-
-                // Apply reduction rules
-                List<Integer> reduceS = Reduction.applyRules(subGraph, false);
-                instance.S.addAll(reduceS);
-            }
-        }
-    }
-
     private static void removeEdges(Instance instance) {
         for (Graph subGraph : instance.subGraphs) {
             while(!DAG.isDAGFast(subGraph)) {
@@ -144,28 +128,6 @@ public abstract class DFASHeuristicSolver {
                 }
                 subGraph.removeNode(removeId);
                 instance.S.add(removeId);
-            }
-        }
-    }
-
-    private static void removeNodes(Instance instance) {
-        for (Graph subGraph : instance.subGraphs) {
-            while(!DAG.isDAGFast(subGraph)) {
-                int removeId = -1;
-                int inOutMax = 0;
-                for(Node node: subGraph.getNodes()) {
-                    int inOut = Math.min(node.getOutIdCount(), node.getInIdCount());
-                    if(inOut > inOutMax) {
-                        removeId = node.id;
-                        inOutMax = inOut;
-                    }
-                }
-                subGraph.removeNode(removeId);
-                instance.S.add(removeId);
-
-                // Apply reduction rules
-                List<Integer> reduceS = Reduction.applyRules(subGraph, false);
-                instance.S.addAll(reduceS);
             }
         }
     }
