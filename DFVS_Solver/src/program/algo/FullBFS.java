@@ -3,6 +3,7 @@ package program.algo;
 import program.model.Cycle;
 import program.model.Graph;
 import program.model.Node;
+import program.utils.Timer;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -138,7 +139,8 @@ public abstract class FullBFS {
     }
 
 
-    public static List<Cycle> findMultipleShortestCycles(Graph graph){
+    public static List<Cycle> findMultipleShortestCycles(Graph graph, boolean sortResults){
+
 
         List<Cycle> cycles = graph.getPairCycles(); // TODO in rare cases (e.g. 'email'), it can be beneficial to break after the first cycle is found
         int minSize = 2;
@@ -161,23 +163,28 @@ public abstract class FullBFS {
         final int finalMinSize = minSize;
         List<Cycle> minCycles = cycles.stream().filter(cycle -> cycle.size() == finalMinSize).collect(Collectors.toList());
 
-        // Set cycle count for every node
-        for(Node node: graph.getNodes()) {
-            node.cycleCount = 0;
-            for(Cycle cycle: cycles) {
-                if(cycle.contains(node)) {
-                    node.cycleCount++;
+        if(sortResults){
+            // Set cycle count for every node
+            for(Node node: graph.getNodes()) {
+                node.cycleCount = 0;
+                for(Cycle cycle: cycles) {
+                    if(cycle.contains(node)) {
+                        node.cycleCount++;
+                    }
                 }
             }
-        }
 
-        for(Cycle cycle: minCycles) {
-            cycle.cycleCount = 0;
-            for(Node node: cycle.getNodes()) {
-                cycle.cycleCount += node.cycleCount;
+            for(Cycle cycle: minCycles) {
+                cycle.cycleCount = 0;
+                for(Node node: cycle.getNodes()) {
+                    cycle.cycleCount += node.cycleCount;
+                }
+                cycle.getNodes().sort(Comparator.comparing(Node::getCycleCount));
+                Collections.reverse(cycle.getNodes());
             }
-            cycle.getNodes().sort(Comparator.comparing(Node::getCycleCount));
-            Collections.reverse(cycle.getNodes());
+
+            minCycles.sort(Comparator.comparing(x -> x.cycleCount));
+            Collections.reverse(minCycles);
         }
 
         //Return

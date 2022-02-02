@@ -1,358 +1,278 @@
-[35m[2022-02-02 16:37:13.224]                         link-kv-n_5000: link-kv-n_5000 (n = 4840, m = 117893, k = 1670)[0m
-[0m[2022-02-02 16:37:13.373]                         link-kv-n_5000: Found 24 cyclic sub graph(s) with n = [4, 32, 3, 1552, 6, 30, 11, 4, 4, 21, 52, 87, 4, 5, 9, 5, 4, 5, 3, 4, 4, 16, 4, 3][0m
-[0m[2022-02-02 16:37:13.378]                         link-kv-n_5000: Removed 2975 nodes in preprocessing, starting with k = 261[0m
-[0m[2022-02-02 16:37:15.482]                         link-kv-n_5000: Found solution with k = 1682[0m
-[0m[2022-02-02 16:37:15.488]                         link-kv-n_5000: Heuristics: 1682 / 1670 (in 2248 ms)[0m
-[35m[2022-02-02 16:37:15.593]                         link-kv-n_6000: link-kv-n_6000 (n = 5911, m = 162803, k = 2014)[0m
-[0m[2022-02-02 16:37:15.712]                         link-kv-n_6000: Found 18 cyclic sub graph(s) with n = [6, 3, 46, 3, 2064, 15, 6, 46, 4, 24, 58, 13, 3, 4, 7, 6, 4, 4][0m
-[0m[2022-02-02 16:37:15.714]                         link-kv-n_6000: Removed 3599 nodes in preprocessing, starting with k = 304[0m
-[0m[2022-02-02 16:37:19.327]                         link-kv-n_6000: Found solution with k = 2027[0m
-[0m[2022-02-02 16:37:19.327]                         link-kv-n_6000: Heuristics: 2027 / 2014 (in 3734 ms)[0m
-[35m[2022-02-02 16:37:19.431]                         link-kv-n_6916: link-kv-n_6916 (n = 6914, m = 211650, k = 2364)[0m
-[0m[2022-02-02 16:37:19.581]                         link-kv-n_6916: Found 17 cyclic sub graph(s) with n = [8, 4, 4, 2552, 15, 4, 3, 28, 66, 4, 6, 15, 4, 4, 6, 3, 4][0m
-[0m[2022-02-02 16:37:19.582]                         link-kv-n_6916: Removed 4186 nodes in preprocessing, starting with k = 352[0m
-[0m[2022-02-02 16:37:24.985]                         link-kv-n_6916: Found solution with k = 2389[0m
-[0m[2022-02-02 16:37:24.985]                         link-kv-n_6916: Heuristics: 2389 / 2364 (in 5553 ms)[0m
-[35m[2022-02-02 16:37:24.986]                      openflights-n_100: openflights-n_100 (n = 25, m = 48, k = 10)[0m
-[0m[2022-02-02 16:37:24.986]                      openflights-n_100: Found 0 cyclic sub graph(s) with n = [][0m
-[0m[2022-02-02 16:37:24.986]                      openflights-n_100: Removed 25 nodes in preprocessing, starting with k = 10[0m
-[0m[2022-02-02 16:37:24.986]                      openflights-n_100: Found solution with k = 10[0m
-[0m[2022-02-02 16:37:24.987]                      openflights-n_100: Heuristics: 10 / 10 (in 1 ms)[0m
-[35m[2022-02-02 16:37:24.988]                     openflights-n_1000: openflights-n_1000 (n = 625, m = 2842, k = 201)[0m
-[0m[2022-02-02 16:37:24.988]                     openflights-n_1000: Found 4 cyclic sub graph(s) with n = [5, 4, 10, 4][0m
-[0m[2022-02-02 16:37:24.989]                     openflights-n_1000: Removed 602 nodes in preprocessing, starting with k = 190[0m
-[0m[2022-02-02 16:37:26.004]                     openflights-n_1000: Found solution with k = 201[0m
-[0m[2022-02-02 16:37:26.005]                     openflights-n_1000: Heuristics: 201 / 201 (in 1017 ms)[0m
-[35m[2022-02-02 16:37:26.007]                     openflights-n_1500: openflights-n_1500 (n = 1199, m = 7492, k = 413)[0m
-[0m[2022-02-02 16:37:26.008]                     openflights-n_1500: Found 16 cyclic sub graph(s) with n = [5, 5, 4, 3, 31, 3, 6, 3, 3, 3, 5, 3, 3, 4, 4, 3][0m
-[0m[2022-02-02 16:37:26.008]                     openflights-n_1500: Removed 1111 nodes in preprocessing, starting with k = 364[0m
-[0m[2022-02-02 16:37:27.036]                     openflights-n_1500: Found solution with k = 413[0m
-[0m[2022-02-02 16:37:27.037]                     openflights-n_1500: Heuristics: 413 / 413 (in 1030 ms)[0m
-[35m[2022-02-02 16:37:27.037]                      openflights-n_200: openflights-n_200 (n = 64, m = 106, k = 26)[0m
-[0m[2022-02-02 16:37:27.037]                      openflights-n_200: Found 2 cyclic sub graph(s) with n = [3, 4][0m
-[0m[2022-02-02 16:37:27.038]                      openflights-n_200: Removed 57 nodes in preprocessing, starting with k = 22[0m
-[0m[2022-02-02 16:37:28.047]                      openflights-n_200: Found solution with k = 26[0m
-[0m[2022-02-02 16:37:28.047]                      openflights-n_200: Heuristics: 26 / 26 (in 1010 ms)[0m
-[35m[2022-02-02 16:37:28.051]                     openflights-n_2000: openflights-n_2000 (n = 1794, m = 13285, k = 593)[0m
-[0m[2022-02-02 16:37:28.053]                     openflights-n_2000: Found 18 cyclic sub graph(s) with n = [4, 15, 23, 3, 9, 3, 3, 4, 4, 3, 9, 3, 3, 3, 3, 4, 3, 4][0m
-[0m[2022-02-02 16:37:28.053]                     openflights-n_2000: Removed 1691 nodes in preprocessing, starting with k = 535[0m
-[0m[2022-02-02 16:37:29.082]                     openflights-n_2000: Found solution with k = 593[0m
-[0m[2022-02-02 16:37:29.082]                     openflights-n_2000: Heuristics: 593 / 593 (in 1031 ms)[0m
-[35m[2022-02-02 16:37:29.090]                     openflights-n_2942: openflights-n_2942 (n = 2939, m = 30501, k = 998)[0m
-[0m[2022-02-02 16:37:29.095]                     openflights-n_2942: Found 24 cyclic sub graph(s) with n = [6, 45, 3, 3, 21, 23, 48, 16, 39, 3, 7, 8, 5, 3, 3, 4, 3, 3, 3, 3, 4, 3, 3, 4][0m
-[0m[2022-02-02 16:37:29.095]                     openflights-n_2942: Removed 2676 nodes in preprocessing, starting with k = 858[0m
-[0m[2022-02-02 16:37:30.133]                     openflights-n_2942: Found solution with k = 998[0m
-[0m[2022-02-02 16:37:30.133]                     openflights-n_2942: Heuristics: 998 / 998 (in 1042 ms)[0m
-[35m[2022-02-02 16:37:30.134]                       openflights-n_50: openflights-n_50 (n = 4, m = 4, k = 2)[0m
-[0m[2022-02-02 16:37:30.134]                       openflights-n_50: Found 0 cyclic sub graph(s) with n = [][0m
-[0m[2022-02-02 16:37:30.134]                       openflights-n_50: Removed 4 nodes in preprocessing, starting with k = 2[0m
-[0m[2022-02-02 16:37:30.134]                       openflights-n_50: Found solution with k = 2[0m
-[0m[2022-02-02 16:37:30.135]                       openflights-n_50: Heuristics: 2 / 2 (in 1 ms)[0m
-[35m[2022-02-02 16:37:30.135]                      openflights-n_500: openflights-n_500 (n = 226, m = 770, k = 80)[0m
-[0m[2022-02-02 16:37:30.136]                      openflights-n_500: Found 3 cyclic sub graph(s) with n = [7, 9, 3][0m
-[0m[2022-02-02 16:37:30.136]                      openflights-n_500: Removed 207 nodes in preprocessing, starting with k = 69[0m
-[0m[2022-02-02 16:37:31.143]                      openflights-n_500: Found solution with k = 80[0m
-[0m[2022-02-02 16:37:31.144]                      openflights-n_500: Heuristics: 80 / 80 (in 1009 ms)[0m
-[35m[2022-02-02 16:37:31.144]               out.cfinder-google-n_100: out.cfinder-google-n_100 (n = 8, m = 7, k = 6)[0m
-[0m[2022-02-02 16:37:31.145]               out.cfinder-google-n_100: Found 0 cyclic sub graph(s) with n = [][0m
-[0m[2022-02-02 16:37:31.145]               out.cfinder-google-n_100: Removed 8 nodes in preprocessing, starting with k = 6[0m
-[0m[2022-02-02 16:37:31.145]               out.cfinder-google-n_100: Found solution with k = 6[0m
-[0m[2022-02-02 16:37:31.145]               out.cfinder-google-n_100: Heuristics: 6 / 6 (in 0 ms)[0m
-[35m[2022-02-02 16:37:31.146]              out.cfinder-google-n_1000: out.cfinder-google-n_1000 (n = 413, m = 576, k = 100)[0m
-[0m[2022-02-02 16:37:31.146]              out.cfinder-google-n_1000: Found 3 cyclic sub graph(s) with n = [3, 3, 3][0m
-[0m[2022-02-02 16:37:31.146]              out.cfinder-google-n_1000: Removed 404 nodes in preprocessing, starting with k = 94[0m
-[0m[2022-02-02 16:37:32.162]              out.cfinder-google-n_1000: Found solution with k = 100[0m
-[0m[2022-02-02 16:37:32.162]              out.cfinder-google-n_1000: Heuristics: 100 / 100 (in 1016 ms)[0m
-[35m[2022-02-02 16:37:32.248]             out.cfinder-google-n_10000: out.cfinder-google-n_10000 (n = 9678, m = 70276, k = 3133)[0m
-[0m[2022-02-02 16:37:32.306]             out.cfinder-google-n_10000: Found 421 cyclic sub graph(s) with n = [5, 5, 6, 282, 11, 3, 6, 7, 4, 3, 4, 4, 3, 7, 3, 3, 8, 5, 3, 3, 6, 9, 6, 5, 11, 4, 3, 5, 9, 10, 4, 3, 9, 8, 3, 4, 4, 20, 4, 10, 8, 8, 4, 9, 5, 3, 6, 5, 4, 4, 3, 5, 3, 8, 3, 3, 6, 3, 4, 13, 3, 7, 4, 4, 8, 3, 8, 5, 5, 7, 2, 3, 4, 7, 3, 3, 5, 4, 7, 6, 5, 12, 4, 4, 4, 4, 3, 6, 4, 4, 3, 5, 5, 3, 6, 8, 3, 8, 3, 5, 3, 6, 4, 6, 6, 3, 3, 5, 7, 5, 3, 3, 11, 3, 3, 5, 3, 4, 7, 8, 3, 5, 5, 5, 4, 8, 4, 3, 4, 4, 4, 3, 4, 5, 4, 4, 2, 3, 5, 5, 8, 5, 11, 3, 4, 10, 5, 4, 6, 4, 4, 10, 14, 3, 11, 3, 2, 5, 3, 4, 3, 8, 3, 2, 4, 3, 4, 6, 4, 3, 5, 5, 6, 8, 3, 3, 4, 3, 4, 3, 2, 6, 3, 5, 6, 6, 4, 3, 7, 7, 3, 10, 6, 3, 8, 4, 3, 3, 10, 4, 3, 3, 3, 3, 5, 4, 11, 3, 3, 5, 14, 5, 6, 6, 3, 14, 6, 4, 8, 4, 5, 4, 4, 4, 3, 9, 5, 3, 6, 7, 5, 9, 3, 3, 3, 3, 2, 5, 3, 3, 4, 3, 3, 3, 5, 5, 3, 3, 4, 2, 5, 3, 6, 2, 6, 4, 5, 7, 4, 16, 5, 7, 4, 5, 3, 3, 3, 5, 3, 6, 7, 5, 4, 7, 3, 4, 3, 4, 3, 6, 5, 3, 5, 6, 3, 6, 5, 12, 3, 4, 7, 7, 3, 9, 3, 3, 5, 3, 7, 3, 3, 14, 3, 8, 4, 3, 3, 8, 2, 5, 5, 8, 4, 10, 3, 4, 10, 3, 5, 3, 9, 6, 4, 7, 3, 5, 3, 4, 4, 9, 3, 4, 3, 3, 7, 6, 7, 7, 3, 9, 4, 3, 3, 11, 5, 2, 3, 13, 3, 5, 3, 6, 6, 3, 3, 4, 6, 8, 5, 7, 6, 4, 3, 6, 9, 3, 7, 3, 2, 5, 7, 3, 4, 4, 7, 5, 4, 3, 6, 3, 3, 8, 6, 7, 7, 4, 9, 6, 4, 13, 3, 3, 3, 3, 4, 5, 8, 3, 5, 9, 3, 4, 9, 3, 3, 4, 4, 4, 7, 3, 4, 5, 9, 6, 3, 4, 10, 3, 4, 4, 4][0m
-[0m[2022-02-02 16:37:32.307]             out.cfinder-google-n_10000: Removed 7514 nodes in preprocessing, starting with k = 1603[0m
-[0m[2022-02-02 16:37:33.998]             out.cfinder-google-n_10000: Found solution with k = 3133[0m
-[0m[2022-02-02 16:37:33.998]             out.cfinder-google-n_10000: Heuristics: 3133 / 3133 (in 1750 ms)[0m
-[35m[2022-02-02 16:37:33.999]              out.cfinder-google-n_1500: out.cfinder-google-n_1500 (n = 723, m = 1120, k = 188)[0m
-[0m[2022-02-02 16:37:33.999]              out.cfinder-google-n_1500: Found 14 cyclic sub graph(s) with n = [3, 3, 3, 3, 3, 4, 3, 3, 3, 3, 3, 3, 5, 3][0m
-[0m[2022-02-02 16:37:34.000]              out.cfinder-google-n_1500: Removed 678 nodes in preprocessing, starting with k = 157[0m
-[0m[2022-02-02 16:37:35.028]              out.cfinder-google-n_1500: Found solution with k = 188[0m
-[0m[2022-02-02 16:37:35.029]              out.cfinder-google-n_1500: Heuristics: 188 / 188 (in 1030 ms)[0m
-[35m[2022-02-02 16:37:35.029]               out.cfinder-google-n_200: out.cfinder-google-n_200 (n = 32, m = 27, k = 13)[0m
-[0m[2022-02-02 16:37:35.029]               out.cfinder-google-n_200: Found 0 cyclic sub graph(s) with n = [][0m
-[0m[2022-02-02 16:37:35.030]               out.cfinder-google-n_200: Removed 32 nodes in preprocessing, starting with k = 13[0m
-[0m[2022-02-02 16:37:35.030]               out.cfinder-google-n_200: Found solution with k = 13[0m
-[0m[2022-02-02 16:37:35.030]               out.cfinder-google-n_200: Heuristics: 13 / 13 (in 1 ms)[0m
-[35m[2022-02-02 16:37:35.032]              out.cfinder-google-n_2000: out.cfinder-google-n_2000 (n = 1384, m = 3224, k = 307)[0m
-[0m[2022-02-02 16:37:35.032]              out.cfinder-google-n_2000: Found 27 cyclic sub graph(s) with n = [3, 3, 3, 3, 3, 3, 4, 3, 4, 3, 5, 4, 3, 3, 4, 4, 3, 4, 3, 3, 3, 3, 3, 4, 3, 3, 3][0m
-[0m[2022-02-02 16:37:35.033]              out.cfinder-google-n_2000: Removed 1294 nodes in preprocessing, starting with k = 244[0m
-[0m[2022-02-02 16:37:36.079]              out.cfinder-google-n_2000: Found solution with k = 307[0m
-[0m[2022-02-02 16:37:36.080]              out.cfinder-google-n_2000: Heuristics: 307 / 307 (in 1047 ms)[0m
-[35m[2022-02-02 16:37:36.081]              out.cfinder-google-n_3000: out.cfinder-google-n_3000 (n = 2127, m = 5857, k = 574)[0m
-[0m[2022-02-02 16:37:36.082]              out.cfinder-google-n_3000: Found 71 cyclic sub graph(s) with n = [3, 4, 3, 5, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 3, 3, 4, 3, 3, 3, 5, 3, 5, 5, 3, 4, 4, 3, 3, 3, 3, 3, 3, 4, 3, 5, 5, 3, 4, 3, 3, 3, 3, 3, 3, 4, 3, 4, 3, 3, 5, 3, 3, 4, 4, 5, 3, 3, 3, 3, 4, 3, 4, 3, 6, 3, 3, 3, 3, 3, 4][0m
-[0m[2022-02-02 16:37:36.083]              out.cfinder-google-n_3000: Removed 1880 nodes in preprocessing, starting with k = 400[0m
-[0m[2022-02-02 16:37:37.213]              out.cfinder-google-n_3000: Found solution with k = 574[0m
-[0m[2022-02-02 16:37:37.213]              out.cfinder-google-n_3000: Heuristics: 574 / 574 (in 1131 ms)[0m
-[35m[2022-02-02 16:37:37.220]              out.cfinder-google-n_4000: out.cfinder-google-n_4000 (n = 3184, m = 11463, k = 852)[0m
-[0m[2022-02-02 16:37:37.224]              out.cfinder-google-n_4000: Found 117 cyclic sub graph(s) with n = [6, 4, 3, 3, 4, 3, 3, 3, 3, 6, 5, 4, 3, 3, 5, 3, 4, 3, 3, 3, 4, 4, 3, 4, 3, 3, 3, 3, 3, 3, 4, 5, 3, 3, 3, 5, 5, 3, 4, 5, 3, 4, 3, 5, 3, 6, 4, 4, 3, 3, 3, 3, 8, 3, 4, 4, 4, 5, 3, 3, 3, 6, 3, 3, 3, 4, 3, 4, 3, 3, 3, 3, 3, 4, 4, 3, 4, 3, 3, 3, 3, 3, 3, 4, 4, 5, 3, 3, 3, 5, 3, 6, 4, 3, 3, 3, 4, 4, 3, 3, 4, 3, 5, 3, 3, 3, 3, 3, 4, 3, 4, 3, 3, 3, 3, 4, 5][0m
-[0m[2022-02-02 16:37:37.225]              out.cfinder-google-n_4000: Removed 2768 nodes in preprocessing, starting with k = 555[0m
-[0m[2022-02-02 16:37:38.424]              out.cfinder-google-n_4000: Found solution with k = 852[0m
-[0m[2022-02-02 16:37:38.424]              out.cfinder-google-n_4000: Heuristics: 852 / 852 (in 1203 ms)[0m
-[35m[2022-02-02 16:37:38.425]                out.cfinder-google-n_50: out.cfinder-google-n_50 (n = 8, m = 8, k = 7)[0m
-[0m[2022-02-02 16:37:38.425]                out.cfinder-google-n_50: Found 0 cyclic sub graph(s) with n = [][0m
-[0m[2022-02-02 16:37:38.425]                out.cfinder-google-n_50: Removed 8 nodes in preprocessing, starting with k = 7[0m
-[0m[2022-02-02 16:37:38.425]                out.cfinder-google-n_50: Found solution with k = 7[0m
-[0m[2022-02-02 16:37:38.425]                out.cfinder-google-n_50: Heuristics: 7 / 7 (in 0 ms)[0m
-[35m[2022-02-02 16:37:38.426]               out.cfinder-google-n_500: out.cfinder-google-n_500 (n = 119, m = 142, k = 37)[0m
-[0m[2022-02-02 16:37:38.426]               out.cfinder-google-n_500: Found 1 cyclic sub graph(s) with n = [3][0m
-[0m[2022-02-02 16:37:38.426]               out.cfinder-google-n_500: Removed 116 nodes in preprocessing, starting with k = 35[0m
-[0m[2022-02-02 16:37:39.437]               out.cfinder-google-n_500: Found solution with k = 37[0m
-[0m[2022-02-02 16:37:39.437]               out.cfinder-google-n_500: Heuristics: 37 / 37 (in 1011 ms)[0m
-[35m[2022-02-02 16:37:39.452]              out.cfinder-google-n_5000: out.cfinder-google-n_5000 (n = 4366, m = 19192, k = 1200)[0m
-[0m[2022-02-02 16:37:39.465]              out.cfinder-google-n_5000: Found 176 cyclic sub graph(s) with n = [3, 7, 4, 4, 3, 3, 5, 3, 4, 4, 5, 3, 5, 4, 3, 3, 3, 6, 3, 3, 3, 3, 3, 4, 10, 3, 3, 3, 3, 3, 7, 3, 4, 3, 4, 4, 4, 3, 3, 5, 3, 4, 3, 3, 4, 3, 4, 4, 3, 3, 3, 4, 5, 9, 5, 4, 4, 4, 4, 3, 3, 6, 3, 3, 5, 3, 6, 3, 4, 3, 3, 3, 3, 3, 5, 3, 4, 3, 3, 3, 4, 3, 3, 4, 5, 3, 3, 5, 3, 3, 3, 4, 3, 4, 4, 4, 4, 4, 3, 6, 3, 3, 3, 3, 5, 3, 3, 4, 3, 3, 3, 5, 3, 7, 3, 3, 4, 3, 5, 5, 4, 5, 3, 4, 4, 4, 3, 3, 5, 3, 3, 8, 3, 3, 4, 5, 3, 3, 3, 4, 4, 3, 6, 4, 3, 6, 4, 4, 3, 3, 5, 4, 5, 3, 4, 6, 3, 5, 3, 3, 3, 4, 4, 4, 3, 4, 6, 4, 3, 3, 3, 3, 3, 3, 6, 4][0m
-[0m[2022-02-02 16:37:39.466]              out.cfinder-google-n_5000: Removed 3722 nodes in preprocessing, starting with k = 740[0m
-[0m[2022-02-02 16:37:40.731]              out.cfinder-google-n_5000: Found solution with k = 1200[0m
-[0m[2022-02-02 16:37:40.731]              out.cfinder-google-n_5000: Heuristics: 1200 / 1200 (in 1279 ms)[0m
-[35m[2022-02-02 16:37:40.763]              out.cfinder-google-n_6000: out.cfinder-google-n_6000 (n = 5853, m = 31372, k = 1581)[0m
-[0m[2022-02-02 16:37:40.778]              out.cfinder-google-n_6000: Found 248 cyclic sub graph(s) with n = [34, 4, 3, 4, 5, 5, 3, 2, 3, 3, 3, 9, 6, 3, 9, 7, 5, 4, 6, 5, 7, 7, 10, 4, 14, 2, 2, 3, 5, 4, 3, 3, 5, 3, 8, 3, 3, 6, 5, 3, 10, 4, 4, 5, 3, 3, 4, 8, 3, 7, 5, 4, 4, 3, 3, 3, 5, 5, 6, 5, 4, 5, 4, 4, 7, 4, 4, 3, 7, 3, 4, 3, 3, 6, 3, 2, 3, 4, 8, 3, 5, 5, 3, 5, 6, 5, 4, 3, 4, 8, 6, 2, 6, 4, 5, 4, 4, 3, 7, 4, 3, 4, 3, 4, 2, 3, 4, 7, 3, 4, 3, 7, 5, 3, 5, 5, 3, 8, 5, 3, 3, 4, 3, 4, 3, 6, 6, 6, 3, 11, 4, 5, 3, 6, 3, 3, 3, 3, 5, 3, 3, 4, 3, 3, 5, 3, 3, 4, 5, 4, 5, 3, 4, 3, 4, 4, 6, 5, 3, 3, 5, 4, 4, 13, 3, 6, 3, 5, 3, 3, 4, 3, 5, 3, 3, 5, 8, 3, 3, 4, 3, 4, 4, 3, 5, 4, 5, 3, 6, 4, 3, 3, 7, 3, 8, 3, 4, 4, 3, 3, 3, 3, 3, 3, 2, 3, 4, 3, 4, 4, 6, 5, 3, 3, 6, 5, 3, 3, 3, 3, 3, 5, 4, 4, 3, 4, 4, 4, 3, 3, 5, 3, 2, 8, 5, 5, 3, 5, 5, 3, 3, 3, 5, 3, 4, 4, 3, 3][0m
-[0m[2022-02-02 16:37:40.780]              out.cfinder-google-n_6000: Removed 4916 nodes in preprocessing, starting with k = 901[0m
-[0m[2022-02-02 16:37:42.265]              out.cfinder-google-n_6000: Found solution with k = 1581[0m
-[0m[2022-02-02 16:37:42.265]              out.cfinder-google-n_6000: Heuristics: 1581 / 1581 (in 1501 ms)[0m
-[35m[2022-02-02 16:37:42.276]              out.cfinder-google-n_7000: out.cfinder-google-n_7000 (n = 6186, m = 31254, k = 1928)[0m
-[0m[2022-02-02 16:37:42.284]              out.cfinder-google-n_7000: Found 268 cyclic sub graph(s) with n = [5, 3, 3, 3, 7, 7, 3, 5, 3, 8, 3, 5, 3, 6, 3, 3, 4, 6, 3, 3, 3, 6, 5, 3, 3, 15, 3, 3, 3, 7, 6, 5, 7, 3, 6, 7, 3, 4, 4, 3, 7, 4, 4, 5, 3, 3, 3, 4, 4, 3, 11, 8, 13, 8, 5, 4, 3, 3, 6, 4, 7, 3, 3, 3, 5, 3, 4, 3, 4, 4, 3, 8, 5, 4, 4, 3, 4, 3, 4, 5, 7, 6, 4, 3, 3, 4, 4, 6, 5, 3, 3, 5, 5, 3, 6, 10, 9, 5, 6, 3, 4, 3, 3, 3, 3, 5, 3, 6, 3, 8, 3, 3, 6, 3, 3, 4, 4, 5, 8, 3, 3, 4, 4, 4, 3, 4, 5, 4, 3, 3, 5, 3, 3, 3, 6, 4, 7, 3, 5, 3, 3, 4, 3, 6, 3, 3, 7, 4, 3, 3, 5, 8, 3, 6, 3, 3, 9, 4, 7, 6, 3, 3, 5, 3, 7, 3, 9, 4, 3, 6, 9, 13, 3, 6, 3, 3, 6, 7, 3, 3, 3, 3, 3, 7, 5, 9, 3, 4, 3, 4, 5, 4, 4, 6, 3, 3, 4, 4, 8, 4, 4, 4, 4, 3, 5, 8, 4, 6, 4, 5, 7, 5, 7, 4, 6, 3, 3, 3, 3, 6, 3, 5, 8, 3, 4, 5, 3, 6, 10, 3, 3, 5, 4, 4, 3, 5, 3, 5, 4, 3, 4, 4, 6, 5, 6, 4, 4, 5, 4, 15, 3, 4, 3, 5, 3, 4, 4, 3, 3, 5, 3, 3, 3, 5, 9, 3, 3, 3][0m
-[0m[2022-02-02 16:37:42.285]              out.cfinder-google-n_7000: Removed 5038 nodes in preprocessing, starting with k = 1091[0m
-[0m[2022-02-02 16:37:43.704]              out.cfinder-google-n_7000: Found solution with k = 1928[0m
-[0m[2022-02-02 16:37:43.704]              out.cfinder-google-n_7000: Heuristics: 1928 / 1928 (in 1428 ms)[0m
-[35m[2022-02-02 16:37:43.757]              out.cfinder-google-n_8000: out.cfinder-google-n_8000 (n = 7228, m = 48521, k = 2338)[0m
-[0m[2022-02-02 16:37:43.787]              out.cfinder-google-n_8000: Found 335 cyclic sub graph(s) with n = [319, 5, 5, 5, 5, 6, 2, 3, 3, 8, 8, 3, 7, 2, 3, 3, 4, 4, 3, 5, 4, 13, 3, 5, 4, 3, 4, 4, 3, 5, 3, 5, 3, 4, 7, 9, 4, 16, 3, 4, 6, 6, 5, 6, 3, 3, 2, 3, 3, 4, 5, 3, 3, 2, 4, 3, 3, 4, 3, 4, 7, 3, 3, 2, 6, 3, 6, 4, 4, 6, 4, 6, 3, 4, 5, 11, 4, 7, 3, 6, 7, 7, 3, 3, 3, 5, 8, 3, 5, 7, 4, 3, 7, 3, 7, 5, 3, 3, 4, 3, 4, 3, 6, 3, 6, 3, 3, 4, 4, 3, 2, 3, 5, 3, 4, 4, 4, 3, 3, 3, 3, 3, 11, 3, 8, 9, 4, 3, 2, 3, 13, 5, 3, 2, 5, 3, 10, 2, 3, 8, 2, 5, 4, 4, 3, 3, 3, 6, 3, 3, 5, 4, 4, 6, 3, 5, 3, 8, 9, 2, 5, 4, 7, 3, 3, 8, 8, 4, 5, 4, 6, 6, 4, 6, 3, 9, 5, 3, 4, 3, 15, 3, 7, 3, 4, 13, 3, 4, 7, 10, 4, 3, 3, 10, 3, 3, 3, 2, 3, 3, 6, 5, 3, 6, 9, 4, 3, 4, 5, 4, 2, 4, 4, 3, 3, 5, 3, 5, 5, 7, 6, 3, 8, 3, 4, 4, 3, 2, 3, 4, 3, 4, 3, 3, 3, 5, 6, 3, 4, 5, 5, 3, 3, 5, 3, 3, 4, 5, 4, 3, 11, 3, 4, 6, 4, 5, 4, 5, 4, 4, 3, 5, 4, 5, 3, 4, 7, 5, 4, 3, 11, 4, 3, 3, 4, 2, 7, 4, 3, 5, 5, 5, 5, 3, 4, 3, 4, 4, 5, 6, 3, 4, 5, 3, 13, 4, 6, 3, 9, 3, 9, 7, 4, 4, 4, 4, 4, 6, 7, 3, 4, 8, 7, 3, 4, 3, 3, 5, 4, 5, 4, 3, 3, 3, 4, 6, 4, 7, 6, 3, 4, 4, 3, 5, 3][0m
-[0m[2022-02-02 16:37:43.788]              out.cfinder-google-n_8000: Removed 5596 nodes in preprocessing, starting with k = 1204[0m
-[0m[2022-02-02 16:37:45.308]              out.cfinder-google-n_8000: Found solution with k = 2338[0m
-[0m[2022-02-02 16:37:45.308]              out.cfinder-google-n_8000: Heuristics: 2338 / 2338 (in 1551 ms)[0m
-[35m[2022-02-02 16:37:45.353]              out.cfinder-google-n_9000: out.cfinder-google-n_9000 (n = 8186, m = 53109, k = 2698)[0m
-[0m[2022-02-02 16:37:45.378]              out.cfinder-google-n_9000: Found 399 cyclic sub graph(s) with n = [64, 6, 2, 3, 11, 4, 6, 5, 9, 5, 3, 3, 6, 3, 8, 5, 7, 5, 3, 12, 2, 4, 9, 12, 5, 3, 19, 7, 3, 9, 11, 22, 8, 10, 7, 7, 6, 3, 4, 6, 3, 3, 6, 4, 4, 3, 3, 4, 4, 3, 4, 5, 4, 11, 8, 3, 8, 3, 7, 8, 3, 3, 4, 4, 6, 3, 5, 3, 10, 5, 3, 6, 3, 3, 4, 5, 4, 3, 3, 4, 6, 5, 4, 6, 5, 2, 4, 4, 3, 13, 3, 7, 6, 4, 3, 3, 7, 6, 3, 4, 10, 4, 4, 10, 3, 3, 4, 7, 3, 3, 3, 3, 5, 5, 5, 5, 3, 4, 4, 3, 4, 4, 3, 7, 7, 3, 3, 8, 6, 3, 4, 7, 2, 4, 5, 3, 5, 11, 3, 3, 2, 3, 11, 5, 7, 3, 7, 4, 7, 6, 2, 3, 4, 3, 2, 4, 3, 4, 3, 3, 7, 4, 3, 6, 8, 5, 3, 6, 7, 3, 4, 10, 5, 4, 5, 5, 3, 2, 4, 3, 3, 10, 4, 3, 10, 9, 3, 7, 3, 3, 3, 4, 5, 5, 6, 5, 3, 3, 7, 4, 3, 4, 9, 4, 5, 3, 4, 6, 3, 3, 4, 3, 6, 5, 3, 3, 2, 3, 5, 5, 6, 5, 6, 4, 3, 3, 4, 8, 5, 3, 3, 8, 3, 6, 2, 3, 5, 8, 8, 5, 7, 5, 2, 6, 5, 4, 4, 3, 6, 9, 3, 4, 10, 4, 3, 6, 6, 4, 3, 7, 4, 3, 3, 4, 2, 3, 4, 4, 4, 7, 3, 4, 19, 16, 4, 8, 9, 8, 8, 3, 4, 15, 3, 4, 3, 2, 3, 3, 11, 4, 3, 8, 5, 3, 3, 3, 5, 7, 8, 3, 8, 4, 4, 3, 2, 4, 9, 6, 3, 3, 3, 5, 3, 3, 7, 3, 4, 3, 3, 3, 2, 3, 4, 2, 6, 3, 3, 3, 3, 6, 6, 4, 9, 4, 3, 5, 3, 6, 3, 3, 7, 5, 6, 8, 3, 3, 3, 6, 4, 6, 6, 3, 12, 4, 5, 5, 4, 4, 3, 6, 3, 3, 7, 3, 8, 4, 7, 4, 4, 5, 6, 3, 4, 6, 3, 5, 6, 8, 5, 5, 4, 4, 3, 3, 4, 2, 3, 4, 9, 3, 3, 3, 3, 8, 3, 4, 3, 4, 3][0m
-[0m[2022-02-02 16:37:45.379]              out.cfinder-google-n_9000: Removed 6392 nodes in preprocessing, starting with k = 1380[0m
-[0m[2022-02-02 16:37:47.008]              out.cfinder-google-n_9000: Found solution with k = 2698[0m
-[0m[2022-02-02 16:37:47.008]              out.cfinder-google-n_9000: Heuristics: 2698 / 2698 (in 1655 ms)[0m
-[35m[2022-02-02 16:37:47.008]                         talk-oc-n_1000: talk-oc-n_1000 (n = 589, m = 757, k = 7)[0m
-[0m[2022-02-02 16:37:47.009]                         talk-oc-n_1000: Found 0 cyclic sub graph(s) with n = [][0m
-[0m[2022-02-02 16:37:47.009]                         talk-oc-n_1000: Removed 589 nodes in preprocessing, starting with k = 7[0m
-[0m[2022-02-02 16:37:47.009]                         talk-oc-n_1000: Found solution with k = 7[0m
-[0m[2022-02-02 16:37:47.009]                         talk-oc-n_1000: Heuristics: 7 / 7 (in 0 ms)[0m
-[35m[2022-02-02 16:37:47.010]                         talk-oc-n_1500: talk-oc-n_1500 (n = 284, m = 489, k = 15)[0m
-[0m[2022-02-02 16:37:47.010]                         talk-oc-n_1500: Found 0 cyclic sub graph(s) with n = [][0m
-[0m[2022-02-02 16:37:47.010]                         talk-oc-n_1500: Removed 284 nodes in preprocessing, starting with k = 15[0m
-[0m[2022-02-02 16:37:47.011]                         talk-oc-n_1500: Found solution with k = 15[0m
-[0m[2022-02-02 16:37:47.011]                         talk-oc-n_1500: Heuristics: 15 / 15 (in 1 ms)[0m
-[35m[2022-02-02 16:37:47.011]                         talk-oc-n_2000: talk-oc-n_2000 (n = 408, m = 605, k = 15)[0m
-[0m[2022-02-02 16:37:47.012]                         talk-oc-n_2000: Found 0 cyclic sub graph(s) with n = [][0m
-[0m[2022-02-02 16:37:47.012]                         talk-oc-n_2000: Removed 408 nodes in preprocessing, starting with k = 15[0m
-[0m[2022-02-02 16:37:47.012]                         talk-oc-n_2000: Found solution with k = 15[0m
-[0m[2022-02-02 16:37:47.012]                         talk-oc-n_2000: Heuristics: 15 / 15 (in 0 ms)[0m
-[35m[2022-02-02 16:37:47.015]                         talk-oc-n_3000: talk-oc-n_3000 (n = 2997, m = 4263, k = 29)[0m
-[0m[2022-02-02 16:37:47.016]                         talk-oc-n_3000: Found 0 cyclic sub graph(s) with n = [][0m
-[0m[2022-02-02 16:37:47.016]                         talk-oc-n_3000: Removed 2997 nodes in preprocessing, starting with k = 29[0m
-[0m[2022-02-02 16:37:47.017]                         talk-oc-n_3000: Found solution with k = 29[0m
-[0m[2022-02-02 16:37:47.017]                         talk-oc-n_3000: Heuristics: 29 / 29 (in 2 ms)[0m
-[35m[2022-02-02 16:37:47.020]                         talk-oc-n_3066: talk-oc-n_3066 (n = 3064, m = 4464, k = 30)[0m
-[0m[2022-02-02 16:37:47.021]                         talk-oc-n_3066: Found 0 cyclic sub graph(s) with n = [][0m
-[0m[2022-02-02 16:37:47.021]                         talk-oc-n_3066: Removed 3064 nodes in preprocessing, starting with k = 30[0m
-[0m[2022-02-02 16:37:47.021]                         talk-oc-n_3066: Found solution with k = 30[0m
-[0m[2022-02-02 16:37:47.022]                         talk-oc-n_3066: Heuristics: 30 / 30 (in 2 ms)[0m
-[35m[2022-02-02 16:37:47.022]                          talk-oc-n_500: talk-oc-n_500 (n = 26, m = 22, k = 3)[0m
-[0m[2022-02-02 16:37:47.022]                          talk-oc-n_500: Found 0 cyclic sub graph(s) with n = [][0m
-[0m[2022-02-02 16:37:47.022]                          talk-oc-n_500: Removed 26 nodes in preprocessing, starting with k = 3[0m
-[0m[2022-02-02 16:37:47.023]                          talk-oc-n_500: Found solution with k = 3[0m
-[0m[2022-02-02 16:37:47.023]                          talk-oc-n_500: Heuristics: 3 / 3 (in 1 ms)[0m
-[35m[2022-02-02 16:37:47.024]                   temporalGraph-n_1000: temporalGraph-n_1000 (n = 622, m = 1447, k = 40)[0m
-[0m[2022-02-02 16:37:47.024]                   temporalGraph-n_1000: Found 0 cyclic sub graph(s) with n = [][0m
-[0m[2022-02-02 16:37:47.024]                   temporalGraph-n_1000: Removed 622 nodes in preprocessing, starting with k = 40[0m
-[0m[2022-02-02 16:37:47.024]                   temporalGraph-n_1000: Found solution with k = 40[0m
-[0m[2022-02-02 16:37:47.025]                   temporalGraph-n_1000: Heuristics: 40 / 40 (in 1 ms)[0m
-[35m[2022-02-02 16:37:47.026]                   temporalGraph-n_1500: temporalGraph-n_1500 (n = 1343, m = 3437, k = 77)[0m
-[0m[2022-02-02 16:37:47.027]                   temporalGraph-n_1500: Found 1 cyclic sub graph(s) with n = [33][0m
-[0m[2022-02-02 16:37:47.027]                   temporalGraph-n_1500: Removed 1310 nodes in preprocessing, starting with k = 61[0m
-[0m[2022-02-02 16:37:48.029]                   temporalGraph-n_1500: Found solution with k = 77[0m
-[0m[2022-02-02 16:37:48.029]                   temporalGraph-n_1500: Heuristics: 77 / 77 (in 1003 ms)[0m
-[35m[2022-02-02 16:37:48.031]                   temporalGraph-n_1868: temporalGraph-n_1868 (n = 1866, m = 5517, k = 106)[0m
-[0m[2022-02-02 16:37:48.032]                   temporalGraph-n_1868: Found 1 cyclic sub graph(s) with n = [32][0m
-[0m[2022-02-02 16:37:48.033]                   temporalGraph-n_1868: Removed 1834 nodes in preprocessing, starting with k = 91[0m
-[0m[2022-02-02 16:37:49.035]                   temporalGraph-n_1868: Found solution with k = 106[0m
-[0m[2022-02-02 16:37:49.035]                   temporalGraph-n_1868: Heuristics: 106 / 106 (in 1003 ms)[0m
-[35m[2022-02-02 16:37:49.036]                    temporalGraph-n_200: temporalGraph-n_200 (n = 50, m = 73, k = 5)[0m
-[0m[2022-02-02 16:37:49.036]                    temporalGraph-n_200: Found 0 cyclic sub graph(s) with n = [][0m
-[0m[2022-02-02 16:37:49.036]                    temporalGraph-n_200: Removed 50 nodes in preprocessing, starting with k = 5[0m
-[0m[2022-02-02 16:37:49.037]                    temporalGraph-n_200: Found solution with k = 5[0m
-[0m[2022-02-02 16:37:49.037]                    temporalGraph-n_200: Heuristics: 5 / 5 (in 1 ms)[0m
-[35m[2022-02-02 16:37:49.037]                     temporalGraph-n_50: temporalGraph-n_50 (n = 12, m = 16, k = 3)[0m
-[0m[2022-02-02 16:37:49.038]                     temporalGraph-n_50: Found 0 cyclic sub graph(s) with n = [][0m
-[0m[2022-02-02 16:37:49.038]                     temporalGraph-n_50: Removed 12 nodes in preprocessing, starting with k = 3[0m
-[0m[2022-02-02 16:37:49.038]                     temporalGraph-n_50: Found solution with k = 3[0m
-[0m[2022-02-02 16:37:49.038]                     temporalGraph-n_50: Heuristics: 3 / 3 (in 1 ms)[0m
-[35m[2022-02-02 16:37:49.039]                    temporalGraph-n_500: temporalGraph-n_500 (n = 199, m = 368, k = 17)[0m
-[0m[2022-02-02 16:37:49.039]                    temporalGraph-n_500: Found 1 cyclic sub graph(s) with n = [14][0m
-[0m[2022-02-02 16:37:49.039]                    temporalGraph-n_500: Removed 185 nodes in preprocessing, starting with k = 11[0m
-[0m[2022-02-02 16:37:50.043]                    temporalGraph-n_500: Found solution with k = 17[0m
-[0m[2022-02-02 16:37:50.043]                    temporalGraph-n_500: Heuristics: 17 / 17 (in 1004 ms)[0m
-[35m[2022-02-02 16:37:50.044]                         ucsocial-n_100: ucsocial-n_100 (n = 26, m = 30, k = 5)[0m
-[0m[2022-02-02 16:37:50.044]                         ucsocial-n_100: Found 0 cyclic sub graph(s) with n = [][0m
-[0m[2022-02-02 16:37:50.044]                         ucsocial-n_100: Removed 26 nodes in preprocessing, starting with k = 5[0m
-[0m[2022-02-02 16:37:50.045]                         ucsocial-n_100: Found solution with k = 5[0m
-[0m[2022-02-02 16:37:50.045]                         ucsocial-n_100: Heuristics: 5 / 5 (in 1 ms)[0m
-[35m[2022-02-02 16:37:50.046]                        ucsocial-n_1000: ucsocial-n_1000 (n = 882, m = 6250, k = 258)[0m
-[0m[2022-02-02 16:37:50.047]                        ucsocial-n_1000: Found 1 cyclic sub graph(s) with n = [84][0m
-[0m[2022-02-02 16:37:50.048]                        ucsocial-n_1000: Removed 798 nodes in preprocessing, starting with k = 219[0m
-[0m[2022-02-02 16:37:51.050]                        ucsocial-n_1000: Found solution with k = 258[0m
-[0m[2022-02-02 16:37:51.050]                        ucsocial-n_1000: Heuristics: 258 / 258 (in 1003 ms)[0m
-[35m[2022-02-02 16:37:51.054]                        ucsocial-n_1500: ucsocial-n_1500 (n = 1412, m = 12596, k = 435)[0m
-[0m[2022-02-02 16:37:51.056]                        ucsocial-n_1500: Found 1 cyclic sub graph(s) with n = [379][0m
-[0m[2022-02-02 16:37:51.056]                        ucsocial-n_1500: Removed 1033 nodes in preprocessing, starting with k = 253[0m
-[0m[2022-02-02 16:37:52.060]                        ucsocial-n_1500: Found solution with k = 437[0m
-[0m[2022-02-02 16:37:52.060]                        ucsocial-n_1500: Heuristics: 437 / 435 (in 1006 ms)[0m
-[35m[2022-02-02 16:37:52.068]                        ucsocial-n_1902: ucsocial-n_1902 (n = 1899, m = 20296, k = 585)[0m
-[0m[2022-02-02 16:37:52.074]                        ucsocial-n_1902: Found 1 cyclic sub graph(s) with n = [406][0m
-[0m[2022-02-02 16:37:52.075]                        ucsocial-n_1902: Removed 1493 nodes in preprocessing, starting with k = 381[0m
-[0m[2022-02-02 16:37:53.081]                        ucsocial-n_1902: Found solution with k = 588[0m
-[0m[2022-02-02 16:37:53.081]                        ucsocial-n_1902: Heuristics: 588 / 585 (in 1012 ms)[0m
-[35m[2022-02-02 16:37:53.082]                         ucsocial-n_200: ucsocial-n_200 (n = 82, m = 138, k = 23)[0m
-[0m[2022-02-02 16:37:53.082]                         ucsocial-n_200: Found 0 cyclic sub graph(s) with n = [][0m
-[0m[2022-02-02 16:37:53.082]                         ucsocial-n_200: Removed 82 nodes in preprocessing, starting with k = 23[0m
-[0m[2022-02-02 16:37:53.083]                         ucsocial-n_200: Found solution with k = 23[0m
-[0m[2022-02-02 16:37:53.083]                         ucsocial-n_200: Heuristics: 23 / 23 (in 1 ms)[0m
-[35m[2022-02-02 16:37:53.083]                          ucsocial-n_50: ucsocial-n_50 (n = 16, m = 18, k = 3)[0m
-[0m[2022-02-02 16:37:53.083]                          ucsocial-n_50: Found 0 cyclic sub graph(s) with n = [][0m
-[0m[2022-02-02 16:37:53.084]                          ucsocial-n_50: Removed 16 nodes in preprocessing, starting with k = 3[0m
-[0m[2022-02-02 16:37:53.084]                          ucsocial-n_50: Found solution with k = 3[0m
-[0m[2022-02-02 16:37:53.084]                          ucsocial-n_50: Heuristics: 3 / 3 (in 1 ms)[0m
-[35m[2022-02-02 16:37:53.084]                         ucsocial-n_500: ucsocial-n_500 (n = 353, m = 1231, k = 80)[0m
-[0m[2022-02-02 16:37:53.084]                         ucsocial-n_500: Found 0 cyclic sub graph(s) with n = [][0m
-[0m[2022-02-02 16:37:53.085]                         ucsocial-n_500: Removed 353 nodes in preprocessing, starting with k = 80[0m
-[0m[2022-02-02 16:37:53.085]                         ucsocial-n_500: Found solution with k = 80[0m
-[0m[2022-02-02 16:37:53.085]                         ucsocial-n_500: Heuristics: 80 / 80 (in 1 ms)[0m
-[35m[2022-02-02 16:37:53.086]                        usairport-n_100: usairport-n_100 (n = 46, m = 92, k = 13)[0m
-[0m[2022-02-02 16:37:53.086]                        usairport-n_100: Found 0 cyclic sub graph(s) with n = [][0m
-[0m[2022-02-02 16:37:53.086]                        usairport-n_100: Removed 46 nodes in preprocessing, starting with k = 13[0m
-[0m[2022-02-02 16:37:53.086]                        usairport-n_100: Found solution with k = 13[0m
-[0m[2022-02-02 16:37:53.086]                        usairport-n_100: Heuristics: 13 / 13 (in 0 ms)[0m
-[35m[2022-02-02 16:37:53.089]                       usairport-n_1000: usairport-n_1000 (n = 910, m = 10027, k = 253)[0m
-[0m[2022-02-02 16:37:53.091]                       usairport-n_1000: Found 4 cyclic sub graph(s) with n = [81, 93, 3, 4][0m
-[0m[2022-02-02 16:37:53.091]                       usairport-n_1000: Removed 730 nodes in preprocessing, starting with k = 146[0m
-[0m[2022-02-02 16:37:54.098]                       usairport-n_1000: Found solution with k = 253[0m
-[0m[2022-02-02 16:37:54.098]                       usairport-n_1000: Heuristics: 253 / 253 (in 1009 ms)[0m
-[35m[2022-02-02 16:37:54.105]                       usairport-n_1500: usairport-n_1500 (n = 1490, m = 25277, k = 428)[0m
-[0m[2022-02-02 16:37:54.109]                       usairport-n_1500: Found 5 cyclic sub graph(s) with n = [128, 232, 9, 3, 3][0m
-[0m[2022-02-02 16:37:54.110]                       usairport-n_1500: Removed 1115 nodes in preprocessing, starting with k = 222[0m
-[0m[2022-02-02 16:37:55.119]                       usairport-n_1500: Found solution with k = 429[0m
-[0m[2022-02-02 16:37:55.119]                       usairport-n_1500: Heuristics: 429 / 428 (in 1013 ms)[0m
-[35m[2022-02-02 16:37:55.130]                       usairport-n_1577: usairport-n_1577 (n = 1574, m = 28236, k = 455)[0m
-[0m[2022-02-02 16:37:55.134]                       usairport-n_1577: Found 5 cyclic sub graph(s) with n = [131, 238, 9, 4, 3][0m
-[0m[2022-02-02 16:37:55.135]                       usairport-n_1577: Removed 1189 nodes in preprocessing, starting with k = 243[0m
-[0m[2022-02-02 16:37:56.148]                       usairport-n_1577: Found solution with k = 456[0m
-[0m[2022-02-02 16:37:56.148]                       usairport-n_1577: Heuristics: 456 / 455 (in 1018 ms)[0m
-[35m[2022-02-02 16:37:56.149]                        usairport-n_200: usairport-n_200 (n = 104, m = 308, k = 29)[0m
-[0m[2022-02-02 16:37:56.149]                        usairport-n_200: Found 1 cyclic sub graph(s) with n = [19][0m
-[0m[2022-02-02 16:37:56.149]                        usairport-n_200: Removed 85 nodes in preprocessing, starting with k = 19[0m
-[0m[2022-02-02 16:37:57.151]                        usairport-n_200: Found solution with k = 29[0m
-[0m[2022-02-02 16:37:57.152]                        usairport-n_200: Heuristics: 29 / 29 (in 1003 ms)[0m
-[35m[2022-02-02 16:37:57.152]                         usairport-n_50: usairport-n_50 (n = 10, m = 19, k = 5)[0m
-[0m[2022-02-02 16:37:57.153]                         usairport-n_50: Found 1 cyclic sub graph(s) with n = [5][0m
-[0m[2022-02-02 16:37:57.153]                         usairport-n_50: Removed 5 nodes in preprocessing, starting with k = 2[0m
-[0m[2022-02-02 16:37:58.161]                         usairport-n_50: Found solution with k = 5[0m
-[0m[2022-02-02 16:37:58.161]                         usairport-n_50: Heuristics: 5 / 5 (in 1008 ms)[0m
-[35m[2022-02-02 16:37:58.163]                        usairport-n_500: usairport-n_500 (n = 383, m = 3451, k = 112)[0m
-[0m[2022-02-02 16:37:58.164]                        usairport-n_500: Found 4 cyclic sub graph(s) with n = [50, 4, 21, 3][0m
-[0m[2022-02-02 16:37:58.164]                        usairport-n_500: Removed 305 nodes in preprocessing, starting with k = 68[0m
-[0m[2022-02-02 16:37:59.171]                        usairport-n_500: Found solution with k = 112[0m
-[0m[2022-02-02 16:37:59.172]                        usairport-n_500: Heuristics: 112 / 112 (in 1009 ms)[0m
-[35m[2022-02-02 16:37:59.173]                     wikispeedia-n_1000: wikispeedia-n_1000 (n = 903, m = 3091, k = 156)[0m
-[0m[2022-02-02 16:37:59.174]                     wikispeedia-n_1000: Found 2 cyclic sub graph(s) with n = [28, 3][0m
-[0m[2022-02-02 16:37:59.174]                     wikispeedia-n_1000: Removed 884 nodes in preprocessing, starting with k = 145[0m
-[0m[2022-02-02 16:38:00.179]                     wikispeedia-n_1000: Found solution with k = 156[0m
-[0m[2022-02-02 16:38:00.180]                     wikispeedia-n_1000: Heuristics: 156 / 156 (in 1006 ms)[0m
-[35m[2022-02-02 16:38:00.182]                     wikispeedia-n_1500: wikispeedia-n_1500 (n = 1415, m = 7438, k = 271)[0m
-[0m[2022-02-02 16:38:00.184]                     wikispeedia-n_1500: Found 1 cyclic sub graph(s) with n = [301][0m
-[0m[2022-02-02 16:38:00.184]                     wikispeedia-n_1500: Removed 1114 nodes in preprocessing, starting with k = 165[0m
-[0m[2022-02-02 16:38:01.188]                     wikispeedia-n_1500: Found solution with k = 271[0m
-[0m[2022-02-02 16:38:01.188]                     wikispeedia-n_1500: Heuristics: 271 / 271 (in 1006 ms)[0m
-[35m[2022-02-02 16:38:01.189]                      wikispeedia-n_200: wikispeedia-n_200 (n = 124, m = 190, k = 14)[0m
-[0m[2022-02-02 16:38:01.189]                      wikispeedia-n_200: Found 0 cyclic sub graph(s) with n = [][0m
-[0m[2022-02-02 16:38:01.189]                      wikispeedia-n_200: Removed 124 nodes in preprocessing, starting with k = 14[0m
-[0m[2022-02-02 16:38:01.189]                      wikispeedia-n_200: Found solution with k = 14[0m
-[0m[2022-02-02 16:38:01.189]                      wikispeedia-n_200: Heuristics: 14 / 14 (in 0 ms)[0m
-[35m[2022-02-02 16:38:01.193]                     wikispeedia-n_2000: wikispeedia-n_2000 (n = 1927, m = 12519, k = 437)[0m
-[0m[2022-02-02 16:38:01.196]                     wikispeedia-n_2000: Found 1 cyclic sub graph(s) with n = [627][0m
-[0m[2022-02-02 16:38:01.196]                     wikispeedia-n_2000: Removed 1300 nodes in preprocessing, starting with k = 201[0m
-[0m[2022-02-02 16:38:02.201]                     wikispeedia-n_2000: Found solution with k = 445[0m
-[0m[2022-02-02 16:38:02.201]                     wikispeedia-n_2000: Heuristics: 445 / 437 (in 1008 ms)[0m
-[35m[2022-02-02 16:38:02.210]                     wikispeedia-n_3000: wikispeedia-n_3000 (n = 2973, m = 29508, k = 804)[0m
-[0m[2022-02-02 16:38:02.221]                     wikispeedia-n_3000: Found 1 cyclic sub graph(s) with n = [1531][0m
-[0m[2022-02-02 16:38:02.222]                     wikispeedia-n_3000: Removed 1442 nodes in preprocessing, starting with k = 224[0m
-[0m[2022-02-02 16:38:03.258]                     wikispeedia-n_3000: Found solution with k = 827[0m
-[0m[2022-02-02 16:38:03.258]                     wikispeedia-n_3000: Heuristics: 827 / 804 (in 1047 ms)[0m
-[35m[2022-02-02 16:38:03.259]                      wikispeedia-n_500: wikispeedia-n_500 (n = 370, m = 857, k = 56)[0m
-[0m[2022-02-02 16:38:03.260]                      wikispeedia-n_500: Found 2 cyclic sub graph(s) with n = [22, 3][0m
-[0m[2022-02-02 16:38:03.260]                      wikispeedia-n_500: Removed 345 nodes in preprocessing, starting with k = 45[0m
-[0m[2022-02-02 16:38:04.266]                      wikispeedia-n_500: Found solution with k = 56[0m
-[0m[2022-02-02 16:38:04.266]                      wikispeedia-n_500: Heuristics: 56 / 56 (in 1007 ms)[0m
-[35m[2022-02-02 16:38:04.267]       synth-n_100-m_1093-k_5-p_0.2.txt: synth-n_100-m_1093-k_5-p_0.2.txt (n = 100, m = 1093, k = 5)[0m
-[0m[2022-02-02 16:38:04.267]       synth-n_100-m_1093-k_5-p_0.2.txt: Found 0 cyclic sub graph(s) with n = [][0m
-[0m[2022-02-02 16:38:04.267]       synth-n_100-m_1093-k_5-p_0.2.txt: Removed 100 nodes in preprocessing, starting with k = 5[0m
-[0m[2022-02-02 16:38:04.268]       synth-n_100-m_1093-k_5-p_0.2.txt: Found solution with k = 5[0m
-[0m[2022-02-02 16:38:04.268]       synth-n_100-m_1093-k_5-p_0.2.txt: Heuristics: 5 / 5 (in 1 ms)[0m
-[35m[2022-02-02 16:38:04.269]      synth-n_100-m_1146-k_10-p_0.2.txt: synth-n_100-m_1146-k_10-p_0.2.txt (n = 100, m = 1146, k = 10)[0m
-[0m[2022-02-02 16:38:04.269]      synth-n_100-m_1146-k_10-p_0.2.txt: Found 1 cyclic sub graph(s) with n = [92][0m
-[0m[2022-02-02 16:38:04.269]      synth-n_100-m_1146-k_10-p_0.2.txt: Removed 8 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-02 16:38:05.271]      synth-n_100-m_1146-k_10-p_0.2.txt: Found solution with k = 10[0m
-[0m[2022-02-02 16:38:05.271]      synth-n_100-m_1146-k_10-p_0.2.txt: Heuristics: 10 / 10 (in 1002 ms)[0m
-[35m[2022-02-02 16:38:05.272]      synth-n_100-m_1151-k_15-p_0.2.txt: synth-n_100-m_1151-k_15-p_0.2.txt (n = 100, m = 1151, k = 15)[0m
-[0m[2022-02-02 16:38:05.273]      synth-n_100-m_1151-k_15-p_0.2.txt: Found 1 cyclic sub graph(s) with n = [97][0m
-[0m[2022-02-02 16:38:05.273]      synth-n_100-m_1151-k_15-p_0.2.txt: Removed 3 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-02 16:38:06.275]      synth-n_100-m_1151-k_15-p_0.2.txt: Found solution with k = 15[0m
-[0m[2022-02-02 16:38:06.275]      synth-n_100-m_1151-k_15-p_0.2.txt: Heuristics: 15 / 15 (in 1003 ms)[0m
-[35m[2022-02-02 16:38:06.276]      synth-n_100-m_1229-k_20-p_0.2.txt: synth-n_100-m_1229-k_20-p_0.2.txt (n = 100, m = 1229, k = 20)[0m
-[0m[2022-02-02 16:38:06.277]      synth-n_100-m_1229-k_20-p_0.2.txt: Found 1 cyclic sub graph(s) with n = [100][0m
-[0m[2022-02-02 16:38:06.277]      synth-n_100-m_1229-k_20-p_0.2.txt: Removed 0 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-02 16:38:07.279]      synth-n_100-m_1229-k_20-p_0.2.txt: Found solution with k = 20[0m
-[0m[2022-02-02 16:38:07.279]      synth-n_100-m_1229-k_20-p_0.2.txt: Heuristics: 20 / 20 (in 1003 ms)[0m
-[35m[2022-02-02 16:38:07.280]      synth-n_100-m_1263-k_25-p_0.2.txt: synth-n_100-m_1263-k_25-p_0.2.txt (n = 100, m = 1263, k = 25)[0m
-[0m[2022-02-02 16:38:07.280]      synth-n_100-m_1263-k_25-p_0.2.txt: Found 1 cyclic sub graph(s) with n = [100][0m
-[0m[2022-02-02 16:38:07.280]      synth-n_100-m_1263-k_25-p_0.2.txt: Removed 0 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-02 16:38:08.282]      synth-n_100-m_1263-k_25-p_0.2.txt: Found solution with k = 25[0m
-[0m[2022-02-02 16:38:08.282]      synth-n_100-m_1263-k_25-p_0.2.txt: Heuristics: 25 / 25 (in 1002 ms)[0m
-[35m[2022-02-02 16:38:08.283]      synth-n_100-m_1275-k_30-p_0.2.txt: synth-n_100-m_1275-k_30-p_0.2.txt (n = 100, m = 1275, k = 30)[0m
-[0m[2022-02-02 16:38:08.284]      synth-n_100-m_1275-k_30-p_0.2.txt: Found 1 cyclic sub graph(s) with n = [100][0m
-[0m[2022-02-02 16:38:08.284]      synth-n_100-m_1275-k_30-p_0.2.txt: Removed 0 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-02 16:38:09.286]      synth-n_100-m_1275-k_30-p_0.2.txt: Found solution with k = 30[0m
-[0m[2022-02-02 16:38:09.286]      synth-n_100-m_1275-k_30-p_0.2.txt: Heuristics: 30 / 30 (in 1003 ms)[0m
-[35m[2022-02-02 16:38:09.287]       synth-n_100-m_263-k_5-p_0.05.txt: synth-n_100-m_263-k_5-p_0.05.txt (n = 99, m = 263, k = 5)[0m
-[0m[2022-02-02 16:38:09.287]       synth-n_100-m_263-k_5-p_0.05.txt: Found 0 cyclic sub graph(s) with n = [][0m
-[0m[2022-02-02 16:38:09.287]       synth-n_100-m_263-k_5-p_0.05.txt: Removed 99 nodes in preprocessing, starting with k = 5[0m
-[0m[2022-02-02 16:38:09.288]       synth-n_100-m_263-k_5-p_0.05.txt: Found solution with k = 5[0m
-[0m[2022-02-02 16:38:09.288]       synth-n_100-m_263-k_5-p_0.05.txt: Heuristics: 5 / 5 (in 1 ms)[0m
-[35m[2022-02-02 16:38:09.288]      synth-n_100-m_289-k_10-p_0.05.txt: synth-n_100-m_289-k_10-p_0.05.txt (n = 99, m = 289, k = 4)[0m
-[0m[2022-02-02 16:38:09.288]      synth-n_100-m_289-k_10-p_0.05.txt: Found 1 cyclic sub graph(s) with n = [13][0m
-[0m[2022-02-02 16:38:09.289]      synth-n_100-m_289-k_10-p_0.05.txt: Removed 86 nodes in preprocessing, starting with k = 1[0m
-[0m[2022-02-02 16:38:10.293]      synth-n_100-m_289-k_10-p_0.05.txt: Found solution with k = 4[0m
-[0m[2022-02-02 16:38:10.293]      synth-n_100-m_289-k_10-p_0.05.txt: Heuristics: 4 / 4 (in 1005 ms)[0m
-[35m[2022-02-02 16:38:10.294]      synth-n_100-m_302-k_15-p_0.05.txt: synth-n_100-m_302-k_15-p_0.05.txt (n = 100, m = 302, k = 8)[0m
-[0m[2022-02-02 16:38:10.294]      synth-n_100-m_302-k_15-p_0.05.txt: Found 1 cyclic sub graph(s) with n = [13][0m
-[0m[2022-02-02 16:38:10.295]      synth-n_100-m_302-k_15-p_0.05.txt: Removed 87 nodes in preprocessing, starting with k = 4[0m
-[0m[2022-02-02 16:38:11.299]      synth-n_100-m_302-k_15-p_0.05.txt: Found solution with k = 8[0m
-[0m[2022-02-02 16:38:11.299]      synth-n_100-m_302-k_15-p_0.05.txt: Heuristics: 8 / 8 (in 1005 ms)[0m
-[35m[2022-02-02 16:38:11.300]      synth-n_100-m_332-k_20-p_0.05.txt: synth-n_100-m_332-k_20-p_0.05.txt (n = 100, m = 332, k = 14)[0m
-[0m[2022-02-02 16:38:11.301]      synth-n_100-m_332-k_20-p_0.05.txt: Found 1 cyclic sub graph(s) with n = [43][0m
-[0m[2022-02-02 16:38:11.301]      synth-n_100-m_332-k_20-p_0.05.txt: Removed 57 nodes in preprocessing, starting with k = 3[0m
-[0m[2022-02-02 16:38:12.303]      synth-n_100-m_332-k_20-p_0.05.txt: Found solution with k = 14[0m
-[0m[2022-02-02 16:38:12.303]      synth-n_100-m_332-k_20-p_0.05.txt: Heuristics: 14 / 14 (in 1003 ms)[0m
-[35m[2022-02-02 16:38:12.304]      synth-n_100-m_336-k_30-p_0.05.txt: synth-n_100-m_336-k_30-p_0.05.txt (n = 100, m = 336, k = 15)[0m
-[0m[2022-02-02 16:38:12.304]      synth-n_100-m_336-k_30-p_0.05.txt: Found 1 cyclic sub graph(s) with n = [58][0m
-[0m[2022-02-02 16:38:12.304]      synth-n_100-m_336-k_30-p_0.05.txt: Removed 42 nodes in preprocessing, starting with k = 1[0m
-[0m[2022-02-02 16:38:13.306]      synth-n_100-m_336-k_30-p_0.05.txt: Found solution with k = 15[0m
-[0m[2022-02-02 16:38:13.306]      synth-n_100-m_336-k_30-p_0.05.txt: Heuristics: 15 / 15 (in 1002 ms)[0m
-[35m[2022-02-02 16:38:13.307]      synth-n_100-m_343-k_25-p_0.05.txt: synth-n_100-m_343-k_25-p_0.05.txt (n = 100, m = 343, k = 14)[0m
-[0m[2022-02-02 16:38:13.307]      synth-n_100-m_343-k_25-p_0.05.txt: Found 1 cyclic sub graph(s) with n = [57][0m
-[0m[2022-02-02 16:38:13.307]      synth-n_100-m_343-k_25-p_0.05.txt: Removed 43 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-02 16:38:14.309]      synth-n_100-m_343-k_25-p_0.05.txt: Found solution with k = 14[0m
-[0m[2022-02-02 16:38:14.310]      synth-n_100-m_343-k_25-p_0.05.txt: Heuristics: 14 / 14 (in 1003 ms)[0m
-[35m[2022-02-02 16:38:14.310]        synth-n_100-m_515-k_5-p_0.1.txt: synth-n_100-m_515-k_5-p_0.1.txt (n = 100, m = 515, k = 5)[0m
-[0m[2022-02-02 16:38:14.311]        synth-n_100-m_515-k_5-p_0.1.txt: Found 1 cyclic sub graph(s) with n = [63][0m
-[0m[2022-02-02 16:38:14.311]        synth-n_100-m_515-k_5-p_0.1.txt: Removed 37 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-02 16:38:15.313]        synth-n_100-m_515-k_5-p_0.1.txt: Found solution with k = 5[0m
-[0m[2022-02-02 16:38:15.313]        synth-n_100-m_515-k_5-p_0.1.txt: Heuristics: 5 / 5 (in 1002 ms)[0m
-[35m[2022-02-02 16:38:15.314]       synth-n_100-m_591-k_15-p_0.1.txt: synth-n_100-m_591-k_15-p_0.1.txt (n = 100, m = 591, k = 15)[0m
-[0m[2022-02-02 16:38:15.314]       synth-n_100-m_591-k_15-p_0.1.txt: Found 1 cyclic sub graph(s) with n = [83][0m
-[0m[2022-02-02 16:38:15.314]       synth-n_100-m_591-k_15-p_0.1.txt: Removed 17 nodes in preprocessing, starting with k = 0[0m
+[35m[2022-02-02 17:07:54.515]                         advotogo-n_100: advotogo-n_100 (n = 26, m = 31, k = 2)[0m
+[0m[2022-02-02 17:07:54.528]                         advotogo-n_100: Found 0 cyclic sub graph(s) with n = [][0m
+[0m[2022-02-02 17:07:54.530]                         advotogo-n_100: Removed 26 nodes in preprocessing, starting with k = 2[0m
+[0m[2022-02-02 17:07:54.531]                         advotogo-n_100: Found solution with k = 2[0m
+[0m[2022-02-02 17:07:54.533]                         advotogo-n_100: Heuristics: 2 / 2 (in 9 ms)[0m
+[35m[2022-02-02 17:07:54.540]                        advotogo-n_1000: advotogo-n_1000 (n = 624, m = 1883, k = 127)[0m
+[0m[2022-02-02 17:07:54.542]                        advotogo-n_1000: Found 3 cyclic sub graph(s) with n = [6, 3, 3][0m
+[0m[2022-02-02 17:07:54.543]                        advotogo-n_1000: Removed 612 nodes in preprocessing, starting with k = 120[0m
+[0m[2022-02-02 17:07:54.650]                        advotogo-n_1000: Found solution with k = 127[0m
+[0m[2022-02-02 17:07:54.651]                        advotogo-n_1000: Heuristics: 127 / 127 (in 110 ms)[0m
+[35m[2022-02-02 17:07:54.658]                        advotogo-n_1500: advotogo-n_1500 (n = 1110, m = 4342, k = 215)[0m
+[0m[2022-02-02 17:07:54.660]                        advotogo-n_1500: Found 3 cyclic sub graph(s) with n = [6, 3, 29][0m
+[0m[2022-02-02 17:07:54.661]                        advotogo-n_1500: Removed 1072 nodes in preprocessing, starting with k = 196[0m
+[0m[2022-02-02 17:07:54.765]                        advotogo-n_1500: Found solution with k = 215[0m
+[0m[2022-02-02 17:07:54.765]                        advotogo-n_1500: Heuristics: 215 / 215 (in 106 ms)[0m
+[35m[2022-02-02 17:07:54.767]                         advotogo-n_200: advotogo-n_200 (n = 63, m = 68, k = 9)[0m
+[0m[2022-02-02 17:07:54.767]                         advotogo-n_200: Found 1 cyclic sub graph(s) with n = [3][0m
+[0m[2022-02-02 17:07:54.767]                         advotogo-n_200: Removed 60 nodes in preprocessing, starting with k = 7[0m
+[0m[2022-02-02 17:07:54.872]                         advotogo-n_200: Found solution with k = 9[0m
+[0m[2022-02-02 17:07:54.872]                         advotogo-n_200: Heuristics: 9 / 9 (in 105 ms)[0m
+[35m[2022-02-02 17:07:54.879]                        advotogo-n_2000: advotogo-n_2000 (n = 1556, m = 6786, k = 297)[0m
+[0m[2022-02-02 17:07:54.882]                        advotogo-n_2000: Found 8 cyclic sub graph(s) with n = [5, 3, 3, 5, 3, 3, 5, 3][0m
+[0m[2022-02-02 17:07:54.882]                        advotogo-n_2000: Removed 1526 nodes in preprocessing, starting with k = 279[0m
+[0m[2022-02-02 17:07:54.997]                        advotogo-n_2000: Found solution with k = 297[0m
+[0m[2022-02-02 17:07:54.997]                        advotogo-n_2000: Heuristics: 297 / 297 (in 117 ms)[0m
+[35m[2022-02-02 17:07:55.003]                        advotogo-n_3000: advotogo-n_3000 (n = 2657, m = 16140, k = 548)[0m
+[0m[2022-02-02 17:07:55.006]                        advotogo-n_3000: Found 11 cyclic sub graph(s) with n = [3, 81, 5, 4, 5, 3, 3, 3, 3, 3, 3][0m
+[0m[2022-02-02 17:07:55.006]                        advotogo-n_3000: Removed 2556 nodes in preprocessing, starting with k = 495[0m
+[0m[2022-02-02 17:07:55.120]                        advotogo-n_3000: Found solution with k = 548[0m
+[0m[2022-02-02 17:07:55.120]                        advotogo-n_3000: Heuristics: 548 / 548 (in 117 ms)[0m
+[35m[2022-02-02 17:07:55.130]                        advotogo-n_4000: advotogo-n_4000 (n = 3775, m = 29831, k = 863)[0m
+[0m[2022-02-02 17:07:55.137]                        advotogo-n_4000: Found 8 cyclic sub graph(s) with n = [3, 3, 665, 3, 3, 3, 3, 3][0m
+[0m[2022-02-02 17:07:55.137]                        advotogo-n_4000: Removed 3090 nodes in preprocessing, starting with k = 554[0m
+[0m[2022-02-02 17:07:55.254]                        advotogo-n_4000: Found solution with k = 867[0m
+[0m[2022-02-02 17:07:55.254]                        advotogo-n_4000: Heuristics: 867 / 863 (in 123 ms)[0m
+[35m[2022-02-02 17:07:55.255]                         advotogo-n_500: advotogo-n_500 (n = 247, m = 446, k = 39)[0m
+[0m[2022-02-02 17:07:55.255]                         advotogo-n_500: Found 1 cyclic sub graph(s) with n = [3][0m
+[0m[2022-02-02 17:07:55.256]                         advotogo-n_500: Removed 244 nodes in preprocessing, starting with k = 37[0m
+[0m[2022-02-02 17:07:55.358]                         advotogo-n_500: Found solution with k = 39[0m
+[0m[2022-02-02 17:07:55.359]                         advotogo-n_500: Heuristics: 39 / 39 (in 104 ms)[0m
+[35m[2022-02-02 17:07:55.371]                        advotogo-n_5000: advotogo-n_5000 (n = 4962, m = 43776, k = 1160)[0m
+[0m[2022-02-02 17:07:55.380]                        advotogo-n_5000: Found 9 cyclic sub graph(s) with n = [3, 3, 3, 985, 4, 3, 3, 3, 3][0m
+[0m[2022-02-02 17:07:55.380]                        advotogo-n_5000: Removed 3953 nodes in preprocessing, starting with k = 699[0m
+[0m[2022-02-02 17:07:55.509]                        advotogo-n_5000: Found solution with k = 1170[0m
+[0m[2022-02-02 17:07:55.509]                        advotogo-n_5000: Heuristics: 1170 / 1160 (in 137 ms)[0m
+[35m[2022-02-02 17:07:55.521]                        advotogo-n_5159: advotogo-n_5159 (n = 5155, m = 47135, k = 1208)[0m
+[0m[2022-02-02 17:07:55.531]                        advotogo-n_5159: Found 9 cyclic sub graph(s) with n = [3, 3, 3, 990, 4, 3, 3, 3, 3][0m
+[0m[2022-02-02 17:07:55.532]                        advotogo-n_5159: Removed 4141 nodes in preprocessing, starting with k = 742[0m
+[0m[2022-02-02 17:07:55.648]                        advotogo-n_5159: Found solution with k = 1221[0m
+[0m[2022-02-02 17:07:55.648]                        advotogo-n_5159: Heuristics: 1221 / 1208 (in 127 ms)[0m
+[35m[2022-02-02 17:07:55.649]                     bitcoinalpha-n_100: bitcoinalpha-n_100 (n = 5, m = 7, k = 2)[0m
+[0m[2022-02-02 17:07:55.649]                     bitcoinalpha-n_100: Found 0 cyclic sub graph(s) with n = [][0m
+[0m[2022-02-02 17:07:55.649]                     bitcoinalpha-n_100: Removed 5 nodes in preprocessing, starting with k = 2[0m
+[0m[2022-02-02 17:07:55.649]                     bitcoinalpha-n_100: Found solution with k = 2[0m
+[0m[2022-02-02 17:07:55.650]                     bitcoinalpha-n_100: Heuristics: 2 / 2 (in 1 ms)[0m
+[35m[2022-02-02 17:07:55.650]                    bitcoinalpha-n_1000: bitcoinalpha-n_1000 (n = 545, m = 1878, k = 136)[0m
+[0m[2022-02-02 17:07:55.651]                    bitcoinalpha-n_1000: Found 1 cyclic sub graph(s) with n = [3][0m
+[0m[2022-02-02 17:07:55.651]                    bitcoinalpha-n_1000: Removed 542 nodes in preprocessing, starting with k = 134[0m
+[0m[2022-02-02 17:07:55.753]                    bitcoinalpha-n_1000: Found solution with k = 136[0m
+[0m[2022-02-02 17:07:55.754]                    bitcoinalpha-n_1000: Heuristics: 136 / 136 (in 103 ms)[0m
+[35m[2022-02-02 17:07:55.755]                    bitcoinalpha-n_1500: bitcoinalpha-n_1500 (n = 957, m = 3890, k = 261)[0m
+[0m[2022-02-02 17:07:55.756]                    bitcoinalpha-n_1500: Found 1 cyclic sub graph(s) with n = [3][0m
+[0m[2022-02-02 17:07:55.756]                    bitcoinalpha-n_1500: Removed 954 nodes in preprocessing, starting with k = 259[0m
+[0m[2022-02-02 17:07:55.858]                    bitcoinalpha-n_1500: Found solution with k = 261[0m
+[0m[2022-02-02 17:07:55.859]                    bitcoinalpha-n_1500: Heuristics: 261 / 261 (in 104 ms)[0m
+[35m[2022-02-02 17:07:55.860]                     bitcoinalpha-n_200: bitcoinalpha-n_200 (n = 50, m = 78, k = 11)[0m
+[0m[2022-02-02 17:07:55.860]                     bitcoinalpha-n_200: Found 0 cyclic sub graph(s) with n = [][0m
+[0m[2022-02-02 17:07:55.860]                     bitcoinalpha-n_200: Removed 50 nodes in preprocessing, starting with k = 11[0m
+[0m[2022-02-02 17:07:55.860]                     bitcoinalpha-n_200: Found solution with k = 11[0m
+[0m[2022-02-02 17:07:55.860]                     bitcoinalpha-n_200: Heuristics: 11 / 11 (in 0 ms)[0m
+[35m[2022-02-02 17:07:55.862]                    bitcoinalpha-n_2000: bitcoinalpha-n_2000 (n = 1450, m = 6295, k = 393)[0m
+[0m[2022-02-02 17:07:55.863]                    bitcoinalpha-n_2000: Found 2 cyclic sub graph(s) with n = [4, 8][0m
+[0m[2022-02-02 17:07:55.863]                    bitcoinalpha-n_2000: Removed 1438 nodes in preprocessing, starting with k = 386[0m
+[0m[2022-02-02 17:07:55.966]                    bitcoinalpha-n_2000: Found solution with k = 393[0m
+[0m[2022-02-02 17:07:55.966]                    bitcoinalpha-n_2000: Heuristics: 393 / 393 (in 104 ms)[0m
+[35m[2022-02-02 17:07:55.971]                    bitcoinalpha-n_3000: bitcoinalpha-n_3000 (n = 2659, m = 15429, k = 658)[0m
+[0m[2022-02-02 17:07:55.973]                    bitcoinalpha-n_3000: Found 2 cyclic sub graph(s) with n = [18, 3][0m
+[0m[2022-02-02 17:07:55.973]                    bitcoinalpha-n_3000: Removed 2638 nodes in preprocessing, starting with k = 646[0m
+[0m[2022-02-02 17:07:56.076]                    bitcoinalpha-n_3000: Found solution with k = 658[0m
+[0m[2022-02-02 17:07:56.076]                    bitcoinalpha-n_3000: Heuristics: 658 / 658 (in 105 ms)[0m
+[35m[2022-02-02 17:07:56.083]                    bitcoinalpha-n_3785: bitcoinalpha-n_3785 (n = 3783, m = 24186, k = 921)[0m
+[0m[2022-02-02 17:07:56.086]                    bitcoinalpha-n_3785: Found 4 cyclic sub graph(s) with n = [3, 18, 16, 4][0m
+[0m[2022-02-02 17:07:56.086]                    bitcoinalpha-n_3785: Removed 3744 nodes in preprocessing, starting with k = 901[0m
+[0m[2022-02-02 17:07:56.192]                    bitcoinalpha-n_3785: Found solution with k = 921[0m
+[0m[2022-02-02 17:07:56.192]                    bitcoinalpha-n_3785: Heuristics: 921 / 921 (in 109 ms)[0m
+[35m[2022-02-02 17:07:56.193]                      bitcoinalpha-n_50: bitcoinalpha-n_50 (n = 5, m = 5, k = 2)[0m
+[0m[2022-02-02 17:07:56.193]                      bitcoinalpha-n_50: Found 0 cyclic sub graph(s) with n = [][0m
+[0m[2022-02-02 17:07:56.193]                      bitcoinalpha-n_50: Removed 5 nodes in preprocessing, starting with k = 2[0m
+[0m[2022-02-02 17:07:56.193]                      bitcoinalpha-n_50: Found solution with k = 2[0m
+[0m[2022-02-02 17:07:56.194]                      bitcoinalpha-n_50: Heuristics: 2 / 2 (in 1 ms)[0m
+[35m[2022-02-02 17:07:56.194]                     bitcoinalpha-n_500: bitcoinalpha-n_500 (n = 202, m = 465, k = 54)[0m
+[0m[2022-02-02 17:07:56.195]                     bitcoinalpha-n_500: Found 1 cyclic sub graph(s) with n = [5][0m
+[0m[2022-02-02 17:07:56.195]                     bitcoinalpha-n_500: Removed 197 nodes in preprocessing, starting with k = 51[0m
+[0m[2022-02-02 17:07:56.297]                     bitcoinalpha-n_500: Found solution with k = 54[0m
+[0m[2022-02-02 17:07:56.298]                     bitcoinalpha-n_500: Heuristics: 54 / 54 (in 104 ms)[0m
+[35m[2022-02-02 17:07:56.298]                            blogs-n_100: blogs-n_100 (n = 67, m = 170, k = 8)[0m
+[0m[2022-02-02 17:07:56.299]                            blogs-n_100: Found 0 cyclic sub graph(s) with n = [][0m
+[0m[2022-02-02 17:07:56.299]                            blogs-n_100: Removed 67 nodes in preprocessing, starting with k = 8[0m
+[0m[2022-02-02 17:07:56.299]                            blogs-n_100: Found solution with k = 8[0m
+[0m[2022-02-02 17:07:56.299]                            blogs-n_100: Heuristics: 8 / 8 (in 0 ms)[0m
+[35m[2022-02-02 17:07:56.302]                           blogs-n_1000: blogs-n_1000 (n = 977, m = 12749, k = 196)[0m
+[0m[2022-02-02 17:07:56.307]                           blogs-n_1000: Found 2 cyclic sub graph(s) with n = [331, 3][0m
+[0m[2022-02-02 17:07:56.308]                           blogs-n_1000: Removed 646 nodes in preprocessing, starting with k = 66[0m
+[0m[2022-02-02 17:07:56.412]                           blogs-n_1000: Found solution with k = 196[0m
+[0m[2022-02-02 17:07:56.412]                           blogs-n_1000: Heuristics: 196 / 196 (in 110 ms)[0m
+[35m[2022-02-02 17:07:56.416]                           blogs-n_1227: blogs-n_1227 (n = 1224, m = 19022, k = 262)[0m
+[0m[2022-02-02 17:07:56.426]                           blogs-n_1227: Found 2 cyclic sub graph(s) with n = [451, 3][0m
+[0m[2022-02-02 17:07:56.426]                           blogs-n_1227: Removed 778 nodes in preprocessing, starting with k = 87[0m
+[0m[2022-02-02 17:07:56.533]                           blogs-n_1227: Found solution with k = 266[0m
+[0m[2022-02-02 17:07:56.533]                           blogs-n_1227: Heuristics: 266 / 262 (in 116 ms)[0m
+[35m[2022-02-02 17:07:56.534]                            blogs-n_200: blogs-n_200 (n = 138, m = 426, k = 16)[0m
+[0m[2022-02-02 17:07:56.534]                            blogs-n_200: Found 0 cyclic sub graph(s) with n = [][0m
+[0m[2022-02-02 17:07:56.534]                            blogs-n_200: Removed 138 nodes in preprocessing, starting with k = 16[0m
+[0m[2022-02-02 17:07:56.534]                            blogs-n_200: Found solution with k = 16[0m
+[0m[2022-02-02 17:07:56.534]                            blogs-n_200: Heuristics: 16 / 16 (in 0 ms)[0m
+[35m[2022-02-02 17:07:56.535]                             blogs-n_50: blogs-n_50 (n = 34, m = 88, k = 6)[0m
+[0m[2022-02-02 17:07:56.535]                             blogs-n_50: Found 0 cyclic sub graph(s) with n = [][0m
+[0m[2022-02-02 17:07:56.535]                             blogs-n_50: Removed 34 nodes in preprocessing, starting with k = 6[0m
+[0m[2022-02-02 17:07:56.536]                             blogs-n_50: Found solution with k = 6[0m
+[0m[2022-02-02 17:07:56.536]                             blogs-n_50: Heuristics: 6 / 6 (in 1 ms)[0m
+[35m[2022-02-02 17:07:56.537]                            blogs-n_500: blogs-n_500 (n = 430, m = 2918, k = 76)[0m
+[0m[2022-02-02 17:07:56.537]                            blogs-n_500: Found 1 cyclic sub graph(s) with n = [52][0m
+[0m[2022-02-02 17:07:56.538]                            blogs-n_500: Removed 378 nodes in preprocessing, starting with k = 49[0m
+[0m[2022-02-02 17:07:56.640]                            blogs-n_500: Found solution with k = 76[0m
+[0m[2022-02-02 17:07:56.640]                            blogs-n_500: Heuristics: 76 / 76 (in 103 ms)[0m
+[35m[2022-02-02 17:07:56.641]                           chess-n_1000: chess-n_1000 (n = 613, m = 1295, k = 62)[0m
+[0m[2022-02-02 17:07:56.642]                           chess-n_1000: Found 1 cyclic sub graph(s) with n = [90][0m
+[0m[2022-02-02 17:07:56.642]                           chess-n_1000: Removed 523 nodes in preprocessing, starting with k = 27[0m
+[0m[2022-02-02 17:07:56.744]                           chess-n_1000: Found solution with k = 62[0m
+[0m[2022-02-02 17:07:56.744]                           chess-n_1000: Heuristics: 62 / 62 (in 103 ms)[0m
+[35m[2022-02-02 17:07:56.746]                           chess-n_1500: chess-n_1500 (n = 1075, m = 2561, k = 127)[0m
+[0m[2022-02-02 17:07:56.747]                           chess-n_1500: Found 2 cyclic sub graph(s) with n = [213, 3][0m
+[0m[2022-02-02 17:07:56.747]                           chess-n_1500: Removed 859 nodes in preprocessing, starting with k = 45[0m
+[0m[2022-02-02 17:07:56.851]                           chess-n_1500: Found solution with k = 129[0m
+[0m[2022-02-02 17:07:56.851]                           chess-n_1500: Heuristics: 129 / 127 (in 105 ms)[0m
+[35m[2022-02-02 17:07:56.852]                            chess-n_200: chess-n_200 (n = 58, m = 47, k = 2)[0m
+[0m[2022-02-02 17:07:56.852]                            chess-n_200: Found 0 cyclic sub graph(s) with n = [][0m
+[0m[2022-02-02 17:07:56.852]                            chess-n_200: Removed 58 nodes in preprocessing, starting with k = 2[0m
+[0m[2022-02-02 17:07:56.852]                            chess-n_200: Found solution with k = 2[0m
+[0m[2022-02-02 17:07:56.852]                            chess-n_200: Heuristics: 2 / 2 (in 0 ms)[0m
+[35m[2022-02-02 17:07:56.854]                           chess-n_2000: chess-n_2000 (n = 1531, m = 4343, k = 204)[0m
+[0m[2022-02-02 17:07:56.857]                           chess-n_2000: Found 1 cyclic sub graph(s) with n = [400][0m
+[0m[2022-02-02 17:07:56.857]                           chess-n_2000: Removed 1131 nodes in preprocessing, starting with k = 61[0m
+[0m[2022-02-02 17:07:56.962]                           chess-n_2000: Found solution with k = 211[0m
+[0m[2022-02-02 17:07:56.963]                           chess-n_2000: Heuristics: 211 / 204 (in 109 ms)[0m
+[35m[2022-02-02 17:07:56.963]                            chess-n_500: chess-n_500 (n = 241, m = 319, k = 17)[0m
+[0m[2022-02-02 17:07:56.964]                            chess-n_500: Found 0 cyclic sub graph(s) with n = [][0m
+[0m[2022-02-02 17:07:56.964]                            chess-n_500: Removed 241 nodes in preprocessing, starting with k = 17[0m
+[0m[2022-02-02 17:07:56.964]                            chess-n_500: Found solution with k = 17[0m
+[0m[2022-02-02 17:07:56.964]                            chess-n_500: Heuristics: 17 / 17 (in 0 ms)[0m
+[35m[2022-02-02 17:07:56.965]                  ChicagoRegional-n_100: ChicagoRegional-n_100 (n = 2, m = 2, k = 1)[0m
+[0m[2022-02-02 17:07:56.965]                  ChicagoRegional-n_100: Found 0 cyclic sub graph(s) with n = [][0m
+[0m[2022-02-02 17:07:56.965]                  ChicagoRegional-n_100: Removed 2 nodes in preprocessing, starting with k = 1[0m
+[0m[2022-02-02 17:07:56.965]                  ChicagoRegional-n_100: Found solution with k = 1[0m
+[0m[2022-02-02 17:07:56.965]                  ChicagoRegional-n_100: Heuristics: 1 / 1 (in 0 ms)[0m
+[35m[2022-02-02 17:07:56.966]                 ChicagoRegional-n_1000: ChicagoRegional-n_1000 (n = 224, m = 245, k = 92)[0m
+[0m[2022-02-02 17:07:56.966]                 ChicagoRegional-n_1000: Found 0 cyclic sub graph(s) with n = [][0m
+[0m[2022-02-02 17:07:56.966]                 ChicagoRegional-n_1000: Removed 224 nodes in preprocessing, starting with k = 92[0m
+[0m[2022-02-02 17:07:56.967]                 ChicagoRegional-n_1000: Found solution with k = 92[0m
+[0m[2022-02-02 17:07:56.967]                 ChicagoRegional-n_1000: Heuristics: 92 / 92 (in 1 ms)[0m
+[35m[2022-02-02 17:07:56.972]                ChicagoRegional-n_10000: ChicagoRegional-n_10000 (n = 9579, m = 23005, k = 4193)[0m
+[0m[2022-02-02 17:07:56.976]                ChicagoRegional-n_10000: Found 111 cyclic sub graph(s) with n = [4, 17, 12, 4, 4, 4, 12, 18, 3, 17, 11, 11, 20, 11, 5, 4, 7, 18, 4, 5, 9, 4, 6, 12, 4, 44, 38, 4, 12, 12, 37, 4, 3, 4, 8, 4, 6, 9, 4, 11, 14, 4, 40, 21, 8, 3, 8, 3, 43, 21, 4, 3, 16, 36, 3, 24, 21, 6, 17, 3, 4, 4, 5, 13, 3, 24, 20, 4, 4, 61, 8, 4, 5, 12, 3, 3, 3, 3, 3, 19, 4, 5, 16, 5, 12, 33, 11, 34, 4, 4, 3, 4, 11, 3, 6, 4, 5, 42, 4, 5, 3, 3, 4, 11, 6, 4, 7, 12, 3, 4, 3][0m
+[0m[2022-02-02 17:07:56.976]                ChicagoRegional-n_10000: Removed 8375 nodes in preprocessing, starting with k = 3551[0m
+[0m[2022-02-02 17:07:57.245]                ChicagoRegional-n_10000: Found solution with k = 4193[0m
+[0m[2022-02-02 17:07:57.245]                ChicagoRegional-n_10000: Heuristics: 4193 / 4193 (in 273 ms)[0m
+[35m[2022-02-02 17:07:57.246]                 ChicagoRegional-n_1500: ChicagoRegional-n_1500 (n = 457, m = 485, k = 181)[0m
+[0m[2022-02-02 17:07:57.246]                 ChicagoRegional-n_1500: Found 1 cyclic sub graph(s) with n = [3][0m
+[0m[2022-02-02 17:07:57.246]                 ChicagoRegional-n_1500: Removed 454 nodes in preprocessing, starting with k = 179[0m
+[0m[2022-02-02 17:07:57.348]                 ChicagoRegional-n_1500: Found solution with k = 181[0m
+[0m[2022-02-02 17:07:57.349]                 ChicagoRegional-n_1500: Heuristics: 181 / 181 (in 102 ms)[0m
+[35m[2022-02-02 17:07:57.349]                  ChicagoRegional-n_200: ChicagoRegional-n_200 (n = 13, m = 12, k = 5)[0m
+[0m[2022-02-02 17:07:57.349]                  ChicagoRegional-n_200: Found 0 cyclic sub graph(s) with n = [][0m
+[0m[2022-02-02 17:07:57.350]                  ChicagoRegional-n_200: Removed 13 nodes in preprocessing, starting with k = 5[0m
+[0m[2022-02-02 17:07:57.350]                  ChicagoRegional-n_200: Found solution with k = 5[0m
+[0m[2022-02-02 17:07:57.350]                  ChicagoRegional-n_200: Heuristics: 5 / 5 (in 1 ms)[0m
+[35m[2022-02-02 17:07:57.351]                 ChicagoRegional-n_2000: ChicagoRegional-n_2000 (n = 777, m = 888, k = 307)[0m
+[0m[2022-02-02 17:07:57.351]                 ChicagoRegional-n_2000: Found 3 cyclic sub graph(s) with n = [3, 4, 3][0m
+[0m[2022-02-02 17:07:57.351]                 ChicagoRegional-n_2000: Removed 767 nodes in preprocessing, starting with k = 301[0m
+[0m[2022-02-02 17:07:57.457]                 ChicagoRegional-n_2000: Found solution with k = 307[0m
+[0m[2022-02-02 17:07:57.457]                 ChicagoRegional-n_2000: Heuristics: 307 / 307 (in 106 ms)[0m
+[35m[2022-02-02 17:07:57.458]                 ChicagoRegional-n_3000: ChicagoRegional-n_3000 (n = 1619, m = 2022, k = 631)[0m
+[0m[2022-02-02 17:07:57.459]                 ChicagoRegional-n_3000: Found 7 cyclic sub graph(s) with n = [3, 3, 4, 3, 4, 3, 3][0m
+[0m[2022-02-02 17:07:57.459]                 ChicagoRegional-n_3000: Removed 1596 nodes in preprocessing, starting with k = 617[0m
+[0m[2022-02-02 17:07:57.572]                 ChicagoRegional-n_3000: Found solution with k = 631[0m
+[0m[2022-02-02 17:07:57.572]                 ChicagoRegional-n_3000: Heuristics: 631 / 631 (in 114 ms)[0m
+[35m[2022-02-02 17:07:57.574]                 ChicagoRegional-n_4000: ChicagoRegional-n_4000 (n = 2607, m = 3623, k = 1020)[0m
+[0m[2022-02-02 17:07:57.574]                 ChicagoRegional-n_4000: Found 8 cyclic sub graph(s) with n = [4, 3, 4, 3, 3, 3, 3, 3][0m
+[0m[2022-02-02 17:07:57.575]                 ChicagoRegional-n_4000: Removed 2581 nodes in preprocessing, starting with k = 1004[0m
+[0m[2022-02-02 17:07:57.687]                 ChicagoRegional-n_4000: Found solution with k = 1020[0m
+[0m[2022-02-02 17:07:57.687]                 ChicagoRegional-n_4000: Heuristics: 1020 / 1020 (in 113 ms)[0m
+[35m[2022-02-02 17:07:57.688]                   ChicagoRegional-n_50: ChicagoRegional-n_50 (n = 4, m = 4, k = 2)[0m
+[0m[2022-02-02 17:07:57.688]                   ChicagoRegional-n_50: Found 0 cyclic sub graph(s) with n = [][0m
+[0m[2022-02-02 17:07:57.688]                   ChicagoRegional-n_50: Removed 4 nodes in preprocessing, starting with k = 2[0m
+[0m[2022-02-02 17:07:57.688]                   ChicagoRegional-n_50: Found solution with k = 2[0m
+[0m[2022-02-02 17:07:57.689]                   ChicagoRegional-n_50: Heuristics: 2 / 2 (in 1 ms)[0m
+[35m[2022-02-02 17:07:57.689]                  ChicagoRegional-n_500: ChicagoRegional-n_500 (n = 52, m = 50, k = 24)[0m
+[0m[2022-02-02 17:07:57.689]                  ChicagoRegional-n_500: Found 0 cyclic sub graph(s) with n = [][0m
+[0m[2022-02-02 17:07:57.689]                  ChicagoRegional-n_500: Removed 52 nodes in preprocessing, starting with k = 24[0m
+[0m[2022-02-02 17:07:57.690]                  ChicagoRegional-n_500: Found solution with k = 24[0m
+[0m[2022-02-02 17:07:57.690]                  ChicagoRegional-n_500: Heuristics: 24 / 24 (in 1 ms)[0m
+[35m[2022-02-02 17:07:57.691]                 ChicagoRegional-n_5000: ChicagoRegional-n_5000 (n = 3710, m = 5774, k = 1484)[0m
+[0m[2022-02-02 17:07:57.692]                 ChicagoRegional-n_5000: Found 20 cyclic sub graph(s) with n = [3, 4, 4, 3, 3, 4, 4, 4, 6, 3, 4, 3, 5, 4, 3, 6, 3, 3, 10, 4][0m
+[0m[2022-02-02 17:07:57.693]                 ChicagoRegional-n_5000: Removed 3627 nodes in preprocessing, starting with k = 1438[0m
+[0m[2022-02-02 17:07:57.821]                 ChicagoRegional-n_5000: Found solution with k = 1484[0m
+[0m[2022-02-02 17:07:57.821]                 ChicagoRegional-n_5000: Heuristics: 1484 / 1484 (in 129 ms)[0m
+[35m[2022-02-02 17:07:57.824]                 ChicagoRegional-n_6000: ChicagoRegional-n_6000 (n = 4927, m = 8488, k = 1987)[0m
+[0m[2022-02-02 17:07:57.826]                 ChicagoRegional-n_6000: Found 48 cyclic sub graph(s) with n = [4, 4, 3, 5, 4, 9, 3, 4, 4, 8, 4, 4, 4, 4, 4, 13, 4, 4, 4, 3, 8, 4, 3, 3, 3, 3, 4, 6, 3, 5, 5, 4, 6, 8, 13, 3, 4, 3, 4, 3, 4, 3, 7, 4, 4, 3, 5, 3][0m
+[0m[2022-02-02 17:07:57.826]                 ChicagoRegional-n_6000: Removed 4703 nodes in preprocessing, starting with k = 1865[0m
+[0m[2022-02-02 17:07:57.995]                 ChicagoRegional-n_6000: Found solution with k = 1987[0m
+[0m[2022-02-02 17:07:57.995]                 ChicagoRegional-n_6000: Heuristics: 1987 / 1987 (in 171 ms)[0m
+[35m[2022-02-02 17:07:57.999]                 ChicagoRegional-n_7000: ChicagoRegional-n_7000 (n = 6106, m = 11328, k = 2495)[0m
+[0m[2022-02-02 17:07:58.001]                 ChicagoRegional-n_7000: Found 52 cyclic sub graph(s) with n = [4, 7, 3, 3, 4, 9, 3, 4, 3, 7, 8, 4, 9, 4, 4, 3, 3, 3, 5, 4, 6, 3, 7, 9, 3, 3, 3, 3, 11, 3, 3, 5, 4, 3, 6, 3, 6, 3, 5, 11, 12, 3, 11, 14, 4, 3, 6, 3, 3, 4, 4, 3][0m
+[0m[2022-02-02 17:07:58.001]                 ChicagoRegional-n_7000: Removed 5842 nodes in preprocessing, starting with k = 2347[0m
+[0m[2022-02-02 17:07:58.188]                 ChicagoRegional-n_7000: Found solution with k = 2495[0m
+[0m[2022-02-02 17:07:58.188]                 ChicagoRegional-n_7000: Heuristics: 2495 / 2495 (in 189 ms)[0m
+[35m[2022-02-02 17:07:58.191]                 ChicagoRegional-n_8000: ChicagoRegional-n_8000 (n = 7282, m = 14765, k = 3028)[0m
+[0m[2022-02-02 17:07:58.193]                 ChicagoRegional-n_8000: Found 71 cyclic sub graph(s) with n = [5, 14, 4, 19, 3, 8, 4, 5, 11, 4, 8, 8, 8, 5, 13, 4, 3, 8, 3, 3, 4, 4, 11, 6, 4, 4, 7, 7, 3, 4, 6, 4, 9, 4, 36, 14, 3, 6, 26, 3, 3, 6, 12, 9, 8, 10, 16, 3, 4, 3, 5, 8, 4, 4, 10, 3, 3, 3, 4, 6, 5, 9, 4, 4, 4, 4, 4, 3, 4, 5, 3][0m
+[0m[2022-02-02 17:07:58.193]                 ChicagoRegional-n_8000: Removed 6804 nodes in preprocessing, starting with k = 2772[0m
+[0m[2022-02-02 17:07:58.392]                 ChicagoRegional-n_8000: Found solution with k = 3028[0m
+[0m[2022-02-02 17:07:58.392]                 ChicagoRegional-n_8000: Heuristics: 3028 / 3028 (in 201 ms)[0m
+[35m[2022-02-02 17:07:58.397]                 ChicagoRegional-n_9000: ChicagoRegional-n_9000 (n = 8479, m = 19095, k = 3651)[0m
+[0m[2022-02-02 17:07:58.400]                 ChicagoRegional-n_9000: Found 90 cyclic sub graph(s) with n = [34, 39, 10, 37, 3, 15, 4, 4, 13, 5, 36, 3, 12, 9, 4, 5, 3, 4, 5, 13, 3, 21, 8, 11, 9, 12, 6, 4, 3, 3, 7, 30, 5, 10, 50, 9, 3, 7, 11, 5, 19, 4, 8, 3, 11, 6, 5, 20, 14, 21, 4, 14, 20, 10, 4, 8, 6, 6, 13, 3, 5, 5, 7, 4, 6, 4, 6, 5, 15, 6, 9, 5, 4, 19, 4, 5, 7, 4, 9, 4, 3, 4, 5, 4, 4, 4, 5, 3, 8, 4][0m
+[0m[2022-02-02 17:07:58.400]                 ChicagoRegional-n_9000: Removed 7628 nodes in preprocessing, starting with k = 3198[0m
+[0m[2022-02-02 17:07:58.635]                 ChicagoRegional-n_9000: Found solution with k = 3651[0m
+[0m[2022-02-02 17:07:58.635]                 ChicagoRegional-n_9000: Heuristics: 3651 / 3651 (in 238 ms)[0m
+[35m[2022-02-02 17:07:58.636]                           health-n_100: health-n_100 (n = 23, m = 18, k = 4)[0m
+[0m[2022-02-02 17:07:58.636]                           health-n_100: Found 0 cyclic sub graph(s) with n = [][0m
+[0m[2022-02-02 17:07:58.636]                           health-n_100: Removed 23 nodes in preprocessing, starting with k = 4[0m
+[0m[2022-02-02 17:07:58.636]                           health-n_100: Found solution with k = 4[0m
+[0m[2022-02-02 17:07:58.636]                           health-n_100: Heuristics: 4 / 4 (in 0 ms)[0m
+[35m[2022-02-02 17:07:58.637]                          health-n_1000: health-n_1000 (n = 934, m = 2008, k = 231)[0m
+[0m[2022-02-02 17:07:58.637]                          health-n_1000: Found 9 cyclic sub graph(s) with n = [4, 4, 3, 3, 4, 3, 3, 3, 3][0m
+[0m[2022-02-02 17:07:58.638]                          health-n_1000: Removed 904 nodes in preprocessing, starting with k = 211[0m
+[0m[2022-02-02 17:07:58.755]                          health-n_1000: Found solution with k = 231[0m
+[0m[2022-02-02 17:07:58.755]                          health-n_1000: Heuristics: 231 / 231 (in 118 ms)[0m
+[35m[2022-02-02 17:07:58.756]                          health-n_1500: health-n_1500 (n = 1451, m = 4642, k = 446)[0m
+[0m[2022-02-02 17:07:58.758]                          health-n_1500: Found 17 cyclic sub graph(s) with n = [5, 3, 3, 184, 4, 3, 8, 3, 3, 3, 6, 3, 3, 3, 3, 3, 3][0m
+[0m[2022-02-02 17:07:58.758]                          health-n_1500: Removed 1261 nodes in preprocessing, starting with k = 341[0m
+[0m[2022-02-02 17:07:58.884]                          health-n_1500: Found solution with k = 446[0m
+[0m[2022-02-02 17:07:58.884]                          health-n_1500: Heuristics: 446 / 446 (in 127 ms)[0m
+[35m[2022-02-02 17:07:58.885]                           health-n_200: health-n_200 (n = 94, m = 87, k = 17)[0m
+[0m[2022-02-02 17:07:58.885]                           health-n_200: Found 0 cyclic sub graph(s) with n = [][0m
+[0m[2022-02-02 17:07:58.885]                           health-n_200: Removed 94 nodes in preprocessing, starting with k = 17[0m
+[0m[2022-02-02 17:07:58.885]                           health-n_200: Found solution with k = 17[0m
+[0m[2022-02-02 17:07:58.885]                           health-n_200: Heuristics: 17 / 17 (in 0 ms)[0m
+[35m[2022-02-02 17:07:58.887]                          health-n_2000: health-n_2000 (n = 1973, m = 7956, k = 674)[0m
+[0m[2022-02-02 17:07:58.892]                          health-n_2000: Found 3 cyclic sub graph(s) with n = [795, 3, 3][0m
+[0m[2022-02-02 17:07:58.892]                          health-n_2000: Removed 1172 nodes in preprocessing, starting with k = 297[0m
+[0m[2022-02-02 17:07:59.003]                          health-n_2000: Found solution with k = 688[0m
+[0m[2022-02-02 17:07:59.003]                          health-n_2000: Heuristics: 688 / 674 (in 116 ms)[0m
+[35m[2022-02-02 17:07:59.005]                          health-n_2542: health-n_2542 (n = 2539, m = 12969, k = 960)[0m
+[0m[2022-02-02 17:07:59.023]                          health-n_2542: Found 2 cyclic sub graph(s) with n = [1505, 3][0m
+[0m[2022-02-02 17:07:59.024]                          health-n_2542: Removed 1031 nodes in preprocessing, starting with k = 235[0m
+[0m[2022-02-02 17:07:59.132]                          health-n_2542: Found solution with k = 1003[0m
+[0m[2022-02-02 17:07:59.132]                          health-n_2542: Heuristics: 1003 / 960 (in 126 ms)[0m
+[35m[2022-02-02 17:07:59.133]                            health-n_50: health-n_50 (n = 10, m = 7, k = 2)[0m
+[0m[2022-02-02 17:07:59.133]                            health-n_50: Found 0 cyclic sub graph(s) with n = [][0m
+[0m[2022-02-02 17:07:59.133]                            health-n_50: Removed 10 nodes in preprocessing, starting with k = 2[0m
+[0m[2022-02-02 17:07:59.133]                            health-n_50: Found solution with k = 2[0m
+[0m[2022-02-02 17:07:59.133]                            health-n_50: Heuristics: 2 / 2 (in 0 ms)[0m
+[35m[2022-02-02 17:07:59.134]                           health-n_500: health-n_500 (n = 388, m = 490, k = 67)[0m
+[0m[2022-02-02 17:07:59.134]                           health-n_500: Found 1 cyclic sub graph(s) with n = [4][0m
+[0m[2022-02-02 17:07:59.134]                           health-n_500: Removed 384 nodes in preprocessing, starting with k = 65[0m
+[0m[2022-02-02 17:07:59.236]                           health-n_500: Found solution with k = 67[0m
+[0m[2022-02-02 17:07:59.237]                           health-n_500: Heuristics: 67 / 67 (in 103 ms)[0m
+[35m[2022-02-02 17:07:59.237]                          link-kv-n_100: link-kv-n_100 (n = 18, m = 22, k = 8)[0m
+[0m[2022-02-02 17:07:59.238]                          link-kv-n_100: Found 2 cyclic sub graph(s) with n = [3, 3][0m
+[0m[2022-02-02 17:07:59.238]                          link-kv-n_100: Removed 12 nodes in preprocessing, starting with k = 4[0m
+[0m[2022-02-02 17:07:59.342]                          link-kv-n_100: Found solution with k = 8[0m
+[0m[2022-02-02 17:07:59.342]                          link-kv-n_100: Heuristics: 8 / 8 (in 104 ms)[0m
+[35m[2022-02-02 17:07:59.344]                         link-kv-n_1000: link-kv-n_1000 (n = 644, m = 4081, k = 234)[0m
+[0m[2022-02-02 17:07:59.345]                         link-kv-n_1000: Found 14 cyclic sub graph(s) with n = [9, 5, 4, 129, 6, 3, 5, 4, 5, 4, 6, 5, 16, 3][0m
+[0m[2022-02-02 17:07:59.345]                         link-kv-n_1000: Removed 440 nodes in preprocessing, starting with k = 63[0m
+[0m[2022-02-02 17:07:59.464]                         link-kv-n_1000: Found solution with k = 234[0m
+[0m[2022-02-02 17:07:59.464]                         link-kv-n_1000: Heuristics: 234 / 234 (in 120 ms)[0m
+[35m[2022-02-02 17:07:59.466]                         link-kv-n_1500: link-kv-n_1500 (n = 1054, m = 8494, k = 391)[0m
+[0m[2022-02-02 17:07:59.469]                         link-kv-n_1500: Found 15 cyclic sub graph(s) with n = [5, 256, 5, 4, 6, 7, 2, 9, 13, 6, 5, 15, 3, 7, 8][0m
+[0m[2022-02-02 17:07:59.469]                         link-kv-n_1500: Removed 705 nodes in preprocessing, starting with k = 101[0m
