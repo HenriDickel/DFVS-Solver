@@ -15,8 +15,6 @@ public abstract class DFASHeuristicSolver {
 
     public static void solveInstance(Instance instance) {
 
-        Log.debugLog(instance.NAME, "---------- " + instance.NAME + " (n = " + instance.N + ", m = " + instance.M + ", k = " + instance.OPTIMAL_K + ") ----------");
-
         Graph initialGraph = instance.subGraphs.get(0);
 
         // Preprocessing
@@ -65,7 +63,7 @@ public abstract class DFASHeuristicSolver {
         //destroyCycles(instance);
         topologicalOrder(instance);
 
-        Log.debugLog(instance.NAME, "Found solution with k = " + instance.S.size(), false);
+        Log.debugLog(instance.NAME, "Found solution with k = " + instance.S.size());
     }
 
     private static void topologicalOrder(Instance instance) {

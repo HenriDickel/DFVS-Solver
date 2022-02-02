@@ -7,6 +7,7 @@ import program.algo.Solver;
 import program.log.Log;
 import program.model.Graph;
 import program.model.Instance;
+import program.utils.Color;
 import program.utils.PerformanceTimer;
 import program.utils.TimeoutException;
 import program.utils.Timer;
@@ -65,7 +66,7 @@ public abstract class ILPSolver {
             Log.ilpLog(instance, millis, false);
             Log.detailLog(instance);
             PerformanceTimer.printILPResult();
-            Log.debugLog(instance.NAME, "Found no solution in " + Timer.format(millis), true);
+            Log.debugLog(instance.NAME, "Found no solution in " + Timer.format(millis), Color.RED);
             return;
         }
 
@@ -78,6 +79,7 @@ public abstract class ILPSolver {
         if(millis > Timer.timeout * 1000) millis = Timer.timeout * 1000;
         Log.ilpLog(instance, millis, verified);
         PerformanceTimer.printILPResult();
-        Log.debugLog(instance.NAME, "Found solution with k = " + instance.S.size() + " in " + Timer.format(millis), !verified);
+        Color color = verified ? Color.WHITE : Color.RED;
+        Log.debugLog(instance.NAME, "Found solution with k = " + instance.S.size() + " in " + Timer.format(millis), color);
     }
 }

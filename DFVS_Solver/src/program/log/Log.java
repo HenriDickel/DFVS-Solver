@@ -1,6 +1,7 @@
 package program.log;
 
 import program.model.Instance;
+import program.utils.Color;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -21,11 +22,33 @@ public abstract class Log {
     public static int level = 0;
 
     public static void debugLog(String name, String message){
-        debugLog(name, message, false);
+        debugLog(name, message, Color.WHITE);
     }
 
-    public static void debugLog(String name, String message, boolean error){
+    public static void debugLog(String name, String message, Color color){
 
+        //Ignore Log
+        if(ignore) return;
+
+        //Create program.log string
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS");
+        String gap = " ".repeat(Math.max(0, 38 - name.length()));
+        String recursionGap = " - ".repeat(level);
+        String logMessage = color + "[" + LocalDateTime.now().format(dtf) + "] " + gap + name + ": " +  recursionGap + message + "\u001B[0m";
+
+        //Console Log
+        System.out.println(logMessage);
+
+        //Log File
+        try(PrintWriter output = new PrintWriter(new FileWriter(DEBUG_LOG_PATH,true)))
+        {
+            output.println(logMessage);
+        }
+        catch (Exception ignored) {}
+
+    }
+
+    public static void debugLogNoBreak(String name, String message) {
         //Ignore Log
         if(ignore) return;
 
@@ -36,8 +59,7 @@ public abstract class Log {
         String logMessage = "[" + LocalDateTime.now().format(dtf) + "] " + gap + name + ": " +  recursionGap + message;
 
         //Console Log
-        if(error) System.err.println(logMessage);
-        else System.out.println(logMessage);
+        System.out.print(logMessage);
 
         //Log File
         try(PrintWriter output = new PrintWriter(new FileWriter(DEBUG_LOG_PATH,true)))
@@ -45,7 +67,16 @@ public abstract class Log {
             output.println(logMessage);
         }
         catch (Exception ignored) {}
+    }
 
+    public static void debugLogAdd(String message, boolean newLine) {
+
+        //Ignore Log
+        if(ignore) return;
+
+        //Console Log
+        if(newLine) System.out.println(message);
+        else System.out.print(message);
     }
 
     public static void Clear() {

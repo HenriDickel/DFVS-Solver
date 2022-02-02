@@ -13,8 +13,6 @@ import java.util.stream.IntStream;
 public abstract class DFVSHeuristicSolver {
     public static void solveInstance(Instance instance) {
 
-        Log.debugLog(instance.NAME, "---------- " + instance.NAME + " (n = " + instance.N + ", m = " + instance.M + ", k = " + instance.OPTIMAL_K + ") ----------");
-
         Graph initialGraph = instance.subGraphs.get(0);
 
         // Preprocessing
@@ -107,11 +105,11 @@ public abstract class DFVSHeuristicSolver {
         // 5.24 TimerFast(100)       //
         //TimerFast(instance, 100, 0.95f);
         // 5.25 TimerFast(1000)      //1.0025257 (in 907.6053 ms)
-        //TimerFast(instance, 1000, 0.95f);
+        TimerFast(instance, 1000, 0.95f);
         // 5.26 TimerFast(10000)     //1.0018415 (in 8721.539 ms)
-        TimerFast(instance, 10000, 0.95f);
+        //TimerFast(instance, 10000, 0.95f);
 
-        Log.debugLog(instance.NAME, "Found solution with k = " + instance.S.size(), false);
+        Log.debugLog(instance.NAME, "Found solution with k = " + instance.S.size());
     }
 
     //---------Initial-----------------

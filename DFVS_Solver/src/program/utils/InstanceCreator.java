@@ -26,10 +26,6 @@ public abstract class InstanceCreator {
         return "src/inputs/" + dataset + "/optimal_solution_sizes.txt";
     }
 
-    public static String getILPSolutionPath(Dataset dataset) {
-        return "src/inputs/" + dataset + "/ilp_solution_sizes.txt";
-    }
-
     private static Instance createInstance(String name, Graph graph, int optimalK) {
         return new Instance(name, graph, optimalK);
     }
@@ -48,7 +44,7 @@ public abstract class InstanceCreator {
                     else optimalKMap.put(name, Integer.parseInt(optimalK));
                 }
             } catch (IOException e) {
-                Log.debugLog(graphName, "Couldn't read  file 'optimal_solution_sizes.txt'", true);
+                Log.debugLog(graphName, "Couldn't read  file 'optimal_solution_sizes.txt'", Color.RED);
                 return -1;
             }
         }
@@ -56,7 +52,7 @@ public abstract class InstanceCreator {
         return (optimalK != null) ? optimalK : -1;
     }
 
-    public static Instance createFromFile(GraphFile file, int optimalK){
+    public static Instance createFromFile(GraphFile file){
         Graph graph = new Graph();
 
         try (Stream<String> stream = Files.lines(Paths.get(file.path + file.name))) {
@@ -80,12 +76,12 @@ public abstract class InstanceCreator {
             e.printStackTrace();
         }
 
-        return createInstance(file.name, graph, optimalK);
+        return createInstance(file.name, graph, file.optimalK);
     }
 
     public static List<GraphFile> getComplexAndSyntheticFiles(Dataset dataset, String startFilename) {
-        List<GraphFile> files = getFiles(getComplexPath(dataset));
-        files.addAll(getFiles(getSyntheticPath(dataset)));
+        List<GraphFile> files = getFiles(dataset, getSyntheticPath(dataset));
+        files.addAll(getFiles(dataset, getSyntheticPath(dataset)));
         if(startFilename == null) return files;
         for(int i = 0; i < files.size(); i++) {
             if(files.get(i).name.equals(startFilename)) {
@@ -95,14 +91,15 @@ public abstract class InstanceCreator {
         throw new RuntimeException("Didn't found instance with name '" + startFilename + "'");
     }
 
-    public static List<GraphFile> getFiles(String path) {
+    public static List<GraphFile> getFiles(Dataset dataset, String path) {
         File folder = new File(path);
         File[] listOfFiles = folder.listFiles();
         if(listOfFiles == null) throw new RuntimeException("File path '" + path + "' does not exist!");
 
         List<GraphFile> files = new ArrayList<>();
         for (File listOfFile : listOfFiles) {
-            files.add(new GraphFile(path, listOfFile.getName()));
+            int optimalK = readOptimalKFromFile(InstanceCreator.getSolutionPath(dataset), listOfFile.getName());
+            files.add(new GraphFile(path, listOfFile.getName(), optimalK));
         }
         return files;
     }

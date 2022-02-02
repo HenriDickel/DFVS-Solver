@@ -3,7 +3,7 @@ package program.heuristics;
 import program.log.Log;
 import program.model.GraphFile;
 import program.model.Instance;
-import program.utils.Dataset;
+import program.utils.Color;
 import program.utils.InstanceCreator;
 
 import java.util.List;
@@ -18,9 +18,9 @@ public abstract class Heuristics {
         long millisAgg = 0;
         int count = 0;
         for(GraphFile file: files) {
-            int optimalK = InstanceCreator.readOptimalKFromFile(InstanceCreator.getSolutionPath(Dataset.DATASET_3), file.name);
-            if(optimalK <= 0) continue;
-            Instance instance = InstanceCreator.createFromFile(file, optimalK);
+            if(file.optimalK <= 0) continue;
+            Instance instance = InstanceCreator.createFromFile(file);
+            Log.debugLog(instance.NAME, instance.NAME + " (n = " + instance.N + ", m = " + instance.M + ", k = " + instance.OPTIMAL_K + ")", Color.PURPLE);
 
             long startMillis = System.currentTimeMillis();
 

@@ -6,12 +6,15 @@ import program.heuristics.Heuristics;
 import program.ilp.ILPSolver;
 import program.log.Log;
 import program.model.*;
-import program.utils.Dataset;
-import program.utils.InstanceCreator;
+import program.utils.*;
 
 import java.util.List;
+import java.util.concurrent.*;
+import java.util.concurrent.TimeoutException;
 
 public class Main {
+
+    private static final long TIME_OUT = 10;
 
     public static void main(String[] args) throws GRBException {
 
@@ -24,7 +27,7 @@ public class Main {
             String fileName = args[0];
 
             // Create instance
-            Instance instance = InstanceCreator.createFromFile(new GraphFile("", fileName), -1);
+            Instance instance = InstanceCreator.createFromFile(new GraphFile("", fileName, -1));
 
             // Solve
             ILPSolver.dfvsSolveInstance(instance);
@@ -42,72 +45,54 @@ public class Main {
             Log.Clear();
             Log.ignore = false;
 
-            //List<GraphFile> files = InstanceCreator.getComplexAndSyntheticFiles(Dataset.DATASET_3, null);
-            //Heuristics.testQuality(files);
-
             List<GraphFile> files = InstanceCreator.getComplexAndSyntheticFiles(Dataset.DATASET_3, null);
-            //Heuristics.testQuality(files);
-            for(GraphFile file: files) {
-                int optimalK = InstanceCreator.readOptimalKFromFile(InstanceCreator.getILPSolutionPath(Dataset.DATASET_3), file.name);
-                Instance instance = InstanceCreator.createFromFile(file, optimalK);
-                Solver.dfvsSolveInstance(instance);
-            }
+            Heuristics.testQuality(files);
+
+            //List<GraphFile> files = InstanceCreator.getComplexAndSyntheticFiles(Dataset.DATASET_3, null);
+            //files.forEach(Main::run);
         }
     }
 
-    private static void testLowerBoundPerformance(List<GraphFile> files) {
-        int count = 0;
-        long millisAgg = 0;
-        for(GraphFile file: files) {
-            Instance instance = InstanceCreator.createFromFile(file, -1);
-            if(instance.OPTIMAL_K == -1) continue;
-            Graph graph = instance.subGraphs.get(0);
-            List<Integer> reduceS = Reduction.applyRules(graph, true);
-            int remainingK = instance.OPTIMAL_K - reduceS.size();
-            if(remainingK <= 0) continue;
-            // Compute packing
-            long startTime = System.nanoTime();
-            CyclePacking packing = new CyclePacking(graph.copy());
-            int lowerBound = packing.size();
-            long millis = (System.nanoTime() - startTime) / 1000000;
+    private static void run(GraphFile file) {
 
-            Log.debugLog(instance.NAME, "Computed lower bound = " + lowerBound + " in " + millis + " ms");
-            count++;
-            millisAgg += millis;
+        PerformanceTimer.reset();
+        ExecutorService executor = Executors.newSingleThreadExecutor();
+        Future<Long> future = executor.submit(() -> {
+            long startTime = System.currentTimeMillis();
+            Instance instance = InstanceCreator.createFromFile(file);
+
+            Log.debugLog(instance.NAME, instance.NAME + " (n = " + instance.N + ", m = " + instance.M + ", k = " + instance.OPTIMAL_K + ")", Color.PURPLE);
+            Solver.dfvsSolveInstance(instance);
+            return (System.currentTimeMillis() - startTime);
+        });
+
+        try {
+            long millis = future.get(TIME_OUT, TimeUnit.SECONDS);
+            Instance instance = Solver.instance;
+
+            // Verify
+            instance.solvedK = instance.S.size();
+            boolean verified = instance.solvedK == instance.OPTIMAL_K || instance.OPTIMAL_K == -1;
+
+            // Log results
+            PerformanceTimer.printResult();
+            Log.mainLog(Solver.instance, millis, PerformanceTimer.getPackingMillis(), verified);
+            Color color = verified ? Color.WHITE : Color.RED;
+            Log.debugLog(Solver.instance.NAME, "Found solution in " + Timer.format(millis) + " (recursive steps: " + instance.recursiveSteps + ")", color);
+        } catch (TimeoutException | InterruptedException | ExecutionException e) {
+
+            future.cancel(true);
+            Instance instance = Solver.instance;
+            instance.solvedK = instance.S.size() + Solver.currentK;
+
+            // Log results
+            long millis = TIME_OUT * 1000;
+            Log.debugLogAdd("", true);
+            PerformanceTimer.printResult();
+            Log.mainLog(instance, millis, PerformanceTimer.getPackingMillis(), false);
+            Log.debugLog(instance.NAME, "Found no solution in " + Timer.format(millis), Color.RED);
+            return;
         }
-        Log.debugLog("Overall (" + count + ")", "Average millis: " + millisAgg / count);
-    }
-
-    private static void testLowerBoundQuality(List<GraphFile> files) {
-        int lowerBoundAgg = 0;
-        int remainingKAgg = 0;
-        float qualityAgg = 0;
-        int count = 0;
-        for(GraphFile file: files) {
-            Instance instance = InstanceCreator.createFromFile(file, -1);
-            if(instance.OPTIMAL_K == -1) continue;
-            Graph graph = instance.subGraphs.get(0);
-            // Apply reduction rules and calculate remaining k for lower bounds
-            List<Integer> reduceS = Reduction.applyRules(graph, true);
-            int remainingK = instance.OPTIMAL_K - reduceS.size();
-
-            CyclePacking packing = new CyclePacking(graph.copy());
-            int lowerBound = packing.size();
-
-            //PackingManager packing = new PackingManager(graph.copy());
-            //int lowerBound = packing.size();
-
-            if(remainingK > 0) {
-                lowerBoundAgg += lowerBound;
-                remainingKAgg += remainingK;
-                qualityAgg += (float) lowerBound / remainingK;
-                count++;
-            }
-            Log.debugLog(instance.NAME, "Lower bound: " + lowerBound + " / " + remainingK);
-        }
-        float quality = qualityAgg / count;
-        Log.debugLog("Overall (" + count + ")", "Average lower bound quality per instance: " + quality);
-        float overallLowerBoundK = (float) lowerBoundAgg / remainingKAgg;
-        Log.debugLog("Overall (" + count + ")", "Overall lower bound quality: " + overallLowerBoundK);
+        executor.shutdownNow();
     }
 }

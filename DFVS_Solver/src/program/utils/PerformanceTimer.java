@@ -66,8 +66,8 @@ public abstract class PerformanceTimer {
     }
 
     public static void printResult() {
-        Log.debugLog(Solver.instance.NAME, "Preprocessing: " + millisPreprocessing / 1000000 + " ms, Flowers: " + millisFlowers / 1000000 + " ms, BFS: " + millisBFS / 1000000 +
-        " ms, DAG: " + millisDAG / 1000000 + " ms, Copy: " + millisCopy / 1000000 + " ms, Reduction: " + millisReduction / 1000000 + " ms, Packing: " + millisPacking / 1000000 + " ms");
+        long other = (millisPreprocessing + millisFlowers + millisDAG + millisCopy + millisReduction) / 1000000;
+        Log.debugLog(Solver.instance.NAME, "BFS: " + millisBFS / 1000000 + " ms, Packing: " + millisPacking / 1000000 + " ms, Other: " + other + " ms");
     }
 
     public static void printILPResult() {
