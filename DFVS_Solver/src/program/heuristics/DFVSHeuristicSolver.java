@@ -2,10 +2,7 @@ package program.heuristics;
 
 import program.algo.*;
 import program.log.Log;
-import program.model.Cycle;
-import program.model.Graph;
-import program.model.Instance;
-import program.model.Node;
+import program.model.*;
 
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
@@ -105,6 +102,14 @@ public abstract class DFVSHeuristicSolver {
         //TimerBorder(instance, 100);
         // 5.23 TimerBorder(1000)   //1.003 - 470ms - 302526
         //TimerBorder(instance, 1000);
+
+        //---------TimerFast----------------
+        // 5.24 TimerFast(100)       //
+        //TimerFast(instance, 100, 0.95f);
+        // 5.25 TimerFast(1000)      //1.0025257 (in 907.6053 ms)
+        //TimerFast(instance, 1000, 0.95f);
+        // 5.26 TimerFast(10000)     //1.0018415 (in 8721.539 ms)
+        TimerFast(instance, 10000, 0.95f);
 
         Log.debugLog(instance.NAME, "Found solution with k = " + instance.S.size(), false);
     }
@@ -394,6 +399,9 @@ public abstract class DFVSHeuristicSolver {
                 timeForThisGraph -= ChronoUnit.MILLIS.between(startTime, LocalDateTime.now());
             }
 
+            //Need at least 1
+            if(solutions.isEmpty()) solutions.add(TimerRecRandom(subGraph, new ArrayList<>()));
+
             //Best solution
             List<Integer> sol = Collections.min(solutions, Comparator.comparing(List::size));
             instance.S.addAll(sol);
@@ -558,5 +566,78 @@ public abstract class DFVSHeuristicSolver {
             instance.S.addAll(sol);
         }
     }
+
+    //---------TimerFast-------------
+
+    private static void TimerFast(Instance instance, int timeLimitMillis, float precision) {
+
+        float totalNodeCount = instance.subGraphs.stream().mapToInt(Graph::getNodeCount).sum();
+
+        // Destroy cycles by heuristic
+        for (Graph subGraph : instance.subGraphs) {
+            float percentage = (float) subGraph.getNodeCount() / totalNodeCount;
+            float timeForThisGraph = timeLimitMillis * percentage;
+
+            //All solutions
+            List<List<Integer>> solutions = new ArrayList<>();
+
+            while(timeForThisGraph > 0){
+                LocalDateTime startTime = LocalDateTime.now();
+                solutions.add(TimerRecFast(subGraph, new ArrayList<>(), precision));
+                timeForThisGraph -= ChronoUnit.MILLIS.between(startTime, LocalDateTime.now());
+            }
+
+            //Need at least 1
+            if(solutions.isEmpty()) solutions.add(TimerRecFast(subGraph, new ArrayList<>(), precision));
+
+            //Best solution
+            List<Integer> sol = Collections.min(solutions, Comparator.comparing(List::size));
+            instance.S.addAll(sol);
+        }
+    }
+
+    private static List<Integer> TimerRecFast(Graph graph, List<Integer> solution, float precision) {
+
+        //Check if DAG
+        if (DAG.isDAGFast(graph)) return solution;
+
+        //All shortest
+        List<Cycle> allShortestCycles = FullBFS.findMultipleShortestCycles(graph);
+
+        //Copy
+        Graph copyGraph = graph.copy();
+        List<Integer> copySolution = new ArrayList<>(solution);
+
+        //Random
+        Random random = new Random();
+
+        //Random
+        for(int i = 0; i <= (float) allShortestCycles.size() * (1f - precision); i++){
+
+            //Random cycle
+            Cycle randomCycle = allShortestCycles.get(random.nextInt(allShortestCycles.size()));
+
+            //Get best node
+            Node node = Collections.max(randomCycle.getNodes(), Comparator.comparing(x -> Math.min(x.getOutIdCount(), x.getInIdCount())));
+
+            //Don't delete twice
+            if(copySolution.contains(node.id)) continue;
+
+            //Remove node
+            copyGraph.removeNode(node.id);
+            copySolution.add(node.id);
+
+            //Reduction
+            copySolution.addAll(Reduction.applyRules(copyGraph, false));
+
+            //Check if DAG
+            if(DAG.isDAGFast(graph)) return solution;
+        }
+
+        //Do again
+        return TimerRecFast(copyGraph, copySolution, precision);
+
+    }
+
 
 }

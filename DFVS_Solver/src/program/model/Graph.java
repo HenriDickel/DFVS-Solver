@@ -112,6 +112,7 @@ public class Graph {
      */
     public void removeNode(Integer nodeId) {
         Node node = nodes.get(nodeId);
+        if(node == null) return;
         for(Integer outId: node.getOutIds()) {
             Node out = getNode(outId);
             out.removeInId(nodeId);
