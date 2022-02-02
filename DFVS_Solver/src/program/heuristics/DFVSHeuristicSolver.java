@@ -574,19 +574,16 @@ public abstract class DFVSHeuristicSolver {
         // Destroy cycles by heuristic
         for (Graph subGraph : instance.subGraphs) {
             float percentage = (float) subGraph.getNodeCount() / totalNodeCount;
-            float timeForThisGraph = timeLimitMillis * percentage;
+            long millisForThisGraph = (long) (timeLimitMillis * percentage);
 
             //All solutions
             List<List<Integer>> solutions = new ArrayList<>();
 
-            while(timeForThisGraph > 0){
-                LocalDateTime startTime = LocalDateTime.now();
-                solutions.add(TimerRecFast(subGraph, new ArrayList<>(), precision));
-                timeForThisGraph -= ChronoUnit.MILLIS.between(startTime, LocalDateTime.now());
-            }
+            long startTime = System.currentTimeMillis();
 
-            //Need at least 1
-            if(solutions.isEmpty()) solutions.add(TimerRecFast(subGraph, new ArrayList<>(), precision));
+            while(System.currentTimeMillis() <= startTime + millisForThisGraph + 1){
+                solutions.add(TimerRecFast(subGraph, new ArrayList<>(), precision));
+            }
 
             //Best solution
             List<Integer> sol = Collections.min(solutions, Comparator.comparing(List::size));

@@ -180,17 +180,8 @@ public abstract class FullBFS {
             Collections.reverse(cycle.getNodes());
         }
 
-        List<Cycle> sol = new ArrayList<>();
-
-        for(int i = 0; i < minCycles.size(); i++) {
-            Cycle shortestCycle = Collections.max(minCycles, Comparator.comparing(x -> x.cycleCount));
-
-            sol.add(shortestCycle);
-            minCycles.remove(shortestCycle);
-        }
-
         //Return
-        return sol;
+        return minCycles;
     }
 
 }
