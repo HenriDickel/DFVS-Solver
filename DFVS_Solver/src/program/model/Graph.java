@@ -70,6 +70,24 @@ public class Graph {
         nodes.values().forEach(node -> node.topologicalId = -1);
     }
 
+    public Graph copySorted() {
+        Graph copyGraph = new Graph();
+
+        List<Node> copyNodes = new LinkedList<>();
+        for (Node node : getNodes()) {
+            Node copyNode = node.copy();
+            copyNodes.add(copyNode);
+        }
+
+        copyNodes.sort(Comparator.comparing(Node::getMinInOut));
+        Collections.reverse(copyNodes);
+
+        for(Node copyNode: copyNodes) {
+            copyGraph.nodes.put(copyNode.id, copyNode);
+        }
+        return copyGraph;
+    }
+
     public Graph copy() {
         Graph copyGraph = new Graph();
 

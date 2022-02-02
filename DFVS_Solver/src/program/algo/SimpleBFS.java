@@ -4,6 +4,7 @@ import program.model.Cycle;
 import program.model.Graph;
 import program.model.Node;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -51,5 +52,29 @@ public abstract class SimpleBFS {
             pointer = pointer.parent;
         }
         return cycle;
+    }
+
+    public static List<Cycle> findBestCycles(Graph graph, Node root, int maxBranchSize) {
+        // Reset node attributes
+        graph.resetBFS();
+        queue.clear();
+        queue.add(root);
+        root.visitIndex = 0;
+
+        List<Cycle> cycles = new ArrayList<>();
+
+        while(!queue.isEmpty()) {
+            Node nextNode = queue.remove(0);
+
+            // When max branch size is reached, return cycles
+            if(nextNode.visitIndex >= maxBranchSize) return cycles;
+
+            Cycle cycle = visitNode(graph, nextNode, root);
+            if(cycle != null) { // First cycle found
+                maxBranchSize = cycle.size();
+                cycles.add(cycle);
+            }
+        }
+        return cycles;
     }
 }

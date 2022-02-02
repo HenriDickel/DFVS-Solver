@@ -75,6 +75,10 @@ public class Node {
         return inIds.size();
     }
 
+    public int getMinInOut() {
+        return Math.min(inIds.size(), outIds.size());
+    }
+
     public int getCycleCount() {
         return cycleCount;
     }

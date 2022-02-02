@@ -1,20 +1,14 @@
 package program.heuristics;
 
-import program.algo.DAG;
-import program.algo.FullBFS;
 import program.algo.Preprocessing;
 import program.algo.Reduction;
 import program.log.Log;
-import program.model.Cycle;
 import program.model.Graph;
 import program.model.Instance;
 import program.model.Node;
-import program.utils.PerformanceTimer;
+import program.model.TopologicalOrdering;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public abstract class DFASHeuristicSolver {
@@ -78,69 +72,258 @@ public abstract class DFASHeuristicSolver {
         for (Graph subGraph : instance.subGraphs) {
             subGraph.resetTopologicalOrdering();
 
-            for(int i = 0; i < subGraph.getNodeCount(); i++) {
+            // Sort by min in count: 8.104
+            //sortByMinIn(subGraph);
 
-                Node next = null;
-                int backEdgeCountMin = Integer.MAX_VALUE;
-                int outEdgeCountMax = 0;
-                for(Node node: subGraph.getNodes()) {
-                    if(node.topologicalId > -1) continue;
+            // Sort by max out count: 5.505
+            //sortByMaxOutCount(subGraph);
 
-                     // Count number of in edges from the unordered nodes
-                    int backEdgeCount = 0;
-                    for(Integer inId: node.getInIds()) {
-                        Node in = subGraph.getNode(inId);
-                        if (in.topologicalId == -1) {
-                            backEdgeCount++;
-                        }
-                    }
-                    int outEdgeCount = 0;
-                    for(Integer outId: node.getOutIds()) {
-                        Node out = subGraph.getNode(outId);
-                        if (out.topologicalId == -1) {
-                            outEdgeCount++;
-                        }
-                    }
-                    if(backEdgeCount < backEdgeCountMin) {
-                        backEdgeCountMin = backEdgeCount;
-                        outEdgeCountMax = outEdgeCount;
-                        next = node;
-                    } else if(backEdgeCount == backEdgeCountMin && outEdgeCount > outEdgeCountMax) {
-                        outEdgeCountMax = outEdgeCount;
-                        next = node;
-                    }
-                }
-                next.topologicalId = i;
-            }
+            // Sort by min in count -> max out count: 1.795
+            //TopologicalOrdering ordering = sortByMinInMaxOut(subGraph);
+
+            // Sort by min in count -> max out count + local search: 1.498
+            TopologicalOrdering ordering = sortByMinInMaxOut(subGraph);
+            Log.debugLog(instance.NAME, "Heuristic size after sorting: " + ordering.getS().size());
+            localSearchSwapAll(ordering);
+            Log.debugLog(instance.NAME, "Heuristic size after local search: " + ordering.getS().size());
+
+            // Sort by max out count -> min in count: 5.505
+            //sortByMaxOutMinIn(subGraph);
 
             // Add backward edges to S
-            for(Node node: subGraph.getNodes()) {
-                for (Integer outId: node.getOutIds()) {
-                    Node out = subGraph.getNode(outId);
-                    if(out.topologicalId < node.topologicalId) { // If the out node is earlier in the ordering
-                        instance.S.add(out.topologicalId);
+            instance.S.addAll(ordering.getS());
+        }
+    }
+
+    private static void sortByMinIn(Graph graph) {
+
+        List<Node> unorderedNodes = new ArrayList<>(graph.getNodes());
+
+        for(int i = 0; i < graph.getNodeCount(); i++) {
+
+            Node nextNode = unorderedNodes.get(0);
+            int inCountMin = Integer.MAX_VALUE;
+            for(Node node: unorderedNodes) {
+                // Count number of in edges from nodes
+                int inCount = 0;
+                for(Integer inId: node.getInIds()) {
+                    Node in = graph.getNode(inId);
+                    if (in.topologicalId == -1) {
+                        inCount++;
+                    }
+                }
+                if(inCount < inCountMin) {
+                    inCountMin = inCount;
+                    nextNode = node;
+                }
+            }
+            nextNode.topologicalId = i;
+            unorderedNodes.remove(nextNode);
+        }
+    }
+
+    private static void sortByMaxOutCount(Graph graph) {
+
+        List<Node> unorderedNodes = new ArrayList<>(graph.getNodes());
+
+        for(int i = 0; i < graph.getNodeCount(); i++) {
+
+            Node nextNode = unorderedNodes.get(0);
+            int outCountMax = 0;
+            for(Node node: unorderedNodes) {
+                // Count number of out edges to nodes
+                int outCount = 0;
+                for(Integer outId: node.getOutIds()) {
+                    Node out = graph.getNode(outId);
+                    if (out.topologicalId == -1) {
+                        outCount++;
+                    }
+                }
+                if(outCount > outCountMax) {
+                    outCountMax = outCount;
+                    nextNode = node;
+                }
+            }
+            nextNode.topologicalId = i;
+            unorderedNodes.remove(nextNode);
+        }
+    }
+
+    private static TopologicalOrdering sortByMinInMaxOut(Graph graph) {
+
+        TopologicalOrdering ordering = new TopologicalOrdering(graph);
+        List<Node> unorderedNodes = new LinkedList<>(graph.getNodes());
+
+        for(int i = 0; i < graph.getNodeCount(); i++) {
+
+            Node nextNode = unorderedNodes.get(0);
+            int minInCount = Integer.MAX_VALUE;
+            int maxOutCount = 0;
+            for(Node node: unorderedNodes) {
+                // Count number of in edges from nodes
+                int inCount = 0;
+                for(Integer inId: node.getInIds()) {
+                    Node in = graph.getNode(inId);
+                    if (in.topologicalId == -1) {
+                        inCount++;
+                    }
+                }
+                // Count number of out edges to unordered nodes
+                int outCount = 0;
+                for(Integer outId: node.getOutIds()) {
+                    Node out = graph.getNode(outId);
+                    if (out.topologicalId == -1) {
+                        outCount++;
+                    }
+                }
+                if(inCount < minInCount) {
+                    minInCount = inCount;
+                    maxOutCount = outCount;
+                    nextNode = node;
+                } else if(inCount == minInCount && outCount > maxOutCount) {
+                    maxOutCount = outCount;
+                    nextNode = node;
+                }
+            }
+            nextNode.topologicalId = i;
+            unorderedNodes.remove(nextNode);
+            ordering.add(nextNode);
+        }
+        return ordering;
+    }
+
+    private static int countBackEdges(Graph graph, Node node) {
+        int backEdgeCount = 0;
+        for (Integer outId: node.getOutIds()) {
+            Node out = graph.getNode(outId);
+            if(out.topologicalId < node.topologicalId) { // If the out node is earlier in the ordering
+                backEdgeCount++;
+            }
+        }
+        for (Integer inId: node.getInIds()) {
+            Node in = graph.getNode(inId);
+            if(in.topologicalId > node.topologicalId) { // If the in node is later in the ordering
+                backEdgeCount++;
+            }
+        }
+        return backEdgeCount;
+    }
+
+    private static void localSearchSwapAll(TopologicalOrdering ordering) {
+
+        boolean improvementFound = true;
+        while(improvementFound) {
+            improvementFound = false;
+            for (Node A : ordering.getNodes()) {
+                for (Node B : ordering.getNodes()) {
+                    int backEdgeCount = ordering.countCostEdges(A) + ordering.countCostEdges(B);
+                    int topologicalIdA = A.topologicalId;
+                    A.topologicalId = B.topologicalId;
+                    B.topologicalId = topologicalIdA;
+                    int newBackEdgeCount = ordering.countCostEdges(A) + ordering.countCostEdges(B);
+
+                    if (newBackEdgeCount >= backEdgeCount) { // Revert id change
+                        B.topologicalId = A.topologicalId;
+                        A.topologicalId = topologicalIdA;
+                    } else  { // Swap nodes in ordering
+                        ordering.swapNodes(A, B);
+                        improvementFound = true;
                     }
                 }
             }
         }
-
     }
 
-    private static void removeEdges(Instance instance) {
-        for (Graph subGraph : instance.subGraphs) {
-            while(!DAG.isDAGFast(subGraph)) {
-                int removeId = -1;
-                int inOutMax = 0;
-                for(Node node: subGraph.getNodes()) {
-                    int inOut = Math.min(node.getOutIdCount(), node.getInIdCount());
-                    if(inOut > inOutMax) {
-                        removeId = node.id;
-                        inOutMax = inOut;
+    private static void localSearchMove(TopologicalOrdering ordering) {
+
+        boolean improvementFound = true;
+        while(improvementFound) {
+            improvementFound = false;
+            for (Node A : ordering.getNodes()) {
+                int backEdgeCount = ordering.countCostEdges(A);
+
+                for(int i = 0; i < ordering.getNodes().size(); i++) {
+
+
+
+                    int newBackEdgeCount = ordering.countCostEdges(A);
+
+                    if (newBackEdgeCount < backEdgeCount) { // Swap nodes in ordering
+
+                        improvementFound = true;
+                    } else if (newBackEdgeCount < backEdgeCount) { // Revert id change
+
                     }
                 }
-                subGraph.removeNode(removeId);
-                instance.S.add(removeId);
             }
+        }
+    }
+
+    private static void localSearchSwapNeighbors(List<Node> orderedNodes, Graph graph) {
+
+        for(int j = 0; j < graph.getNodeCount(); j++) {
+            for(int i = 0; i < graph.getNodeCount() - 1; i++) {
+                Node A = orderedNodes.get(i);
+                Node B = orderedNodes.get(i + 1);
+
+                int backEdgeCount = countBackEdges(graph, A) + countBackEdges(graph, B);
+
+                int topologicalIdA = A.topologicalId;
+                A.topologicalId = B.topologicalId;
+                B.topologicalId = topologicalIdA;
+                int newBackEdgeCount = countBackEdges(graph, A) + countBackEdges(graph, B);
+
+
+                if(newBackEdgeCount > backEdgeCount) {
+                    B.topologicalId = A.topologicalId;
+                    A.topologicalId = topologicalIdA;
+                } else {
+                    orderedNodes.remove(A);
+                    orderedNodes.remove(B);
+                    orderedNodes.add(B.topologicalId, B);
+                    orderedNodes.add(A.topologicalId, A);
+                }
+            }
+        }
+    }
+
+    private static void sortByMaxOutMinIn(Graph graph) {
+
+        List<Node> unorderedNodes = new ArrayList<>(graph.getNodes());
+
+        for(int i = 0; i < graph.getNodeCount(); i++) {
+
+            Node nextNode = unorderedNodes.get(0);
+            int maxOutCount = 0;
+            int minInCount = Integer.MAX_VALUE;
+            for(Node node: unorderedNodes) {
+                // Count number of out edges to unordered nodes
+                int outCount = 0;
+                for(Integer outId: node.getOutIds()) {
+                    Node out = graph.getNode(outId);
+                    if (out.topologicalId == -1) {
+                        outCount++;
+                    }
+                }
+                // Count number of in edges from nodes
+                int inCount = 0;
+                for(Integer inId: node.getInIds()) {
+                    Node in = graph.getNode(inId);
+                    if (in.topologicalId == -1) {
+                        inCount++;
+                    }
+                }
+                if(outCount > maxOutCount) {
+                    maxOutCount = outCount;
+                    minInCount = inCount;
+                    nextNode = node;
+                } else if(outCount == maxOutCount && inCount < minInCount) {
+                    minInCount = inCount;
+                    nextNode = node;
+                }
+            }
+            nextNode.topologicalId = i;
+            unorderedNodes.remove(nextNode);
         }
     }
 }

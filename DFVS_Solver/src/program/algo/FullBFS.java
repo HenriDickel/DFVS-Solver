@@ -4,17 +4,72 @@ import program.model.Cycle;
 import program.model.Graph;
 import program.model.Node;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public abstract class FullBFS {
 
+    public static Cycle findBestCycle(Graph graph) {
+
+        int maxMinInOut = 0;
+        List<Node> maxMinInOutNodes = new ArrayList<>();
+        for(Node node: graph.getNodes()) {
+
+            if(node.getMinInOut() > maxMinInOut) {
+                maxMinInOutNodes.clear();
+                maxMinInOutNodes.add(node);
+                maxMinInOut = node.getMinInOut();
+            } else if(node.getMinInOut() == maxMinInOut) {
+                maxMinInOutNodes.add(node);
+            }
+        }
+
+        int minSize = Integer.MAX_VALUE;
+        List<Cycle> minCycles = new ArrayList<>();
+        for(Node node: maxMinInOutNodes) {
+            List<Cycle> cycles = SimpleBFS.findBestCycles(graph, node, minSize);
+            for(Cycle cycle: cycles) {
+                if(cycle != null) {
+                    if(cycle.size() < minSize) {
+                        minCycles.clear();
+                        minCycles.add(cycle);
+                        minSize = cycle.size();
+                    } else if(cycle.size() == minSize) {
+                        minCycles.add(cycle);
+                    }
+                }
+            }
+        }
+
+        //System.out.println("Found " + minCycles.size() + " min cycles");
+
+        int maxCycleMinInOut = 0;
+        Cycle bestCycle = null;
+        for(Cycle minCycle : minCycles) {
+            int cycleMinInOut = 0;
+            for(Node node: minCycle.getNodes()) {
+                cycleMinInOut += node.getMinInOut();
+            }
+            if(cycleMinInOut > maxCycleMinInOut) {
+                bestCycle = minCycle;
+                maxCycleMinInOut = cycleMinInOut;
+            }
+        }
+
+
+        /* TODO 1. minInOut für jede Node setzen
+           2. Bei Node mit dem größten anfangen, Simple BFS
+           3. minSize setzen
+           (4. frühzeitig abbrechen?)
+           (5. packing Zeit optimieren, wenn sie überhand nimmt)
+         */
+
+        return bestCycle;
+    }
+
     public static Cycle findShortestCycle(Graph graph){
 
-        List<Cycle> cycles = graph.getPairCycles(); // TODO in rare cases (e.g. 'email'), it can be beneficial to break after the first cycle is found
+        List<Cycle> cycles = graph.getPairCycles();
         int minSize = 2;
 
         // When there are no cycles of size 2, look for shortest cycles with BFS

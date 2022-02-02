@@ -42,8 +42,13 @@ public class Main {
             Log.Clear();
             Log.ignore = false;
 
-            List<GraphFile> files = InstanceCreator.getComplexAndSyntheticFiles(Dataset.DATASET_2, null);
-            Heuristics.testQuality(files);
+            List<GraphFile> files = InstanceCreator.getComplexAndSyntheticFiles(Dataset.DATASET_3, null);
+            //Heuristics.testQuality(files);
+            for(GraphFile file: files) {
+                int optimalK = InstanceCreator.readOptimalKFromFile(InstanceCreator.getILPSolutionPath(Dataset.DATASET_3), file.name);
+                Instance instance = InstanceCreator.createFromFile(file, optimalK);
+                Solver.dfvsSolveInstance(instance);
+            }
         }
     }
 
