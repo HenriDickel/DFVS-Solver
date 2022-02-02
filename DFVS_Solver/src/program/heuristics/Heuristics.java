@@ -18,7 +18,7 @@ public abstract class Heuristics {
         long millisAgg = 0;
         int count = 0;
         for(GraphFile file: files) {
-            int optimalK = InstanceCreator.readOptimalKFromFile(InstanceCreator.getSolutionPath(Dataset.DATASET_2), file.name);
+            int optimalK = InstanceCreator.readOptimalKFromFile(InstanceCreator.getSolutionPath(Dataset.DATASET_3), file.name);
             if(optimalK <= 0) continue;
             Instance instance = InstanceCreator.createFromFile(file, optimalK);
 
@@ -40,6 +40,7 @@ public abstract class Heuristics {
             // Log
             Log.debugLog(instance.NAME, "Heuristics: " + approxK + " / " + instance.OPTIMAL_K + " (in " + millis + " ms)");
             Log.heuristicLog(instance, approxK, millis);
+
         }
         float quality = qualityAgg / count;
         float averageMillis = (float) millisAgg / count;

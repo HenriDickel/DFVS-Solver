@@ -42,7 +42,7 @@ public class Main {
             Log.Clear();
             Log.ignore = false;
 
-            List<GraphFile> files = InstanceCreator.getComplexAndSyntheticFiles(Dataset.DATASET_2, null);
+            List<GraphFile> files = InstanceCreator.getComplexAndSyntheticFiles(Dataset.DATASET_3, null);
             Heuristics.testQuality(files);
         }
     }
