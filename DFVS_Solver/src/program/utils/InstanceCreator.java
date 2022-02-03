@@ -80,8 +80,8 @@ public abstract class InstanceCreator {
     }
 
     public static List<GraphFile> getComplexAndSyntheticFiles(Dataset dataset, String startFilename) {
-        List<GraphFile> files = getFiles(dataset, getComplexPath(dataset));
-        files.addAll(getFiles(dataset, getSyntheticPath(dataset)));
+        List<GraphFile> files = getFiles(dataset, getSyntheticPath(dataset));
+        //files.addAll(getFiles(dataset, getSyntheticPath(dataset)));
         if(startFilename == null) return files;
         for(int i = 0; i < files.size(); i++) {
             if(files.get(i).name.equals(startFilename)) {

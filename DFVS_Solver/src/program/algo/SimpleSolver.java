@@ -19,7 +19,7 @@ public abstract class SimpleSolver {
             else return null;
         }
 
-        Cycle cycle = new LightBFS().run(graph);
+        Cycle cycle = LightBFS.run(graph);
 
         List<Integer> forbiddenIds = new ArrayList<>();
         for (Node node: cycle.getNodes()) {

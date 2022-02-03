@@ -2,6 +2,8 @@ package program.algo;
 
 import program.log.CycleCounter;
 import program.model.*;
+import program.packing.PackingManager;
+import program.utils.Timer;
 import program.utils.PerformanceTimer;
 import program.utils.TimeoutException;
 import program.log.Log;
@@ -15,6 +17,8 @@ public abstract class Solver {
     public static int currentK;
 
     private static List<Integer> dfvsBranch(Graph graph, int k, int level, PackingManager pm) throws TimeoutException {
+
+        if(Timer.isTimeout()) throw new TimeoutException();
 
         // Log recursive steps
         instance.recursiveSteps++;
@@ -33,7 +37,7 @@ public abstract class Solver {
 
         // Next Cycle
         PerformanceTimer.start();
-        Cycle cycle = new FullBFS().findBestCycle(graph);
+        Cycle cycle = FullBFS.findBestCycle(graph);
         PerformanceTimer.log(PerformanceTimer.MethodType.BFS);
 
         // Log cycle
@@ -127,7 +131,7 @@ public abstract class Solver {
         return S;
     }
 
-    public static void dfvsSolveInstance(Instance instance) {
+    public static void dfvsSolveInstance(Instance instance) throws TimeoutException {
 
         //Set instance & branch count
         Solver.instance = instance;

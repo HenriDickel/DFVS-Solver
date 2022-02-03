@@ -2,7 +2,7 @@ package program.ilp;
 
 import gurobi.*;
 import program.algo.FullBFS;
-import program.algo.PackingManager;
+import program.packing.PackingManager;
 import program.log.Log;
 import program.model.Cycle;
 import program.model.Graph;
@@ -11,7 +11,7 @@ import program.utils.PerformanceTimer;
 
 import java.util.List;
 
-import static program.algo.PackingRules.upgradeFullyConnected;
+import static program.packing.PackingRules.upgradeFullyConnected;
 
 public abstract class ILPRules {
 
@@ -33,7 +33,7 @@ public abstract class ILPRules {
     }
 
     public static void addInitialCircleConstraints(GRBModel model, Graph graph) throws GRBException {
-        List<Cycle> cycles = new FullBFS().getAllShortestCycles(graph);
+        List<Cycle> cycles = FullBFS.getAllShortestCycles(graph);
         int index = 0;
         for(Cycle cycle: cycles) {
             GRBLinExpr expr = new GRBLinExpr();

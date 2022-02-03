@@ -1,5 +1,8 @@
-package program.algo;
+package program.packing;
 
+import program.algo.DAG;
+import program.algo.LightBFS;
+import program.algo.SimpleSolver;
 import program.model.Component;
 import program.model.Cycle;
 import program.model.Graph;
@@ -138,7 +141,7 @@ public class PackingManager {
         while(!isDAG()) {
             PerformanceTimer.log(PerformanceTimer.MethodType.PACKING);
             PerformanceTimer.start();
-            Cycle cycle = new LightBFS().run(packingGraph);
+            Cycle cycle = LightBFS.run(packingGraph);
             PerformanceTimer.log(PerformanceTimer.MethodType.PACKING_BFS);
             PerformanceTimer.start();
 

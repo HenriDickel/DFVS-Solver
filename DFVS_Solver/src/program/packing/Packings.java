@@ -1,7 +1,7 @@
-package program.algo;
+package program.packing;
 
+import program.algo.Reduction;
 import program.log.Log;
-import program.model.CyclePacking;
 import program.model.Graph;
 import program.model.GraphFile;
 import program.model.Instance;
@@ -24,8 +24,8 @@ public abstract class Packings {
             if(remainingK <= 0) continue;
             // Compute packing
             long startTime = System.nanoTime();
-            CyclePacking packing = new CyclePacking(graph.copy());
-            int lowerBound = packing.size();
+            PackingManager pm = new PackingManager(graph);
+            int lowerBound = pm.size();
             long millis = (System.nanoTime() - startTime) / 1000000;
 
             Log.debugLog(instance.NAME, "Computed lower bound = " + lowerBound + " in " + millis + " ms");
@@ -48,8 +48,8 @@ public abstract class Packings {
             List<Integer> reduceS = Reduction.applyRules(graph, true);
             int remainingK = instance.OPTIMAL_K - reduceS.size();
 
-            CyclePacking packing = new CyclePacking(graph.copy());
-            int lowerBound = packing.size();
+            PackingManager pm = new PackingManager(graph);
+            int lowerBound = pm.size();
 
             //PackingManager packing = new PackingManager(graph.copy());
             //int lowerBound = packing.size();

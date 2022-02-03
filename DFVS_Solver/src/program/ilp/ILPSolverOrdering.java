@@ -126,7 +126,7 @@ public class ILPSolverOrdering extends GRBCallback{
             if(status != GRB.Status.OPTIMAL) {
                 model.dispose();
                 env.dispose();
-                throw new TimeoutException("Gurobi status: " + status);
+                throw new TimeoutException();
             }
 
             //Ids of deleted nodes
@@ -148,7 +148,7 @@ public class ILPSolverOrdering extends GRBCallback{
             return result;
 
         } catch (GRBException e) {
-            throw new TimeoutException("ILP Error: " + e.getErrorCode() + " - " + e.getMessage());
+            throw new TimeoutException();
         }
     }
 

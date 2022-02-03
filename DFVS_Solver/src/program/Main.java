@@ -7,14 +7,11 @@ import program.ilp.ILPSolver;
 import program.log.Log;
 import program.model.*;
 import program.utils.*;
+import program.utils.TimeoutException;
 
 import java.util.List;
-import java.util.concurrent.*;
-import java.util.concurrent.TimeoutException;
 
 public class Main {
-
-    private static final long TIME_OUT = 90;
 
     public static void main(String[] args) throws GRBException {
 
@@ -45,7 +42,7 @@ public class Main {
             Log.Clear();
             Log.ignore = false;
 
-            List<GraphFile> files = InstanceCreator.getComplexAndSyntheticFiles(Dataset.DATASET_3, null);
+            List<GraphFile> files = InstanceCreator.getComplexAndSyntheticFiles(Dataset.DATASET_3, null); //synth-n_1300-m_188195-k_100-p_0.2.txt
             //List<GraphFile> files = InstanceCreator.getSelectedFiles();
 
             //Heuristics.testQuality(files);
@@ -55,46 +52,35 @@ public class Main {
 
     private static void run(GraphFile file) {
 
+        Timer.start(90);
         PerformanceTimer.reset();
-        ExecutorService executor = Executors.newSingleThreadExecutor();
-        Future<Long> future = executor.submit(() -> {
-            long startTime = System.currentTimeMillis();
-            PerformanceTimer.start();
-            Instance instance = InstanceCreator.createFromFile(file);
-            PerformanceTimer.log(PerformanceTimer.MethodType.FILE);
 
-            Log.debugLog(instance.NAME, instance.NAME + " (n = " + instance.N + ", m = " + instance.M + ", k = " + instance.OPTIMAL_K + ")", Color.PURPLE);
-            Solver.dfvsSolveInstance(instance);
-            return (System.currentTimeMillis() - startTime);
-        });
+        PerformanceTimer.start();
+        Instance instance = InstanceCreator.createFromFile(file);
+        PerformanceTimer.log(PerformanceTimer.MethodType.FILE);
 
         try {
-            long millis = future.get(TIME_OUT, TimeUnit.SECONDS);
-            Instance instance = Solver.instance;
+            Log.debugLog(instance.NAME, instance.NAME + " (n = " + instance.N + ", m = " + instance.M + ", k = " + instance.OPTIMAL_K + ")", Color.PURPLE);
+            Solver.dfvsSolveInstance(instance);
 
             // Verify
             instance.solvedK = instance.S.size();
             boolean verified = instance.solvedK == instance.OPTIMAL_K || instance.OPTIMAL_K == -1;
 
             // Log results
-            PerformanceTimer.printResult();
-            Log.mainLog(Solver.instance, millis, PerformanceTimer.getPackingMillis(), verified);
+            Log.mainLog(instance, Timer.getMillis(), PerformanceTimer.getPackingMillis(), verified);
             Color color = verified ? Color.WHITE : Color.RED;
-            Log.debugLog(Solver.instance.NAME, "Found solution in " + millis + " ms (recursive steps: " + instance.recursiveSteps + ")", color);
+            Log.debugLog(instance.NAME, "Found solution in " + Timer.getMillis() + " ms (recursive steps: " + instance.recursiveSteps + ")", color);
+            PerformanceTimer.printResult();
+
         } catch (TimeoutException e) {
-            future.cancel(true);
-            Instance instance = Solver.instance;
             instance.solvedK = instance.S.size() + Solver.currentK;
 
             // Log results
-            long millis = TIME_OUT * 1000;
             Log.debugLogAdd("", true);
+            Log.mainLog(instance, Timer.getMillis(), PerformanceTimer.getPackingMillis(), false);
+            Log.debugLog(instance.NAME, "Found no solution in " + Timer.getMillis() + " ms (recursive steps: " + instance.recursiveSteps + ")", Color.RED);
             PerformanceTimer.printResult();
-            Log.mainLog(instance, millis, PerformanceTimer.getPackingMillis(), false);
-            Log.debugLog(instance.NAME, "Found no solution in " + millis + " ms (recursive steps: " + instance.recursiveSteps + ")", Color.RED);
-        } catch (ExecutionException | InterruptedException e) {
-            e.printStackTrace();
         }
-        executor.shutdownNow();
     }
 }

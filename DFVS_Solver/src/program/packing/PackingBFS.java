@@ -1,4 +1,4 @@
-package program.algo;
+package program.packing;
 
 import program.model.Cycle;
 import program.model.Graph;
@@ -7,33 +7,30 @@ import program.model.Node;
 import java.util.LinkedList;
 import java.util.List;
 
-public abstract class LightBFS {
+public class PackingBFS {
 
-    private static final List<Node> queue = new LinkedList<>();
+    private final List<Node> queue = new LinkedList<>();
 
-    public static Cycle run(Graph graph) {
+    public Cycle run(Node node, Graph graph) {
 
-        for(Node node: graph.getNodes()) {
+        // Reset node attributes
+        queue.clear();
+        graph.resetBFS();
 
-            // Reset node attributes
-            queue.clear();
-            graph.resetBFS();
+        // Visit the start node
+        node.visitIndex = 0;
 
-            // Visit the start node
-            node.visitIndex = 0;
+        Cycle cycle = visitNode(node, graph);
+        if(cycle != null) {
+            return cycle;
+        }
 
-            Cycle cycle = visitNode(node, graph);
+        while(!queue.isEmpty()) {
+            Node next = queue.remove(0);
+            next.visitIndex = next.parent.visitIndex + 1;
+            cycle = visitNode(next, graph);
             if(cycle != null) {
                 return cycle;
-            }
-
-            while(!queue.isEmpty()) {
-                Node next = queue.remove(0);
-                next.visitIndex = next.parent.visitIndex + 1;
-                cycle = visitNode(next, graph);
-                if(cycle != null) {
-                    return cycle;
-                }
             }
         }
         return null;
@@ -46,7 +43,7 @@ public abstract class LightBFS {
      * @param node node A.
      * @return a cycle when found.
      */
-    private static Cycle visitNode(Node node, Graph graph) {
+    private Cycle visitNode(Node node, Graph graph) {
 
         for(Integer outId: node.getOutIds()) {
             Node out = graph.getNode(outId);
@@ -70,7 +67,7 @@ public abstract class LightBFS {
      * @param second node B.
      * @return cycle when found.
      */
-    private static Cycle findCycle(Node first, Node second) {
+    private Cycle findCycle(Node first, Node second) {
 
         Node pointer = second.parent;
         Cycle cycle = new Cycle(second);

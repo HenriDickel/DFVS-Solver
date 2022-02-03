@@ -92,7 +92,7 @@ public class SlowPacking {
         }
 
         while(!DAG.isDAGFast(packingGraph)) {
-            Cycle cycle = new LightBFS().run(packingGraph);
+            Cycle cycle = LightBFS.run(packingGraph);
 
             if(cycle.size() == 3) upgradeK2Penta(cycle);
 

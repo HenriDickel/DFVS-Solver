@@ -1,4 +1,4 @@
-package program.algo;
+package program.packing;
 
 import program.model.Cycle;
 import program.model.Graph;

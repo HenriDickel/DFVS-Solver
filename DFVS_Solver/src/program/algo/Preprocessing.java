@@ -37,33 +37,6 @@ public abstract class Preprocessing {
         subGraphs.sort(Comparator.comparing(Graph::getNodeCount));
         return subGraphs;
     }
-
-    /**
-     * Improvement of the normal triangle rule that only needs one Node to only be in the fully connected graph
-     */
-
-    public static void removePendantFullTrianglePP(Graph graph){
-        for(Node A: graph.getNodes()){
-            if(A.getOutIds().size()==2) {
-                int inEdges = (int) graph.getNodes().stream().filter(n -> n.getOutIds().contains(A.id)).count();
-                if (inEdges == 2) {
-                    Integer bId = A.getOutIds().get(0);
-                    Integer cId = A.getOutIds().get(1);
-                    Node B = graph.getNode(bId);
-                    Node C = graph.getNode(cId);
-                    if (B.getOutIds().contains(A.id) && B.getOutIds().contains(C.id)) {
-                        if (C.getOutIds().contains(B.id) && C.getOutIds().contains(A.id)) {
-                            graph.removeNode(A.id);
-                            graph.removeNode(B.id);
-                            graph.removeNode(C.id);
-                            Solver.instance.S.add(B.id);
-                            Solver.instance.S.add(C.id);
-                        }
-                    }
-                }
-            }
-        }
-    }
 }
 
 

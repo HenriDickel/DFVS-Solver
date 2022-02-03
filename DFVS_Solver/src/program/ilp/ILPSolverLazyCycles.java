@@ -2,7 +2,7 @@ package program.ilp;
 import gurobi.*;
 import program.algo.DAG;
 import program.algo.FullBFS;
-import program.algo.PackingManager;
+import program.packing.PackingManager;
 import program.log.Log;
 import program.model.Cycle;
 import program.model.Graph;
@@ -117,7 +117,7 @@ public class ILPSolverLazyCycles  extends GRBCallback{
             //Find first cycle and add its constraint, the sum of all Xs of a cycle needs to be >=1 (at least one node needs to be deleted from the cycle)
 
             PerformanceTimer.start();
-            Cycle cycle = new FullBFS().findShortestCycle(graph);
+            Cycle cycle = FullBFS.findShortestCycle(graph);
             PerformanceTimer.log(PerformanceTimer.MethodType.BFS);
             expr = new GRBLinExpr();
             for(Node node: cycle.getNodes()){
@@ -151,7 +151,7 @@ public class ILPSolverLazyCycles  extends GRBCallback{
 
             // Return no solution when timeout
             int status = model.get(GRB.IntAttr.Status);
-            if(status != GRB.Status.OPTIMAL) throw new TimeoutException("Gurobi status: " + status);
+            if(status != GRB.Status.OPTIMAL) throw new TimeoutException();
 
             List<Integer> result = new ArrayList<>();
 
@@ -171,7 +171,7 @@ public class ILPSolverLazyCycles  extends GRBCallback{
 
         } catch (GRBException e) {
             instance.numConstraints += model.getConstrs().length;
-            throw new TimeoutException("ILP Error: " + e.getErrorCode() + " - " + e.getMessage());
+            throw new TimeoutException();
         }
     }
 }

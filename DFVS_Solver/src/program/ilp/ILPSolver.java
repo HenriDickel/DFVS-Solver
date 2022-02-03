@@ -24,7 +24,8 @@ public abstract class ILPSolver {
         Solver.instance = instance;
 
         // Start Timer
-        Timer.start();
+        int timeLimit = 90;
+        Timer.start(90);
 
         PerformanceTimer.reset();
         PerformanceTimer.start();
@@ -62,7 +63,7 @@ public abstract class ILPSolver {
                 instance.S.addAll(S);
             }
         } catch (TimeoutException e) {
-            long millis = Timer.timeout * 1000;
+            long millis = timeLimit * 1000;
             Log.ilpLog(instance, millis, false);
             Log.detailLog(instance);
             PerformanceTimer.printILPResult();
@@ -71,12 +72,12 @@ public abstract class ILPSolver {
         }
 
         // Stop Timer
-        long millis = Timer.stop();
+        long millis = Timer.getMillis();
 
         // Log
         instance.solvedK = instance.S.size();
-        boolean verified = millis < Timer.timeout * 1000;
-        if(millis > Timer.timeout * 1000) millis = Timer.timeout * 1000;
+        boolean verified = millis < timeLimit * 1000;
+        if(millis > timeLimit * 1000) millis = timeLimit * 1000;
         Log.ilpLog(instance, millis, verified);
         PerformanceTimer.printILPResult();
         Color color = verified ? Color.WHITE : Color.RED;
