@@ -3,14 +3,13 @@ package program.algo;
 import program.model.Cycle;
 import program.model.Graph;
 import program.model.Node;
-import program.utils.Timer;
 
 import java.util.*;
 import java.util.stream.Collectors;
 
-public abstract class FullBFS {
+public class FullBFS {
 
-    public static Cycle findBestCycle(Graph graph) {
+    public Cycle findBestCycle(Graph graph) {
 
         List<Cycle> minCycles = graph.getPairCycles();
         int minSize = 2;
@@ -33,7 +32,7 @@ public abstract class FullBFS {
             minSize = Integer.MAX_VALUE;
             minCycles = new ArrayList<>();
             for(Node node: maxMinInOutNodes) {
-                List<Cycle> cycles = SimpleBFS.findBestCycles(graph, node, minSize);
+                List<Cycle> cycles = new SimpleBFS().findBestCycles(graph, node, minSize);
                 for(Cycle cycle: cycles) {
                     if(cycle != null) {
                         if(cycle.size() < minSize) {
@@ -80,7 +79,7 @@ public abstract class FullBFS {
         return bestCycle;
     }
 
-    public static Cycle findShortestCycle(Graph graph){
+    public Cycle findShortestCycle(Graph graph){
 
         List<Cycle> cycles = graph.getPairCycles();
         int minSize = 2;
@@ -89,7 +88,7 @@ public abstract class FullBFS {
         if(cycles.size() == 0) {
             minSize = Integer.MAX_VALUE;
             for (Node node : graph.getNodes()) { // Find the best cycle for each node
-                Cycle cycle = SimpleBFS.findBestCycle(graph, node, minSize);
+                Cycle cycle = new SimpleBFS().findBestCycle(graph, node, minSize);
 
                 // Replace the min branch size when found better one
                 if (cycle != null) {
@@ -138,20 +137,20 @@ public abstract class FullBFS {
         return shortestCycle;
     }
 
-    public static List<Cycle> getAllShortestCycles(Graph graph) {
+    public List<Cycle> getAllShortestCycles(Graph graph) {
 
         List<Cycle> cycles = new ArrayList<>();
 
         // Find the best cycle for each node
         for (Node node : graph.getNodes()) {
-            Cycle cycle = SimpleBFS.findBestCycle(graph, node, Integer.MAX_VALUE);
+            Cycle cycle = new SimpleBFS().findBestCycle(graph, node, Integer.MAX_VALUE);
             if(cycle != null) cycles.add(cycle);
         }
         return cycles;
     }
 
 
-    public static List<Cycle> findMultipleShortestCycles(Graph graph, boolean sortResults){
+    public List<Cycle> findMultipleShortestCycles(Graph graph, boolean sortResults){
 
 
         List<Cycle> cycles = graph.getPairCycles(); // TODO in rare cases (e.g. 'email'), it can be beneficial to break after the first cycle is found
@@ -161,7 +160,7 @@ public abstract class FullBFS {
         if(cycles.size() == 0) {
             minSize = Integer.MAX_VALUE;
             for (Node node : graph.getNodes()) { // Find the best cycle for each node
-                Cycle cycle = SimpleBFS.findBestCycle(graph, node, minSize);
+                Cycle cycle = new SimpleBFS().findBestCycle(graph, node, minSize);
 
                 // Replace the min branch size when found better one
                 if (cycle != null) {

@@ -33,7 +33,7 @@ public abstract class Solver {
 
         // Next Cycle
         PerformanceTimer.start();
-        Cycle cycle = FullBFS.findBestCycle(graph);
+        Cycle cycle = new FullBFS().findBestCycle(graph);
         PerformanceTimer.log(PerformanceTimer.MethodType.BFS);
 
         // Log cycle

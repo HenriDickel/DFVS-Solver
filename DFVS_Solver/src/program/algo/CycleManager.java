@@ -52,7 +52,7 @@ public class CycleManager {
             for (Node node : graph.getNodes()) { // Find the best cycle for each node
                 Cycle cycle = shortestCycles.get(node.id);
                 if(cycle == null) {
-                    cycle = SimpleBFS.findBestCycle(graph, node, minSize);
+                    cycle = new SimpleBFS().findBestCycle(graph, node, minSize);
                     if (cycle != null) shortestCycles.put(node.id, cycle);
                 }
 
@@ -107,7 +107,7 @@ public class CycleManager {
 
     private void initShortestCycles(Graph graph) {
         for(Node node: graph.getNodes()) {
-            Cycle cycle = SimpleBFS.findBestCycle(graph, node, minSize);
+            Cycle cycle = new SimpleBFS().findBestCycle(graph, node, minSize);
             if(cycle != null) {
                 shortestCycles.put(node.id, cycle);
                 minSize = Math.min(minSize, cycle.size());

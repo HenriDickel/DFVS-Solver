@@ -8,11 +8,11 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
-public abstract class SimpleBFS {
+public class SimpleBFS {
 
-    private static final List<Node> queue = new LinkedList<>();
+    private final List<Node> queue = new LinkedList<>();
 
-    public static Cycle findBestCycle(Graph graph, Node root, int maxBranchSize) {
+    public Cycle findBestCycle(Graph graph, Node root, int maxBranchSize) {
 
         // Reset node attributes
         graph.resetBFS();
@@ -29,7 +29,7 @@ public abstract class SimpleBFS {
         return null;
     }
 
-    private static Cycle visitNode(Graph graph, Node node, Node root) {
+    private Cycle visitNode(Graph graph, Node node, Node root) {
         for(Integer outId: node.getOutIds()) {
             Node out = graph.getNode(outId);
             if(out.equals(root)) {
@@ -43,7 +43,7 @@ public abstract class SimpleBFS {
         return null;
     }
 
-    private static Cycle pathToRoot(Node node) {
+    private Cycle pathToRoot(Node node) {
 
         Cycle cycle = new Cycle(node);
         Node pointer = node.parent;
@@ -54,7 +54,7 @@ public abstract class SimpleBFS {
         return cycle;
     }
 
-    public static List<Cycle> findBestCycles(Graph graph, Node root, int maxBranchSize) {
+    public List<Cycle> findBestCycles(Graph graph, Node root, int maxBranchSize) {
         // Reset node attributes
         graph.resetBFS();
         queue.clear();

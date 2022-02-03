@@ -117,7 +117,7 @@ public class ILPSolverLazyCycles  extends GRBCallback{
             //Find first cycle and add its constraint, the sum of all Xs of a cycle needs to be >=1 (at least one node needs to be deleted from the cycle)
 
             PerformanceTimer.start();
-            Cycle cycle = FullBFS.findShortestCycle(graph);
+            Cycle cycle = new FullBFS().findShortestCycle(graph);
             PerformanceTimer.log(PerformanceTimer.MethodType.BFS);
             expr = new GRBLinExpr();
             for(Node node: cycle.getNodes()){

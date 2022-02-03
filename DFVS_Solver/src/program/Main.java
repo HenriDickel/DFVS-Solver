@@ -14,7 +14,7 @@ import java.util.concurrent.TimeoutException;
 
 public class Main {
 
-    private static final long TIME_OUT = 90;
+    private static final long TIME_OUT = 10;
 
     public static void main(String[] args) throws GRBException {
 

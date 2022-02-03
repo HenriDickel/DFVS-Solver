@@ -46,7 +46,7 @@ public class ILPSolverOrderedCovering  extends GRBCallback{
                 if(!DAG.isDAG(copy)){
                     GRBLinExpr expr;
                     //Find new cycle
-                    Cycle shortCycle = FullBFS.findShortestCycle(copy);
+                    Cycle shortCycle = new FullBFS().findShortestCycle(copy);
 
                     //Add new lazy constraint
                     expr = new GRBLinExpr();
@@ -112,7 +112,7 @@ public class ILPSolverOrderedCovering  extends GRBCallback{
                 }
             }
             //Find first cycle and add its constraint, the sum of all Xs of a cycle needs to be >=1 (at least one node needs to be deleted from the cycle)
-            Cycle shortCycle = FullBFS.findShortestCycle(graph);
+            Cycle shortCycle = new FullBFS().findShortestCycle(graph);
             expr = new GRBLinExpr();
             for(Node node: shortCycle.getNodes()){
                 GRBVar x =model.getVarByName("x" + node.id);
