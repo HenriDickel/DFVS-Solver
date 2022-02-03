@@ -32,7 +32,13 @@ public class FullBFS {
             int minSize = Integer.MAX_VALUE;
             minCycles = new ArrayList<>();
             for(Node node: maxMinInOutNodes) {
-                List<Cycle> cycles = new SimpleBFS().findBestCycles(graph, node, minSize);
+
+                Cycle cycle = new SimpleBFS().findBestCycle(graph, node, minSize);
+                if(cycle != null) {
+                    minCycles.add(cycle);
+                    minSize = cycle.size();
+                }
+                /*List<Cycle> cycles = new SimpleBFS().findBestCycles(graph, node, minSize);
                 for(Cycle cycle: cycles) {
                     if(cycle != null) {
                         if(cycle.size() < minSize) {
@@ -43,7 +49,7 @@ public class FullBFS {
                             minCycles.add(cycle);
                         }
                     }
-                }
+                }*/
             }
 
             // Filter out all cycles which are longer than the min size

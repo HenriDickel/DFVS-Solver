@@ -1,295 +1,54 @@
-[35m[2022-02-03 13:18:30.862]       synth-n_100-m_1093-k_5-p_0.2.txt: synth-n_100-m_1093-k_5-p_0.2.txt (n = 100, m = 1093, k = 5)[0m
-[0m[2022-02-03 13:18:30.901]       synth-n_100-m_1093-k_5-p_0.2.txt: Found 0 cyclic sub graph(s) with n = [][0m
-[0m[2022-02-03 13:18:30.903]       synth-n_100-m_1093-k_5-p_0.2.txt: Removed 100 nodes in preprocessing, starting with k = 5[0m
-[0m[2022-02-03 13:18:30.910]       synth-n_100-m_1093-k_5-p_0.2.txt: BFS: 0, Packing: 0, Copy: 0, Red: 0, DAG: 0, Pre: 24, File: 24[0m
-[0m[2022-02-03 13:18:30.922]       synth-n_100-m_1093-k_5-p_0.2.txt: Found solution in 89 ms (recursive steps: 0)[0m
-[35m[2022-02-03 13:18:30.924]      synth-n_100-m_1146-k_10-p_0.2.txt: synth-n_100-m_1146-k_10-p_0.2.txt (n = 100, m = 1146, k = 10)[0m
-[0m[2022-02-03 13:18:30.927]      synth-n_100-m_1146-k_10-p_0.2.txt: Found 1 cyclic sub graph(s) with n = [92][0m
-[0m[2022-02-03 13:18:30.928]      synth-n_100-m_1146-k_10-p_0.2.txt: Removed 8 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-03 13:18:30.969]      synth-n_100-m_1146-k_10-p_0.2.txt: Initial cycle packing size: 10[0m
-[2022-02-03 13:18:30.970]      synth-n_100-m_1146-k_10-p_0.2.txt: Branching with k =
-[0m[2022-02-03 13:18:30.988]      synth-n_100-m_1146-k_10-p_0.2.txt: BFS: 8, Packing: 38, Copy: 1, Red: 0, DAG: 0, Pre: 5, File: 26[0m
-[0m[2022-02-03 13:18:30.989]      synth-n_100-m_1146-k_10-p_0.2.txt: Found solution in 66 ms (recursive steps: 6)[0m
-[35m[2022-02-03 13:18:30.992]      synth-n_100-m_1151-k_15-p_0.2.txt: synth-n_100-m_1151-k_15-p_0.2.txt (n = 100, m = 1151, k = 15)[0m
-[0m[2022-02-03 13:18:30.993]      synth-n_100-m_1151-k_15-p_0.2.txt: Found 1 cyclic sub graph(s) with n = [97][0m
-[0m[2022-02-03 13:18:30.993]      synth-n_100-m_1151-k_15-p_0.2.txt: Removed 3 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-03 13:18:30.995]      synth-n_100-m_1151-k_15-p_0.2.txt: Initial cycle packing size: 15[0m
-[2022-02-03 13:18:30.996]      synth-n_100-m_1151-k_15-p_0.2.txt: Branching with k =
-[0m[2022-02-03 13:18:31.001]      synth-n_100-m_1151-k_15-p_0.2.txt: BFS: 0, Packing: 6, Copy: 0, Red: 2, DAG: 0, Pre: 1, File: 27[0m
-[0m[2022-02-03 13:18:31.002]      synth-n_100-m_1151-k_15-p_0.2.txt: Found solution in 11 ms (recursive steps: 11)[0m
-[35m[2022-02-03 13:18:31.004]      synth-n_100-m_1229-k_20-p_0.2.txt: synth-n_100-m_1229-k_20-p_0.2.txt (n = 100, m = 1229, k = 20)[0m
-[0m[2022-02-03 13:18:31.005]      synth-n_100-m_1229-k_20-p_0.2.txt: Found 1 cyclic sub graph(s) with n = [100][0m
-[0m[2022-02-03 13:18:31.006]      synth-n_100-m_1229-k_20-p_0.2.txt: Removed 0 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-03 13:18:31.009]      synth-n_100-m_1229-k_20-p_0.2.txt: Initial cycle packing size: 20[0m
-[2022-02-03 13:18:31.009]      synth-n_100-m_1229-k_20-p_0.2.txt: Branching with k =
-[0m[2022-02-03 13:18:31.024]      synth-n_100-m_1229-k_20-p_0.2.txt: BFS: 11, Packing: 5, Copy: 1, Red: 0, DAG: 0, Pre: 1, File: 28[0m
-[0m[2022-02-03 13:18:31.025]      synth-n_100-m_1229-k_20-p_0.2.txt: Found solution in 21 ms (recursive steps: 15)[0m
-[35m[2022-02-03 13:18:31.027]      synth-n_100-m_1263-k_25-p_0.2.txt: synth-n_100-m_1263-k_25-p_0.2.txt (n = 100, m = 1263, k = 25)[0m
-[0m[2022-02-03 13:18:31.028]      synth-n_100-m_1263-k_25-p_0.2.txt: Found 1 cyclic sub graph(s) with n = [100][0m
-[0m[2022-02-03 13:18:31.029]      synth-n_100-m_1263-k_25-p_0.2.txt: Removed 0 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-03 13:18:31.030]      synth-n_100-m_1263-k_25-p_0.2.txt: Initial cycle packing size: 24[0m
-[2022-02-03 13:18:31.031]      synth-n_100-m_1263-k_25-p_0.2.txt: Branching with k =
-[0m[2022-02-03 13:18:31.054]      synth-n_100-m_1263-k_25-p_0.2.txt: BFS: 4, Packing: 15, Copy: 4, Red: 0, DAG: 0, Pre: 2, File: 29[0m
-[0m[2022-02-03 13:18:31.054]      synth-n_100-m_1263-k_25-p_0.2.txt: Found solution in 28 ms (recursive steps: 28)[0m
-[35m[2022-02-03 13:18:31.057]      synth-n_100-m_1275-k_30-p_0.2.txt: synth-n_100-m_1275-k_30-p_0.2.txt (n = 100, m = 1275, k = 30)[0m
-[0m[2022-02-03 13:18:31.058]      synth-n_100-m_1275-k_30-p_0.2.txt: Found 1 cyclic sub graph(s) with n = [100][0m
-[0m[2022-02-03 13:18:31.058]      synth-n_100-m_1275-k_30-p_0.2.txt: Removed 0 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-03 13:18:31.060]      synth-n_100-m_1275-k_30-p_0.2.txt: Initial cycle packing size: 25[0m
-[2022-02-03 13:18:31.060]      synth-n_100-m_1275-k_30-p_0.2.txt: Branching with k =
-[0m[2022-02-03 13:18:31.115]      synth-n_100-m_1275-k_30-p_0.2.txt: BFS: 10, Packing: 22, Copy: 16, Red: 3, DAG: 0, Pre: 2, File: 31[0m
-[0m[2022-02-03 13:18:31.116]      synth-n_100-m_1275-k_30-p_0.2.txt: Found solution in 59 ms (recursive steps: 98)[0m
-[35m[2022-02-03 13:18:31.118]       synth-n_100-m_263-k_5-p_0.05.txt: synth-n_100-m_263-k_5-p_0.05.txt (n = 99, m = 263, k = 5)[0m
-[0m[2022-02-03 13:18:31.119]       synth-n_100-m_263-k_5-p_0.05.txt: Found 0 cyclic sub graph(s) with n = [][0m
-[0m[2022-02-03 13:18:31.119]       synth-n_100-m_263-k_5-p_0.05.txt: Removed 99 nodes in preprocessing, starting with k = 5[0m
-[0m[2022-02-03 13:18:31.120]       synth-n_100-m_263-k_5-p_0.05.txt: BFS: 0, Packing: 0, Copy: 0, Red: 0, DAG: 0, Pre: 1, File: 32[0m
-[0m[2022-02-03 13:18:31.120]       synth-n_100-m_263-k_5-p_0.05.txt: Found solution in 2 ms (recursive steps: 0)[0m
-[35m[2022-02-03 13:18:31.121]      synth-n_100-m_289-k_10-p_0.05.txt: synth-n_100-m_289-k_10-p_0.05.txt (n = 99, m = 289, k = 4)[0m
-[0m[2022-02-03 13:18:31.122]      synth-n_100-m_289-k_10-p_0.05.txt: Found 1 cyclic sub graph(s) with n = [13][0m
-[0m[2022-02-03 13:18:31.122]      synth-n_100-m_289-k_10-p_0.05.txt: Removed 86 nodes in preprocessing, starting with k = 1[0m
-[0m[2022-02-03 13:18:31.123]      synth-n_100-m_289-k_10-p_0.05.txt: Initial cycle packing size: 2[0m
-[2022-02-03 13:18:31.123]      synth-n_100-m_289-k_10-p_0.05.txt: Branching with k =
-[0m[2022-02-03 13:18:31.123]      synth-n_100-m_289-k_10-p_0.05.txt: BFS: 0, Packing: 0, Copy: 0, Red: 0, DAG: 0, Pre: 1, File: 32[0m
-[0m[2022-02-03 13:18:31.124]      synth-n_100-m_289-k_10-p_0.05.txt: Found solution in 2 ms (recursive steps: 3)[0m
-[35m[2022-02-03 13:18:31.125]      synth-n_100-m_302-k_15-p_0.05.txt: synth-n_100-m_302-k_15-p_0.05.txt (n = 100, m = 302, k = 8)[0m
-[0m[2022-02-03 13:18:31.126]      synth-n_100-m_302-k_15-p_0.05.txt: Found 1 cyclic sub graph(s) with n = [13][0m
-[0m[2022-02-03 13:18:31.126]      synth-n_100-m_302-k_15-p_0.05.txt: Removed 87 nodes in preprocessing, starting with k = 4[0m
-[0m[2022-02-03 13:18:31.126]      synth-n_100-m_302-k_15-p_0.05.txt: Initial cycle packing size: 4[0m
-[2022-02-03 13:18:31.126]      synth-n_100-m_302-k_15-p_0.05.txt: Branching with k =
-[0m[2022-02-03 13:18:31.127]      synth-n_100-m_302-k_15-p_0.05.txt: BFS: 0, Packing: 0, Copy: 0, Red: 0, DAG: 0, Pre: 1, File: 32[0m
-[0m[2022-02-03 13:18:31.127]      synth-n_100-m_302-k_15-p_0.05.txt: Found solution in 2 ms (recursive steps: 2)[0m
-[35m[2022-02-03 13:18:31.129]      synth-n_100-m_332-k_20-p_0.05.txt: synth-n_100-m_332-k_20-p_0.05.txt (n = 100, m = 332, k = 14)[0m
-[0m[2022-02-03 13:18:31.130]      synth-n_100-m_332-k_20-p_0.05.txt: Found 1 cyclic sub graph(s) with n = [43][0m
-[0m[2022-02-03 13:18:31.130]      synth-n_100-m_332-k_20-p_0.05.txt: Removed 57 nodes in preprocessing, starting with k = 3[0m
-[0m[2022-02-03 13:18:31.131]      synth-n_100-m_332-k_20-p_0.05.txt: Initial cycle packing size: 9[0m
-[2022-02-03 13:18:31.131]      synth-n_100-m_332-k_20-p_0.05.txt: Branching with k =
-[0m[2022-02-03 13:18:31.135]      synth-n_100-m_332-k_20-p_0.05.txt: BFS: 0, Packing: 1, Copy: 0, Red: 1, DAG: 0, Pre: 1, File: 33[0m
-[0m[2022-02-03 13:18:31.135]      synth-n_100-m_332-k_20-p_0.05.txt: Found solution in 6 ms (recursive steps: 18)[0m
-[35m[2022-02-03 13:18:31.137]      synth-n_100-m_336-k_30-p_0.05.txt: synth-n_100-m_336-k_30-p_0.05.txt (n = 100, m = 336, k = 15)[0m
-[0m[2022-02-03 13:18:31.138]      synth-n_100-m_336-k_30-p_0.05.txt: Found 1 cyclic sub graph(s) with n = [58][0m
-[0m[2022-02-03 13:18:31.138]      synth-n_100-m_336-k_30-p_0.05.txt: Removed 42 nodes in preprocessing, starting with k = 1[0m
-[0m[2022-02-03 13:18:31.139]      synth-n_100-m_336-k_30-p_0.05.txt: Initial cycle packing size: 11[0m
-[2022-02-03 13:18:31.139]      synth-n_100-m_336-k_30-p_0.05.txt: Branching with k =
-[0m[2022-02-03 13:18:31.214]      synth-n_100-m_336-k_30-p_0.05.txt: BFS: 7, Packing: 46, Copy: 16, Red: 6, DAG: 0, Pre: 1, File: 34[0m
-[0m[2022-02-03 13:18:31.215]      synth-n_100-m_336-k_30-p_0.05.txt: Found solution in 78 ms (recursive steps: 252)[0m
-[35m[2022-02-03 13:18:31.216]      synth-n_100-m_343-k_25-p_0.05.txt: synth-n_100-m_343-k_25-p_0.05.txt (n = 100, m = 343, k = 14)[0m
-[0m[2022-02-03 13:18:31.217]      synth-n_100-m_343-k_25-p_0.05.txt: Found 1 cyclic sub graph(s) with n = [57][0m
-[0m[2022-02-03 13:18:31.218]      synth-n_100-m_343-k_25-p_0.05.txt: Removed 43 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-03 13:18:31.218]      synth-n_100-m_343-k_25-p_0.05.txt: Initial cycle packing size: 11[0m
-[2022-02-03 13:18:31.219]      synth-n_100-m_343-k_25-p_0.05.txt: Branching with k =
-[0m[2022-02-03 13:18:31.229]      synth-n_100-m_343-k_25-p_0.05.txt: BFS: 0, Packing: 7, Copy: 2, Red: 1, DAG: 0, Pre: 1, File: 34[0m
-[0m[2022-02-03 13:18:31.230]      synth-n_100-m_343-k_25-p_0.05.txt: Found solution in 13 ms (recursive steps: 51)[0m
-[35m[2022-02-03 13:18:31.232]        synth-n_100-m_515-k_5-p_0.1.txt: synth-n_100-m_515-k_5-p_0.1.txt (n = 100, m = 515, k = 5)[0m
-[0m[2022-02-03 13:18:31.232]        synth-n_100-m_515-k_5-p_0.1.txt: Found 1 cyclic sub graph(s) with n = [63][0m
-[0m[2022-02-03 13:18:31.233]        synth-n_100-m_515-k_5-p_0.1.txt: Removed 37 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-03 13:18:31.234]        synth-n_100-m_515-k_5-p_0.1.txt: Initial cycle packing size: 5[0m
-[2022-02-03 13:18:31.234]        synth-n_100-m_515-k_5-p_0.1.txt: Branching with k =
-[0m[2022-02-03 13:18:31.234]        synth-n_100-m_515-k_5-p_0.1.txt: BFS: 0, Packing: 1, Copy: 0, Red: 0, DAG: 0, Pre: 1, File: 35[0m
-[0m[2022-02-03 13:18:31.235]        synth-n_100-m_515-k_5-p_0.1.txt: Found solution in 3 ms (recursive steps: 3)[0m
-[35m[2022-02-03 13:18:31.236]       synth-n_100-m_591-k_15-p_0.1.txt: synth-n_100-m_591-k_15-p_0.1.txt (n = 100, m = 591, k = 15)[0m
-[0m[2022-02-03 13:18:31.237]       synth-n_100-m_591-k_15-p_0.1.txt: Found 1 cyclic sub graph(s) with n = [83][0m
-[0m[2022-02-03 13:18:31.237]       synth-n_100-m_591-k_15-p_0.1.txt: Removed 17 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-03 13:18:31.238]       synth-n_100-m_591-k_15-p_0.1.txt: Initial cycle packing size: 13[0m
-[2022-02-03 13:18:31.239]       synth-n_100-m_591-k_15-p_0.1.txt: Branching with k =
-[0m[2022-02-03 13:18:31.253]       synth-n_100-m_591-k_15-p_0.1.txt: BFS: 1, Packing: 12, Copy: 1, Red: 1, DAG: 0, Pre: 1, File: 36[0m
-[0m[2022-02-03 13:18:31.254]       synth-n_100-m_591-k_15-p_0.1.txt: Found solution in 17 ms (recursive steps: 35)[0m
-[35m[2022-02-03 13:18:31.256]       synth-n_100-m_611-k_10-p_0.1.txt: synth-n_100-m_611-k_10-p_0.1.txt (n = 100, m = 611, k = 10)[0m
-[0m[2022-02-03 13:18:31.257]       synth-n_100-m_611-k_10-p_0.1.txt: Found 1 cyclic sub graph(s) with n = [81][0m
-[0m[2022-02-03 13:18:31.258]       synth-n_100-m_611-k_10-p_0.1.txt: Removed 19 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-03 13:18:31.259]       synth-n_100-m_611-k_10-p_0.1.txt: Initial cycle packing size: 10[0m
-[2022-02-03 13:18:31.260]       synth-n_100-m_611-k_10-p_0.1.txt: Branching with k =
-[0m[2022-02-03 13:18:31.262]       synth-n_100-m_611-k_10-p_0.1.txt: BFS: 0, Packing: 3, Copy: 0, Red: 0, DAG: 0, Pre: 2, File: 37[0m
-[0m[2022-02-03 13:18:31.263]       synth-n_100-m_611-k_10-p_0.1.txt: Found solution in 7 ms (recursive steps: 9)[0m
-[35m[2022-02-03 13:18:31.264]       synth-n_100-m_628-k_20-p_0.1.txt: synth-n_100-m_628-k_20-p_0.1.txt (n = 100, m = 628, k = 20)[0m
-[0m[2022-02-03 13:18:31.265]       synth-n_100-m_628-k_20-p_0.1.txt: Found 1 cyclic sub graph(s) with n = [88][0m
-[0m[2022-02-03 13:18:31.265]       synth-n_100-m_628-k_20-p_0.1.txt: Removed 12 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-03 13:18:31.266]       synth-n_100-m_628-k_20-p_0.1.txt: Initial cycle packing size: 18[0m
-[2022-02-03 13:18:31.267]       synth-n_100-m_628-k_20-p_0.1.txt: Branching with k =
-[0m[2022-02-03 13:18:31.274]       synth-n_100-m_628-k_20-p_0.1.txt: BFS: 0, Packing: 5, Copy: 0, Red: 3, DAG: 0, Pre: 1, File: 37[0m
-[0m[2022-02-03 13:18:31.275]       synth-n_100-m_628-k_20-p_0.1.txt: Found solution in 10 ms (recursive steps: 31)[0m
-[35m[2022-02-03 13:18:31.277]       synth-n_100-m_691-k_25-p_0.1.txt: synth-n_100-m_691-k_25-p_0.1.txt (n = 100, m = 691, k = 25)[0m
-[0m[2022-02-03 13:18:31.278]       synth-n_100-m_691-k_25-p_0.1.txt: Found 1 cyclic sub graph(s) with n = [97][0m
-[0m[2022-02-03 13:18:31.278]       synth-n_100-m_691-k_25-p_0.1.txt: Removed 3 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-03 13:18:31.280]       synth-n_100-m_691-k_25-p_0.1.txt: Initial cycle packing size: 18[0m
-[2022-02-03 13:18:31.280]       synth-n_100-m_691-k_25-p_0.1.txt: Branching with k =
-[0m[2022-02-03 13:18:31.670]       synth-n_100-m_691-k_25-p_0.1.txt: BFS: 19, Packing: 267, Copy: 79, Red: 24, DAG: 0, Pre: 1, File: 38[0m
-[0m[2022-02-03 13:18:31.670]       synth-n_100-m_691-k_25-p_0.1.txt: Found solution in 394 ms (recursive steps: 1329)[0m
-[35m[2022-02-03 13:18:31.671]       synth-n_100-m_732-k_30-p_0.1.txt: synth-n_100-m_732-k_30-p_0.1.txt (n = 100, m = 732, k = 30)[0m
-[0m[2022-02-03 13:18:31.672]       synth-n_100-m_732-k_30-p_0.1.txt: Found 1 cyclic sub graph(s) with n = [99][0m
-[0m[2022-02-03 13:18:31.672]       synth-n_100-m_732-k_30-p_0.1.txt: Removed 1 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-03 13:18:31.673]       synth-n_100-m_732-k_30-p_0.1.txt: Initial cycle packing size: 20[0m
-[2022-02-03 13:18:31.673]       synth-n_100-m_732-k_30-p_0.1.txt: Branching with k =
-[0m[2022-02-03 13:18:33.691]       synth-n_100-m_732-k_30-p_0.1.txt: BFS: 129, Packing: 1282, Copy: 443, Red: 142, DAG: 0, Pre: 0, File: 38[0m
-[0m[2022-02-03 13:18:33.692]       synth-n_100-m_732-k_30-p_0.1.txt: Found solution in 2020 ms (recursive steps: 12026)[0m
-[35m[2022-02-03 13:18:33.803]   synth-n_1000-m_107005-k_50-p_0.2.txt: synth-n_1000-m_107005-k_50-p_0.2.txt (n = 1000, m = 107005, k = 50)[0m
-[0m[2022-02-03 13:18:33.871]   synth-n_1000-m_107005-k_50-p_0.2.txt: Found 1 cyclic sub graph(s) with n = [1000][0m
-[0m[2022-02-03 13:18:33.872]   synth-n_1000-m_107005-k_50-p_0.2.txt: Removed 0 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-03 13:18:33.918]   synth-n_1000-m_107005-k_50-p_0.2.txt: Initial cycle packing size: 50[0m
-[2022-02-03 13:18:33.919]   synth-n_1000-m_107005-k_50-p_0.2.txt: Branching with k =
-[0m[2022-02-03 13:18:34.971]   synth-n_1000-m_107005-k_50-p_0.2.txt: BFS: 302, Packing: 747, Copy: 14, Red: 36, DAG: 0, Pre: 69, File: 149[0m
-[0m[2022-02-03 13:18:34.972]   synth-n_1000-m_107005-k_50-p_0.2.txt: Found solution in 1279 ms (recursive steps: 49)[0m
-[35m[2022-02-03 13:18:35.060]   synth-n_1000-m_110357-k_70-p_0.2.txt: synth-n_1000-m_110357-k_70-p_0.2.txt (n = 1000, m = 110357, k = 70)[0m
-[0m[2022-02-03 13:18:35.117]   synth-n_1000-m_110357-k_70-p_0.2.txt: Found 1 cyclic sub graph(s) with n = [1000][0m
-[0m[2022-02-03 13:18:35.118]   synth-n_1000-m_110357-k_70-p_0.2.txt: Removed 0 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-03 13:18:35.164]   synth-n_1000-m_110357-k_70-p_0.2.txt: Initial cycle packing size: 70[0m
-[2022-02-03 13:18:35.164]   synth-n_1000-m_110357-k_70-p_0.2.txt: Branching with k =
-[0m[2022-02-03 13:18:36.625]   synth-n_1000-m_110357-k_70-p_0.2.txt: BFS: 498, Packing: 951, Copy: 23, Red: 33, DAG: 0, Pre: 58, File: 237[0m
-[0m[2022-02-03 13:18:36.626]   synth-n_1000-m_110357-k_70-p_0.2.txt: Found solution in 1653 ms (recursive steps: 67)[0m
-[35m[2022-02-03 13:18:36.716]  synth-n_1000-m_114433-k_100-p_0.2.txt: synth-n_1000-m_114433-k_100-p_0.2.txt (n = 1000, m = 114433, k = 100)[0m
-[0m[2022-02-03 13:18:36.778]  synth-n_1000-m_114433-k_100-p_0.2.txt: Found 1 cyclic sub graph(s) with n = [1000][0m
-[0m[2022-02-03 13:18:36.778]  synth-n_1000-m_114433-k_100-p_0.2.txt: Removed 0 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-03 13:18:36.864]  synth-n_1000-m_114433-k_100-p_0.2.txt: Initial cycle packing size: 100[0m
-[2022-02-03 13:18:36.865]  synth-n_1000-m_114433-k_100-p_0.2.txt: Branching with k =
-[0m[2022-02-03 13:18:38.831]  synth-n_1000-m_114433-k_100-p_0.2.txt: BFS: 692, Packing: 1277, Copy: 49, Red: 33, DAG: 0, Pre: 63, File: 327[0m
-[0m[2022-02-03 13:18:38.831]  synth-n_1000-m_114433-k_100-p_0.2.txt: Found solution in 2205 ms (recursive steps: 98)[0m
-[35m[2022-02-03 13:18:38.923]  synth-n_1000-m_116757-k_120-p_0.2.txt: synth-n_1000-m_116757-k_120-p_0.2.txt (n = 1000, m = 116757, k = 120)[0m
-[0m[2022-02-03 13:18:38.985]  synth-n_1000-m_116757-k_120-p_0.2.txt: Found 1 cyclic sub graph(s) with n = [1000][0m
-[0m[2022-02-03 13:18:38.985]  synth-n_1000-m_116757-k_120-p_0.2.txt: Removed 0 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-03 13:18:39.054]  synth-n_1000-m_116757-k_120-p_0.2.txt: Initial cycle packing size: 119[0m
-[2022-02-03 13:18:39.055]  synth-n_1000-m_116757-k_120-p_0.2.txt: Branching with k =
-[0m[2022-02-03 13:18:41.739]  synth-n_1000-m_116757-k_120-p_0.2.txt: BFS: 941, Packing: 1567, Copy: 208, Red: 36, DAG: 0, Pre: 62, File: 418[0m
-[0m[2022-02-03 13:18:41.740]  synth-n_1000-m_116757-k_120-p_0.2.txt: Found solution in 2907 ms (recursive steps: 124)[0m
-[35m[2022-02-03 13:18:41.850]  synth-n_1000-m_119520-k_150-p_0.2.txt: synth-n_1000-m_119520-k_150-p_0.2.txt (n = 1000, m = 119520, k = 150)[0m
-[0m[2022-02-03 13:18:41.918]  synth-n_1000-m_119520-k_150-p_0.2.txt: Found 1 cyclic sub graph(s) with n = [1000][0m
-[0m[2022-02-03 13:18:41.919]  synth-n_1000-m_119520-k_150-p_0.2.txt: Removed 0 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-03 13:18:42.036]  synth-n_1000-m_119520-k_150-p_0.2.txt: Initial cycle packing size: 144[0m
-[2022-02-03 13:18:42.036]  synth-n_1000-m_119520-k_150-p_0.2.txt: Branching with k =
-[0m[2022-02-03 13:20:11.749]  synth-n_1000-m_119520-k_150-p_0.2.txt: BFS: 9011, Packing: 62604, Copy: 15654, Red: 2537, DAG: 0, Pre: 69, File: 528[0m
-[31m[2022-02-03 13:20:11.750]  synth-n_1000-m_119520-k_150-p_0.2.txt: Found no solution in 90000 ms (recursive steps: 876)[0m
-[35m[2022-02-03 13:20:11.857]  synth-n_1000-m_124702-k_200-p_0.2.txt: synth-n_1000-m_124702-k_200-p_0.2.txt (n = 1000, m = 124702, k = 200)[0m
-[0m[2022-02-03 13:20:11.921]  synth-n_1000-m_124702-k_200-p_0.2.txt: Found 1 cyclic sub graph(s) with n = [1000][0m
-[0m[2022-02-03 13:20:11.921]  synth-n_1000-m_124702-k_200-p_0.2.txt: Removed 0 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-03 13:20:11.997]  synth-n_1000-m_124702-k_200-p_0.2.txt: Initial cycle packing size: 194[0m
-[2022-02-03 13:20:11.998]  synth-n_1000-m_124702-k_200-p_0.2.txt: Branching with k =
-[0m[2022-02-03 13:20:42.208]  synth-n_1000-m_124702-k_200-p_0.2.txt: BFS: 6137, Packing: 16451, Copy: 6315, Red: 1533, DAG: 0, Pre: 4, File: 532[0m
-[0m[2022-02-03 13:20:42.208]  synth-n_1000-m_124702-k_200-p_0.2.txt: Found solution in 30457 ms (recursive steps: 807)[0m
-[35m[2022-02-03 13:20:42.217]   synth-n_1000-m_27142-k_50-p_0.05.txt: synth-n_1000-m_27142-k_50-p_0.05.txt (n = 1000, m = 27142, k = 50)[0m
-[0m[2022-02-03 13:20:42.228]   synth-n_1000-m_27142-k_50-p_0.05.txt: Found 1 cyclic sub graph(s) with n = [987][0m
-[0m[2022-02-03 13:20:42.228]   synth-n_1000-m_27142-k_50-p_0.05.txt: Removed 13 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-03 13:20:42.259]   synth-n_1000-m_27142-k_50-p_0.05.txt: Initial cycle packing size: 50[0m
-[2022-02-03 13:20:42.259]   synth-n_1000-m_27142-k_50-p_0.05.txt: Branching with k =
-[0m[2022-02-03 13:20:42.394]   synth-n_1000-m_27142-k_50-p_0.05.txt: BFS: 16, Packing: 127, Copy: 12, Red: 10, DAG: 0, Pre: 11, File: 541[0m
-[0m[2022-02-03 13:20:42.395]   synth-n_1000-m_27142-k_50-p_0.05.txt: Found solution in 186 ms (recursive steps: 41)[0m
-[35m[2022-02-03 13:20:42.402]   synth-n_1000-m_28175-k_70-p_0.05.txt: synth-n_1000-m_28175-k_70-p_0.05.txt (n = 1000, m = 28175, k = 70)[0m
-[0m[2022-02-03 13:20:42.414]   synth-n_1000-m_28175-k_70-p_0.05.txt: Found 1 cyclic sub graph(s) with n = [989][0m
-[0m[2022-02-03 13:20:42.414]   synth-n_1000-m_28175-k_70-p_0.05.txt: Removed 11 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-03 13:20:42.448]   synth-n_1000-m_28175-k_70-p_0.05.txt: Initial cycle packing size: 68[0m
-[2022-02-03 13:20:42.448]   synth-n_1000-m_28175-k_70-p_0.05.txt: Branching with k =
-[0m[2022-02-03 13:20:43.970]   synth-n_1000-m_28175-k_70-p_0.05.txt: BFS: 56, Packing: 1417, Copy: 69, Red: 12, DAG: 0, Pre: 13, File: 548[0m
-[0m[2022-02-03 13:20:43.971]   synth-n_1000-m_28175-k_70-p_0.05.txt: Found solution in 1575 ms (recursive steps: 104)[0m
-[35m[2022-02-03 13:20:43.979]  synth-n_1000-m_29037-k_100-p_0.05.txt: synth-n_1000-m_29037-k_100-p_0.05.txt (n = 1000, m = 29037, k = 100)[0m
-[0m[2022-02-03 13:20:43.990]  synth-n_1000-m_29037-k_100-p_0.05.txt: Found 1 cyclic sub graph(s) with n = [995][0m
-[0m[2022-02-03 13:20:43.991]  synth-n_1000-m_29037-k_100-p_0.05.txt: Removed 5 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-03 13:20:44.035]  synth-n_1000-m_29037-k_100-p_0.05.txt: Initial cycle packing size: 97[0m
-[2022-02-03 13:20:44.035]  synth-n_1000-m_29037-k_100-p_0.05.txt: Branching with k =
-[0m[2022-02-03 13:20:47.294]  synth-n_1000-m_29037-k_100-p_0.05.txt: BFS: 204, Packing: 2817, Copy: 252, Red: 29, DAG: 0, Pre: 11, File: 555[0m
-[0m[2022-02-03 13:20:47.295]  synth-n_1000-m_29037-k_100-p_0.05.txt: Found solution in 3322 ms (recursive steps: 263)[0m
-[35m[2022-02-03 13:20:47.303]  synth-n_1000-m_30042-k_120-p_0.05.txt: synth-n_1000-m_30042-k_120-p_0.05.txt (n = 1000, m = 30042, k = 120)[0m
-[0m[2022-02-03 13:20:47.315]  synth-n_1000-m_30042-k_120-p_0.05.txt: Found 1 cyclic sub graph(s) with n = [1000][0m
-[0m[2022-02-03 13:20:47.315]  synth-n_1000-m_30042-k_120-p_0.05.txt: Removed 0 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-03 13:20:47.361]  synth-n_1000-m_30042-k_120-p_0.05.txt: Initial cycle packing size: 119[0m
-[2022-02-03 13:20:47.362]  synth-n_1000-m_30042-k_120-p_0.05.txt: Branching with k =
-[0m[2022-02-03 13:20:49.010]  synth-n_1000-m_30042-k_120-p_0.05.txt: BFS: 175, Packing: 1361, Copy: 136, Red: 19, DAG: 0, Pre: 12, File: 562[0m
-[0m[2022-02-03 13:20:49.010]  synth-n_1000-m_30042-k_120-p_0.05.txt: Found solution in 1713 ms (recursive steps: 192)[0m
-[35m[2022-02-03 13:20:49.019]  synth-n_1000-m_30795-k_150-p_0.05.txt: synth-n_1000-m_30795-k_150-p_0.05.txt (n = 1000, m = 30795, k = 150)[0m
-[0m[2022-02-03 13:20:49.032]  synth-n_1000-m_30795-k_150-p_0.05.txt: Found 1 cyclic sub graph(s) with n = [1000][0m
-[0m[2022-02-03 13:20:49.032]  synth-n_1000-m_30795-k_150-p_0.05.txt: Removed 0 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-03 13:20:49.072]  synth-n_1000-m_30795-k_150-p_0.05.txt: Initial cycle packing size: 145[0m
-[2022-02-03 13:20:49.072]  synth-n_1000-m_30795-k_150-p_0.05.txt: Branching with k =
-[0m[2022-02-03 13:20:50.216]  synth-n_1000-m_30795-k_150-p_0.05.txt: BFS: 249, Packing: 769, Copy: 140, Red: 25, DAG: 0, Pre: 13, File: 570[0m
-[0m[2022-02-03 13:20:50.217]  synth-n_1000-m_30795-k_150-p_0.05.txt: Found solution in 1205 ms (recursive steps: 229)[0m
-[35m[2022-02-03 13:20:50.226]  synth-n_1000-m_32410-k_200-p_0.05.txt: synth-n_1000-m_32410-k_200-p_0.05.txt (n = 1000, m = 32410, k = 200)[0m
-[0m[2022-02-03 13:20:50.239]  synth-n_1000-m_32410-k_200-p_0.05.txt: Found 1 cyclic sub graph(s) with n = [1000][0m
-[0m[2022-02-03 13:20:50.239]  synth-n_1000-m_32410-k_200-p_0.05.txt: Removed 0 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-03 13:20:50.284]  synth-n_1000-m_32410-k_200-p_0.05.txt: Initial cycle packing size: 183[0m
-[2022-02-03 13:20:50.284]  synth-n_1000-m_32410-k_200-p_0.05.txt: Branching with k =
-[0m[2022-02-03 13:22:20.232]  synth-n_1000-m_32410-k_200-p_0.05.txt: BFS: 14397, Packing: 55200, Copy: 17614, Red: 2605, DAG: 0, Pre: 14, File: 579[0m
-[31m[2022-02-03 13:22:20.232]  synth-n_1000-m_32410-k_200-p_0.05.txt: Found no solution in 90000 ms (recursive steps: 13919)[0m
-[35m[2022-02-03 13:22:20.257]    synth-n_1000-m_54531-k_50-p_0.1.txt: synth-n_1000-m_54531-k_50-p_0.1.txt (n = 1000, m = 54531, k = 50)[0m
-[0m[2022-02-03 13:22:20.285]    synth-n_1000-m_54531-k_50-p_0.1.txt: Found 1 cyclic sub graph(s) with n = [997][0m
-[0m[2022-02-03 13:22:20.285]    synth-n_1000-m_54531-k_50-p_0.1.txt: Removed 3 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-03 13:22:20.320]    synth-n_1000-m_54531-k_50-p_0.1.txt: Initial cycle packing size: 50[0m
-[2022-02-03 13:22:20.320]    synth-n_1000-m_54531-k_50-p_0.1.txt: Branching with k =
-[0m[2022-02-03 13:22:20.700]    synth-n_1000-m_54531-k_50-p_0.1.txt: BFS: 86, Packing: 268, Copy: 81, Red: 20, DAG: 0, Pre: 0, File: 590[0m
-[0m[2022-02-03 13:22:20.701]    synth-n_1000-m_54531-k_50-p_0.1.txt: Found solution in 467 ms (recursive steps: 114)[0m
-[35m[2022-02-03 13:22:20.725]    synth-n_1000-m_55974-k_70-p_0.1.txt: synth-n_1000-m_55974-k_70-p_0.1.txt (n = 1000, m = 55974, k = 70)[0m
-[0m[2022-02-03 13:22:20.754]    synth-n_1000-m_55974-k_70-p_0.1.txt: Found 1 cyclic sub graph(s) with n = [1000][0m
-[0m[2022-02-03 13:22:20.755]    synth-n_1000-m_55974-k_70-p_0.1.txt: Removed 0 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-03 13:22:20.791]    synth-n_1000-m_55974-k_70-p_0.1.txt: Initial cycle packing size: 70[0m
-[2022-02-03 13:22:20.792]    synth-n_1000-m_55974-k_70-p_0.1.txt: Branching with k =
-[0m[2022-02-03 13:22:21.328]    synth-n_1000-m_55974-k_70-p_0.1.txt: BFS: 117, Packing: 367, Copy: 114, Red: 24, DAG: 0, Pre: 1, File: 591[0m
-[0m[2022-02-03 13:22:21.328]    synth-n_1000-m_55974-k_70-p_0.1.txt: Found solution in 627 ms (recursive steps: 144)[0m
-[35m[2022-02-03 13:22:21.354]   synth-n_1000-m_57929-k_100-p_0.1.txt: synth-n_1000-m_57929-k_100-p_0.1.txt (n = 1000, m = 57929, k = 100)[0m
-[0m[2022-02-03 13:22:21.381]   synth-n_1000-m_57929-k_100-p_0.1.txt: Found 1 cyclic sub graph(s) with n = [1000][0m
-[0m[2022-02-03 13:22:21.382]   synth-n_1000-m_57929-k_100-p_0.1.txt: Removed 0 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-03 13:22:21.417]   synth-n_1000-m_57929-k_100-p_0.1.txt: Initial cycle packing size: 99[0m
-[2022-02-03 13:22:21.417]   synth-n_1000-m_57929-k_100-p_0.1.txt: Branching with k =
-[0m[2022-02-03 13:22:22.632]   synth-n_1000-m_57929-k_100-p_0.1.txt: BFS: 238, Packing: 752, Copy: 253, Red: 57, DAG: 0, Pre: 1, File: 592[0m
-[0m[2022-02-03 13:22:22.633]   synth-n_1000-m_57929-k_100-p_0.1.txt: Found solution in 1303 ms (recursive steps: 294)[0m
-[35m[2022-02-03 13:22:22.657]   synth-n_1000-m_59867-k_120-p_0.1.txt: synth-n_1000-m_59867-k_120-p_0.1.txt (n = 1000, m = 59867, k = 120)[0m
-[0m[2022-02-03 13:22:22.684]   synth-n_1000-m_59867-k_120-p_0.1.txt: Found 1 cyclic sub graph(s) with n = [1000][0m
-[0m[2022-02-03 13:22:22.684]   synth-n_1000-m_59867-k_120-p_0.1.txt: Removed 0 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-03 13:22:22.723]   synth-n_1000-m_59867-k_120-p_0.1.txt: Initial cycle packing size: 116[0m
-[2022-02-03 13:22:22.723]   synth-n_1000-m_59867-k_120-p_0.1.txt: Branching with k =
-[0m[2022-02-03 13:22:40.146]   synth-n_1000-m_59867-k_120-p_0.1.txt: BFS: 2923, Packing: 10221, Copy: 3580, Red: 754, DAG: 0, Pre: 1, File: 592[0m
-[0m[2022-02-03 13:22:40.147]   synth-n_1000-m_59867-k_120-p_0.1.txt: Found solution in 17513 ms (recursive steps: 3108)[0m
-[35m[2022-02-03 13:22:40.171]   synth-n_1000-m_60934-k_150-p_0.1.txt: synth-n_1000-m_60934-k_150-p_0.1.txt (n = 1000, m = 60934, k = 150)[0m
-[0m[2022-02-03 13:22:40.199]   synth-n_1000-m_60934-k_150-p_0.1.txt: Found 1 cyclic sub graph(s) with n = [1000][0m
-[0m[2022-02-03 13:22:40.199]   synth-n_1000-m_60934-k_150-p_0.1.txt: Removed 0 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-03 13:22:40.241]   synth-n_1000-m_60934-k_150-p_0.1.txt: Initial cycle packing size: 149[0m
-[2022-02-03 13:22:40.241]   synth-n_1000-m_60934-k_150-p_0.1.txt: Branching with k =
-[0m[2022-02-03 13:22:41.485]   synth-n_1000-m_60934-k_150-p_0.1.txt: BFS: 272, Packing: 745, Copy: 257, Red: 53, DAG: 0, Pre: 0, File: 592[0m
-[0m[2022-02-03 13:22:41.486]   synth-n_1000-m_60934-k_150-p_0.1.txt: Found solution in 1338 ms (recursive steps: 355)[0m
-[35m[2022-02-03 13:22:41.519]   synth-n_1000-m_64710-k_200-p_0.1.txt: synth-n_1000-m_64710-k_200-p_0.1.txt (n = 1000, m = 64710, k = 200)[0m
-[0m[2022-02-03 13:22:41.548]   synth-n_1000-m_64710-k_200-p_0.1.txt: Found 1 cyclic sub graph(s) with n = [1000][0m
-[0m[2022-02-03 13:22:41.548]   synth-n_1000-m_64710-k_200-p_0.1.txt: Removed 0 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-03 13:22:41.595]   synth-n_1000-m_64710-k_200-p_0.1.txt: Initial cycle packing size: 193[0m
-[2022-02-03 13:22:41.596]   synth-n_1000-m_64710-k_200-p_0.1.txt: Branching with k =
-[0m[2022-02-03 13:23:10.716]   synth-n_1000-m_64710-k_200-p_0.1.txt: BFS: 4572, Packing: 17696, Copy: 5632, Red: 1295, DAG: 0, Pre: 0, File: 592[0m
-[0m[2022-02-03 13:23:10.717]   synth-n_1000-m_64710-k_200-p_0.1.txt: Found solution in 29230 ms (recursive steps: 5487)[0m
-[35m[2022-02-03 13:23:10.790]  synth-n_1300-m_104213-k_200-p_0.1.txt: synth-n_1300-m_104213-k_200-p_0.1.txt (n = 1300, m = 104213, k = 200)[0m
-[0m[2022-02-03 13:23:10.853]  synth-n_1300-m_104213-k_200-p_0.1.txt: Found 1 cyclic sub graph(s) with n = [1300][0m
-[0m[2022-02-03 13:23:10.854]  synth-n_1300-m_104213-k_200-p_0.1.txt: Removed 0 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-03 13:23:10.938]  synth-n_1300-m_104213-k_200-p_0.1.txt: Initial cycle packing size: 195[0m
-[2022-02-03 13:23:10.938]  synth-n_1300-m_104213-k_200-p_0.1.txt: Branching with k =
-[0m[2022-02-03 13:23:33.048]  synth-n_1300-m_104213-k_200-p_0.1.txt: BFS: 3595, Packing: 13438, Copy: 4401, Red: 850, DAG: 0, Pre: 1, File: 594[0m
-[0m[2022-02-03 13:23:33.049]  synth-n_1300-m_104213-k_200-p_0.1.txt: Found solution in 22331 ms (recursive steps: 3590)[0m
-[35m[2022-02-03 13:23:33.287]   synth-n_1300-m_178841-k_50-p_0.2.txt: synth-n_1300-m_178841-k_50-p_0.2.txt (n = 1300, m = 178841, k = 50)[0m
-[0m[2022-02-03 13:23:33.389]   synth-n_1300-m_178841-k_50-p_0.2.txt: Found 1 cyclic sub graph(s) with n = [1300][0m
-[0m[2022-02-03 13:23:33.390]   synth-n_1300-m_178841-k_50-p_0.2.txt: Removed 0 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-03 13:23:33.468]   synth-n_1300-m_178841-k_50-p_0.2.txt: Initial cycle packing size: 50[0m
-[2022-02-03 13:23:33.468]   synth-n_1300-m_178841-k_50-p_0.2.txt: Branching with k =
-[0m[2022-02-03 13:23:35.723]   synth-n_1300-m_178841-k_50-p_0.2.txt: BFS: 397, Packing: 1596, Copy: 595, Red: 80, DAG: 0, Pre: 0, File: 595[0m
-[0m[2022-02-03 13:23:35.723]   synth-n_1300-m_178841-k_50-p_0.2.txt: Found solution in 2674 ms (recursive steps: 373)[0m
-[35m[2022-02-03 13:23:36.021]   synth-n_1300-m_183367-k_70-p_0.2.txt: synth-n_1300-m_183367-k_70-p_0.2.txt (n = 1300, m = 183367, k = 70)[0m
-[0m[2022-02-03 13:23:36.144]   synth-n_1300-m_183367-k_70-p_0.2.txt: Found 1 cyclic sub graph(s) with n = [1300][0m
-[0m[2022-02-03 13:23:36.145]   synth-n_1300-m_183367-k_70-p_0.2.txt: Removed 0 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-03 13:23:36.233]   synth-n_1300-m_183367-k_70-p_0.2.txt: Initial cycle packing size: 70[0m
-[2022-02-03 13:23:36.233]   synth-n_1300-m_183367-k_70-p_0.2.txt: Branching with k =
-[0m[2022-02-03 13:23:38.991]   synth-n_1300-m_183367-k_70-p_0.2.txt: BFS: 948, Packing: 1983, Copy: 89, Red: 67, DAG: 0, Pre: 124, File: 650[0m
-[0m[2022-02-03 13:23:38.992]   synth-n_1300-m_183367-k_70-p_0.2.txt: Found solution in 3267 ms (recursive steps: 67)[0m
-[35m[2022-02-03 13:23:39.215]  synth-n_1300-m_188195-k_100-p_0.2.txt: synth-n_1300-m_188195-k_100-p_0.2.txt (n = 1300, m = 188195, k = 100)[0m
-[0m[2022-02-03 13:23:39.338]  synth-n_1300-m_188195-k_100-p_0.2.txt: Found 1 cyclic sub graph(s) with n = [1300][0m
-[0m[2022-02-03 13:23:39.338]  synth-n_1300-m_188195-k_100-p_0.2.txt: Removed 0 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-03 13:23:39.445]  synth-n_1300-m_188195-k_100-p_0.2.txt: Initial cycle packing size: 99[0m
-[2022-02-03 13:23:39.446]  synth-n_1300-m_188195-k_100-p_0.2.txt: Branching with k =
-[0m[2022-02-03 13:23:44.158]  synth-n_1300-m_188195-k_100-p_0.2.txt: BFS: 1465, Packing: 3033, Copy: 251, Red: 70, DAG: 0, Pre: 124, File: 873[0m
-[0m[2022-02-03 13:23:44.159]  synth-n_1300-m_188195-k_100-p_0.2.txt: Found solution in 5166 ms (recursive steps: 104)[0m
-[35m[2022-02-03 13:23:44.391]  synth-n_1300-m_191963-k_120-p_0.2.txt: synth-n_1300-m_191963-k_120-p_0.2.txt (n = 1300, m = 191963, k = 120)[0m
-[0m[2022-02-03 13:23:44.528]  synth-n_1300-m_191963-k_120-p_0.2.txt: Found 1 cyclic sub graph(s) with n = [1300][0m
-[0m[2022-02-03 13:23:44.529]  synth-n_1300-m_191963-k_120-p_0.2.txt: Removed 0 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-03 13:23:44.634]  synth-n_1300-m_191963-k_120-p_0.2.txt: Initial cycle packing size: 119[0m
-[2022-02-03 13:23:44.634]  synth-n_1300-m_191963-k_120-p_0.2.txt: Branching with k =
-[0m[2022-02-03 13:24:02.159]  synth-n_1300-m_191963-k_120-p_0.2.txt: BFS: 2922, Packing: 11732, Copy: 2878, Red: 96, DAG: 0, Pre: 138, File: 1105[0m
-[0m[2022-02-03 13:24:02.160]  synth-n_1300-m_191963-k_120-p_0.2.txt: Found solution in 18000 ms (recursive steps: 181)[0m
-[35m[2022-02-03 13:24:02.404]  synth-n_1300-m_196174-k_150-p_0.2.txt: synth-n_1300-m_196174-k_150-p_0.2.txt (n = 1300, m = 196174, k = 150)[0m
-[0m[2022-02-03 13:24:02.531]  synth-n_1300-m_196174-k_150-p_0.2.txt: Found 1 cyclic sub graph(s) with n = [1300][0m
-[0m[2022-02-03 13:24:02.531]  synth-n_1300-m_196174-k_150-p_0.2.txt: Removed 0 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-03 13:24:02.660]  synth-n_1300-m_196174-k_150-p_0.2.txt: Initial cycle packing size: 148[0m
-[2022-02-03 13:24:02.660]  synth-n_1300-m_196174-k_150-p_0.2.txt: Branching with k =
-[0m[2022-02-03 13:24:56.199]  synth-n_1300-m_196174-k_150-p_0.2.txt: BFS: 5706, Packing: 40681, Copy: 6454, Red: 822, DAG: 0, Pre: 127, File: 1348[0m
-[0m[2022-02-03 13:24:56.199]  synth-n_1300-m_196174-k_150-p_0.2.txt: Found solution in 54038 ms (recursive steps: 301)[0m
-[35m[2022-02-03 13:24:56.419]  synth-n_1300-m_204142-k_200-p_0.2.txt: synth-n_1300-m_204142-k_200-p_0.2.txt (n = 1300, m = 204142, k = 200)[0m
-[0m[2022-02-03 13:24:56.549]  synth-n_1300-m_204142-k_200-p_0.2.txt: Found 1 cyclic sub graph(s) with n = [1300][0m
-[0m[2022-02-03 13:24:56.550]  synth-n_1300-m_204142-k_200-p_0.2.txt: Removed 0 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-03 13:24:56.733]  synth-n_1300-m_204142-k_200-p_0.2.txt: Initial cycle packing size: 198[0m
-[2022-02-03 13:24:56.733]  synth-n_1300-m_204142-k_200-p_0.2.txt: Branching with k =
+[35m[2022-02-03 16:33:08.235]  synth-n_1300-m_196174-k_150-p_0.2.txt: synth-n_1300-m_196174-k_150-p_0.2.txt (n = 1300, m = 196174, k = 150)[0m
+[0m[2022-02-03 16:33:08.403]  synth-n_1300-m_196174-k_150-p_0.2.txt: Found 1 cyclic sub graph(s) with n = [1300][0m
+[0m[2022-02-03 16:33:08.406]  synth-n_1300-m_196174-k_150-p_0.2.txt: Removed 0 nodes in preprocessing, starting with k = 0[0m
+[0m[2022-02-03 16:33:08.634]  synth-n_1300-m_196174-k_150-p_0.2.txt: Initial cycle packing size: 148[0m
+[2022-02-03 16:33:08.635]  synth-n_1300-m_196174-k_150-p_0.2.txt: Branching with k =
+[33m[2022-02-03 16:33:36.494]  synth-n_1300-m_196174-k_150-p_0.2.txt: BFS: 3794, Packing: 3635, Packing DAG: 10055, Packing BFS: 5804, Copy: 4430, Red: 343, DAG: 0, Pre: 161, File: 280[0m
+[0m[2022-02-03 16:33:36.505]  synth-n_1300-m_196174-k_150-p_0.2.txt: Found solution in 28549 ms (recursive steps: 239)[0m
+[35m[2022-02-03 16:33:36.822]  synth-n_1300-m_204142-k_200-p_0.2.txt: synth-n_1300-m_204142-k_200-p_0.2.txt (n = 1300, m = 204142, k = 200)[0m
+[0m[2022-02-03 16:33:36.965]  synth-n_1300-m_204142-k_200-p_0.2.txt: Found 1 cyclic sub graph(s) with n = [1300][0m
+[0m[2022-02-03 16:33:36.966]  synth-n_1300-m_204142-k_200-p_0.2.txt: Removed 0 nodes in preprocessing, starting with k = 0[0m
+[0m[2022-02-03 16:33:37.115]  synth-n_1300-m_204142-k_200-p_0.2.txt: Initial cycle packing size: 198[0m
+[2022-02-03 16:33:37.115]  synth-n_1300-m_204142-k_200-p_0.2.txt: Branching with k =
+[33m[2022-02-03 16:33:53.696]  synth-n_1300-m_204142-k_200-p_0.2.txt: BFS: 3378, Packing: 2344, Packing DAG: 5791, Packing BFS: 1701, Copy: 3340, Red: 170, DAG: 0, Pre: 144, File: 316[0m
+[0m[2022-02-03 16:33:53.697]  synth-n_1300-m_204142-k_200-p_0.2.txt: Found solution in 17190 ms (recursive steps: 270)[0m
+[35m[2022-02-03 16:33:53.711]   synth-n_1300-m_45241-k_50-p_0.05.txt: synth-n_1300-m_45241-k_50-p_0.05.txt (n = 1300, m = 45241, k = 50)[0m
+[0m[2022-02-03 16:33:53.732]   synth-n_1300-m_45241-k_50-p_0.05.txt: Found 1 cyclic sub graph(s) with n = [1291][0m
+[0m[2022-02-03 16:33:53.733]   synth-n_1300-m_45241-k_50-p_0.05.txt: Removed 9 nodes in preprocessing, starting with k = 0[0m
+[0m[2022-02-03 16:33:53.770]   synth-n_1300-m_45241-k_50-p_0.05.txt: Initial cycle packing size: 48[0m
+[2022-02-03 16:33:53.770]   synth-n_1300-m_45241-k_50-p_0.05.txt: Branching with k =
+[33m[2022-02-03 16:33:57.995]   synth-n_1300-m_45241-k_50-p_0.05.txt: BFS: 76, Packing: 202, Packing DAG: 1827, Packing BFS: 2029, Copy: 105, Red: 23, DAG: 0, Pre: 22, File: 13[0m
+[0m[2022-02-03 16:33:57.996]   synth-n_1300-m_45241-k_50-p_0.05.txt: Found solution in 4297 ms (recursive steps: 79)[0m
+[35m[2022-02-03 16:33:58.010]   synth-n_1300-m_46137-k_70-p_0.05.txt: synth-n_1300-m_46137-k_70-p_0.05.txt (n = 1300, m = 46137, k = 70)[0m
+[0m[2022-02-03 16:33:58.030]   synth-n_1300-m_46137-k_70-p_0.05.txt: Found 1 cyclic sub graph(s) with n = [1290][0m
+[0m[2022-02-03 16:33:58.030]   synth-n_1300-m_46137-k_70-p_0.05.txt: Removed 10 nodes in preprocessing, starting with k = 0[0m
+[0m[2022-02-03 16:33:58.075]   synth-n_1300-m_46137-k_70-p_0.05.txt: Initial cycle packing size: 70[0m
+[2022-02-03 16:33:58.075]   synth-n_1300-m_46137-k_70-p_0.05.txt: Branching with k =
+[33m[2022-02-03 16:33:58.428]   synth-n_1300-m_46137-k_70-p_0.05.txt: BFS: 56, Packing: 59, Packing DAG: 233, Packing BFS: 11, Copy: 22, Red: 15, DAG: 0, Pre: 20, File: 14[0m
+[0m[2022-02-03 16:33:58.429]   synth-n_1300-m_46137-k_70-p_0.05.txt: Found solution in 432 ms (recursive steps: 63)[0m
+[35m[2022-02-03 16:33:58.444]  synth-n_1300-m_47847-k_100-p_0.05.txt: synth-n_1300-m_47847-k_100-p_0.05.txt (n = 1300, m = 47847, k = 100)[0m
+[0m[2022-02-03 16:33:58.465]  synth-n_1300-m_47847-k_100-p_0.05.txt: Found 1 cyclic sub graph(s) with n = [1298][0m
+[0m[2022-02-03 16:33:58.465]  synth-n_1300-m_47847-k_100-p_0.05.txt: Removed 2 nodes in preprocessing, starting with k = 0[0m
+[0m[2022-02-03 16:33:58.526]  synth-n_1300-m_47847-k_100-p_0.05.txt: Initial cycle packing size: 99[0m
+[2022-02-03 16:33:58.527]  synth-n_1300-m_47847-k_100-p_0.05.txt: Branching with k =
+[33m[2022-02-03 16:33:59.669]  synth-n_1300-m_47847-k_100-p_0.05.txt: BFS: 117, Packing: 141, Packing DAG: 746, Packing BFS: 101, Copy: 74, Red: 22, DAG: 0, Pre: 21, File: 15[0m
+[0m[2022-02-03 16:33:59.669]  synth-n_1300-m_47847-k_100-p_0.05.txt: Found solution in 1240 ms (recursive steps: 117)[0m
+[35m[2022-02-03 16:33:59.684]  synth-n_1300-m_49172-k_120-p_0.05.txt: synth-n_1300-m_49172-k_120-p_0.05.txt (n = 1300, m = 49172, k = 120)[0m
+[0m[2022-02-03 16:33:59.705]  synth-n_1300-m_49172-k_120-p_0.05.txt: Found 1 cyclic sub graph(s) with n = [1300][0m
+[0m[2022-02-03 16:33:59.706]  synth-n_1300-m_49172-k_120-p_0.05.txt: Removed 0 nodes in preprocessing, starting with k = 0[0m
+[0m[2022-02-03 16:33:59.776]  synth-n_1300-m_49172-k_120-p_0.05.txt: Initial cycle packing size: 119[0m
+[2022-02-03 16:33:59.776]  synth-n_1300-m_49172-k_120-p_0.05.txt: Branching with k =
+[33m[2022-02-03 16:34:01.616]  synth-n_1300-m_49172-k_120-p_0.05.txt: BFS: 163, Packing: 175, Packing DAG: 1027, Packing BFS: 394, Copy: 121, Red: 25, DAG: 0, Pre: 21, File: 14[0m
+[0m[2022-02-03 16:34:01.616]  synth-n_1300-m_49172-k_120-p_0.05.txt: Found solution in 1945 ms (recursive steps: 146)[0m
+[35m[2022-02-03 16:34:01.632]  synth-n_1300-m_50340-k_150-p_0.05.txt: synth-n_1300-m_50340-k_150-p_0.05.txt (n = 1300, m = 50340, k = 150)[0m
+[0m[2022-02-03 16:34:01.652]  synth-n_1300-m_50340-k_150-p_0.05.txt: Found 1 cyclic sub graph(s) with n = [1300][0m
+[0m[2022-02-03 16:34:01.653]  synth-n_1300-m_50340-k_150-p_0.05.txt: Removed 0 nodes in preprocessing, starting with k = 0[0m
+[0m[2022-02-03 16:34:01.716]  synth-n_1300-m_50340-k_150-p_0.05.txt: Initial cycle packing size: 145[0m
+[2022-02-03 16:34:01.717]  synth-n_1300-m_50340-k_150-p_0.05.txt: Branching with k =
+[33m[2022-02-03 16:34:09.608]  synth-n_1300-m_50340-k_150-p_0.05.txt: BFS: 623, Packing: 815, Packing DAG: 4603, Packing BFS: 1090, Copy: 727, Red: 91, DAG: 0, Pre: 21, File: 15[0m
+[0m[2022-02-03 16:34:09.608]  synth-n_1300-m_50340-k_150-p_0.05.txt: Found solution in 7991 ms (recursive steps: 460)[0m
+[35m[2022-02-03 16:34:09.626]  synth-n_1300-m_52952-k_200-p_0.05.txt: synth-n_1300-m_52952-k_200-p_0.05.txt (n = 1300, m = 52952, k = 200)[0m
+[0m[2022-02-03 16:34:09.647]  synth-n_1300-m_52952-k_200-p_0.05.txt: Found 1 cyclic sub graph(s) with n = [1299][0m
+[0m[2022-02-03 16:34:09.648]  synth-n_1300-m_52952-k_200-p_0.05.txt: Removed 1 nodes in preprocessing, starting with k = 0[0m
+[0m[2022-02-03 16:34:09.725]  synth-n_1300-m_52952-k_200-p_0.05.txt: Initial cycle packing size: 193[0m
+[2022-02-03 16:34:09.725]  synth-n_1300-m_52952-k_200-p_0.05.txt: Branching with k =
