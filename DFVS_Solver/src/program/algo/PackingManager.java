@@ -4,6 +4,7 @@ import program.model.Component;
 import program.model.Cycle;
 import program.model.Graph;
 import program.model.Node;
+import program.utils.PerformanceTimer;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -134,8 +135,12 @@ public class PackingManager {
 
         }
 
-        while(!DAG.isDAGFast(packingGraph)) {
+        while(!isDAG()) {
+            PerformanceTimer.log(PerformanceTimer.MethodType.PACKING);
+            PerformanceTimer.start();
             Cycle cycle = new LightBFS().run(packingGraph);
+            PerformanceTimer.log(PerformanceTimer.MethodType.PACKING_BFS);
+            PerformanceTimer.start();
 
             if(cycle.size() == 3) PackingRules.upgradeK2Penta(cycle, packingGraph);
 
@@ -145,4 +150,30 @@ public class PackingManager {
             packing.add(cycle);
         }
     }
+
+    private boolean isDAG() {
+        PerformanceTimer.log(PerformanceTimer.MethodType.PACKING);
+        PerformanceTimer.start();
+        boolean isDAG = DAG.isDAGFast(packingGraph);
+        PerformanceTimer.log(PerformanceTimer.MethodType.PACKING_DAG);
+        PerformanceTimer.start();
+        return isDAG;
+    }
+
+    /*private Cycle nextCycleExists() {
+
+        Node firstNode = packingGraph.getNodes().get(0);
+        Cycle firstCycle = new PackingBFS().run(firstNode, packingGraph);
+
+        if(firstCycle == null) {
+            if(DAG.isDAGFast(packingGraph)) return null;
+        }
+
+        for(int i = 1; i < packingGraph.getNodeCount(); i++) {
+            Node node = packingGraph.getNodes().get(i);
+            Cycle cycle = new PackingBFS().run(node, packingGraph);
+            if(cycle != null) return cycle;
+        }
+        return null;
+    }*/
 }
