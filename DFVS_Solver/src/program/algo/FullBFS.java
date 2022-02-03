@@ -12,14 +12,13 @@ public class FullBFS {
     public Cycle findBestCycle(Graph graph) {
 
         List<Cycle> minCycles = graph.getPairCycles();
-        int minSize = 2;
 
         // When there are no cycles of size 2, look for shortest cycles with BFS
         if(minCycles.size() == 0) {
+            // Find nodes with highest minInOut
             int maxMinInOut = 0;
             List<Node> maxMinInOutNodes = new ArrayList<>();
             for(Node node: graph.getNodes()) {
-
                 if(node.getMinInOut() > maxMinInOut) {
                     maxMinInOutNodes.clear();
                     maxMinInOutNodes.add(node);
@@ -29,7 +28,8 @@ public class FullBFS {
                 }
             }
 
-            minSize = Integer.MAX_VALUE;
+            // Find shortest cycles for minInOut
+            int minSize = Integer.MAX_VALUE;
             minCycles = new ArrayList<>();
             for(Node node: maxMinInOutNodes) {
                 List<Cycle> cycles = new SimpleBFS().findBestCycles(graph, node, minSize);
@@ -46,33 +46,26 @@ public class FullBFS {
                 }
             }
 
-            // Filter out all cycles which are longer than the min branch size
+            // Filter out all cycles which are longer than the min size
             final int finalMinSize = minSize;
             minCycles = minCycles.stream().filter(cycle -> cycle.size() == finalMinSize).collect(Collectors.toList());
         }
 
-        //System.out.println("Found " + minCycles.size() + " min cycles");
-
-        int maxCycleMinInOut = 0;
+        // Find the cycle with the highest minInOut sum
+        int maxMinInOutSum = 0;
         Cycle bestCycle = null;
-        for(Cycle minCycle : minCycles) {
-            int cycleMinInOut = 0;
-            for(Node node: minCycle.getNodes()) {
-                cycleMinInOut += node.getMinInOut();
+        for(Cycle cycle : minCycles) {
+            int minInOutSum = 0;
+            for(Node node: cycle.getNodes()) {
+                minInOutSum += node.getMinInOut();
             }
-            if(cycleMinInOut > maxCycleMinInOut) {
-                bestCycle = minCycle;
-                maxCycleMinInOut = cycleMinInOut;
+            if(minInOutSum > maxMinInOutSum) {
+                bestCycle = cycle;
+                maxMinInOutSum = minInOutSum;
             }
         }
 
-
-        /* TODO 1. minInOut für jede Node setzen
-           2. Bei Node mit dem größten anfangen, Simple BFS
-           3. minSize setzen
-           (4. frühzeitig abbrechen?)
-           (5. packing Zeit optimieren, wenn sie überhand nimmt)
-         */
+        // Sort nodes in cycle by minInOut
         bestCycle.getNodes().sort(Comparator.comparing(Node::getMinInOut));
         Collections.reverse(bestCycle.getNodes());
 

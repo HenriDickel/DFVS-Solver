@@ -14,7 +14,7 @@ import java.util.concurrent.TimeoutException;
 
 public class Main {
 
-    private static final long TIME_OUT = 10;
+    private static final long TIME_OUT = 90;
 
     public static void main(String[] args) throws GRBException {
 
@@ -59,7 +59,9 @@ public class Main {
         ExecutorService executor = Executors.newSingleThreadExecutor();
         Future<Long> future = executor.submit(() -> {
             long startTime = System.currentTimeMillis();
+            PerformanceTimer.start();
             Instance instance = InstanceCreator.createFromFile(file);
+            PerformanceTimer.log(PerformanceTimer.MethodType.FILE);
 
             Log.debugLog(instance.NAME, instance.NAME + " (n = " + instance.N + ", m = " + instance.M + ", k = " + instance.OPTIMAL_K + ")", Color.PURPLE);
             Solver.dfvsSolveInstance(instance);
@@ -78,7 +80,7 @@ public class Main {
             PerformanceTimer.printResult();
             Log.mainLog(Solver.instance, millis, PerformanceTimer.getPackingMillis(), verified);
             Color color = verified ? Color.WHITE : Color.RED;
-            Log.debugLog(Solver.instance.NAME, "Found solution in " + Timer.format(millis) + " (recursive steps: " + instance.recursiveSteps + ")", color);
+            Log.debugLog(Solver.instance.NAME, "Found solution in " + millis + " ms (recursive steps: " + instance.recursiveSteps + ")", color);
         } catch (TimeoutException e) {
             future.cancel(true);
             Instance instance = Solver.instance;
@@ -89,7 +91,7 @@ public class Main {
             Log.debugLogAdd("", true);
             PerformanceTimer.printResult();
             Log.mainLog(instance, millis, PerformanceTimer.getPackingMillis(), false);
-            Log.debugLog(instance.NAME, "Found no solution in " + Timer.format(millis), Color.RED);
+            Log.debugLog(instance.NAME, "Found no solution in " + millis + " ms (recursive steps: " + instance.recursiveSteps + ")", Color.RED);
         } catch (ExecutionException | InterruptedException e) {
             e.printStackTrace();
         }

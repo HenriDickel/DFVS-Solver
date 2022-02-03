@@ -15,6 +15,7 @@ public abstract class PerformanceTimer {
     private static long millisReduction = 0;
     private static long millisPacking = 0;
     private static long millisILP = 0;
+    private static long millisFile = 0;
 
     public enum MethodType {
         PREPROCESSING,
@@ -24,15 +25,16 @@ public abstract class PerformanceTimer {
         COPY,
         REDUCTION,
         PACKING,
-        ILP
+        ILP,
+        FILE
     }
 
     public static void start() {
-        startTime = System.nanoTime();
+        startTime = System.currentTimeMillis();
     }
 
     public static void log(MethodType type) {
-        long millis = System.nanoTime() - startTime;
+        long millis = System.currentTimeMillis() - startTime;
         switch (type) {
             case PREPROCESSING:
                 millisPreprocessing += millis;
@@ -58,20 +60,24 @@ public abstract class PerformanceTimer {
             case ILP:
                 millisILP += millis;
                 break;
+            case FILE:
+                millisFile += millis;
+                break;
         }
     }
 
     public static long getPackingMillis() {
-        return millisPacking / 1000000;
+        return millisPacking / 1000;
     }
 
     public static void printResult() {
-        long other = (millisPreprocessing + millisFlowers + millisDAG + millisCopy + millisReduction) / 1000000;
-        Log.debugLog(Solver.instance.NAME, "BFS: " + millisBFS / 1000000 + " ms, Packing: " + millisPacking / 1000000 + " ms, Other: " + other + " ms");
+        Log.debugLog(Solver.instance.NAME, "BFS: " + millisBFS + ", Packing: " + millisPacking + ", Copy: " + millisCopy + ", Red: " +
+                millisReduction + ", DAG: " + millisDAG + ", Pre: " + millisPreprocessing + ", File: " + millisFile);
     }
 
+
     public static void printILPResult() {
-        Log.debugLog(Solver.instance.NAME, "Preprocessing: " + millisPreprocessing / 1000000 + " ms, BFS: " + millisBFS / 1000000 + " ms, Packing: " + millisPacking / 1000000 + " ms, ILP: " + millisILP / 1000000 + " ms");
+        Log.debugLog(Solver.instance.NAME, "Preprocessing: " + millisPreprocessing / 1000 + "s, BFS: " + millisBFS / 1000 + " ms, Packing: " + millisPacking / 1000 + "s, ILP: " + millisILP / 1000 + "s");
     }
 
     public static void reset() {

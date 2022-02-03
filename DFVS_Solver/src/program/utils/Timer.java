@@ -32,6 +32,6 @@ public abstract class Timer {
     }
 
     public static String format(Long millis) {
-        return (millis > 1000) ? millis / 1000 + "s" :  millis + "ms";
+        return String.format("%.3f",millis / 1000.0f);
     }
 }
