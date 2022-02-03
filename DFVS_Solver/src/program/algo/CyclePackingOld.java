@@ -26,7 +26,7 @@ public abstract class CyclePackingOld {
         Graph packingCopy = graph.copy();
         int lowerBound = 0;
         Cycle cycle;
-        while ((cycle = LightBFS.findShortestCycle(packingCopy)) != null) {
+        while ((cycle = new LightBFS().run(packingCopy)) != null) {
             for (Node node : cycle.getNodes()) {
                 packingCopy.removeNode(node.id);
             }
@@ -157,7 +157,7 @@ public abstract class CyclePackingOld {
         }
 
         // Look for cycle to remove (if no pair cycles found)
-        Cycle cycle = LightBFS.findShortestCycle(graph);
+        Cycle cycle = new LightBFS().run(graph);
         if(cycle != null) {
             for (Node node : cycle.getNodes()) {
                 graph.removeNode(node.id);

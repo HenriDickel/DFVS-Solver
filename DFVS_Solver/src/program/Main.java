@@ -14,7 +14,7 @@ import java.util.concurrent.TimeoutException;
 
 public class Main {
 
-    private static final long TIME_OUT = 10;
+    private static final long TIME_OUT = 90;
 
     public static void main(String[] args) throws GRBException {
 
@@ -46,10 +46,10 @@ public class Main {
             Log.ignore = false;
 
             List<GraphFile> files = InstanceCreator.getComplexAndSyntheticFiles(Dataset.DATASET_3, null);
-            Heuristics.testQuality(files);
+            //List<GraphFile> files = InstanceCreator.getSelectedFiles();
 
-            //List<GraphFile> files = InstanceCreator.getComplexAndSyntheticFiles(Dataset.DATASET_3, null);
-            //files.forEach(Main::run);
+            //Heuristics.testQuality(files);
+            files.forEach(Main::run);
         }
     }
 
@@ -79,8 +79,7 @@ public class Main {
             Log.mainLog(Solver.instance, millis, PerformanceTimer.getPackingMillis(), verified);
             Color color = verified ? Color.WHITE : Color.RED;
             Log.debugLog(Solver.instance.NAME, "Found solution in " + Timer.format(millis) + " (recursive steps: " + instance.recursiveSteps + ")", color);
-        } catch (TimeoutException | InterruptedException | ExecutionException e) {
-
+        } catch (TimeoutException e) {
             future.cancel(true);
             Instance instance = Solver.instance;
             instance.solvedK = instance.S.size() + Solver.currentK;
@@ -91,7 +90,8 @@ public class Main {
             PerformanceTimer.printResult();
             Log.mainLog(instance, millis, PerformanceTimer.getPackingMillis(), false);
             Log.debugLog(instance.NAME, "Found no solution in " + Timer.format(millis), Color.RED);
-            return;
+        } catch (ExecutionException | InterruptedException e) {
+            e.printStackTrace();
         }
         executor.shutdownNow();
     }

@@ -185,7 +185,7 @@ public abstract class DFVSHeuristicSolver {
         // Destroy cycles by heuristic
         for (Graph subGraph : instance.subGraphs) {
             while (!DAG.isDAGFast(subGraph)) {
-                Cycle cycle = LightBFS.findShortestCycle(subGraph);
+                Cycle cycle = new LightBFS().run(subGraph);
                 Node node = cycle.getNodes().get(0);
 
                 subGraph.removeNode(node.id);
@@ -581,7 +581,7 @@ public abstract class DFVSHeuristicSolver {
 
             long startTime = System.currentTimeMillis();
 
-            while(System.currentTimeMillis() <= startTime + millisForThisGraph + 1){
+            while(System.currentTimeMillis() <= startTime + millisForThisGraph){
                 solutions.add(TimerRecFast(subGraph, new ArrayList<>(), precision));
             }
 

@@ -52,7 +52,7 @@ public class CyclePacking {
 
         // Add cycles to the packing as long as a cycle is found
         while(!DAG.isDAGFast(packingGraph) && size() <= k) {
-            Cycle cycle = LightBFS.findShortestCycle(packingGraph);
+            Cycle cycle = new LightBFS().run(packingGraph);
 
             if(cycle.size() == 3) PackingRules.upgradeTriforce(cycle, packingGraph);
             if(cycle.size() == 3) PackingRules.upgradeK2Penta(cycle, packingGraph);

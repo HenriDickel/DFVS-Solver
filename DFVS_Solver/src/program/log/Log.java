@@ -95,7 +95,7 @@ public abstract class Log {
         }
         try(PrintWriter output = new PrintWriter(new FileWriter(MAIN_LOG_PATH,true)))
         {
-            output.println("name,n,m,k_optimal,k_solved,k_start,verified,pre_removed_nodes,removed_flowers,recursive_steps,millis,packing_millis");
+            output.println("name,n,m,k_optimal,k_solved,k_start,verified,pre_removed_nodes,removed_flowers,packing_millis,millis,recursive_steps");
         }
         catch (Exception ignored) {}
         try(PrintWriter output = new PrintWriter(new FileWriter(ILP_LOG_PATH,true)))
@@ -134,7 +134,7 @@ public abstract class Log {
 
         try(PrintWriter output = new PrintWriter(new FileWriter(MAIN_LOG_PATH,true)))
         {
-            output.println(instance.NAME + "," + instance.N + "," + instance.M + "," + instance.OPTIMAL_K + "," + instance.solvedK + "," + instance.startK + "," + verified + "," + instance.preRemovedNodes + "," + instance.removedFlowers + "," + instance.recursiveSteps + "," + millis + "," + packingMillis);
+            output.println(instance.NAME + "," + instance.N + "," + instance.M + "," + instance.OPTIMAL_K + "," + instance.solvedK + "," + instance.startK + "," + verified + "," + instance.preRemovedNodes + "," + instance.removedFlowers + "," + packingMillis + "," + millis + "," + instance.recursiveSteps);
         }
         catch (Exception ignored) {}
     }

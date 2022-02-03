@@ -135,7 +135,7 @@ public class PackingManager {
         }
 
         while(!DAG.isDAGFast(packingGraph)) {
-            Cycle cycle = LightBFS.findShortestCycle(packingGraph);
+            Cycle cycle = new LightBFS().run(packingGraph);
 
             if(cycle.size() == 3) PackingRules.upgradeK2Penta(cycle, packingGraph);
 

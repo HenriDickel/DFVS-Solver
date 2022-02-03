@@ -4,6 +4,7 @@ import program.model.Graph;
 import program.model.Node;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 public abstract class Preprocessing {
@@ -32,6 +33,8 @@ public abstract class Preprocessing {
                 subGraphs.add(subGraph);
             }
         }
+
+        subGraphs.sort(Comparator.comparing(Graph::getNodeCount));
         return subGraphs;
     }
 

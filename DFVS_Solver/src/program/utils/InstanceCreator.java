@@ -91,6 +91,37 @@ public abstract class InstanceCreator {
         throw new RuntimeException("Didn't found instance with name '" + startFilename + "'");
     }
 
+    public static List<GraphFile> getSelectedFiles() {
+        List<GraphFile> files = new ArrayList<>();
+
+        String name = "blogs-n_1227";
+        files.add(new GraphFile(getComplexPath(Dataset.DATASET_3), name, readOptimalKFromFile(getSolutionPath(Dataset.DATASET_3), name)));
+        name = "link-kv-n_1000";
+        files.add(new GraphFile(getComplexPath(Dataset.DATASET_3), name, readOptimalKFromFile(getSolutionPath(Dataset.DATASET_3), name)));
+        name = "usairport-n_1577";
+        files.add(new GraphFile(getComplexPath(Dataset.DATASET_3), name, readOptimalKFromFile(getSolutionPath(Dataset.DATASET_3), name)));
+        name = "synth-n_1000-m_107005-k_50-p_0.2.txt";
+        files.add(new GraphFile(getSyntheticPath(Dataset.DATASET_3), name, readOptimalKFromFile(getSolutionPath(Dataset.DATASET_3), name)));
+        name = "synth-n_1000-m_110357-k_70-p_0.2.txt";
+        files.add(new GraphFile(getSyntheticPath(Dataset.DATASET_3), name, readOptimalKFromFile(getSolutionPath(Dataset.DATASET_3), name)));
+        name = "synth-n_1000-m_114433-k_100-p_0.2.txt";
+        files.add(new GraphFile(getSyntheticPath(Dataset.DATASET_3), name, readOptimalKFromFile(getSolutionPath(Dataset.DATASET_3), name)));
+        name = "synth-n_1000-m_116757-k_120-p_0.2.txt";
+        files.add(new GraphFile(getSyntheticPath(Dataset.DATASET_3), name, readOptimalKFromFile(getSolutionPath(Dataset.DATASET_3), name)));
+        name = "synth-n_1000-m_119520-k_150-p_0.2.txt";
+        files.add(new GraphFile(getSyntheticPath(Dataset.DATASET_3), name, readOptimalKFromFile(getSolutionPath(Dataset.DATASET_3), name)));
+        name = "synth-n_1000-m_124702-k_200-p_0.2.txt";
+        files.add(new GraphFile(getSyntheticPath(Dataset.DATASET_3), name, readOptimalKFromFile(getSolutionPath(Dataset.DATASET_3), name)));
+        name = "synth-n_250-m_1998-k_50-p_0.05.txt";
+        files.add(new GraphFile(getSyntheticPath(Dataset.DATASET_3), name, readOptimalKFromFile(getSolutionPath(Dataset.DATASET_3), name)));
+        name = "synth-n_250-m_8674-k_100-p_0.2.txt";
+        files.add(new GraphFile(getSyntheticPath(Dataset.DATASET_3), name, readOptimalKFromFile(getSolutionPath(Dataset.DATASET_3), name)));
+        name = "synth-n_2600-m_181265-k_100-p_0.05.txt";
+        files.add(new GraphFile(getSyntheticPath(Dataset.DATASET_3), name, readOptimalKFromFile(getSolutionPath(Dataset.DATASET_3), name)));
+
+        return files;
+    }
+
     public static List<GraphFile> getFiles(Dataset dataset, String path) {
         File folder = new File(path);
         File[] listOfFiles = folder.listFiles();

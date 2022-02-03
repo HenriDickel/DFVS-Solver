@@ -11,34 +11,44 @@ public abstract class FullBFS {
 
     public static Cycle findBestCycle(Graph graph) {
 
-        int maxMinInOut = 0;
-        List<Node> maxMinInOutNodes = new ArrayList<>();
-        for(Node node: graph.getNodes()) {
+        List<Cycle> minCycles = graph.getPairCycles();
+        int minSize = 2;
 
-            if(node.getMinInOut() > maxMinInOut) {
-                maxMinInOutNodes.clear();
-                maxMinInOutNodes.add(node);
-                maxMinInOut = node.getMinInOut();
-            } else if(node.getMinInOut() == maxMinInOut) {
-                maxMinInOutNodes.add(node);
+        // When there are no cycles of size 2, look for shortest cycles with BFS
+        if(minCycles.size() == 0) {
+            int maxMinInOut = 0;
+            List<Node> maxMinInOutNodes = new ArrayList<>();
+            for(Node node: graph.getNodes()) {
+
+                if(node.getMinInOut() > maxMinInOut) {
+                    maxMinInOutNodes.clear();
+                    maxMinInOutNodes.add(node);
+                    maxMinInOut = node.getMinInOut();
+                } else if(node.getMinInOut() == maxMinInOut) {
+                    maxMinInOutNodes.add(node);
+                }
             }
-        }
 
-        int minSize = Integer.MAX_VALUE;
-        List<Cycle> minCycles = new ArrayList<>();
-        for(Node node: maxMinInOutNodes) {
-            List<Cycle> cycles = SimpleBFS.findBestCycles(graph, node, minSize);
-            for(Cycle cycle: cycles) {
-                if(cycle != null) {
-                    if(cycle.size() < minSize) {
-                        minCycles.clear();
-                        minCycles.add(cycle);
-                        minSize = cycle.size();
-                    } else if(cycle.size() == minSize) {
-                        minCycles.add(cycle);
+            minSize = Integer.MAX_VALUE;
+            minCycles = new ArrayList<>();
+            for(Node node: maxMinInOutNodes) {
+                List<Cycle> cycles = SimpleBFS.findBestCycles(graph, node, minSize);
+                for(Cycle cycle: cycles) {
+                    if(cycle != null) {
+                        if(cycle.size() < minSize) {
+                            minCycles.clear();
+                            minCycles.add(cycle);
+                            minSize = cycle.size();
+                        } else if(cycle.size() == minSize) {
+                            minCycles.add(cycle);
+                        }
                     }
                 }
             }
+
+            // Filter out all cycles which are longer than the min branch size
+            final int finalMinSize = minSize;
+            minCycles = minCycles.stream().filter(cycle -> cycle.size() == finalMinSize).collect(Collectors.toList());
         }
 
         //System.out.println("Found " + minCycles.size() + " min cycles");
@@ -63,6 +73,8 @@ public abstract class FullBFS {
            (4. frühzeitig abbrechen?)
            (5. packing Zeit optimieren, wenn sie überhand nimmt)
          */
+        bestCycle.getNodes().sort(Comparator.comparing(Node::getMinInOut));
+        Collections.reverse(bestCycle.getNodes());
 
         return bestCycle;
     }

@@ -7,11 +7,11 @@ import program.model.Node;
 import java.util.LinkedList;
 import java.util.List;
 
-public abstract class LightBFS {
+public class LightBFS {
 
-    private final static List<Node> queue = new LinkedList<>();
+    private final List<Node> queue = new LinkedList<>();
 
-    public static Cycle findShortestCycle(Graph graph) {
+    public Cycle run(Graph graph) {
 
         for(Node node: graph.getNodes()) {
 
@@ -46,7 +46,7 @@ public abstract class LightBFS {
      * @param node node A.
      * @return a cycle when found.
      */
-    private static Cycle visitNode(Node node, Graph graph) {
+    private Cycle visitNode(Node node, Graph graph) {
 
         for(Integer outId: node.getOutIds()) {
             Node out = graph.getNode(outId);
@@ -70,7 +70,7 @@ public abstract class LightBFS {
      * @param second node B.
      * @return cycle when found.
      */
-    private static Cycle findCycle(Node first, Node second) {
+    private Cycle findCycle(Node first, Node second) {
 
         Node pointer = second.parent;
         Cycle cycle = new Cycle(second);
