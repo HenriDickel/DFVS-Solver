@@ -195,4 +195,53 @@ public class FullBFS {
         return minCycles;
     }
 
+    public List<Cycle> findSomeCyclesFast(Graph graph, float groupSize, boolean orderNodes){
+
+        List<Cycle> cycles = graph.getPairCycles();
+        int minSize = 2;
+
+        //Sort Nodes
+        List<Node> nodes = new ArrayList<>(graph.getNodes());
+        if(orderNodes){
+            nodes.sort(Comparator.comparing(x -> Math.min(x.getOutIdCount(), x.getInIdCount())));
+        }
+        else{
+            Collections.shuffle(nodes);
+        }
+
+        //Simple BFS
+        SimpleBFS simpleBFS = new SimpleBFS();
+
+        // When there are no cycles of size 2, look for shortest cycles with BFS
+        if(cycles.size() == 0) {
+            minSize = Integer.MAX_VALUE;
+            for(int i = 0; i <= (float) nodes.size() * groupSize; i++){
+
+                //Precision needs to be smaller than 1
+                if(i == nodes.size()) break;
+
+                //Get Node
+                Node node = nodes.get(i);
+                Cycle cycle = simpleBFS.findBestCycle(graph, node, minSize);
+
+                // Replace the min branch size when found better one
+                if (cycle != null) {
+                    cycles.add(cycle);
+                    minSize = Math.min(cycle.size(), minSize);
+                }
+            }
+        }
+        else{
+            Collections.shuffle(cycles);
+            int maxIndex = (int) (cycles.size() * groupSize);
+            if(maxIndex > 0) cycles = cycles.subList(0, maxIndex);
+        }
+
+        // Filter out all cycles which are longer than the min branch size
+        final int finalMinSize = minSize;
+        return cycles.stream().filter(cycle -> cycle.size() == finalMinSize).collect(Collectors.toList());
+
+    }
+
+
 }
