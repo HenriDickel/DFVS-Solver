@@ -111,6 +111,10 @@ public abstract class DFVSHeuristicSolver {
         // 5.26 TimerFast(10000)     //1.0018415 (in 8721.539 ms)
         //TimerFast(instance, 10000, 0.95f);
 
+        //---------TimerShort---------------
+        // 5.27 TimerShort(100)      //
+        //TimerShort(instance, 100, 0.05f);
+
         Log.debugLog(instance.NAME, "Found solution with k = " + instance.S.size());
     }
 
@@ -633,6 +637,71 @@ public abstract class DFVSHeuristicSolver {
 
         //Do again
         return TimerRecFast(copyGraph, copySolution, precision);
+
+    }
+
+
+
+    //---------TimerShort------------
+
+    private static void TimerShort(Instance instance, int timeLimitMillis, float groupSize) {
+
+        float totalNodeCount = instance.subGraphs.stream().mapToInt(Graph::getNodeCount).sum();
+
+        // Destroy cycles by heuristic
+        for (Graph subGraph : instance.subGraphs) {
+            float percentage = (float) subGraph.getNodeCount() / totalNodeCount;
+            long millisForThisGraph = (long) (timeLimitMillis * percentage);
+
+            //All solutions
+            List<List<Integer>> solutions = new ArrayList<>();
+
+            long startTime = System.currentTimeMillis();
+
+            while(System.currentTimeMillis() <= startTime + millisForThisGraph){
+                solutions.add(TimerRecShort(subGraph, new ArrayList<>(), groupSize));
+            }
+
+            //Best solution
+            List<Integer> sol = Collections.min(solutions, Comparator.comparing(List::size));
+            instance.S.addAll(sol);
+        }
+    }
+
+    private static List<Integer> TimerRecShort(Graph graph, List<Integer> solution, float groupSize) {
+
+        //Check if DAG
+        if (DAG.isDAGFast(graph)) return solution;
+
+        //All shortest
+        List<Cycle> allShortestCycles = new FullBFS().findSomeCyclesFast(graph, groupSize, true);
+
+        //Copy
+        Graph copyGraph = graph.copy();
+        List<Integer> copySolution = new ArrayList<>(solution);
+
+        //Random
+        for(Cycle cycle : allShortestCycles){
+
+            //Get best node
+            Node node = Collections.max(cycle.getNodes(), Comparator.comparing(x -> Math.min(x.getOutIdCount(), x.getInIdCount())));
+
+            //Don't delete twice
+            if(copySolution.contains(node.id)) continue;
+
+            //Remove node
+            copyGraph.removeNode(node.id);
+            copySolution.add(node.id);
+
+            //Reduction
+            copySolution.addAll(Reduction.applyRules(copyGraph, false));
+
+            //Check if DAG
+            if(DAG.isDAGFast(graph)) return solution;
+        }
+
+        //Do again
+        return TimerRecShort(copyGraph, copySolution, groupSize);
 
     }
 
