@@ -130,7 +130,8 @@ public abstract class FullBFS {
 
         // Throw exception, when no best cycle is found
         if(shortestCycle == null) {
-            throw new RuntimeException("Full BFS didn't found a cycle!");
+            //throw new RuntimeException("Full BFS didn't found a cycle!");
+            return new Cycle();
         }
 
         // Sort nodes in cycle by their frequency in other cycles
