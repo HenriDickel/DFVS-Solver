@@ -7,6 +7,8 @@ import program.model.*;
 import program.packing.PackingManager;
 import program.utils.PerformanceTimer;
 import program.utils.TimeoutException;
+import program.utils.Timer;
+
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -141,6 +143,7 @@ public abstract class HeuristicSolver {
 
     private static List<Integer> dfvsHeuristicBranch(Graph graph, int k, int level, PackingManager pm) throws TimeoutException {
 
+        if(Timer.isTimeout()) throw new TimeoutException();
         // Log recursive steps
         instance.recursiveSteps++;
 
