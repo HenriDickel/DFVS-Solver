@@ -2,6 +2,7 @@ package program;
 
 import gurobi.GRBException;
 import program.algo.*;
+import program.heuristics.HeuristicSolver;
 import program.heuristics.Heuristics;
 import program.ilp.ILPSolver;
 import program.log.Log;
@@ -64,7 +65,8 @@ public class Main {
 
         try {
             Log.debugLog(instance.NAME, instance.NAME + " (n = " + instance.N + ", m = " + instance.M + ", k = " + instance.OPTIMAL_K + ")", Color.PURPLE);
-            Solver.dfvsSolveInstance(instance);
+            HeuristicSolver.solveInstance(instance);
+            //Solver.dfvsSolveInstance(instance);
 
             // Verify
             instance.solvedK = instance.S.size();
