@@ -45,16 +45,23 @@ public abstract class PackingRules {
 
         Node a = pair.get(0);
         boolean upgrade = true;
+        Node bestNode = null;
         while(upgrade) {
             upgrade = false;
             for(Integer outId: a.getOutIds()) {
                 if(pair.isFullyConnected(outId)) {
                     Node newNode = packingGraph.getNode(outId);
-                    pair.add(newNode);
-                    pair.setK(pair.getK() + 1);
-                    upgrade = true;
-                    break;
+                    if(bestNode == null || newNode.getMinInOut() < bestNode.getMinInOut()) {
+                        bestNode = newNode;
+                    }
                 }
+            }
+            // When there is an upgrade node, upgrade cycle
+            if(bestNode != null) {
+                pair.add(bestNode);
+                pair.setK(pair.getK() + 1);
+                upgrade = true;
+                bestNode = null;
             }
         }
     }
