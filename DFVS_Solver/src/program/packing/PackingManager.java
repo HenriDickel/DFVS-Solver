@@ -175,6 +175,10 @@ public class PackingManager {
                 }
             }
         }
+        // When the time limit is reached, the packing needs to be filled up
+        if(System.currentTimeMillis() > endMillis) {
+            fillPacking();
+        }
     }
 
     public void fillPacking() {

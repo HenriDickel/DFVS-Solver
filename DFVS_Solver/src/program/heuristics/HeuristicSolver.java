@@ -198,7 +198,7 @@ public abstract class HeuristicSolver {
                 PerformanceTimer.start();
                 newPm.addDeletedNodes(deleteIds);
                 newPm.removeForbiddenNodes(forbiddenIds);
-                newPm.initPacking();
+                newPm.fillPacking();
                 PerformanceTimer.log(PerformanceTimer.MethodType.PACKING);
                 if(newPm.size() > pm.size()) pm = newPm;
                 // If updated packing is > k, immediately return
@@ -218,7 +218,7 @@ public abstract class HeuristicSolver {
             PerformanceTimer.start();
             newPm.addDeletedNodes(deleteIds);
             newPm.removeForbiddenNodes(forbiddenIds);
-            newPm.initPacking();
+            newPm.fillPacking();
             PerformanceTimer.log(PerformanceTimer.MethodType.PACKING);
             if(newPm.size() > pm.size()) pm = newPm;
 
