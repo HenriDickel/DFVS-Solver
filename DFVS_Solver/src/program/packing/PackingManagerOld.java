@@ -1,7 +1,6 @@
 package program.packing;
 
 import program.algo.*;
-import program.log.Log;
 import program.model.Component;
 import program.model.Cycle;
 import program.model.Graph;
@@ -9,37 +8,31 @@ import program.model.Node;
 import program.utils.PerformanceTimer;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class PackingManager {
+public class PackingManagerOld {
 
     private Map<Integer, Node> initialNodes;
     private Graph packingGraph;
+
     private List<Cycle> packing = new ArrayList<>();
 
-    private Map<Integer, Cycle> bestCycles = new HashMap<>();
-
-    public PackingManager(Graph initialGraph) {
+    public PackingManagerOld(Graph initialGraph) {
         // Copy nodes
         Graph copy = initialGraph.copy();
         initialNodes = copy.getNodeMap();
         // Copy into packing graph
         packingGraph = initialGraph.copy();
 
-        initPacking(10);
-    }
-
-    public int size() {
-        return packing.stream().mapToInt(Component::getK).sum();
+        initPacking();
     }
 
     public List<Cycle> getPacking() {
         return packing;
     }
 
-    public PackingManager(PackingManager oldPm, List<Integer> deleteIds, List<Integer> forbiddenIds) {
+    public PackingManagerOld(PackingManagerOld oldPm, List<Integer> deleteIds, List<Integer> forbiddenIds) {
         this.initialNodes = oldPm.initialNodes;
         this.packingGraph = oldPm.packingGraph.copy();
 
@@ -78,7 +71,7 @@ public class PackingManager {
                 forbiddenNode.forbidden = true;
             }
         }
-        fillPacking();
+        initPacking();
     }
 
     public void addDeletedNodes(List<Integer> deletedIds) {
@@ -101,83 +94,11 @@ public class PackingManager {
         }
     }
 
-    private void initPacking(int timeLimit) {
-
-        long endMillis = System.currentTimeMillis() + timeLimit * 1000L;
-        Cycle pair;
-        while((pair = packingGraph.getFirstPairCycle()) != null) {
-
-            // Look for fully connected triangles, quads etc.
-            PackingRules.upgradeFullyConnected(pair, packingGraph);
-            if(pair.size() == 2) PackingRules.upgradeK2Quad(pair, packingGraph);
-
-
-            for (Node node : pair.getNodes()) {
-                packingGraph.removeNode(node.id);
-            }
-            packing.add(pair);
-        }
-
-        Log.debugLog("Packing", "Calculate best cycles...");
-        // Initialize bestCycles with the best cycle for each node
-        for(Node node: packingGraph.getNodes()) {
-            Cycle cycle = SimpleBFS.findBestCycle(packingGraph, node, 3);
-            if(cycle != null) {
-                bestCycles.put(node.id, cycle);
-            } else {
-                node.acyclic = true;
-            }
-        }
-
-        Log.debugLog("Packing", "Fill packing...");
-        while(!bestCycles.isEmpty() && System.currentTimeMillis() < endMillis) {
-
-            // Find the best cycle to remove from the graph in bestCycles
-            Cycle bestCycle = null;
-            for(Map.Entry<Integer,Cycle> entry: bestCycles.entrySet()) {
-                Cycle cycle = entry.getValue();
-                if(bestCycle == null || cycle.size() < bestCycle.size() ||(cycle.size() == bestCycle.size() && cycle.getMinInOutSum() < bestCycle.getMinInOutSum())) {
-                    bestCycle = cycle;
-                }
-            }
-
-            // Remove nodes from packing graph and add cycle to the packing
-            for (Node node : bestCycle.getNodes()) {
-                bestCycles.remove(node.id);
-                packingGraph.removeNode(node.id);
-            }
-            packing.add(bestCycle);
-
-            // Remove cycles from bestCycles that contained one of the nodes
-            List<Integer> updateIds = new ArrayList<>();
-            for(Map.Entry<Integer,Cycle> entry: bestCycles.entrySet()) {
-                Cycle cycle = entry.getValue();
-                for(Node node: bestCycle.getNodes()) {
-                    if(cycle.contains(node)) {
-                        updateIds.add(entry.getKey());
-                    }
-                }
-            }
-
-            for(Integer id: updateIds) {
-                Node node = packingGraph.getNode(id);
-                if(node.getMinInOut() == 0) {
-                    node.acyclic = true;
-                    bestCycles.remove(node.id);
-                    continue;
-                }
-                Cycle cycle = SimpleBFS.findBestCycle(packingGraph, node, 3);
-                if(cycle == null) {
-                    node.acyclic = true;
-                    bestCycles.remove(node.id);
-                } else {
-                    bestCycles.put(node.id, cycle);
-                }
-            }
-        }
+    public int size() {
+        return packing.stream().mapToInt(Component::getK).sum();
     }
 
-    public void fillPacking() {
+    public void initPacking() {
 
         Cycle pair;
         while((pair = packingGraph.getFirstPairCycle()) != null) {
@@ -192,6 +113,7 @@ public class PackingManager {
             }
             packing.add(pair);
         }
+
         while(!isDAG()) {
             PerformanceTimer.log(PerformanceTimer.MethodType.PACKING);
             PerformanceTimer.start();
@@ -217,4 +139,3 @@ public class PackingManager {
         return isDAG;
     }
 }
-

@@ -7,81 +7,49 @@ import program.model.Node;
 import java.util.LinkedList;
 import java.util.List;
 
-public class PackingBFS {
+public abstract class PackingBFS {
 
-    private final List<Node> queue = new LinkedList<>();
+    private static final List<Node> queue = new LinkedList<>();
 
-    public Cycle run(Node node, Graph graph) {
+    public static Cycle findBestCycle(Graph graph, Node root) {
 
         // Reset node attributes
-        queue.clear();
         graph.resetBFS();
-
-        // Visit the start node
-        node.visitIndex = 0;
-
-        Cycle cycle = visitNode(node, graph);
-        if(cycle != null) {
-            return cycle;
-        }
+        queue.clear();
+        queue.add(root);
+        root.visitIndex = 0;
 
         while(!queue.isEmpty()) {
-            Node next = queue.remove(0);
-            next.visitIndex = next.parent.visitIndex + 1;
-            cycle = visitNode(next, graph);
-            if(cycle != null) {
-                return cycle;
-            }
+            Node nextNode = queue.remove(0);
+            Cycle cycle = visitNode(graph, nextNode, root);
+            if(cycle != null) return cycle;
         }
         return null;
     }
 
-    /**
-     * Visits a node from the queue. All outgoing neighbors are checked:
-     * When they don't have a parent yet, they are added to the queue.
-     * When they were already visited, it is checked, if a cycle exists.
-     * @param node node A.
-     * @return a cycle when found.
-     */
-    private Cycle visitNode(Node node, Graph graph) {
-
+    private static Cycle visitNode(Graph graph, Node node, Node root) {
         for(Integer outId: node.getOutIds()) {
             Node out = graph.getNode(outId);
-            if(out.parent == null && out.visitIndex == -1) { // Node was not visited and is not in queue
+            if(out.acyclic) continue;
+            if(out.equals(root)) {
+                return pathToRoot(node);
+            } else if(out.parent == null){
                 out.parent = node;
+                out.visitIndex = node.visitIndex + 1;
                 queue.add(out);
-            } else if(out.visitIndex > -1){ // Node is already visited
-                Cycle cycle = findCycle(out, node);
-                if(cycle != null) return cycle;
-            } else {
-                // Node is in queue, but not visited (= out neighbor is on same depth as node))
             }
         }
         return null;
     }
 
-    /**
-     * Called, when an edge B -> A to a visited node A is found.
-     * Checks, if there is a path A -> ... -> B. If yes, a cycle is found.
-     * @param first node A.
-     * @param second node B.
-     * @return cycle when found.
-     */
-    private Cycle findCycle(Node first, Node second) {
+    private static Cycle pathToRoot(Node node) {
 
-        Node pointer = second.parent;
-        Cycle cycle = new Cycle(second);
-
-        if(first.equals(second)) return cycle; // For self-edges
-
+        Cycle cycle = new Cycle(node);
+        Node pointer = node.parent;
         while(pointer != null) {
             cycle.add(pointer);
-            if(pointer.equals(first)) {
-                return cycle;
-            } else {
-                pointer = pointer.parent;
-            }
+            pointer = pointer.parent;
         }
-        return null;
+        return cycle;
     }
 }

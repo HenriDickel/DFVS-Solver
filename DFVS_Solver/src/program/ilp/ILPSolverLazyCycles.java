@@ -2,7 +2,7 @@ package program.ilp;
 import gurobi.*;
 import program.algo.DAG;
 import program.algo.FullBFS;
-import program.packing.PackingManager;
+import program.packing.PackingManagerOld;
 import program.log.Log;
 import program.model.Cycle;
 import program.model.Graph;
@@ -58,7 +58,7 @@ public class ILPSolverLazyCycles  extends GRBCallback{
                 if(!DAG.isDAG(copy)){
 
                     PerformanceTimer.start();
-                    PackingManager pm = new PackingManager(copy);
+                    PackingManagerOld pm = new PackingManagerOld(copy);
                     PerformanceTimer.log(PerformanceTimer.MethodType.PACKING);
                     // For each cycle in packing
                     for(Cycle cycle: pm.getPacking()) {

@@ -78,7 +78,7 @@ public abstract class PerformanceTimer {
     }
 
     public static long getPackingMillis() {
-        return millisPacking / 1000;
+        return millisPacking + millisPackingBFS + millisPackingDAG;
     }
 
     public static void printResult() {

@@ -38,18 +38,6 @@ public abstract class FullBFS {
                     minCycles.add(cycle);
                     minSize = cycle.size();
                 }
-                /*List<Cycle> cycles = SimpleBFS.findBestCycles(graph, node, minSize);
-                for(Cycle cycle: cycles) {
-                    if(cycle != null) {
-                        if(cycle.size() < minSize) {
-                            minCycles.clear();
-                            minCycles.add(cycle);
-                            minSize = cycle.size();
-                        } else if(cycle.size() == minSize) {
-                            minCycles.add(cycle);
-                        }
-                    }
-                }*/
             }
             if(minCycles.size() == 0) {
                 return findShortestCycle(graph);
@@ -155,7 +143,7 @@ public abstract class FullBFS {
     public static List<Cycle> findMultipleShortestCycles(Graph graph, boolean sortResults){
 
 
-        List<Cycle> cycles = graph.getPairCycles(); // TODO in rare cases (e.g. 'email'), it can be beneficial to break after the first cycle is found
+        List<Cycle> cycles = graph.getPairCycles();
         int minSize = 2;
 
         // When there are no cycles of size 2, look for shortest cycles with BFS

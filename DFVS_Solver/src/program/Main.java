@@ -6,6 +6,7 @@ import program.heuristics.Heuristics;
 import program.ilp.ILPSolver;
 import program.log.Log;
 import program.model.*;
+import program.packing.Packings;
 import program.utils.*;
 import program.utils.TimeoutException;
 
@@ -42,11 +43,13 @@ public class Main {
             Log.Clear();
             Log.ignore = false;
 
-            List<GraphFile> files = InstanceCreator.getComplexAndSyntheticFiles(Dataset.DATASET_3, null); //synth-n_1300-m_188195-k_100-p_0.2.txt
+            List<GraphFile> files = InstanceCreator.getComplexAndSyntheticFiles(Dataset.DATASET_3, null);
             //List<GraphFile> files = InstanceCreator.getSelectedFiles();
+            //List<GraphFile> files = InstanceCreator.getUnsolvedFiles();
 
             //Heuristics.testQuality(files);
-            files.forEach(Main::run);
+            Packings.testQuality(files);
+            //files.forEach(Main::run);
         }
     }
 

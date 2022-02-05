@@ -1,7 +1,1 @@
-name,n,m,k_optimal,k_solved,k_start,verified,pre_removed_nodes,removed_flowers,packing_millis,millis,recursive_steps
-advotogo-n_100,26,31,2,2,2,true,26,0,0,54,0
-advotogo-n_1000,624,1883,127,127,120,true,612,0,0,30,6
-advotogo-n_1500,1110,4342,215,215,196,true,1072,0,0,24,11
-advotogo-n_200,63,68,9,9,7,true,60,0,0,5,2
-advotogo-n_2000,1556,6786,297,297,279,true,1526,0,0,26,17
-advotogo-n_3000,2657,16140,548,548,495,true,2556,0,0,102,34
+name,n,m,k_optimal,k_solved,k_start,verified,pre_removed_nodes,packing_size,packing_millis,millis,recursive_steps

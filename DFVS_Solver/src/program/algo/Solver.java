@@ -2,7 +2,7 @@ package program.algo;
 
 import program.log.CycleCounter;
 import program.model.*;
-import program.packing.PackingManager;
+import program.packing.PackingManagerOld;
 import program.utils.Timer;
 import program.utils.PerformanceTimer;
 import program.utils.TimeoutException;
@@ -16,7 +16,7 @@ public abstract class Solver {
     public static Instance instance;
     public static int currentK;
 
-    private static List<Integer> dfvsBranch(Graph graph, int k, int level, PackingManager pm) throws TimeoutException {
+    private static List<Integer> dfvsBranch(Graph graph, int k, int level, PackingManagerOld pm) throws TimeoutException {
 
         if(Timer.isTimeout()) throw new TimeoutException();
 
@@ -45,6 +45,9 @@ public abstract class Solver {
 
         List<Integer> forbiddenIds = new ArrayList<>();
         for (Node node: cycle.getNodes()) {
+
+            if(Timer.isTimeout()) throw new TimeoutException();
+            //System.out.println("remove node " + node);
             // Create a copy of the graph and remove deleted & forbidden nodes
             PerformanceTimer.start();
             Graph copy = graph.copy();
@@ -66,7 +69,7 @@ public abstract class Solver {
             deleteIds.add(node.id);
             // Update packing manager
             PerformanceTimer.start();
-            PackingManager newPm = new PackingManager(pm, deleteIds, forbiddenIds);
+            PackingManagerOld newPm = new PackingManagerOld(pm, deleteIds, forbiddenIds);
             PerformanceTimer.log(PerformanceTimer.MethodType.PACKING);
 
             // When packing is larger than next k, skip & try upgrade packing
@@ -78,11 +81,18 @@ public abstract class Solver {
                 PerformanceTimer.log(PerformanceTimer.MethodType.PACKING);
                 if(newPm.size() > pm.size()) pm = newPm;
                 // If updated packing is > k, immediately return
-                if(pm.size() > k) return null;
-                else continue;
+                if(pm.size() > k) {
+                    //System.out.println("quit level " + level + " (pm)");
+                    return null;
+                }
+                else {
+                    //System.out.println("skip branch on level " + level + " (pm)");
+                    continue;
+                }
             }
 
             // Recursive call
+            //System.out.println("branch on level " + level);
             List<Integer> S = dfvsBranch(copy, nextK, level + 1, newPm);
             if (S != null) {
                 S.add(node.id);
@@ -101,15 +111,17 @@ public abstract class Solver {
             // Add new node to forbidden nodes
             forbiddenIds.add(node.id);
         }
+        //System.out.println("quit level " + level);
         return null;
     }
 
     public static List<Integer> dfvsSolve(Graph initialGraph) {
 
         PerformanceTimer.start();
-        PackingManager pm = new PackingManager(initialGraph);
+        PackingManagerOld pm = new PackingManagerOld(initialGraph);
         Log.debugLog(instance.NAME, "Initial cycle packing size: " + pm.size());
         PerformanceTimer.log(PerformanceTimer.MethodType.PACKING);
+        instance.packingSize += pm.size();
 
         currentK = 0;
         List<Integer> S = null;

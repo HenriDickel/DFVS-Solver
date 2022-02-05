@@ -22,6 +22,7 @@ public class Instance {
     public float[] averageCycleSize;
     public int[] recursiveStepsPerK;
     public int solvedK = 0;
+    public int packingSize = 0;
 
     public int numConstraints = 0;
 

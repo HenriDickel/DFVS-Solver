@@ -2,7 +2,7 @@ package program.ilp;
 
 import gurobi.*;
 import program.algo.FullBFS;
-import program.packing.PackingManager;
+import program.packing.PackingManagerOld;
 import program.log.Log;
 import program.model.Cycle;
 import program.model.Graph;
@@ -49,7 +49,7 @@ public abstract class ILPRules {
 
     public static void addCyclePackingConstraint(GRBModel model, Graph graph) throws GRBException {
         PerformanceTimer.start();
-        PackingManager pm = new PackingManager(graph);
+        PackingManagerOld pm = new PackingManagerOld(graph);
         PerformanceTimer.log(PerformanceTimer.MethodType.PACKING);
         int index = 0;
         for(Cycle cycle: pm.getPacking()) {

@@ -41,6 +41,12 @@ public class Cycle extends Component {
         return false;
     }
 
+    public int getMinInOutSum() {
+        int minInOutSum = 0;
+        for(Node node: nodes) minInOutSum += node.getMinInOut();
+        return minInOutSum;
+    }
+
     public boolean isFullyConnected(Integer otherId) {
         for(Node node: nodes) {
             if(node.id.equals(otherId)) return false;
@@ -62,6 +68,6 @@ public class Cycle extends Component {
     @Override
     public String toString() {
         List<String> nodeLabels = nodes.stream().map(Node::toString).collect(Collectors.toList());
-        return String.join("-", nodeLabels);
+        return String.join("-", nodeLabels) + " [" + getK() + "]";
     }
 }
