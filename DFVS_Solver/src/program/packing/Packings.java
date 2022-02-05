@@ -29,7 +29,7 @@ public abstract class Packings {
             // Solve instance with heuristic
             Graph initialGraph = instance.subGraphs.get(0);
             List<Integer> reduceS = Reduction.applyRules(initialGraph, true);
-            PackingManager pm = new PackingManager(initialGraph);
+            PackingManager pm = new PackingManager(initialGraph, 10000);
             int packingK = reduceS.size() + pm.size();
 
             if(packingK > instance.OPTIMAL_K) {

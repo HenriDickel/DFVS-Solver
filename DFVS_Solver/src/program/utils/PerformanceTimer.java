@@ -1,7 +1,6 @@
 package program.utils;
 
 import program.algo.Solver;
-import program.heuristics.HeuristicSolver;
 import program.log.Log;
 
 public abstract class PerformanceTimer {
@@ -17,8 +16,6 @@ public abstract class PerformanceTimer {
     private static long millisPacking = 0;
     private static long millisILP = 0;
     private static long millisFile = 0;
-    private static long millisPackingDAG = 0;
-    private static long millisPackingBFS = 0;
 
     public enum MethodType {
         PREPROCESSING,
@@ -29,9 +26,7 @@ public abstract class PerformanceTimer {
         REDUCTION,
         PACKING,
         ILP,
-        FILE,
-        PACKING_DAG,
-        PACKING_BFS
+        FILE
     }
 
     public static void start() {
@@ -68,25 +63,17 @@ public abstract class PerformanceTimer {
             case FILE:
                 millisFile += millis;
                 break;
-            case PACKING_DAG:
-                millisPackingDAG += millis;
-                break;
-            case PACKING_BFS:
-                millisPackingBFS += millis;
-                break;
         }
         return millis;
     }
 
     public static long getPackingMillis() {
-        return millisPacking + millisPackingBFS + millisPackingDAG;
+        return millisPacking;
     }
 
     public static void printResult() {
-        //Log.debugLog(Solver.instance.NAME, "BFS: " + millisBFS + ", Packing: " + millisPacking + ", Packing DAG: " + millisPackingDAG + ", Packing BFS: "
-        //        + millisPackingBFS + ", Copy: " + millisCopy + ", Red: " + millisReduction + ", DAG: " + millisDAG + ", Pre: " + millisPreprocessing + ", File: " + millisFile, Color.YELLOW);
-        Log.debugLog(Solver.instance.NAME, "BFS: " + millisBFS + ", Packing: " + millisPacking + ", Packing DAG: " + millisPackingDAG + ", Packing BFS: "
-                + millisPackingBFS + ", Copy: " + millisCopy + ", Red: " + millisReduction + ", DAG: " + millisDAG + ", Pre: " + millisPreprocessing + ", File: " + millisFile, Color.YELLOW);
+        Log.debugLog(Solver.instance.NAME, "BFS: " + millisBFS + ", Packing: " + millisPacking + ", Copy: " + millisCopy
+                + ", Red: " + millisReduction + ", DAG: " + millisDAG + ", Pre: " + millisPreprocessing + ", File: " + millisFile, Color.YELLOW);
 
     }
 
@@ -105,7 +92,5 @@ public abstract class PerformanceTimer {
         millisPacking = 0;
         millisILP = 0;
         millisFile = 0;
-        millisPackingDAG = 0;
-        millisPackingBFS = 0;
     }
 }

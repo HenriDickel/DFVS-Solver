@@ -49,8 +49,8 @@ public class Main {
             //List<GraphFile> files = InstanceCreator.getUnsolvedFiles();
 
             //Heuristics.testQuality(files);
-            Packings.testQuality(files);
-            //files.forEach(Main::run);
+            //Packings.testQuality(files);
+            files.forEach(Main::run);
         }
     }
 
@@ -65,8 +65,7 @@ public class Main {
 
         try {
             Log.debugLog(instance.NAME, instance.NAME + " (n = " + instance.N + ", m = " + instance.M + ", k = " + instance.OPTIMAL_K + ")", Color.PURPLE);
-            HeuristicSolver.solveInstance(instance);
-            //Solver.dfvsSolveInstance(instance);
+            Solver.dfvsSolveInstance(instance);
 
             // Verify
             instance.solvedK = instance.S.size();

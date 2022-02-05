@@ -1,1 +1,11 @@
 name,n,m,k_optimal,k_solved,k_start,verified,pre_removed_nodes,packing_size,packing_millis,millis,recursive_steps
+advotogo-n_100,26,31,2,2,2,true,26,0,0,57,0
+advotogo-n_1000,624,1883,127,127,120,true,612,7,5,24,6
+advotogo-n_1500,1110,4342,215,215,196,true,1072,19,1,14,11
+advotogo-n_200,63,68,9,9,7,true,60,2,0,3,2
+advotogo-n_2000,1556,6786,297,297,279,true,1526,17,3,20,18
+advotogo-n_3000,2657,16140,548,548,495,true,2556,51,12,58,34
+advotogo-n_4000,3775,29831,863,855,554,false,3090,282,56728,90001,129804
+advotogo-n_50,0,0,0,0,0,true,0,0,0,1,0
+advotogo-n_500,247,446,39,39,37,true,244,2,1,2,2
+advotogo-n_5000,4962,43776,1160,1145,699,false,3953,420,42143,90001,78568

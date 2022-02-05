@@ -305,11 +305,11 @@ public abstract class InstanceCreator {
         String syntheticPath = getSyntheticPath(Dataset.DATASET_3);
         String solutionPath = getSolutionPath(Dataset.DATASET_3);
 
-        String name = "chess-n_1500";
+        String name = "link-kv-n_1000";
+        files.add(new GraphFile(complexPath, name, readOptimalKFromFile(solutionPath, name)));
+        name = "chess-n_1500";
         files.add(new GraphFile(complexPath, name, readOptimalKFromFile(solutionPath, name)));
         name = "health-n_2000";
-        files.add(new GraphFile(complexPath, name, readOptimalKFromFile(solutionPath, name)));
-        name = "link-kv-n_1000";
         files.add(new GraphFile(complexPath, name, readOptimalKFromFile(solutionPath, name)));
         name = "wikispeedia-n_1500";
         files.add(new GraphFile(complexPath, name, readOptimalKFromFile(solutionPath, name)));

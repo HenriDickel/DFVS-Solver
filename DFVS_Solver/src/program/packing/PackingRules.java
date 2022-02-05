@@ -50,9 +50,9 @@ public abstract class PackingRules {
             upgrade = false;
             for(Integer outId: a.getOutIds()) {
                 if(pair.isFullyConnected(outId)) {
-                    Node newNode = packingGraph.getNode(outId);
-                    if(bestNode == null || newNode.getMinInOut() < bestNode.getMinInOut()) {
-                        bestNode = newNode;
+                    Node out = packingGraph.getNode(outId);
+                    if(bestNode == null || out.getMinInOut() < bestNode.getMinInOut()) {
+                        bestNode = out;
                     }
                 }
             }

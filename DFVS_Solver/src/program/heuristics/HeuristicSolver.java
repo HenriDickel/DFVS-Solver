@@ -61,7 +61,7 @@ public abstract class HeuristicSolver {
     public static List<Integer> dfvsHeuristicSolveIncremental(Graph initialGraph, List<Integer> heuristicSol, int upperBound) {
 
         PerformanceTimer.start();
-        PackingManager pm = new PackingManager(initialGraph);
+        PackingManager pm = new PackingManager(initialGraph, 10000);
         Log.debugLog(instance.NAME, "Initial cycle packing size: " + pm.size());
         PerformanceTimer.log(PerformanceTimer.MethodType.PACKING);
         List<Integer> S = null;
@@ -90,7 +90,7 @@ public abstract class HeuristicSolver {
     public static List<Integer> dfvsHeuristicSolveBinary(Graph initialGraph, List<Integer> heuristicSol, int upperBound) {
 
         PerformanceTimer.start();
-        PackingManager pm = new PackingManager(initialGraph);
+        PackingManager pm = new PackingManager(initialGraph, 10000);
         Log.debugLog(instance.NAME, "Initial cycle packing size: " + pm.size());
         PerformanceTimer.log(PerformanceTimer.MethodType.PACKING);
         int lowerBound = pm.size();
@@ -198,7 +198,7 @@ public abstract class HeuristicSolver {
                 PerformanceTimer.start();
                 newPm.addDeletedNodes(deleteIds);
                 newPm.removeForbiddenNodes(forbiddenIds);
-                newPm.fillPacking();
+                newPm.updatePacking();
                 PerformanceTimer.log(PerformanceTimer.MethodType.PACKING);
                 if(newPm.size() > pm.size()) pm = newPm;
                 // If updated packing is > k, immediately return
@@ -218,7 +218,7 @@ public abstract class HeuristicSolver {
             PerformanceTimer.start();
             newPm.addDeletedNodes(deleteIds);
             newPm.removeForbiddenNodes(forbiddenIds);
-            newPm.fillPacking();
+            newPm.updatePacking();
             PerformanceTimer.log(PerformanceTimer.MethodType.PACKING);
             if(newPm.size() > pm.size()) pm = newPm;
 

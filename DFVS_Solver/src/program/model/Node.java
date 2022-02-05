@@ -32,6 +32,7 @@ public class Node {
     // Packing attribute
     public Boolean forbidden = false;
     public Boolean acyclic = false;
+    public Boolean pNew = false;
 
     // Topological order attribute
     public Integer topologicalId;

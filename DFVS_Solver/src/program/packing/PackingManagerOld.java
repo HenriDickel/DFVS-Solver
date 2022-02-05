@@ -114,12 +114,8 @@ public class PackingManagerOld {
             packing.add(pair);
         }
 
-        while(!isDAG()) {
-            PerformanceTimer.log(PerformanceTimer.MethodType.PACKING);
-            PerformanceTimer.start();
+        while(!DAG.isDAGFast(packingGraph)) {
             Cycle cycle = LightBFS.run(packingGraph);
-            PerformanceTimer.log(PerformanceTimer.MethodType.PACKING_BFS);
-            PerformanceTimer.start();
 
             if(cycle.size() == 3) PackingRules.upgradeK2Penta(cycle, packingGraph);
 
@@ -128,14 +124,5 @@ public class PackingManagerOld {
             }
             packing.add(cycle);
         }
-    }
-
-    private boolean isDAG() {
-        PerformanceTimer.log(PerformanceTimer.MethodType.PACKING);
-        PerformanceTimer.start();
-        boolean isDAG = DAG.isDAGFast(packingGraph);
-        PerformanceTimer.log(PerformanceTimer.MethodType.PACKING_DAG);
-        PerformanceTimer.start();
-        return isDAG;
     }
 }
