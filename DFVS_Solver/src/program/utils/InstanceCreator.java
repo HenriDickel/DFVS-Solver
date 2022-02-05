@@ -323,8 +323,8 @@ public abstract class InstanceCreator {
         files.add(new GraphFile(syntheticPath, name, readOptimalKFromFile(solutionPath, name)));
         name = "synth-n_300-m_2943-k_70-p_0.05.txt";
         files.add(new GraphFile(syntheticPath, name, readOptimalKFromFile(solutionPath, name)));
-        //name = "synth-n_3500-m_672789-k_200-p_0.1.txt";
-        //files.add(new GraphFile(syntheticPath, name, readOptimalKFromFile(solutionPath, name)));
+        name = "synth-n_3500-m_672789-k_200-p_0.1.txt";
+        files.add(new GraphFile(syntheticPath, name, readOptimalKFromFile(solutionPath, name)));
         name = "synth-n_700-m_16024-k_150-p_0.05.txt";
         files.add(new GraphFile(syntheticPath, name, readOptimalKFromFile(solutionPath, name)));
         name = "synth-n_700-m_64387-k_200-p_0.2.txt";

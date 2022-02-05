@@ -85,7 +85,7 @@ public abstract class PerformanceTimer {
     public static void printResult() {
         //Log.debugLog(Solver.instance.NAME, "BFS: " + millisBFS + ", Packing: " + millisPacking + ", Packing DAG: " + millisPackingDAG + ", Packing BFS: "
         //        + millisPackingBFS + ", Copy: " + millisCopy + ", Red: " + millisReduction + ", DAG: " + millisDAG + ", Pre: " + millisPreprocessing + ", File: " + millisFile, Color.YELLOW);
-        Log.debugLog(HeuristicSolver.instance.NAME, "BFS: " + millisBFS + ", Packing: " + millisPacking + ", Packing DAG: " + millisPackingDAG + ", Packing BFS: "
+        Log.debugLog(Solver.instance.NAME, "BFS: " + millisBFS + ", Packing: " + millisPacking + ", Packing DAG: " + millisPackingDAG + ", Packing BFS: "
                 + millisPackingBFS + ", Copy: " + millisCopy + ", Red: " + millisReduction + ", DAG: " + millisDAG + ", Pre: " + millisPreprocessing + ", File: " + millisFile, Color.YELLOW);
 
     }
