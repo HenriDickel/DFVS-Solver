@@ -17,12 +17,16 @@ public abstract class HeuristicSolver {
     public static Instance instance;
     public static int currentK;
 
-    public static void solveInstance(Instance instance) {
+    public static void dfvsSolveInstance(Instance instance) throws TimeoutException {
 
+        //Set instance & branch count
         HeuristicSolver.instance = instance;
+        HeuristicSolver.instance = instance;
+
         Graph initialGraph = instance.subGraphs.get(0);
 
         // Preprocessing
+        PerformanceTimer.start();
         List<Integer> reduceS = Reduction.applyRules(initialGraph, true);
         instance.S.addAll(reduceS);
 
@@ -31,90 +35,120 @@ public abstract class HeuristicSolver {
         Log.debugLog(instance.NAME, "Found " + instance.subGraphs.size() + " cyclic sub graph(s) with n = " + instance.subGraphs.stream().map(Graph::getNodeCount).collect(Collectors.toList()));
 
         // Apply rules on each sub graph
-        for (Graph subGraph : instance.subGraphs) {
+        for(Graph subGraph: instance.subGraphs) {
             List<Integer> reduceSubS = Reduction.applyRules(subGraph, true);
             instance.S.addAll(reduceSubS);
         }
 
-        // Log preprocessing
         instance.preRemovedNodes = instance.N - instance.subGraphs.stream().mapToInt(Graph::getNodeCount).sum();
         instance.startK = instance.S.size();
         Log.debugLog(instance.NAME, "Removed " + instance.preRemovedNodes + " nodes in preprocessing, starting with k = " + instance.startK);
+        PerformanceTimer.log(PerformanceTimer.MethodType.PREPROCESSING);
 
-        float totalNodeCount = instance.subGraphs.stream().mapToInt(Graph::getNodeCount).sum();
+        // Run for all sub graphs
         for (Graph subGraph : instance.subGraphs) {
 
             //Check if there is no cycle
             if(DAG.isDAGFast(subGraph)) continue;
 
-            List<Integer> heuristicSol = GraphTimerFast(subGraph, 100, 0.95f, totalNodeCount);
-            int upperBound = heuristicSol.size();
-            List<Integer> S = dfvsHeuristicSolveIncremental(subGraph,heuristicSol,upperBound);
-            //List<Integer> S = dfvsHeuristicSolveBinary(subGraph,heuristicSol,upperBound);
-
+            float nodePercentage = (float) subGraph.getNodeCount() / initialGraph.getNodeCount();
+            List<Integer> S = dfvsSolveIncremental(subGraph, nodePercentage);
             instance.S.addAll(S);
         }
-        Log.debugLog(instance.NAME, "Found solution with k = " + instance.S.size());
-
     }
 
-    public static List<Integer> dfvsHeuristicSolveIncremental(Graph initialGraph, List<Integer> heuristicSol, int upperBound) {
+    public static List<Integer> dfvsSolveIncremental(Graph graph, float nodePercentage) {
 
+        // Calculate cycle packing
         PerformanceTimer.start();
-        PackingManager pm = new PackingManager(initialGraph, 10000);
-        Log.debugLog(instance.NAME, "Initial cycle packing size: " + pm.size());
+        long packingTimeLimit = (long) (10000L * nodePercentage);
+        Log.debugLog(instance.NAME, "Creating cycle packing with time limit = " + packingTimeLimit);
+        PackingManager pm = new PackingManager(graph, packingTimeLimit);
         PerformanceTimer.log(PerformanceTimer.MethodType.PACKING);
-        List<Integer> S = null;
-        if (pm.size() == upperBound) {
-            return heuristicSol;
+        instance.packingSize += pm.size();
+
+        // Calculate heuristic
+        PerformanceTimer.start();
+        long heuristicTimeLimit = (long) (1000L * nodePercentage);
+        Log.debugLog(instance.NAME, "Creating heuristic with time limit = " + heuristicTimeLimit);
+        List<Integer> heuristicS = GraphTimerFast(graph, heuristicTimeLimit, 0.95f);
+        PerformanceTimer.log(PerformanceTimer.MethodType.HEURISTIC);
+        Log.debugLog(instance.NAME, "Solution lies in [" + pm.size() + ", " + heuristicS.size() + "]");
+
+        // Initialize values
+        float startPercentage = 0.5f;
+        int kRange = heuristicS.size() - pm.size() - 1;
+        currentK = pm.size() + Math.round(startPercentage * kRange);
+
+        List<Integer> S;
+        if(pm.size() == heuristicS.size()) {
+            return heuristicS;
         } else {
-            currentK = upperBound;
-            List<Integer> lastFoundS = heuristicSol;
-            Log.debugLogNoBreak(instance.NAME, "Branching with k =");
-            do {
-                currentK-=1;
-                CycleCounter.init(currentK);
+            Log.debugLogNoBreak(instance.NAME, "Branching with k = " + currentK);
+            S = dfvsBranch(graph, currentK, 0, pm);
+        }
+
+        if(S == null) { // move upwards
+            while(S == null) {
+                currentK++;
                 Log.debugLogAdd(" " + currentK, false);
-                S = dfvsHeuristicBranch(initialGraph, currentK, 0,pm);
-                if(S==null){
-                    return lastFoundS;
-                }else{
-                    lastFoundS=S;
+                if(currentK == heuristicS.size()) {
+                    S = heuristicS;
+                } else {
+                    S = dfvsBranch(graph, currentK, 0, pm);
                 }
-            } while (S != null);
+            }
+        } else { // move downwards
+            List<Integer> lowerS = null;
+            while(lowerS != null && currentK > pm.size()) {
+                currentK--;
+                Log.debugLogAdd(" " + currentK, false);
+                lowerS = dfvsBranch(graph, currentK, 0, pm);
+                if(lowerS != null) S = lowerS;
+            }
         }
         Log.debugLogAdd("", true);
         return S;
     }
 
-    public static List<Integer> dfvsHeuristicSolveBinary(Graph initialGraph, List<Integer> heuristicSol, int upperBound) {
+    public static List<Integer> dfvsSolveBinary(Graph graph, float nodePercentage) {
 
+        // Calculate cycle packing
         PerformanceTimer.start();
-        PackingManager pm = new PackingManager(initialGraph, 10000);
-        Log.debugLog(instance.NAME, "Initial cycle packing size: " + pm.size());
+        long packingTimeLimit = (long) (10000L * nodePercentage);
+        Log.debugLog(instance.NAME, "Creating cycle packing with time limit = " + packingTimeLimit);
+        PackingManager pm = new PackingManager(graph, packingTimeLimit);
         PerformanceTimer.log(PerformanceTimer.MethodType.PACKING);
+        instance.packingSize += pm.size();
+
+        // Calculate heuristic
+        PerformanceTimer.start();
+        long heuristicTimeLimit = (long) (1000L * nodePercentage);
+        Log.debugLog(instance.NAME, "Creating heuristic with time limit = " + heuristicTimeLimit);
+        List<Integer> heuristicS = GraphTimerFast(graph, heuristicTimeLimit, 0.95f);
+        PerformanceTimer.log(PerformanceTimer.MethodType.HEURISTIC);
+        Log.debugLog(instance.NAME, "Solution lies in [" + pm.size() + ", " + heuristicS.size() + "]");
+
+
         int lowerBound = pm.size();
+        int upperBound = heuristicS.size();
         List<Integer> S;
         if(pm.size()==upperBound){
-            return heuristicSol;
+            return heuristicS;
         }else{
-            S = dfvsHeuristicBranch(initialGraph, upperBound-1, 0, pm);
+            S = dfvsBranch(graph, upperBound-1, 0, pm);
             if(S==null){
-                return heuristicSol;
+                return heuristicS;
             }else{
                 upperBound-=1;
                 currentK = (lowerBound+upperBound)/2;
                 S = null;
-                List<Integer> lastFoundS = heuristicSol;
+                List<Integer> lastFoundS = heuristicS;
                 Log.debugLogNoBreak(instance.NAME, "Branching with k =");
                 while (S == null) {
-                    CycleCounter.init(currentK);
                     Log.debugLogAdd(" " + currentK, false);
-                    S = dfvsHeuristicBranch(initialGraph, currentK, 0, pm);
+                    S = dfvsBranch(graph, currentK, 0, pm);
                     if (S == null) {
-                        // Log detail logs
-                        instance.averageCycleSize = CycleCounter.getAverageCycleSize();
-                        instance.recursiveStepsPerK = CycleCounter.getRecursiveSteps();
                         lowerBound= currentK;
                     }else{
                         lastFoundS=S;
@@ -125,7 +159,7 @@ public abstract class HeuristicSolver {
                         return lastFoundS;
                     }
                     if(upperBound-lowerBound==1){
-                        List<Integer> lowerBoundS = dfvsHeuristicBranch(initialGraph, lowerBound, 0, pm);
+                        List<Integer> lowerBoundS = dfvsBranch(graph, lowerBound, 0, pm);
                         if(lowerBoundS == null){
                             return lastFoundS;
                         }else{
@@ -141,9 +175,10 @@ public abstract class HeuristicSolver {
 
     }
 
-    private static List<Integer> dfvsHeuristicBranch(Graph graph, int k, int level, PackingManager pm) throws TimeoutException {
+    private static List<Integer> dfvsBranch(Graph graph, int k, int level, PackingManager pm) throws TimeoutException {
 
         if(Timer.isTimeout()) throw new TimeoutException();
+
         // Log recursive steps
         instance.recursiveSteps++;
 
@@ -164,11 +199,11 @@ public abstract class HeuristicSolver {
         Cycle cycle = FullBFS.findBestCycle(graph);
         PerformanceTimer.log(PerformanceTimer.MethodType.BFS);
 
-        // Log cycle
-        //CycleCounter.count(cycle, level);
-
         List<Integer> forbiddenIds = new ArrayList<>();
         for (Node node: cycle.getNodes()) {
+
+            if(Timer.isTimeout()) throw new TimeoutException();
+            //System.out.println("remove node " + node);
             // Create a copy of the graph and remove deleted & forbidden nodes
             PerformanceTimer.start();
             Graph copy = graph.copy();
@@ -202,12 +237,17 @@ public abstract class HeuristicSolver {
                 PerformanceTimer.log(PerformanceTimer.MethodType.PACKING);
                 if(newPm.size() > pm.size()) pm = newPm;
                 // If updated packing is > k, immediately return
-                if(pm.size() > k) return null;
-                else continue;
+                if(pm.size() > k) {
+                    return null;
+                }
+                else {
+                    continue;
+                }
             }
 
             // Recursive call
-            List<Integer> S = dfvsHeuristicBranch(copy, nextK, level + 1, newPm);
+            //System.out.println("branch on level " + level);
+            List<Integer> S = dfvsBranch(copy, nextK, level + 1, newPm);
             if (S != null) {
                 S.add(node.id);
                 S.addAll(reduceS);
@@ -228,24 +268,16 @@ public abstract class HeuristicSolver {
         return null;
     }
 
-    private static List<Integer> GraphTimerFast(Graph subGraph, int timeLimitMillis, float precision, float totalNodeCount) {
+    private static List<Integer> GraphTimerFast(Graph subGraph, long timeLimit, float precision) {
 
-        // Destroy cycles by heuristic
-        float percentage = (float) subGraph.getNodeCount() / totalNodeCount;
-        long millisForThisGraph = (long) (timeLimitMillis * percentage);
-
-        //All solutions
         List<List<Integer>> solutions = new ArrayList<>();
 
-        long startTime = System.currentTimeMillis();
+        long endMillis = System.currentTimeMillis() + timeLimit;
 
-        while(System.currentTimeMillis() <= startTime + millisForThisGraph){
+        while(System.currentTimeMillis() <= endMillis){
             solutions.add(GraphTimerRecFast(subGraph, new ArrayList<>(), precision));
         }
-
-        //Best solution
-        List<Integer> sol = Collections.min(solutions, Comparator.comparing(List::size));
-        return sol;
+        return Collections.min(solutions, Comparator.comparing(List::size));
     }
 
     private static List<Integer> GraphTimerRecFast(Graph graph, List<Integer> solution, float precision) {

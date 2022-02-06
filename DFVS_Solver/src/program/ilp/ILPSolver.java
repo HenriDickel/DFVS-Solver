@@ -66,7 +66,7 @@ public abstract class ILPSolver {
             long millis = timeLimit * 1000;
             Log.ilpLog(instance, millis, false);
             Log.detailLog(instance);
-            PerformanceTimer.printILPResult();
+            PerformanceTimer.printILPResult(instance.NAME);
             Log.debugLog(instance.NAME, "Found no solution in " + Timer.format(millis), Color.RED);
             return;
         }
@@ -79,7 +79,7 @@ public abstract class ILPSolver {
         boolean verified = millis < timeLimit * 1000;
         if(millis > timeLimit * 1000) millis = timeLimit * 1000;
         Log.ilpLog(instance, millis, verified);
-        PerformanceTimer.printILPResult();
+        PerformanceTimer.printILPResult(instance.NAME);
         Color color = verified ? Color.WHITE : Color.RED;
         Log.debugLog(instance.NAME, "Found solution with k = " + instance.S.size() + " in " + Timer.format(millis), color);
     }

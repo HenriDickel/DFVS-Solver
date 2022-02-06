@@ -65,7 +65,7 @@ public class Main {
 
         try {
             Log.debugLog(instance.NAME, instance.NAME + " (n = " + instance.N + ", m = " + instance.M + ", k = " + instance.OPTIMAL_K + ")", Color.PURPLE);
-            Solver.dfvsSolveInstance(instance);
+            HeuristicSolver.dfvsSolveInstance(instance);
 
             // Verify
             instance.solvedK = instance.S.size();
@@ -75,7 +75,7 @@ public class Main {
             Log.mainLog(instance, Timer.getMillis(), PerformanceTimer.getPackingMillis(), verified);
             Color color = verified ? Color.WHITE : Color.RED;
             Log.debugLog(instance.NAME, "Found solution in " + Timer.getMillis() + " ms (recursive steps: " + instance.recursiveSteps + ")", color);
-            PerformanceTimer.printResult();
+            PerformanceTimer.printResult(instance.NAME);
 
         } catch (TimeoutException e) {
             instance.solvedK = instance.S.size() + Solver.currentK;
@@ -84,7 +84,7 @@ public class Main {
             Log.debugLogAdd("", true);
             Log.mainLog(instance, Timer.getMillis(), PerformanceTimer.getPackingMillis(), false);
             Log.debugLog(instance.NAME, "Found no solution in " + Timer.getMillis() + " ms (recursive steps: " + instance.recursiveSteps + ")", Color.RED);
-            PerformanceTimer.printResult();
+            PerformanceTimer.printResult(instance.NAME);
         }
     }
 }

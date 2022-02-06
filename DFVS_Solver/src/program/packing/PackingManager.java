@@ -81,8 +81,6 @@ public class PackingManager {
             }
         }
         updatePacking();
-        //fillPackingWithPairs();
-        //fillPackingWithLightBFS();
     }
 
     public void addDeletedNodes(List<Integer> deletedIds) {
@@ -146,18 +144,36 @@ public class PackingManager {
     }
 
     private void fillPackingWithPairs() {
-        // First add pair cycles to the packing
-        Cycle pair;
-        while((pair = packingGraph.getFirstPairCycle()) != null) {
+
+        List<Cycle> pairs = packingGraph.getPairCycles();
+        while(!pairs.isEmpty()) {
+
+            Cycle bestPair = null;
+            int minMinInOutSum = Integer.MAX_VALUE;
+            for(Cycle pair: pairs) {
+                if(bestPair == null || pair.getMinInOutSum() < minMinInOutSum) {
+                    minMinInOutSum = pair.getMinInOutSum();
+                    bestPair = pair;
+                }
+            }
 
             // Look for fully connected triangles, quads etc.
-            PackingRules.upgradeFullyConnected(pair, packingGraph);
-            //PackingRules.upgradeK2Quad(pair, packingGraph);
+            PackingRules.upgradeFullyConnected(bestPair, packingGraph);
 
-            for (Node node : pair.getNodes()) {
+            for (Node node : bestPair.getNodes()) {
                 packingGraph.removeNode(node.id);
             }
-            packing.add(pair);
+            packing.add(bestPair);
+
+            List<Cycle> removePairs = new ArrayList<>();
+            for(Cycle pair: pairs) {
+                if(!packingGraph.hasNode(pair.get(0).id) || !packingGraph.hasNode(pair.get(1).id)) {
+                    removePairs.add(pair);
+                }
+            }
+            for(Cycle removePair: removePairs) {
+                pairs.remove(removePair);
+            }
         }
     }
 
@@ -173,7 +189,6 @@ public class PackingManager {
                     bestCycle = cycle;
                 }
             }
-            if(bestCycle.size() == 3) PackingRules.upgradeK2Penta(bestCycle, packingGraph);
 
             // Add the cycle to the packing and remove its nodes from the graph
             packing.add(bestCycle);

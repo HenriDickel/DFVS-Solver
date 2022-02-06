@@ -16,6 +16,7 @@ public abstract class PerformanceTimer {
     private static long millisPacking = 0;
     private static long millisILP = 0;
     private static long millisFile = 0;
+    private static long millisHeuristic = 0;
 
     public enum MethodType {
         PREPROCESSING,
@@ -26,7 +27,8 @@ public abstract class PerformanceTimer {
         REDUCTION,
         PACKING,
         ILP,
-        FILE
+        FILE,
+        HEURISTIC
     }
 
     public static void start() {
@@ -63,6 +65,9 @@ public abstract class PerformanceTimer {
             case FILE:
                 millisFile += millis;
                 break;
+            case HEURISTIC:
+                millisHeuristic += millis;
+                break;
         }
         return millis;
     }
@@ -71,15 +76,15 @@ public abstract class PerformanceTimer {
         return millisPacking;
     }
 
-    public static void printResult() {
-        Log.debugLog(Solver.instance.NAME, "BFS: " + millisBFS + ", Packing: " + millisPacking + ", Copy: " + millisCopy
+    public static void printResult(String name) {
+        Log.debugLog(name, "BFS: " + millisBFS + ", Packing: " + millisPacking + ", Heuristic: " + millisHeuristic + ", Copy: " + millisCopy
                 + ", Red: " + millisReduction + ", DAG: " + millisDAG + ", Pre: " + millisPreprocessing + ", File: " + millisFile, Color.YELLOW);
 
     }
 
 
-    public static void printILPResult() {
-        Log.debugLog(Solver.instance.NAME, "Preprocessing: " + millisPreprocessing / 1000 + "s, BFS: " + millisBFS / 1000 + " ms, Packing: " + millisPacking / 1000 + "s, ILP: " + millisILP / 1000 + "s");
+    public static void printILPResult(String name) {
+        Log.debugLog(name, "Preprocessing: " + millisPreprocessing / 1000 + "s, BFS: " + millisBFS / 1000 + " ms, Packing: " + millisPacking / 1000 + "s, ILP: " + millisILP / 1000 + "s");
     }
 
     public static void reset() {
@@ -92,5 +97,6 @@ public abstract class PerformanceTimer {
         millisPacking = 0;
         millisILP = 0;
         millisFile = 0;
+        millisHeuristic = 0;
     }
 }

@@ -83,12 +83,12 @@ public abstract class Log {
         try {
             new File(DEBUG_LOG_PATH).createNewFile();
             new File(MAIN_LOG_PATH).createNewFile();
-            new File(ILP_LOG_PATH).createNewFile();
-            new File(DETAIL_LOG_PATH).createNewFile();
+            //new File(ILP_LOG_PATH).createNewFile();
+            //new File(DETAIL_LOG_PATH).createNewFile();
             new File(HEURISTIC_LOG_PATH).createNewFile();
             new PrintWriter(DEBUG_LOG_PATH).close();
             new PrintWriter(MAIN_LOG_PATH).close();
-            new PrintWriter(ILP_LOG_PATH).close();
+            //new PrintWriter(ILP_LOG_PATH).close();
             new PrintWriter(HEURISTIC_LOG_PATH).close();
         } catch (IOException e) {
             e.printStackTrace();
@@ -98,7 +98,7 @@ public abstract class Log {
             output.println("name,n,m,k_optimal,k_solved,k_start,verified,pre_removed_nodes,packing_size,packing_millis,millis,recursive_steps");
         }
         catch (Exception ignored) {}
-        try(PrintWriter output = new PrintWriter(new FileWriter(ILP_LOG_PATH,true)))
+        /*try(PrintWriter output = new PrintWriter(new FileWriter(ILP_LOG_PATH,true)))
         {
             output.println("name,n,m,pre_removed_nodes,k_start,k_optimal,k_solved,num_constraints,verified,millis");
         }
@@ -107,7 +107,7 @@ public abstract class Log {
         {
             output.println("name,level,cycle_size,recursive_steps");
         }
-        catch (Exception ignored) {}
+        catch (Exception ignored) {}*/
         try(PrintWriter output = new PrintWriter(new FileWriter(HEURISTIC_LOG_PATH,true)))
         {
             output.println("name,k_optimal,k_approx,millis");

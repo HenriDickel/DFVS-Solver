@@ -40,9 +40,6 @@ public abstract class Solver {
         Cycle cycle = FullBFS.findBestCycle(graph);
         PerformanceTimer.log(PerformanceTimer.MethodType.BFS);
 
-        // Log cycle
-        CycleCounter.count(cycle, level);
-
         List<Integer> forbiddenIds = new ArrayList<>();
         for (Node node: cycle.getNodes()) {
 
@@ -112,28 +109,22 @@ public abstract class Solver {
         return null;
     }
 
-    public static List<Integer> dfvsSolve(Graph initialGraph) {
+    public static List<Integer> dfvsSolve(Graph initialGraph, float nodePercentage) {
 
         PerformanceTimer.start();
-        PackingManager pm = new PackingManager(initialGraph, 10000);
+        long packingTimeLimit = (long) (10000L * nodePercentage);
+        Log.debugLog(instance.NAME, "Creating cycle packing with time limit = " + packingTimeLimit);
+        PackingManager pm = new PackingManager(initialGraph, packingTimeLimit);
         Log.debugLog(instance.NAME, "Initial cycle packing size: " + pm.size());
         PerformanceTimer.log(PerformanceTimer.MethodType.PACKING);
         instance.packingSize += pm.size();
 
-        currentK = 0;
+        currentK = pm.size();
         List<Integer> S = null;
         Log.debugLogNoBreak(instance.NAME, "Branching with k =");
         while (S == null) {
-            if(currentK >= pm.size()) {
-                CycleCounter.init(currentK);
-                Log.debugLogAdd(" " + currentK, false);
-                S = dfvsBranch(initialGraph, currentK, 0, pm);
-                if (S == null) {
-                    // Log detail logs
-                    instance.averageCycleSize = CycleCounter.getAverageCycleSize();
-                    instance.recursiveStepsPerK = CycleCounter.getRecursiveSteps();
-                }
-            }
+            Log.debugLogAdd(" " + currentK, false);
+            S = dfvsBranch(initialGraph, currentK, 0, pm);
             currentK++;
         }
         Log.debugLogAdd("", true);
@@ -173,7 +164,8 @@ public abstract class Solver {
             //Check if there is no cycle
             if(DAG.isDAGFast(subGraph)) continue;
 
-            List<Integer> S = dfvsSolve(subGraph);
+            float nodePercentage = (float) subGraph.getNodeCount() / initialGraph.getNodeCount();
+            List<Integer> S = dfvsSolve(subGraph, nodePercentage);
             instance.S.addAll(S);
         }
     }
