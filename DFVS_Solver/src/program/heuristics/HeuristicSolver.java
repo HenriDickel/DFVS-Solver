@@ -69,14 +69,14 @@ public abstract class HeuristicSolver {
 
         // Calculate heuristic
         PerformanceTimer.start();
-        long heuristicTimeLimit = (long) (1000L * nodePercentage);
+        long heuristicTimeLimit = (long) (10000L * nodePercentage);
         Log.debugLog(instance.NAME, "Creating heuristic with time limit = " + heuristicTimeLimit);
-        List<Integer> heuristicS = GraphTimerFast(graph, heuristicTimeLimit, 0.95f);
+        List<Integer> heuristicS = GraphTimerFast(graph, heuristicTimeLimit, 0.95f, pm.size());
         PerformanceTimer.log(PerformanceTimer.MethodType.HEURISTIC);
         Log.debugLog(instance.NAME, "Solution lies in [" + pm.size() + ", " + heuristicS.size() + "]");
 
         // Initialize values
-        float startPercentage = 0.5f;
+        float startPercentage = 1.0f;
         int kRange = heuristicS.size() - pm.size() - 1;
         currentK = pm.size() + Math.round(startPercentage * kRange);
 
@@ -99,7 +99,7 @@ public abstract class HeuristicSolver {
                 }
             }
         } else { // move downwards
-            List<Integer> lowerS = null;
+            List<Integer> lowerS = S;
             while(lowerS != null && currentK > pm.size()) {
                 currentK--;
                 Log.debugLogAdd(" " + currentK, false);
@@ -125,7 +125,7 @@ public abstract class HeuristicSolver {
         PerformanceTimer.start();
         long heuristicTimeLimit = (long) (1000L * nodePercentage);
         Log.debugLog(instance.NAME, "Creating heuristic with time limit = " + heuristicTimeLimit);
-        List<Integer> heuristicS = GraphTimerFast(graph, heuristicTimeLimit, 0.95f);
+        List<Integer> heuristicS = GraphTimerFast(graph, heuristicTimeLimit, 0.95f, pm.size());
         PerformanceTimer.log(PerformanceTimer.MethodType.HEURISTIC);
         Log.debugLog(instance.NAME, "Solution lies in [" + pm.size() + ", " + heuristicS.size() + "]");
 
@@ -182,16 +182,12 @@ public abstract class HeuristicSolver {
         // Log recursive steps
         instance.recursiveSteps++;
 
-        // Break to skip the redundant dfvs_branch()-call when k = 0
-        if (k <= 0) {
-            // Return if graph has no circles
-            PerformanceTimer.start();
-            boolean isDAG = DAG.isDAGFast(graph);
-            PerformanceTimer.log(PerformanceTimer.MethodType.DAG);
-            if (isDAG) {
-                return new ArrayList<>();
-            }
-            else return null;
+        // Return if graph has no circles
+        PerformanceTimer.start();
+        boolean isDAG = DAG.isDAGFast(graph);
+        PerformanceTimer.log(PerformanceTimer.MethodType.DAG);
+        if (isDAG) {
+            return new ArrayList<>();
         }
 
         // Next Cycle
@@ -268,16 +264,21 @@ public abstract class HeuristicSolver {
         return null;
     }
 
-    private static List<Integer> GraphTimerFast(Graph subGraph, long timeLimit, float precision) {
-
-        List<List<Integer>> solutions = new ArrayList<>();
+    private static List<Integer> GraphTimerFast(Graph subGraph, long timeLimit, float precision, int lowerBound) {
 
         long endMillis = System.currentTimeMillis() + timeLimit;
 
+        List<Integer> bestS = null;
         while(System.currentTimeMillis() <= endMillis){
-            solutions.add(GraphTimerRecFast(subGraph, new ArrayList<>(), precision));
+            List<Integer> S = GraphTimerRecFast(subGraph, new ArrayList<>(), precision);
+
+            if(S.size() == lowerBound) return S;
+            if(bestS == null || S.size() < bestS.size()) {
+                bestS = S;
+            }
+
         }
-        return Collections.min(solutions, Comparator.comparing(List::size));
+        return bestS;
     }
 
     private static List<Integer> GraphTimerRecFast(Graph graph, List<Integer> solution, float precision) {

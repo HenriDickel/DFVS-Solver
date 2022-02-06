@@ -619,7 +619,7 @@ public abstract class DFVSHeuristicSolver {
             Cycle randomCycle = allShortestCycles.get(random.nextInt(allShortestCycles.size()));
 
             //Get best node
-            Node node = Collections.max(randomCycle.getNodes(), Comparator.comparing(x -> Math.min(x.getOutIdCount(), x.getInIdCount())));
+            Node node = Collections.max(randomCycle.getNodes(), Comparator.comparing(Node::getMinInOut));
 
             //Don't delete twice
             if(copySolution.contains(node.id)) continue;
@@ -637,7 +637,6 @@ public abstract class DFVSHeuristicSolver {
 
         //Do again
         return TimerRecFast(copyGraph, copySolution, precision);
-
     }
 
 

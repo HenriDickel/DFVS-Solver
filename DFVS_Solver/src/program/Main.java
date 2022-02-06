@@ -48,9 +48,9 @@ public class Main {
             //List<GraphFile> files = InstanceCreator.getSelectedFiles();
             //List<GraphFile> files = InstanceCreator.getUnsolvedFiles();
 
-            //Heuristics.testQuality(files);
+            Heuristics.testQuality(files);
             //Packings.testQuality(files);
-            files.forEach(Main::run);
+            //files.forEach(Main::run);
         }
     }
 
@@ -78,7 +78,7 @@ public class Main {
             PerformanceTimer.printResult(instance.NAME);
 
         } catch (TimeoutException e) {
-            instance.solvedK = instance.S.size() + Solver.currentK;
+            instance.solvedK = instance.S.size() + HeuristicSolver.currentK;
 
             // Log results
             Log.debugLogAdd("", true);

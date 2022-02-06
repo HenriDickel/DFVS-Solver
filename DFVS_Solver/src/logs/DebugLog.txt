@@ -1,783 +1,313 @@
-[35m[2022-02-06 13:02:08.437]       synth-n_100-m_1093-k_5-p_0.2.txt: synth-n_100-m_1093-k_5-p_0.2.txt (n = 100, m = 1093, k = 5)[0m
-[0m[2022-02-06 13:02:08.465]       synth-n_100-m_1093-k_5-p_0.2.txt: Found 0 cyclic sub graph(s) with n = [][0m
-[0m[2022-02-06 13:02:08.467]       synth-n_100-m_1093-k_5-p_0.2.txt: Removed 100 nodes in preprocessing, starting with k = 5[0m
-[0m[2022-02-06 13:02:08.478]       synth-n_100-m_1093-k_5-p_0.2.txt: Found solution in 72 ms (recursive steps: 0)[0m
-[33m[2022-02-06 13:02:08.486]       synth-n_100-m_1093-k_5-p_0.2.txt: BFS: 0, Packing: 0, Heuristic: 0, Copy: 0, Red: 0, DAG: 0, Pre: 13, File: 12[0m
-[35m[2022-02-06 13:02:08.488]      synth-n_100-m_1146-k_10-p_0.2.txt: synth-n_100-m_1146-k_10-p_0.2.txt (n = 100, m = 1146, k = 10)[0m
-[0m[2022-02-06 13:02:08.491]      synth-n_100-m_1146-k_10-p_0.2.txt: Found 1 cyclic sub graph(s) with n = [92][0m
-[0m[2022-02-06 13:02:08.492]      synth-n_100-m_1146-k_10-p_0.2.txt: Removed 8 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-06 13:02:08.496]      synth-n_100-m_1146-k_10-p_0.2.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:02:08.509]      synth-n_100-m_1146-k_10-p_0.2.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:02:09.513]      synth-n_100-m_1146-k_10-p_0.2.txt: Solution lies in [10, 10][0m
-[0m[2022-02-06 13:02:09.515]      synth-n_100-m_1146-k_10-p_0.2.txt: Found solution in 1029 ms (recursive steps: 0)[0m
-[33m[2022-02-06 13:02:09.515]      synth-n_100-m_1146-k_10-p_0.2.txt: BFS: 0, Packing: 14, Heuristic: 1003, Copy: 0, Red: 0, DAG: 0, Pre: 4, File: 2[0m
-[35m[2022-02-06 13:02:09.517]      synth-n_100-m_1151-k_15-p_0.2.txt: synth-n_100-m_1151-k_15-p_0.2.txt (n = 100, m = 1151, k = 15)[0m
-[0m[2022-02-06 13:02:09.518]      synth-n_100-m_1151-k_15-p_0.2.txt: Found 1 cyclic sub graph(s) with n = [97][0m
-[0m[2022-02-06 13:02:09.518]      synth-n_100-m_1151-k_15-p_0.2.txt: Removed 3 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-06 13:02:09.518]      synth-n_100-m_1151-k_15-p_0.2.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:02:09.522]      synth-n_100-m_1151-k_15-p_0.2.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:02:10.523]      synth-n_100-m_1151-k_15-p_0.2.txt: Solution lies in [15, 15][0m
-[0m[2022-02-06 13:02:10.524]      synth-n_100-m_1151-k_15-p_0.2.txt: Found solution in 1009 ms (recursive steps: 0)[0m
-[33m[2022-02-06 13:02:10.524]      synth-n_100-m_1151-k_15-p_0.2.txt: BFS: 0, Packing: 4, Heuristic: 1001, Copy: 0, Red: 0, DAG: 0, Pre: 1, File: 2[0m
-[35m[2022-02-06 13:02:10.525]      synth-n_100-m_1229-k_20-p_0.2.txt: synth-n_100-m_1229-k_20-p_0.2.txt (n = 100, m = 1229, k = 20)[0m
-[0m[2022-02-06 13:02:10.526]      synth-n_100-m_1229-k_20-p_0.2.txt: Found 1 cyclic sub graph(s) with n = [100][0m
-[0m[2022-02-06 13:02:10.526]      synth-n_100-m_1229-k_20-p_0.2.txt: Removed 0 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-06 13:02:10.527]      synth-n_100-m_1229-k_20-p_0.2.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:02:10.529]      synth-n_100-m_1229-k_20-p_0.2.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:02:11.531]      synth-n_100-m_1229-k_20-p_0.2.txt: Solution lies in [20, 20][0m
-[0m[2022-02-06 13:02:11.532]      synth-n_100-m_1229-k_20-p_0.2.txt: Found solution in 1008 ms (recursive steps: 0)[0m
-[33m[2022-02-06 13:02:11.532]      synth-n_100-m_1229-k_20-p_0.2.txt: BFS: 0, Packing: 2, Heuristic: 1002, Copy: 0, Red: 0, DAG: 0, Pre: 0, File: 1[0m
-[35m[2022-02-06 13:02:11.533]      synth-n_100-m_1263-k_25-p_0.2.txt: synth-n_100-m_1263-k_25-p_0.2.txt (n = 100, m = 1263, k = 25)[0m
-[0m[2022-02-06 13:02:11.533]      synth-n_100-m_1263-k_25-p_0.2.txt: Found 1 cyclic sub graph(s) with n = [100][0m
-[0m[2022-02-06 13:02:11.534]      synth-n_100-m_1263-k_25-p_0.2.txt: Removed 0 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-06 13:02:11.534]      synth-n_100-m_1263-k_25-p_0.2.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:02:11.536]      synth-n_100-m_1263-k_25-p_0.2.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:02:12.539]      synth-n_100-m_1263-k_25-p_0.2.txt: Solution lies in [25, 25][0m
-[0m[2022-02-06 13:02:12.539]      synth-n_100-m_1263-k_25-p_0.2.txt: Found solution in 1007 ms (recursive steps: 0)[0m
-[33m[2022-02-06 13:02:12.540]      synth-n_100-m_1263-k_25-p_0.2.txt: BFS: 0, Packing: 2, Heuristic: 1003, Copy: 0, Red: 0, DAG: 0, Pre: 1, File: 1[0m
-[35m[2022-02-06 13:02:12.541]      synth-n_100-m_1275-k_30-p_0.2.txt: synth-n_100-m_1275-k_30-p_0.2.txt (n = 100, m = 1275, k = 30)[0m
-[0m[2022-02-06 13:02:12.542]      synth-n_100-m_1275-k_30-p_0.2.txt: Found 1 cyclic sub graph(s) with n = [100][0m
-[0m[2022-02-06 13:02:12.542]      synth-n_100-m_1275-k_30-p_0.2.txt: Removed 0 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-06 13:02:12.542]      synth-n_100-m_1275-k_30-p_0.2.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:02:12.544]      synth-n_100-m_1275-k_30-p_0.2.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:02:13.545]      synth-n_100-m_1275-k_30-p_0.2.txt: Solution lies in [29, 30][0m
-[2022-02-06 13:02:13.546]      synth-n_100-m_1275-k_30-p_0.2.txt: Branching with k = 29
-[0m[2022-02-06 13:02:13.562]      synth-n_100-m_1275-k_30-p_0.2.txt: Found solution in 1022 ms (recursive steps: 24)[0m
-[33m[2022-02-06 13:02:13.562]      synth-n_100-m_1275-k_30-p_0.2.txt: BFS: 2, Packing: 5, Heuristic: 1001, Copy: 3, Red: 1, DAG: 0, Pre: 1, File: 1[0m
-[35m[2022-02-06 13:02:13.563]       synth-n_100-m_263-k_5-p_0.05.txt: synth-n_100-m_263-k_5-p_0.05.txt (n = 99, m = 263, k = 5)[0m
-[0m[2022-02-06 13:02:13.563]       synth-n_100-m_263-k_5-p_0.05.txt: Found 0 cyclic sub graph(s) with n = [][0m
-[0m[2022-02-06 13:02:13.564]       synth-n_100-m_263-k_5-p_0.05.txt: Removed 99 nodes in preprocessing, starting with k = 5[0m
-[0m[2022-02-06 13:02:13.564]       synth-n_100-m_263-k_5-p_0.05.txt: Found solution in 2 ms (recursive steps: 0)[0m
-[33m[2022-02-06 13:02:13.564]       synth-n_100-m_263-k_5-p_0.05.txt: BFS: 0, Packing: 0, Heuristic: 0, Copy: 0, Red: 0, DAG: 0, Pre: 1, File: 1[0m
-[35m[2022-02-06 13:02:13.565]      synth-n_100-m_289-k_10-p_0.05.txt: synth-n_100-m_289-k_10-p_0.05.txt (n = 99, m = 289, k = 4)[0m
-[0m[2022-02-06 13:02:13.565]      synth-n_100-m_289-k_10-p_0.05.txt: Found 1 cyclic sub graph(s) with n = [13][0m
-[0m[2022-02-06 13:02:13.565]      synth-n_100-m_289-k_10-p_0.05.txt: Removed 86 nodes in preprocessing, starting with k = 1[0m
-[0m[2022-02-06 13:02:13.566]      synth-n_100-m_289-k_10-p_0.05.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:02:13.566]      synth-n_100-m_289-k_10-p_0.05.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:02:14.573]      synth-n_100-m_289-k_10-p_0.05.txt: Solution lies in [3, 3][0m
-[0m[2022-02-06 13:02:14.573]      synth-n_100-m_289-k_10-p_0.05.txt: Found solution in 1008 ms (recursive steps: 0)[0m
-[33m[2022-02-06 13:02:14.573]      synth-n_100-m_289-k_10-p_0.05.txt: BFS: 0, Packing: 0, Heuristic: 1007, Copy: 0, Red: 0, DAG: 0, Pre: 1, File: 0[0m
-[35m[2022-02-06 13:02:14.574]      synth-n_100-m_302-k_15-p_0.05.txt: synth-n_100-m_302-k_15-p_0.05.txt (n = 100, m = 302, k = 8)[0m
-[0m[2022-02-06 13:02:14.574]      synth-n_100-m_302-k_15-p_0.05.txt: Found 1 cyclic sub graph(s) with n = [13][0m
-[0m[2022-02-06 13:02:14.575]      synth-n_100-m_302-k_15-p_0.05.txt: Removed 87 nodes in preprocessing, starting with k = 4[0m
-[0m[2022-02-06 13:02:14.575]      synth-n_100-m_302-k_15-p_0.05.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:02:14.575]      synth-n_100-m_302-k_15-p_0.05.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:02:15.578]      synth-n_100-m_302-k_15-p_0.05.txt: Solution lies in [4, 4][0m
-[0m[2022-02-06 13:02:15.579]      synth-n_100-m_302-k_15-p_0.05.txt: Found solution in 1005 ms (recursive steps: 0)[0m
-[33m[2022-02-06 13:02:15.579]      synth-n_100-m_302-k_15-p_0.05.txt: BFS: 0, Packing: 0, Heuristic: 1003, Copy: 0, Red: 0, DAG: 0, Pre: 1, File: 0[0m
-[35m[2022-02-06 13:02:15.579]      synth-n_100-m_332-k_20-p_0.05.txt: synth-n_100-m_332-k_20-p_0.05.txt (n = 100, m = 332, k = 14)[0m
-[0m[2022-02-06 13:02:15.580]      synth-n_100-m_332-k_20-p_0.05.txt: Found 1 cyclic sub graph(s) with n = [43][0m
-[0m[2022-02-06 13:02:15.580]      synth-n_100-m_332-k_20-p_0.05.txt: Removed 57 nodes in preprocessing, starting with k = 3[0m
-[0m[2022-02-06 13:02:15.580]      synth-n_100-m_332-k_20-p_0.05.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:02:15.580]      synth-n_100-m_332-k_20-p_0.05.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:02:16.582]      synth-n_100-m_332-k_20-p_0.05.txt: Solution lies in [9, 11][0m
-[2022-02-06 13:02:16.583]      synth-n_100-m_332-k_20-p_0.05.txt: Branching with k = 10
-[0m[2022-02-06 13:02:16.584]      synth-n_100-m_332-k_20-p_0.05.txt: Found solution in 1005 ms (recursive steps: 7)[0m
-[33m[2022-02-06 13:02:16.584]      synth-n_100-m_332-k_20-p_0.05.txt: BFS: 0, Packing: 0, Heuristic: 1002, Copy: 1, Red: 0, DAG: 0, Pre: 1, File: 0[0m
-[35m[2022-02-06 13:02:16.585]      synth-n_100-m_336-k_30-p_0.05.txt: synth-n_100-m_336-k_30-p_0.05.txt (n = 100, m = 336, k = 15)[0m
-[0m[2022-02-06 13:02:16.585]      synth-n_100-m_336-k_30-p_0.05.txt: Found 1 cyclic sub graph(s) with n = [58][0m
-[0m[2022-02-06 13:02:16.585]      synth-n_100-m_336-k_30-p_0.05.txt: Removed 42 nodes in preprocessing, starting with k = 1[0m
-[0m[2022-02-06 13:02:16.585]      synth-n_100-m_336-k_30-p_0.05.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:02:16.586]      synth-n_100-m_336-k_30-p_0.05.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:02:17.587]      synth-n_100-m_336-k_30-p_0.05.txt: Solution lies in [12, 14][0m
-[2022-02-06 13:02:17.587]      synth-n_100-m_336-k_30-p_0.05.txt: Branching with k = 13
-[0m[2022-02-06 13:02:17.608]      synth-n_100-m_336-k_30-p_0.05.txt: Found solution in 1024 ms (recursive steps: 168)[0m
-[33m[2022-02-06 13:02:17.608]      synth-n_100-m_336-k_30-p_0.05.txt: BFS: 1, Packing: 15, Heuristic: 1001, Copy: 2, Red: 3, DAG: 0, Pre: 0, File: 1[0m
-[35m[2022-02-06 13:02:17.609]      synth-n_100-m_343-k_25-p_0.05.txt: synth-n_100-m_343-k_25-p_0.05.txt (n = 100, m = 343, k = 14)[0m
-[0m[2022-02-06 13:02:17.609]      synth-n_100-m_343-k_25-p_0.05.txt: Found 1 cyclic sub graph(s) with n = [57][0m
-[0m[2022-02-06 13:02:17.610]      synth-n_100-m_343-k_25-p_0.05.txt: Removed 43 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-06 13:02:17.610]      synth-n_100-m_343-k_25-p_0.05.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:02:17.610]      synth-n_100-m_343-k_25-p_0.05.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:02:18.612]      synth-n_100-m_343-k_25-p_0.05.txt: Solution lies in [11, 14][0m
-[2022-02-06 13:02:18.612]      synth-n_100-m_343-k_25-p_0.05.txt: Branching with k = 13
-[0m[2022-02-06 13:02:18.616]      synth-n_100-m_343-k_25-p_0.05.txt: Found solution in 1007 ms (recursive steps: 23)[0m
-[33m[2022-02-06 13:02:18.616]      synth-n_100-m_343-k_25-p_0.05.txt: BFS: 1, Packing: 1, Heuristic: 1002, Copy: 0, Red: 0, DAG: 0, Pre: 1, File: 0[0m
-[35m[2022-02-06 13:02:18.616]        synth-n_100-m_515-k_5-p_0.1.txt: synth-n_100-m_515-k_5-p_0.1.txt (n = 100, m = 515, k = 5)[0m
-[0m[2022-02-06 13:02:18.616]        synth-n_100-m_515-k_5-p_0.1.txt: Found 1 cyclic sub graph(s) with n = [63][0m
-[0m[2022-02-06 13:02:18.617]        synth-n_100-m_515-k_5-p_0.1.txt: Removed 37 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-06 13:02:18.617]        synth-n_100-m_515-k_5-p_0.1.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:02:18.617]        synth-n_100-m_515-k_5-p_0.1.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:02:19.618]        synth-n_100-m_515-k_5-p_0.1.txt: Solution lies in [5, 5][0m
-[0m[2022-02-06 13:02:19.619]        synth-n_100-m_515-k_5-p_0.1.txt: Found solution in 1003 ms (recursive steps: 0)[0m
-[33m[2022-02-06 13:02:19.619]        synth-n_100-m_515-k_5-p_0.1.txt: BFS: 0, Packing: 0, Heuristic: 1001, Copy: 0, Red: 0, DAG: 0, Pre: 1, File: 0[0m
-[35m[2022-02-06 13:02:19.620]       synth-n_100-m_591-k_15-p_0.1.txt: synth-n_100-m_591-k_15-p_0.1.txt (n = 100, m = 591, k = 15)[0m
-[0m[2022-02-06 13:02:19.620]       synth-n_100-m_591-k_15-p_0.1.txt: Found 1 cyclic sub graph(s) with n = [83][0m
-[0m[2022-02-06 13:02:19.620]       synth-n_100-m_591-k_15-p_0.1.txt: Removed 17 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-06 13:02:19.620]       synth-n_100-m_591-k_15-p_0.1.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:02:19.621]       synth-n_100-m_591-k_15-p_0.1.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:02:20.622]       synth-n_100-m_591-k_15-p_0.1.txt: Solution lies in [15, 15][0m
-[0m[2022-02-06 13:02:20.623]       synth-n_100-m_591-k_15-p_0.1.txt: Found solution in 1004 ms (recursive steps: 0)[0m
-[33m[2022-02-06 13:02:20.623]       synth-n_100-m_591-k_15-p_0.1.txt: BFS: 0, Packing: 1, Heuristic: 1001, Copy: 0, Red: 0, DAG: 0, Pre: 0, File: 1[0m
-[35m[2022-02-06 13:02:20.623]       synth-n_100-m_611-k_10-p_0.1.txt: synth-n_100-m_611-k_10-p_0.1.txt (n = 100, m = 611, k = 10)[0m
-[0m[2022-02-06 13:02:20.624]       synth-n_100-m_611-k_10-p_0.1.txt: Found 1 cyclic sub graph(s) with n = [81][0m
-[0m[2022-02-06 13:02:20.624]       synth-n_100-m_611-k_10-p_0.1.txt: Removed 19 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-06 13:02:20.624]       synth-n_100-m_611-k_10-p_0.1.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:02:20.625]       synth-n_100-m_611-k_10-p_0.1.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:02:21.626]       synth-n_100-m_611-k_10-p_0.1.txt: Solution lies in [10, 10][0m
-[0m[2022-02-06 13:02:21.626]       synth-n_100-m_611-k_10-p_0.1.txt: Found solution in 1003 ms (recursive steps: 0)[0m
-[33m[2022-02-06 13:02:21.627]       synth-n_100-m_611-k_10-p_0.1.txt: BFS: 0, Packing: 1, Heuristic: 1001, Copy: 0, Red: 0, DAG: 0, Pre: 1, File: 0[0m
-[35m[2022-02-06 13:02:21.627]       synth-n_100-m_628-k_20-p_0.1.txt: synth-n_100-m_628-k_20-p_0.1.txt (n = 100, m = 628, k = 20)[0m
-[0m[2022-02-06 13:02:21.627]       synth-n_100-m_628-k_20-p_0.1.txt: Found 1 cyclic sub graph(s) with n = [88][0m
-[0m[2022-02-06 13:02:21.628]       synth-n_100-m_628-k_20-p_0.1.txt: Removed 12 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-06 13:02:21.628]       synth-n_100-m_628-k_20-p_0.1.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:02:21.629]       synth-n_100-m_628-k_20-p_0.1.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:02:22.630]       synth-n_100-m_628-k_20-p_0.1.txt: Solution lies in [18, 20][0m
-[2022-02-06 13:02:22.630]       synth-n_100-m_628-k_20-p_0.1.txt: Branching with k = 19
-[0m[2022-02-06 13:02:22.632]       synth-n_100-m_628-k_20-p_0.1.txt: Found solution in 1005 ms (recursive steps: 6)[0m
-[33m[2022-02-06 13:02:22.632]       synth-n_100-m_628-k_20-p_0.1.txt: BFS: 0, Packing: 1, Heuristic: 1001, Copy: 0, Red: 0, DAG: 0, Pre: 1, File: 0[0m
-[35m[2022-02-06 13:02:22.632]       synth-n_100-m_691-k_25-p_0.1.txt: synth-n_100-m_691-k_25-p_0.1.txt (n = 100, m = 691, k = 25)[0m
-[0m[2022-02-06 13:02:22.633]       synth-n_100-m_691-k_25-p_0.1.txt: Found 1 cyclic sub graph(s) with n = [97][0m
-[0m[2022-02-06 13:02:22.633]       synth-n_100-m_691-k_25-p_0.1.txt: Removed 3 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-06 13:02:22.633]       synth-n_100-m_691-k_25-p_0.1.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:02:22.634]       synth-n_100-m_691-k_25-p_0.1.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:02:23.635]       synth-n_100-m_691-k_25-p_0.1.txt: Solution lies in [20, 25][0m
-[2022-02-06 13:02:23.636]       synth-n_100-m_691-k_25-p_0.1.txt: Branching with k = 24
-[0m[2022-02-06 13:02:23.696]       synth-n_100-m_691-k_25-p_0.1.txt: Found solution in 1064 ms (recursive steps: 245)[0m
-[33m[2022-02-06 13:02:23.697]       synth-n_100-m_691-k_25-p_0.1.txt: BFS: 3, Packing: 38, Heuristic: 1001, Copy: 15, Red: 2, DAG: 0, Pre: 0, File: 0[0m
-[35m[2022-02-06 13:02:23.697]       synth-n_100-m_732-k_30-p_0.1.txt: synth-n_100-m_732-k_30-p_0.1.txt (n = 100, m = 732, k = 30)[0m
-[0m[2022-02-06 13:02:23.697]       synth-n_100-m_732-k_30-p_0.1.txt: Found 1 cyclic sub graph(s) with n = [99][0m
-[0m[2022-02-06 13:02:23.698]       synth-n_100-m_732-k_30-p_0.1.txt: Removed 1 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-06 13:02:23.698]       synth-n_100-m_732-k_30-p_0.1.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:02:23.699]       synth-n_100-m_732-k_30-p_0.1.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:02:24.700]       synth-n_100-m_732-k_30-p_0.1.txt: Solution lies in [24, 30][0m
-[2022-02-06 13:02:24.700]       synth-n_100-m_732-k_30-p_0.1.txt: Branching with k = 29
-[0m[2022-02-06 13:02:25.268]       synth-n_100-m_732-k_30-p_0.1.txt: Found solution in 1571 ms (recursive steps: 3385)[0m
-[33m[2022-02-06 13:02:25.269]       synth-n_100-m_732-k_30-p_0.1.txt: BFS: 41, Packing: 364, Heuristic: 1001, Copy: 107, Red: 48, DAG: 0, Pre: 1, File: 0[0m
-[35m[2022-02-06 13:02:25.341]   synth-n_1000-m_107005-k_50-p_0.2.txt: synth-n_1000-m_107005-k_50-p_0.2.txt (n = 1000, m = 107005, k = 50)[0m
-[0m[2022-02-06 13:02:25.395]   synth-n_1000-m_107005-k_50-p_0.2.txt: Found 1 cyclic sub graph(s) with n = [1000][0m
-[0m[2022-02-06 13:02:25.396]   synth-n_1000-m_107005-k_50-p_0.2.txt: Removed 0 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-06 13:02:25.396]   synth-n_1000-m_107005-k_50-p_0.2.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:02:26.407]   synth-n_1000-m_107005-k_50-p_0.2.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:02:27.716]   synth-n_1000-m_107005-k_50-p_0.2.txt: Solution lies in [50, 50][0m
-[0m[2022-02-06 13:02:27.716]   synth-n_1000-m_107005-k_50-p_0.2.txt: Found solution in 2447 ms (recursive steps: 0)[0m
-[33m[2022-02-06 13:02:27.716]   synth-n_1000-m_107005-k_50-p_0.2.txt: BFS: 0, Packing: 1010, Heuristic: 1310, Copy: 0, Red: 0, DAG: 0, Pre: 55, File: 72[0m
-[35m[2022-02-06 13:02:27.800]   synth-n_1000-m_110357-k_70-p_0.2.txt: synth-n_1000-m_110357-k_70-p_0.2.txt (n = 1000, m = 110357, k = 70)[0m
-[0m[2022-02-06 13:02:27.860]   synth-n_1000-m_110357-k_70-p_0.2.txt: Found 1 cyclic sub graph(s) with n = [1000][0m
-[0m[2022-02-06 13:02:27.860]   synth-n_1000-m_110357-k_70-p_0.2.txt: Removed 0 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-06 13:02:27.861]   synth-n_1000-m_110357-k_70-p_0.2.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:02:28.784]   synth-n_1000-m_110357-k_70-p_0.2.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:02:29.938]   synth-n_1000-m_110357-k_70-p_0.2.txt: Solution lies in [70, 70][0m
-[0m[2022-02-06 13:02:29.939]   synth-n_1000-m_110357-k_70-p_0.2.txt: Found solution in 2223 ms (recursive steps: 0)[0m
-[33m[2022-02-06 13:02:29.939]   synth-n_1000-m_110357-k_70-p_0.2.txt: BFS: 0, Packing: 923, Heuristic: 1154, Copy: 0, Red: 0, DAG: 0, Pre: 60, File: 84[0m
-[35m[2022-02-06 13:02:30.024]  synth-n_1000-m_114433-k_100-p_0.2.txt: synth-n_1000-m_114433-k_100-p_0.2.txt (n = 1000, m = 114433, k = 100)[0m
-[0m[2022-02-06 13:02:30.082]  synth-n_1000-m_114433-k_100-p_0.2.txt: Found 1 cyclic sub graph(s) with n = [1000][0m
-[0m[2022-02-06 13:02:30.083]  synth-n_1000-m_114433-k_100-p_0.2.txt: Removed 0 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-06 13:02:30.084]  synth-n_1000-m_114433-k_100-p_0.2.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:02:30.843]  synth-n_1000-m_114433-k_100-p_0.2.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:02:32.339]  synth-n_1000-m_114433-k_100-p_0.2.txt: Solution lies in [100, 100][0m
-[0m[2022-02-06 13:02:32.339]  synth-n_1000-m_114433-k_100-p_0.2.txt: Found solution in 2400 ms (recursive steps: 0)[0m
-[33m[2022-02-06 13:02:32.339]  synth-n_1000-m_114433-k_100-p_0.2.txt: BFS: 0, Packing: 759, Heuristic: 1496, Copy: 0, Red: 0, DAG: 0, Pre: 59, File: 85[0m
-[35m[2022-02-06 13:02:32.430]  synth-n_1000-m_116757-k_120-p_0.2.txt: synth-n_1000-m_116757-k_120-p_0.2.txt (n = 1000, m = 116757, k = 120)[0m
-[0m[2022-02-06 13:02:32.492]  synth-n_1000-m_116757-k_120-p_0.2.txt: Found 1 cyclic sub graph(s) with n = [1000][0m
-[0m[2022-02-06 13:02:32.493]  synth-n_1000-m_116757-k_120-p_0.2.txt: Removed 0 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-06 13:02:32.493]  synth-n_1000-m_116757-k_120-p_0.2.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:02:33.197]  synth-n_1000-m_116757-k_120-p_0.2.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:02:34.218]  synth-n_1000-m_116757-k_120-p_0.2.txt: Solution lies in [120, 120][0m
-[0m[2022-02-06 13:02:34.218]  synth-n_1000-m_116757-k_120-p_0.2.txt: Found solution in 1878 ms (recursive steps: 0)[0m
-[33m[2022-02-06 13:02:34.219]  synth-n_1000-m_116757-k_120-p_0.2.txt: BFS: 0, Packing: 704, Heuristic: 1021, Copy: 0, Red: 0, DAG: 0, Pre: 63, File: 90[0m
-[35m[2022-02-06 13:02:34.309]  synth-n_1000-m_119520-k_150-p_0.2.txt: synth-n_1000-m_119520-k_150-p_0.2.txt (n = 1000, m = 119520, k = 150)[0m
-[0m[2022-02-06 13:02:34.371]  synth-n_1000-m_119520-k_150-p_0.2.txt: Found 1 cyclic sub graph(s) with n = [1000][0m
-[0m[2022-02-06 13:02:34.372]  synth-n_1000-m_119520-k_150-p_0.2.txt: Removed 0 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-06 13:02:34.372]  synth-n_1000-m_119520-k_150-p_0.2.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:02:34.947]  synth-n_1000-m_119520-k_150-p_0.2.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:02:36.220]  synth-n_1000-m_119520-k_150-p_0.2.txt: Solution lies in [150, 150][0m
-[0m[2022-02-06 13:02:36.220]  synth-n_1000-m_119520-k_150-p_0.2.txt: Found solution in 2001 ms (recursive steps: 0)[0m
-[33m[2022-02-06 13:02:36.220]  synth-n_1000-m_119520-k_150-p_0.2.txt: BFS: 0, Packing: 575, Heuristic: 1273, Copy: 0, Red: 0, DAG: 0, Pre: 62, File: 90[0m
-[35m[2022-02-06 13:02:36.318]  synth-n_1000-m_124702-k_200-p_0.2.txt: synth-n_1000-m_124702-k_200-p_0.2.txt (n = 1000, m = 124702, k = 200)[0m
-[0m[2022-02-06 13:02:36.383]  synth-n_1000-m_124702-k_200-p_0.2.txt: Found 1 cyclic sub graph(s) with n = [1000][0m
-[0m[2022-02-06 13:02:36.383]  synth-n_1000-m_124702-k_200-p_0.2.txt: Removed 0 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-06 13:02:36.384]  synth-n_1000-m_124702-k_200-p_0.2.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:02:36.935]  synth-n_1000-m_124702-k_200-p_0.2.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:02:38.616]  synth-n_1000-m_124702-k_200-p_0.2.txt: Solution lies in [200, 200][0m
-[0m[2022-02-06 13:02:38.617]  synth-n_1000-m_124702-k_200-p_0.2.txt: Found solution in 2396 ms (recursive steps: 0)[0m
-[33m[2022-02-06 13:02:38.617]  synth-n_1000-m_124702-k_200-p_0.2.txt: BFS: 0, Packing: 551, Heuristic: 1681, Copy: 0, Red: 0, DAG: 0, Pre: 66, File: 97[0m
-[35m[2022-02-06 13:02:38.625]   synth-n_1000-m_27142-k_50-p_0.05.txt: synth-n_1000-m_27142-k_50-p_0.05.txt (n = 1000, m = 27142, k = 50)[0m
-[0m[2022-02-06 13:02:38.635]   synth-n_1000-m_27142-k_50-p_0.05.txt: Found 1 cyclic sub graph(s) with n = [987][0m
-[0m[2022-02-06 13:02:38.635]   synth-n_1000-m_27142-k_50-p_0.05.txt: Removed 13 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-06 13:02:38.636]   synth-n_1000-m_27142-k_50-p_0.05.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:02:39.003]   synth-n_1000-m_27142-k_50-p_0.05.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:02:40.023]   synth-n_1000-m_27142-k_50-p_0.05.txt: Solution lies in [50, 50][0m
-[0m[2022-02-06 13:02:40.024]   synth-n_1000-m_27142-k_50-p_0.05.txt: Found solution in 1407 ms (recursive steps: 0)[0m
-[33m[2022-02-06 13:02:40.024]   synth-n_1000-m_27142-k_50-p_0.05.txt: BFS: 0, Packing: 366, Heuristic: 1021, Copy: 0, Red: 0, DAG: 0, Pre: 11, File: 7[0m
-[35m[2022-02-06 13:02:40.031]   synth-n_1000-m_28175-k_70-p_0.05.txt: synth-n_1000-m_28175-k_70-p_0.05.txt (n = 1000, m = 28175, k = 70)[0m
-[0m[2022-02-06 13:02:40.042]   synth-n_1000-m_28175-k_70-p_0.05.txt: Found 1 cyclic sub graph(s) with n = [989][0m
-[0m[2022-02-06 13:02:40.043]   synth-n_1000-m_28175-k_70-p_0.05.txt: Removed 11 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-06 13:02:40.043]   synth-n_1000-m_28175-k_70-p_0.05.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:02:40.325]   synth-n_1000-m_28175-k_70-p_0.05.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:02:41.370]   synth-n_1000-m_28175-k_70-p_0.05.txt: Solution lies in [70, 70][0m
-[0m[2022-02-06 13:02:41.371]   synth-n_1000-m_28175-k_70-p_0.05.txt: Found solution in 1347 ms (recursive steps: 0)[0m
-[33m[2022-02-06 13:02:41.371]   synth-n_1000-m_28175-k_70-p_0.05.txt: BFS: 0, Packing: 282, Heuristic: 1045, Copy: 0, Red: 0, DAG: 0, Pre: 11, File: 7[0m
-[35m[2022-02-06 13:02:41.379]  synth-n_1000-m_29037-k_100-p_0.05.txt: synth-n_1000-m_29037-k_100-p_0.05.txt (n = 1000, m = 29037, k = 100)[0m
-[0m[2022-02-06 13:02:41.389]  synth-n_1000-m_29037-k_100-p_0.05.txt: Found 1 cyclic sub graph(s) with n = [995][0m
-[0m[2022-02-06 13:02:41.390]  synth-n_1000-m_29037-k_100-p_0.05.txt: Removed 5 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-06 13:02:41.390]  synth-n_1000-m_29037-k_100-p_0.05.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:02:41.692]  synth-n_1000-m_29037-k_100-p_0.05.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:02:42.768]  synth-n_1000-m_29037-k_100-p_0.05.txt: Solution lies in [100, 100][0m
-[0m[2022-02-06 13:02:42.768]  synth-n_1000-m_29037-k_100-p_0.05.txt: Found solution in 1397 ms (recursive steps: 0)[0m
-[33m[2022-02-06 13:02:42.769]  synth-n_1000-m_29037-k_100-p_0.05.txt: BFS: 0, Packing: 302, Heuristic: 1076, Copy: 0, Red: 0, DAG: 0, Pre: 11, File: 8[0m
-[35m[2022-02-06 13:02:42.777]  synth-n_1000-m_30042-k_120-p_0.05.txt: synth-n_1000-m_30042-k_120-p_0.05.txt (n = 1000, m = 30042, k = 120)[0m
-[0m[2022-02-06 13:02:42.788]  synth-n_1000-m_30042-k_120-p_0.05.txt: Found 1 cyclic sub graph(s) with n = [1000][0m
-[0m[2022-02-06 13:02:42.788]  synth-n_1000-m_30042-k_120-p_0.05.txt: Removed 0 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-06 13:02:42.789]  synth-n_1000-m_30042-k_120-p_0.05.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:02:43.055]  synth-n_1000-m_30042-k_120-p_0.05.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:02:44.097]  synth-n_1000-m_30042-k_120-p_0.05.txt: Solution lies in [120, 120][0m
-[0m[2022-02-06 13:02:44.097]  synth-n_1000-m_30042-k_120-p_0.05.txt: Found solution in 1328 ms (recursive steps: 0)[0m
-[33m[2022-02-06 13:02:44.098]  synth-n_1000-m_30042-k_120-p_0.05.txt: BFS: 0, Packing: 266, Heuristic: 1042, Copy: 0, Red: 0, DAG: 0, Pre: 12, File: 8[0m
-[35m[2022-02-06 13:02:44.106]  synth-n_1000-m_30795-k_150-p_0.05.txt: synth-n_1000-m_30795-k_150-p_0.05.txt (n = 1000, m = 30795, k = 150)[0m
-[0m[2022-02-06 13:02:44.118]  synth-n_1000-m_30795-k_150-p_0.05.txt: Found 1 cyclic sub graph(s) with n = [1000][0m
-[0m[2022-02-06 13:02:44.118]  synth-n_1000-m_30795-k_150-p_0.05.txt: Removed 0 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-06 13:02:44.119]  synth-n_1000-m_30795-k_150-p_0.05.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:02:44.331]  synth-n_1000-m_30795-k_150-p_0.05.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:02:45.508]  synth-n_1000-m_30795-k_150-p_0.05.txt: Solution lies in [150, 150][0m
-[0m[2022-02-06 13:02:45.508]  synth-n_1000-m_30795-k_150-p_0.05.txt: Found solution in 1410 ms (recursive steps: 0)[0m
-[33m[2022-02-06 13:02:45.508]  synth-n_1000-m_30795-k_150-p_0.05.txt: BFS: 0, Packing: 212, Heuristic: 1177, Copy: 0, Red: 0, DAG: 0, Pre: 13, File: 8[0m
-[35m[2022-02-06 13:02:45.517]  synth-n_1000-m_32410-k_200-p_0.05.txt: synth-n_1000-m_32410-k_200-p_0.05.txt (n = 1000, m = 32410, k = 200)[0m
-[0m[2022-02-06 13:02:45.529]  synth-n_1000-m_32410-k_200-p_0.05.txt: Found 1 cyclic sub graph(s) with n = [1000][0m
-[0m[2022-02-06 13:02:45.530]  synth-n_1000-m_32410-k_200-p_0.05.txt: Removed 0 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-06 13:02:45.530]  synth-n_1000-m_32410-k_200-p_0.05.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:02:45.719]  synth-n_1000-m_32410-k_200-p_0.05.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:02:46.930]  synth-n_1000-m_32410-k_200-p_0.05.txt: Solution lies in [200, 200][0m
-[0m[2022-02-06 13:02:46.931]  synth-n_1000-m_32410-k_200-p_0.05.txt: Found solution in 1423 ms (recursive steps: 0)[0m
-[33m[2022-02-06 13:02:46.931]  synth-n_1000-m_32410-k_200-p_0.05.txt: BFS: 0, Packing: 189, Heuristic: 1211, Copy: 0, Red: 0, DAG: 0, Pre: 13, File: 9[0m
-[35m[2022-02-06 13:02:46.950]    synth-n_1000-m_54531-k_50-p_0.1.txt: synth-n_1000-m_54531-k_50-p_0.1.txt (n = 1000, m = 54531, k = 50)[0m
-[0m[2022-02-06 13:02:46.974]    synth-n_1000-m_54531-k_50-p_0.1.txt: Found 1 cyclic sub graph(s) with n = [997][0m
-[0m[2022-02-06 13:02:46.974]    synth-n_1000-m_54531-k_50-p_0.1.txt: Removed 3 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-06 13:02:46.975]    synth-n_1000-m_54531-k_50-p_0.1.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:02:47.530]    synth-n_1000-m_54531-k_50-p_0.1.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:02:48.620]    synth-n_1000-m_54531-k_50-p_0.1.txt: Solution lies in [50, 50][0m
-[0m[2022-02-06 13:02:48.620]    synth-n_1000-m_54531-k_50-p_0.1.txt: Found solution in 1689 ms (recursive steps: 0)[0m
-[33m[2022-02-06 13:02:48.620]    synth-n_1000-m_54531-k_50-p_0.1.txt: BFS: 0, Packing: 555, Heuristic: 1090, Copy: 0, Red: 0, DAG: 0, Pre: 23, File: 19[0m
-[35m[2022-02-06 13:02:48.640]    synth-n_1000-m_55974-k_70-p_0.1.txt: synth-n_1000-m_55974-k_70-p_0.1.txt (n = 1000, m = 55974, k = 70)[0m
-[0m[2022-02-06 13:02:48.663]    synth-n_1000-m_55974-k_70-p_0.1.txt: Found 1 cyclic sub graph(s) with n = [1000][0m
-[0m[2022-02-06 13:02:48.664]    synth-n_1000-m_55974-k_70-p_0.1.txt: Removed 0 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-06 13:02:48.664]    synth-n_1000-m_55974-k_70-p_0.1.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:02:49.189]    synth-n_1000-m_55974-k_70-p_0.1.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:02:50.227]    synth-n_1000-m_55974-k_70-p_0.1.txt: Solution lies in [70, 70][0m
-[0m[2022-02-06 13:02:50.227]    synth-n_1000-m_55974-k_70-p_0.1.txt: Found solution in 1606 ms (recursive steps: 0)[0m
-[33m[2022-02-06 13:02:50.228]    synth-n_1000-m_55974-k_70-p_0.1.txt: BFS: 0, Packing: 525, Heuristic: 1038, Copy: 0, Red: 0, DAG: 0, Pre: 24, File: 19[0m
-[35m[2022-02-06 13:02:50.248]   synth-n_1000-m_57929-k_100-p_0.1.txt: synth-n_1000-m_57929-k_100-p_0.1.txt (n = 1000, m = 57929, k = 100)[0m
-[0m[2022-02-06 13:02:50.273]   synth-n_1000-m_57929-k_100-p_0.1.txt: Found 1 cyclic sub graph(s) with n = [1000][0m
-[0m[2022-02-06 13:02:50.273]   synth-n_1000-m_57929-k_100-p_0.1.txt: Removed 0 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-06 13:02:50.274]   synth-n_1000-m_57929-k_100-p_0.1.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:02:50.701]   synth-n_1000-m_57929-k_100-p_0.1.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:02:51.758]   synth-n_1000-m_57929-k_100-p_0.1.txt: Solution lies in [100, 100][0m
-[0m[2022-02-06 13:02:51.758]   synth-n_1000-m_57929-k_100-p_0.1.txt: Found solution in 1530 ms (recursive steps: 0)[0m
-[33m[2022-02-06 13:02:51.759]   synth-n_1000-m_57929-k_100-p_0.1.txt: BFS: 0, Packing: 427, Heuristic: 1057, Copy: 0, Red: 0, DAG: 0, Pre: 24, File: 20[0m
-[35m[2022-02-06 13:02:51.781]   synth-n_1000-m_59867-k_120-p_0.1.txt: synth-n_1000-m_59867-k_120-p_0.1.txt (n = 1000, m = 59867, k = 120)[0m
-[0m[2022-02-06 13:02:51.805]   synth-n_1000-m_59867-k_120-p_0.1.txt: Found 1 cyclic sub graph(s) with n = [1000][0m
-[0m[2022-02-06 13:02:51.806]   synth-n_1000-m_59867-k_120-p_0.1.txt: Removed 0 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-06 13:02:51.806]   synth-n_1000-m_59867-k_120-p_0.1.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:02:52.153]   synth-n_1000-m_59867-k_120-p_0.1.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:02:53.209]   synth-n_1000-m_59867-k_120-p_0.1.txt: Solution lies in [120, 120][0m
-[0m[2022-02-06 13:02:53.209]   synth-n_1000-m_59867-k_120-p_0.1.txt: Found solution in 1450 ms (recursive steps: 0)[0m
-[33m[2022-02-06 13:02:53.209]   synth-n_1000-m_59867-k_120-p_0.1.txt: BFS: 0, Packing: 347, Heuristic: 1056, Copy: 0, Red: 0, DAG: 0, Pre: 25, File: 22[0m
-[35m[2022-02-06 13:02:53.232]   synth-n_1000-m_60934-k_150-p_0.1.txt: synth-n_1000-m_60934-k_150-p_0.1.txt (n = 1000, m = 60934, k = 150)[0m
-[0m[2022-02-06 13:02:53.257]   synth-n_1000-m_60934-k_150-p_0.1.txt: Found 1 cyclic sub graph(s) with n = [1000][0m
-[0m[2022-02-06 13:02:53.257]   synth-n_1000-m_60934-k_150-p_0.1.txt: Removed 0 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-06 13:02:53.258]   synth-n_1000-m_60934-k_150-p_0.1.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:02:53.628]   synth-n_1000-m_60934-k_150-p_0.1.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:02:54.647]   synth-n_1000-m_60934-k_150-p_0.1.txt: Solution lies in [150, 150][0m
-[0m[2022-02-06 13:02:54.647]   synth-n_1000-m_60934-k_150-p_0.1.txt: Found solution in 1437 ms (recursive steps: 0)[0m
-[33m[2022-02-06 13:02:54.648]   synth-n_1000-m_60934-k_150-p_0.1.txt: BFS: 0, Packing: 370, Heuristic: 1019, Copy: 0, Red: 0, DAG: 0, Pre: 26, File: 22[0m
-[35m[2022-02-06 13:02:54.673]   synth-n_1000-m_64710-k_200-p_0.1.txt: synth-n_1000-m_64710-k_200-p_0.1.txt (n = 1000, m = 64710, k = 200)[0m
-[0m[2022-02-06 13:02:54.699]   synth-n_1000-m_64710-k_200-p_0.1.txt: Found 1 cyclic sub graph(s) with n = [1000][0m
-[0m[2022-02-06 13:02:54.700]   synth-n_1000-m_64710-k_200-p_0.1.txt: Removed 0 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-06 13:02:54.700]   synth-n_1000-m_64710-k_200-p_0.1.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:02:54.972]   synth-n_1000-m_64710-k_200-p_0.1.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:02:56.197]   synth-n_1000-m_64710-k_200-p_0.1.txt: Solution lies in [200, 200][0m
-[0m[2022-02-06 13:02:56.197]   synth-n_1000-m_64710-k_200-p_0.1.txt: Found solution in 1549 ms (recursive steps: 0)[0m
-[33m[2022-02-06 13:02:56.197]   synth-n_1000-m_64710-k_200-p_0.1.txt: BFS: 0, Packing: 272, Heuristic: 1224, Copy: 0, Red: 0, DAG: 0, Pre: 27, File: 24[0m
-[35m[2022-02-06 13:02:56.256]  synth-n_1300-m_104213-k_200-p_0.1.txt: synth-n_1300-m_104213-k_200-p_0.1.txt (n = 1300, m = 104213, k = 200)[0m
-[0m[2022-02-06 13:02:56.312]  synth-n_1300-m_104213-k_200-p_0.1.txt: Found 1 cyclic sub graph(s) with n = [1300][0m
-[0m[2022-02-06 13:02:56.313]  synth-n_1300-m_104213-k_200-p_0.1.txt: Removed 0 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-06 13:02:56.313]  synth-n_1300-m_104213-k_200-p_0.1.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:02:56.966]  synth-n_1300-m_104213-k_200-p_0.1.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:02:58.330]  synth-n_1300-m_104213-k_200-p_0.1.txt: Solution lies in [200, 200][0m
-[0m[2022-02-06 13:02:58.331]  synth-n_1300-m_104213-k_200-p_0.1.txt: Found solution in 2134 ms (recursive steps: 0)[0m
-[33m[2022-02-06 13:02:58.331]  synth-n_1300-m_104213-k_200-p_0.1.txt: BFS: 0, Packing: 653, Heuristic: 1364, Copy: 0, Red: 0, DAG: 0, Pre: 57, File: 59[0m
-[35m[2022-02-06 13:02:58.531]   synth-n_1300-m_178841-k_50-p_0.2.txt: synth-n_1300-m_178841-k_50-p_0.2.txt (n = 1300, m = 178841, k = 50)[0m
-[0m[2022-02-06 13:02:58.650]   synth-n_1300-m_178841-k_50-p_0.2.txt: Found 1 cyclic sub graph(s) with n = [1300][0m
-[0m[2022-02-06 13:02:58.650]   synth-n_1300-m_178841-k_50-p_0.2.txt: Removed 0 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-06 13:02:58.651]   synth-n_1300-m_178841-k_50-p_0.2.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:03:00.945]   synth-n_1300-m_178841-k_50-p_0.2.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:03:02.220]   synth-n_1300-m_178841-k_50-p_0.2.txt: Solution lies in [50, 50][0m
-[0m[2022-02-06 13:03:02.220]   synth-n_1300-m_178841-k_50-p_0.2.txt: Found solution in 3889 ms (recursive steps: 0)[0m
-[33m[2022-02-06 13:03:02.220]   synth-n_1300-m_178841-k_50-p_0.2.txt: BFS: 0, Packing: 2294, Heuristic: 1275, Copy: 0, Red: 0, DAG: 0, Pre: 118, File: 200[0m
-[35m[2022-02-06 13:03:02.348]   synth-n_1300-m_183367-k_70-p_0.2.txt: synth-n_1300-m_183367-k_70-p_0.2.txt (n = 1300, m = 183367, k = 70)[0m
-[0m[2022-02-06 13:03:02.465]   synth-n_1300-m_183367-k_70-p_0.2.txt: Found 1 cyclic sub graph(s) with n = [1300][0m
-[0m[2022-02-06 13:03:02.466]   synth-n_1300-m_183367-k_70-p_0.2.txt: Removed 0 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-06 13:03:02.467]   synth-n_1300-m_183367-k_70-p_0.2.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:03:04.674]   synth-n_1300-m_183367-k_70-p_0.2.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:03:06.026]   synth-n_1300-m_183367-k_70-p_0.2.txt: Solution lies in [70, 70][0m
-[0m[2022-02-06 13:03:06.027]   synth-n_1300-m_183367-k_70-p_0.2.txt: Found solution in 3806 ms (recursive steps: 0)[0m
-[33m[2022-02-06 13:03:06.027]   synth-n_1300-m_183367-k_70-p_0.2.txt: BFS: 0, Packing: 2207, Heuristic: 1352, Copy: 0, Red: 0, DAG: 0, Pre: 118, File: 127[0m
-[35m[2022-02-06 13:03:06.251]  synth-n_1300-m_188195-k_100-p_0.2.txt: synth-n_1300-m_188195-k_100-p_0.2.txt (n = 1300, m = 188195, k = 100)[0m
-[0m[2022-02-06 13:03:06.374]  synth-n_1300-m_188195-k_100-p_0.2.txt: Found 1 cyclic sub graph(s) with n = [1300][0m
-[0m[2022-02-06 13:03:06.374]  synth-n_1300-m_188195-k_100-p_0.2.txt: Removed 0 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-06 13:03:06.375]  synth-n_1300-m_188195-k_100-p_0.2.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:03:08.365]  synth-n_1300-m_188195-k_100-p_0.2.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:03:10.328]  synth-n_1300-m_188195-k_100-p_0.2.txt: Solution lies in [100, 100][0m
-[0m[2022-02-06 13:03:10.328]  synth-n_1300-m_188195-k_100-p_0.2.txt: Found solution in 4301 ms (recursive steps: 0)[0m
-[33m[2022-02-06 13:03:10.329]  synth-n_1300-m_188195-k_100-p_0.2.txt: BFS: 0, Packing: 1990, Heuristic: 1963, Copy: 0, Red: 0, DAG: 0, Pre: 123, File: 223[0m
-[35m[2022-02-06 13:03:10.558]  synth-n_1300-m_191963-k_120-p_0.2.txt: synth-n_1300-m_191963-k_120-p_0.2.txt (n = 1300, m = 191963, k = 120)[0m
-[0m[2022-02-06 13:03:10.682]  synth-n_1300-m_191963-k_120-p_0.2.txt: Found 1 cyclic sub graph(s) with n = [1300][0m
-[0m[2022-02-06 13:03:10.682]  synth-n_1300-m_191963-k_120-p_0.2.txt: Removed 0 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-06 13:03:10.683]  synth-n_1300-m_191963-k_120-p_0.2.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:03:12.476]  synth-n_1300-m_191963-k_120-p_0.2.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:03:13.478]  synth-n_1300-m_191963-k_120-p_0.2.txt: Solution lies in [120, 120][0m
-[0m[2022-02-06 13:03:13.479]  synth-n_1300-m_191963-k_120-p_0.2.txt: Found solution in 3149 ms (recursive steps: 0)[0m
-[33m[2022-02-06 13:03:13.479]  synth-n_1300-m_191963-k_120-p_0.2.txt: BFS: 0, Packing: 1793, Heuristic: 1002, Copy: 0, Red: 0, DAG: 0, Pre: 125, File: 229[0m
-[35m[2022-02-06 13:03:13.709]  synth-n_1300-m_196174-k_150-p_0.2.txt: synth-n_1300-m_196174-k_150-p_0.2.txt (n = 1300, m = 196174, k = 150)[0m
-[0m[2022-02-06 13:03:13.835]  synth-n_1300-m_196174-k_150-p_0.2.txt: Found 1 cyclic sub graph(s) with n = [1300][0m
-[0m[2022-02-06 13:03:13.836]  synth-n_1300-m_196174-k_150-p_0.2.txt: Removed 0 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-06 13:03:13.836]  synth-n_1300-m_196174-k_150-p_0.2.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:03:15.428]  synth-n_1300-m_196174-k_150-p_0.2.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:03:16.684]  synth-n_1300-m_196174-k_150-p_0.2.txt: Solution lies in [150, 150][0m
-[0m[2022-02-06 13:03:16.685]  synth-n_1300-m_196174-k_150-p_0.2.txt: Found solution in 3206 ms (recursive steps: 0)[0m
-[33m[2022-02-06 13:03:16.685]  synth-n_1300-m_196174-k_150-p_0.2.txt: BFS: 0, Packing: 1592, Heuristic: 1256, Copy: 0, Red: 0, DAG: 0, Pre: 127, File: 230[0m
-[35m[2022-02-06 13:03:16.941]  synth-n_1300-m_204142-k_200-p_0.2.txt: synth-n_1300-m_204142-k_200-p_0.2.txt (n = 1300, m = 204142, k = 200)[0m
-[0m[2022-02-06 13:03:17.075]  synth-n_1300-m_204142-k_200-p_0.2.txt: Found 1 cyclic sub graph(s) with n = [1300][0m
-[0m[2022-02-06 13:03:17.076]  synth-n_1300-m_204142-k_200-p_0.2.txt: Removed 0 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-06 13:03:17.077]  synth-n_1300-m_204142-k_200-p_0.2.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:03:18.410]  synth-n_1300-m_204142-k_200-p_0.2.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:03:19.782]  synth-n_1300-m_204142-k_200-p_0.2.txt: Solution lies in [200, 200][0m
-[0m[2022-02-06 13:03:19.782]  synth-n_1300-m_204142-k_200-p_0.2.txt: Found solution in 3097 ms (recursive steps: 0)[0m
-[33m[2022-02-06 13:03:19.783]  synth-n_1300-m_204142-k_200-p_0.2.txt: BFS: 0, Packing: 1333, Heuristic: 1372, Copy: 0, Red: 0, DAG: 0, Pre: 135, File: 256[0m
-[35m[2022-02-06 13:03:19.796]   synth-n_1300-m_45241-k_50-p_0.05.txt: synth-n_1300-m_45241-k_50-p_0.05.txt (n = 1300, m = 45241, k = 50)[0m
-[0m[2022-02-06 13:03:19.818]   synth-n_1300-m_45241-k_50-p_0.05.txt: Found 1 cyclic sub graph(s) with n = [1291][0m
-[0m[2022-02-06 13:03:19.818]   synth-n_1300-m_45241-k_50-p_0.05.txt: Removed 9 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-06 13:03:19.819]   synth-n_1300-m_45241-k_50-p_0.05.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:03:20.599]   synth-n_1300-m_45241-k_50-p_0.05.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:03:21.620]   synth-n_1300-m_45241-k_50-p_0.05.txt: Solution lies in [50, 50][0m
-[0m[2022-02-06 13:03:21.621]   synth-n_1300-m_45241-k_50-p_0.05.txt: Found solution in 1838 ms (recursive steps: 0)[0m
-[33m[2022-02-06 13:03:21.621]   synth-n_1300-m_45241-k_50-p_0.05.txt: BFS: 0, Packing: 780, Heuristic: 1021, Copy: 0, Red: 0, DAG: 0, Pre: 23, File: 13[0m
-[35m[2022-02-06 13:03:21.635]   synth-n_1300-m_46137-k_70-p_0.05.txt: synth-n_1300-m_46137-k_70-p_0.05.txt (n = 1300, m = 46137, k = 70)[0m
-[0m[2022-02-06 13:03:21.657]   synth-n_1300-m_46137-k_70-p_0.05.txt: Found 1 cyclic sub graph(s) with n = [1290][0m
-[0m[2022-02-06 13:03:21.657]   synth-n_1300-m_46137-k_70-p_0.05.txt: Removed 10 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-06 13:03:21.658]   synth-n_1300-m_46137-k_70-p_0.05.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:03:22.344]   synth-n_1300-m_46137-k_70-p_0.05.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:03:23.403]   synth-n_1300-m_46137-k_70-p_0.05.txt: Solution lies in [70, 70][0m
-[0m[2022-02-06 13:03:23.404]   synth-n_1300-m_46137-k_70-p_0.05.txt: Found solution in 1783 ms (recursive steps: 0)[0m
-[33m[2022-02-06 13:03:23.404]   synth-n_1300-m_46137-k_70-p_0.05.txt: BFS: 0, Packing: 686, Heuristic: 1059, Copy: 0, Red: 0, DAG: 0, Pre: 22, File: 14[0m
-[35m[2022-02-06 13:03:23.421]  synth-n_1300-m_47847-k_100-p_0.05.txt: synth-n_1300-m_47847-k_100-p_0.05.txt (n = 1300, m = 47847, k = 100)[0m
-[0m[2022-02-06 13:03:23.444]  synth-n_1300-m_47847-k_100-p_0.05.txt: Found 1 cyclic sub graph(s) with n = [1298][0m
-[0m[2022-02-06 13:03:23.444]  synth-n_1300-m_47847-k_100-p_0.05.txt: Removed 2 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-06 13:03:23.445]  synth-n_1300-m_47847-k_100-p_0.05.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:03:24.135]  synth-n_1300-m_47847-k_100-p_0.05.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:03:25.384]  synth-n_1300-m_47847-k_100-p_0.05.txt: Solution lies in [100, 100][0m
-[0m[2022-02-06 13:03:25.384]  synth-n_1300-m_47847-k_100-p_0.05.txt: Found solution in 1979 ms (recursive steps: 0)[0m
-[33m[2022-02-06 13:03:25.385]  synth-n_1300-m_47847-k_100-p_0.05.txt: BFS: 0, Packing: 690, Heuristic: 1249, Copy: 0, Red: 0, DAG: 0, Pre: 23, File: 16[0m
-[35m[2022-02-06 13:03:25.400]  synth-n_1300-m_49172-k_120-p_0.05.txt: synth-n_1300-m_49172-k_120-p_0.05.txt (n = 1300, m = 49172, k = 120)[0m
-[0m[2022-02-06 13:03:25.424]  synth-n_1300-m_49172-k_120-p_0.05.txt: Found 1 cyclic sub graph(s) with n = [1300][0m
-[0m[2022-02-06 13:03:25.424]  synth-n_1300-m_49172-k_120-p_0.05.txt: Removed 0 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-06 13:03:25.425]  synth-n_1300-m_49172-k_120-p_0.05.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:03:26.067]  synth-n_1300-m_49172-k_120-p_0.05.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:03:27.088]  synth-n_1300-m_49172-k_120-p_0.05.txt: Solution lies in [120, 120][0m
-[0m[2022-02-06 13:03:27.089]  synth-n_1300-m_49172-k_120-p_0.05.txt: Found solution in 1704 ms (recursive steps: 0)[0m
-[33m[2022-02-06 13:03:27.089]  synth-n_1300-m_49172-k_120-p_0.05.txt: BFS: 0, Packing: 642, Heuristic: 1021, Copy: 0, Red: 0, DAG: 0, Pre: 24, File: 15[0m
-[35m[2022-02-06 13:03:27.105]  synth-n_1300-m_50340-k_150-p_0.05.txt: synth-n_1300-m_50340-k_150-p_0.05.txt (n = 1300, m = 50340, k = 150)[0m
-[0m[2022-02-06 13:03:27.129]  synth-n_1300-m_50340-k_150-p_0.05.txt: Found 1 cyclic sub graph(s) with n = [1300][0m
-[0m[2022-02-06 13:03:27.129]  synth-n_1300-m_50340-k_150-p_0.05.txt: Removed 0 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-06 13:03:27.130]  synth-n_1300-m_50340-k_150-p_0.05.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:03:27.651]  synth-n_1300-m_50340-k_150-p_0.05.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:03:28.806]  synth-n_1300-m_50340-k_150-p_0.05.txt: Solution lies in [150, 150][0m
-[0m[2022-02-06 13:03:28.807]  synth-n_1300-m_50340-k_150-p_0.05.txt: Found solution in 1717 ms (recursive steps: 0)[0m
-[33m[2022-02-06 13:03:28.807]  synth-n_1300-m_50340-k_150-p_0.05.txt: BFS: 0, Packing: 521, Heuristic: 1155, Copy: 0, Red: 0, DAG: 0, Pre: 23, File: 16[0m
-[35m[2022-02-06 13:03:28.824]  synth-n_1300-m_52952-k_200-p_0.05.txt: synth-n_1300-m_52952-k_200-p_0.05.txt (n = 1300, m = 52952, k = 200)[0m
-[0m[2022-02-06 13:03:28.847]  synth-n_1300-m_52952-k_200-p_0.05.txt: Found 1 cyclic sub graph(s) with n = [1299][0m
-[0m[2022-02-06 13:03:28.847]  synth-n_1300-m_52952-k_200-p_0.05.txt: Removed 1 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-06 13:03:28.848]  synth-n_1300-m_52952-k_200-p_0.05.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:03:29.291]  synth-n_1300-m_52952-k_200-p_0.05.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:03:30.482]  synth-n_1300-m_52952-k_200-p_0.05.txt: Solution lies in [200, 200][0m
-[0m[2022-02-06 13:03:30.483]  synth-n_1300-m_52952-k_200-p_0.05.txt: Found solution in 1676 ms (recursive steps: 0)[0m
-[33m[2022-02-06 13:03:30.483]  synth-n_1300-m_52952-k_200-p_0.05.txt: BFS: 0, Packing: 443, Heuristic: 1191, Copy: 0, Red: 0, DAG: 0, Pre: 24, File: 17[0m
-[35m[2022-02-06 13:03:30.529]    synth-n_1300-m_89669-k_50-p_0.1.txt: synth-n_1300-m_89669-k_50-p_0.1.txt (n = 1300, m = 89669, k = 50)[0m
-[0m[2022-02-06 13:03:30.579]    synth-n_1300-m_89669-k_50-p_0.1.txt: Found 1 cyclic sub graph(s) with n = [1298][0m
-[0m[2022-02-06 13:03:30.579]    synth-n_1300-m_89669-k_50-p_0.1.txt: Removed 2 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-06 13:03:30.580]    synth-n_1300-m_89669-k_50-p_0.1.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:03:31.862]    synth-n_1300-m_89669-k_50-p_0.1.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:03:32.909]    synth-n_1300-m_89669-k_50-p_0.1.txt: Solution lies in [50, 50][0m
-[0m[2022-02-06 13:03:32.909]    synth-n_1300-m_89669-k_50-p_0.1.txt: Found solution in 2425 ms (recursive steps: 0)[0m
-[33m[2022-02-06 13:03:32.909]    synth-n_1300-m_89669-k_50-p_0.1.txt: BFS: 0, Packing: 1282, Heuristic: 1046, Copy: 0, Red: 0, DAG: 0, Pre: 49, File: 45[0m
-[35m[2022-02-06 13:03:32.962]    synth-n_1300-m_92255-k_70-p_0.1.txt: synth-n_1300-m_92255-k_70-p_0.1.txt (n = 1300, m = 92255, k = 70)[0m
-[0m[2022-02-06 13:03:33.013]    synth-n_1300-m_92255-k_70-p_0.1.txt: Found 1 cyclic sub graph(s) with n = [1299][0m
-[0m[2022-02-06 13:03:33.013]    synth-n_1300-m_92255-k_70-p_0.1.txt: Removed 1 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-06 13:03:33.014]    synth-n_1300-m_92255-k_70-p_0.1.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:03:34.214]    synth-n_1300-m_92255-k_70-p_0.1.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:03:35.449]    synth-n_1300-m_92255-k_70-p_0.1.txt: Solution lies in [70, 70][0m
-[0m[2022-02-06 13:03:35.450]    synth-n_1300-m_92255-k_70-p_0.1.txt: Found solution in 2540 ms (recursive steps: 0)[0m
-[33m[2022-02-06 13:03:35.450]    synth-n_1300-m_92255-k_70-p_0.1.txt: BFS: 0, Packing: 1200, Heuristic: 1235, Copy: 0, Red: 0, DAG: 0, Pre: 51, File: 53[0m
-[35m[2022-02-06 13:03:35.499]   synth-n_1300-m_95352-k_100-p_0.1.txt: synth-n_1300-m_95352-k_100-p_0.1.txt (n = 1300, m = 95352, k = 100)[0m
-[0m[2022-02-06 13:03:35.551]   synth-n_1300-m_95352-k_100-p_0.1.txt: Found 1 cyclic sub graph(s) with n = [1300][0m
-[0m[2022-02-06 13:03:35.551]   synth-n_1300-m_95352-k_100-p_0.1.txt: Removed 0 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-06 13:03:35.552]   synth-n_1300-m_95352-k_100-p_0.1.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:03:36.606]   synth-n_1300-m_95352-k_100-p_0.1.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:03:37.679]   synth-n_1300-m_95352-k_100-p_0.1.txt: Solution lies in [100, 100][0m
-[0m[2022-02-06 13:03:37.680]   synth-n_1300-m_95352-k_100-p_0.1.txt: Found solution in 2230 ms (recursive steps: 0)[0m
-[33m[2022-02-06 13:03:37.680]   synth-n_1300-m_95352-k_100-p_0.1.txt: BFS: 0, Packing: 1054, Heuristic: 1073, Copy: 0, Red: 0, DAG: 0, Pre: 51, File: 49[0m
-[35m[2022-02-06 13:03:37.732]   synth-n_1300-m_97421-k_120-p_0.1.txt: synth-n_1300-m_97421-k_120-p_0.1.txt (n = 1300, m = 97421, k = 120)[0m
-[0m[2022-02-06 13:03:37.784]   synth-n_1300-m_97421-k_120-p_0.1.txt: Found 1 cyclic sub graph(s) with n = [1300][0m
-[0m[2022-02-06 13:03:37.785]   synth-n_1300-m_97421-k_120-p_0.1.txt: Removed 0 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-06 13:03:37.786]   synth-n_1300-m_97421-k_120-p_0.1.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:03:38.795]   synth-n_1300-m_97421-k_120-p_0.1.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:03:40.106]   synth-n_1300-m_97421-k_120-p_0.1.txt: Solution lies in [120, 120][0m
-[0m[2022-02-06 13:03:40.107]   synth-n_1300-m_97421-k_120-p_0.1.txt: Found solution in 2427 ms (recursive steps: 0)[0m
-[33m[2022-02-06 13:03:40.107]   synth-n_1300-m_97421-k_120-p_0.1.txt: BFS: 0, Packing: 1009, Heuristic: 1311, Copy: 0, Red: 0, DAG: 0, Pre: 53, File: 52[0m
-[35m[2022-02-06 13:03:40.161]   synth-n_1300-m_99879-k_150-p_0.1.txt: synth-n_1300-m_99879-k_150-p_0.1.txt (n = 1300, m = 99879, k = 150)[0m
-[0m[2022-02-06 13:03:40.214]   synth-n_1300-m_99879-k_150-p_0.1.txt: Found 1 cyclic sub graph(s) with n = [1300][0m
-[0m[2022-02-06 13:03:40.215]   synth-n_1300-m_99879-k_150-p_0.1.txt: Removed 0 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-06 13:03:40.216]   synth-n_1300-m_99879-k_150-p_0.1.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:03:41.009]   synth-n_1300-m_99879-k_150-p_0.1.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:03:42.097]   synth-n_1300-m_99879-k_150-p_0.1.txt: Solution lies in [150, 150][0m
-[0m[2022-02-06 13:03:42.098]   synth-n_1300-m_99879-k_150-p_0.1.txt: Found solution in 1991 ms (recursive steps: 0)[0m
-[33m[2022-02-06 13:03:42.098]   synth-n_1300-m_99879-k_150-p_0.1.txt: BFS: 0, Packing: 793, Heuristic: 1088, Copy: 0, Red: 0, DAG: 0, Pre: 54, File: 54[0m
-[35m[2022-02-06 13:03:42.098]      synth-n_150-m_1254-k_10-p_0.1.txt: synth-n_150-m_1254-k_10-p_0.1.txt (n = 150, m = 1254, k = 10)[0m
-[0m[2022-02-06 13:03:42.099]      synth-n_150-m_1254-k_10-p_0.1.txt: Found 1 cyclic sub graph(s) with n = [118][0m
-[0m[2022-02-06 13:03:42.099]      synth-n_150-m_1254-k_10-p_0.1.txt: Removed 32 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-06 13:03:42.099]      synth-n_150-m_1254-k_10-p_0.1.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:03:42.100]      synth-n_150-m_1254-k_10-p_0.1.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:03:43.101]      synth-n_150-m_1254-k_10-p_0.1.txt: Solution lies in [10, 10][0m
-[0m[2022-02-06 13:03:43.101]      synth-n_150-m_1254-k_10-p_0.1.txt: Found solution in 1003 ms (recursive steps: 0)[0m
-[33m[2022-02-06 13:03:43.102]      synth-n_150-m_1254-k_10-p_0.1.txt: BFS: 0, Packing: 1, Heuristic: 1001, Copy: 0, Red: 0, DAG: 0, Pre: 0, File: 0[0m
-[35m[2022-02-06 13:03:43.102]      synth-n_150-m_1269-k_15-p_0.1.txt: synth-n_150-m_1269-k_15-p_0.1.txt (n = 150, m = 1269, k = 15)[0m
-[0m[2022-02-06 13:03:43.103]      synth-n_150-m_1269-k_15-p_0.1.txt: Found 1 cyclic sub graph(s) with n = [119][0m
-[0m[2022-02-06 13:03:43.103]      synth-n_150-m_1269-k_15-p_0.1.txt: Removed 31 nodes in preprocessing, starting with k = 2[0m
-[0m[2022-02-06 13:03:43.103]      synth-n_150-m_1269-k_15-p_0.1.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:03:43.104]      synth-n_150-m_1269-k_15-p_0.1.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:03:44.105]      synth-n_150-m_1269-k_15-p_0.1.txt: Solution lies in [13, 13][0m
-[0m[2022-02-06 13:03:44.106]      synth-n_150-m_1269-k_15-p_0.1.txt: Found solution in 1004 ms (recursive steps: 0)[0m
-[33m[2022-02-06 13:03:44.106]      synth-n_150-m_1269-k_15-p_0.1.txt: BFS: 0, Packing: 1, Heuristic: 1001, Copy: 0, Red: 0, DAG: 0, Pre: 1, File: 0[0m
-[35m[2022-02-06 13:03:44.106]      synth-n_150-m_1284-k_20-p_0.1.txt: synth-n_150-m_1284-k_20-p_0.1.txt (n = 150, m = 1284, k = 20)[0m
-[0m[2022-02-06 13:03:44.107]      synth-n_150-m_1284-k_20-p_0.1.txt: Found 1 cyclic sub graph(s) with n = [134][0m
-[0m[2022-02-06 13:03:44.107]      synth-n_150-m_1284-k_20-p_0.1.txt: Removed 16 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-06 13:03:44.107]      synth-n_150-m_1284-k_20-p_0.1.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:03:44.109]      synth-n_150-m_1284-k_20-p_0.1.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:03:45.111]      synth-n_150-m_1284-k_20-p_0.1.txt: Solution lies in [20, 20][0m
-[0m[2022-02-06 13:03:45.111]      synth-n_150-m_1284-k_20-p_0.1.txt: Found solution in 1005 ms (recursive steps: 0)[0m
-[33m[2022-02-06 13:03:45.111]      synth-n_150-m_1284-k_20-p_0.1.txt: BFS: 0, Packing: 2, Heuristic: 1002, Copy: 0, Red: 0, DAG: 0, Pre: 0, File: 0[0m
-[35m[2022-02-06 13:03:45.112]      synth-n_150-m_1385-k_25-p_0.1.txt: synth-n_150-m_1385-k_25-p_0.1.txt (n = 150, m = 1385, k = 25)[0m
-[0m[2022-02-06 13:03:45.112]      synth-n_150-m_1385-k_25-p_0.1.txt: Found 1 cyclic sub graph(s) with n = [141][0m
-[0m[2022-02-06 13:03:45.112]      synth-n_150-m_1385-k_25-p_0.1.txt: Removed 9 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-06 13:03:45.113]      synth-n_150-m_1385-k_25-p_0.1.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:03:45.114]      synth-n_150-m_1385-k_25-p_0.1.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:03:46.116]      synth-n_150-m_1385-k_25-p_0.1.txt: Solution lies in [25, 25][0m
-[0m[2022-02-06 13:03:46.116]      synth-n_150-m_1385-k_25-p_0.1.txt: Found solution in 1005 ms (recursive steps: 0)[0m
-[33m[2022-02-06 13:03:46.117]      synth-n_150-m_1385-k_25-p_0.1.txt: BFS: 0, Packing: 1, Heuristic: 1002, Copy: 0, Red: 0, DAG: 0, Pre: 1, File: 1[0m
-[35m[2022-02-06 13:03:46.117]      synth-n_150-m_1423-k_30-p_0.1.txt: synth-n_150-m_1423-k_30-p_0.1.txt (n = 150, m = 1423, k = 30)[0m
-[0m[2022-02-06 13:03:46.118]      synth-n_150-m_1423-k_30-p_0.1.txt: Found 1 cyclic sub graph(s) with n = [142][0m
-[0m[2022-02-06 13:03:46.118]      synth-n_150-m_1423-k_30-p_0.1.txt: Removed 8 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-06 13:03:46.118]      synth-n_150-m_1423-k_30-p_0.1.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:03:46.120]      synth-n_150-m_1423-k_30-p_0.1.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:03:47.121]      synth-n_150-m_1423-k_30-p_0.1.txt: Solution lies in [29, 30][0m
-[2022-02-06 13:03:47.121]      synth-n_150-m_1423-k_30-p_0.1.txt: Branching with k = 29
-[0m[2022-02-06 13:03:47.132]      synth-n_150-m_1423-k_30-p_0.1.txt: Found solution in 1015 ms (recursive steps: 26)[0m
-[33m[2022-02-06 13:03:47.132]      synth-n_150-m_1423-k_30-p_0.1.txt: BFS: 0, Packing: 10, Heuristic: 1001, Copy: 3, Red: 0, DAG: 0, Pre: 1, File: 0[0m
-[35m[2022-02-06 13:03:47.133]      synth-n_150-m_1561-k_70-p_0.1.txt: synth-n_150-m_1561-k_70-p_0.1.txt (n = 150, m = 1561, k = -1)[0m
-[0m[2022-02-06 13:03:47.133]      synth-n_150-m_1561-k_70-p_0.1.txt: Found 1 cyclic sub graph(s) with n = [149][0m
-[0m[2022-02-06 13:03:47.133]      synth-n_150-m_1561-k_70-p_0.1.txt: Removed 1 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-06 13:03:47.134]      synth-n_150-m_1561-k_70-p_0.1.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:03:47.136]      synth-n_150-m_1561-k_70-p_0.1.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:03:48.137]      synth-n_150-m_1561-k_70-p_0.1.txt: Solution lies in [43, 72][0m
-[2022-02-06 13:03:48.137]      synth-n_150-m_1561-k_70-p_0.1.txt: Branching with k = 71
-[31m[2022-02-06 13:05:17.141]      synth-n_150-m_1561-k_70-p_0.1.txt: Found no solution in 90008 ms (recursive steps: 571461)[0m
-[33m[2022-02-06 13:05:17.141]      synth-n_150-m_1561-k_70-p_0.1.txt: BFS: 6865, Packing: 53669, Heuristic: 1001, Copy: 21104, Red: 6085, DAG: 0, Pre: 1, File: 1[0m
-[35m[2022-02-06 13:05:17.141]      synth-n_150-m_1564-k_50-p_0.1.txt: synth-n_150-m_1564-k_50-p_0.1.txt (n = 150, m = 1564, k = 48)[0m
-[0m[2022-02-06 13:05:17.142]      synth-n_150-m_1564-k_50-p_0.1.txt: Found 1 cyclic sub graph(s) with n = [150][0m
-[0m[2022-02-06 13:05:17.142]      synth-n_150-m_1564-k_50-p_0.1.txt: Removed 0 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-06 13:05:17.142]      synth-n_150-m_1564-k_50-p_0.1.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:05:17.144]      synth-n_150-m_1564-k_50-p_0.1.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:05:18.149]      synth-n_150-m_1564-k_50-p_0.1.txt: Solution lies in [41, 51][0m
-[2022-02-06 13:05:18.149]      synth-n_150-m_1564-k_50-p_0.1.txt: Branching with k = 50
-[31m[2022-02-06 13:05:18.335]      synth-n_150-m_1564-k_50-p_0.1.txt: Found solution in 1194 ms (recursive steps: 709)[0m
-[33m[2022-02-06 13:05:18.335]      synth-n_150-m_1564-k_50-p_0.1.txt: BFS: 10, Packing: 124, Heuristic: 1005, Copy: 38, Red: 13, DAG: 0, Pre: 0, File: 0[0m
-[35m[2022-02-06 13:05:18.336]      synth-n_150-m_2446-k_10-p_0.2.txt: synth-n_150-m_2446-k_10-p_0.2.txt (n = 150, m = 2446, k = 10)[0m
-[0m[2022-02-06 13:05:18.336]      synth-n_150-m_2446-k_10-p_0.2.txt: Found 1 cyclic sub graph(s) with n = [144][0m
-[0m[2022-02-06 13:05:18.336]      synth-n_150-m_2446-k_10-p_0.2.txt: Removed 6 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-06 13:05:18.336]      synth-n_150-m_2446-k_10-p_0.2.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:05:18.339]      synth-n_150-m_2446-k_10-p_0.2.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:05:19.341]      synth-n_150-m_2446-k_10-p_0.2.txt: Solution lies in [10, 10][0m
-[0m[2022-02-06 13:05:19.342]      synth-n_150-m_2446-k_10-p_0.2.txt: Found solution in 1007 ms (recursive steps: 0)[0m
-[33m[2022-02-06 13:05:19.342]      synth-n_150-m_2446-k_10-p_0.2.txt: BFS: 0, Packing: 3, Heuristic: 1002, Copy: 0, Red: 0, DAG: 0, Pre: 0, File: 1[0m
-[35m[2022-02-06 13:05:19.343]      synth-n_150-m_2502-k_15-p_0.2.txt: synth-n_150-m_2502-k_15-p_0.2.txt (n = 150, m = 2502, k = 15)[0m
-[0m[2022-02-06 13:05:19.343]      synth-n_150-m_2502-k_15-p_0.2.txt: Found 1 cyclic sub graph(s) with n = [147][0m
-[0m[2022-02-06 13:05:19.343]      synth-n_150-m_2502-k_15-p_0.2.txt: Removed 3 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-06 13:05:19.344]      synth-n_150-m_2502-k_15-p_0.2.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:05:19.346]      synth-n_150-m_2502-k_15-p_0.2.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:05:20.349]      synth-n_150-m_2502-k_15-p_0.2.txt: Solution lies in [15, 15][0m
-[0m[2022-02-06 13:05:20.349]      synth-n_150-m_2502-k_15-p_0.2.txt: Found solution in 1007 ms (recursive steps: 0)[0m
-[33m[2022-02-06 13:05:20.350]      synth-n_150-m_2502-k_15-p_0.2.txt: BFS: 0, Packing: 2, Heuristic: 1003, Copy: 0, Red: 0, DAG: 0, Pre: 1, File: 1[0m
-[35m[2022-02-06 13:05:20.350]      synth-n_150-m_2552-k_20-p_0.2.txt: synth-n_150-m_2552-k_20-p_0.2.txt (n = 150, m = 2552, k = 20)[0m
-[0m[2022-02-06 13:05:20.351]      synth-n_150-m_2552-k_20-p_0.2.txt: Found 1 cyclic sub graph(s) with n = [148][0m
-[0m[2022-02-06 13:05:20.351]      synth-n_150-m_2552-k_20-p_0.2.txt: Removed 2 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-06 13:05:20.351]      synth-n_150-m_2552-k_20-p_0.2.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:05:20.354]      synth-n_150-m_2552-k_20-p_0.2.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:05:21.355]      synth-n_150-m_2552-k_20-p_0.2.txt: Solution lies in [20, 20][0m
-[0m[2022-02-06 13:05:21.356]      synth-n_150-m_2552-k_20-p_0.2.txt: Found solution in 1006 ms (recursive steps: 0)[0m
-[33m[2022-02-06 13:05:21.356]      synth-n_150-m_2552-k_20-p_0.2.txt: BFS: 0, Packing: 3, Heuristic: 1001, Copy: 0, Red: 0, DAG: 0, Pre: 0, File: 0[0m
-[35m[2022-02-06 13:05:21.357]      synth-n_150-m_2731-k_25-p_0.2.txt: synth-n_150-m_2731-k_25-p_0.2.txt (n = 150, m = 2731, k = 25)[0m
-[0m[2022-02-06 13:05:21.358]      synth-n_150-m_2731-k_25-p_0.2.txt: Found 1 cyclic sub graph(s) with n = [149][0m
-[0m[2022-02-06 13:05:21.358]      synth-n_150-m_2731-k_25-p_0.2.txt: Removed 1 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-06 13:05:21.358]      synth-n_150-m_2731-k_25-p_0.2.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:05:21.361]      synth-n_150-m_2731-k_25-p_0.2.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:05:22.363]      synth-n_150-m_2731-k_25-p_0.2.txt: Solution lies in [25, 25][0m
-[0m[2022-02-06 13:05:22.364]      synth-n_150-m_2731-k_25-p_0.2.txt: Found solution in 1008 ms (recursive steps: 0)[0m
-[33m[2022-02-06 13:05:22.364]      synth-n_150-m_2731-k_25-p_0.2.txt: BFS: 0, Packing: 3, Heuristic: 1002, Copy: 0, Red: 0, DAG: 0, Pre: 1, File: 1[0m
-[35m[2022-02-06 13:05:22.365]      synth-n_150-m_2807-k_30-p_0.2.txt: synth-n_150-m_2807-k_30-p_0.2.txt (n = 150, m = 2807, k = 30)[0m
-[0m[2022-02-06 13:05:22.365]      synth-n_150-m_2807-k_30-p_0.2.txt: Found 1 cyclic sub graph(s) with n = [150][0m
-[0m[2022-02-06 13:05:22.366]      synth-n_150-m_2807-k_30-p_0.2.txt: Removed 0 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-06 13:05:22.366]      synth-n_150-m_2807-k_30-p_0.2.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:05:22.369]      synth-n_150-m_2807-k_30-p_0.2.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:05:23.370]      synth-n_150-m_2807-k_30-p_0.2.txt: Solution lies in [30, 30][0m
-[0m[2022-02-06 13:05:23.371]      synth-n_150-m_2807-k_30-p_0.2.txt: Found solution in 1007 ms (recursive steps: 0)[0m
-[33m[2022-02-06 13:05:23.371]      synth-n_150-m_2807-k_30-p_0.2.txt: BFS: 0, Packing: 3, Heuristic: 1001, Copy: 0, Red: 0, DAG: 0, Pre: 1, File: 1[0m
-[35m[2022-02-06 13:05:23.372]      synth-n_150-m_3040-k_50-p_0.2.txt: synth-n_150-m_3040-k_50-p_0.2.txt (n = 150, m = 3040, k = 50)[0m
-[0m[2022-02-06 13:05:23.372]      synth-n_150-m_3040-k_50-p_0.2.txt: Found 1 cyclic sub graph(s) with n = [150][0m
-[0m[2022-02-06 13:05:23.372]      synth-n_150-m_3040-k_50-p_0.2.txt: Removed 0 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-06 13:05:23.373]      synth-n_150-m_3040-k_50-p_0.2.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:05:23.375]      synth-n_150-m_3040-k_50-p_0.2.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:05:24.378]      synth-n_150-m_3040-k_50-p_0.2.txt: Solution lies in [47, 50][0m
-[2022-02-06 13:05:24.378]      synth-n_150-m_3040-k_50-p_0.2.txt: Branching with k = 49
-[0m[2022-02-06 13:05:24.408]      synth-n_150-m_3040-k_50-p_0.2.txt: Found solution in 1037 ms (recursive steps: 78)[0m
-[33m[2022-02-06 13:05:24.409]      synth-n_150-m_3040-k_50-p_0.2.txt: BFS: 5, Packing: 13, Heuristic: 1003, Copy: 8, Red: 5, DAG: 0, Pre: 1, File: 1[0m
-[35m[2022-02-06 13:05:24.410]      synth-n_150-m_3050-k_70-p_0.2.txt: synth-n_150-m_3050-k_70-p_0.2.txt (n = 150, m = 3050, k = 70)[0m
-[0m[2022-02-06 13:05:24.410]      synth-n_150-m_3050-k_70-p_0.2.txt: Found 1 cyclic sub graph(s) with n = [150][0m
-[0m[2022-02-06 13:05:24.410]      synth-n_150-m_3050-k_70-p_0.2.txt: Removed 0 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-06 13:05:24.411]      synth-n_150-m_3050-k_70-p_0.2.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:05:24.413]      synth-n_150-m_3050-k_70-p_0.2.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:05:25.419]      synth-n_150-m_3050-k_70-p_0.2.txt: Solution lies in [48, 76][0m
-[2022-02-06 13:05:25.420]      synth-n_150-m_3050-k_70-p_0.2.txt: Branching with k = 75
-[31m[2022-02-06 13:05:26.257]      synth-n_150-m_3050-k_70-p_0.2.txt: Found solution in 1848 ms (recursive steps: 3690)[0m
-[33m[2022-02-06 13:05:26.257]      synth-n_150-m_3050-k_70-p_0.2.txt: BFS: 164, Packing: 297, Heuristic: 1006, Copy: 279, Red: 85, DAG: 0, Pre: 1, File: 1[0m
-[35m[2022-02-06 13:05:26.263]      synth-n_150-m_630-k_15-p_0.05.txt: synth-n_150-m_630-k_15-p_0.05.txt (n = 150, m = 630, k = 15)[0m
-[0m[2022-02-06 13:05:26.263]      synth-n_150-m_630-k_15-p_0.05.txt: Found 1 cyclic sub graph(s) with n = [76][0m
-[0m[2022-02-06 13:05:26.263]      synth-n_150-m_630-k_15-p_0.05.txt: Removed 74 nodes in preprocessing, starting with k = 1[0m
-[0m[2022-02-06 13:05:26.263]      synth-n_150-m_630-k_15-p_0.05.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:05:26.264]      synth-n_150-m_630-k_15-p_0.05.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:05:27.265]      synth-n_150-m_630-k_15-p_0.05.txt: Solution lies in [12, 14][0m
-[2022-02-06 13:05:27.266]      synth-n_150-m_630-k_15-p_0.05.txt: Branching with k = 13
-[0m[2022-02-06 13:05:27.268]      synth-n_150-m_630-k_15-p_0.05.txt: Found solution in 1011 ms (recursive steps: 15)[0m
-[33m[2022-02-06 13:05:27.269]      synth-n_150-m_630-k_15-p_0.05.txt: BFS: 0, Packing: 3, Heuristic: 1001, Copy: 0, Red: 0, DAG: 0, Pre: 0, File: 6[0m
-[35m[2022-02-06 13:05:27.275]      synth-n_150-m_634-k_10-p_0.05.txt: synth-n_150-m_634-k_10-p_0.05.txt (n = 150, m = 634, k = 7)[0m
-[0m[2022-02-06 13:05:27.275]      synth-n_150-m_634-k_10-p_0.05.txt: Found 0 cyclic sub graph(s) with n = [][0m
-[0m[2022-02-06 13:05:27.275]      synth-n_150-m_634-k_10-p_0.05.txt: Removed 150 nodes in preprocessing, starting with k = 7[0m
-[0m[2022-02-06 13:05:27.275]      synth-n_150-m_634-k_10-p_0.05.txt: Found solution in 6 ms (recursive steps: 0)[0m
-[33m[2022-02-06 13:05:27.276]      synth-n_150-m_634-k_10-p_0.05.txt: BFS: 0, Packing: 0, Heuristic: 0, Copy: 0, Red: 0, DAG: 0, Pre: 0, File: 6[0m
-[35m[2022-02-06 13:05:27.281]      synth-n_150-m_666-k_20-p_0.05.txt: synth-n_150-m_666-k_20-p_0.05.txt (n = 150, m = 666, k = 15)[0m
-[0m[2022-02-06 13:05:27.281]      synth-n_150-m_666-k_20-p_0.05.txt: Found 1 cyclic sub graph(s) with n = [94][0m
-[0m[2022-02-06 13:05:27.281]      synth-n_150-m_666-k_20-p_0.05.txt: Removed 56 nodes in preprocessing, starting with k = 1[0m
-[0m[2022-02-06 13:05:27.281]      synth-n_150-m_666-k_20-p_0.05.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:05:27.282]      synth-n_150-m_666-k_20-p_0.05.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:05:28.283]      synth-n_150-m_666-k_20-p_0.05.txt: Solution lies in [14, 14][0m
-[0m[2022-02-06 13:05:28.284]      synth-n_150-m_666-k_20-p_0.05.txt: Found solution in 1008 ms (recursive steps: 0)[0m
-[33m[2022-02-06 13:05:28.284]      synth-n_150-m_666-k_20-p_0.05.txt: BFS: 0, Packing: 1, Heuristic: 1001, Copy: 0, Red: 0, DAG: 0, Pre: 0, File: 5[0m
-[35m[2022-02-06 13:05:28.303]      synth-n_150-m_704-k_25-p_0.05.txt: synth-n_150-m_704-k_25-p_0.05.txt (n = 150, m = 704, k = 23)[0m
-[0m[2022-02-06 13:05:28.304]      synth-n_150-m_704-k_25-p_0.05.txt: Found 1 cyclic sub graph(s) with n = [102][0m
-[0m[2022-02-06 13:05:28.304]      synth-n_150-m_704-k_25-p_0.05.txt: Removed 48 nodes in preprocessing, starting with k = 1[0m
-[0m[2022-02-06 13:05:28.304]      synth-n_150-m_704-k_25-p_0.05.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:05:28.305]      synth-n_150-m_704-k_25-p_0.05.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:05:29.306]      synth-n_150-m_704-k_25-p_0.05.txt: Solution lies in [20, 22][0m
-[2022-02-06 13:05:29.307]      synth-n_150-m_704-k_25-p_0.05.txt: Branching with k = 21
-[0m[2022-02-06 13:05:29.310]      synth-n_150-m_704-k_25-p_0.05.txt: Found solution in 1025 ms (recursive steps: 17)[0m
-[33m[2022-02-06 13:05:29.310]      synth-n_150-m_704-k_25-p_0.05.txt: BFS: 0, Packing: 3, Heuristic: 1001, Copy: 0, Red: 0, DAG: 0, Pre: 1, File: 19[0m
-[35m[2022-02-06 13:05:29.329]      synth-n_150-m_781-k_50-p_0.05.txt: synth-n_150-m_781-k_50-p_0.05.txt (n = 150, m = 781, k = 32)[0m
-[0m[2022-02-06 13:05:29.330]      synth-n_150-m_781-k_50-p_0.05.txt: Found 1 cyclic sub graph(s) with n = [125][0m
-[0m[2022-02-06 13:05:29.330]      synth-n_150-m_781-k_50-p_0.05.txt: Removed 25 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-06 13:05:29.330]      synth-n_150-m_781-k_50-p_0.05.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:05:29.331]      synth-n_150-m_781-k_50-p_0.05.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:05:30.333]      synth-n_150-m_781-k_50-p_0.05.txt: Solution lies in [25, 33][0m
-[2022-02-06 13:05:30.333]      synth-n_150-m_781-k_50-p_0.05.txt: Branching with k = 32
-[0m[2022-02-06 13:05:31.571]      synth-n_150-m_781-k_50-p_0.05.txt: Found solution in 2261 ms (recursive steps: 6622)[0m
-[33m[2022-02-06 13:05:31.571]      synth-n_150-m_781-k_50-p_0.05.txt: BFS: 67, Packing: 827, Heuristic: 1002, Copy: 251, Red: 80, DAG: 0, Pre: 0, File: 19[0m
-[35m[2022-02-06 13:05:31.591]      synth-n_150-m_782-k_30-p_0.05.txt: synth-n_150-m_782-k_30-p_0.05.txt (n = 150, m = 782, k = 28)[0m
-[0m[2022-02-06 13:05:31.591]      synth-n_150-m_782-k_30-p_0.05.txt: Found 1 cyclic sub graph(s) with n = [121][0m
-[0m[2022-02-06 13:05:31.592]      synth-n_150-m_782-k_30-p_0.05.txt: Removed 29 nodes in preprocessing, starting with k = 1[0m
-[0m[2022-02-06 13:05:31.592]      synth-n_150-m_782-k_30-p_0.05.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:05:31.593]      synth-n_150-m_782-k_30-p_0.05.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:05:32.595]      synth-n_150-m_782-k_30-p_0.05.txt: Solution lies in [22, 27][0m
-[2022-02-06 13:05:32.595]      synth-n_150-m_782-k_30-p_0.05.txt: Branching with k = 26
-[0m[2022-02-06 13:05:32.823]      synth-n_150-m_782-k_30-p_0.05.txt: Found solution in 1251 ms (recursive steps: 1194)[0m
-[33m[2022-02-06 13:05:32.823]      synth-n_150-m_782-k_30-p_0.05.txt: BFS: 14, Packing: 147, Heuristic: 1002, Copy: 56, Red: 11, DAG: 0, Pre: 1, File: 19[0m
-[35m[2022-02-06 13:05:32.830]      synth-n_150-m_805-k_70-p_0.05.txt: synth-n_150-m_805-k_70-p_0.05.txt (n = 150, m = 805, k = 43)[0m
-[0m[2022-02-06 13:05:32.831]      synth-n_150-m_805-k_70-p_0.05.txt: Found 1 cyclic sub graph(s) with n = [138][0m
-[0m[2022-02-06 13:05:32.831]      synth-n_150-m_805-k_70-p_0.05.txt: Removed 12 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-06 13:05:32.831]      synth-n_150-m_805-k_70-p_0.05.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:05:32.833]      synth-n_150-m_805-k_70-p_0.05.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:05:33.837]      synth-n_150-m_805-k_70-p_0.05.txt: Solution lies in [29, 46][0m
-[2022-02-06 13:05:33.837]      synth-n_150-m_805-k_70-p_0.05.txt: Branching with k = 45
-[31m[2022-02-06 13:05:51.834]      synth-n_150-m_805-k_70-p_0.05.txt: Found solution in 19011 ms (recursive steps: 92773)[0m
-[33m[2022-02-06 13:05:51.834]      synth-n_150-m_805-k_70-p_0.05.txt: BFS: 528, Packing: 14201, Heuristic: 1004, Copy: 2155, Red: 923, DAG: 0, Pre: 0, File: 7[0m
-[35m[2022-02-06 13:05:51.941]   synth-n_1600-m_137884-k_70-p_0.1.txt: synth-n_1600-m_137884-k_70-p_0.1.txt (n = 1600, m = 137884, k = 70)[0m
-[0m[2022-02-06 13:05:52.031]   synth-n_1600-m_137884-k_70-p_0.1.txt: Found 1 cyclic sub graph(s) with n = [1600][0m
-[0m[2022-02-06 13:05:52.032]   synth-n_1600-m_137884-k_70-p_0.1.txt: Removed 0 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-06 13:05:52.033]   synth-n_1600-m_137884-k_70-p_0.1.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:05:54.444]   synth-n_1600-m_137884-k_70-p_0.1.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:05:55.479]   synth-n_1600-m_137884-k_70-p_0.1.txt: Solution lies in [70, 70][0m
-[0m[2022-02-06 13:05:55.480]   synth-n_1600-m_137884-k_70-p_0.1.txt: Found solution in 3645 ms (recursive steps: 0)[0m
-[33m[2022-02-06 13:05:55.480]   synth-n_1600-m_137884-k_70-p_0.1.txt: BFS: 0, Packing: 2411, Heuristic: 1035, Copy: 0, Red: 0, DAG: 0, Pre: 91, File: 106[0m
-[35m[2022-02-06 13:05:55.604]  synth-n_1600-m_141523-k_100-p_0.1.txt: synth-n_1600-m_141523-k_100-p_0.1.txt (n = 1600, m = 141523, k = 100)[0m
-[0m[2022-02-06 13:05:55.697]  synth-n_1600-m_141523-k_100-p_0.1.txt: Found 1 cyclic sub graph(s) with n = [1600][0m
-[0m[2022-02-06 13:05:55.698]  synth-n_1600-m_141523-k_100-p_0.1.txt: Removed 0 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-06 13:05:55.699]  synth-n_1600-m_141523-k_100-p_0.1.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:05:57.820]  synth-n_1600-m_141523-k_100-p_0.1.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:05:59.044]  synth-n_1600-m_141523-k_100-p_0.1.txt: Solution lies in [100, 100][0m
-[0m[2022-02-06 13:05:59.045]  synth-n_1600-m_141523-k_100-p_0.1.txt: Found solution in 3565 ms (recursive steps: 0)[0m
-[33m[2022-02-06 13:05:59.045]  synth-n_1600-m_141523-k_100-p_0.1.txt: BFS: 0, Packing: 2121, Heuristic: 1224, Copy: 0, Red: 0, DAG: 0, Pre: 94, File: 124[0m
-[35m[2022-02-06 13:05:59.173]  synth-n_1600-m_143789-k_120-p_0.1.txt: synth-n_1600-m_143789-k_120-p_0.1.txt (n = 1600, m = 143789, k = 120)[0m
-[0m[2022-02-06 13:05:59.267]  synth-n_1600-m_143789-k_120-p_0.1.txt: Found 1 cyclic sub graph(s) with n = [1600][0m
-[0m[2022-02-06 13:05:59.268]  synth-n_1600-m_143789-k_120-p_0.1.txt: Removed 0 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-06 13:05:59.269]  synth-n_1600-m_143789-k_120-p_0.1.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:06:01.244]  synth-n_1600-m_143789-k_120-p_0.1.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:06:02.485]  synth-n_1600-m_143789-k_120-p_0.1.txt: Solution lies in [120, 120][0m
-[0m[2022-02-06 13:06:02.486]  synth-n_1600-m_143789-k_120-p_0.1.txt: Found solution in 3441 ms (recursive steps: 0)[0m
-[33m[2022-02-06 13:06:02.486]  synth-n_1600-m_143789-k_120-p_0.1.txt: BFS: 0, Packing: 1975, Heuristic: 1241, Copy: 0, Red: 0, DAG: 0, Pre: 95, File: 127[0m
-[35m[2022-02-06 13:06:02.621]  synth-n_1600-m_147721-k_150-p_0.1.txt: synth-n_1600-m_147721-k_150-p_0.1.txt (n = 1600, m = 147721, k = 150)[0m
-[0m[2022-02-06 13:06:02.717]  synth-n_1600-m_147721-k_150-p_0.1.txt: Found 1 cyclic sub graph(s) with n = [1600][0m
-[0m[2022-02-06 13:06:02.718]  synth-n_1600-m_147721-k_150-p_0.1.txt: Removed 0 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-06 13:06:02.719]  synth-n_1600-m_147721-k_150-p_0.1.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:06:04.449]  synth-n_1600-m_147721-k_150-p_0.1.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:06:06.226]  synth-n_1600-m_147721-k_150-p_0.1.txt: Solution lies in [150, 150][0m
-[0m[2022-02-06 13:06:06.226]  synth-n_1600-m_147721-k_150-p_0.1.txt: Found solution in 3740 ms (recursive steps: 0)[0m
-[33m[2022-02-06 13:06:06.226]  synth-n_1600-m_147721-k_150-p_0.1.txt: BFS: 0, Packing: 1730, Heuristic: 1777, Copy: 0, Red: 0, DAG: 0, Pre: 97, File: 135[0m
-[35m[2022-02-06 13:06:06.368]  synth-n_1600-m_152838-k_200-p_0.1.txt: synth-n_1600-m_152838-k_200-p_0.1.txt (n = 1600, m = 152838, k = 200)[0m
-[0m[2022-02-06 13:06:06.468]  synth-n_1600-m_152838-k_200-p_0.1.txt: Found 1 cyclic sub graph(s) with n = [1600][0m
-[0m[2022-02-06 13:06:06.469]  synth-n_1600-m_152838-k_200-p_0.1.txt: Removed 0 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-06 13:06:06.469]  synth-n_1600-m_152838-k_200-p_0.1.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:06:07.916]  synth-n_1600-m_152838-k_200-p_0.1.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:06:09.101]  synth-n_1600-m_152838-k_200-p_0.1.txt: Solution lies in [200, 200][0m
-[0m[2022-02-06 13:06:09.102]  synth-n_1600-m_152838-k_200-p_0.1.txt: Found solution in 2876 ms (recursive steps: 0)[0m
-[33m[2022-02-06 13:06:09.102]  synth-n_1600-m_152838-k_200-p_0.1.txt: BFS: 0, Packing: 1447, Heuristic: 1185, Copy: 0, Red: 0, DAG: 0, Pre: 101, File: 142[0m
-[35m[2022-02-06 13:06:09.561]   synth-n_1600-m_273042-k_70-p_0.2.txt: synth-n_1600-m_273042-k_70-p_0.2.txt (n = 1600, m = 273042, k = 70)[0m
-[0m[2022-02-06 13:06:09.769]   synth-n_1600-m_273042-k_70-p_0.2.txt: Found 1 cyclic sub graph(s) with n = [1600][0m
-[0m[2022-02-06 13:06:09.770]   synth-n_1600-m_273042-k_70-p_0.2.txt: Removed 0 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-06 13:06:09.771]   synth-n_1600-m_273042-k_70-p_0.2.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:06:14.014]   synth-n_1600-m_273042-k_70-p_0.2.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:06:15.245]   synth-n_1600-m_273042-k_70-p_0.2.txt: Solution lies in [70, 70][0m
-[0m[2022-02-06 13:06:15.245]   synth-n_1600-m_273042-k_70-p_0.2.txt: Found solution in 6143 ms (recursive steps: 0)[0m
-[33m[2022-02-06 13:06:15.246]   synth-n_1600-m_273042-k_70-p_0.2.txt: BFS: 0, Packing: 4243, Heuristic: 1231, Copy: 0, Red: 0, DAG: 0, Pre: 208, File: 459[0m
-[35m[2022-02-06 13:06:15.714]  synth-n_1600-m_279359-k_100-p_0.2.txt: synth-n_1600-m_279359-k_100-p_0.2.txt (n = 1600, m = 279359, k = 100)[0m
-[0m[2022-02-06 13:06:15.928]  synth-n_1600-m_279359-k_100-p_0.2.txt: Found 1 cyclic sub graph(s) with n = [1600][0m
-[0m[2022-02-06 13:06:15.929]  synth-n_1600-m_279359-k_100-p_0.2.txt: Removed 0 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-06 13:06:15.930]  synth-n_1600-m_279359-k_100-p_0.2.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:06:20.142]  synth-n_1600-m_279359-k_100-p_0.2.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:06:21.747]  synth-n_1600-m_279359-k_100-p_0.2.txt: Solution lies in [100, 100][0m
-[0m[2022-02-06 13:06:21.748]  synth-n_1600-m_279359-k_100-p_0.2.txt: Found solution in 6502 ms (recursive steps: 0)[0m
-[33m[2022-02-06 13:06:21.748]  synth-n_1600-m_279359-k_100-p_0.2.txt: BFS: 0, Packing: 4212, Heuristic: 1605, Copy: 0, Red: 0, DAG: 0, Pre: 215, File: 468[0m
-[35m[2022-02-06 13:06:22.361]  synth-n_1600-m_284773-k_120-p_0.2.txt: synth-n_1600-m_284773-k_120-p_0.2.txt (n = 1600, m = 284773, k = 120)[0m
-[0m[2022-02-06 13:06:22.609]  synth-n_1600-m_284773-k_120-p_0.2.txt: Found 1 cyclic sub graph(s) with n = [1600][0m
-[0m[2022-02-06 13:06:22.610]  synth-n_1600-m_284773-k_120-p_0.2.txt: Removed 0 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-06 13:06:22.612]  synth-n_1600-m_284773-k_120-p_0.2.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:06:26.831]  synth-n_1600-m_284773-k_120-p_0.2.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:06:28.808]  synth-n_1600-m_284773-k_120-p_0.2.txt: Solution lies in [120, 120][0m
-[0m[2022-02-06 13:06:28.809]  synth-n_1600-m_284773-k_120-p_0.2.txt: Found solution in 7061 ms (recursive steps: 0)[0m
-[33m[2022-02-06 13:06:28.809]  synth-n_1600-m_284773-k_120-p_0.2.txt: BFS: 0, Packing: 4219, Heuristic: 1977, Copy: 0, Red: 0, DAG: 0, Pre: 250, File: 613[0m
-[35m[2022-02-06 13:06:29.441]  synth-n_1600-m_290831-k_150-p_0.2.txt: synth-n_1600-m_290831-k_150-p_0.2.txt (n = 1600, m = 290831, k = 150)[0m
-[0m[2022-02-06 13:06:29.711]  synth-n_1600-m_290831-k_150-p_0.2.txt: Found 1 cyclic sub graph(s) with n = [1600][0m
-[0m[2022-02-06 13:06:29.712]  synth-n_1600-m_290831-k_150-p_0.2.txt: Removed 0 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-06 13:06:29.714]  synth-n_1600-m_290831-k_150-p_0.2.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:06:33.272]  synth-n_1600-m_290831-k_150-p_0.2.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:06:35.382]  synth-n_1600-m_290831-k_150-p_0.2.txt: Solution lies in [150, 150][0m
-[0m[2022-02-06 13:06:35.383]  synth-n_1600-m_290831-k_150-p_0.2.txt: Found solution in 6574 ms (recursive steps: 0)[0m
-[33m[2022-02-06 13:06:35.383]  synth-n_1600-m_290831-k_150-p_0.2.txt: BFS: 0, Packing: 3559, Heuristic: 2110, Copy: 0, Red: 0, DAG: 0, Pre: 271, File: 632[0m
-[35m[2022-02-06 13:06:35.981]  synth-n_1600-m_301143-k_200-p_0.2.txt: synth-n_1600-m_301143-k_200-p_0.2.txt (n = 1600, m = 301143, k = 200)[0m
-[0m[2022-02-06 13:06:36.227]  synth-n_1600-m_301143-k_200-p_0.2.txt: Found 1 cyclic sub graph(s) with n = [1600][0m
-[0m[2022-02-06 13:06:36.228]  synth-n_1600-m_301143-k_200-p_0.2.txt: Removed 0 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-06 13:06:36.229]  synth-n_1600-m_301143-k_200-p_0.2.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:06:39.310]  synth-n_1600-m_301143-k_200-p_0.2.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:06:41.810]  synth-n_1600-m_301143-k_200-p_0.2.txt: Solution lies in [200, 200][0m
-[0m[2022-02-06 13:06:41.810]  synth-n_1600-m_301143-k_200-p_0.2.txt: Found solution in 6427 ms (recursive steps: 0)[0m
-[33m[2022-02-06 13:06:41.811]  synth-n_1600-m_301143-k_200-p_0.2.txt: BFS: 0, Packing: 3081, Heuristic: 2500, Copy: 0, Red: 0, DAG: 0, Pre: 247, File: 598[0m
-[35m[2022-02-06 13:06:41.846]   synth-n_1600-m_68907-k_70-p_0.05.txt: synth-n_1600-m_68907-k_70-p_0.05.txt (n = 1600, m = 68907, k = 70)[0m
-[0m[2022-02-06 13:06:41.888]   synth-n_1600-m_68907-k_70-p_0.05.txt: Found 1 cyclic sub graph(s) with n = [1598][0m
-[0m[2022-02-06 13:06:41.889]   synth-n_1600-m_68907-k_70-p_0.05.txt: Removed 2 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-06 13:06:41.889]   synth-n_1600-m_68907-k_70-p_0.05.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:06:43.446]   synth-n_1600-m_68907-k_70-p_0.05.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:06:44.608]   synth-n_1600-m_68907-k_70-p_0.05.txt: Solution lies in [70, 70][0m
-[0m[2022-02-06 13:06:44.608]   synth-n_1600-m_68907-k_70-p_0.05.txt: Found solution in 2797 ms (recursive steps: 0)[0m
-[33m[2022-02-06 13:06:44.609]   synth-n_1600-m_68907-k_70-p_0.05.txt: BFS: 0, Packing: 1557, Heuristic: 1162, Copy: 0, Red: 0, DAG: 0, Pre: 43, File: 35[0m
-[35m[2022-02-06 13:06:44.646]  synth-n_1600-m_70865-k_100-p_0.05.txt: synth-n_1600-m_70865-k_100-p_0.05.txt (n = 1600, m = 70865, k = 100)[0m
-[0m[2022-02-06 13:06:44.692]  synth-n_1600-m_70865-k_100-p_0.05.txt: Found 1 cyclic sub graph(s) with n = [1597][0m
-[0m[2022-02-06 13:06:44.693]  synth-n_1600-m_70865-k_100-p_0.05.txt: Removed 3 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-06 13:06:44.694]  synth-n_1600-m_70865-k_100-p_0.05.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:06:46.186]  synth-n_1600-m_70865-k_100-p_0.05.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:06:47.282]  synth-n_1600-m_70865-k_100-p_0.05.txt: Solution lies in [100, 100][0m
-[0m[2022-02-06 13:06:47.282]  synth-n_1600-m_70865-k_100-p_0.05.txt: Found solution in 2673 ms (recursive steps: 0)[0m
-[33m[2022-02-06 13:06:47.282]  synth-n_1600-m_70865-k_100-p_0.05.txt: BFS: 0, Packing: 1492, Heuristic: 1096, Copy: 0, Red: 0, DAG: 0, Pre: 47, File: 37[0m
-[35m[2022-02-06 13:06:47.320]  synth-n_1600-m_72748-k_120-p_0.05.txt: synth-n_1600-m_72748-k_120-p_0.05.txt (n = 1600, m = 72748, k = 120)[0m
-[0m[2022-02-06 13:06:47.373]  synth-n_1600-m_72748-k_120-p_0.05.txt: Found 1 cyclic sub graph(s) with n = [1600][0m
-[0m[2022-02-06 13:06:47.373]  synth-n_1600-m_72748-k_120-p_0.05.txt: Removed 0 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-06 13:06:47.374]  synth-n_1600-m_72748-k_120-p_0.05.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:06:48.901]  synth-n_1600-m_72748-k_120-p_0.05.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:06:49.987]  synth-n_1600-m_72748-k_120-p_0.05.txt: Solution lies in [120, 120][0m
-[0m[2022-02-06 13:06:49.988]  synth-n_1600-m_72748-k_120-p_0.05.txt: Found solution in 2705 ms (recursive steps: 0)[0m
-[33m[2022-02-06 13:06:49.988]  synth-n_1600-m_72748-k_120-p_0.05.txt: BFS: 0, Packing: 1527, Heuristic: 1086, Copy: 0, Red: 0, DAG: 0, Pre: 53, File: 37[0m
-[35m[2022-02-06 13:06:50.028]  synth-n_1600-m_74607-k_150-p_0.05.txt: synth-n_1600-m_74607-k_150-p_0.05.txt (n = 1600, m = 74607, k = 150)[0m
-[0m[2022-02-06 13:06:50.080]  synth-n_1600-m_74607-k_150-p_0.05.txt: Found 1 cyclic sub graph(s) with n = [1600][0m
-[0m[2022-02-06 13:06:50.081]  synth-n_1600-m_74607-k_150-p_0.05.txt: Removed 0 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-06 13:06:50.082]  synth-n_1600-m_74607-k_150-p_0.05.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:06:51.302]  synth-n_1600-m_74607-k_150-p_0.05.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:06:52.637]  synth-n_1600-m_74607-k_150-p_0.05.txt: Solution lies in [150, 150][0m
-[0m[2022-02-06 13:06:52.637]  synth-n_1600-m_74607-k_150-p_0.05.txt: Found solution in 2649 ms (recursive steps: 0)[0m
-[33m[2022-02-06 13:06:52.638]  synth-n_1600-m_74607-k_150-p_0.05.txt: BFS: 0, Packing: 1220, Heuristic: 1335, Copy: 0, Red: 0, DAG: 0, Pre: 53, File: 40[0m
-[35m[2022-02-06 13:06:52.678]  synth-n_1600-m_77345-k_200-p_0.05.txt: synth-n_1600-m_77345-k_200-p_0.05.txt (n = 1600, m = 77345, k = 200)[0m
-[0m[2022-02-06 13:06:52.726]  synth-n_1600-m_77345-k_200-p_0.05.txt: Found 1 cyclic sub graph(s) with n = [1600][0m
-[0m[2022-02-06 13:06:52.726]  synth-n_1600-m_77345-k_200-p_0.05.txt: Removed 0 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-06 13:06:52.727]  synth-n_1600-m_77345-k_200-p_0.05.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:06:53.692]  synth-n_1600-m_77345-k_200-p_0.05.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:06:54.926]  synth-n_1600-m_77345-k_200-p_0.05.txt: Solution lies in [200, 200][0m
-[0m[2022-02-06 13:06:54.927]  synth-n_1600-m_77345-k_200-p_0.05.txt: Found solution in 2289 ms (recursive steps: 0)[0m
-[33m[2022-02-06 13:06:54.927]  synth-n_1600-m_77345-k_200-p_0.05.txt: BFS: 0, Packing: 965, Heuristic: 1234, Copy: 0, Red: 0, DAG: 0, Pre: 49, File: 40[0m
-[35m[2022-02-06 13:06:54.933]     synth-n_200-m_1076-k_10-p_0.05.txt: synth-n_200-m_1076-k_10-p_0.05.txt (n = 200, m = 1076, k = 10)[0m
-[0m[2022-02-06 13:06:54.933]     synth-n_200-m_1076-k_10-p_0.05.txt: Found 0 cyclic sub graph(s) with n = [][0m
-[0m[2022-02-06 13:06:54.934]     synth-n_200-m_1076-k_10-p_0.05.txt: Removed 200 nodes in preprocessing, starting with k = 10[0m
-[0m[2022-02-06 13:06:54.934]     synth-n_200-m_1076-k_10-p_0.05.txt: Found solution in 7 ms (recursive steps: 0)[0m
-[33m[2022-02-06 13:06:54.934]     synth-n_200-m_1076-k_10-p_0.05.txt: BFS: 0, Packing: 0, Heuristic: 0, Copy: 0, Red: 0, DAG: 0, Pre: 1, File: 6[0m
-[35m[2022-02-06 13:06:54.940]     synth-n_200-m_1167-k_15-p_0.05.txt: synth-n_200-m_1167-k_15-p_0.05.txt (n = 200, m = 1167, k = 15)[0m
-[0m[2022-02-06 13:06:54.940]     synth-n_200-m_1167-k_15-p_0.05.txt: Found 1 cyclic sub graph(s) with n = [138][0m
-[0m[2022-02-06 13:06:54.940]     synth-n_200-m_1167-k_15-p_0.05.txt: Removed 62 nodes in preprocessing, starting with k = 1[0m
-[0m[2022-02-06 13:06:54.941]     synth-n_200-m_1167-k_15-p_0.05.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:06:54.942]     synth-n_200-m_1167-k_15-p_0.05.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:06:55.943]     synth-n_200-m_1167-k_15-p_0.05.txt: Solution lies in [14, 14][0m
-[0m[2022-02-06 13:06:55.943]     synth-n_200-m_1167-k_15-p_0.05.txt: Found solution in 1009 ms (recursive steps: 0)[0m
-[33m[2022-02-06 13:06:55.943]     synth-n_200-m_1167-k_15-p_0.05.txt: BFS: 0, Packing: 1, Heuristic: 1001, Copy: 0, Red: 0, DAG: 0, Pre: 0, File: 6[0m
-[35m[2022-02-06 13:06:55.950]     synth-n_200-m_1175-k_20-p_0.05.txt: synth-n_200-m_1175-k_20-p_0.05.txt (n = 200, m = 1175, k = 20)[0m
-[0m[2022-02-06 13:06:55.950]     synth-n_200-m_1175-k_20-p_0.05.txt: Found 1 cyclic sub graph(s) with n = [157][0m
-[0m[2022-02-06 13:06:55.950]     synth-n_200-m_1175-k_20-p_0.05.txt: Removed 43 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-06 13:06:55.951]     synth-n_200-m_1175-k_20-p_0.05.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:06:55.953]     synth-n_200-m_1175-k_20-p_0.05.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:06:56.955]     synth-n_200-m_1175-k_20-p_0.05.txt: Solution lies in [18, 20][0m
-[2022-02-06 13:06:56.955]     synth-n_200-m_1175-k_20-p_0.05.txt: Branching with k = 19
-[0m[2022-02-06 13:06:56.958]     synth-n_200-m_1175-k_20-p_0.05.txt: Found solution in 1014 ms (recursive steps: 7)[0m
-[33m[2022-02-06 13:06:56.958]     synth-n_200-m_1175-k_20-p_0.05.txt: BFS: 1, Packing: 2, Heuristic: 1001, Copy: 1, Red: 0, DAG: 0, Pre: 1, File: 6[0m
-[35m[2022-02-06 13:06:56.964]     synth-n_200-m_1245-k_25-p_0.05.txt: synth-n_200-m_1245-k_25-p_0.05.txt (n = 200, m = 1245, k = 24)[0m
-[0m[2022-02-06 13:06:56.965]     synth-n_200-m_1245-k_25-p_0.05.txt: Found 1 cyclic sub graph(s) with n = [152][0m
-[0m[2022-02-06 13:06:56.965]     synth-n_200-m_1245-k_25-p_0.05.txt: Removed 48 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-06 13:06:56.965]     synth-n_200-m_1245-k_25-p_0.05.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:06:56.967]     synth-n_200-m_1245-k_25-p_0.05.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:06:57.968]     synth-n_200-m_1245-k_25-p_0.05.txt: Solution lies in [24, 24][0m
-[0m[2022-02-06 13:06:57.969]     synth-n_200-m_1245-k_25-p_0.05.txt: Found solution in 1011 ms (recursive steps: 0)[0m
-[33m[2022-02-06 13:06:57.969]     synth-n_200-m_1245-k_25-p_0.05.txt: BFS: 0, Packing: 2, Heuristic: 1001, Copy: 0, Red: 0, DAG: 0, Pre: 1, File: 6[0m
-[35m[2022-02-06 13:06:57.974]     synth-n_200-m_1266-k_30-p_0.05.txt: synth-n_200-m_1266-k_30-p_0.05.txt (n = 200, m = 1266, k = 30)[0m
-[0m[2022-02-06 13:06:57.975]     synth-n_200-m_1266-k_30-p_0.05.txt: Found 1 cyclic sub graph(s) with n = [162][0m
-[0m[2022-02-06 13:06:57.975]     synth-n_200-m_1266-k_30-p_0.05.txt: Removed 38 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-06 13:06:57.975]     synth-n_200-m_1266-k_30-p_0.05.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:06:57.977]     synth-n_200-m_1266-k_30-p_0.05.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:06:58.979]     synth-n_200-m_1266-k_30-p_0.05.txt: Solution lies in [27, 30][0m
-[2022-02-06 13:06:58.979]     synth-n_200-m_1266-k_30-p_0.05.txt: Branching with k = 29
-[0m[2022-02-06 13:06:59.027]     synth-n_200-m_1266-k_30-p_0.05.txt: Found solution in 1058 ms (recursive steps: 142)[0m
-[33m[2022-02-06 13:06:59.027]     synth-n_200-m_1266-k_30-p_0.05.txt: BFS: 0, Packing: 36, Heuristic: 1002, Copy: 7, Red: 5, DAG: 0, Pre: 0, File: 5[0m
-[35m[2022-02-06 13:06:59.033]     synth-n_200-m_1336-k_50-p_0.05.txt: synth-n_200-m_1336-k_50-p_0.05.txt (n = 200, m = 1336, k = 45)[0m
-[0m[2022-02-06 13:06:59.034]     synth-n_200-m_1336-k_50-p_0.05.txt: Found 1 cyclic sub graph(s) with n = [185][0m
-[0m[2022-02-06 13:06:59.034]     synth-n_200-m_1336-k_50-p_0.05.txt: Removed 15 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-06 13:06:59.034]     synth-n_200-m_1336-k_50-p_0.05.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:06:59.038]     synth-n_200-m_1336-k_50-p_0.05.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:07:00.040]     synth-n_200-m_1336-k_50-p_0.05.txt: Solution lies in [38, 46][0m
-[2022-02-06 13:07:00.040]     synth-n_200-m_1336-k_50-p_0.05.txt: Branching with k = 45
-[0m[2022-02-06 13:07:00.385]     synth-n_200-m_1336-k_50-p_0.05.txt: Found solution in 1357 ms (recursive steps: 1036)[0m
-[33m[2022-02-06 13:07:00.385]     synth-n_200-m_1336-k_50-p_0.05.txt: BFS: 8, Packing: 263, Heuristic: 1002, Copy: 59, Red: 14, DAG: 0, Pre: 0, File: 5[0m
-[35m[2022-02-06 13:07:00.392]     synth-n_200-m_1434-k_70-p_0.05.txt: synth-n_200-m_1434-k_70-p_0.05.txt (n = 200, m = 1434, k = -1)[0m
-[0m[2022-02-06 13:07:00.392]     synth-n_200-m_1434-k_70-p_0.05.txt: Found 1 cyclic sub graph(s) with n = [198][0m
-[0m[2022-02-06 13:07:00.392]     synth-n_200-m_1434-k_70-p_0.05.txt: Removed 2 nodes in preprocessing, starting with k = 0[0m
-[0m[2022-02-06 13:07:00.393]     synth-n_200-m_1434-k_70-p_0.05.txt: Creating cycle packing with time limit = 10000[0m
-[0m[2022-02-06 13:07:00.396]     synth-n_200-m_1434-k_70-p_0.05.txt: Creating heuristic with time limit = 1000[0m
-[0m[2022-02-06 13:07:01.404]     synth-n_200-m_1434-k_70-p_0.05.txt: Solution lies in [47, 70][0m
-[2022-02-06 13:07:01.404]     synth-n_200-m_1434-k_70-p_0.05.txt: Branching with k = 69
+[35m[2022-02-06 17:14:38.852]                         advotogo-n_100: advotogo-n_100 (n = 26, m = 31, k = 2)[0m
+[0m[2022-02-06 17:14:38.880]                         advotogo-n_100: Found 0 cyclic sub graph(s) with n = [][0m
+[0m[2022-02-06 17:14:38.883]                         advotogo-n_100: Removed 26 nodes in preprocessing, starting with k = 2[0m
+[0m[2022-02-06 17:14:38.884]                         advotogo-n_100: Found solution with k = 2[0m
+[0m[2022-02-06 17:14:38.888]                         advotogo-n_100: Heuristics: 2 / 2 (in 22 ms)[0m
+[35m[2022-02-06 17:14:38.896]                        advotogo-n_1000: advotogo-n_1000 (n = 624, m = 1883, k = 127)[0m
+[0m[2022-02-06 17:14:38.899]                        advotogo-n_1000: Found 3 cyclic sub graph(s) with n = [3, 3, 6][0m
+[0m[2022-02-06 17:14:38.900]                        advotogo-n_1000: Removed 612 nodes in preprocessing, starting with k = 120[0m
+[0m[2022-02-06 17:14:38.904]                        advotogo-n_1000: Found solution with k = 124[0m
+[0m[2022-02-06 17:14:38.904]                        advotogo-n_1000: Heuristics: 124 / 127 (in 7 ms)[0m
+[35m[2022-02-06 17:14:38.911]                        advotogo-n_1500: advotogo-n_1500 (n = 1110, m = 4342, k = 215)[0m
+[0m[2022-02-06 17:14:38.914]                        advotogo-n_1500: Found 3 cyclic sub graph(s) with n = [3, 6, 29][0m
+[0m[2022-02-06 17:14:38.915]                        advotogo-n_1500: Removed 1072 nodes in preprocessing, starting with k = 196[0m
+[0m[2022-02-06 17:14:38.917]                        advotogo-n_1500: Found solution with k = 204[0m
+[0m[2022-02-06 17:14:38.917]                        advotogo-n_1500: Heuristics: 204 / 215 (in 5 ms)[0m
+[35m[2022-02-06 17:14:38.918]                         advotogo-n_200: advotogo-n_200 (n = 63, m = 68, k = 9)[0m
+[0m[2022-02-06 17:14:38.919]                         advotogo-n_200: Found 1 cyclic sub graph(s) with n = [3][0m
+[0m[2022-02-06 17:14:38.919]                         advotogo-n_200: Removed 60 nodes in preprocessing, starting with k = 7[0m
+[0m[2022-02-06 17:14:38.919]                         advotogo-n_200: Found solution with k = 8[0m
+[0m[2022-02-06 17:14:38.920]                         advotogo-n_200: Heuristics: 8 / 9 (in 2 ms)[0m
+[35m[2022-02-06 17:14:38.927]                        advotogo-n_2000: advotogo-n_2000 (n = 1556, m = 6786, k = 297)[0m
+[0m[2022-02-06 17:14:38.930]                        advotogo-n_2000: Found 8 cyclic sub graph(s) with n = [3, 3, 3, 3, 3, 5, 5, 5][0m
+[0m[2022-02-06 17:14:38.931]                        advotogo-n_2000: Removed 1526 nodes in preprocessing, starting with k = 279[0m
+[0m[2022-02-06 17:14:38.932]                        advotogo-n_2000: Found solution with k = 287[0m
+[0m[2022-02-06 17:14:38.932]                        advotogo-n_2000: Heuristics: 287 / 297 (in 5 ms)[0m
+[35m[2022-02-06 17:14:38.949]                        advotogo-n_3000: advotogo-n_3000 (n = 2657, m = 16140, k = 548)[0m
+[0m[2022-02-06 17:14:38.956]                        advotogo-n_3000: Found 11 cyclic sub graph(s) with n = [3, 3, 3, 3, 3, 3, 3, 4, 5, 5, 81][0m
+[0m[2022-02-06 17:14:38.957]                        advotogo-n_3000: Removed 2556 nodes in preprocessing, starting with k = 495[0m
+[0m[2022-02-06 17:14:38.960]                        advotogo-n_3000: Found solution with k = 512[0m
+[0m[2022-02-06 17:14:38.961]                        advotogo-n_3000: Heuristics: 512 / 548 (in 12 ms)[0m
+[35m[2022-02-06 17:14:38.990]                        advotogo-n_4000: advotogo-n_4000 (n = 3775, m = 29831, k = 863)[0m
+[0m[2022-02-06 17:14:39.007]                        advotogo-n_4000: Found 8 cyclic sub graph(s) with n = [3, 3, 3, 3, 3, 3, 3, 665][0m
+[0m[2022-02-06 17:14:39.008]                        advotogo-n_4000: Removed 3090 nodes in preprocessing, starting with k = 554[0m
+[0m[2022-02-06 17:14:39.042]                        advotogo-n_4000: Found solution with k = 626[0m
+[0m[2022-02-06 17:14:39.042]                        advotogo-n_4000: Heuristics: 626 / 863 (in 51 ms)[0m
+[35m[2022-02-06 17:14:39.044]                         advotogo-n_500: advotogo-n_500 (n = 247, m = 446, k = 39)[0m
+[0m[2022-02-06 17:14:39.045]                         advotogo-n_500: Found 1 cyclic sub graph(s) with n = [3][0m
+[0m[2022-02-06 17:14:39.045]                         advotogo-n_500: Removed 244 nodes in preprocessing, starting with k = 37[0m
+[0m[2022-02-06 17:14:39.046]                         advotogo-n_500: Found solution with k = 38[0m
+[0m[2022-02-06 17:14:39.046]                         advotogo-n_500: Heuristics: 38 / 39 (in 2 ms)[0m
+[35m[2022-02-06 17:14:39.091]                        advotogo-n_5000: advotogo-n_5000 (n = 4962, m = 43776, k = 1160)[0m
+[0m[2022-02-06 17:14:39.111]                        advotogo-n_5000: Found 9 cyclic sub graph(s) with n = [3, 3, 3, 3, 3, 3, 3, 4, 985][0m
+[0m[2022-02-06 17:14:39.112]                        advotogo-n_5000: Removed 3953 nodes in preprocessing, starting with k = 699[0m
+[0m[2022-02-06 17:14:39.190]                        advotogo-n_5000: Found solution with k = 831[0m
+[0m[2022-02-06 17:14:39.190]                        advotogo-n_5000: Heuristics: 831 / 1160 (in 98 ms)[0m
+[35m[2022-02-06 17:14:39.220]                        advotogo-n_5159: advotogo-n_5159 (n = 5155, m = 47135, k = 1208)[0m
+[0m[2022-02-06 17:14:39.240]                        advotogo-n_5159: Found 9 cyclic sub graph(s) with n = [3, 3, 3, 3, 3, 3, 3, 4, 990][0m
+[0m[2022-02-06 17:14:39.241]                        advotogo-n_5159: Removed 4141 nodes in preprocessing, starting with k = 742[0m
+[0m[2022-02-06 17:14:39.301]                        advotogo-n_5159: Found solution with k = 874[0m
+[0m[2022-02-06 17:14:39.302]                        advotogo-n_5159: Heuristics: 874 / 1208 (in 80 ms)[0m
+[35m[2022-02-06 17:14:39.302]                     bitcoinalpha-n_100: bitcoinalpha-n_100 (n = 5, m = 7, k = 2)[0m
+[0m[2022-02-06 17:14:39.303]                     bitcoinalpha-n_100: Found 0 cyclic sub graph(s) with n = [][0m
+[0m[2022-02-06 17:14:39.303]                     bitcoinalpha-n_100: Removed 5 nodes in preprocessing, starting with k = 2[0m
+[0m[2022-02-06 17:14:39.304]                     bitcoinalpha-n_100: Found solution with k = 2[0m
+[0m[2022-02-06 17:14:39.304]                     bitcoinalpha-n_100: Heuristics: 2 / 2 (in 1 ms)[0m
+[35m[2022-02-06 17:14:39.305]                    bitcoinalpha-n_1000: bitcoinalpha-n_1000 (n = 545, m = 1878, k = 136)[0m
+[0m[2022-02-06 17:14:39.306]                    bitcoinalpha-n_1000: Found 1 cyclic sub graph(s) with n = [3][0m
+[0m[2022-02-06 17:14:39.307]                    bitcoinalpha-n_1000: Removed 542 nodes in preprocessing, starting with k = 134[0m
+[0m[2022-02-06 17:14:39.307]                    bitcoinalpha-n_1000: Found solution with k = 135[0m
+[0m[2022-02-06 17:14:39.307]                    bitcoinalpha-n_1000: Heuristics: 135 / 136 (in 1 ms)[0m
+[35m[2022-02-06 17:14:39.309]                    bitcoinalpha-n_1500: bitcoinalpha-n_1500 (n = 957, m = 3890, k = 261)[0m
+[0m[2022-02-06 17:14:39.311]                    bitcoinalpha-n_1500: Found 1 cyclic sub graph(s) with n = [3][0m
+[0m[2022-02-06 17:14:39.311]                    bitcoinalpha-n_1500: Removed 954 nodes in preprocessing, starting with k = 259[0m
+[0m[2022-02-06 17:14:39.312]                    bitcoinalpha-n_1500: Found solution with k = 260[0m
+[0m[2022-02-06 17:14:39.312]                    bitcoinalpha-n_1500: Heuristics: 260 / 261 (in 2 ms)[0m
+[35m[2022-02-06 17:14:39.313]                     bitcoinalpha-n_200: bitcoinalpha-n_200 (n = 50, m = 78, k = 11)[0m
+[0m[2022-02-06 17:14:39.313]                     bitcoinalpha-n_200: Found 0 cyclic sub graph(s) with n = [][0m
+[0m[2022-02-06 17:14:39.313]                     bitcoinalpha-n_200: Removed 50 nodes in preprocessing, starting with k = 11[0m
+[0m[2022-02-06 17:14:39.314]                     bitcoinalpha-n_200: Found solution with k = 11[0m
+[0m[2022-02-06 17:14:39.314]                     bitcoinalpha-n_200: Heuristics: 11 / 11 (in 1 ms)[0m
+[35m[2022-02-06 17:14:39.317]                    bitcoinalpha-n_2000: bitcoinalpha-n_2000 (n = 1450, m = 6295, k = 393)[0m
+[0m[2022-02-06 17:14:39.319]                    bitcoinalpha-n_2000: Found 2 cyclic sub graph(s) with n = [4, 8][0m
+[0m[2022-02-06 17:14:39.319]                    bitcoinalpha-n_2000: Removed 1438 nodes in preprocessing, starting with k = 386[0m
+[0m[2022-02-06 17:14:39.320]                    bitcoinalpha-n_2000: Found solution with k = 389[0m
+[0m[2022-02-06 17:14:39.320]                    bitcoinalpha-n_2000: Heuristics: 389 / 393 (in 2 ms)[0m
+[35m[2022-02-06 17:14:39.331]                    bitcoinalpha-n_3000: bitcoinalpha-n_3000 (n = 2659, m = 15429, k = 658)[0m
+[0m[2022-02-06 17:14:39.334]                    bitcoinalpha-n_3000: Found 2 cyclic sub graph(s) with n = [3, 18][0m
+[0m[2022-02-06 17:14:39.335]                    bitcoinalpha-n_3000: Removed 2638 nodes in preprocessing, starting with k = 646[0m
+[0m[2022-02-06 17:14:39.335]                    bitcoinalpha-n_3000: Found solution with k = 652[0m
+[0m[2022-02-06 17:14:39.335]                    bitcoinalpha-n_3000: Heuristics: 652 / 658 (in 4 ms)[0m
+[35m[2022-02-06 17:14:39.350]                    bitcoinalpha-n_3785: bitcoinalpha-n_3785 (n = 3783, m = 24186, k = 921)[0m
+[0m[2022-02-06 17:14:39.361]                    bitcoinalpha-n_3785: Found 4 cyclic sub graph(s) with n = [3, 4, 16, 18][0m
+[0m[2022-02-06 17:14:39.361]                    bitcoinalpha-n_3785: Removed 3744 nodes in preprocessing, starting with k = 901[0m
+[0m[2022-02-06 17:14:39.362]                    bitcoinalpha-n_3785: Found solution with k = 907[0m
+[0m[2022-02-06 17:14:39.362]                    bitcoinalpha-n_3785: Heuristics: 907 / 921 (in 12 ms)[0m
+[35m[2022-02-06 17:14:39.362]                      bitcoinalpha-n_50: bitcoinalpha-n_50 (n = 5, m = 5, k = 2)[0m
+[0m[2022-02-06 17:14:39.363]                      bitcoinalpha-n_50: Found 0 cyclic sub graph(s) with n = [][0m
+[0m[2022-02-06 17:14:39.363]                      bitcoinalpha-n_50: Removed 5 nodes in preprocessing, starting with k = 2[0m
+[0m[2022-02-06 17:14:39.363]                      bitcoinalpha-n_50: Found solution with k = 2[0m
+[0m[2022-02-06 17:14:39.364]                      bitcoinalpha-n_50: Heuristics: 2 / 2 (in 1 ms)[0m
+[35m[2022-02-06 17:14:39.364]                     bitcoinalpha-n_500: bitcoinalpha-n_500 (n = 202, m = 465, k = 54)[0m
+[0m[2022-02-06 17:14:39.365]                     bitcoinalpha-n_500: Found 1 cyclic sub graph(s) with n = [5][0m
+[0m[2022-02-06 17:14:39.365]                     bitcoinalpha-n_500: Removed 197 nodes in preprocessing, starting with k = 51[0m
+[0m[2022-02-06 17:14:39.365]                     bitcoinalpha-n_500: Found solution with k = 52[0m
+[0m[2022-02-06 17:14:39.366]                     bitcoinalpha-n_500: Heuristics: 52 / 54 (in 1 ms)[0m
+[35m[2022-02-06 17:14:39.366]                            blogs-n_100: blogs-n_100 (n = 67, m = 170, k = 8)[0m
+[0m[2022-02-06 17:14:39.367]                            blogs-n_100: Found 0 cyclic sub graph(s) with n = [][0m
+[0m[2022-02-06 17:14:39.367]                            blogs-n_100: Removed 67 nodes in preprocessing, starting with k = 8[0m
+[0m[2022-02-06 17:14:39.367]                            blogs-n_100: Found solution with k = 8[0m
+[0m[2022-02-06 17:14:39.368]                            blogs-n_100: Heuristics: 8 / 8 (in 1 ms)[0m
+[35m[2022-02-06 17:14:39.373]                           blogs-n_1000: blogs-n_1000 (n = 977, m = 12749, k = 196)[0m
+[0m[2022-02-06 17:14:39.378]                           blogs-n_1000: Found 2 cyclic sub graph(s) with n = [3, 331][0m
+[0m[2022-02-06 17:14:39.378]                           blogs-n_1000: Removed 646 nodes in preprocessing, starting with k = 66[0m
+[0m[2022-02-06 17:14:39.390]                           blogs-n_1000: Found solution with k = 114[0m
+[0m[2022-02-06 17:14:39.391]                           blogs-n_1000: Heuristics: 114 / 196 (in 17 ms)[0m
+[35m[2022-02-06 17:14:39.399]                           blogs-n_1227: blogs-n_1227 (n = 1224, m = 19022, k = 262)[0m
+[0m[2022-02-06 17:14:39.405]                           blogs-n_1227: Found 2 cyclic sub graph(s) with n = [3, 451][0m
+[0m[2022-02-06 17:14:39.406]                           blogs-n_1227: Removed 778 nodes in preprocessing, starting with k = 87[0m
+[0m[2022-02-06 17:14:39.428]                           blogs-n_1227: Found solution with k = 146[0m
+[0m[2022-02-06 17:14:39.428]                           blogs-n_1227: Heuristics: 146 / 262 (in 29 ms)[0m
+[35m[2022-02-06 17:14:39.429]                            blogs-n_200: blogs-n_200 (n = 138, m = 426, k = 16)[0m
+[0m[2022-02-06 17:14:39.429]                            blogs-n_200: Found 0 cyclic sub graph(s) with n = [][0m
+[0m[2022-02-06 17:14:39.430]                            blogs-n_200: Removed 138 nodes in preprocessing, starting with k = 16[0m
+[0m[2022-02-06 17:14:39.430]                            blogs-n_200: Found solution with k = 16[0m
+[0m[2022-02-06 17:14:39.430]                            blogs-n_200: Heuristics: 16 / 16 (in 1 ms)[0m
+[35m[2022-02-06 17:14:39.431]                             blogs-n_50: blogs-n_50 (n = 34, m = 88, k = 6)[0m
+[0m[2022-02-06 17:14:39.431]                             blogs-n_50: Found 0 cyclic sub graph(s) with n = [][0m
+[0m[2022-02-06 17:14:39.431]                             blogs-n_50: Removed 34 nodes in preprocessing, starting with k = 6[0m
+[0m[2022-02-06 17:14:39.432]                             blogs-n_50: Found solution with k = 6[0m
+[0m[2022-02-06 17:14:39.432]                             blogs-n_50: Heuristics: 6 / 6 (in 1 ms)[0m
+[35m[2022-02-06 17:14:39.433]                            blogs-n_500: blogs-n_500 (n = 430, m = 2918, k = 76)[0m
+[0m[2022-02-06 17:14:39.434]                            blogs-n_500: Found 1 cyclic sub graph(s) with n = [52][0m
+[0m[2022-02-06 17:14:39.434]                            blogs-n_500: Removed 378 nodes in preprocessing, starting with k = 49[0m
+[0m[2022-02-06 17:14:39.435]                            blogs-n_500: Found solution with k = 61[0m
+[0m[2022-02-06 17:14:39.435]                            blogs-n_500: Heuristics: 61 / 76 (in 1 ms)[0m
+[35m[2022-02-06 17:14:39.436]                           chess-n_1000: chess-n_1000 (n = 613, m = 1295, k = 62)[0m
+[0m[2022-02-06 17:14:39.437]                           chess-n_1000: Found 1 cyclic sub graph(s) with n = [90][0m
+[0m[2022-02-06 17:14:39.438]                           chess-n_1000: Removed 523 nodes in preprocessing, starting with k = 27[0m
+[0m[2022-02-06 17:14:39.439]                           chess-n_1000: Found solution with k = 40[0m
+[0m[2022-02-06 17:14:39.439]                           chess-n_1000: Heuristics: 40 / 62 (in 2 ms)[0m
+[35m[2022-02-06 17:14:39.441]                           chess-n_1500: chess-n_1500 (n = 1075, m = 2561, k = 127)[0m
+[0m[2022-02-06 17:14:39.442]                           chess-n_1500: Found 2 cyclic sub graph(s) with n = [3, 213][0m
+[0m[2022-02-06 17:14:39.442]                           chess-n_1500: Removed 859 nodes in preprocessing, starting with k = 45[0m
+[0m[2022-02-06 17:14:39.446]                           chess-n_1500: Found solution with k = 85[0m
+[0m[2022-02-06 17:14:39.446]                           chess-n_1500: Heuristics: 85 / 127 (in 5 ms)[0m
+[35m[2022-02-06 17:14:39.447]                            chess-n_200: chess-n_200 (n = 58, m = 47, k = 2)[0m
+[0m[2022-02-06 17:14:39.447]                            chess-n_200: Found 0 cyclic sub graph(s) with n = [][0m
+[0m[2022-02-06 17:14:39.447]                            chess-n_200: Removed 58 nodes in preprocessing, starting with k = 2[0m
+[0m[2022-02-06 17:14:39.448]                            chess-n_200: Found solution with k = 2[0m
+[0m[2022-02-06 17:14:39.448]                            chess-n_200: Heuristics: 2 / 2 (in 1 ms)[0m
+[35m[2022-02-06 17:14:39.450]                           chess-n_2000: chess-n_2000 (n = 1531, m = 4343, k = 204)[0m
+[0m[2022-02-06 17:14:39.452]                           chess-n_2000: Found 1 cyclic sub graph(s) with n = [400][0m
+[0m[2022-02-06 17:14:39.453]                           chess-n_2000: Removed 1131 nodes in preprocessing, starting with k = 61[0m
+[0m[2022-02-06 17:14:39.466]                           chess-n_2000: Found solution with k = 162[0m
+[0m[2022-02-06 17:14:39.466]                           chess-n_2000: Heuristics: 162 / 204 (in 16 ms)[0m
+[35m[2022-02-06 17:14:39.467]                            chess-n_500: chess-n_500 (n = 241, m = 319, k = 17)[0m
+[0m[2022-02-06 17:14:39.467]                            chess-n_500: Found 0 cyclic sub graph(s) with n = [][0m
+[0m[2022-02-06 17:14:39.467]                            chess-n_500: Removed 241 nodes in preprocessing, starting with k = 17[0m
+[0m[2022-02-06 17:14:39.468]                            chess-n_500: Found solution with k = 17[0m
+[0m[2022-02-06 17:14:39.468]                            chess-n_500: Heuristics: 17 / 17 (in 1 ms)[0m
+[35m[2022-02-06 17:14:39.468]                  ChicagoRegional-n_100: ChicagoRegional-n_100 (n = 2, m = 2, k = 1)[0m
+[0m[2022-02-06 17:14:39.469]                  ChicagoRegional-n_100: Found 0 cyclic sub graph(s) with n = [][0m
+[0m[2022-02-06 17:14:39.469]                  ChicagoRegional-n_100: Removed 2 nodes in preprocessing, starting with k = 1[0m
+[0m[2022-02-06 17:14:39.469]                  ChicagoRegional-n_100: Found solution with k = 1[0m
+[0m[2022-02-06 17:14:39.469]                  ChicagoRegional-n_100: Heuristics: 1 / 1 (in 0 ms)[0m
+[35m[2022-02-06 17:14:39.470]                 ChicagoRegional-n_1000: ChicagoRegional-n_1000 (n = 224, m = 245, k = 92)[0m
+[0m[2022-02-06 17:14:39.471]                 ChicagoRegional-n_1000: Found 0 cyclic sub graph(s) with n = [][0m
+[0m[2022-02-06 17:14:39.471]                 ChicagoRegional-n_1000: Removed 224 nodes in preprocessing, starting with k = 92[0m
+[0m[2022-02-06 17:14:39.471]                 ChicagoRegional-n_1000: Found solution with k = 92[0m
+[0m[2022-02-06 17:14:39.471]                 ChicagoRegional-n_1000: Heuristics: 92 / 92 (in 1 ms)[0m
+[35m[2022-02-06 17:14:39.482]                ChicagoRegional-n_10000: ChicagoRegional-n_10000 (n = 9579, m = 23005, k = 4193)[0m
+[0m[2022-02-06 17:14:39.488]                ChicagoRegional-n_10000: Found 111 cyclic sub graph(s) with n = [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 8, 8, 8, 8, 9, 9, 11, 11, 11, 11, 11, 11, 11, 12, 12, 12, 12, 12, 12, 12, 12, 13, 14, 16, 16, 17, 17, 17, 18, 18, 19, 20, 20, 21, 21, 21, 24, 24, 33, 34, 36, 37, 38, 40, 42, 43, 44, 61][0m
+[0m[2022-02-06 17:14:39.489]                ChicagoRegional-n_10000: Removed 8375 nodes in preprocessing, starting with k = 3551[0m
+[0m[2022-02-06 17:14:39.492]                ChicagoRegional-n_10000: Found solution with k = 3740[0m
+[0m[2022-02-06 17:14:39.493]                ChicagoRegional-n_10000: Heuristics: 3740 / 4193 (in 10 ms)[0m
+[35m[2022-02-06 17:14:39.493]                 ChicagoRegional-n_1500: ChicagoRegional-n_1500 (n = 457, m = 485, k = 181)[0m
+[0m[2022-02-06 17:14:39.494]                 ChicagoRegional-n_1500: Found 1 cyclic sub graph(s) with n = [3][0m
+[0m[2022-02-06 17:14:39.494]                 ChicagoRegional-n_1500: Removed 454 nodes in preprocessing, starting with k = 179[0m
+[0m[2022-02-06 17:14:39.494]                 ChicagoRegional-n_1500: Found solution with k = 180[0m
+[0m[2022-02-06 17:14:39.494]                 ChicagoRegional-n_1500: Heuristics: 180 / 181 (in 0 ms)[0m
+[35m[2022-02-06 17:14:39.495]                  ChicagoRegional-n_200: ChicagoRegional-n_200 (n = 13, m = 12, k = 5)[0m
+[0m[2022-02-06 17:14:39.495]                  ChicagoRegional-n_200: Found 0 cyclic sub graph(s) with n = [][0m
+[0m[2022-02-06 17:14:39.495]                  ChicagoRegional-n_200: Removed 13 nodes in preprocessing, starting with k = 5[0m
+[0m[2022-02-06 17:14:39.496]                  ChicagoRegional-n_200: Found solution with k = 5[0m
+[0m[2022-02-06 17:14:39.496]                  ChicagoRegional-n_200: Heuristics: 5 / 5 (in 1 ms)[0m
+[35m[2022-02-06 17:14:39.497]                 ChicagoRegional-n_2000: ChicagoRegional-n_2000 (n = 777, m = 888, k = 307)[0m
+[0m[2022-02-06 17:14:39.497]                 ChicagoRegional-n_2000: Found 3 cyclic sub graph(s) with n = [3, 3, 4][0m
+[0m[2022-02-06 17:14:39.497]                 ChicagoRegional-n_2000: Removed 767 nodes in preprocessing, starting with k = 301[0m
+[0m[2022-02-06 17:14:39.498]                 ChicagoRegional-n_2000: Found solution with k = 304[0m
+[0m[2022-02-06 17:14:39.498]                 ChicagoRegional-n_2000: Heuristics: 304 / 307 (in 1 ms)[0m
+[35m[2022-02-06 17:14:39.499]                 ChicagoRegional-n_3000: ChicagoRegional-n_3000 (n = 1619, m = 2022, k = 631)[0m
+[0m[2022-02-06 17:14:39.500]                 ChicagoRegional-n_3000: Found 7 cyclic sub graph(s) with n = [3, 3, 3, 3, 3, 4, 4][0m
+[0m[2022-02-06 17:14:39.500]                 ChicagoRegional-n_3000: Removed 1596 nodes in preprocessing, starting with k = 617[0m
+[0m[2022-02-06 17:14:39.500]                 ChicagoRegional-n_3000: Found solution with k = 624[0m
+[0m[2022-02-06 17:14:39.500]                 ChicagoRegional-n_3000: Heuristics: 624 / 631 (in 1 ms)[0m
+[35m[2022-02-06 17:14:39.502]                 ChicagoRegional-n_4000: ChicagoRegional-n_4000 (n = 2607, m = 3623, k = 1020)[0m
+[0m[2022-02-06 17:14:39.503]                 ChicagoRegional-n_4000: Found 8 cyclic sub graph(s) with n = [3, 3, 3, 3, 3, 3, 4, 4][0m
+[0m[2022-02-06 17:14:39.503]                 ChicagoRegional-n_4000: Removed 2581 nodes in preprocessing, starting with k = 1004[0m
+[0m[2022-02-06 17:14:39.504]                 ChicagoRegional-n_4000: Found solution with k = 1012[0m
+[0m[2022-02-06 17:14:39.504]                 ChicagoRegional-n_4000: Heuristics: 1012 / 1020 (in 2 ms)[0m
+[35m[2022-02-06 17:14:39.504]                   ChicagoRegional-n_50: ChicagoRegional-n_50 (n = 4, m = 4, k = 2)[0m
+[0m[2022-02-06 17:14:39.505]                   ChicagoRegional-n_50: Found 0 cyclic sub graph(s) with n = [][0m
+[0m[2022-02-06 17:14:39.505]                   ChicagoRegional-n_50: Removed 4 nodes in preprocessing, starting with k = 2[0m
+[0m[2022-02-06 17:14:39.505]                   ChicagoRegional-n_50: Found solution with k = 2[0m
+[0m[2022-02-06 17:14:39.505]                   ChicagoRegional-n_50: Heuristics: 2 / 2 (in 0 ms)[0m
+[35m[2022-02-06 17:14:39.506]                  ChicagoRegional-n_500: ChicagoRegional-n_500 (n = 52, m = 50, k = 24)[0m
+[0m[2022-02-06 17:14:39.506]                  ChicagoRegional-n_500: Found 0 cyclic sub graph(s) with n = [][0m
+[0m[2022-02-06 17:14:39.506]                  ChicagoRegional-n_500: Removed 52 nodes in preprocessing, starting with k = 24[0m
+[0m[2022-02-06 17:14:39.507]                  ChicagoRegional-n_500: Found solution with k = 24[0m
+[0m[2022-02-06 17:14:39.507]                  ChicagoRegional-n_500: Heuristics: 24 / 24 (in 1 ms)[0m
+[35m[2022-02-06 17:14:39.510]                 ChicagoRegional-n_5000: ChicagoRegional-n_5000 (n = 3710, m = 5774, k = 1484)[0m
+[0m[2022-02-06 17:14:39.511]                 ChicagoRegional-n_5000: Found 20 cyclic sub graph(s) with n = [3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 5, 6, 6, 10][0m
+[0m[2022-02-06 17:14:39.511]                 ChicagoRegional-n_5000: Removed 3627 nodes in preprocessing, starting with k = 1438[0m
+[0m[2022-02-06 17:14:39.511]                 ChicagoRegional-n_5000: Found solution with k = 1459[0m
+[0m[2022-02-06 17:14:39.512]                 ChicagoRegional-n_5000: Heuristics: 1459 / 1484 (in 2 ms)[0m
+[35m[2022-02-06 17:14:39.516]                 ChicagoRegional-n_6000: ChicagoRegional-n_6000 (n = 4927, m = 8488, k = 1987)[0m
+[0m[2022-02-06 17:14:39.518]                 ChicagoRegional-n_6000: Found 48 cyclic sub graph(s) with n = [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5, 6, 6, 7, 8, 8, 8, 9, 13, 13][0m
+[0m[2022-02-06 17:14:39.518]                 ChicagoRegional-n_6000: Removed 4703 nodes in preprocessing, starting with k = 1865[0m
+[0m[2022-02-06 17:14:39.519]                 ChicagoRegional-n_6000: Found solution with k = 1915[0m
+[0m[2022-02-06 17:14:39.519]                 ChicagoRegional-n_6000: Heuristics: 1915 / 1987 (in 3 ms)[0m
+[35m[2022-02-06 17:14:39.524]                 ChicagoRegional-n_7000: ChicagoRegional-n_7000 (n = 6106, m = 11328, k = 2495)[0m
+[0m[2022-02-06 17:14:39.526]                 ChicagoRegional-n_7000: Found 52 cyclic sub graph(s) with n = [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 5, 5, 5, 6, 6, 6, 6, 7, 7, 7, 8, 9, 9, 9, 11, 11, 11, 12, 14][0m
+[0m[2022-02-06 17:14:39.527]                 ChicagoRegional-n_7000: Removed 5842 nodes in preprocessing, starting with k = 2347[0m
+[0m[2022-02-06 17:14:39.528]                 ChicagoRegional-n_7000: Found solution with k = 2406[0m
+[0m[2022-02-06 17:14:39.528]                 ChicagoRegional-n_7000: Heuristics: 2406 / 2495 (in 3 ms)[0m
+[35m[2022-02-06 17:14:39.534]                 ChicagoRegional-n_8000: ChicagoRegional-n_8000 (n = 7282, m = 14765, k = 3028)[0m
+[0m[2022-02-06 17:14:39.538]                 ChicagoRegional-n_8000: Found 71 cyclic sub graph(s) with n = [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 8, 8, 8, 8, 8, 8, 8, 9, 9, 9, 10, 10, 11, 11, 12, 13, 14, 14, 16, 19, 26, 36][0m
+[0m[2022-02-06 17:14:39.538]                 ChicagoRegional-n_8000: Removed 6804 nodes in preprocessing, starting with k = 2772[0m
+[0m[2022-02-06 17:14:39.539]                 ChicagoRegional-n_8000: Found solution with k = 2857[0m
+[0m[2022-02-06 17:14:39.540]                 ChicagoRegional-n_8000: Heuristics: 2857 / 3028 (in 6 ms)[0m
+[35m[2022-02-06 17:14:39.548]                 ChicagoRegional-n_9000: ChicagoRegional-n_9000 (n = 8479, m = 19095, k = 3651)[0m
+[0m[2022-02-06 17:14:39.553]                 ChicagoRegional-n_9000: Found 90 cyclic sub graph(s) with n = [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7, 7, 8, 8, 8, 8, 9, 9, 9, 9, 9, 10, 10, 10, 11, 11, 11, 12, 12, 13, 13, 13, 14, 14, 15, 15, 19, 19, 20, 20, 21, 21, 30, 34, 36, 37, 39, 50][0m
+[0m[2022-02-06 17:14:39.553]                 ChicagoRegional-n_9000: Removed 7628 nodes in preprocessing, starting with k = 3198[0m
+[0m[2022-02-06 17:14:39.555]                 ChicagoRegional-n_9000: Found solution with k = 3333[0m
+[0m[2022-02-06 17:14:39.556]                 ChicagoRegional-n_9000: Heuristics: 3333 / 3651 (in 8 ms)[0m
+[35m[2022-02-06 17:14:39.556]                           health-n_100: health-n_100 (n = 23, m = 18, k = 4)[0m
+[0m[2022-02-06 17:14:39.556]                           health-n_100: Found 0 cyclic sub graph(s) with n = [][0m
+[0m[2022-02-06 17:14:39.557]                           health-n_100: Removed 23 nodes in preprocessing, starting with k = 4[0m
+[0m[2022-02-06 17:14:39.557]                           health-n_100: Found solution with k = 4[0m
+[0m[2022-02-06 17:14:39.557]                           health-n_100: Heuristics: 4 / 4 (in 1 ms)[0m
+[35m[2022-02-06 17:14:39.559]                          health-n_1000: health-n_1000 (n = 934, m = 2008, k = 231)[0m
+[0m[2022-02-06 17:14:39.559]                          health-n_1000: Found 9 cyclic sub graph(s) with n = [3, 3, 3, 3, 3, 3, 4, 4, 4][0m
+[0m[2022-02-06 17:14:39.559]                          health-n_1000: Removed 904 nodes in preprocessing, starting with k = 211[0m
+[0m[2022-02-06 17:14:39.560]                          health-n_1000: Found solution with k = 222[0m
+[0m[2022-02-06 17:14:39.560]                          health-n_1000: Heuristics: 222 / 231 (in 1 ms)[0m
+[35m[2022-02-06 17:14:39.562]                          health-n_1500: health-n_1500 (n = 1451, m = 4642, k = 446)[0m
+[0m[2022-02-06 17:14:39.563]                          health-n_1500: Found 17 cyclic sub graph(s) with n = [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4, 5, 6, 8, 184][0m
+[0m[2022-02-06 17:14:39.564]                          health-n_1500: Removed 1261 nodes in preprocessing, starting with k = 341[0m
+[0m[2022-02-06 17:14:39.565]                          health-n_1500: Found solution with k = 377[0m
+[0m[2022-02-06 17:14:39.566]                          health-n_1500: Heuristics: 377 / 446 (in 4 ms)[0m
+[35m[2022-02-06 17:14:39.567]                           health-n_200: health-n_200 (n = 94, m = 87, k = 17)[0m
+[0m[2022-02-06 17:14:39.567]                           health-n_200: Found 0 cyclic sub graph(s) with n = [][0m
+[0m[2022-02-06 17:14:39.568]                           health-n_200: Removed 94 nodes in preprocessing, starting with k = 17[0m
+[0m[2022-02-06 17:14:39.568]                           health-n_200: Found solution with k = 17[0m
+[0m[2022-02-06 17:14:39.568]                           health-n_200: Heuristics: 17 / 17 (in 1 ms)[0m
+[35m[2022-02-06 17:14:39.573]                          health-n_2000: health-n_2000 (n = 1973, m = 7956, k = 674)[0m
+[0m[2022-02-06 17:14:39.577]                          health-n_2000: Found 3 cyclic sub graph(s) with n = [3, 3, 795][0m
+[0m[2022-02-06 17:14:39.577]                          health-n_2000: Removed 1172 nodes in preprocessing, starting with k = 297[0m
+[0m[2022-02-06 17:14:39.613]                          health-n_2000: Found solution with k = 420[0m
+[0m[2022-02-06 17:14:39.614]                          health-n_2000: Heuristics: 420 / 674 (in 40 ms)[0m
+[35m[2022-02-06 17:14:39.617]                          health-n_2542: health-n_2542 (n = 2539, m = 12969, k = 960)[0m
+[0m[2022-02-06 17:14:39.624]                          health-n_2542: Found 2 cyclic sub graph(s) with n = [3, 1505][0m
+[0m[2022-02-06 17:14:39.624]                          health-n_2542: Removed 1031 nodes in preprocessing, starting with k = 235[0m
+[0m[2022-02-06 17:14:39.753]                          health-n_2542: Found solution with k = 525[0m
+[0m[2022-02-06 17:14:39.754]                          health-n_2542: Heuristics: 525 / 960 (in 136 ms)[0m
+[35m[2022-02-06 17:14:39.755]                            health-n_50: health-n_50 (n = 10, m = 7, k = 2)[0m
+[0m[2022-02-06 17:14:39.755]                            health-n_50: Found 0 cyclic sub graph(s) with n = [][0m
+[0m[2022-02-06 17:14:39.755]                            health-n_50: Removed 10 nodes in preprocessing, starting with k = 2[0m
+[0m[2022-02-06 17:14:39.755]                            health-n_50: Found solution with k = 2[0m
+[0m[2022-02-06 17:14:39.755]                            health-n_50: Heuristics: 2 / 2 (in 0 ms)[0m
+[35m[2022-02-06 17:14:39.756]                           health-n_500: health-n_500 (n = 388, m = 490, k = 67)[0m
+[0m[2022-02-06 17:14:39.756]                           health-n_500: Found 1 cyclic sub graph(s) with n = [4][0m
+[0m[2022-02-06 17:14:39.757]                           health-n_500: Removed 384 nodes in preprocessing, starting with k = 65[0m
+[0m[2022-02-06 17:14:39.757]                           health-n_500: Found solution with k = 66[0m
+[0m[2022-02-06 17:14:39.757]                           health-n_500: Heuristics: 66 / 67 (in 1 ms)[0m
+[35m[2022-02-06 17:14:39.757]                          link-kv-n_100: link-kv-n_100 (n = 18, m = 22, k = 8)[0m
+[0m[2022-02-06 17:14:39.758]                          link-kv-n_100: Found 2 cyclic sub graph(s) with n = [3, 3][0m
+[0m[2022-02-06 17:14:39.758]                          link-kv-n_100: Removed 12 nodes in preprocessing, starting with k = 4[0m
+[0m[2022-02-06 17:14:39.758]                          link-kv-n_100: Found solution with k = 6[0m
+[0m[2022-02-06 17:14:39.758]                          link-kv-n_100: Heuristics: 6 / 8 (in 0 ms)[0m
+[35m[2022-02-06 17:14:39.759]                         link-kv-n_1000: link-kv-n_1000 (n = 644, m = 4081, k = 234)[0m
+[0m[2022-02-06 17:14:39.761]                         link-kv-n_1000: Found 14 cyclic sub graph(s) with n = [3, 3, 4, 4, 4, 5, 5, 5, 5, 6, 6, 9, 16, 129][0m
+[0m[2022-02-06 17:14:39.761]                         link-kv-n_1000: Removed 440 nodes in preprocessing, starting with k = 63[0m
+[0m[2022-02-06 17:14:39.768]                         link-kv-n_1000: Found solution with k = 201[0m
+[0m[2022-02-06 17:14:39.768]                         link-kv-n_1000: Heuristics: 201 / 234 (in 8 ms)[0m
+[35m[2022-02-06 17:14:39.771]                         link-kv-n_1500: link-kv-n_1500 (n = 1054, m = 8494, k = 391)[0m
+[0m[2022-02-06 17:14:39.775]                         link-kv-n_1500: Found 15 cyclic sub graph(s) with n = [2, 3, 4, 5, 5, 5, 6, 6, 7, 7, 8, 9, 13, 15, 256][0m
+[0m[2022-02-06 17:14:39.775]                         link-kv-n_1500: Removed 705 nodes in preprocessing, starting with k = 101[0m
+[0m[2022-02-06 17:14:39.801]                         link-kv-n_1500: Found solution with k = 340[0m
+[0m[2022-02-06 17:14:39.801]                         link-kv-n_1500: Heuristics: 340 / 391 (in 30 ms)[0m
+[35m[2022-02-06 17:14:39.802]                          link-kv-n_200: link-kv-n_200 (n = 90, m = 139, k = 20)[0m
+[0m[2022-02-06 17:14:39.802]                          link-kv-n_200: Found 4 cyclic sub graph(s) with n = [3, 3, 3, 5][0m
+[0m[2022-02-06 17:14:39.802]                          link-kv-n_200: Removed 76 nodes in preprocessing, starting with k = 10[0m
+[0m[2022-02-06 17:14:39.802]                          link-kv-n_200: Found solution with k = 16[0m
+[0m[2022-02-06 17:14:39.803]                          link-kv-n_200: Heuristics: 16 / 20 (in 1 ms)[0m
+[35m[2022-02-06 17:14:39.808]                         link-kv-n_2000: link-kv-n_2000 (n = 1772, m = 19901, k = 565)[0m
+[0m[2022-02-06 17:14:39.821]                         link-kv-n_2000: Found 20 cyclic sub graph(s) with n = [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 5, 6, 6, 6, 11, 14, 23, 453][0m
+[0m[2022-02-06 17:14:39.821]                         link-kv-n_2000: Removed 1210 nodes in preprocessing, starting with k = 112[0m
+[0m[2022-02-06 17:14:39.921]                         link-kv-n_2000: Found solution with k = 473[0m
+[0m[2022-02-06 17:14:39.922]                         link-kv-n_2000: Heuristics: 473 / 565 (in 113 ms)[0m
+[35m[2022-02-06 17:14:39.934]                         link-kv-n_3000: link-kv-n_3000 (n = 2540, m = 39796, k = 900)[0m
+[0m[2022-02-06 17:14:39.970]                         link-kv-n_3000: Found 27 cyclic sub graph(s) with n = [3, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 5, 5, 6, 6, 7, 10, 11, 13, 25, 29, 40, 713][0m
+[0m[2022-02-06 17:14:39.970]                         link-kv-n_3000: Removed 1620 nodes in preprocessing, starting with k = 174[0m
+[0m[2022-02-06 17:14:40.238]                         link-kv-n_3000: Found solution with k = 762[0m
+[0m[2022-02-06 17:14:40.239]                         link-kv-n_3000: Heuristics: 762 / 900 (in 305 ms)[0m
+[35m[2022-02-06 17:14:40.261]                         link-kv-n_4000: link-kv-n_4000 (n = 3777, m = 69389, k = 1244)[0m
+[0m[2022-02-06 17:14:40.289]                         link-kv-n_4000: Found 21 cyclic sub graph(s) with n = [3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 5, 5, 5, 6, 8, 9, 10, 17, 32, 1256][0m
+[0m[2022-02-06 17:14:40.290]                         link-kv-n_4000: Removed 2389 nodes in preprocessing, starting with k = 200[0m
+[0m[2022-02-06 17:14:41.176]                         link-kv-n_4000: Found solution with k = 1023[0m
+[0m[2022-02-06 17:14:41.176]                         link-kv-n_4000: Heuristics: 1023 / 1244 (in 914 ms)[0m
+[35m[2022-02-06 17:14:41.177]                          link-kv-n_500: link-kv-n_500 (n = 270, m = 1056, k = 83)[0m
+[0m[2022-02-06 17:14:41.177]                          link-kv-n_500: Found 13 cyclic sub graph(s) with n = [3, 3, 3, 3, 3, 4, 4, 6, 7, 7, 8, 8, 17][0m
+[0m[2022-02-06 17:14:41.177]                          link-kv-n_500: Removed 196 nodes in preprocessing, starting with k = 23[0m
+[0m[2022-02-06 17:14:41.178]                          link-kv-n_500: Found solution with k = 69[0m
+[0m[2022-02-06 17:14:41.178]                          link-kv-n_500: Heuristics: 69 / 83 (in 1 ms)[0m
+[35m[2022-02-06 17:14:41.222]                         link-kv-n_5000: link-kv-n_5000 (n = 4840, m = 117893, k = 1670)[0m
+[0m[2022-02-06 17:14:41.285]                         link-kv-n_5000: Found 24 cyclic sub graph(s) with n = [3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 5, 5, 5, 6, 9, 11, 16, 21, 30, 32, 52, 87, 1552][0m
+[0m[2022-02-06 17:14:41.286]                         link-kv-n_5000: Removed 2975 nodes in preprocessing, starting with k = 261[0m
+[0m[2022-02-06 17:14:43.001]                         link-kv-n_5000: Found solution with k = 1367[0m
+[0m[2022-02-06 17:14:43.002]                         link-kv-n_5000: Heuristics: 1367 / 1670 (in 1780 ms)[0m
+[35m[2022-02-06 17:14:43.071]                         link-kv-n_6000: link-kv-n_6000 (n = 5911, m = 162803, k = 2014)[0m
+[0m[2022-02-06 17:14:43.177]                         link-kv-n_6000: Found 18 cyclic sub graph(s) with n = [3, 3, 3, 4, 4, 4, 4, 6, 6, 6, 7, 13, 15, 24, 46, 46, 58, 2064][0m
+[0m[2022-02-06 17:14:43.178]                         link-kv-n_6000: Removed 3599 nodes in preprocessing, starting with k = 304[0m
