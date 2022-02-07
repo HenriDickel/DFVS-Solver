@@ -18,6 +18,10 @@ public class Cycle extends Component {
         nodes.add(node);
     }
 
+    public void addAll(List<Node> newNodes) {
+        nodes.addAll(newNodes);
+    }
+
     public List<Node> getNodes() {
         return nodes;
     }

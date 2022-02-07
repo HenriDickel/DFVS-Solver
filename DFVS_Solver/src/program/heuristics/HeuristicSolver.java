@@ -21,7 +21,6 @@ public abstract class HeuristicSolver {
 
         //Set instance & branch count
         HeuristicSolver.instance = instance;
-        HeuristicSolver.instance = instance;
 
         Graph initialGraph = instance.subGraphs.get(0);
 
@@ -69,14 +68,14 @@ public abstract class HeuristicSolver {
 
         // Calculate heuristic
         PerformanceTimer.start();
-        long heuristicTimeLimit = (long) (10000L * nodePercentage);
+        long heuristicTimeLimit = (long) (1000L * nodePercentage);
         Log.debugLog(instance.NAME, "Creating heuristic with time limit = " + heuristicTimeLimit);
         List<Integer> heuristicS = GraphTimerFast(graph, heuristicTimeLimit, 0.95f, pm.size());
         PerformanceTimer.log(PerformanceTimer.MethodType.HEURISTIC);
         Log.debugLog(instance.NAME, "Solution lies in [" + pm.size() + ", " + heuristicS.size() + "]");
 
         // Initialize values
-        float startPercentage = 1.0f;
+        float startPercentage = 0.5f;
         int kRange = heuristicS.size() - pm.size() - 1;
         currentK = pm.size() + Math.round(startPercentage * kRange);
 
@@ -287,7 +286,7 @@ public abstract class HeuristicSolver {
         if (DAG.isDAGFast(graph)) return solution;
 
         //All shortest
-        List<Cycle> allShortestCycles = FullBFS.findMultipleShortestCycles(graph, false);
+        List<Cycle> cycles = FullBFS.findMultipleShortestCycles(graph, false);
 
         //Copy
         Graph copyGraph = graph.copy();
@@ -297,13 +296,13 @@ public abstract class HeuristicSolver {
         Random random = new Random();
 
         //Random
-        for(int i = 0; i <= (float) allShortestCycles.size() * (1f - precision); i++){
+        for(int i = 0; i <= (float) cycles.size() * (1f - precision); i++){
 
             //Random cycle
-            Cycle randomCycle = allShortestCycles.get(random.nextInt(allShortestCycles.size()));
+            Cycle randomCycle = cycles.get(random.nextInt(cycles.size()));
 
             //Get best node
-            Node node = Collections.max(randomCycle.getNodes(), Comparator.comparing(x -> Math.min(x.getOutIdCount(), x.getInIdCount())));
+            Node node = Collections.max(randomCycle.getNodes(), Comparator.comparing(Node::getMinInOut));
 
             //Don't delete twice
             if(copySolution.contains(node.id)) continue;
@@ -312,11 +311,21 @@ public abstract class HeuristicSolver {
             copyGraph.removeNode(node.id);
             copySolution.add(node.id);
 
+            // Remove destroyed cycles
+            List<Cycle> remove = new ArrayList<>();
+            for(Cycle cycle: cycles) {
+                if(cycle.contains(node)) {
+                    remove.add(cycle);
+                }
+            }
+            for (Cycle cycle : remove) {
+                cycles.remove(cycle);
+            }
+
             //Reduction
             copySolution.addAll(Reduction.applyRules(copyGraph, false));
 
-            //Check if DAG
-            if(DAG.isDAGFast(graph)) return solution;
+            if(cycles.isEmpty()) break;
         }
 
         //Do again

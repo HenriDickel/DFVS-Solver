@@ -4,7 +4,6 @@ import gurobi.GRBException;
 import program.algo.*;
 import program.heuristics.HeuristicSolver;
 import program.heuristics.Heuristics;
-import program.ilp.ILPSolver;
 import program.log.Log;
 import program.model.*;
 import program.packing.Packings;
@@ -22,6 +21,9 @@ public class Main {
             // Ignore Log
             Log.ignore = true;
 
+            // Start timer
+            Timer.start(90);
+
             // Path
             String fileName = args[0];
 
@@ -29,7 +31,7 @@ public class Main {
             Instance instance = InstanceCreator.createFromFile(new GraphFile("", fileName, -1));
 
             // Solve
-            ILPSolver.dfvsSolveInstance(instance);
+            HeuristicSolver.dfvsSolveInstance(instance);
 
             // Print solution
             for(Integer nodeId : instance.S){
@@ -48,9 +50,9 @@ public class Main {
             //List<GraphFile> files = InstanceCreator.getSelectedFiles();
             //List<GraphFile> files = InstanceCreator.getUnsolvedFiles();
 
-            Heuristics.testQuality(files);
+            //Heuristics.testQuality(files);
             //Packings.testQuality(files);
-            //files.forEach(Main::run);
+            files.forEach(Main::run);
         }
     }
 

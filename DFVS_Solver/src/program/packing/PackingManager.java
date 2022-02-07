@@ -247,5 +247,55 @@ public class PackingManager {
             packing.add(cycle);
         }
     }
+
+
+
+
+    /*private void upgradePacking() {
+
+        boolean updateFound = true;
+        while(updateFound) {
+            Cycle add = null;
+            Cycle remove = null;
+            for(Cycle packingCycle: packing) {
+                if(packingCycle.getK() > 1) continue;
+                for(Node node: packingCycle.getNodes()) {
+                    Node initialNode = initialNodes.get(node.id);
+                    packingGraph.addInitialNode(initialNode);
+                }
+                List<Cycle> Scycles = SimpleSolver.dfvsSolve(packingGraph.copy());
+                System.out.println(Scycles.size());
+
+                if(Scycles.size() <= packingCycle.getK()) {
+                    for (Node node : packingCycle.getNodes()) {
+                        packingGraph.removeNode(node.id);
+                    }
+                } else {
+                    Cycle newCycle = new Cycle();
+                    newCycle.setK(Scycles.size());
+                    for(Cycle Scycle: Scycles) {
+                        newCycle.addAll(Scycle.getNodes());
+                    }
+                    add = newCycle;
+                    remove = packingCycle;
+                    break;
+                }
+            }
+
+            updateFound = false;
+            if(add != null) {
+                System.out.println("Add new cycle with k = " + add.getK() + " instead of " + remove.getK());
+                System.out.println(packingGraph.getNodeCount());
+                packing.add(add);
+                for(Node node: add.getNodes()) {
+                    packingGraph.removeNode(node.id);
+                }
+
+                packing.remove(remove);
+                // was already added to packing graph
+                updateFound = true;
+            }
+        }
+    }*/
 }
 

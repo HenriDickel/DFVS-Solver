@@ -105,9 +105,9 @@ public abstract class DFVSHeuristicSolver {
 
         //---------TimerFast----------------
         // 5.24 TimerFast(100)       //
-        TimerFast(instance, 100, 0.95f);
+        //TimerFast(instance, 100, 0.95f);
         // 5.25 TimerFast(1000)      //1.0025257 (in 907.6053 ms)
-        //TimerFast(instance, 1000, 0.95f);
+        TimerFast(instance, 1000, 0.95f);
         // 5.26 TimerFast(10000)     //1.0018415 (in 8721.539 ms)
         //TimerFast(instance, 10000, 0.95f);
 
@@ -628,11 +628,21 @@ public abstract class DFVSHeuristicSolver {
             copyGraph.removeNode(node.id);
             copySolution.add(node.id);
 
+            // Remove deleted cycles
+            List<Cycle> remove = new ArrayList<>();
+            for(Cycle cycle: allShortestCycles) {
+                if(cycle.contains(node)) {
+                    remove.add(cycle);
+                }
+            }
+            for (Cycle cycle : remove) {
+                allShortestCycles.remove(cycle);
+            }
+
             //Reduction
             copySolution.addAll(Reduction.applyRules(copyGraph, false));
 
-            //Check if DAG
-            if(DAG.isDAGFast(graph)) return solution;
+            if(allShortestCycles.isEmpty()) break;
         }
 
         //Do again
