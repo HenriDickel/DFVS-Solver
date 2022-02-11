@@ -49,10 +49,11 @@ public class Main {
             List<GraphFile> files = InstanceCreator.getComplexAndSyntheticFiles(Dataset.DATASET_3, null);
             //List<GraphFile> files = InstanceCreator.getSelectedFiles();
             //List<GraphFile> files = InstanceCreator.getUnsolvedFiles();
+            //List<GraphFile> files = InstanceCreator.getPaceFiles("e_109");
 
-            //Heuristics.testQuality(files);
+            Heuristics.testQuality(files);
             //Packings.testQuality(files);
-            files.forEach(Main::run);
+            //files.forEach(Main::run);
         }
     }
 
@@ -63,6 +64,7 @@ public class Main {
 
         PerformanceTimer.start();
         Instance instance = InstanceCreator.createFromFile(file);
+        //Instance instance = InstanceCreator.createFromPaceFile(file);
         PerformanceTimer.log(PerformanceTimer.MethodType.FILE);
 
         try {
@@ -76,7 +78,7 @@ public class Main {
             // Log results
             Log.mainLog(instance, Timer.getMillis(), PerformanceTimer.getPackingMillis(), verified);
             Color color = verified ? Color.WHITE : Color.RED;
-            Log.debugLog(instance.NAME, "Found solution in " + Timer.getMillis() + " ms (recursive steps: " + instance.recursiveSteps + ")", color);
+            Log.debugLog(instance.NAME, "Found solution k = " + instance.solvedK + " in " + Timer.getMillis() + " ms (recursive steps: " + instance.recursiveSteps + ")", color);
             PerformanceTimer.printResult(instance.NAME);
 
         } catch (TimeoutException e) {

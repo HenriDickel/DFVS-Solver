@@ -5,8 +5,7 @@ import program.log.Log;
 import program.model.GraphFile;
 import program.model.Instance;
 
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.*;
@@ -75,6 +74,30 @@ public abstract class InstanceCreator {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        return createInstance(file.name, graph, file.optimalK);
+    }
+
+    public static Instance createFromPaceFile(GraphFile file) {
+        Graph graph = new Graph();
+        int id = 0;
+        try(BufferedReader br = new BufferedReader(new FileReader(file.path + file.name))) {
+            for(String line; (line = br.readLine()) != null; ) {
+                String[] split = line.trim().split(" ");
+                if(id == 0) { // first line
+                    Integer n = Integer.parseInt(split[0]);
+                    Integer m = Integer.parseInt(split[1]);
+                } else {
+                    for(String outString: split) {
+                        if(outString.length() == 0) continue;
+                        Integer outId = Integer.parseInt(outString);
+                        graph.addArc(id, outId);
+                    }
+                }
+                id++;
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
         return createInstance(file.name, graph, file.optimalK);
     }
@@ -82,6 +105,17 @@ public abstract class InstanceCreator {
     public static List<GraphFile> getComplexAndSyntheticFiles(Dataset dataset, String startFilename) {
         List<GraphFile> files = getFiles(dataset, getComplexPath(dataset));
         files.addAll(getFiles(dataset, getSyntheticPath(dataset)));
+        if(startFilename == null) return files;
+        for(int i = 0; i < files.size(); i++) {
+            if(files.get(i).name.equals(startFilename)) {
+                return files.subList(i, files.size());
+            }
+        }
+        throw new RuntimeException("Didn't found instance with name '" + startFilename + "'");
+    }
+
+    public static List<GraphFile> getPaceFiles(String startFilename) {
+        List<GraphFile> files = getFiles(Dataset.DATASET_3, "src/inputs/pace_exact_public/");
         if(startFilename == null) return files;
         for(int i = 0; i < files.size(); i++) {
             if(files.get(i).name.equals(startFilename)) {
