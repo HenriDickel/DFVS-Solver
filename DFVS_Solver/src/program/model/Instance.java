@@ -23,6 +23,7 @@ public class Instance {
     public int[] recursiveStepsPerK;
     public int solvedK = 0;
     public int packingSize = 0;
+    public int heuristicSize = 0;
 
     public int numConstraints = 0;
 

@@ -51,9 +51,9 @@ public class Main {
             //List<GraphFile> files = InstanceCreator.getUnsolvedFiles();
             //List<GraphFile> files = InstanceCreator.getPaceFiles("e_109");
 
-            Heuristics.testQuality(files);
+            //Heuristics.testQuality(files);
             //Packings.testQuality(files);
-            //files.forEach(Main::run);
+            files.forEach(Main::run);
         }
     }
 

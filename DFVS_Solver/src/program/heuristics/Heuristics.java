@@ -25,8 +25,8 @@ public abstract class Heuristics {
             long startMillis = System.currentTimeMillis();
 
             // Solve instance with heuristic
-            //DFASHeuristicSolver.solveInstance(instance);
-            DFVSHeuristicSolver.solveInstance(instance);
+            DFASHeuristicSolver.solveInstance(instance);
+            //DFVSHeuristicSolver.solveInstance(instance);
             int approxK = instance.S.size();
 
             // Update aggregation vars
@@ -40,6 +40,8 @@ public abstract class Heuristics {
             // Log
             Log.debugLog(instance.NAME, "Heuristics: " + approxK + " / " + instance.OPTIMAL_K + " (in " + millis + " ms)");
             Log.heuristicLog(instance, approxK, millis);
+
+            if(approxK < instance.OPTIMAL_K) throw new RuntimeException("Invalid Heuristics!");
 
         }
         float quality = qualityAgg / count;

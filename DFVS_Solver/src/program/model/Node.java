@@ -34,9 +34,6 @@ public class Node {
     public Boolean acyclic = false;
     public Boolean pNew = false;
 
-    // Topological order attribute
-    public Integer topologicalId;
-
     public Node(Integer id) {
         this.id = id;
     }
@@ -83,10 +80,6 @@ public class Node {
 
     public int getCycleCount() {
         return cycleCount;
-    }
-
-    public int getCardinality() {
-        return Math.min(outIds.size(), inIds.size());
     }
 
     public Node copy() {

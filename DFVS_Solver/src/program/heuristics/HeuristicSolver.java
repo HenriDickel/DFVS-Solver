@@ -73,9 +73,10 @@ public abstract class HeuristicSolver {
         List<Integer> heuristicS = GraphTimerFast(graph, heuristicTimeLimit, 0.95f, pm.size());
         PerformanceTimer.log(PerformanceTimer.MethodType.HEURISTIC);
         Log.debugLog(instance.NAME, "Solution lies in [" + pm.size() + ", " + heuristicS.size() + "]");
+        instance.heuristicSize += heuristicS.size();
 
         // Initialize values
-        float startPercentage = 0.5f;
+        float startPercentage = 0.0f;
         int kRange = heuristicS.size() - pm.size() - 1;
         currentK = pm.size() + Math.round(startPercentage * kRange);
 
@@ -311,19 +312,27 @@ public abstract class HeuristicSolver {
             copyGraph.removeNode(node.id);
             copySolution.add(node.id);
 
+            //Reduction
+            List<Integer> reduceS = Reduction.applyRules(copyGraph, false);
+            copySolution.addAll(reduceS);
+
             // Remove destroyed cycles
             List<Cycle> remove = new ArrayList<>();
             for(Cycle cycle: cycles) {
                 if(cycle.contains(node)) {
                     remove.add(cycle);
+                } else {
+                    for(Node cycleNode: cycle.getNodes()) {
+                        if(reduceS.contains(cycleNode.id)) {
+                            remove.add(cycle);
+                            break;
+                        }
+                    }
                 }
             }
             for (Cycle cycle : remove) {
                 cycles.remove(cycle);
             }
-
-            //Reduction
-            copySolution.addAll(Reduction.applyRules(copyGraph, false));
 
             if(cycles.isEmpty()) break;
         }

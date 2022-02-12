@@ -69,9 +69,7 @@ public abstract class DFVSHeuristicSolver {
         // 5.11 Splits(5)           //1.030
         //Splits(instance, 5);
 
-        //---------Combined----------------
-        // 5.12 FullBFS_Max_Min     //1.017
-        //FullBFS_Max_Min(instance);
+        //---------Splits----------------
         // 5.13 Splits_Max_Min(1)   //1.017
         //Splits_Max_Min(instance, 3);
         // 5.14 Splits_Max_Min(3)   //1.014
@@ -157,10 +155,10 @@ public abstract class DFVSHeuristicSolver {
         }
     }
 
-    private static void Max_Max_In_Out(Instance instance) {
+    private static void Max_In_Plus_Out(Instance instance) {
         for (Graph subGraph : instance.subGraphs) {
             while (!DAG.isDAGFast(subGraph)) {
-                Node node = Collections.max(subGraph.getNodes(), Comparator.comparing(x -> Math.max(x.getInIdCount(), x.getOutIdCount())));
+                Node node = Collections.max(subGraph.getNodes(), Comparator.comparing(x -> x.getInIdCount() + x.getOutIdCount()));
                 subGraph.removeNode(node.id);
                 instance.S.add(node.id);
 
@@ -192,7 +190,7 @@ public abstract class DFVSHeuristicSolver {
         for (Graph subGraph : instance.subGraphs) {
             while (!DAG.isDAGFast(subGraph)) {
                 Cycle cycle = LightBFS.run(subGraph);
-                Node node = cycle.getNodes().get(0);
+                Node node = Collections.max(cycle.getNodes(), Comparator.comparing(Node::getMinInOut));
 
                 subGraph.removeNode(node.id);
                 instance.S.add(node.id);
@@ -235,23 +233,36 @@ public abstract class DFVSHeuristicSolver {
         for (Graph subGraph : instance.subGraphs) {
             while (!DAG.isDAGFast(subGraph)) {
                 List<Cycle> cycles = FullBFS.findMultipleShortestCycles(subGraph, true);
-                for (Cycle cycle : cycles) {
-                    Node node = cycle.getNodes().get(0);
+                while(true) {
+                    Node node = Collections.max(cycles.get(0).getNodes(), Comparator.comparing(Node::getMinInOut));
 
-                    try {
-                        subGraph.removeNode(node.id);
-                        instance.S.add(node.id);
+                    //Remove node
+                    subGraph.removeNode(node.id);
+                    instance.S.add(node.id);
 
-
-                    } catch (Exception ignored) {
-                        //Node was already removed
-                    }
-
-                    // Apply reduction rules
+                    //Reduction
                     List<Integer> reduceS = Reduction.applyRules(subGraph, false);
                     instance.S.addAll(reduceS);
-                }
 
+                    // Remove destroyed cycles
+                    List<Cycle> remove = new ArrayList<>();
+                    for(Cycle cycle: cycles) {
+                        if(cycle.contains(node)) {
+                            remove.add(cycle);
+                        } else {
+                            for(Node cycleNode: cycle.getNodes()) {
+                                if(reduceS.contains(cycleNode.id)) {
+                                    remove.add(cycle);
+                                    break;
+                                }
+                            }
+                        }
+                    }
+                    for (Cycle cycle : remove) {
+                        cycles.remove(cycle);
+                    }
+                    if(cycles.isEmpty()) break;
+                }
             }
         }
     }
@@ -260,7 +271,7 @@ public abstract class DFVSHeuristicSolver {
         // Destroy cycles by heuristic
         for (Graph subGraph : instance.subGraphs) {
             while (!DAG.isDAGFast(subGraph)) {
-                Cycle cycle = FullBFS.findShortestCycle(subGraph);
+                Cycle cycle = FullBFS.findBestCycle(subGraph);
                 Node node = cycle.getNodes().get(0);
 
                 subGraph.removeNode(node.id);
@@ -322,23 +333,6 @@ public abstract class DFVSHeuristicSolver {
     }
 
     //---------Combined----------------
-
-    private static void FullBFS_Max_Min(Instance instance) {
-        // Destroy cycles by heuristic
-        for (Graph subGraph : instance.subGraphs) {
-            while (!DAG.isDAGFast(subGraph)) {
-                Cycle cycle = FullBFS.findShortestCycle(subGraph);
-                Node node = Collections.max(cycle.getNodes(), Comparator.comparing(x -> Math.min(x.getOutIdCount(), x.getInIdCount())));
-
-                subGraph.removeNode(node.id);
-                instance.S.add(node.id);
-
-                // Apply reduction rules
-                List<Integer> reduceS = Reduction.applyRules(subGraph, false);
-                instance.S.addAll(reduceS);
-            }
-        }
-    }
 
     private static void Splits_Max_Min(Instance instance, int splitSize) {
         // Destroy cycles by heuristic
@@ -628,19 +622,27 @@ public abstract class DFVSHeuristicSolver {
             copyGraph.removeNode(node.id);
             copySolution.add(node.id);
 
-            // Remove deleted cycles
+            //Reduction
+            List<Integer> reduceS = Reduction.applyRules(copyGraph, false);
+            copySolution.addAll(reduceS);
+
+            // Remove destroyed cycles
             List<Cycle> remove = new ArrayList<>();
             for(Cycle cycle: allShortestCycles) {
                 if(cycle.contains(node)) {
                     remove.add(cycle);
+                } else {
+                    for(Node cycleNode: cycle.getNodes()) {
+                        if(reduceS.contains(cycleNode.id)) {
+                            remove.add(cycle);
+                            break;
+                        }
+                    }
                 }
             }
             for (Cycle cycle : remove) {
                 allShortestCycles.remove(cycle);
             }
-
-            //Reduction
-            copySolution.addAll(Reduction.applyRules(copyGraph, false));
 
             if(allShortestCycles.isEmpty()) break;
         }
