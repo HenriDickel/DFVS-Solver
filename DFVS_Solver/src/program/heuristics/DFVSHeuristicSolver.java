@@ -49,7 +49,7 @@ public abstract class DFVSHeuristicSolver {
         // 5.03 Max_Max_In_Out      //1.161
         //Max_Max_In_Out(instance);
         // 5.04 Max_Min_In_Out      //1.044
-        //Max_Min_In_Out(instance);
+        Max_Min_In_Out(instance);
 
         //---------DeleteCircles-----------
         // 5.05 LightBFS            //1.632
@@ -71,7 +71,7 @@ public abstract class DFVSHeuristicSolver {
 
         //---------Splits----------------
         // 5.13 Splits_Max_Min(1)   //1.017
-        //Splits_Max_Min(instance, 3);
+        //Splits_Max_Min(instance, 1);
         // 5.14 Splits_Max_Min(3)   //1.014
         //Splits_Max_Min(instance, 3);
         // 5.15 Splits_Max_Min(5)   //1.012
@@ -105,7 +105,7 @@ public abstract class DFVSHeuristicSolver {
         // 5.24 TimerFast(100)       //
         //TimerFast(instance, 100, 0.95f);
         // 5.25 TimerFast(1000)      //1.0025257 (in 907.6053 ms)
-        TimerFast(instance, 1000, 0.95f);
+        //TimerFast(instance, 1000, 0.95f);
         // 5.26 TimerFast(10000)     //1.0018415 (in 8721.539 ms)
         //TimerFast(instance, 10000, 0.95f);
 

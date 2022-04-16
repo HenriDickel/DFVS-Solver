@@ -68,7 +68,7 @@ public abstract class HeuristicSolver {
 
         // Calculate heuristic
         PerformanceTimer.start();
-        long heuristicTimeLimit = (long) (1000L * nodePercentage);
+        long heuristicTimeLimit = (long) (10000L * nodePercentage);
         Log.debugLog(instance.NAME, "Creating heuristic with time limit = " + heuristicTimeLimit);
         List<Integer> heuristicS = GraphTimerFast(graph, heuristicTimeLimit, 0.95f, pm.size());
         PerformanceTimer.log(PerformanceTimer.MethodType.HEURISTIC);
@@ -76,7 +76,7 @@ public abstract class HeuristicSolver {
         instance.heuristicSize += heuristicS.size();
 
         // Initialize values
-        float startPercentage = 0.0f;
+        float startPercentage = 1.0f;
         int kRange = heuristicS.size() - pm.size() - 1;
         currentK = pm.size() + Math.round(startPercentage * kRange);
 

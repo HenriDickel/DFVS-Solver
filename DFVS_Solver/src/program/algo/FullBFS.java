@@ -165,26 +165,7 @@ public abstract class FullBFS {
         List<Cycle> minCycles = cycles.stream().filter(cycle -> cycle.size() == finalMinSize).collect(Collectors.toList());
 
         if(sortResults){
-            // Set cycle count for every node
-            for(Node node: graph.getNodes()) {
-                node.cycleCount = 0;
-                for(Cycle cycle: cycles) {
-                    if(cycle.contains(node)) {
-                        node.cycleCount++;
-                    }
-                }
-            }
-
-            for(Cycle cycle: minCycles) {
-                cycle.cycleCount = 0;
-                for(Node node: cycle.getNodes()) {
-                    cycle.cycleCount += node.cycleCount;
-                }
-                cycle.getNodes().sort(Comparator.comparing(Node::getCycleCount));
-                Collections.reverse(cycle.getNodes());
-            }
-
-            minCycles.sort(Comparator.comparing(x -> x.cycleCount));
+            minCycles.sort(Comparator.comparing(Cycle::getMinInOutSum));
             Collections.reverse(minCycles);
         }
 

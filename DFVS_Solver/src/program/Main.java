@@ -46,14 +46,15 @@ public class Main {
             Log.Clear();
             Log.ignore = false;
 
-            List<GraphFile> files = InstanceCreator.getComplexAndSyntheticFiles(Dataset.DATASET_3, null);
+            //List<GraphFile> files = InstanceCreator.getComplexAndSyntheticFiles(Dataset.DATASET_3, null);
             //List<GraphFile> files = InstanceCreator.getSelectedFiles();
             //List<GraphFile> files = InstanceCreator.getUnsolvedFiles();
-            //List<GraphFile> files = InstanceCreator.getPaceFiles("e_109");
+            //List<GraphFile> files = InstanceCreator.getHeuristicFiles(null);
+            List<GraphFile> files = InstanceCreator.getPaceFiles("e_109");
 
-            //Heuristics.testQuality(files);
+            Heuristics.testQuality(files);
             //Packings.testQuality(files);
-            files.forEach(Main::run);
+            //files.forEach(Main::run);
         }
     }
 

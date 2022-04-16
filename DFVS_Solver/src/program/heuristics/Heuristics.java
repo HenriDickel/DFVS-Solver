@@ -18,15 +18,15 @@ public abstract class Heuristics {
         long millisAgg = 0;
         int count = 0;
         for(GraphFile file: files) {
-            if(file.optimalK <= 0) continue;
+            //if(file.optimalK <= 0) continue;
             Instance instance = InstanceCreator.createFromFile(file);
             Log.debugLog(instance.NAME, instance.NAME + " (n = " + instance.N + ", m = " + instance.M + ", k = " + instance.OPTIMAL_K + ")", Color.PURPLE);
 
             long startMillis = System.currentTimeMillis();
 
             // Solve instance with heuristic
-            DFASHeuristicSolver.solveInstance(instance);
-            //DFVSHeuristicSolver.solveInstance(instance);
+            //DFASHeuristicSolver.solveInstance(instance);
+            DFVSHeuristicSolver.solveInstance(instance);
             int approxK = instance.S.size();
 
             // Update aggregation vars

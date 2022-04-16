@@ -125,6 +125,17 @@ public abstract class InstanceCreator {
         throw new RuntimeException("Didn't found instance with name '" + startFilename + "'");
     }
 
+    public static List<GraphFile> getHeuristicFiles(String startFilename) {
+        List<GraphFile> files = getFiles(Dataset.DATASET_3, "src/inputs/sheet5-heuristic/");
+        if(startFilename == null) return files;
+        for(int i = 0; i < files.size(); i++) {
+            if(files.get(i).name.equals(startFilename)) {
+                return files.subList(i, files.size());
+            }
+        }
+        throw new RuntimeException("Didn't found instance with name '" + startFilename + "'");
+    }
+
     public static List<GraphFile> getUnsolvedFiles() {
         List<GraphFile> files = new ArrayList<>();
         String complexPath = getComplexPath(Dataset.DATASET_3);
