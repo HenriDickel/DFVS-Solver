@@ -1,1 +1,3 @@
 name,n,m,k_optimal,k_solved,k_start,verified,pre_removed_nodes,packing_size,heuristic_size,packing_millis,millis,recursive_steps
+e_001,475,651,-1,2,2,true,475,0,0,0,67,0
+e_003,1024,6055,-1,684,47,false,105,623,638,60105,90001,473081

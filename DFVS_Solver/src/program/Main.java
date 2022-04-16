@@ -50,11 +50,11 @@ public class Main {
             //List<GraphFile> files = InstanceCreator.getSelectedFiles();
             //List<GraphFile> files = InstanceCreator.getUnsolvedFiles();
             //List<GraphFile> files = InstanceCreator.getHeuristicFiles(null);
-            List<GraphFile> files = InstanceCreator.getPaceFiles("e_109");
+            List<GraphFile> files = InstanceCreator.getPaceFiles(null);
 
-            Heuristics.testQuality(files);
+            //Heuristics.testQuality(files);
             //Packings.testQuality(files);
-            //files.forEach(Main::run);
+            files.forEach(Main::run);
         }
     }
 
@@ -64,8 +64,7 @@ public class Main {
         PerformanceTimer.reset();
 
         PerformanceTimer.start();
-        Instance instance = InstanceCreator.createFromFile(file);
-        //Instance instance = InstanceCreator.createFromPaceFile(file);
+        Instance instance = InstanceCreator.createFromPaceFile(file);
         PerformanceTimer.log(PerformanceTimer.MethodType.FILE);
 
         try {

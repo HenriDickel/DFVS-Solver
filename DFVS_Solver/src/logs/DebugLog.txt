@@ -1,161 +1,42 @@
-[35m[2022-02-13 18:34:16.267]                              e_077.new: e_077.new (n = 8139, m = 27579, k = -1)[0m
-[0m[2022-02-13 18:34:16.317]                              e_077.new: Found solution with k = 0[0m
-[0m[2022-02-13 18:34:16.323]                              e_077.new: Heuristics: 0 / -1 (in 37 ms)[0m
-[35m[2022-02-13 18:34:16.358]                              e_103.new: e_103.new (n = 16384, m = 38768, k = -1)[0m
-[0m[2022-02-13 18:34:16.384]                              e_103.new: Found solution with k = 0[0m
-[0m[2022-02-13 18:34:16.384]                              e_103.new: Heuristics: 0 / -1 (in 25 ms)[0m
-[35m[2022-02-13 18:34:16.424]                              e_107.new: e_107.new (n = 16094, m = 52344, k = -1)[0m
-[0m[2022-02-13 18:34:16.469]                              e_107.new: Found solution with k = 0[0m
-[0m[2022-02-13 18:34:16.470]                              e_107.new: Heuristics: 0 / -1 (in 45 ms)[0m
-[35m[2022-02-13 18:34:16.539]                              e_117.new: e_117.new (n = 32756, m = 152340, k = -1)[0m
-[0m[2022-02-13 18:34:16.717]                              e_117.new: Found solution with k = 0[0m
-[0m[2022-02-13 18:34:16.718]                              e_117.new: Heuristics: 0 / -1 (in 178 ms)[0m
-[35m[2022-02-13 18:34:16.762]                              e_123.new: e_123.new (n = 32610, m = 128269, k = -1)[0m
-[0m[2022-02-13 18:34:16.878]                              e_123.new: Found solution with k = 0[0m
-[0m[2022-02-13 18:34:16.879]                              e_123.new: Heuristics: 0 / -1 (in 117 ms)[0m
-[35m[2022-02-13 18:34:16.928]                              e_125.new: e_125.new (n = 32728, m = 144359, k = -1)[0m
-[0m[2022-02-13 18:34:17.079]                              e_125.new: Found solution with k = 0[0m
-[0m[2022-02-13 18:34:17.080]                              e_125.new: Heuristics: 0 / -1 (in 151 ms)[0m
-[35m[2022-02-13 18:34:17.119]                              e_135.new: e_135.new (n = 32498, m = 120318, k = -1)[0m
-[0m[2022-02-13 18:34:17.198]                              e_135.new: Found solution with k = 0[0m
-[0m[2022-02-13 18:34:17.199]                              e_135.new: Heuristics: 0 / -1 (in 79 ms)[0m
-[35m[2022-02-13 18:34:17.268]                              e_151.new: e_151.new (n = 65518, m = 326560, k = -1)[0m
-[0m[2022-02-13 18:34:17.878]                              e_151.new: Found solution with k = 0[0m
-[0m[2022-02-13 18:34:17.879]                              e_151.new: Heuristics: 0 / -1 (in 610 ms)[0m
-[35m[2022-02-13 18:34:17.952]                              e_157.new: e_157.new (n = 65518, m = 326223, k = -1)[0m
-[0m[2022-02-13 18:34:18.532]                              e_157.new: Found solution with k = 0[0m
-[0m[2022-02-13 18:34:18.532]                              e_157.new: Heuristics: 0 / -1 (in 580 ms)[0m
-[35m[2022-02-13 18:34:18.592]                              e_159.new: e_159.new (n = 65329, m = 275210, k = -1)[0m
-[0m[2022-02-13 18:34:19.035]                              e_159.new: Found solution with k = 0[0m
-[0m[2022-02-13 18:34:19.035]                              e_159.new: Heuristics: 0 / -1 (in 443 ms)[0m
-[35m[2022-02-13 18:34:19.105]                              e_165.new: e_165.new (n = 131072, m = 301966, k = -1)[0m
-[0m[2022-02-13 18:34:19.226]                              e_165.new: Found solution with k = 0[0m
-[0m[2022-02-13 18:34:19.226]                              e_165.new: Heuristics: 0 / -1 (in 121 ms)[0m
-[35m[2022-02-13 18:34:19.291]                              e_181.new: e_181.new (n = 32767, m = 160544, k = -1)[0m
-[0m[2022-02-13 18:34:19.430]                              e_181.new: Found solution with k = 0[0m
-[0m[2022-02-13 18:34:19.431]                              e_181.new: Heuristics: 0 / -1 (in 140 ms)[0m
-[35m[2022-02-13 18:34:19.437]                              e_185.new: e_185.new (n = 4096, m = 31490, k = -1)[0m
-[0m[2022-02-13 18:34:19.449]                              e_185.new: Found solution with k = 0[0m
-[0m[2022-02-13 18:34:19.450]                              e_185.new: Heuristics: 0 / -1 (in 13 ms)[0m
-[35m[2022-02-13 18:34:19.466]                              h_071.new: h_071.new (n = 8192, m = 86693, k = -1)[0m
-[0m[2022-02-13 18:34:19.481]                              h_071.new: Found solution with k = 0[0m
-[0m[2022-02-13 18:34:19.481]                              h_071.new: Heuristics: 0 / -1 (in 15 ms)[0m
-[35m[2022-02-13 18:34:19.502]                              h_077.new: h_077.new (n = 62558, m = 76609, k = -1)[0m
-[0m[2022-02-13 18:34:19.533]                              h_077.new: Found solution with k = 0[0m
-[0m[2022-02-13 18:34:19.533]                              h_077.new: Heuristics: 0 / -1 (in 31 ms)[0m
-[35m[2022-02-13 18:34:19.561]                              h_083.new: h_083.new (n = 32610, m = 128269, k = -1)[0m
-[0m[2022-02-13 18:34:19.663]                              h_083.new: Found solution with k = 0[0m
-[0m[2022-02-13 18:34:19.664]                              h_083.new: Heuristics: 0 / -1 (in 103 ms)[0m
-[35m[2022-02-13 18:34:19.701]                              h_089.new: h_089.new (n = 8192, m = 178910, k = -1)[0m
-[0m[2022-02-13 18:34:19.789]                              h_089.new: Found solution with k = 0[0m
-[0m[2022-02-13 18:34:19.789]                              h_089.new: Heuristics: 0 / -1 (in 87 ms)[0m
-[35m[2022-02-13 18:34:19.830]                              h_095.new: h_095.new (n = 32735, m = 204631, k = -1)[0m
-[0m[2022-02-13 18:34:19.916]                              h_095.new: Found solution with k = 0[0m
-[0m[2022-02-13 18:34:19.917]                              h_095.new: Heuristics: 0 / -1 (in 86 ms)[0m
-[35m[2022-02-13 18:34:19.962]                              h_097.new: h_097.new (n = 16360, m = 230118, k = -1)[0m
-[0m[2022-02-13 18:34:20.102]                              h_097.new: Found solution with k = 0[0m
-[0m[2022-02-13 18:34:20.102]                              h_097.new: Heuristics: 0 / -1 (in 140 ms)[0m
-[35m[2022-02-13 18:34:20.190]                              h_101.new: h_101.new (n = 65475, m = 308997, k = -1)[0m
-[0m[2022-02-13 18:34:20.680]                              h_101.new: Found solution with k = 0[0m
-[0m[2022-02-13 18:34:20.681]                              h_101.new: Heuristics: 0 / -1 (in 490 ms)[0m
-[35m[2022-02-13 18:34:20.896]                              h_103.new: h_103.new (n = 128754, m = 326185, k = -1)[0m
-[0m[2022-02-13 18:34:21.139]                              h_103.new: Found solution with k = 0[0m
-[0m[2022-02-13 18:34:21.140]                              h_103.new: Heuristics: 0 / -1 (in 244 ms)[0m
-[35m[2022-02-13 18:34:21.220]                              h_107.new: h_107.new (n = 32730, m = 349841, k = -1)[0m
-[0m[2022-02-13 18:34:21.507]                              h_107.new: Found solution with k = 0[0m
-[0m[2022-02-13 18:34:21.507]                              h_107.new: Heuristics: 0 / -1 (in 287 ms)[0m
-[35m[2022-02-13 18:34:21.607]                              h_109.new: h_109.new (n = 8192, m = 419754, k = -1)[0m
-[0m[2022-02-13 18:34:21.765]                              h_109.new: Found solution with k = 0[0m
-[0m[2022-02-13 18:34:21.766]                              h_109.new: Heuristics: 0 / -1 (in 159 ms)[0m
-[35m[2022-02-13 18:34:22.240]                              h_113.new: h_113.new (n = 149666, m = 477322, k = -1)[0m
-[0m[2022-02-13 18:34:22.669]                              h_113.new: Found solution with k = 0[0m
-[0m[2022-02-13 18:34:22.670]                              h_113.new: Heuristics: 0 / -1 (in 429 ms)[0m
-[35m[2022-02-13 18:34:22.802]                              h_115.new: h_115.new (n = 262111, m = 453253, k = -1)[0m
-[0m[2022-02-13 18:34:23.155]                              h_115.new: Found solution with k = 0[0m
-[0m[2022-02-13 18:34:23.155]                              h_115.new: Heuristics: 0 / -1 (in 353 ms)[0m
-[35m[2022-02-13 18:34:23.489]                              h_119.new: h_119.new (n = 340207, m = 810677, k = -1)[0m
-[0m[2022-02-13 18:34:23.978]                              h_119.new: Found solution with k = 0[0m
-[0m[2022-02-13 18:34:23.979]                              h_119.new: Heuristics: 0 / -1 (in 490 ms)[0m
-[35m[2022-02-13 18:34:24.311]                              h_121.new: h_121.new (n = 16384, m = 1038272, k = -1)[0m
-[0m[2022-02-13 18:34:24.759]                              h_121.new: Found solution with k = 0[0m
-[0m[2022-02-13 18:34:24.759]                              h_121.new: Heuristics: 0 / -1 (in 447 ms)[0m
-[35m[2022-02-13 18:34:25.485]                              h_125.new: h_125.new (n = 16384, m = 1048321, k = -1)[0m
-[0m[2022-02-13 18:34:25.810]                              h_125.new: Found solution with k = 0[0m
-[0m[2022-02-13 18:34:25.810]                              h_125.new: Heuristics: 0 / -1 (in 324 ms)[0m
-[35m[2022-02-13 18:34:26.142]                              h_127.new: h_127.new (n = 32768, m = 1064497, k = -1)[0m
-[0m[2022-02-13 18:34:27.024]                              h_127.new: Found solution with k = 0[0m
-[0m[2022-02-13 18:34:27.024]                              h_127.new: Heuristics: 0 / -1 (in 881 ms)[0m
-[35m[2022-02-13 18:34:27.342]                              h_131.new: h_131.new (n = 16384, m = 1097451, k = -1)[0m
-[0m[2022-02-13 18:34:27.921]                              h_131.new: Found solution with k = 0[0m
-[0m[2022-02-13 18:34:27.921]                              h_131.new: Heuristics: 0 / -1 (in 579 ms)[0m
-[35m[2022-02-13 18:34:28.162]                              h_133.new: h_133.new (n = 131003, m = 1065514, k = -1)[0m
-[0m[2022-02-13 18:34:32.949]                              h_133.new: Found solution with k = 0[0m
-[0m[2022-02-13 18:34:32.949]                              h_133.new: Heuristics: 0 / -1 (in 4786 ms)[0m
-[35m[2022-02-13 18:34:33.222]                              h_137.new: h_137.new (n = 32751, m = 1120601, k = -1)[0m
-[0m[2022-02-13 18:34:33.963]                              h_137.new: Found solution with k = 0[0m
-[0m[2022-02-13 18:34:33.963]                              h_137.new: Heuristics: 0 / -1 (in 741 ms)[0m
-[35m[2022-02-13 18:34:34.299]                              h_139.new: h_139.new (n = 16384, m = 1146934, k = -1)[0m
-[0m[2022-02-13 18:34:34.868]                              h_139.new: Found solution with k = 0[0m
-[0m[2022-02-13 18:34:34.868]                              h_139.new: Heuristics: 0 / -1 (in 569 ms)[0m
-[35m[2022-02-13 18:34:35.134]                              h_143.new: h_143.new (n = 32768, m = 1206395, k = -1)[0m
-[0m[2022-02-13 18:34:36.308]                              h_143.new: Found solution with k = 0[0m
-[0m[2022-02-13 18:34:36.308]                              h_143.new: Heuristics: 0 / -1 (in 1173 ms)[0m
-[35m[2022-02-13 18:34:36.583]                              h_145.new: h_145.new (n = 32768, m = 1208103, k = -1)[0m
-[0m[2022-02-13 18:34:38.036]                              h_145.new: Found solution with k = 0[0m
-[0m[2022-02-13 18:34:38.037]                              h_145.new: Heuristics: 0 / -1 (in 1453 ms)[0m
-[35m[2022-02-13 18:34:38.369]                              h_149.new: h_149.new (n = 131067, m = 1209436, k = -1)[0m
-[0m[2022-02-13 18:34:38.783]                              h_149.new: Found solution with k = 0[0m
-[0m[2022-02-13 18:34:38.783]                              h_149.new: Heuristics: 0 / -1 (in 414 ms)[0m
-[35m[2022-02-13 18:34:39.032]                              h_151.new: h_151.new (n = 65536, m = 1229256, k = -1)[0m
-[0m[2022-02-13 18:34:41.936]                              h_151.new: Found solution with k = 0[0m
-[0m[2022-02-13 18:34:41.937]                              h_151.new: Heuristics: 0 / -1 (in 2904 ms)[0m
-[35m[2022-02-13 18:34:42.456]                              h_155.new: h_155.new (n = 131054, m = 1230232, k = -1)[0m
-[0m[2022-02-13 18:34:48.208]                              h_155.new: Found solution with k = 0[0m
-[0m[2022-02-13 18:34:48.209]                              h_155.new: Heuristics: 0 / -1 (in 5753 ms)[0m
-[35m[2022-02-13 18:34:48.363]                              h_157.new: h_157.new (n = 258872, m = 566226, k = -1)[0m
-[0m[2022-02-13 18:34:48.595]                              h_157.new: Found solution with k = 0[0m
-[0m[2022-02-13 18:34:48.596]                              h_157.new: Heuristics: 0 / -1 (in 233 ms)[0m
-[35m[2022-02-13 18:34:49.501]                              h_161.new: h_161.new (n = 32768, m = 1342941, k = -1)[0m
-[0m[2022-02-13 18:34:50.135]                              h_161.new: Found solution with k = 0[0m
-[0m[2022-02-13 18:34:50.135]                              h_161.new: Heuristics: 0 / -1 (in 634 ms)[0m
-[35m[2022-02-13 18:34:50.435]                              h_163.new: h_163.new (n = 32768, m = 1348546, k = -1)[0m
-[0m[2022-02-13 18:34:51.661]                              h_163.new: Found solution with k = 0[0m
-[0m[2022-02-13 18:34:51.662]                              h_163.new: Heuristics: 0 / -1 (in 1225 ms)[0m
-[35m[2022-02-13 18:34:51.984]                              h_167.new: h_167.new (n = 65536, m = 1365753, k = -1)[0m
-[0m[2022-02-13 18:34:55.158]                              h_167.new: Found solution with k = 0[0m
-[0m[2022-02-13 18:34:55.159]                              h_167.new: Heuristics: 0 / -1 (in 3175 ms)[0m
-[35m[2022-02-13 18:34:55.514]                              h_169.new: h_169.new (n = 32765, m = 1404566, k = -1)[0m
-[0m[2022-02-13 18:34:56.595]                              h_169.new: Found solution with k = 0[0m
-[0m[2022-02-13 18:34:56.595]                              h_169.new: Heuristics: 0 / -1 (in 1081 ms)[0m
-[35m[2022-02-13 18:34:56.932]                              h_173.new: h_173.new (n = 32768, m = 1421572, k = -1)[0m
-[0m[2022-02-13 18:34:58.181]                              h_173.new: Found solution with k = 0[0m
-[0m[2022-02-13 18:34:58.181]                              h_173.new: Heuristics: 0 / -1 (in 1249 ms)[0m
-[35m[2022-02-13 18:34:58.479]                              h_175.new: h_175.new (n = 131072, m = 1424289, k = -1)[0m
-[0m[2022-02-13 18:34:58.995]                              h_175.new: Found solution with k = 0[0m
-[0m[2022-02-13 18:34:58.995]                              h_175.new: Heuristics: 0 / -1 (in 516 ms)[0m
-[35m[2022-02-13 18:34:59.548]                              h_179.new: h_179.new (n = 131072, m = 1510249, k = -1)[0m
-[0m[2022-02-13 18:35:00.116]                              h_179.new: Found solution with k = 0[0m
-[0m[2022-02-13 18:35:00.116]                              h_179.new: Heuristics: 0 / -1 (in 568 ms)[0m
-[35m[2022-02-13 18:35:00.472]                              h_181.new: h_181.new (n = 131071, m = 1475436, k = -1)[0m
-[0m[2022-02-13 18:35:07.162]                              h_181.new: Found solution with k = 0[0m
-[0m[2022-02-13 18:35:07.162]                              h_181.new: Heuristics: 0 / -1 (in 6690 ms)[0m
-[35m[2022-02-13 18:35:08.369]                              h_185.new: h_185.new (n = 32768, m = 1611346, k = -1)[0m
-[0m[2022-02-13 18:35:09.198]                              h_185.new: Found solution with k = 0[0m
-[0m[2022-02-13 18:35:09.198]                              h_185.new: Heuristics: 0 / -1 (in 829 ms)[0m
-[35m[2022-02-13 18:35:09.707]                              h_187.new: h_187.new (n = 131072, m = 1606910, k = -1)[0m
-[0m[2022-02-13 18:35:10.276]                              h_187.new: Found solution with k = 0[0m
-[0m[2022-02-13 18:35:10.277]                              h_187.new: Heuristics: 0 / -1 (in 570 ms)[0m
-[35m[2022-02-13 18:35:10.714]                              h_191.new: h_191.new (n = 131072, m = 1637497, k = -1)[0m
-[0m[2022-02-13 18:35:11.268]                              h_191.new: Found solution with k = 0[0m
-[0m[2022-02-13 18:35:11.269]                              h_191.new: Heuristics: 0 / -1 (in 555 ms)[0m
-[35m[2022-02-13 18:35:11.860]                              h_193.new: h_193.new (n = 32768, m = 1867174, k = -1)[0m
-[0m[2022-02-13 18:35:12.943]                              h_193.new: Found solution with k = 0[0m
-[0m[2022-02-13 18:35:12.944]                              h_193.new: Heuristics: 0 / -1 (in 1084 ms)[0m
-[35m[2022-02-13 18:35:16.756]                              h_197.new: h_197.new (n = 8192, m = 2096307, k = -1)[0m
-[0m[2022-02-13 18:35:18.781]                              h_197.new: Found solution with k = 0[0m
-[0m[2022-02-13 18:35:18.782]                              h_197.new: Heuristics: 0 / -1 (in 2024 ms)[0m
-[35m[2022-02-13 18:35:19.306]                              h_199.new: h_199.new (n = 721243, m = 1529188, k = -1)[0m
-[0m[2022-02-13 18:35:19.978]                              h_199.new: Found solution with k = 0[0m
-[0m[2022-02-13 18:35:19.979]                              h_199.new: Heuristics: 0 / -1 (in 672 ms)[0m
-[0m[2022-02-13 18:35:19.982]                           Overall (53): Average heuristics quality per instance: 0.0 (in 878.90564 ms)[0m
-[0m[2022-02-13 18:35:19.984]                           Overall (53): Overall heuristics quality: -0.0 (in 46582 ms)[0m
+[35m[2022-04-16 14:39:03.420]                                  e_001: e_001 (n = 475, m = 651, k = -1)[0m
+[0m[2022-04-16 14:39:03.448]                                  e_001: Found 0 cyclic sub graph(s) with n = [][0m
+[0m[2022-04-16 14:39:03.450]                                  e_001: Removed 475 nodes in preprocessing, starting with k = 2[0m
+[0m[2022-04-16 14:39:03.463]                                  e_001: Found solution k = 2 in 76 ms (recursive steps: 0)[0m
+[33m[2022-04-16 14:39:03.470]                                  e_001: BFS: 0, Packing: 0, Heuristic: 0, Copy: 0, Red: 0, DAG: 0, Pre: 18, File: 12[0m
+[35m[2022-04-16 14:39:03.479]                                  e_003: e_003 (n = 1024, m = 6055, k = -1)[0m
+[0m[2022-04-16 14:39:03.508]                                  e_003: Found 2 cyclic sub graph(s) with n = [37, 882][0m
+[0m[2022-04-16 14:39:03.509]                                  e_003: Removed 105 nodes in preprocessing, starting with k = 47[0m
+[0m[2022-04-16 14:39:03.512]                                  e_003: Creating cycle packing with time limit = 402[0m
+[0m[2022-04-16 14:39:03.535]                                  e_003: Creating heuristic with time limit = 402[0m
+[0m[2022-04-16 14:39:03.939]                                  e_003: Solution lies in [25, 26][0m
+[2022-04-16 14:39:03.941]                                  e_003: Branching with k = 25
+[0m[2022-04-16 14:39:03.955]                                  e_003: Creating cycle packing with time limit = 9597[0m
+[0m[2022-04-16 14:39:04.055]                                  e_003: Creating heuristic with time limit = 9597[0m
+[0m[2022-04-16 14:39:13.657]                                  e_003: Solution lies in [598, 612][0m
+[2022-04-16 14:39:13.657]                                  e_003: Branching with k = 611
+[31m[2022-04-16 14:40:33.473]                                  e_003: Found no solution in 90001 ms (recursive steps: 473081)[0m
+[33m[2022-04-16 14:40:33.474]                                  e_003: BFS: 5870, Packing: 60105, Heuristic: 10006, Copy: 7442, Red: 897, DAG: 4888, Pre: 30, File: 8[0m
+[35m[2022-04-16 14:40:33.494]                                  e_005: e_005 (n = 1024, m = 5736, k = -1)[0m
+[0m[2022-04-16 14:40:33.497]                                  e_005: Found 7 cyclic sub graph(s) with n = [4, 5, 6, 11, 27, 38, 784][0m
+[0m[2022-04-16 14:40:33.498]                                  e_005: Removed 149 nodes in preprocessing, starting with k = 60[0m
+[0m[2022-04-16 14:40:33.498]                                  e_005: Creating cycle packing with time limit = 45[0m
+[0m[2022-04-16 14:40:33.498]                                  e_005: Creating heuristic with time limit = 45[0m
+[0m[2022-04-16 14:40:33.499]                                  e_005: Solution lies in [2, 2][0m
+[0m[2022-04-16 14:40:33.499]                                  e_005: Creating cycle packing with time limit = 57[0m
+[0m[2022-04-16 14:40:33.499]                                  e_005: Creating heuristic with time limit = 57[0m
+[0m[2022-04-16 14:40:33.500]                                  e_005: Solution lies in [3, 3][0m
+[0m[2022-04-16 14:40:33.500]                                  e_005: Creating cycle packing with time limit = 68[0m
+[0m[2022-04-16 14:40:33.500]                                  e_005: Creating heuristic with time limit = 68[0m
+[0m[2022-04-16 14:40:33.500]                                  e_005: Solution lies in [4, 4][0m
+[0m[2022-04-16 14:40:33.501]                                  e_005: Creating cycle packing with time limit = 125[0m
+[0m[2022-04-16 14:40:33.501]                                  e_005: Creating heuristic with time limit = 125[0m
+[0m[2022-04-16 14:40:33.501]                                  e_005: Solution lies in [7, 7][0m
+[0m[2022-04-16 14:40:33.502]                                  e_005: Creating cycle packing with time limit = 308[0m
+[0m[2022-04-16 14:40:33.502]                                  e_005: Creating heuristic with time limit = 308[0m
+[0m[2022-04-16 14:40:33.502]                                  e_005: Solution lies in [21, 21][0m
+[0m[2022-04-16 14:40:33.503]                                  e_005: Creating cycle packing with time limit = 434[0m
+[0m[2022-04-16 14:40:33.503]                                  e_005: Creating heuristic with time limit = 434[0m
+[0m[2022-04-16 14:40:33.938]                                  e_005: Solution lies in [25, 26][0m
+[2022-04-16 14:40:33.938]                                  e_005: Branching with k = 25
+[0m[2022-04-16 14:40:33.940]                                  e_005: Creating cycle packing with time limit = 8960[0m
+[0m[2022-04-16 14:40:33.960]                                  e_005: Creating heuristic with time limit = 8960[0m
