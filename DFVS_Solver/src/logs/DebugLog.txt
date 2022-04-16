@@ -1,42 +1,14 @@
-[35m[2022-04-16 14:39:03.420]                                  e_001: e_001 (n = 475, m = 651, k = -1)[0m
-[0m[2022-04-16 14:39:03.448]                                  e_001: Found 0 cyclic sub graph(s) with n = [][0m
-[0m[2022-04-16 14:39:03.450]                                  e_001: Removed 475 nodes in preprocessing, starting with k = 2[0m
-[0m[2022-04-16 14:39:03.463]                                  e_001: Found solution k = 2 in 76 ms (recursive steps: 0)[0m
-[33m[2022-04-16 14:39:03.470]                                  e_001: BFS: 0, Packing: 0, Heuristic: 0, Copy: 0, Red: 0, DAG: 0, Pre: 18, File: 12[0m
-[35m[2022-04-16 14:39:03.479]                                  e_003: e_003 (n = 1024, m = 6055, k = -1)[0m
-[0m[2022-04-16 14:39:03.508]                                  e_003: Found 2 cyclic sub graph(s) with n = [37, 882][0m
-[0m[2022-04-16 14:39:03.509]                                  e_003: Removed 105 nodes in preprocessing, starting with k = 47[0m
-[0m[2022-04-16 14:39:03.512]                                  e_003: Creating cycle packing with time limit = 402[0m
-[0m[2022-04-16 14:39:03.535]                                  e_003: Creating heuristic with time limit = 402[0m
-[0m[2022-04-16 14:39:03.939]                                  e_003: Solution lies in [25, 26][0m
-[2022-04-16 14:39:03.941]                                  e_003: Branching with k = 25
-[0m[2022-04-16 14:39:03.955]                                  e_003: Creating cycle packing with time limit = 9597[0m
-[0m[2022-04-16 14:39:04.055]                                  e_003: Creating heuristic with time limit = 9597[0m
-[0m[2022-04-16 14:39:13.657]                                  e_003: Solution lies in [598, 612][0m
-[2022-04-16 14:39:13.657]                                  e_003: Branching with k = 611
-[31m[2022-04-16 14:40:33.473]                                  e_003: Found no solution in 90001 ms (recursive steps: 473081)[0m
-[33m[2022-04-16 14:40:33.474]                                  e_003: BFS: 5870, Packing: 60105, Heuristic: 10006, Copy: 7442, Red: 897, DAG: 4888, Pre: 30, File: 8[0m
-[35m[2022-04-16 14:40:33.494]                                  e_005: e_005 (n = 1024, m = 5736, k = -1)[0m
-[0m[2022-04-16 14:40:33.497]                                  e_005: Found 7 cyclic sub graph(s) with n = [4, 5, 6, 11, 27, 38, 784][0m
-[0m[2022-04-16 14:40:33.498]                                  e_005: Removed 149 nodes in preprocessing, starting with k = 60[0m
-[0m[2022-04-16 14:40:33.498]                                  e_005: Creating cycle packing with time limit = 45[0m
-[0m[2022-04-16 14:40:33.498]                                  e_005: Creating heuristic with time limit = 45[0m
-[0m[2022-04-16 14:40:33.499]                                  e_005: Solution lies in [2, 2][0m
-[0m[2022-04-16 14:40:33.499]                                  e_005: Creating cycle packing with time limit = 57[0m
-[0m[2022-04-16 14:40:33.499]                                  e_005: Creating heuristic with time limit = 57[0m
-[0m[2022-04-16 14:40:33.500]                                  e_005: Solution lies in [3, 3][0m
-[0m[2022-04-16 14:40:33.500]                                  e_005: Creating cycle packing with time limit = 68[0m
-[0m[2022-04-16 14:40:33.500]                                  e_005: Creating heuristic with time limit = 68[0m
-[0m[2022-04-16 14:40:33.500]                                  e_005: Solution lies in [4, 4][0m
-[0m[2022-04-16 14:40:33.501]                                  e_005: Creating cycle packing with time limit = 125[0m
-[0m[2022-04-16 14:40:33.501]                                  e_005: Creating heuristic with time limit = 125[0m
-[0m[2022-04-16 14:40:33.501]                                  e_005: Solution lies in [7, 7][0m
-[0m[2022-04-16 14:40:33.502]                                  e_005: Creating cycle packing with time limit = 308[0m
-[0m[2022-04-16 14:40:33.502]                                  e_005: Creating heuristic with time limit = 308[0m
-[0m[2022-04-16 14:40:33.502]                                  e_005: Solution lies in [21, 21][0m
-[0m[2022-04-16 14:40:33.503]                                  e_005: Creating cycle packing with time limit = 434[0m
-[0m[2022-04-16 14:40:33.503]                                  e_005: Creating heuristic with time limit = 434[0m
-[0m[2022-04-16 14:40:33.938]                                  e_005: Solution lies in [25, 26][0m
-[2022-04-16 14:40:33.938]                                  e_005: Branching with k = 25
-[0m[2022-04-16 14:40:33.940]                                  e_005: Creating cycle packing with time limit = 8960[0m
-[0m[2022-04-16 14:40:33.960]                                  e_005: Creating heuristic with time limit = 8960[0m
+[35m[2022-04-16 15:23:16.238]                                  e_001: e_001 (n = 475, m = 651, k = -1)[0m
+[0m[2022-04-16 15:23:16.259]                                  e_001: Found 0 cyclic sub graph(s) with n = [][0m
+[0m[2022-04-16 15:23:16.261]                                  e_001: Removed 475 nodes in preprocessing, starting with k = 2[0m
+[0m[2022-04-16 15:23:16.272]                                  e_001: Found solution k = 2 in 64 ms (recursive steps: 0)[0m
+[33m[2022-04-16 15:23:16.278]                                  e_001: BFS: 0, Packing: 0, Heuristic: 0, Copy: 0, Red: 0, DAG: 0, Pre: 13, File: 9[0m
+[35m[2022-04-16 15:23:16.283]                                  e_003: e_003 (n = 1024, m = 6055, k = -1)[0m
+[0m[2022-04-16 15:23:16.313]                                  e_003: Found 2 cyclic sub graph(s) with n = [37, 882][0m
+[0m[2022-04-16 15:23:16.315]                                  e_003: Removed 105 nodes in preprocessing, starting with k = 47[0m
+[0m[2022-04-16 15:23:16.319]                                  e_003: Creating cycle packing with time limit = 402[0m
+[0m[2022-04-16 15:23:16.324]                                  e_003: Creating heuristic with time limit = 402[0m
+[0m[2022-04-16 15:23:16.728]                                  e_003: Solution lies in [25, 26][0m
+[2022-04-16 15:23:16.730]                                  e_003: Branching with k = 25
+[0m[2022-04-16 15:23:16.745]                                  e_003: Creating cycle packing with time limit = 9597[0m
+[0m[2022-04-16 15:23:16.823]                                  e_003: Creating heuristic with time limit = 9597[0m

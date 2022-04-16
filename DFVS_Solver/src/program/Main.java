@@ -10,7 +10,9 @@ import program.packing.Packings;
 import program.utils.*;
 import program.utils.TimeoutException;
 
+import java.util.Arrays;
 import java.util.List;
+import java.util.Scanner;
 
 public class Main {
 
@@ -22,13 +24,10 @@ public class Main {
             Log.ignore = true;
 
             // Start timer
-            Timer.start(90);
-
-            // Path
-            String fileName = args[0];
+            Timer.start(Integer.MAX_VALUE);
 
             // Create instance
-            Instance instance = InstanceCreator.createFromFile(new GraphFile("", fileName, -1));
+            Instance instance = InstanceCreator.createPaceInstanceFromSystemIn();
 
             // Solve
             HeuristicSolver.dfvsSolveInstance(instance);
@@ -37,9 +36,6 @@ public class Main {
             for(Integer nodeId : instance.S){
                 System.out.println(nodeId);
             }
-
-            // Print recursive steps
-            System.out.println("#recursive steps: " + instance.recursiveSteps);
         } else {
 
             //Reset Log
