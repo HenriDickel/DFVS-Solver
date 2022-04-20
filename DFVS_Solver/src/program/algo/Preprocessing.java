@@ -15,7 +15,7 @@ public abstract class Preprocessing {
     public static List<Graph> findCyclicSubGraphs(Graph graph) {
 
         // Find cyclic components
-        List<List<Node>> components = Tarjan.run(graph);
+        List<List<Node>> components = TarjanIterative.run(graph);
 
         // Generate sub graphs
         List<Graph> subGraphs = new ArrayList<>();

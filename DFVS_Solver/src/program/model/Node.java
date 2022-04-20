@@ -21,6 +21,7 @@ public class Node {
     public Integer index;
     public Integer lowLink;
     public Boolean onStack;
+    public Integer depth;
 
     // Flower attributes
     public Integer petal;
