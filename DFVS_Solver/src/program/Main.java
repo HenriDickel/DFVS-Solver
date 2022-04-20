@@ -47,10 +47,28 @@ public class Main {
             //List<GraphFile> files = InstanceCreator.getHeuristicFiles(null);
             List<GraphFile> files = InstanceCreator.getPaceFiles(null);
 
-            //Heuristics.testQuality(files);
-            //Packings.testQuality(files);
-            files.forEach(Main::run);
+            files.forEach(Main::reductionExport);
+            //files.forEach(Main::run);
         }
+    }
+
+    private static void reductionExport(GraphFile file){
+        //Get instance
+        Instance instance = InstanceCreator.createFromPaceFile(file);
+
+        //Export original graph
+        Export.ExportGraph(instance, "original");
+
+        //Reduce
+        List<Integer> reduceS = Reduction.applyRules(instance.subGraphs.get(0), true);
+        instance.S.addAll(reduceS);
+
+        //Export reduced
+        Export.ExportGraph(instance, "reduced");
+
+        //Create sub graphs
+        instance.subGraphs = Preprocessing.findCyclicSubGraphs(instance.subGraphs.get(0));
+        Export.ExportGraph(instance, "tarjan");
     }
 
     private static void run(GraphFile file) {
