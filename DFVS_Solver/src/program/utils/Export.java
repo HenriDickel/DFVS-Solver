@@ -8,6 +8,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 public class Export {
@@ -45,7 +46,7 @@ public class Export {
             }
 
             //Add nodes to file
-            for(int i = 1; i < nodes.get(nodes.size() - 1).id; i++){
+            for(int i = 1; i <= nodes.get(nodes.size() - 1).id; i++){
 
                 //Ignore removed nodes
                 int finalI = i;
@@ -54,7 +55,7 @@ public class Export {
                     String out = currNode.getOutIds().stream().map(Object::toString).collect(Collectors.joining(" "));
                     writer.write(out + "\n");
                 }
-                else writer.write("\n"); //Does not get called because nodes never get deleted completely
+                else writer.write("\n");
             }
 
             //Close writer

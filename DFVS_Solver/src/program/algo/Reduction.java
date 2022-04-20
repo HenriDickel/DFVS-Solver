@@ -5,6 +5,7 @@ import program.model.Node;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public abstract class Reduction {
 
@@ -44,6 +45,32 @@ public abstract class Reduction {
                 }
             }
         }
+
+        //Additional rules (Won't create new rule options)
+        reduceS.addAll(removeIfFullyConnected(graph));
+
         return reduceS;
     }
+
+    private static List<Integer> removeIfFullyConnected(Graph graph){
+
+        //Result
+        List<Integer> removed = new ArrayList<>();
+
+        //Get nodes
+        List<Node> nodes = graph.getNodes();
+
+        //All nodes have to have edges to (all) n - 1 nodes
+        if(nodes.size() > 0 && graph.getEdgeCount() == nodes.size() * (nodes.size() - 1)){
+            //Result
+            removed = nodes.stream().map(x -> x.id).collect(Collectors.toList()).subList(1, nodes.size());
+
+            //Delete
+            nodes.stream().map(x -> x.id).forEach(graph::removeNode);
+        }
+
+        //Return result
+        return removed;
+    }
+
 }
