@@ -1,6 +1,5 @@
 package program;
 
-import gurobi.GRBException;
 import program.algo.*;
 import program.heuristics.HeuristicSolver;
 import program.heuristics.Heuristics;
@@ -16,7 +15,7 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static void main(String[] args) throws GRBException {
+    public static void main(String[] args) {
 
         if(args.length > 0){
 
