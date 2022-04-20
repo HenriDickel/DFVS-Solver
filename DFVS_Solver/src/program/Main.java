@@ -9,6 +9,7 @@ import program.packing.Packings;
 import program.utils.*;
 import program.utils.TimeoutException;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
@@ -53,22 +54,29 @@ public class Main {
     }
 
     private static void reductionExport(GraphFile file){
+
         //Get instance
         Instance instance = InstanceCreator.createFromPaceFile(file);
 
         //Export original graph
-        Export.ExportGraph(instance, "original");
+        Export.ExportGraph(instance, "0_original");
 
         //Reduce
-        List<Integer> reduceS = Reduction.applyRules(instance.subGraphs.get(0), true);
-        instance.S.addAll(reduceS);
-
-        //Export reduced
-        Export.ExportGraph(instance, "reduced");
+        List<Integer> reduceInit = Reduction.applyRules(instance.subGraphs.get(0), true);
+        instance.S.addAll(reduceInit);
+        Export.ExportGraph(instance, "1_first_reduced");
 
         //Create sub graphs
         instance.subGraphs = Preprocessing.findCyclicSubGraphs(instance.subGraphs.get(0));
-        Export.ExportGraph(instance, "tarjan");
+        Export.ExportGraph(instance, "2_tarjan");
+
+        //Reduce again
+        for(Graph graph : instance.subGraphs){
+            List<Integer> reduce =  Reduction.applyRules(graph, true);
+            instance.S.addAll(reduce);
+        }
+        Export.ExportGraph(instance, "3_second_reduced");
+
     }
 
     private static void run(GraphFile file) {

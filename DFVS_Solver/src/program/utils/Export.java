@@ -65,6 +65,6 @@ public class Export {
         }
 
         //Log
-
+        System.out.println("Exported: " + instance.NAME + "_" + exportName);
     }
 }
