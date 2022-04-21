@@ -42,35 +42,24 @@ public abstract class Reduction {
                         in.addOutId(outId);
                     }
                     graph.removeNode(node.id);
+                } else{
+                    //TODO - Check correctness again
+                    /*
+                    //Check if full double connected
+                    if(node.getOutIdCount() == graph.getNodes().size() - 1){
+                        //All others connected to this
+                        if(graph.getNodes().stream().allMatch(x -> x.id == node.id || x.getOutIds().contains(node.id))){
+                            reduceS.add(node.id);
+                            graph.removeNode(node.id);
+                        }
+                    }
+                    */
                 }
             }
         }
 
-        //Additional rules (Won't create new rule options)
-        reduceS.addAll(removeIfFullyConnected(graph));
-
         return reduceS;
     }
 
-    private static List<Integer> removeIfFullyConnected(Graph graph){
-
-        //Result
-        List<Integer> removed = new ArrayList<>();
-
-        //Get nodes
-        List<Node> nodes = graph.getNodes();
-
-        //All nodes have to have edges to (all) n - 1 nodes
-        if(nodes.size() > 0 && graph.getEdgeCount() == nodes.size() * (nodes.size() - 1)){
-            //Result
-            removed = nodes.stream().map(x -> x.id).collect(Collectors.toList()).subList(1, nodes.size());
-
-            //Delete
-            nodes.stream().map(x -> x.id).forEach(graph::removeNode);
-        }
-
-        //Return result
-        return removed;
-    }
 
 }

@@ -43,16 +43,24 @@ public class Main {
             Log.Clear();
             Log.ignore = false;
 
+            testCorrectness();
+
             //List<GraphFile> files = InstanceCreator.getComplexAndSyntheticFiles(Dataset.DATASET_3, null);
             //List<GraphFile> files = InstanceCreator.getSelectedFiles();
             //List<GraphFile> files = InstanceCreator.getUnsolvedFiles();
             //List<GraphFile> files = InstanceCreator.getHeuristicFiles(null);
-            List<GraphFile> files = InstanceCreator.getPaceFiles(null);
+            //List<GraphFile> files = InstanceCreator.getPaceFiles(null);
 
-            files.forEach(Main::reductionExport);
+            //files.forEach(Main::reductionExport);
             //files.forEach(Main::run);
         }
     }
+
+    private static void testCorrectness(){
+        List<GraphFile> files = InstanceCreator.getComplexAndSyntheticFiles(Dataset.DATASET_2, null);
+        files.forEach(x -> run(x, false));
+    }
+
 
     private static void reductionExport(GraphFile file){
 
@@ -80,13 +88,13 @@ public class Main {
 
     }
 
-    private static void run(GraphFile file) {
+    private static void run(GraphFile file, boolean isPaceData) {
 
         Timer.start(90);
         PerformanceTimer.reset();
 
         PerformanceTimer.start();
-        Instance instance = InstanceCreator.createFromPaceFile(file);
+        Instance instance = isPaceData ? InstanceCreator.createFromPaceFile(file) : InstanceCreator.createFromFile(file);
         PerformanceTimer.log(PerformanceTimer.MethodType.FILE);
 
         try {
