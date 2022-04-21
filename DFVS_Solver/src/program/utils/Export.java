@@ -37,7 +37,7 @@ public class Export {
             //Get size
             int n = nodes.size();
             int m = n == 0 ? 0 : nodes.stream().map(Node::getOutIdCount).reduce(0, Integer::sum);
-            writer.write(n +  " " + m  + "\n");
+            writer.write(n +  " " + m  + " " + instance.subGraphs.size() + "\n");
 
             //Check if graph is not empty
             if(nodes.size() == 0){
