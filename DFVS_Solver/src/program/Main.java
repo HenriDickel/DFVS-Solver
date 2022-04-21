@@ -43,15 +43,15 @@ public class Main {
             Log.Clear();
             Log.ignore = false;
 
-            testCorrectness();
+            //testCorrectness();
 
             //List<GraphFile> files = InstanceCreator.getComplexAndSyntheticFiles(Dataset.DATASET_3, null);
             //List<GraphFile> files = InstanceCreator.getSelectedFiles();
             //List<GraphFile> files = InstanceCreator.getUnsolvedFiles();
             //List<GraphFile> files = InstanceCreator.getHeuristicFiles(null);
-            //List<GraphFile> files = InstanceCreator.getPaceFiles(null);
 
-            //files.forEach(Main::reductionExport);
+            List<GraphFile> files = InstanceCreator.getPaceFiles(null);
+            files.forEach(Main::reductionExport);
             //files.forEach(Main::run);
         }
     }
@@ -86,6 +86,17 @@ public class Main {
         }
         Export.ExportGraph(instance, "3_second_reduced");
 
+        //
+        //int preM = instance.getCurrentM();
+        //for(Graph graph : instance.subGraphs){
+        //    for(Node node : graph.getNodes()){
+        //        Reduction.doubleEdgeRemoveNormalEdges(graph, node);
+        //    }
+        //}
+        //int postM = instance.getCurrentM();
+        //Export.ExportGraph(instance, "4_single_edge_removed");
+
+        //System.out.println(instance.NAME + ": Pre: " + preM + "\tPost: " + postM + "\t\tDiff: " + (preM - postM));
     }
 
     private static void run(GraphFile file, boolean isPaceData) {

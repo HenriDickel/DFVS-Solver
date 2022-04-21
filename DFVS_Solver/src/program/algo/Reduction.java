@@ -19,6 +19,10 @@ public abstract class Reduction {
             for(Integer id: updatedNodeIds) {
                 Node node = graph.getNode(id);
                 node.updated = false;
+
+                //Remove not needed single edges
+                doubleEdgeRemoveNormalEdges(graph, node);
+
                 if(node.getOutIdCount() == 0 || node.getInIdCount() == 0) { // trivial vertex
                     graph.removeNode(node.id);
                 } else if(node.getOutIds().contains(node.id)) { // self loop
@@ -59,6 +63,23 @@ public abstract class Reduction {
         }
 
         return reduceS;
+    }
+
+    public static void doubleEdgeRemoveNormalEdges(Graph graph, Node node){
+
+        //Return if no double edge
+        if(node.getOutIds().stream().noneMatch(x -> node.getInIds().contains(x))) return;
+
+        //Get all ingoing (That are no double)
+        List<Integer> ingoing = node.getInIds().stream().filter(x -> !node.getOutIds().contains(x)).collect(Collectors.toList());
+
+        //Get all outgoing (That are no double)
+        List<Integer> outgoing = node.getOutIds().stream().filter(x -> !node.getInIds().contains(x)).collect(Collectors.toList());
+
+        //Remove edges
+        if(ingoing.size() == 0) outgoing.forEach(x -> graph.removeEdge(node.id, x));
+        if(outgoing.size() == 0) ingoing.forEach(x -> graph.removeEdge(x, node.id));
+
     }
 
 

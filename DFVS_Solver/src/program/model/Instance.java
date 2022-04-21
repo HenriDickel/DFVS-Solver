@@ -1,6 +1,7 @@
 package program.model;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class Instance {
 
@@ -33,5 +34,15 @@ public class Instance {
         this.OPTIMAL_K = OPTIMAL_K;
         this.N = graph.getNodeCount();
         this.M = graph.getEdgeCount();
+    }
+
+    public int getCurrentN(){
+        return (int) subGraphs.stream().map(Graph::getNodes).mapToLong(List::size).sum();
+
+    }
+
+    public int getCurrentM(){
+        List<Node> nodes = subGraphs.stream().map(Graph::getNodes).flatMap(List::stream).collect(Collectors.toList());
+        return getCurrentN() == 0 ? 0 : nodes.stream().map(Node::getOutIdCount).reduce(0, Integer::sum);
     }
 }
