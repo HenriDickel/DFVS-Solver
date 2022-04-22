@@ -122,12 +122,12 @@ public class Graph {
         nodes.remove(nodeId);
     }
 
-    public void removeEdge(int out, int in){
-        Node inNode = nodes.get(in);
+    public void removeEdge(Integer out, Integer in){
         Node outNode = nodes.get(out);
+        Node inNode = nodes.get(in);
 
-        inNode.removeInId(out);
         outNode.removeOutId(in);
+        inNode.removeInId(out);
     }
 
     public void removeForbiddenNodes(List<Integer> forbiddenNodeIds) {

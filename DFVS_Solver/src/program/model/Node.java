@@ -93,6 +93,15 @@ public class Node {
         return copy;
     }
 
+    /**
+     * Returns true if node has edges and all of them are double edges
+     * @return
+     */
+    public boolean onlyDoubleEdges(){
+        return inIds.size() + outIds.size() > 0 && inIds.size() == outIds.size() && inIds.containsAll(outIds) && outIds.containsAll(inIds);
+
+    }
+
     @Override
     public String toString() {
         return "" + id;

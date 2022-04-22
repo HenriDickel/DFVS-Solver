@@ -5,6 +5,7 @@ import program.model.Node;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 public abstract class Reduction {
@@ -46,18 +47,12 @@ public abstract class Reduction {
                         in.addOutId(outId);
                     }
                     graph.removeNode(node.id);
-                } else{
-                    //TODO - Check correctness again
-                    /*
-                    //Check if full double connected
-                    if(node.getOutIdCount() == graph.getNodes().size() - 1){
-                        //All others connected to this
-                        if(graph.getNodes().stream().allMatch(x -> x.id == node.id || x.getOutIds().contains(node.id))){
-                            reduceS.add(node.id);
-                            graph.removeNode(node.id);
-                        }
-                    }
-                    */
+                } else if(supersetRemove(graph, node)){
+                    reduceS.add(node.id);
+                    graph.removeNode(node.id);
+                //} else if(removeFullyConnected(graph, node)) {
+                //    reduceS.add(node.id);
+                //    graph.removeNode(node.id);
                 }
             }
         }
@@ -65,9 +60,43 @@ public abstract class Reduction {
         return reduceS;
     }
 
+    public static boolean removeFullyConnected(Graph graph, Node node){
+        if(node.getOutIdCount() == graph.getNodes().size() - 1){
+            //All others connected to this
+            return graph.getNodes().stream().allMatch(x -> Objects.equals(x.id, node.id) || x.getOutIds().contains(node.id));
+        }
+        return false;
+    }
+
+    public static boolean supersetRemove(Graph graph, Node node){
+
+        //Only double edges
+        if(!node.onlyDoubleEdges()) return false;
+
+        //Check if any neighbour is subset
+        for(int neighbour : new ArrayList<>(node.getOutIds())){
+
+            //Get Node
+            Node connectedNode = graph.getNode(neighbour);
+
+            //Only double edges
+            if(!connectedNode.onlyDoubleEdges()) continue;
+
+            //Set to check against
+            List<Integer> checkSet = new ArrayList<>(connectedNode.getOutIds());
+            checkSet.removeIf(x -> x.equals(node.id));
+
+            //Superset
+            if(node.getOutIds().containsAll(checkSet)){
+                return true;
+            }
+        }
+        return false;
+    }
+
     public static void doubleEdgeRemoveNormalEdges(Graph graph, Node node){
 
-        //Return if no double edge
+        //Return if not at least one double edge
         if(node.getOutIds().stream().noneMatch(x -> node.getInIds().contains(x))) return;
 
         //Get all ingoing (That are no double)

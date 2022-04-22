@@ -1,0 +1,140 @@
+[35m[2022-04-22 09:48:57.998]                         advotogo-n_100: advotogo-n_100 (n = 26, m = 31, k = 2)[0m
+[0m[2022-04-22 09:48:58.014]                         advotogo-n_100: Found 0 cyclic sub graph(s) with n = [][0m
+[0m[2022-04-22 09:48:58.015]                         advotogo-n_100: Removed 26 nodes in preprocessing, starting with k = 2[0m
+[0m[2022-04-22 09:48:58.025]                         advotogo-n_100: Found solution k = 2 in 49 ms (recursive steps: 0)[0m
+[33m[2022-04-22 09:48:58.030]                         advotogo-n_100: BFS: 0, Packing: 0, Heuristic: 0, Copy: 0, Red: 0, DAG: 0, Pre: 10, File: 5[0m
+[35m[2022-04-22 09:48:58.035]                        advotogo-n_1000: advotogo-n_1000 (n = 624, m = 1883, k = 127)[0m
+[0m[2022-04-22 09:48:58.044]                        advotogo-n_1000: Found 0 cyclic sub graph(s) with n = [][0m
+[0m[2022-04-22 09:48:58.044]                        advotogo-n_1000: Removed 624 nodes in preprocessing, starting with k = 127[0m
+[0m[2022-04-22 09:48:58.045]                        advotogo-n_1000: Found solution k = 127 in 15 ms (recursive steps: 0)[0m
+[33m[2022-04-22 09:48:58.045]                        advotogo-n_1000: BFS: 0, Packing: 0, Heuristic: 0, Copy: 0, Red: 0, DAG: 0, Pre: 8, File: 5[0m
+[35m[2022-04-22 09:48:58.051]                        advotogo-n_1500: advotogo-n_1500 (n = 1110, m = 4342, k = 215)[0m
+[0m[2022-04-22 09:48:58.056]                        advotogo-n_1500: Found 1 cyclic sub graph(s) with n = [6][0m
+[0m[2022-04-22 09:48:58.057]                        advotogo-n_1500: Removed 1104 nodes in preprocessing, starting with k = 213[0m
+[0m[2022-04-22 09:48:58.058]                        advotogo-n_1500: Creating cycle packing with time limit = 10000[0m
+[0m[2022-04-22 09:48:58.061]                        advotogo-n_1500: Creating heuristic with time limit = 10000[0m
+[0m[2022-04-22 09:48:58.063]                        advotogo-n_1500: Solution lies in [3, 3][0m
+[31m[2022-04-22 09:48:58.064]                        advotogo-n_1500: Found solution k = 216 in 19 ms (recursive steps: 0)[0m
+[33m[2022-04-22 09:48:58.064]                        advotogo-n_1500: BFS: 0, Packing: 4, Heuristic: 2, Copy: 0, Red: 0, DAG: 0, Pre: 6, File: 6[0m
+[35m[2022-04-22 09:48:58.065]                         advotogo-n_200: advotogo-n_200 (n = 63, m = 68, k = 9)[0m
+[0m[2022-04-22 09:48:58.065]                         advotogo-n_200: Found 0 cyclic sub graph(s) with n = [][0m
+[0m[2022-04-22 09:48:58.066]                         advotogo-n_200: Removed 63 nodes in preprocessing, starting with k = 9[0m
+[0m[2022-04-22 09:48:58.066]                         advotogo-n_200: Found solution k = 9 in 1 ms (recursive steps: 0)[0m
+[33m[2022-04-22 09:48:58.066]                         advotogo-n_200: BFS: 0, Packing: 0, Heuristic: 0, Copy: 0, Red: 0, DAG: 0, Pre: 1, File: 0[0m
+[35m[2022-04-22 09:48:58.073]                        advotogo-n_2000: advotogo-n_2000 (n = 1556, m = 6786, k = 297)[0m
+[0m[2022-04-22 09:48:58.080]                        advotogo-n_2000: Found 1 cyclic sub graph(s) with n = [5][0m
+[0m[2022-04-22 09:48:58.081]                        advotogo-n_2000: Removed 1551 nodes in preprocessing, starting with k = 294[0m
+[0m[2022-04-22 09:48:58.081]                        advotogo-n_2000: Creating cycle packing with time limit = 7142[0m
+[0m[2022-04-22 09:48:58.082]                        advotogo-n_2000: Creating heuristic with time limit = 7142[0m
+[0m[2022-04-22 09:49:05.226]                        advotogo-n_2000: Solution lies in [2, 3][0m
+[2022-04-22 09:49:05.227]                        advotogo-n_2000: Branching with k = 2
+[0m[2022-04-22 09:49:05.230]                        advotogo-n_2000: Found solution k = 297 in 7163 ms (recursive steps: 1)[0m
+[33m[2022-04-22 09:49:05.230]                        advotogo-n_2000: BFS: 1, Packing: 1, Heuristic: 7144, Copy: 0, Red: 0, DAG: 0, Pre: 8, File: 6[0m
+[35m[2022-04-22 09:49:05.237]                        advotogo-n_3000: advotogo-n_3000 (n = 2657, m = 16140, k = 548)[0m
+[0m[2022-04-22 09:49:05.243]                        advotogo-n_3000: Found 1 cyclic sub graph(s) with n = [14][0m
+[0m[2022-04-22 09:49:05.244]                        advotogo-n_3000: Removed 2657 nodes in preprocessing, starting with k = 553[0m
+[31m[2022-04-22 09:49:05.244]                        advotogo-n_3000: Found solution k = 553 in 13 ms (recursive steps: 0)[0m
+[33m[2022-04-22 09:49:05.244]                        advotogo-n_3000: BFS: 0, Packing: 0, Heuristic: 0, Copy: 0, Red: 0, DAG: 0, Pre: 7, File: 6[0m
+[35m[2022-04-22 09:49:05.255]                        advotogo-n_4000: advotogo-n_4000 (n = 3775, m = 29831, k = 863)[0m
+[0m[2022-04-22 09:49:05.265]                        advotogo-n_4000: Found 6 cyclic sub graph(s) with n = [2, 2, 3, 3, 6, 85][0m
+[0m[2022-04-22 09:49:05.266]                        advotogo-n_4000: Removed 3753 nodes in preprocessing, starting with k = 853[0m
+[0m[2022-04-22 09:49:05.266]                        advotogo-n_4000: Creating cycle packing with time limit = 2075[0m
+[0m[2022-04-22 09:49:05.267]                        advotogo-n_4000: Creating heuristic with time limit = 2075[0m
+[0m[2022-04-22 09:49:07.343]                        advotogo-n_4000: Solution lies in [9, 11][0m
+[2022-04-22 09:49:07.343]                        advotogo-n_4000: Branching with k = 10
+[31m[2022-04-22 09:49:07.345]                        advotogo-n_4000: Found solution k = 864 in 2100 ms (recursive steps: 5)[0m
+[33m[2022-04-22 09:49:07.346]                        advotogo-n_4000: BFS: 0, Packing: 1, Heuristic: 2076, Copy: 1, Red: 0, DAG: 0, Pre: 11, File: 10[0m
+[35m[2022-04-22 09:49:07.346]                          advotogo-n_50: advotogo-n_50 (n = 0, m = 0, k = 0)[0m
+[0m[2022-04-22 09:49:07.347]                          advotogo-n_50: Found 0 cyclic sub graph(s) with n = [][0m
+[0m[2022-04-22 09:49:07.347]                          advotogo-n_50: Removed 0 nodes in preprocessing, starting with k = 0[0m
+[0m[2022-04-22 09:49:07.347]                          advotogo-n_50: Found solution k = 0 in 1 ms (recursive steps: 0)[0m
+[33m[2022-04-22 09:49:07.348]                          advotogo-n_50: BFS: 0, Packing: 0, Heuristic: 0, Copy: 0, Red: 0, DAG: 0, Pre: 0, File: 0[0m
+[35m[2022-04-22 09:49:07.348]                         advotogo-n_500: advotogo-n_500 (n = 247, m = 446, k = 39)[0m
+[0m[2022-04-22 09:49:07.348]                         advotogo-n_500: Found 0 cyclic sub graph(s) with n = [][0m
+[0m[2022-04-22 09:49:07.349]                         advotogo-n_500: Removed 247 nodes in preprocessing, starting with k = 39[0m
+[0m[2022-04-22 09:49:07.349]                         advotogo-n_500: Found solution k = 39 in 1 ms (recursive steps: 0)[0m
+[33m[2022-04-22 09:49:07.349]                         advotogo-n_500: BFS: 0, Packing: 0, Heuristic: 0, Copy: 0, Red: 0, DAG: 0, Pre: 1, File: 0[0m
+[35m[2022-04-22 09:49:07.363]                        advotogo-n_5000: advotogo-n_5000 (n = 4962, m = 43776, k = 1160)[0m
+[0m[2022-04-22 09:49:07.380]                        advotogo-n_5000: Found 1 cyclic sub graph(s) with n = [335][0m
+[0m[2022-04-22 09:49:07.380]                        advotogo-n_5000: Removed 4765 nodes in preprocessing, starting with k = 1074[0m
+[0m[2022-04-22 09:49:07.381]                        advotogo-n_5000: Creating cycle packing with time limit = 5863[0m
+[0m[2022-04-22 09:49:07.386]                        advotogo-n_5000: Creating heuristic with time limit = 5863[0m
+[0m[2022-04-22 09:49:13.250]                        advotogo-n_5000: Solution lies in [86, 87][0m
+[2022-04-22 09:49:13.250]                        advotogo-n_5000: Branching with k = 86
+[31m[2022-04-22 09:49:13.262]                        advotogo-n_5000: Found solution k = 1161 in 5913 ms (recursive steps: 9)[0m
+[33m[2022-04-22 09:49:13.262]                        advotogo-n_5000: BFS: 1, Packing: 13, Heuristic: 5864, Copy: 1, Red: 1, DAG: 0, Pre: 18, File: 14[0m
+[35m[2022-04-22 09:49:13.275]                        advotogo-n_5159: advotogo-n_5159 (n = 5155, m = 47135, k = 1208)[0m
+[0m[2022-04-22 09:49:13.293]                        advotogo-n_5159: Found 1 cyclic sub graph(s) with n = [463][0m
+[0m[2022-04-22 09:49:13.294]                        advotogo-n_5159: Removed 4857 nodes in preprocessing, starting with k = 1081[0m
+[0m[2022-04-22 09:49:13.294]                        advotogo-n_5159: Creating cycle packing with time limit = 6436[0m
+[0m[2022-04-22 09:49:13.297]                        advotogo-n_5159: Creating heuristic with time limit = 6436[0m
+[0m[2022-04-22 09:49:19.734]                        advotogo-n_5159: Solution lies in [124, 127][0m
+[2022-04-22 09:49:19.734]                        advotogo-n_5159: Branching with k = 126
+[0m[2022-04-22 09:49:19.810]                        advotogo-n_5159: Found solution k = 1208 in 6548 ms (recursive steps: 173)[0m
+[33m[2022-04-22 09:49:19.810]                        advotogo-n_5159: BFS: 8, Packing: 35, Heuristic: 6437, Copy: 16, Red: 13, DAG: 4, Pre: 18, File: 13[0m
+[35m[2022-04-22 09:49:19.810]                     bitcoinalpha-n_100: bitcoinalpha-n_100 (n = 5, m = 7, k = 2)[0m
+[0m[2022-04-22 09:49:19.811]                     bitcoinalpha-n_100: Found 0 cyclic sub graph(s) with n = [][0m
+[0m[2022-04-22 09:49:19.811]                     bitcoinalpha-n_100: Removed 5 nodes in preprocessing, starting with k = 2[0m
+[0m[2022-04-22 09:49:19.811]                     bitcoinalpha-n_100: Found solution k = 2 in 1 ms (recursive steps: 0)[0m
+[33m[2022-04-22 09:49:19.811]                     bitcoinalpha-n_100: BFS: 0, Packing: 0, Heuristic: 0, Copy: 0, Red: 0, DAG: 0, Pre: 0, File: 0[0m
+[35m[2022-04-22 09:49:19.812]                    bitcoinalpha-n_1000: bitcoinalpha-n_1000 (n = 545, m = 1878, k = 136)[0m
+[0m[2022-04-22 09:49:19.813]                    bitcoinalpha-n_1000: Found 0 cyclic sub graph(s) with n = [][0m
+[0m[2022-04-22 09:49:19.813]                    bitcoinalpha-n_1000: Removed 545 nodes in preprocessing, starting with k = 136[0m
+[0m[2022-04-22 09:49:19.813]                    bitcoinalpha-n_1000: Found solution k = 136 in 1 ms (recursive steps: 0)[0m
+[33m[2022-04-22 09:49:19.814]                    bitcoinalpha-n_1000: BFS: 0, Packing: 0, Heuristic: 0, Copy: 0, Red: 0, DAG: 0, Pre: 1, File: 0[0m
+[35m[2022-04-22 09:49:19.815]                    bitcoinalpha-n_1500: bitcoinalpha-n_1500 (n = 957, m = 3890, k = 261)[0m
+[0m[2022-04-22 09:49:19.816]                    bitcoinalpha-n_1500: Found 0 cyclic sub graph(s) with n = [][0m
+[0m[2022-04-22 09:49:19.816]                    bitcoinalpha-n_1500: Removed 957 nodes in preprocessing, starting with k = 263[0m
+[31m[2022-04-22 09:49:19.817]                    bitcoinalpha-n_1500: Found solution k = 263 in 3 ms (recursive steps: 0)[0m
+[33m[2022-04-22 09:49:19.817]                    bitcoinalpha-n_1500: BFS: 0, Packing: 0, Heuristic: 0, Copy: 0, Red: 0, DAG: 0, Pre: 1, File: 1[0m
+[35m[2022-04-22 09:49:19.817]                     bitcoinalpha-n_200: bitcoinalpha-n_200 (n = 50, m = 78, k = 11)[0m
+[0m[2022-04-22 09:49:19.817]                     bitcoinalpha-n_200: Found 0 cyclic sub graph(s) with n = [][0m
+[0m[2022-04-22 09:49:19.818]                     bitcoinalpha-n_200: Removed 50 nodes in preprocessing, starting with k = 11[0m
+[0m[2022-04-22 09:49:19.818]                     bitcoinalpha-n_200: Found solution k = 11 in 1 ms (recursive steps: 0)[0m
+[33m[2022-04-22 09:49:19.818]                     bitcoinalpha-n_200: BFS: 0, Packing: 0, Heuristic: 0, Copy: 0, Red: 0, DAG: 0, Pre: 1, File: 0[0m
+[35m[2022-04-22 09:49:19.820]                    bitcoinalpha-n_2000: bitcoinalpha-n_2000 (n = 1450, m = 6295, k = 393)[0m
+[0m[2022-04-22 09:49:19.822]                    bitcoinalpha-n_2000: Found 1 cyclic sub graph(s) with n = [4][0m
+[0m[2022-04-22 09:49:19.822]                    bitcoinalpha-n_2000: Removed 1446 nodes in preprocessing, starting with k = 393[0m
+[0m[2022-04-22 09:49:19.822]                    bitcoinalpha-n_2000: Creating cycle packing with time limit = 10000[0m
+[0m[2022-04-22 09:49:19.822]                    bitcoinalpha-n_2000: Creating heuristic with time limit = 10000[0m
+[0m[2022-04-22 09:49:19.822]                    bitcoinalpha-n_2000: Solution lies in [2, 2][0m
+[31m[2022-04-22 09:49:19.823]                    bitcoinalpha-n_2000: Found solution k = 395 in 5 ms (recursive steps: 0)[0m
+[33m[2022-04-22 09:49:19.823]                    bitcoinalpha-n_2000: BFS: 0, Packing: 0, Heuristic: 0, Copy: 0, Red: 0, DAG: 0, Pre: 2, File: 2[0m
+[35m[2022-04-22 09:49:19.827]                    bitcoinalpha-n_3000: bitcoinalpha-n_3000 (n = 2659, m = 15429, k = 658)[0m
+[0m[2022-04-22 09:49:19.832]                    bitcoinalpha-n_3000: Found 1 cyclic sub graph(s) with n = [15][0m
+[0m[2022-04-22 09:49:19.832]                    bitcoinalpha-n_3000: Removed 2644 nodes in preprocessing, starting with k = 651[0m
+[0m[2022-04-22 09:49:19.832]                    bitcoinalpha-n_3000: Creating cycle packing with time limit = 10000[0m
+[0m[2022-04-22 09:49:19.833]                    bitcoinalpha-n_3000: Creating heuristic with time limit = 10000[0m
+[0m[2022-04-22 09:49:29.834]                    bitcoinalpha-n_3000: Solution lies in [7, 8][0m
+[2022-04-22 09:49:29.834]                    bitcoinalpha-n_3000: Branching with k = 7
+[31m[2022-04-22 09:49:29.835]                    bitcoinalpha-n_3000: Found solution k = 659 in 10012 ms (recursive steps: 2)[0m
+[33m[2022-04-22 09:49:29.835]                    bitcoinalpha-n_3000: BFS: 0, Packing: 1, Heuristic: 10001, Copy: 0, Red: 0, DAG: 0, Pre: 5, File: 4[0m
+[35m[2022-04-22 09:49:29.842]                    bitcoinalpha-n_3785: bitcoinalpha-n_3785 (n = 3783, m = 24186, k = 921)[0m
+[0m[2022-04-22 09:49:29.848]                    bitcoinalpha-n_3785: Found 1 cyclic sub graph(s) with n = [7][0m
+[0m[2022-04-22 09:49:29.849]                    bitcoinalpha-n_3785: Removed 3783 nodes in preprocessing, starting with k = 923[0m
+[31m[2022-04-22 09:49:29.849]                    bitcoinalpha-n_3785: Found solution k = 923 in 14 ms (recursive steps: 0)[0m
+[33m[2022-04-22 09:49:29.849]                    bitcoinalpha-n_3785: BFS: 0, Packing: 0, Heuristic: 0, Copy: 0, Red: 0, DAG: 0, Pre: 7, File: 7[0m
+[35m[2022-04-22 09:49:29.850]                      bitcoinalpha-n_50: bitcoinalpha-n_50 (n = 5, m = 5, k = 2)[0m
+[0m[2022-04-22 09:49:29.850]                      bitcoinalpha-n_50: Found 0 cyclic sub graph(s) with n = [][0m
+[0m[2022-04-22 09:49:29.850]                      bitcoinalpha-n_50: Removed 5 nodes in preprocessing, starting with k = 2[0m
+[0m[2022-04-22 09:49:29.850]                      bitcoinalpha-n_50: Found solution k = 2 in 1 ms (recursive steps: 0)[0m
+[33m[2022-04-22 09:49:29.851]                      bitcoinalpha-n_50: BFS: 0, Packing: 0, Heuristic: 0, Copy: 0, Red: 0, DAG: 0, Pre: 0, File: 1[0m
+[35m[2022-04-22 09:49:29.851]                     bitcoinalpha-n_500: bitcoinalpha-n_500 (n = 202, m = 465, k = 54)[0m
+[0m[2022-04-22 09:49:29.851]                     bitcoinalpha-n_500: Found 1 cyclic sub graph(s) with n = [5][0m
+[0m[2022-04-22 09:49:29.852]                     bitcoinalpha-n_500: Removed 197 nodes in preprocessing, starting with k = 51[0m
+[0m[2022-04-22 09:49:29.852]                     bitcoinalpha-n_500: Creating cycle packing with time limit = 10000[0m
+[0m[2022-04-22 09:49:29.852]                     bitcoinalpha-n_500: Creating heuristic with time limit = 10000[0m
+[0m[2022-04-22 09:49:39.853]                     bitcoinalpha-n_500: Solution lies in [2, 3][0m
+[2022-04-22 09:49:39.853]                     bitcoinalpha-n_500: Branching with k = 2
+[0m[2022-04-22 09:49:39.854]                     bitcoinalpha-n_500: Found solution k = 54 in 10003 ms (recursive steps: 1)[0m
+[33m[2022-04-22 09:49:39.854]                     bitcoinalpha-n_500: BFS: 0, Packing: 0, Heuristic: 10001, Copy: 0, Red: 0, DAG: 0, Pre: 1, File: 0[0m
+[35m[2022-04-22 09:49:39.855]                            blogs-n_100: blogs-n_100 (n = 67, m = 170, k = 8)[0m
+[0m[2022-04-22 09:49:39.855]                            blogs-n_100: Found 0 cyclic sub graph(s) with n = [][0m
+[0m[2022-04-22 09:49:39.856]                            blogs-n_100: Removed 67 nodes in preprocessing, starting with k = 8[0m
+[0m[2022-04-22 09:49:39.856]                            blogs-n_100: Found solution k = 8 in 2 ms (recursive steps: 0)[0m
+[33m[2022-04-22 09:49:39.856]                            blogs-n_100: BFS: 0, Packing: 0, Heuristic: 0, Copy: 0, Red: 0, DAG: 0, Pre: 1, File: 1[0m
+[35m[2022-04-22 09:49:39.861]                           blogs-n_1000: blogs-n_1000 (n = 977, m = 12749, k = 196)[0m
+[0m[2022-04-22 09:49:39.866]                           blogs-n_1000: Found 1 cyclic sub graph(s) with n = [284][0m
+[0m[2022-04-22 09:49:39.867]                           blogs-n_1000: Removed 702 nodes in preprocessing, starting with k = 91[0m
+[0m[2022-04-22 09:49:39.867]                           blogs-n_1000: Creating cycle packing with time limit = 9683[0m
+[0m[2022-04-22 09:49:39.870]                           blogs-n_1000: Creating heuristic with time limit = 9683[0m

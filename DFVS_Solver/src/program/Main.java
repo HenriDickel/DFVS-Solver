@@ -8,11 +8,9 @@ import program.model.*;
 import program.packing.Packings;
 import program.utils.*;
 import program.utils.TimeoutException;
+import program.utils.Timer;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class Main {
@@ -43,21 +41,27 @@ public class Main {
             Log.Clear();
             Log.ignore = false;
 
-            //testCorrectness();
+            testCorrectness();
+            //exportPaceData();
 
             //List<GraphFile> files = InstanceCreator.getComplexAndSyntheticFiles(Dataset.DATASET_3, null);
             //List<GraphFile> files = InstanceCreator.getSelectedFiles();
             //List<GraphFile> files = InstanceCreator.getUnsolvedFiles();
             //List<GraphFile> files = InstanceCreator.getHeuristicFiles(null);
 
-            List<GraphFile> files = InstanceCreator.getPaceFiles(null);
-            files.forEach(Main::reductionExport);
+            //List<GraphFile> files = InstanceCreator.getPaceFiles(null);
+            //files.forEach(Main::reductionExport);
             //files.forEach(Main::run);
         }
     }
 
+    private static void exportPaceData(){
+        List<GraphFile> files = InstanceCreator.getPaceFiles(null);
+        files.forEach(Main::reductionExport);
+    }
+
     private static void testCorrectness(){
-        List<GraphFile> files = InstanceCreator.getComplexAndSyntheticFiles(Dataset.DATASET_2, null);
+        List<GraphFile> files = InstanceCreator.getComplexAndSyntheticFiles(Dataset.DATASET_3, null);
         files.forEach(x -> run(x, false));
     }
 
@@ -87,16 +91,21 @@ public class Main {
         Export.ExportGraph(instance, "3_second_reduced");
 
         //
-        //int preM = instance.getCurrentM();
+        //List<String> ids = new ArrayList<>();
+        //int preN = instance.getCurrentN();
         //for(Graph graph : instance.subGraphs){
         //    for(Node node : graph.getNodes()){
-        //        Reduction.doubleEdgeRemoveNormalEdges(graph, node);
+        //        if(Reduction.supersetRemove(graph, node)){
+        //            ids.add(node.id.toString());
+        //            graph.removeNode(node.id);
+        //        }
         //    }
         //}
-        //int postM = instance.getCurrentM();
+        //int postN = instance.getCurrentN();
         //Export.ExportGraph(instance, "4_single_edge_removed");
-
-        //System.out.println(instance.NAME + ": Pre: " + preM + "\tPost: " + postM + "\t\tDiff: " + (preM - postM));
+        //Collections.sort(ids);
+        //System.out.println(String.join(", ", ids));
+        //System.out.println(instance.NAME + ": Pre: " + preN + "\tPost: " + postN + "\t\tDiff: " + (preN - postN));
     }
 
     private static void run(GraphFile file, boolean isPaceData) {
