@@ -41,8 +41,10 @@ public class Main {
             Log.Clear();
             Log.ignore = false;
 
-            testCorrectness();
-            //exportPaceData();
+            //testPaceData();
+            //testCorrectness();
+            exportPaceData();
+
 
             //List<GraphFile> files = InstanceCreator.getComplexAndSyntheticFiles(Dataset.DATASET_3, null);
             //List<GraphFile> files = InstanceCreator.getSelectedFiles();
@@ -53,6 +55,11 @@ public class Main {
             //files.forEach(Main::reductionExport);
             //files.forEach(Main::run);
         }
+    }
+
+    private static void testPaceData(){
+        List<GraphFile> files = InstanceCreator.getPaceFiles(null);
+        files.forEach(x -> run(x, true));
     }
 
     private static void exportPaceData(){

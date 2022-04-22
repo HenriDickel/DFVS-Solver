@@ -15,14 +15,20 @@ public abstract class Reduction {
         if(updateAll) graph.setAllNodesUpdated();
 
         List<Integer> reduceS = new ArrayList<>();
+
+        //Single edge remove
+        for(Node node : graph.getNodes()){
+            doubleEdgeRemoveNormalEdges(graph, node);
+        }
+
+        //Superset remove
+        reduceS.addAll(supersetCompleteRemove(graph));
+
         List<Integer> updatedNodeIds;
         while(!(updatedNodeIds = graph.getUpdatedNodeIds()).isEmpty()) {
             for(Integer id: updatedNodeIds) {
                 Node node = graph.getNode(id);
                 node.updated = false;
-
-                //Remove not needed single edges
-                doubleEdgeRemoveNormalEdges(graph, node);
 
                 if(node.getOutIdCount() == 0 || node.getInIdCount() == 0) { // trivial vertex
                     graph.removeNode(node.id);
@@ -47,12 +53,6 @@ public abstract class Reduction {
                         in.addOutId(outId);
                     }
                     graph.removeNode(node.id);
-                } else if(supersetRemove(graph, node)){
-                    reduceS.add(node.id);
-                    graph.removeNode(node.id);
-                //} else if(removeFullyConnected(graph, node)) {
-                //    reduceS.add(node.id);
-                //    graph.removeNode(node.id);
                 }
             }
         }
@@ -60,12 +60,32 @@ public abstract class Reduction {
         return reduceS;
     }
 
-    public static boolean removeFullyConnected(Graph graph, Node node){
-        if(node.getOutIdCount() == graph.getNodes().size() - 1){
-            //All others connected to this
-            return graph.getNodes().stream().allMatch(x -> Objects.equals(x.id, node.id) || x.getOutIds().contains(node.id));
+    public static List<Integer> supersetCompleteRemove(Graph graph){
+
+        //Result
+        List<Integer> result = new ArrayList<>();
+
+        //Check if update occurred
+        boolean updated = true;
+
+        //As long as something changes
+        while(updated){
+            //Reset updated
+            updated = false;
+
+            //Superset remove
+            for(Node node : graph.getNodes()){
+                if(supersetRemove(graph, node)){
+                    updated = true;
+                    result.add(node.id);
+                    graph.removeNode(node.id);
+                }
+            }
         }
-        return false;
+
+        //Return result
+        return result;
+
     }
 
     public static boolean supersetRemove(Graph graph, Node node){
