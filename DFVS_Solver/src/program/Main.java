@@ -94,6 +94,18 @@ public class Main {
         }
         Export.ExportGraph(instance, "3_second_reduced");
 
+        //Reduce with diamond rule
+        //int preN = instance.getCurrentN();
+        //for(Graph graph : instance.subGraphs){
+        //    List<Integer> reduce =  Reduction.diamondCompleteRemove(graph);
+        //    instance.S.addAll(reduce);
+        //}
+        //int postN = instance.getCurrentN();
+//
+        //System.out.println(instance.NAME + ": Pre: " + preN + "\tPost: " + postN + "\t\tDiff: " + (preN - postN));
+//
+        //Export.ExportGraph(instance, "4_second_reduced");
+
         //
         //List<String> ids = new ArrayList<>();
         //int preN = instance.getCurrentN();

@@ -41,6 +41,10 @@ public class Instance {
 
     }
 
+    public List<Node> getAllNodes(){
+        return subGraphs.stream().map(Graph::getNodes).flatMap(List::stream).collect(Collectors.toList());
+    }
+
     public int getCurrentM(){
         List<Node> nodes = subGraphs.stream().map(Graph::getNodes).flatMap(List::stream).collect(Collectors.toList());
         return getCurrentN() == 0 ? 0 : nodes.stream().map(Node::getOutIdCount).reduce(0, Integer::sum);

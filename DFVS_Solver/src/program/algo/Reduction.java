@@ -4,6 +4,7 @@ import program.model.Graph;
 import program.model.Node;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
@@ -12,17 +13,20 @@ public abstract class Reduction {
 
     public static List<Integer> applyRules(Graph graph, boolean updateAll) {
 
+        //Set updated
         if(updateAll) graph.setAllNodesUpdated();
 
+        //Result
         List<Integer> reduceS = new ArrayList<>();
 
         //Single edge remove
-        for(Node node : graph.getNodes()){
-            doubleEdgeRemoveNormalEdges(graph, node);
-        }
+        graph.getNodes().forEach(x -> doubleEdgeRemoveNormalEdges(graph, x));
 
         //Superset remove
         reduceS.addAll(supersetCompleteRemove(graph));
+
+        //Diamond
+        //reduceS.addAll(diamondCompleteRemove(graph));
 
         List<Integer> updatedNodeIds;
         while(!(updatedNodeIds = graph.getUpdatedNodeIds()).isEmpty()) {
@@ -60,7 +64,91 @@ public abstract class Reduction {
         return reduceS;
     }
 
-    public static List<Integer> supersetCompleteRemove(Graph graph){
+    private static List<Integer> diamondCompleteRemove(Graph graph){
+
+        //Result
+        List<Integer> result = new ArrayList<>();
+
+        //Get shortest cycles
+        HashMap<Integer, List<Integer>> shortestCycles = CycleUndirected.shortestCycles(graph);
+
+        //For all nodes
+        for(Node node : graph.getNodes()){
+            if(result.contains(node.id)) continue;
+
+            List<Integer> shortestCycle = shortestCycles.get(node.id);
+            List<Integer> ruleNodes = applyDiamondRule(graph, shortestCycle);
+
+            result.addAll(ruleNodes);
+
+            for(int removeNode : ruleNodes) graph.removeNode(removeNode);
+        }
+
+        //Return result
+        return result;
+
+    }
+
+    private static List<Integer> applyDiamondRule(Graph graph, List<Integer> cycleNodes){
+
+        //Result
+        List<Integer> result = new ArrayList<>();
+
+        //Check if cycle exists
+        if(cycleNodes.size() == 0) return new ArrayList<>();
+
+        //One node can be a 'bridge' to the rest of the graph
+        Node exceptionNode = null;
+
+        for(Integer nodeId : cycleNodes){
+            Node node = graph.getNode(nodeId);
+            if(!node.onlyDoubleEdges()) return new ArrayList<>();
+
+            if(node.getOutIdCount() > 2){
+                if(exceptionNode != null) return new ArrayList<>();
+                else exceptionNode = node;
+            }
+        }
+
+        //Create path
+        List<Integer> sorted = new ArrayList<>();
+
+        //Start node
+        if(exceptionNode == null) sorted.add(cycleNodes.get(0));
+        else sorted.add(exceptionNode.id);
+
+        //Sort
+        while(sorted.size() < cycleNodes.size()){
+            Node last = graph.getNode(sorted.get(sorted.size() - 1));
+            for(int connected : last.getOutIds()){
+                if(!cycleNodes.contains(connected)) continue;
+                if(!sorted.contains(connected)){
+                    sorted.add(connected);
+                    break;
+                }
+            }
+        }
+
+        //Replaceable
+        if(cycleNodes.size() % 2 == 0){
+            for(int i = 0; i < cycleNodes.size(); i+=2){
+                result.add(sorted.get(i));
+                graph.removeNode(sorted.get(i));
+            }
+        }
+
+        //Replaceable uneven (???)
+        if(cycleNodes.size() % 2 == 1){
+            for(int i = 0; i < cycleNodes.size(); i+=2){
+                result.add(sorted.get(i));
+                graph.removeNode(sorted.get(i));
+            }
+        }
+
+        return result;
+    }
+
+    private static List<Integer> supersetCompleteRemove(Graph graph){
 
         //Result
         List<Integer> result = new ArrayList<>();
@@ -88,7 +176,7 @@ public abstract class Reduction {
 
     }
 
-    public static boolean supersetRemove(Graph graph, Node node){
+    private static boolean supersetRemove(Graph graph, Node node){
 
         //Only double edges
         if(!node.onlyDoubleEdges()) return false;
@@ -114,7 +202,7 @@ public abstract class Reduction {
         return false;
     }
 
-    public static void doubleEdgeRemoveNormalEdges(Graph graph, Node node){
+    private static void doubleEdgeRemoveNormalEdges(Graph graph, Node node){
 
         //Return if not at least one double edge
         if(node.getOutIds().stream().noneMatch(x -> node.getInIds().contains(x))) return;

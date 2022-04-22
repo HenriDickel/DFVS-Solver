@@ -70,7 +70,7 @@ public abstract class LightBFS {
      * @param second node B.
      * @return cycle when found.
      */
-    private static Cycle findCycle(Node first, Node second) {
+    public static Cycle findCycle(Node first, Node second) {
 
         Node pointer = second.parent;
         Cycle cycle = new Cycle(second);
@@ -87,4 +87,5 @@ public abstract class LightBFS {
         }
         return null;
     }
+
 }
