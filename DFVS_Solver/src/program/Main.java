@@ -1,17 +1,14 @@
 package program;
 
 import program.algo.*;
-import program.heuristics.HeuristicSolver;
-import program.heuristics.Heuristics;
+import program.heuristics.Solver;
 import program.log.Log;
 import program.model.*;
-import program.packing.Packings;
 import program.utils.*;
 import program.utils.TimeoutException;
 import program.utils.Timer;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class Main {
 
@@ -29,7 +26,7 @@ public class Main {
             Instance instance = InstanceCreator.createPaceInstanceFromSystemIn();
 
             // Solve
-            HeuristicSolver.dfvsSolveInstance(instance);
+            Solver.dfvsSolveInstance(instance);
 
             // Print solution
             for(Integer nodeId : instance.S){
@@ -126,7 +123,7 @@ public class Main {
 
         try {
             Log.debugLog(instance.NAME, instance.NAME + " (n = " + instance.N + ", m = " + instance.M + ", k = " + instance.OPTIMAL_K + ")", Color.PURPLE);
-            HeuristicSolver.dfvsSolveInstance(instance);
+            Solver.dfvsSolveInstance(instance);
 
             // Verify
             instance.solvedK = instance.S.size();
@@ -139,7 +136,7 @@ public class Main {
             PerformanceTimer.printResult(instance.NAME);
 
         } catch (TimeoutException e) {
-            instance.solvedK = instance.S.size() + HeuristicSolver.currentK;
+            instance.solvedK = instance.S.size() + Solver.currentK;
 
             // Log results
             Log.debugLogAdd("", true);
