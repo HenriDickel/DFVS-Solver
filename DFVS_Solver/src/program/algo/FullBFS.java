@@ -49,22 +49,26 @@ public abstract class FullBFS {
         }
 
         // Find the cycle with the highest minInOut sum
-        int maxMinInOutSum = 0;
+        double maxMinInOutSum = 0;
         Cycle bestCycle = null;
         for(Cycle cycle : minCycles) {
-            int minInOutSum = 0;
+            double minInOutSum = 0;
             for(Node node: cycle.getNodes()) {
                 minInOutSum += node.getMinInOut();
             }
+            minInOutSum /= cycle.getNodes().size();
             if(minInOutSum > maxMinInOutSum) {
                 bestCycle = cycle;
                 maxMinInOutSum = minInOutSum;
             }
         }
 
-        // Sort nodes in cycle by minInOut
-        bestCycle.getNodes().sort(Comparator.comparing(Node::getMinInOut));
-        Collections.reverse(bestCycle.getNodes());
+        // Sort nodes in cycle
+        //bestCycle.getNodes().sort(Comparator.comparing(Node::getMinInOut));
+        //Collections.reverse(bestCycle.getNodes());
+
+        //Sort
+        bestCycle.getNodes().sort(Comparator.comparing(Node::getDoubleEdges));
 
         return bestCycle;
     }

@@ -79,6 +79,10 @@ public class Node {
         return Math.min(inIds.size(), outIds.size());
     }
 
+    public int getDoubleEdges(){
+        return (int) outIds.stream().filter(inIds::contains).count();
+    }
+
     public int getCycleCount() {
         return cycleCount;
     }

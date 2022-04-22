@@ -1,0 +1,1044 @@
+[35m[2022-04-22 16:51:04.928]                                  e_001: e_001 (n = 475, m = 651, k = -1)[0m
+[0m[2022-04-22 16:51:04.946]                                  e_001: Found 0 cyclic sub graph(s) with n = [][0m
+[0m[2022-04-22 16:51:04.948]                                  e_001: Removed 475 nodes in preprocessing, starting with k = 2[0m
+[0m[2022-04-22 16:51:04.957]                                  e_001: Found solution k = 2 in 52 ms (recursive steps: 0)[0m
+[33m[2022-04-22 16:51:04.963]                                  e_001: BFS: 0, Packing: 0, Heuristic: 0, Copy: 0, Red: 0, DAG: 0, Pre: 12, File: 6[0m
+[35m[2022-04-22 16:51:04.967]                                  e_003: e_003 (n = 1024, m = 6055, k = -1)[0m
+[0m[2022-04-22 16:51:04.985]                                  e_003: Found 12 cyclic sub graph(s) with n = [4, 4, 4, 4, 4, 8, 10, 13, 14, 15, 17, 103][0m
+[0m[2022-04-22 16:51:04.987]                                  e_003: Removed 825 nodes in preprocessing, starting with k = 567[0m
+[0m[2022-04-22 16:51:04.990]                                  e_003: Creating cycle packing with time limit = 20[0m
+[0m[2022-04-22 16:51:04.994]                                  e_003: Creating heuristic with time limit = 20[0m
+[0m[2022-04-22 16:51:04.996]                                  e_003: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:04.997]                                  e_003: Creating cycle packing with time limit = 20[0m
+[0m[2022-04-22 16:51:04.997]                                  e_003: Creating heuristic with time limit = 20[0m
+[0m[2022-04-22 16:51:04.998]                                  e_003: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:04.998]                                  e_003: Creating cycle packing with time limit = 20[0m
+[0m[2022-04-22 16:51:04.998]                                  e_003: Creating heuristic with time limit = 20[0m
+[0m[2022-04-22 16:51:04.999]                                  e_003: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:04.999]                                  e_003: Creating cycle packing with time limit = 20[0m
+[0m[2022-04-22 16:51:05.000]                                  e_003: Creating heuristic with time limit = 20[0m
+[0m[2022-04-22 16:51:05.000]                                  e_003: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:05.000]                                  e_003: Creating cycle packing with time limit = 20[0m
+[0m[2022-04-22 16:51:05.001]                                  e_003: Creating heuristic with time limit = 20[0m
+[0m[2022-04-22 16:51:05.001]                                  e_003: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:05.001]                                  e_003: Creating cycle packing with time limit = 40[0m
+[0m[2022-04-22 16:51:05.002]                                  e_003: Creating heuristic with time limit = 40[0m
+[0m[2022-04-22 16:51:05.002]                                  e_003: Solution lies in [4, 4][0m
+[0m[2022-04-22 16:51:05.003]                                  e_003: Creating cycle packing with time limit = 50[0m
+[0m[2022-04-22 16:51:05.003]                                  e_003: Creating heuristic with time limit = 50[0m
+[0m[2022-04-22 16:51:05.004]                                  e_003: Solution lies in [6, 6][0m
+[0m[2022-04-22 16:51:05.004]                                  e_003: Creating cycle packing with time limit = 65[0m
+[0m[2022-04-22 16:51:05.004]                                  e_003: Creating heuristic with time limit = 65[0m
+[0m[2022-04-22 16:51:05.005]                                  e_003: Solution lies in [7, 7][0m
+[0m[2022-04-22 16:51:05.005]                                  e_003: Creating cycle packing with time limit = 70[0m
+[0m[2022-04-22 16:51:05.006]                                  e_003: Creating heuristic with time limit = 70[0m
+[0m[2022-04-22 16:51:05.007]                                  e_003: Solution lies in [7, 7][0m
+[0m[2022-04-22 16:51:05.007]                                  e_003: Creating cycle packing with time limit = 75[0m
+[0m[2022-04-22 16:51:05.008]                                  e_003: Creating heuristic with time limit = 75[0m
+[0m[2022-04-22 16:51:05.008]                                  e_003: Solution lies in [8, 8][0m
+[0m[2022-04-22 16:51:05.009]                                  e_003: Creating cycle packing with time limit = 85[0m
+[0m[2022-04-22 16:51:05.010]                                  e_003: Creating heuristic with time limit = 85[0m
+[0m[2022-04-22 16:51:05.097]                                  e_003: Solution lies in [8, 9][0m
+[2022-04-22 16:51:05.098]                                  e_003: Branching with k = 8
+[0m[2022-04-22 16:51:05.103]                                  e_003: Creating cycle packing with time limit = 510[0m
+[0m[2022-04-22 16:51:05.106]                                  e_003: Creating heuristic with time limit = 510[0m
+[0m[2022-04-22 16:51:05.617]                                  e_003: Solution lies in [54, 56][0m
+[2022-04-22 16:51:05.617]                                  e_003: Branching with k = 55
+[0m[2022-04-22 16:51:05.624]                                  e_003: Found solution k = 674 in 660 ms (recursive steps: 11)[0m
+[33m[2022-04-22 16:51:05.624]                                  e_003: BFS: 2, Packing: 17, Heuristic: 605, Copy: 2, Red: 2, DAG: 0, Pre: 21, File: 3[0m
+[35m[2022-04-22 16:51:05.626]                                  e_005: e_005 (n = 1024, m = 5736, k = -1)[0m
+[0m[2022-04-22 16:51:05.630]                                  e_005: Found 14 cyclic sub graph(s) with n = [4, 4, 4, 4, 4, 6, 6, 13, 15, 16, 19, 25, 49, 60][0m
+[0m[2022-04-22 16:51:05.631]                                  e_005: Removed 856 nodes in preprocessing, starting with k = 539[0m
+[0m[2022-04-22 16:51:05.631]                                  e_005: Creating cycle packing with time limit = 17[0m
+[0m[2022-04-22 16:51:05.631]                                  e_005: Creating heuristic with time limit = 17[0m
+[0m[2022-04-22 16:51:05.631]                                  e_005: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:05.632]                                  e_005: Creating cycle packing with time limit = 17[0m
+[0m[2022-04-22 16:51:05.632]                                  e_005: Creating heuristic with time limit = 17[0m
+[0m[2022-04-22 16:51:05.632]                                  e_005: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:05.632]                                  e_005: Creating cycle packing with time limit = 17[0m
+[0m[2022-04-22 16:51:05.632]                                  e_005: Creating heuristic with time limit = 17[0m
+[0m[2022-04-22 16:51:05.633]                                  e_005: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:05.633]                                  e_005: Creating cycle packing with time limit = 17[0m
+[0m[2022-04-22 16:51:05.633]                                  e_005: Creating heuristic with time limit = 17[0m
+[0m[2022-04-22 16:51:05.633]                                  e_005: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:05.634]                                  e_005: Creating cycle packing with time limit = 21[0m
+[0m[2022-04-22 16:51:05.634]                                  e_005: Creating heuristic with time limit = 21[0m
+[0m[2022-04-22 16:51:05.634]                                  e_005: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:05.634]                                  e_005: Creating cycle packing with time limit = 26[0m
+[0m[2022-04-22 16:51:05.635]                                  e_005: Creating heuristic with time limit = 26[0m
+[0m[2022-04-22 16:51:05.635]                                  e_005: Solution lies in [3, 3][0m
+[0m[2022-04-22 16:51:05.635]                                  e_005: Creating cycle packing with time limit = 52[0m
+[0m[2022-04-22 16:51:05.635]                                  e_005: Creating heuristic with time limit = 52[0m
+[0m[2022-04-22 16:51:05.636]                                  e_005: Solution lies in [7, 7][0m
+[0m[2022-04-22 16:51:05.636]                                  e_005: Creating cycle packing with time limit = 65[0m
+[0m[2022-04-22 16:51:05.636]                                  e_005: Creating heuristic with time limit = 65[0m
+[0m[2022-04-22 16:51:05.636]                                  e_005: Solution lies in [8, 8][0m
+[0m[2022-04-22 16:51:05.637]                                  e_005: Creating cycle packing with time limit = 30[0m
+[0m[2022-04-22 16:51:05.637]                                  e_005: Creating heuristic with time limit = 30[0m
+[0m[2022-04-22 16:51:05.637]                                  e_005: Solution lies in [4, 4][0m
+[0m[2022-04-22 16:51:05.637]                                  e_005: Creating cycle packing with time limit = 82[0m
+[0m[2022-04-22 16:51:05.637]                                  e_005: Creating heuristic with time limit = 82[0m
+[0m[2022-04-22 16:51:05.638]                                  e_005: Solution lies in [10, 10][0m
+[0m[2022-04-22 16:51:05.638]                                  e_005: Creating cycle packing with time limit = 56[0m
+[0m[2022-04-22 16:51:05.638]                                  e_005: Creating heuristic with time limit = 56[0m
+[0m[2022-04-22 16:51:05.639]                                  e_005: Solution lies in [7, 7][0m
+[0m[2022-04-22 16:51:05.639]                                  e_005: Creating cycle packing with time limit = 96[0m
+[0m[2022-04-22 16:51:05.639]                                  e_005: Creating heuristic with time limit = 96[0m
+[0m[2022-04-22 16:51:05.736]                                  e_005: Solution lies in [11, 12][0m
+[2022-04-22 16:51:05.736]                                  e_005: Branching with k = 11
+[0m[2022-04-22 16:51:05.737]                                  e_005: Creating cycle packing with time limit = 231[0m
+[0m[2022-04-22 16:51:05.738]                                  e_005: Creating heuristic with time limit = 231[0m
+[0m[2022-04-22 16:51:05.970]                                  e_005: Solution lies in [30, 31][0m
+[2022-04-22 16:51:05.970]                                  e_005: Branching with k = 30
+[0m[2022-04-22 16:51:05.972]                                  e_005: Found solution k = 631 in 348 ms (recursive steps: 7)[0m
+[33m[2022-04-22 16:51:05.973]                                  e_005: BFS: 2, Packing: 1, Heuristic: 334, Copy: 0, Red: 0, DAG: 0, Pre: 4, File: 2[0m
+[35m[2022-04-22 16:51:05.974]                                  e_007: e_007 (n = 912, m = 4198, k = -1)[0m
+[0m[2022-04-22 16:51:05.975]                                  e_007: Found 6 cyclic sub graph(s) with n = [3, 4, 5, 5, 7, 8][0m
+[0m[2022-04-22 16:51:05.976]                                  e_007: Removed 908 nodes in preprocessing, starting with k = 274[0m
+[0m[2022-04-22 16:51:05.976]                                  e_007: Creating cycle packing with time limit = 125[0m
+[0m[2022-04-22 16:51:05.976]                                  e_007: Creating heuristic with time limit = 125[0m
+[0m[2022-04-22 16:51:05.976]                                  e_007: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:05.977]                                  e_007: Found solution k = 276 in 4 ms (recursive steps: 0)[0m
+[33m[2022-04-22 16:51:05.977]                                  e_007: BFS: 0, Packing: 0, Heuristic: 0, Copy: 0, Red: 0, DAG: 0, Pre: 2, File: 1[0m
+[35m[2022-04-22 16:51:05.979]                                  e_009: e_009 (n = 1000, m = 6804, k = -1)[0m
+[0m[2022-04-22 16:51:05.980]                                  e_009: Found 4 cyclic sub graph(s) with n = [4, 5, 5, 15][0m
+[0m[2022-04-22 16:51:05.981]                                  e_009: Removed 1000 nodes in preprocessing, starting with k = 450[0m
+[0m[2022-04-22 16:51:05.981]                                  e_009: Found solution k = 450 in 4 ms (recursive steps: 0)[0m
+[33m[2022-04-22 16:51:05.981]                                  e_009: BFS: 0, Packing: 0, Heuristic: 0, Copy: 0, Red: 0, DAG: 0, Pre: 2, File: 2[0m
+[35m[2022-04-22 16:51:05.985]                                  e_011: e_011 (n = 4086, m = 15076, k = -1)[0m
+[0m[2022-04-22 16:51:05.992]                                  e_011: Found 29 cyclic sub graph(s) with n = [3, 3, 3, 4, 4, 5, 5, 5, 5, 7, 8, 8, 9, 10, 11, 11, 17, 21, 21, 22, 22, 22, 24, 27, 31, 37, 38, 39, 57][0m
+[0m[2022-04-22 16:51:05.993]                                  e_011: Removed 3863 nodes in preprocessing, starting with k = 1804[0m
+[0m[2022-04-22 16:51:05.993]                                  e_011: Creating cycle packing with time limit = 8[0m
+[0m[2022-04-22 16:51:05.993]                                  e_011: Creating heuristic with time limit = 8[0m
+[0m[2022-04-22 16:51:05.993]                                  e_011: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:05.993]                                  e_011: Creating cycle packing with time limit = 8[0m
+[0m[2022-04-22 16:51:05.994]                                  e_011: Creating heuristic with time limit = 8[0m
+[0m[2022-04-22 16:51:05.994]                                  e_011: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:05.994]                                  e_011: Creating cycle packing with time limit = 10[0m
+[0m[2022-04-22 16:51:05.994]                                  e_011: Creating heuristic with time limit = 10[0m
+[0m[2022-04-22 16:51:06.006]                                  e_011: Solution lies in [2, 3][0m
+[2022-04-22 16:51:06.006]                                  e_011: Branching with k = 2
+[0m[2022-04-22 16:51:06.006]                                  e_011: Creating cycle packing with time limit = 10[0m
+[0m[2022-04-22 16:51:06.006]                                  e_011: Creating heuristic with time limit = 10[0m
+[0m[2022-04-22 16:51:06.018]                                  e_011: Solution lies in [2, 3][0m
+[2022-04-22 16:51:06.018]                                  e_011: Branching with k = 2
+[0m[2022-04-22 16:51:06.018]                                  e_011: Creating cycle packing with time limit = 8[0m
+[0m[2022-04-22 16:51:06.018]                                  e_011: Creating heuristic with time limit = 8[0m
+[0m[2022-04-22 16:51:06.019]                                  e_011: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:06.019]                                  e_011: Creating cycle packing with time limit = 22[0m
+[0m[2022-04-22 16:51:06.019]                                  e_011: Creating heuristic with time limit = 22[0m
+[0m[2022-04-22 16:51:06.019]                                  e_011: Solution lies in [5, 5][0m
+[0m[2022-04-22 16:51:06.020]                                  e_011: Creating cycle packing with time limit = 18[0m
+[0m[2022-04-22 16:51:06.020]                                  e_011: Creating heuristic with time limit = 18[0m
+[0m[2022-04-22 16:51:06.020]                                  e_011: Solution lies in [4, 4][0m
+[0m[2022-04-22 16:51:06.020]                                  e_011: Creating cycle packing with time limit = 29[0m
+[0m[2022-04-22 16:51:06.020]                                  e_011: Creating heuristic with time limit = 29[0m
+[0m[2022-04-22 16:51:06.021]                                  e_011: Solution lies in [7, 7][0m
+[0m[2022-04-22 16:51:06.021]                                  e_011: Creating cycle packing with time limit = 45[0m
+[0m[2022-04-22 16:51:06.021]                                  e_011: Creating heuristic with time limit = 45[0m
+[0m[2022-04-22 16:51:06.067]                                  e_011: Solution lies in [11, 12][0m
+[2022-04-22 16:51:06.067]                                  e_011: Branching with k = 11
+[0m[2022-04-22 16:51:06.068]                                  e_011: Creating cycle packing with time limit = 33[0m
+[0m[2022-04-22 16:51:06.068]                                  e_011: Creating heuristic with time limit = 33[0m
+[0m[2022-04-22 16:51:06.068]                                  e_011: Solution lies in [8, 8][0m
+[0m[2022-04-22 16:51:06.068]                                  e_011: Creating cycle packing with time limit = 45[0m
+[0m[2022-04-22 16:51:06.069]                                  e_011: Creating heuristic with time limit = 45[0m
+[0m[2022-04-22 16:51:06.069]                                  e_011: Solution lies in [10, 10][0m
+[0m[2022-04-22 16:51:06.069]                                  e_011: Creating cycle packing with time limit = 22[0m
+[0m[2022-04-22 16:51:06.069]                                  e_011: Creating heuristic with time limit = 22[0m
+[0m[2022-04-22 16:51:06.093]                                  e_011: Solution lies in [5, 6][0m
+[2022-04-22 16:51:06.093]                                  e_011: Branching with k = 5
+[0m[2022-04-22 16:51:06.093]                                  e_011: Creating cycle packing with time limit = 29[0m
+[0m[2022-04-22 16:51:06.093]                                  e_011: Creating heuristic with time limit = 29[0m
+[0m[2022-04-22 16:51:06.094]                                  e_011: Solution lies in [7, 7][0m
+[0m[2022-04-22 16:51:06.094]                                  e_011: Creating cycle packing with time limit = 18[0m
+[0m[2022-04-22 16:51:06.094]                                  e_011: Creating heuristic with time limit = 18[0m
+[0m[2022-04-22 16:51:06.113]                                  e_011: Solution lies in [4, 5][0m
+[2022-04-22 16:51:06.113]                                  e_011: Branching with k = 4
+[0m[2022-04-22 16:51:06.113]                                  e_011: Creating cycle packing with time limit = 70[0m
+[0m[2022-04-22 16:51:06.113]                                  e_011: Creating heuristic with time limit = 70[0m
+[0m[2022-04-22 16:51:06.184]                                  e_011: Solution lies in [16, 17][0m
+[2022-04-22 16:51:06.184]                                  e_011: Branching with k = 16
+[0m[2022-04-22 16:51:06.185]                                  e_011: Creating cycle packing with time limit = 56[0m
+[0m[2022-04-22 16:51:06.185]                                  e_011: Creating heuristic with time limit = 56[0m
+[0m[2022-04-22 16:51:06.242]                                  e_011: Solution lies in [13, 14][0m
+[2022-04-22 16:51:06.242]                                  e_011: Branching with k = 13
+[0m[2022-04-22 16:51:06.243]                                  e_011: Creating cycle packing with time limit = 14[0m
+[0m[2022-04-22 16:51:06.243]                                  e_011: Creating heuristic with time limit = 14[0m
+[0m[2022-04-22 16:51:06.243]                                  e_011: Solution lies in [3, 3][0m
+[0m[2022-04-22 16:51:06.243]                                  e_011: Creating cycle packing with time limit = 10[0m
+[0m[2022-04-22 16:51:06.243]                                  e_011: Creating heuristic with time limit = 10[0m
+[0m[2022-04-22 16:51:06.255]                                  e_011: Solution lies in [2, 3][0m
+[2022-04-22 16:51:06.255]                                  e_011: Branching with k = 2
+[0m[2022-04-22 16:51:06.255]                                  e_011: Found solution k = 1917 in 274 ms (recursive steps: 14)[0m
+[33m[2022-04-22 16:51:06.255]                                  e_011: BFS: 0, Packing: 3, Heuristic: 256, Copy: 0, Red: 1, DAG: 1, Pre: 7, File: 4[0m
+[35m[2022-04-22 16:51:06.258]                                  e_013: e_013 (n = 1924, m = 7038, k = -1)[0m
+[0m[2022-04-22 16:51:06.261]                                  e_013: Found 38 cyclic sub graph(s) with n = [3, 3, 4, 4, 4, 5, 5, 5, 6, 6, 7, 7, 8, 8, 8, 9, 9, 10, 10, 10, 10, 10, 11, 11, 11, 11, 12, 12, 13, 14, 15, 15, 15, 17, 22, 33, 43, 48][0m
+[0m[2022-04-22 16:51:06.262]                                  e_013: Removed 1593 nodes in preprocessing, starting with k = 376[0m
+[0m[2022-04-22 16:51:06.262]                                  e_013: Creating cycle packing with time limit = 8[0m
+[0m[2022-04-22 16:51:06.262]                                  e_013: Creating heuristic with time limit = 8[0m
+[0m[2022-04-22 16:51:06.262]                                  e_013: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:06.262]                                  e_013: Creating cycle packing with time limit = 8[0m
+[0m[2022-04-22 16:51:06.263]                                  e_013: Creating heuristic with time limit = 8[0m
+[0m[2022-04-22 16:51:06.263]                                  e_013: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:06.263]                                  e_013: Creating cycle packing with time limit = 8[0m
+[0m[2022-04-22 16:51:06.263]                                  e_013: Creating heuristic with time limit = 8[0m
+[0m[2022-04-22 16:51:06.263]                                  e_013: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:06.264]                                  e_013: Creating cycle packing with time limit = 11[0m
+[0m[2022-04-22 16:51:06.264]                                  e_013: Creating heuristic with time limit = 11[0m
+[0m[2022-04-22 16:51:06.276]                                  e_013: Solution lies in [2, 3][0m
+[2022-04-22 16:51:06.276]                                  e_013: Branching with k = 2
+[0m[2022-04-22 16:51:06.276]                                  e_013: Creating cycle packing with time limit = 13[0m
+[0m[2022-04-22 16:51:06.276]                                  e_013: Creating heuristic with time limit = 13[0m
+[0m[2022-04-22 16:51:06.277]                                  e_013: Solution lies in [3, 3][0m
+[0m[2022-04-22 16:51:06.277]                                  e_013: Creating cycle packing with time limit = 11[0m
+[0m[2022-04-22 16:51:06.277]                                  e_013: Creating heuristic with time limit = 11[0m
+[0m[2022-04-22 16:51:06.277]                                  e_013: Solution lies in [3, 3][0m
+[0m[2022-04-22 16:51:06.277]                                  e_013: Creating cycle packing with time limit = 15[0m
+[0m[2022-04-22 16:51:06.278]                                  e_013: Creating heuristic with time limit = 15[0m
+[0m[2022-04-22 16:51:06.278]                                  e_013: Solution lies in [3, 3][0m
+[0m[2022-04-22 16:51:06.278]                                  e_013: Creating cycle packing with time limit = 17[0m
+[0m[2022-04-22 16:51:06.278]                                  e_013: Creating heuristic with time limit = 17[0m
+[0m[2022-04-22 16:51:06.278]                                  e_013: Solution lies in [4, 4][0m
+[0m[2022-04-22 16:51:06.279]                                  e_013: Creating cycle packing with time limit = 19[0m
+[0m[2022-04-22 16:51:06.279]                                  e_013: Creating heuristic with time limit = 19[0m
+[0m[2022-04-22 16:51:06.279]                                  e_013: Solution lies in [4, 4][0m
+[0m[2022-04-22 16:51:06.279]                                  e_013: Creating cycle packing with time limit = 13[0m
+[0m[2022-04-22 16:51:06.279]                                  e_013: Creating heuristic with time limit = 13[0m
+[0m[2022-04-22 16:51:06.280]                                  e_013: Solution lies in [3, 3][0m
+[0m[2022-04-22 16:51:06.280]                                  e_013: Creating cycle packing with time limit = 22[0m
+[0m[2022-04-22 16:51:06.280]                                  e_013: Creating heuristic with time limit = 22[0m
+[0m[2022-04-22 16:51:06.303]                                  e_013: Solution lies in [4, 5][0m
+[2022-04-22 16:51:06.303]                                  e_013: Branching with k = 4
+[0m[2022-04-22 16:51:06.303]                                  e_013: Creating cycle packing with time limit = 22[0m
+[0m[2022-04-22 16:51:06.304]                                  e_013: Creating heuristic with time limit = 22[0m
+[0m[2022-04-22 16:51:06.327]                                  e_013: Solution lies in [5, 6][0m
+[2022-04-22 16:51:06.327]                                  e_013: Branching with k = 5
+[0m[2022-04-22 16:51:06.327]                                  e_013: Creating cycle packing with time limit = 15[0m
+[0m[2022-04-22 16:51:06.328]                                  e_013: Creating heuristic with time limit = 15[0m
+[0m[2022-04-22 16:51:06.328]                                  e_013: Solution lies in [4, 4][0m
+[0m[2022-04-22 16:51:06.328]                                  e_013: Creating cycle packing with time limit = 22[0m
+[0m[2022-04-22 16:51:06.328]                                  e_013: Creating heuristic with time limit = 22[0m
+[0m[2022-04-22 16:51:06.328]                                  e_013: Solution lies in [5, 5][0m
+[0m[2022-04-22 16:51:06.329]                                  e_013: Creating cycle packing with time limit = 22[0m
+[0m[2022-04-22 16:51:06.329]                                  e_013: Creating heuristic with time limit = 22[0m
+[0m[2022-04-22 16:51:06.352]                                  e_013: Solution lies in [4, 5][0m
+[2022-04-22 16:51:06.352]                                  e_013: Branching with k = 4
+[0m[2022-04-22 16:51:06.352]                                  e_013: Creating cycle packing with time limit = 24[0m
+[0m[2022-04-22 16:51:06.352]                                  e_013: Creating heuristic with time limit = 24[0m
+[0m[2022-04-22 16:51:06.353]                                  e_013: Solution lies in [6, 6][0m
+[0m[2022-04-22 16:51:06.353]                                  e_013: Creating cycle packing with time limit = 24[0m
+[0m[2022-04-22 16:51:06.353]                                  e_013: Creating heuristic with time limit = 24[0m
+[0m[2022-04-22 16:51:06.353]                                  e_013: Solution lies in [6, 6][0m
+[0m[2022-04-22 16:51:06.354]                                  e_013: Creating cycle packing with time limit = 13[0m
+[0m[2022-04-22 16:51:06.354]                                  e_013: Creating heuristic with time limit = 13[0m
+[0m[2022-04-22 16:51:06.354]                                  e_013: Solution lies in [3, 3][0m
+[0m[2022-04-22 16:51:06.354]                                  e_013: Creating cycle packing with time limit = 26[0m
+[0m[2022-04-22 16:51:06.354]                                  e_013: Creating heuristic with time limit = 26[0m
+[0m[2022-04-22 16:51:06.381]                                  e_013: Solution lies in [5, 6][0m
+[2022-04-22 16:51:06.381]                                  e_013: Branching with k = 5
+[0m[2022-04-22 16:51:06.381]                                  e_013: Creating cycle packing with time limit = 26[0m
+[0m[2022-04-22 16:51:06.381]                                  e_013: Creating heuristic with time limit = 26[0m
+[0m[2022-04-22 16:51:06.409]                                  e_013: Solution lies in [6, 7][0m
+[2022-04-22 16:51:06.409]                                  e_013: Branching with k = 6
+[0m[2022-04-22 16:51:06.409]                                  e_013: Creating cycle packing with time limit = 13[0m
+[0m[2022-04-22 16:51:06.410]                                  e_013: Creating heuristic with time limit = 13[0m
+[0m[2022-04-22 16:51:06.410]                                  e_013: Solution lies in [3, 3][0m
+[0m[2022-04-22 16:51:06.410]                                  e_013: Creating cycle packing with time limit = 22[0m
+[0m[2022-04-22 16:51:06.410]                                  e_013: Creating heuristic with time limit = 22[0m
+[0m[2022-04-22 16:51:06.411]                                  e_013: Solution lies in [5, 5][0m
+[0m[2022-04-22 16:51:06.411]                                  e_013: Creating cycle packing with time limit = 33[0m
+[0m[2022-04-22 16:51:06.411]                                  e_013: Creating heuristic with time limit = 33[0m
+[0m[2022-04-22 16:51:06.411]                                  e_013: Solution lies in [7, 7][0m
+[0m[2022-04-22 16:51:06.411]                                  e_013: Creating cycle packing with time limit = 33[0m
+[0m[2022-04-22 16:51:06.412]                                  e_013: Creating heuristic with time limit = 33[0m
+[0m[2022-04-22 16:51:06.412]                                  e_013: Solution lies in [7, 7][0m
+[0m[2022-04-22 16:51:06.412]                                  e_013: Creating cycle packing with time limit = 28[0m
+[0m[2022-04-22 16:51:06.412]                                  e_013: Creating heuristic with time limit = 28[0m
+[0m[2022-04-22 16:51:06.413]                                  e_013: Solution lies in [7, 7][0m
+[0m[2022-04-22 16:51:06.413]                                  e_013: Creating cycle packing with time limit = 39[0m
+[0m[2022-04-22 16:51:06.413]                                  e_013: Creating heuristic with time limit = 39[0m
+[0m[2022-04-22 16:51:06.414]                                  e_013: Solution lies in [10, 10][0m
+[0m[2022-04-22 16:51:06.414]                                  e_013: Creating cycle packing with time limit = 57[0m
+[0m[2022-04-22 16:51:06.414]                                  e_013: Creating heuristic with time limit = 57[0m
+[0m[2022-04-22 16:51:06.472]                                  e_013: Solution lies in [13, 15][0m
+[2022-04-22 16:51:06.472]                                  e_013: Branching with k = 14
+[0m[2022-04-22 16:51:06.474]                                  e_013: Creating cycle packing with time limit = 72[0m
+[0m[2022-04-22 16:51:06.474]                                  e_013: Creating heuristic with time limit = 72[0m
+[0m[2022-04-22 16:51:06.547]                                  e_013: Solution lies in [15, 16][0m
+[2022-04-22 16:51:06.547]                                  e_013: Branching with k = 15
+[0m[2022-04-22 16:51:06.548]                                  e_013: Creating cycle packing with time limit = 83[0m
+[0m[2022-04-22 16:51:06.548]                                  e_013: Creating heuristic with time limit = 83[0m
+[0m[2022-04-22 16:51:06.548]                                  e_013: Solution lies in [19, 19][0m
+[0m[2022-04-22 16:51:06.549]                                  e_013: Found solution k = 547 in 294 ms (recursive steps: 28)[0m
+[33m[2022-04-22 16:51:06.549]                                  e_013: BFS: 1, Packing: 7, Heuristic: 273, Copy: 1, Red: 0, DAG: 0, Pre: 3, File: 3[0m
+[35m[2022-04-22 16:51:06.551]                                  e_015: e_015 (n = 1979, m = 9390, k = -1)[0m
+[0m[2022-04-22 16:51:06.554]                                  e_015: Found 47 cyclic sub graph(s) with n = [3, 3, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 8, 8, 8, 8, 8, 8, 8, 8, 8, 9, 9, 9, 10, 10, 10, 10, 10, 11, 13, 13, 14, 21, 21, 22, 24, 27, 41, 54][0m
+[0m[2022-04-22 16:51:06.554]                                  e_015: Removed 1749 nodes in preprocessing, starting with k = 667[0m
+[0m[2022-04-22 16:51:06.555]                                  e_015: Creating cycle packing with time limit = 7[0m
+[0m[2022-04-22 16:51:06.555]                                  e_015: Creating heuristic with time limit = 7[0m
+[0m[2022-04-22 16:51:06.555]                                  e_015: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:06.555]                                  e_015: Creating cycle packing with time limit = 7[0m
+[0m[2022-04-22 16:51:06.555]                                  e_015: Creating heuristic with time limit = 7[0m
+[0m[2022-04-22 16:51:06.556]                                  e_015: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:06.556]                                  e_015: Creating cycle packing with time limit = 7[0m
+[0m[2022-04-22 16:51:06.556]                                  e_015: Creating heuristic with time limit = 7[0m
+[0m[2022-04-22 16:51:06.556]                                  e_015: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:06.556]                                  e_015: Creating cycle packing with time limit = 7[0m
+[0m[2022-04-22 16:51:06.556]                                  e_015: Creating heuristic with time limit = 7[0m
+[0m[2022-04-22 16:51:06.557]                                  e_015: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:06.557]                                  e_015: Creating cycle packing with time limit = 9[0m
+[0m[2022-04-22 16:51:06.557]                                  e_015: Creating heuristic with time limit = 9[0m
+[0m[2022-04-22 16:51:06.557]                                  e_015: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:06.557]                                  e_015: Creating cycle packing with time limit = 7[0m
+[0m[2022-04-22 16:51:06.558]                                  e_015: Creating heuristic with time limit = 7[0m
+[0m[2022-04-22 16:51:06.558]                                  e_015: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:06.558]                                  e_015: Creating cycle packing with time limit = 11[0m
+[0m[2022-04-22 16:51:06.558]                                  e_015: Creating heuristic with time limit = 11[0m
+[0m[2022-04-22 16:51:06.558]                                  e_015: Solution lies in [3, 3][0m
+[0m[2022-04-22 16:51:06.558]                                  e_015: Creating cycle packing with time limit = 11[0m
+[0m[2022-04-22 16:51:06.559]                                  e_015: Creating heuristic with time limit = 11[0m
+[0m[2022-04-22 16:51:06.559]                                  e_015: Solution lies in [3, 3][0m
+[0m[2022-04-22 16:51:06.559]                                  e_015: Creating cycle packing with time limit = 15[0m
+[0m[2022-04-22 16:51:06.559]                                  e_015: Creating heuristic with time limit = 15[0m
+[0m[2022-04-22 16:51:06.575]                                  e_015: Solution lies in [4, 5][0m
+[2022-04-22 16:51:06.575]                                  e_015: Branching with k = 4
+[0m[2022-04-22 16:51:06.575]                                  e_015: Creating cycle packing with time limit = 13[0m
+[0m[2022-04-22 16:51:06.575]                                  e_015: Creating heuristic with time limit = 13[0m
+[0m[2022-04-22 16:51:06.575]                                  e_015: Solution lies in [4, 4][0m
+[0m[2022-04-22 16:51:06.576]                                  e_015: Creating cycle packing with time limit = 9[0m
+[0m[2022-04-22 16:51:06.576]                                  e_015: Creating heuristic with time limit = 9[0m
+[0m[2022-04-22 16:51:06.576]                                  e_015: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:06.576]                                  e_015: Creating cycle packing with time limit = 9[0m
+[0m[2022-04-22 16:51:06.576]                                  e_015: Creating heuristic with time limit = 9[0m
+[0m[2022-04-22 16:51:06.576]                                  e_015: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:06.577]                                  e_015: Creating cycle packing with time limit = 7[0m
+[0m[2022-04-22 16:51:06.577]                                  e_015: Creating heuristic with time limit = 7[0m
+[0m[2022-04-22 16:51:06.577]                                  e_015: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:06.577]                                  e_015: Creating cycle packing with time limit = 17[0m
+[0m[2022-04-22 16:51:06.577]                                  e_015: Creating heuristic with time limit = 17[0m
+[0m[2022-04-22 16:51:06.578]                                  e_015: Solution lies in [4, 4][0m
+[0m[2022-04-22 16:51:06.578]                                  e_015: Creating cycle packing with time limit = 13[0m
+[0m[2022-04-22 16:51:06.578]                                  e_015: Creating heuristic with time limit = 13[0m
+[0m[2022-04-22 16:51:06.578]                                  e_015: Solution lies in [3, 3][0m
+[0m[2022-04-22 16:51:06.578]                                  e_015: Creating cycle packing with time limit = 13[0m
+[0m[2022-04-22 16:51:06.578]                                  e_015: Creating heuristic with time limit = 13[0m
+[0m[2022-04-22 16:51:06.579]                                  e_015: Solution lies in [3, 3][0m
+[0m[2022-04-22 16:51:06.579]                                  e_015: Creating cycle packing with time limit = 9[0m
+[0m[2022-04-22 16:51:06.579]                                  e_015: Creating heuristic with time limit = 9[0m
+[0m[2022-04-22 16:51:06.589]                                  e_015: Solution lies in [2, 3][0m
+[2022-04-22 16:51:06.589]                                  e_015: Branching with k = 2
+[0m[2022-04-22 16:51:06.589]                                  e_015: Creating cycle packing with time limit = 17[0m
+[0m[2022-04-22 16:51:06.589]                                  e_015: Creating heuristic with time limit = 17[0m
+[0m[2022-04-22 16:51:06.589]                                  e_015: Solution lies in [4, 4][0m
+[0m[2022-04-22 16:51:06.590]                                  e_015: Creating cycle packing with time limit = 7[0m
+[0m[2022-04-22 16:51:06.590]                                  e_015: Creating heuristic with time limit = 7[0m
+[0m[2022-04-22 16:51:06.590]                                  e_015: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:06.590]                                  e_015: Creating cycle packing with time limit = 15[0m
+[0m[2022-04-22 16:51:06.590]                                  e_015: Creating heuristic with time limit = 15[0m
+[0m[2022-04-22 16:51:06.590]                                  e_015: Solution lies in [5, 5][0m
+[0m[2022-04-22 16:51:06.591]                                  e_015: Creating cycle packing with time limit = 19[0m
+[0m[2022-04-22 16:51:06.591]                                  e_015: Creating heuristic with time limit = 19[0m
+[0m[2022-04-22 16:51:06.591]                                  e_015: Solution lies in [6, 6][0m
+[0m[2022-04-22 16:51:06.591]                                  e_015: Creating cycle packing with time limit = 17[0m
+[0m[2022-04-22 16:51:06.591]                                  e_015: Creating heuristic with time limit = 17[0m
+[0m[2022-04-22 16:51:06.591]                                  e_015: Solution lies in [5, 5][0m
+[0m[2022-04-22 16:51:06.592]                                  e_015: Creating cycle packing with time limit = 35[0m
+[0m[2022-04-22 16:51:06.592]                                  e_015: Creating heuristic with time limit = 35[0m
+[0m[2022-04-22 16:51:06.628]                                  e_015: Solution lies in [9, 10][0m
+[2022-04-22 16:51:06.628]                                  e_015: Branching with k = 9
+[0m[2022-04-22 16:51:06.628]                                  e_015: Creating cycle packing with time limit = 75[0m
+[0m[2022-04-22 16:51:06.629]                                  e_015: Creating heuristic with time limit = 75[0m
+[0m[2022-04-22 16:51:06.629]                                  e_015: Solution lies in [22, 22][0m
+[0m[2022-04-22 16:51:06.629]                                  e_015: Creating cycle packing with time limit = 79[0m
+[0m[2022-04-22 16:51:06.630]                                  e_015: Creating heuristic with time limit = 79[0m
+[0m[2022-04-22 16:51:06.630]                                  e_015: Solution lies in [21, 21][0m
+[0m[2022-04-22 16:51:06.630]                                  e_015: Found solution k = 788 in 81 ms (recursive steps: 8)[0m
+[33m[2022-04-22 16:51:06.630]                                  e_015: BFS: 0, Packing: 4, Heuristic: 65, Copy: 0, Red: 0, DAG: 0, Pre: 4, File: 2[0m
+[35m[2022-04-22 16:51:06.631]                                  e_017: e_017 (n = 886, m = 3800, k = -1)[0m
+[0m[2022-04-22 16:51:06.632]                                  e_017: Found 1 cyclic sub graph(s) with n = [5][0m
+[0m[2022-04-22 16:51:06.632]                                  e_017: Removed 886 nodes in preprocessing, starting with k = 364[0m
+[0m[2022-04-22 16:51:06.633]                                  e_017: Found solution k = 364 in 3 ms (recursive steps: 0)[0m
+[33m[2022-04-22 16:51:06.633]                                  e_017: BFS: 0, Packing: 0, Heuristic: 0, Copy: 0, Red: 0, DAG: 0, Pre: 1, File: 1[0m
+[35m[2022-04-22 16:51:06.635]                                  e_019: e_019 (n = 2034, m = 11718, k = -1)[0m
+[0m[2022-04-22 16:51:06.638]                                  e_019: Found 61 cyclic sub graph(s) with n = [3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7, 8, 8, 8, 8, 8, 9, 9, 9, 10, 10, 10, 10, 11, 11, 11, 11, 13, 13, 13, 13, 14, 14, 16, 16, 17, 19, 20, 20, 20, 22, 23, 23, 26][0m
+[0m[2022-04-22 16:51:06.639]                                  e_019: Removed 1776 nodes in preprocessing, starting with k = 1001[0m
+[0m[2022-04-22 16:51:06.639]                                  e_019: Creating cycle packing with time limit = 6[0m
+[0m[2022-04-22 16:51:06.639]                                  e_019: Creating heuristic with time limit = 6[0m
+[0m[2022-04-22 16:51:06.639]                                  e_019: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:06.640]                                  e_019: Creating cycle packing with time limit = 6[0m
+[0m[2022-04-22 16:51:06.640]                                  e_019: Creating heuristic with time limit = 6[0m
+[0m[2022-04-22 16:51:06.640]                                  e_019: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:06.640]                                  e_019: Creating cycle packing with time limit = 6[0m
+[0m[2022-04-22 16:51:06.640]                                  e_019: Creating heuristic with time limit = 6[0m
+[0m[2022-04-22 16:51:06.640]                                  e_019: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:06.641]                                  e_019: Creating cycle packing with time limit = 6[0m
+[0m[2022-04-22 16:51:06.641]                                  e_019: Creating heuristic with time limit = 6[0m
+[0m[2022-04-22 16:51:06.641]                                  e_019: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:06.641]                                  e_019: Creating cycle packing with time limit = 6[0m
+[0m[2022-04-22 16:51:06.641]                                  e_019: Creating heuristic with time limit = 6[0m
+[0m[2022-04-22 16:51:06.642]                                  e_019: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:06.642]                                  e_019: Creating cycle packing with time limit = 6[0m
+[0m[2022-04-22 16:51:06.642]                                  e_019: Creating heuristic with time limit = 6[0m
+[0m[2022-04-22 16:51:06.642]                                  e_019: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:06.642]                                  e_019: Creating cycle packing with time limit = 6[0m
+[0m[2022-04-22 16:51:06.642]                                  e_019: Creating heuristic with time limit = 6[0m
+[0m[2022-04-22 16:51:06.643]                                  e_019: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:06.643]                                  e_019: Creating cycle packing with time limit = 6[0m
+[0m[2022-04-22 16:51:06.643]                                  e_019: Creating heuristic with time limit = 6[0m
+[0m[2022-04-22 16:51:06.643]                                  e_019: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:06.643]                                  e_019: Creating cycle packing with time limit = 6[0m
+[0m[2022-04-22 16:51:06.644]                                  e_019: Creating heuristic with time limit = 6[0m
+[0m[2022-04-22 16:51:06.644]                                  e_019: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:06.644]                                  e_019: Creating cycle packing with time limit = 6[0m
+[0m[2022-04-22 16:51:06.644]                                  e_019: Creating heuristic with time limit = 6[0m
+[0m[2022-04-22 16:51:06.644]                                  e_019: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:06.644]                                  e_019: Creating cycle packing with time limit = 6[0m
+[0m[2022-04-22 16:51:06.645]                                  e_019: Creating heuristic with time limit = 6[0m
+[0m[2022-04-22 16:51:06.645]                                  e_019: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:06.645]                                  e_019: Creating cycle packing with time limit = 6[0m
+[0m[2022-04-22 16:51:06.645]                                  e_019: Creating heuristic with time limit = 6[0m
+[0m[2022-04-22 16:51:06.645]                                  e_019: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:06.645]                                  e_019: Creating cycle packing with time limit = 8[0m
+[0m[2022-04-22 16:51:06.646]                                  e_019: Creating heuristic with time limit = 8[0m
+[0m[2022-04-22 16:51:06.646]                                  e_019: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:06.646]                                  e_019: Creating cycle packing with time limit = 6[0m
+[0m[2022-04-22 16:51:06.646]                                  e_019: Creating heuristic with time limit = 6[0m
+[0m[2022-04-22 16:51:06.653]                                  e_019: Solution lies in [1, 2][0m
+[2022-04-22 16:51:06.653]                                  e_019: Branching with k = 1
+[0m[2022-04-22 16:51:06.653]                                  e_019: Creating cycle packing with time limit = 10[0m
+[0m[2022-04-22 16:51:06.653]                                  e_019: Creating heuristic with time limit = 10[0m
+[0m[2022-04-22 16:51:06.653]                                  e_019: Solution lies in [3, 3][0m
+[0m[2022-04-22 16:51:06.654]                                  e_019: Creating cycle packing with time limit = 8[0m
+[0m[2022-04-22 16:51:06.654]                                  e_019: Creating heuristic with time limit = 8[0m
+[0m[2022-04-22 16:51:06.663]                                  e_019: Solution lies in [2, 3][0m
+[2022-04-22 16:51:06.663]                                  e_019: Branching with k = 2
+[0m[2022-04-22 16:51:06.663]                                  e_019: Creating cycle packing with time limit = 11[0m
+[0m[2022-04-22 16:51:06.663]                                  e_019: Creating heuristic with time limit = 11[0m
+[0m[2022-04-22 16:51:06.663]                                  e_019: Solution lies in [4, 4][0m
+[0m[2022-04-22 16:51:06.664]                                  e_019: Creating cycle packing with time limit = 13[0m
+[0m[2022-04-22 16:51:06.664]                                  e_019: Creating heuristic with time limit = 13[0m
+[0m[2022-04-22 16:51:06.664]                                  e_019: Solution lies in [4, 4][0m
+[0m[2022-04-22 16:51:06.664]                                  e_019: Creating cycle packing with time limit = 8[0m
+[0m[2022-04-22 16:51:06.664]                                  e_019: Creating heuristic with time limit = 8[0m
+[0m[2022-04-22 16:51:06.664]                                  e_019: Solution lies in [3, 3][0m
+[0m[2022-04-22 16:51:06.665]                                  e_019: Creating cycle packing with time limit = 13[0m
+[0m[2022-04-22 16:51:06.665]                                  e_019: Creating heuristic with time limit = 13[0m
+[0m[2022-04-22 16:51:06.665]                                  e_019: Solution lies in [4, 4][0m
+[0m[2022-04-22 16:51:06.665]                                  e_019: Creating cycle packing with time limit = 8[0m
+[0m[2022-04-22 16:51:06.665]                                  e_019: Creating heuristic with time limit = 8[0m
+[0m[2022-04-22 16:51:06.674]                                  e_019: Solution lies in [2, 3][0m
+[2022-04-22 16:51:06.674]                                  e_019: Branching with k = 2
+[0m[2022-04-22 16:51:06.674]                                  e_019: Creating cycle packing with time limit = 11[0m
+[0m[2022-04-22 16:51:06.674]                                  e_019: Creating heuristic with time limit = 11[0m
+[0m[2022-04-22 16:51:06.686]                                  e_019: Solution lies in [3, 4][0m
+[2022-04-22 16:51:06.686]                                  e_019: Branching with k = 3
+[0m[2022-04-22 16:51:06.686]                                  e_019: Creating cycle packing with time limit = 15[0m
+[0m[2022-04-22 16:51:06.686]                                  e_019: Creating heuristic with time limit = 15[0m
+[0m[2022-04-22 16:51:06.686]                                  e_019: Solution lies in [5, 5][0m
+[0m[2022-04-22 16:51:06.687]                                  e_019: Creating cycle packing with time limit = 10[0m
+[0m[2022-04-22 16:51:06.687]                                  e_019: Creating heuristic with time limit = 10[0m
+[0m[2022-04-22 16:51:06.687]                                  e_019: Solution lies in [3, 3][0m
+[0m[2022-04-22 16:51:06.687]                                  e_019: Creating cycle packing with time limit = 18[0m
+[0m[2022-04-22 16:51:06.687]                                  e_019: Creating heuristic with time limit = 18[0m
+[0m[2022-04-22 16:51:06.687]                                  e_019: Solution lies in [5, 5][0m
+[0m[2022-04-22 16:51:06.688]                                  e_019: Creating cycle packing with time limit = 17[0m
+[0m[2022-04-22 16:51:06.688]                                  e_019: Creating heuristic with time limit = 17[0m
+[0m[2022-04-22 16:51:06.688]                                  e_019: Solution lies in [5, 5][0m
+[0m[2022-04-22 16:51:06.688]                                  e_019: Creating cycle packing with time limit = 11[0m
+[0m[2022-04-22 16:51:06.688]                                  e_019: Creating heuristic with time limit = 11[0m
+[0m[2022-04-22 16:51:06.688]                                  e_019: Solution lies in [3, 3][0m
+[0m[2022-04-22 16:51:06.689]                                  e_019: Creating cycle packing with time limit = 18[0m
+[0m[2022-04-22 16:51:06.689]                                  e_019: Creating heuristic with time limit = 18[0m
+[0m[2022-04-22 16:51:06.708]                                  e_019: Solution lies in [6, 7][0m
+[2022-04-22 16:51:06.708]                                  e_019: Branching with k = 6
+[0m[2022-04-22 16:51:06.708]                                  e_019: Creating cycle packing with time limit = 6[0m
+[0m[2022-04-22 16:51:06.708]                                  e_019: Creating heuristic with time limit = 6[0m
+[0m[2022-04-22 16:51:06.709]                                  e_019: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:06.709]                                  e_019: Creating cycle packing with time limit = 8[0m
+[0m[2022-04-22 16:51:06.709]                                  e_019: Creating heuristic with time limit = 8[0m
+[0m[2022-04-22 16:51:06.709]                                  e_019: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:06.709]                                  e_019: Creating cycle packing with time limit = 27[0m
+[0m[2022-04-22 16:51:06.709]                                  e_019: Creating heuristic with time limit = 27[0m
+[0m[2022-04-22 16:51:06.710]                                  e_019: Solution lies in [8, 8][0m
+[0m[2022-04-22 16:51:06.710]                                  e_019: Creating cycle packing with time limit = 18[0m
+[0m[2022-04-22 16:51:06.710]                                  e_019: Creating heuristic with time limit = 18[0m
+[0m[2022-04-22 16:51:06.710]                                  e_019: Solution lies in [7, 7][0m
+[0m[2022-04-22 16:51:06.710]                                  e_019: Creating cycle packing with time limit = 5[0m
+[0m[2022-04-22 16:51:06.710]                                  e_019: Creating heuristic with time limit = 5[0m
+[0m[2022-04-22 16:51:06.711]                                  e_019: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:06.711]                                  e_019: Creating cycle packing with time limit = 6[0m
+[0m[2022-04-22 16:51:06.711]                                  e_019: Creating heuristic with time limit = 6[0m
+[0m[2022-04-22 16:51:06.711]                                  e_019: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:06.711]                                  e_019: Creating cycle packing with time limit = 27[0m
+[0m[2022-04-22 16:51:06.711]                                  e_019: Creating heuristic with time limit = 27[0m
+[0m[2022-04-22 16:51:06.740]                                  e_019: Solution lies in [8, 9][0m
+[2022-04-22 16:51:06.740]                                  e_019: Branching with k = 8
+[0m[2022-04-22 16:51:06.740]                                  e_019: Creating cycle packing with time limit = 6[0m
+[0m[2022-04-22 16:51:06.741]                                  e_019: Creating heuristic with time limit = 6[0m
+[0m[2022-04-22 16:51:06.741]                                  e_019: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:06.741]                                  e_019: Creating cycle packing with time limit = 13[0m
+[0m[2022-04-22 16:51:06.741]                                  e_019: Creating heuristic with time limit = 13[0m
+[0m[2022-04-22 16:51:06.741]                                  e_019: Solution lies in [4, 4][0m
+[0m[2022-04-22 16:51:06.741]                                  e_019: Creating cycle packing with time limit = 35[0m
+[0m[2022-04-22 16:51:06.742]                                  e_019: Creating heuristic with time limit = 35[0m
+[0m[2022-04-22 16:51:06.778]                                  e_019: Solution lies in [11, 12][0m
+[2022-04-22 16:51:06.778]                                  e_019: Branching with k = 11
+[0m[2022-04-22 16:51:06.779]                                  e_019: Creating cycle packing with time limit = 6[0m
+[0m[2022-04-22 16:51:06.779]                                  e_019: Creating heuristic with time limit = 6[0m
+[0m[2022-04-22 16:51:06.779]                                  e_019: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:06.779]                                  e_019: Found solution k = 1137 in 146 ms (recursive steps: 15)[0m
+[33m[2022-04-22 16:51:06.779]                                  e_019: BFS: 0, Packing: 5, Heuristic: 126, Copy: 0, Red: 1, DAG: 0, Pre: 4, File: 2[0m
+[35m[2022-04-22 16:51:06.780]                                  e_021: e_021 (n = 1872, m = 6147, k = -1)[0m
+[0m[2022-04-22 16:51:06.782]                                  e_021: Found 44 cyclic sub graph(s) with n = [3, 3, 3, 4, 4, 4, 5, 5, 5, 5, 5, 5, 6, 6, 6, 6, 6, 6, 7, 7, 7, 7, 7, 7, 7, 8, 8, 8, 9, 10, 11, 11, 11, 12, 12, 12, 12, 13, 13, 15, 17, 22, 25, 26][0m
+[0m[2022-04-22 16:51:06.783]                                  e_021: Removed 1663 nodes in preprocessing, starting with k = 399[0m
+[0m[2022-04-22 16:51:06.783]                                  e_021: Creating cycle packing with time limit = 10[0m
+[0m[2022-04-22 16:51:06.783]                                  e_021: Creating heuristic with time limit = 10[0m
+[0m[2022-04-22 16:51:06.783]                                  e_021: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:06.783]                                  e_021: Creating cycle packing with time limit = 10[0m
+[0m[2022-04-22 16:51:06.784]                                  e_021: Creating heuristic with time limit = 10[0m
+[0m[2022-04-22 16:51:06.784]                                  e_021: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:06.784]                                  e_021: Creating cycle packing with time limit = 10[0m
+[0m[2022-04-22 16:51:06.784]                                  e_021: Creating heuristic with time limit = 10[0m
+[0m[2022-04-22 16:51:06.795]                                  e_021: Solution lies in [1, 2][0m
+[2022-04-22 16:51:06.795]                                  e_021: Branching with k = 1
+[0m[2022-04-22 16:51:06.795]                                  e_021: Creating cycle packing with time limit = 12[0m
+[0m[2022-04-22 16:51:06.795]                                  e_021: Creating heuristic with time limit = 12[0m
+[0m[2022-04-22 16:51:06.808]                                  e_021: Solution lies in [2, 3][0m
+[2022-04-22 16:51:06.808]                                  e_021: Branching with k = 2
+[0m[2022-04-22 16:51:06.808]                                  e_021: Creating cycle packing with time limit = 12[0m
+[0m[2022-04-22 16:51:06.808]                                  e_021: Creating heuristic with time limit = 12[0m
+[0m[2022-04-22 16:51:06.821]                                  e_021: Solution lies in [2, 3][0m
+[2022-04-22 16:51:06.821]                                  e_021: Branching with k = 2
+[0m[2022-04-22 16:51:06.821]                                  e_021: Creating cycle packing with time limit = 12[0m
+[0m[2022-04-22 16:51:06.821]                                  e_021: Creating heuristic with time limit = 12[0m
+[0m[2022-04-22 16:51:06.821]                                  e_021: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:06.822]                                  e_021: Creating cycle packing with time limit = 10[0m
+[0m[2022-04-22 16:51:06.822]                                  e_021: Creating heuristic with time limit = 10[0m
+[0m[2022-04-22 16:51:06.822]                                  e_021: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:06.822]                                  e_021: Creating cycle packing with time limit = 15[0m
+[0m[2022-04-22 16:51:06.822]                                  e_021: Creating heuristic with time limit = 15[0m
+[0m[2022-04-22 16:51:06.838]                                  e_021: Solution lies in [2, 3][0m
+[2022-04-22 16:51:06.838]                                  e_021: Branching with k = 2
+[0m[2022-04-22 16:51:06.838]                                  e_021: Creating cycle packing with time limit = 15[0m
+[0m[2022-04-22 16:51:06.838]                                  e_021: Creating heuristic with time limit = 15[0m
+[0m[2022-04-22 16:51:06.838]                                  e_021: Solution lies in [3, 3][0m
+[0m[2022-04-22 16:51:06.839]                                  e_021: Creating cycle packing with time limit = 12[0m
+[0m[2022-04-22 16:51:06.839]                                  e_021: Creating heuristic with time limit = 12[0m
+[0m[2022-04-22 16:51:06.852]                                  e_021: Solution lies in [2, 3][0m
+[2022-04-22 16:51:06.852]                                  e_021: Branching with k = 2
+[0m[2022-04-22 16:51:06.852]                                  e_021: Creating cycle packing with time limit = 15[0m
+[0m[2022-04-22 16:51:06.852]                                  e_021: Creating heuristic with time limit = 15[0m
+[0m[2022-04-22 16:51:06.868]                                  e_021: Solution lies in [2, 3][0m
+[2022-04-22 16:51:06.868]                                  e_021: Branching with k = 2
+[0m[2022-04-22 16:51:06.868]                                  e_021: Creating cycle packing with time limit = 17[0m
+[0m[2022-04-22 16:51:06.868]                                  e_021: Creating heuristic with time limit = 17[0m
+[0m[2022-04-22 16:51:06.868]                                  e_021: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:06.869]                                  e_021: Creating cycle packing with time limit = 17[0m
+[0m[2022-04-22 16:51:06.869]                                  e_021: Creating heuristic with time limit = 17[0m
+[0m[2022-04-22 16:51:06.887]                                  e_021: Solution lies in [3, 4][0m
+[2022-04-22 16:51:06.887]                                  e_021: Branching with k = 3
+[0m[2022-04-22 16:51:06.887]                                  e_021: Creating cycle packing with time limit = 17[0m
+[0m[2022-04-22 16:51:06.887]                                  e_021: Creating heuristic with time limit = 17[0m
+[0m[2022-04-22 16:51:06.905]                                  e_021: Solution lies in [3, 4][0m
+[2022-04-22 16:51:06.905]                                  e_021: Branching with k = 3
+[0m[2022-04-22 16:51:06.905]                                  e_021: Creating cycle packing with time limit = 12[0m
+[0m[2022-04-22 16:51:06.905]                                  e_021: Creating heuristic with time limit = 12[0m
+[0m[2022-04-22 16:51:06.919]                                  e_021: Solution lies in [2, 3][0m
+[2022-04-22 16:51:06.919]                                  e_021: Branching with k = 2
+[0m[2022-04-22 16:51:06.919]                                  e_021: Creating cycle packing with time limit = 17[0m
+[0m[2022-04-22 16:51:06.919]                                  e_021: Creating heuristic with time limit = 17[0m
+[0m[2022-04-22 16:51:06.937]                                  e_021: Solution lies in [3, 4][0m
+[2022-04-22 16:51:06.937]                                  e_021: Branching with k = 3
+[0m[2022-04-22 16:51:06.937]                                  e_021: Creating cycle packing with time limit = 20[0m
+[0m[2022-04-22 16:51:06.937]                                  e_021: Creating heuristic with time limit = 20[0m
+[0m[2022-04-22 16:51:06.937]                                  e_021: Solution lies in [4, 4][0m
+[0m[2022-04-22 16:51:06.938]                                  e_021: Creating cycle packing with time limit = 20[0m
+[0m[2022-04-22 16:51:06.938]                                  e_021: Creating heuristic with time limit = 20[0m
+[0m[2022-04-22 16:51:06.938]                                  e_021: Solution lies in [4, 4][0m
+[0m[2022-04-22 16:51:06.938]                                  e_021: Creating cycle packing with time limit = 15[0m
+[0m[2022-04-22 16:51:06.938]                                  e_021: Creating heuristic with time limit = 15[0m
+[0m[2022-04-22 16:51:06.938]                                  e_021: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:06.939]                                  e_021: Creating cycle packing with time limit = 12[0m
+[0m[2022-04-22 16:51:06.939]                                  e_021: Creating heuristic with time limit = 12[0m
+[0m[2022-04-22 16:51:06.939]                                  e_021: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:06.939]                                  e_021: Creating cycle packing with time limit = 25[0m
+[0m[2022-04-22 16:51:06.939]                                  e_021: Creating heuristic with time limit = 25[0m
+[0m[2022-04-22 16:51:06.939]                                  e_021: Solution lies in [6, 6][0m
+[0m[2022-04-22 16:51:06.939]                                  e_021: Creating cycle packing with time limit = 20[0m
+[0m[2022-04-22 16:51:06.940]                                  e_021: Creating heuristic with time limit = 20[0m
+[0m[2022-04-22 16:51:06.940]                                  e_021: Solution lies in [4, 4][0m
+[0m[2022-04-22 16:51:06.940]                                  e_021: Creating cycle packing with time limit = 30[0m
+[0m[2022-04-22 16:51:06.940]                                  e_021: Creating heuristic with time limit = 30[0m
+[0m[2022-04-22 16:51:06.971]                                  e_021: Solution lies in [6, 7][0m
+[2022-04-22 16:51:06.971]                                  e_021: Branching with k = 6
+[0m[2022-04-22 16:51:06.971]                                  e_021: Creating cycle packing with time limit = 7[0m
+[0m[2022-04-22 16:51:06.971]                                  e_021: Creating heuristic with time limit = 7[0m
+[0m[2022-04-22 16:51:06.971]                                  e_021: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:06.972]                                  e_021: Creating cycle packing with time limit = 33[0m
+[0m[2022-04-22 16:51:06.972]                                  e_021: Creating heuristic with time limit = 33[0m
+[0m[2022-04-22 16:51:07.006]                                  e_021: Solution lies in [7, 8][0m
+[2022-04-22 16:51:07.006]                                  e_021: Branching with k = 7
+[0m[2022-04-22 16:51:07.007]                                  e_021: Creating cycle packing with time limit = 38[0m
+[0m[2022-04-22 16:51:07.007]                                  e_021: Creating heuristic with time limit = 38[0m
+[0m[2022-04-22 16:51:07.046]                                  e_021: Solution lies in [8, 9][0m
+[2022-04-22 16:51:07.046]                                  e_021: Branching with k = 8
+[0m[2022-04-22 16:51:07.046]                                  e_021: Creating cycle packing with time limit = 43[0m
+[0m[2022-04-22 16:51:07.046]                                  e_021: Creating heuristic with time limit = 43[0m
+[0m[2022-04-22 16:51:07.091]                                  e_021: Solution lies in [8, 9][0m
+[2022-04-22 16:51:07.091]                                  e_021: Branching with k = 8
+[0m[2022-04-22 16:51:07.091]                                  e_021: Creating cycle packing with time limit = 35[0m
+[0m[2022-04-22 16:51:07.091]                                  e_021: Creating heuristic with time limit = 35[0m
+[0m[2022-04-22 16:51:07.092]                                  e_021: Solution lies in [7, 7][0m
+[0m[2022-04-22 16:51:07.092]                                  e_021: Creating cycle packing with time limit = 7[0m
+[0m[2022-04-22 16:51:07.092]                                  e_021: Creating heuristic with time limit = 7[0m
+[0m[2022-04-22 16:51:07.092]                                  e_021: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:07.092]                                  e_021: Found solution k = 510 in 312 ms (recursive steps: 28)[0m
+[33m[2022-04-22 16:51:07.093]                                  e_021: BFS: 0, Packing: 3, Heuristic: 300, Copy: 0, Red: 0, DAG: 0, Pre: 2, File: 0[0m
+[35m[2022-04-22 16:51:07.094]                                  e_023: e_023 (n = 1600, m = 5400, k = -1)[0m
+[0m[2022-04-22 16:51:07.095]                                  e_023: Found 3 cyclic sub graph(s) with n = [3, 4, 4][0m
+[0m[2022-04-22 16:51:07.095]                                  e_023: Removed 1596 nodes in preprocessing, starting with k = 450[0m
+[0m[2022-04-22 16:51:07.096]                                  e_023: Creating cycle packing with time limit = 363[0m
+[0m[2022-04-22 16:51:07.096]                                  e_023: Creating heuristic with time limit = 363[0m
+[0m[2022-04-22 16:51:07.096]                                  e_023: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:07.096]                                  e_023: Found solution k = 452 in 3 ms (recursive steps: 0)[0m
+[33m[2022-04-22 16:51:07.096]                                  e_023: BFS: 0, Packing: 0, Heuristic: 0, Copy: 0, Red: 0, DAG: 0, Pre: 2, File: 1[0m
+[35m[2022-04-22 16:51:07.097]                                  e_025: e_025 (n = 860, m = 2802, k = -1)[0m
+[0m[2022-04-22 16:51:07.098]                                  e_025: Found 0 cyclic sub graph(s) with n = [][0m
+[0m[2022-04-22 16:51:07.098]                                  e_025: Removed 860 nodes in preprocessing, starting with k = 273[0m
+[0m[2022-04-22 16:51:07.098]                                  e_025: Found solution k = 273 in 1 ms (recursive steps: 0)[0m
+[33m[2022-04-22 16:51:07.098]                                  e_025: BFS: 0, Packing: 0, Heuristic: 0, Copy: 0, Red: 0, DAG: 0, Pre: 1, File: 0[0m
+[35m[2022-04-22 16:51:07.100]                                  e_027: e_027 (n = 1899, m = 9406, k = -1)[0m
+[0m[2022-04-22 16:51:07.102]                                  e_027: Found 2 cyclic sub graph(s) with n = [3, 5][0m
+[0m[2022-04-22 16:51:07.103]                                  e_027: Removed 1899 nodes in preprocessing, starting with k = 575[0m
+[0m[2022-04-22 16:51:07.103]                                  e_027: Found solution k = 575 in 4 ms (recursive steps: 0)[0m
+[33m[2022-04-22 16:51:07.103]                                  e_027: BFS: 0, Packing: 0, Heuristic: 0, Copy: 0, Red: 0, DAG: 0, Pre: 2, File: 1[0m
+[35m[2022-04-22 16:51:07.105]                                  e_029: e_029 (n = 1938, m = 11302, k = -1)[0m
+[0m[2022-04-22 16:51:07.107]                                  e_029: Found 7 cyclic sub graph(s) with n = [4, 4, 4, 4, 4, 5, 9][0m
+[0m[2022-04-22 16:51:07.107]                                  e_029: Removed 1922 nodes in preprocessing, starting with k = 707[0m
+[0m[2022-04-22 16:51:07.108]                                  e_029: Creating cycle packing with time limit = 117[0m
+[0m[2022-04-22 16:51:07.108]                                  e_029: Creating heuristic with time limit = 117[0m
+[0m[2022-04-22 16:51:07.108]                                  e_029: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:07.108]                                  e_029: Creating cycle packing with time limit = 117[0m
+[0m[2022-04-22 16:51:07.108]                                  e_029: Creating heuristic with time limit = 117[0m
+[0m[2022-04-22 16:51:07.108]                                  e_029: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:07.108]                                  e_029: Creating cycle packing with time limit = 117[0m
+[0m[2022-04-22 16:51:07.109]                                  e_029: Creating heuristic with time limit = 117[0m
+[0m[2022-04-22 16:51:07.109]                                  e_029: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:07.109]                                  e_029: Creating cycle packing with time limit = 117[0m
+[0m[2022-04-22 16:51:07.109]                                  e_029: Creating heuristic with time limit = 117[0m
+[0m[2022-04-22 16:51:07.109]                                  e_029: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:07.110]                                  e_029: Found solution k = 715 in 7 ms (recursive steps: 0)[0m
+[33m[2022-04-22 16:51:07.110]                                  e_029: BFS: 0, Packing: 1, Heuristic: 0, Copy: 0, Red: 0, DAG: 0, Pre: 3, File: 2[0m
+[35m[2022-04-22 16:51:07.113]                                  e_031: e_031 (n = 4053, m = 26071, k = -1)[0m
+[0m[2022-04-22 16:51:07.119]                                  e_031: Found 94 cyclic sub graph(s) with n = [3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7, 7, 7, 7, 7, 8, 8, 8, 8, 8, 8, 8, 9, 9, 9, 9, 9, 9, 9, 10, 10, 10, 11, 11, 11, 12, 12, 12, 12, 13, 13, 13, 14, 15, 16, 18, 18, 19, 19, 20, 23, 23, 24, 25, 29, 34, 34, 39, 47, 52, 53, 61][0m
+[0m[2022-04-22 16:51:07.120]                                  e_031: Removed 3705 nodes in preprocessing, starting with k = 1899[0m
+[0m[2022-04-22 16:51:07.121]                                  e_031: Creating cycle packing with time limit = 3[0m
+[0m[2022-04-22 16:51:07.121]                                  e_031: Creating heuristic with time limit = 3[0m
+[0m[2022-04-22 16:51:07.121]                                  e_031: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:07.121]                                  e_031: Creating cycle packing with time limit = 3[0m
+[0m[2022-04-22 16:51:07.121]                                  e_031: Creating heuristic with time limit = 3[0m
+[0m[2022-04-22 16:51:07.125]                                  e_031: Solution lies in [1, 2][0m
+[2022-04-22 16:51:07.125]                                  e_031: Branching with k = 1
+[0m[2022-04-22 16:51:07.125]                                  e_031: Creating cycle packing with time limit = 3[0m
+[0m[2022-04-22 16:51:07.125]                                  e_031: Creating heuristic with time limit = 3[0m
+[0m[2022-04-22 16:51:07.125]                                  e_031: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:07.125]                                  e_031: Creating cycle packing with time limit = 3[0m
+[0m[2022-04-22 16:51:07.125]                                  e_031: Creating heuristic with time limit = 3[0m
+[0m[2022-04-22 16:51:07.126]                                  e_031: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:07.126]                                  e_031: Creating cycle packing with time limit = 3[0m
+[0m[2022-04-22 16:51:07.126]                                  e_031: Creating heuristic with time limit = 3[0m
+[0m[2022-04-22 16:51:07.126]                                  e_031: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:07.126]                                  e_031: Creating cycle packing with time limit = 3[0m
+[0m[2022-04-22 16:51:07.126]                                  e_031: Creating heuristic with time limit = 3[0m
+[0m[2022-04-22 16:51:07.127]                                  e_031: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:07.127]                                  e_031: Creating cycle packing with time limit = 4[0m
+[0m[2022-04-22 16:51:07.127]                                  e_031: Creating heuristic with time limit = 4[0m
+[0m[2022-04-22 16:51:07.127]                                  e_031: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:07.127]                                  e_031: Creating cycle packing with time limit = 3[0m
+[0m[2022-04-22 16:51:07.127]                                  e_031: Creating heuristic with time limit = 3[0m
+[0m[2022-04-22 16:51:07.128]                                  e_031: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:07.128]                                  e_031: Creating cycle packing with time limit = 3[0m
+[0m[2022-04-22 16:51:07.128]                                  e_031: Creating heuristic with time limit = 3[0m
+[0m[2022-04-22 16:51:07.128]                                  e_031: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:07.128]                                  e_031: Creating cycle packing with time limit = 3[0m
+[0m[2022-04-22 16:51:07.128]                                  e_031: Creating heuristic with time limit = 3[0m
+[0m[2022-04-22 16:51:07.129]                                  e_031: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:07.129]                                  e_031: Creating cycle packing with time limit = 4[0m
+[0m[2022-04-22 16:51:07.129]                                  e_031: Creating heuristic with time limit = 4[0m
+[0m[2022-04-22 16:51:07.134]                                  e_031: Solution lies in [2, 3][0m
+[2022-04-22 16:51:07.134]                                  e_031: Branching with k = 2
+[0m[2022-04-22 16:51:07.134]                                  e_031: Creating cycle packing with time limit = 3[0m
+[0m[2022-04-22 16:51:07.134]                                  e_031: Creating heuristic with time limit = 3[0m
+[0m[2022-04-22 16:51:07.134]                                  e_031: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:07.134]                                  e_031: Creating cycle packing with time limit = 4[0m
+[0m[2022-04-22 16:51:07.135]                                  e_031: Creating heuristic with time limit = 4[0m
+[0m[2022-04-22 16:51:07.135]                                  e_031: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:07.135]                                  e_031: Creating cycle packing with time limit = 4[0m
+[0m[2022-04-22 16:51:07.135]                                  e_031: Creating heuristic with time limit = 4[0m
+[0m[2022-04-22 16:51:07.135]                                  e_031: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:07.135]                                  e_031: Creating cycle packing with time limit = 4[0m
+[0m[2022-04-22 16:51:07.135]                                  e_031: Creating heuristic with time limit = 4[0m
+[0m[2022-04-22 16:51:07.136]                                  e_031: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:07.136]                                  e_031: Creating cycle packing with time limit = 4[0m
+[0m[2022-04-22 16:51:07.136]                                  e_031: Creating heuristic with time limit = 4[0m
+[0m[2022-04-22 16:51:07.141]                                  e_031: Solution lies in [2, 3][0m
+[2022-04-22 16:51:07.141]                                  e_031: Branching with k = 2
+[0m[2022-04-22 16:51:07.141]                                  e_031: Creating cycle packing with time limit = 5[0m
+[0m[2022-04-22 16:51:07.141]                                  e_031: Creating heuristic with time limit = 5[0m
+[0m[2022-04-22 16:51:07.141]                                  e_031: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:07.142]                                  e_031: Creating cycle packing with time limit = 4[0m
+[0m[2022-04-22 16:51:07.142]                                  e_031: Creating heuristic with time limit = 4[0m
+[0m[2022-04-22 16:51:07.147]                                  e_031: Solution lies in [2, 3][0m
+[2022-04-22 16:51:07.147]                                  e_031: Branching with k = 2
+[0m[2022-04-22 16:51:07.147]                                  e_031: Creating cycle packing with time limit = 3[0m
+[0m[2022-04-22 16:51:07.147]                                  e_031: Creating heuristic with time limit = 3[0m
+[0m[2022-04-22 16:51:07.147]                                  e_031: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:07.147]                                  e_031: Creating cycle packing with time limit = 4[0m
+[0m[2022-04-22 16:51:07.148]                                  e_031: Creating heuristic with time limit = 4[0m
+[0m[2022-04-22 16:51:07.148]                                  e_031: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:07.148]                                  e_031: Creating cycle packing with time limit = 4[0m
+[0m[2022-04-22 16:51:07.148]                                  e_031: Creating heuristic with time limit = 4[0m
+[0m[2022-04-22 16:51:07.153]                                  e_031: Solution lies in [2, 3][0m
+[2022-04-22 16:51:07.153]                                  e_031: Branching with k = 2
+[0m[2022-04-22 16:51:07.153]                                  e_031: Creating cycle packing with time limit = 3[0m
+[0m[2022-04-22 16:51:07.153]                                  e_031: Creating heuristic with time limit = 3[0m
+[0m[2022-04-22 16:51:07.153]                                  e_031: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:07.153]                                  e_031: Creating cycle packing with time limit = 4[0m
+[0m[2022-04-22 16:51:07.153]                                  e_031: Creating heuristic with time limit = 4[0m
+[0m[2022-04-22 16:51:07.159]                                  e_031: Solution lies in [2, 3][0m
+[2022-04-22 16:51:07.159]                                  e_031: Branching with k = 2
+[0m[2022-04-22 16:51:07.159]                                  e_031: Creating cycle packing with time limit = 6[0m
+[0m[2022-04-22 16:51:07.159]                                  e_031: Creating heuristic with time limit = 6[0m
+[0m[2022-04-22 16:51:07.166]                                  e_031: Solution lies in [4, 5][0m
+[2022-04-22 16:51:07.166]                                  e_031: Branching with k = 4
+[0m[2022-04-22 16:51:07.166]                                  e_031: Creating cycle packing with time limit = 7[0m
+[0m[2022-04-22 16:51:07.166]                                  e_031: Creating heuristic with time limit = 7[0m
+[0m[2022-04-22 16:51:07.166]                                  e_031: Solution lies in [4, 4][0m
+[0m[2022-04-22 16:51:07.167]                                  e_031: Creating cycle packing with time limit = 4[0m
+[0m[2022-04-22 16:51:07.167]                                  e_031: Creating heuristic with time limit = 4[0m
+[0m[2022-04-22 16:51:07.167]                                  e_031: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:07.167]                                  e_031: Creating cycle packing with time limit = 7[0m
+[0m[2022-04-22 16:51:07.167]                                  e_031: Creating heuristic with time limit = 7[0m
+[0m[2022-04-22 16:51:07.167]                                  e_031: Solution lies in [4, 4][0m
+[0m[2022-04-22 16:51:07.168]                                  e_031: Creating cycle packing with time limit = 3[0m
+[0m[2022-04-22 16:51:07.168]                                  e_031: Creating heuristic with time limit = 3[0m
+[0m[2022-04-22 16:51:07.168]                                  e_031: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:07.168]                                  e_031: Creating cycle packing with time limit = 4[0m
+[0m[2022-04-22 16:51:07.168]                                  e_031: Creating heuristic with time limit = 4[0m
+[0m[2022-04-22 16:51:07.173]                                  e_031: Solution lies in [2, 3][0m
+[2022-04-22 16:51:07.173]                                  e_031: Branching with k = 2
+[0m[2022-04-22 16:51:07.173]                                  e_031: Creating cycle packing with time limit = 6[0m
+[0m[2022-04-22 16:51:07.173]                                  e_031: Creating heuristic with time limit = 6[0m
+[0m[2022-04-22 16:51:07.173]                                  e_031: Solution lies in [4, 4][0m
+[0m[2022-04-22 16:51:07.173]                                  e_031: Creating cycle packing with time limit = 4[0m
+[0m[2022-04-22 16:51:07.174]                                  e_031: Creating heuristic with time limit = 4[0m
+[0m[2022-04-22 16:51:07.174]                                  e_031: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:07.174]                                  e_031: Creating cycle packing with time limit = 5[0m
+[0m[2022-04-22 16:51:07.174]                                  e_031: Creating heuristic with time limit = 5[0m
+[0m[2022-04-22 16:51:07.174]                                  e_031: Solution lies in [3, 3][0m
+[0m[2022-04-22 16:51:07.174]                                  e_031: Creating cycle packing with time limit = 7[0m
+[0m[2022-04-22 16:51:07.175]                                  e_031: Creating heuristic with time limit = 7[0m
+[0m[2022-04-22 16:51:07.175]                                  e_031: Solution lies in [5, 5][0m
+[0m[2022-04-22 16:51:07.175]                                  e_031: Creating cycle packing with time limit = 7[0m
+[0m[2022-04-22 16:51:07.175]                                  e_031: Creating heuristic with time limit = 7[0m
+[0m[2022-04-22 16:51:07.175]                                  e_031: Solution lies in [3, 3][0m
+[0m[2022-04-22 16:51:07.175]                                  e_031: Creating cycle packing with time limit = 9[0m
+[0m[2022-04-22 16:51:07.176]                                  e_031: Creating heuristic with time limit = 9[0m
+[0m[2022-04-22 16:51:07.186]                                  e_031: Solution lies in [6, 7][0m
+[2022-04-22 16:51:07.186]                                  e_031: Branching with k = 6
+[0m[2022-04-22 16:51:07.186]                                  e_031: Creating cycle packing with time limit = 7[0m
+[0m[2022-04-22 16:51:07.186]                                  e_031: Creating heuristic with time limit = 7[0m
+[0m[2022-04-22 16:51:07.187]                                  e_031: Solution lies in [4, 4][0m
+[0m[2022-04-22 16:51:07.187]                                  e_031: Creating cycle packing with time limit = 7[0m
+[0m[2022-04-22 16:51:07.187]                                  e_031: Creating heuristic with time limit = 7[0m
+[0m[2022-04-22 16:51:07.187]                                  e_031: Solution lies in [4, 4][0m
+[0m[2022-04-22 16:51:07.187]                                  e_031: Creating cycle packing with time limit = 7[0m
+[0m[2022-04-22 16:51:07.188]                                  e_031: Creating heuristic with time limit = 7[0m
+[0m[2022-04-22 16:51:07.188]                                  e_031: Solution lies in [4, 4][0m
+[0m[2022-04-22 16:51:07.188]                                  e_031: Creating cycle packing with time limit = 3[0m
+[0m[2022-04-22 16:51:07.188]                                  e_031: Creating heuristic with time limit = 3[0m
+[0m[2022-04-22 16:51:07.188]                                  e_031: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:07.189]                                  e_031: Creating cycle packing with time limit = 12[0m
+[0m[2022-04-22 16:51:07.189]                                  e_031: Creating heuristic with time limit = 12[0m
+[0m[2022-04-22 16:51:07.189]                                  e_031: Solution lies in [8, 8][0m
+[0m[2022-04-22 16:51:07.189]                                  e_031: Creating cycle packing with time limit = 15[0m
+[0m[2022-04-22 16:51:07.189]                                  e_031: Creating heuristic with time limit = 15[0m
+[0m[2022-04-22 16:51:07.190]                                  e_031: Solution lies in [9, 9][0m
+[0m[2022-04-22 16:51:07.190]                                  e_031: Creating cycle packing with time limit = 5[0m
+[0m[2022-04-22 16:51:07.190]                                  e_031: Creating heuristic with time limit = 5[0m
+[0m[2022-04-22 16:51:07.190]                                  e_031: Solution lies in [3, 3][0m
+[0m[2022-04-22 16:51:07.190]                                  e_031: Creating cycle packing with time limit = 3[0m
+[0m[2022-04-22 16:51:07.191]                                  e_031: Creating heuristic with time limit = 3[0m
+[0m[2022-04-22 16:51:07.191]                                  e_031: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:07.191]                                  e_031: Creating cycle packing with time limit = 8[0m
+[0m[2022-04-22 16:51:07.191]                                  e_031: Creating heuristic with time limit = 8[0m
+[0m[2022-04-22 16:51:07.191]                                  e_031: Solution lies in [5, 5][0m
+[0m[2022-04-22 16:51:07.191]                                  e_031: Creating cycle packing with time limit = 7[0m
+[0m[2022-04-22 16:51:07.192]                                  e_031: Creating heuristic with time limit = 7[0m
+[0m[2022-04-22 16:51:07.192]                                  e_031: Solution lies in [4, 4][0m
+[0m[2022-04-22 16:51:07.192]                                  e_031: Creating cycle packing with time limit = 4[0m
+[0m[2022-04-22 16:51:07.192]                                  e_031: Creating heuristic with time limit = 4[0m
+[0m[2022-04-22 16:51:07.192]                                  e_031: Solution lies in [3, 3][0m
+[0m[2022-04-22 16:51:07.193]                                  e_031: Creating cycle packing with time limit = 21[0m
+[0m[2022-04-22 16:51:07.193]                                  e_031: Creating heuristic with time limit = 21[0m
+[0m[2022-04-22 16:51:07.193]                                  e_031: Solution lies in [12, 12][0m
+[0m[2022-04-22 16:51:07.193]                                  e_031: Creating cycle packing with time limit = 9[0m
+[0m[2022-04-22 16:51:07.193]                                  e_031: Creating heuristic with time limit = 9[0m
+[0m[2022-04-22 16:51:07.193]                                  e_031: Solution lies in [5, 5][0m
+[0m[2022-04-22 16:51:07.194]                                  e_031: Creating cycle packing with time limit = 7[0m
+[0m[2022-04-22 16:51:07.194]                                  e_031: Creating heuristic with time limit = 7[0m
+[0m[2022-04-22 16:51:07.194]                                  e_031: Solution lies in [4, 4][0m
+[0m[2022-04-22 16:51:07.194]                                  e_031: Creating cycle packing with time limit = 11[0m
+[0m[2022-04-22 16:51:07.194]                                  e_031: Creating heuristic with time limit = 11[0m
+[0m[2022-04-22 16:51:07.195]                                  e_031: Solution lies in [6, 6][0m
+[0m[2022-04-22 16:51:07.195]                                  e_031: Creating cycle packing with time limit = 17[0m
+[0m[2022-04-22 16:51:07.195]                                  e_031: Creating heuristic with time limit = 17[0m
+[0m[2022-04-22 16:51:07.195]                                  e_031: Solution lies in [10, 10][0m
+[0m[2022-04-22 16:51:07.195]                                  e_031: Found solution k = 2079 in 85 ms (recursive steps: 15)[0m
+[33m[2022-04-22 16:51:07.196]                                  e_031: BFS: 0, Packing: 9, Heuristic: 60, Copy: 0, Red: 0, DAG: 0, Pre: 8, File: 3[0m
+[35m[2022-04-22 16:51:07.197]                                  e_033: e_033 (n = 850, m = 2010, k = -1)[0m
+[0m[2022-04-22 16:51:07.197]                                  e_033: Found 6 cyclic sub graph(s) with n = [4, 4, 4, 4, 4, 8][0m
+[0m[2022-04-22 16:51:07.198]                                  e_033: Removed 822 nodes in preprocessing, starting with k = 263[0m
+[0m[2022-04-22 16:51:07.198]                                  e_033: Creating cycle packing with time limit = 142[0m
+[0m[2022-04-22 16:51:07.198]                                  e_033: Creating heuristic with time limit = 142[0m
+[0m[2022-04-22 16:51:07.198]                                  e_033: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:07.198]                                  e_033: Creating cycle packing with time limit = 142[0m
+[0m[2022-04-22 16:51:07.198]                                  e_033: Creating heuristic with time limit = 142[0m
+[0m[2022-04-22 16:51:07.198]                                  e_033: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:07.199]                                  e_033: Creating cycle packing with time limit = 142[0m
+[0m[2022-04-22 16:51:07.199]                                  e_033: Creating heuristic with time limit = 142[0m
+[0m[2022-04-22 16:51:07.199]                                  e_033: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:07.199]                                  e_033: Creating cycle packing with time limit = 142[0m
+[0m[2022-04-22 16:51:07.199]                                  e_033: Creating heuristic with time limit = 142[0m
+[0m[2022-04-22 16:51:07.199]                                  e_033: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:07.200]                                  e_033: Creating cycle packing with time limit = 142[0m
+[0m[2022-04-22 16:51:07.200]                                  e_033: Creating heuristic with time limit = 142[0m
+[0m[2022-04-22 16:51:07.200]                                  e_033: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:07.200]                                  e_033: Creating cycle packing with time limit = 285[0m
+[0m[2022-04-22 16:51:07.200]                                  e_033: Creating heuristic with time limit = 285[0m
+[0m[2022-04-22 16:51:07.200]                                  e_033: Solution lies in [4, 4][0m
+[0m[2022-04-22 16:51:07.201]                                  e_033: Found solution k = 277 in 5 ms (recursive steps: 0)[0m
+[33m[2022-04-22 16:51:07.201]                                  e_033: BFS: 0, Packing: 0, Heuristic: 0, Copy: 0, Red: 0, DAG: 0, Pre: 1, File: 1[0m
+[35m[2022-04-22 16:51:07.204]                                  e_035: e_035 (n = 4095, m = 17074, k = -1)[0m
+[0m[2022-04-22 16:51:07.214]                                  e_035: Found 20 cyclic sub graph(s) with n = [3, 4, 4, 4, 5, 5, 6, 12, 14, 16, 18, 19, 40, 46, 52, 56, 77, 86, 99, 243][0m
+[0m[2022-04-22 16:51:07.216]                                  e_035: Removed 3510 nodes in preprocessing, starting with k = 1869[0m
+[0m[2022-04-22 16:51:07.216]                                  e_035: Creating cycle packing with time limit = 4[0m
+[0m[2022-04-22 16:51:07.216]                                  e_035: Creating heuristic with time limit = 4[0m
+[0m[2022-04-22 16:51:07.216]                                  e_035: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:07.216]                                  e_035: Creating cycle packing with time limit = 4[0m
+[0m[2022-04-22 16:51:07.217]                                  e_035: Creating heuristic with time limit = 4[0m
+[0m[2022-04-22 16:51:07.217]                                  e_035: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:07.217]                                  e_035: Creating cycle packing with time limit = 4[0m
+[0m[2022-04-22 16:51:07.217]                                  e_035: Creating heuristic with time limit = 4[0m
+[0m[2022-04-22 16:51:07.217]                                  e_035: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:07.217]                                  e_035: Creating cycle packing with time limit = 6[0m
+[0m[2022-04-22 16:51:07.217]                                  e_035: Creating heuristic with time limit = 6[0m
+[0m[2022-04-22 16:51:07.225]                                  e_035: Solution lies in [2, 3][0m
+[2022-04-22 16:51:07.225]                                  e_035: Branching with k = 2
+[0m[2022-04-22 16:51:07.225]                                  e_035: Creating cycle packing with time limit = 6[0m
+[0m[2022-04-22 16:51:07.225]                                  e_035: Creating heuristic with time limit = 6[0m
+[0m[2022-04-22 16:51:07.226]                                  e_035: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:07.226]                                  e_035: Creating cycle packing with time limit = 7[0m
+[0m[2022-04-22 16:51:07.226]                                  e_035: Creating heuristic with time limit = 7[0m
+[0m[2022-04-22 16:51:07.226]                                  e_035: Solution lies in [3, 3][0m
+[0m[2022-04-22 16:51:07.226]                                  e_035: Creating cycle packing with time limit = 14[0m
+[0m[2022-04-22 16:51:07.226]                                  e_035: Creating heuristic with time limit = 14[0m
+[0m[2022-04-22 16:51:07.227]                                  e_035: Solution lies in [6, 6][0m
+[0m[2022-04-22 16:51:07.227]                                  e_035: Creating cycle packing with time limit = 9[0m
+[0m[2022-04-22 16:51:07.227]                                  e_035: Creating heuristic with time limit = 9[0m
+[0m[2022-04-22 16:51:07.227]                                  e_035: Solution lies in [4, 4][0m
+[0m[2022-04-22 16:51:07.227]                                  e_035: Creating cycle packing with time limit = 11[0m
+[0m[2022-04-22 16:51:07.227]                                  e_035: Creating heuristic with time limit = 11[0m
+[0m[2022-04-22 16:51:07.240]                                  e_035: Solution lies in [4, 5][0m
+[2022-04-22 16:51:07.240]                                  e_035: Branching with k = 4
+[0m[2022-04-22 16:51:07.240]                                  e_035: Creating cycle packing with time limit = 22[0m
+[0m[2022-04-22 16:51:07.241]                                  e_035: Creating heuristic with time limit = 22[0m
+[0m[2022-04-22 16:51:07.241]                                  e_035: Solution lies in [9, 9][0m
+[0m[2022-04-22 16:51:07.241]                                  e_035: Creating cycle packing with time limit = 49[0m
+[0m[2022-04-22 16:51:07.241]                                  e_035: Creating heuristic with time limit = 49[0m
+[0m[2022-04-22 16:51:07.291]                                  e_035: Solution lies in [20, 22][0m
+[2022-04-22 16:51:07.291]                                  e_035: Branching with k = 21
+[0m[2022-04-22 16:51:07.292]                                  e_035: Creating cycle packing with time limit = 40[0m
+[0m[2022-04-22 16:51:07.292]                                  e_035: Creating heuristic with time limit = 40[0m
+[0m[2022-04-22 16:51:07.334]                                  e_035: Solution lies in [17, 18][0m
+[2022-04-22 16:51:07.334]                                  e_035: Branching with k = 17
+[0m[2022-04-22 16:51:07.334]                                  e_035: Creating cycle packing with time limit = 18[0m
+[0m[2022-04-22 16:51:07.335]                                  e_035: Creating heuristic with time limit = 18[0m
+[0m[2022-04-22 16:51:07.354]                                  e_035: Solution lies in [7, 8][0m
+[2022-04-22 16:51:07.354]                                  e_035: Branching with k = 7
+[0m[2022-04-22 16:51:07.354]                                  e_035: Creating cycle packing with time limit = 54[0m
+[0m[2022-04-22 16:51:07.355]                                  e_035: Creating heuristic with time limit = 54[0m
+[0m[2022-04-22 16:51:07.355]                                  e_035: Solution lies in [23, 23][0m
+[0m[2022-04-22 16:51:07.355]                                  e_035: Creating cycle packing with time limit = 95[0m
+[0m[2022-04-22 16:51:07.355]                                  e_035: Creating heuristic with time limit = 95[0m
+[0m[2022-04-22 16:51:07.452]                                  e_035: Solution lies in [40, 41][0m
+[2022-04-22 16:51:07.452]                                  e_035: Branching with k = 40
+[0m[2022-04-22 16:51:07.454]                                  e_035: Creating cycle packing with time limit = 75[0m
+[0m[2022-04-22 16:51:07.454]                                  e_035: Creating heuristic with time limit = 75[0m
+[0m[2022-04-22 16:51:07.530]                                  e_035: Solution lies in [30, 31][0m
+[2022-04-22 16:51:07.530]                                  e_035: Branching with k = 30
+[0m[2022-04-22 16:51:07.531]                                  e_035: Creating cycle packing with time limit = 95[0m
+[0m[2022-04-22 16:51:07.531]                                  e_035: Creating heuristic with time limit = 95[0m
+[0m[2022-04-22 16:51:07.627]                                  e_035: Solution lies in [39, 42][0m
+[2022-04-22 16:51:07.627]                                  e_035: Branching with k = 41
+[0m[2022-04-22 16:51:07.635]                                  e_035: Creating cycle packing with time limit = 201[0m
+[0m[2022-04-22 16:51:07.636]                                  e_035: Creating heuristic with time limit = 201[0m
+[0m[2022-04-22 16:51:07.838]                                  e_035: Solution lies in [83, 87][0m
+[2022-04-22 16:51:07.838]                                  e_035: Branching with k = 86
+[0m[2022-04-22 16:51:07.855]                                  e_035: Found solution k = 2179 in 653 ms (recursive steps: 136)[0m
+[33m[2022-04-22 16:51:07.855]                                  e_035: BFS: 3, Packing: 15, Heuristic: 605, Copy: 1, Red: 13, DAG: 0, Pre: 12, File: 3[0m
+[35m[2022-04-22 16:51:07.857]                                  e_037: e_037 (n = 4094, m = 28675, k = -1)[0m
+[0m[2022-04-22 16:51:07.877]                                  e_037: Found 23 cyclic sub graph(s) with n = [4, 4, 4, 4, 5, 5, 5, 5, 5, 7, 8, 10, 11, 11, 13, 17, 18, 19, 19, 36, 129, 475, 1144][0m
+[0m[2022-04-22 16:51:07.886]                                  e_037: Removed 2523 nodes in preprocessing, starting with k = 1749[0m
+[0m[2022-04-22 16:51:07.886]                                  e_037: Creating cycle packing with time limit = 2[0m
+[0m[2022-04-22 16:51:07.886]                                  e_037: Creating heuristic with time limit = 2[0m
+[0m[2022-04-22 16:51:07.886]                                  e_037: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:07.886]                                  e_037: Creating cycle packing with time limit = 2[0m
+[0m[2022-04-22 16:51:07.887]                                  e_037: Creating heuristic with time limit = 2[0m
+[0m[2022-04-22 16:51:07.887]                                  e_037: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:07.887]                                  e_037: Creating cycle packing with time limit = 2[0m
+[0m[2022-04-22 16:51:07.887]                                  e_037: Creating heuristic with time limit = 2[0m
+[0m[2022-04-22 16:51:07.887]                                  e_037: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:07.887]                                  e_037: Creating cycle packing with time limit = 2[0m
+[0m[2022-04-22 16:51:07.887]                                  e_037: Creating heuristic with time limit = 2[0m
+[0m[2022-04-22 16:51:07.888]                                  e_037: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:51:07.888]                                  e_037: Creating cycle packing with time limit = 2[0m
+[0m[2022-04-22 16:51:07.888]                                  e_037: Creating heuristic with time limit = 2[0m
+[0m[2022-04-22 16:51:07.891]                                  e_037: Solution lies in [2, 3][0m
+[2022-04-22 16:51:07.891]                                  e_037: Branching with k = 2
+[0m[2022-04-22 16:51:07.891]                                  e_037: Creating cycle packing with time limit = 2[0m
+[0m[2022-04-22 16:51:07.891]                                  e_037: Creating heuristic with time limit = 2[0m
+[0m[2022-04-22 16:51:07.894]                                  e_037: Solution lies in [2, 3][0m
+[2022-04-22 16:51:07.894]                                  e_037: Branching with k = 2
+[0m[2022-04-22 16:51:07.894]                                  e_037: Creating cycle packing with time limit = 3[0m
+[0m[2022-04-22 16:51:07.894]                                  e_037: Creating heuristic with time limit = 3[0m
+[0m[2022-04-22 16:51:07.894]                                  e_037: Solution lies in [4, 4][0m
+[0m[2022-04-22 16:51:07.894]                                  e_037: Creating cycle packing with time limit = 5[0m
+[0m[2022-04-22 16:51:07.895]                                  e_037: Creating heuristic with time limit = 5[0m
+[0m[2022-04-22 16:51:07.895]                                  e_037: Solution lies in [5, 5][0m
+[0m[2022-04-22 16:51:07.895]                                  e_037: Creating cycle packing with time limit = 5[0m
+[0m[2022-04-22 16:51:07.895]                                  e_037: Creating heuristic with time limit = 5[0m
+[0m[2022-04-22 16:51:07.895]                                  e_037: Solution lies in [6, 6][0m
+[0m[2022-04-22 16:51:07.895]                                  e_037: Creating cycle packing with time limit = 6[0m
+[0m[2022-04-22 16:51:07.895]                                  e_037: Creating heuristic with time limit = 6[0m
+[0m[2022-04-22 16:51:07.896]                                  e_037: Solution lies in [6, 6][0m
+[0m[2022-04-22 16:51:07.896]                                  e_037: Creating cycle packing with time limit = 8[0m
+[0m[2022-04-22 16:51:07.896]                                  e_037: Creating heuristic with time limit = 8[0m
+[0m[2022-04-22 16:51:07.896]                                  e_037: Solution lies in [10, 10][0m
+[0m[2022-04-22 16:51:07.896]                                  e_037: Creating cycle packing with time limit = 5[0m
+[0m[2022-04-22 16:51:07.897]                                  e_037: Creating heuristic with time limit = 5[0m
+[0m[2022-04-22 16:51:07.897]                                  e_037: Solution lies in [5, 5][0m
+[0m[2022-04-22 16:51:07.897]                                  e_037: Creating cycle packing with time limit = 9[0m
+[0m[2022-04-22 16:51:07.897]                                  e_037: Creating heuristic with time limit = 9[0m
+[0m[2022-04-22 16:51:07.897]                                  e_037: Solution lies in [10, 10][0m
+[0m[2022-04-22 16:51:07.897]                                  e_037: Creating cycle packing with time limit = 7[0m
+[0m[2022-04-22 16:51:07.898]                                  e_037: Creating heuristic with time limit = 7[0m
+[0m[2022-04-22 16:51:07.898]                                  e_037: Solution lies in [9, 9][0m
+[0m[2022-04-22 16:51:07.898]                                  e_037: Creating cycle packing with time limit = 3[0m
+[0m[2022-04-22 16:51:07.898]                                  e_037: Creating heuristic with time limit = 3[0m
+[0m[2022-04-22 16:51:07.898]                                  e_037: Solution lies in [3, 3][0m
+[0m[2022-04-22 16:51:07.898]                                  e_037: Creating cycle packing with time limit = 58[0m
+[0m[2022-04-22 16:51:07.899]                                  e_037: Creating heuristic with time limit = 58[0m
+[0m[2022-04-22 16:51:07.958]                                  e_037: Solution lies in [64, 67][0m
+[2022-04-22 16:51:07.959]                                  e_037: Branching with k = 66
+[0m[2022-04-22 16:51:08.005]                                  e_037: Creating cycle packing with time limit = 197[0m
+[0m[2022-04-22 16:51:08.009]                                  e_037: Creating heuristic with time limit = 197[0m
+[0m[2022-04-22 16:51:08.209]                                  e_037: Solution lies in [223, 232][0m
+[2022-04-22 16:51:08.210]                                  e_037: Branching with k = 231
+[31m[2022-04-22 16:52:37.858]                                  e_037: Found no solution in 90001 ms (recursive steps: 317711)[0m
+[33m[2022-04-22 16:52:37.858]                                  e_037: BFS: 5996, Packing: 19708, Heuristic: 267, Copy: 7526, Red: 51752, DAG: 3795, Pre: 29, File: 2[0m
+[35m[2022-04-22 16:52:37.858]                                  e_039: e_039 (n = 928, m = 2570, k = -1)[0m
+[0m[2022-04-22 16:52:37.859]                                  e_039: Found 7 cyclic sub graph(s) with n = [4, 4, 4, 4, 4, 5, 6][0m
+[0m[2022-04-22 16:52:37.859]                                  e_039: Removed 903 nodes in preprocessing, starting with k = 387[0m
+[0m[2022-04-22 16:52:37.859]                                  e_039: Creating cycle packing with time limit = 129[0m
+[0m[2022-04-22 16:52:37.860]                                  e_039: Creating heuristic with time limit = 129[0m
+[0m[2022-04-22 16:52:37.860]                                  e_039: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:52:37.860]                                  e_039: Creating cycle packing with time limit = 129[0m
+[0m[2022-04-22 16:52:37.860]                                  e_039: Creating heuristic with time limit = 129[0m
+[0m[2022-04-22 16:52:37.860]                                  e_039: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:52:37.861]                                  e_039: Creating cycle packing with time limit = 129[0m
+[0m[2022-04-22 16:52:37.861]                                  e_039: Creating heuristic with time limit = 129[0m
+[0m[2022-04-22 16:52:37.861]                                  e_039: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:52:37.861]                                  e_039: Creating cycle packing with time limit = 129[0m
+[0m[2022-04-22 16:52:37.861]                                  e_039: Creating heuristic with time limit = 129[0m
+[0m[2022-04-22 16:52:37.861]                                  e_039: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:52:37.862]                                  e_039: Creating cycle packing with time limit = 129[0m
+[0m[2022-04-22 16:52:37.862]                                  e_039: Creating heuristic with time limit = 129[0m
+[0m[2022-04-22 16:52:37.862]                                  e_039: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:52:37.862]                                  e_039: Creating cycle packing with time limit = 161[0m
+[0m[2022-04-22 16:52:37.862]                                  e_039: Creating heuristic with time limit = 161[0m
+[0m[2022-04-22 16:52:38.024]                                  e_039: Solution lies in [2, 3][0m
+[2022-04-22 16:52:38.024]                                  e_039: Branching with k = 2
+[0m[2022-04-22 16:52:38.025]                                  e_039: Found solution k = 400 in 167 ms (recursive steps: 1)[0m
+[33m[2022-04-22 16:52:38.025]                                  e_039: BFS: 0, Packing: 1, Heuristic: 162, Copy: 0, Red: 0, DAG: 0, Pre: 1, File: 0[0m
+[35m[2022-04-22 16:52:38.033]                                  e_041: e_041 (n = 4093, m = 27082, k = -1)[0m
+[0m[2022-04-22 16:52:38.051]                                  e_041: Found 27 cyclic sub graph(s) with n = [3, 4, 4, 4, 4, 4, 4, 5, 6, 6, 6, 8, 8, 8, 9, 10, 11, 12, 12, 14, 19, 22, 22, 41, 170, 724, 1052][0m
+[0m[2022-04-22 16:52:38.059]                                  e_041: Removed 2460 nodes in preprocessing, starting with k = 1541[0m
+[0m[2022-04-22 16:52:38.059]                                  e_041: Creating cycle packing with time limit = 1[0m
+[0m[2022-04-22 16:52:38.059]                                  e_041: Creating heuristic with time limit = 1[0m
+[0m[2022-04-22 16:52:38.060]                                  e_041: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:52:38.060]                                  e_041: Creating cycle packing with time limit = 1[0m
+[0m[2022-04-22 16:52:38.060]                                  e_041: Creating heuristic with time limit = 1[0m
+[0m[2022-04-22 16:52:38.060]                                  e_041: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:52:38.060]                                  e_041: Creating cycle packing with time limit = 1[0m
+[0m[2022-04-22 16:52:38.060]                                  e_041: Creating heuristic with time limit = 1[0m
+[0m[2022-04-22 16:52:38.060]                                  e_041: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:52:38.061]                                  e_041: Creating cycle packing with time limit = 1[0m
+[0m[2022-04-22 16:52:38.061]                                  e_041: Creating heuristic with time limit = 1[0m
+[0m[2022-04-22 16:52:38.061]                                  e_041: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:52:38.061]                                  e_041: Creating cycle packing with time limit = 1[0m
+[0m[2022-04-22 16:52:38.061]                                  e_041: Creating heuristic with time limit = 1[0m
+[0m[2022-04-22 16:52:38.061]                                  e_041: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:52:38.061]                                  e_041: Creating cycle packing with time limit = 1[0m
+[0m[2022-04-22 16:52:38.062]                                  e_041: Creating heuristic with time limit = 1[0m
+[0m[2022-04-22 16:52:38.062]                                  e_041: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:52:38.062]                                  e_041: Creating cycle packing with time limit = 2[0m
+[0m[2022-04-22 16:52:38.062]                                  e_041: Creating heuristic with time limit = 2[0m
+[0m[2022-04-22 16:52:38.062]                                  e_041: Solution lies in [3, 3][0m
+[0m[2022-04-22 16:52:38.062]                                  e_041: Creating cycle packing with time limit = 3[0m
+[0m[2022-04-22 16:52:38.063]                                  e_041: Creating heuristic with time limit = 3[0m
+[0m[2022-04-22 16:52:38.063]                                  e_041: Solution lies in [5, 5][0m
+[0m[2022-04-22 16:52:38.063]                                  e_041: Creating cycle packing with time limit = 2[0m
+[0m[2022-04-22 16:52:38.063]                                  e_041: Creating heuristic with time limit = 2[0m
+[0m[2022-04-22 16:52:38.066]                                  e_041: Solution lies in [2, 3][0m
+[2022-04-22 16:52:38.066]                                  e_041: Branching with k = 2
+[0m[2022-04-22 16:52:38.066]                                  e_041: Creating cycle packing with time limit = 4[0m
+[0m[2022-04-22 16:52:38.066]                                  e_041: Creating heuristic with time limit = 4[0m
+[0m[2022-04-22 16:52:38.071]                                  e_041: Solution lies in [4, 5][0m
+[2022-04-22 16:52:38.071]                                  e_041: Branching with k = 4
+[0m[2022-04-22 16:52:38.071]                                  e_041: Creating cycle packing with time limit = 5[0m
+[0m[2022-04-22 16:52:38.071]                                  e_041: Creating heuristic with time limit = 5[0m
+[0m[2022-04-22 16:52:38.071]                                  e_041: Solution lies in [6, 6][0m
+[0m[2022-04-22 16:52:38.071]                                  e_041: Creating cycle packing with time limit = 3[0m
+[0m[2022-04-22 16:52:38.071]                                  e_041: Creating heuristic with time limit = 3[0m
+[0m[2022-04-22 16:52:38.072]                                  e_041: Solution lies in [4, 4][0m
+[0m[2022-04-22 16:52:38.072]                                  e_041: Creating cycle packing with time limit = 2[0m
+[0m[2022-04-22 16:52:38.072]                                  e_041: Creating heuristic with time limit = 2[0m
+[0m[2022-04-22 16:52:38.075]                                  e_041: Solution lies in [2, 3][0m
+[2022-04-22 16:52:38.075]                                  e_041: Branching with k = 2
+[0m[2022-04-22 16:52:38.075]                                  e_041: Creating cycle packing with time limit = 1[0m
+[0m[2022-04-22 16:52:38.075]                                  e_041: Creating heuristic with time limit = 1[0m
+[0m[2022-04-22 16:52:38.075]                                  e_041: Solution lies in [2, 2][0m
+[0m[2022-04-22 16:52:38.075]                                  e_041: Creating cycle packing with time limit = 7[0m
+[0m[2022-04-22 16:52:38.075]                                  e_041: Creating heuristic with time limit = 7[0m
+[0m[2022-04-22 16:52:38.084]                                  e_041: Solution lies in [9, 10][0m
+[2022-04-22 16:52:38.084]                                  e_041: Branching with k = 9
+[0m[2022-04-22 16:52:38.084]                                  e_041: Creating cycle packing with time limit = 10[0m
+[0m[2022-04-22 16:52:38.084]                                  e_041: Creating heuristic with time limit = 10[0m
+[0m[2022-04-22 16:52:38.095]                                  e_041: Solution lies in [12, 13][0m
+[2022-04-22 16:52:38.095]                                  e_041: Branching with k = 12
+[0m[2022-04-22 16:52:38.096]                                  e_041: Creating cycle packing with time limit = 6[0m
+[0m[2022-04-22 16:52:38.096]                                  e_041: Creating heuristic with time limit = 6[0m
+[0m[2022-04-22 16:52:38.096]                                  e_041: Solution lies in [8, 8][0m
+[0m[2022-04-22 16:52:38.096]                                  e_041: Creating cycle packing with time limit = 5[0m
+[0m[2022-04-22 16:52:38.096]                                  e_041: Creating heuristic with time limit = 5[0m
+[0m[2022-04-22 16:52:38.097]                                  e_041: Solution lies in [5, 5][0m
+[0m[2022-04-22 16:52:38.097]                                  e_041: Creating cycle packing with time limit = 41[0m
+[0m[2022-04-22 16:52:38.097]                                  e_041: Creating heuristic with time limit = 41[0m
+[0m[2022-04-22 16:52:38.139]                                  e_041: Solution lies in [51, 53][0m
+[2022-04-22 16:52:38.139]                                  e_041: Branching with k = 52
+[0m[2022-04-22 16:52:38.144]                                  e_041: Creating cycle packing with time limit = 273[0m
+[0m[2022-04-22 16:52:38.157]                                  e_041: Creating heuristic with time limit = 273[0m
+[0m[2022-04-22 16:52:38.466]                                  e_041: Solution lies in [362, 382][0m
+[2022-04-22 16:52:38.467]                                  e_041: Branching with k = 381

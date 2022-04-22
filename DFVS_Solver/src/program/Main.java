@@ -38,9 +38,9 @@ public class Main {
             Log.Clear();
             Log.ignore = false;
 
-            //testPaceData();
+            testPaceData();
             //testCorrectness();
-            exportPaceData();
+            //exportPaceData();
 
 
             //List<GraphFile> files = InstanceCreator.getComplexAndSyntheticFiles(Dataset.DATASET_3, null);
