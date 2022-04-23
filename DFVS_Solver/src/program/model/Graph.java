@@ -122,6 +122,14 @@ public class Graph {
         nodes.remove(nodeId);
     }
 
+    public void removeEdge(Integer out, Integer in){
+        Node outNode = nodes.get(out);
+        Node inNode = nodes.get(in);
+
+        outNode.removeOutId(in);
+        inNode.removeInId(out);
+    }
+
     public void removeForbiddenNodes(List<Integer> forbiddenNodeIds) {
         for(Integer forbiddenId: forbiddenNodeIds) {
             removeForbiddenNode(forbiddenId);

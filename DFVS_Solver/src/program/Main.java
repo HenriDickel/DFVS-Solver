@@ -1,19 +1,14 @@
 package program;
 
 import program.algo.*;
-import program.heuristics.HeuristicSolver;
-import program.heuristics.Heuristics;
+import program.heuristics.Solver;
 import program.log.Log;
 import program.model.*;
-import program.packing.Packings;
 import program.utils.*;
 import program.utils.TimeoutException;
+import program.utils.Timer;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Scanner;
-import java.util.stream.Collectors;
+import java.util.*;
 
 public class Main {
 
@@ -31,7 +26,7 @@ public class Main {
             Instance instance = InstanceCreator.createPaceInstanceFromSystemIn();
 
             // Solve
-            HeuristicSolver.dfvsSolveInstance(instance);
+            Solver.dfvsSolveInstance(instance);
 
             // Print solution
             for(Integer nodeId : instance.S){
@@ -43,6 +38,10 @@ public class Main {
             Log.Clear();
             Log.ignore = false;
 
+            testPaceData();
+            //testCorrectness();
+            //exportPaceData();
+
             //testCorrectness();
             //testReduction();
 
@@ -50,6 +49,8 @@ public class Main {
             //List<GraphFile> files = InstanceCreator.getSelectedFiles();
             //List<GraphFile> files = InstanceCreator.getUnsolvedFiles();
             //List<GraphFile> files = InstanceCreator.getHeuristicFiles(null);
+
+            //List<GraphFile> files = InstanceCreator.getPaceFiles(null);
             List<GraphFile> files = InstanceCreator.getPaceFiles(null);
 
             //files.forEach(Main::reductionExport);
@@ -57,8 +58,18 @@ public class Main {
         }
     }
 
+    private static void testPaceData(){
+        List<GraphFile> files = InstanceCreator.getPaceFiles(null);
+        files.forEach(x -> run(x, true));
+    }
+
+    private static void exportPaceData(){
+        List<GraphFile> files = InstanceCreator.getPaceFiles(null);
+        files.forEach(Main::reductionExport);
+    }
+
     private static void testCorrectness(){
-        List<GraphFile> files = InstanceCreator.getComplexAndSyntheticFiles(Dataset.DATASET_2, null);
+        List<GraphFile> files = InstanceCreator.getComplexAndSyntheticFiles(Dataset.DATASET_3, null);
         files.forEach(x -> run(x, false));
     }
 
@@ -127,6 +138,34 @@ public class Main {
         }
         Export.ExportGraph(instance, "3_second_reduced");
 
+        //Reduce with diamond rule
+        //int preN = instance.getCurrentN();
+        //for(Graph graph : instance.subGraphs){
+        //    List<Integer> reduce =  Reduction.diamondCompleteRemove(graph);
+        //    instance.S.addAll(reduce);
+        //}
+        //int postN = instance.getCurrentN();
+//
+        //System.out.println(instance.NAME + ": Pre: " + preN + "\tPost: " + postN + "\t\tDiff: " + (preN - postN));
+//
+        //Export.ExportGraph(instance, "4_second_reduced");
+
+        //
+        //List<String> ids = new ArrayList<>();
+        //int preN = instance.getCurrentN();
+        //for(Graph graph : instance.subGraphs){
+        //    for(Node node : graph.getNodes()){
+        //        if(Reduction.supersetRemove(graph, node)){
+        //            ids.add(node.id.toString());
+        //            graph.removeNode(node.id);
+        //        }
+        //    }
+        //}
+        //int postN = instance.getCurrentN();
+        //Export.ExportGraph(instance, "4_single_edge_removed");
+        //Collections.sort(ids);
+        //System.out.println(String.join(", ", ids));
+        //System.out.println(instance.NAME + ": Pre: " + preN + "\tPost: " + postN + "\t\tDiff: " + (preN - postN));
     }
 
     private static void run(GraphFile file, boolean isPaceData) {
@@ -140,7 +179,7 @@ public class Main {
 
         try {
             Log.debugLog(instance.NAME, instance.NAME + " (n = " + instance.N + ", m = " + instance.M + ", k = " + instance.OPTIMAL_K + ")", Color.PURPLE);
-            HeuristicSolver.dfvsSolveInstance(instance);
+            Solver.dfvsSolveInstance(instance);
 
             // Verify
             instance.solvedK = instance.S.size();
@@ -153,7 +192,7 @@ public class Main {
             PerformanceTimer.printResult(instance.NAME);
 
         } catch (TimeoutException e) {
-            instance.solvedK = instance.S.size() + HeuristicSolver.currentK;
+            instance.solvedK = instance.S.size() + Solver.currentK;
 
             // Log results
             Log.debugLogAdd("", true);

@@ -79,6 +79,10 @@ public class Node {
         return Math.min(inIds.size(), outIds.size());
     }
 
+    public int getDoubleEdges(){
+        return (int) outIds.stream().filter(inIds::contains).count();
+    }
+
     public int getCycleCount() {
         return cycleCount;
     }
@@ -91,6 +95,15 @@ public class Node {
         copy.outIds.addAll(outIds);
         copy.inIds.addAll(inIds);
         return copy;
+    }
+
+    /**
+     * Returns true if node has edges and all of them are double edges
+     * @return
+     */
+    public boolean onlyDoubleEdges(){
+        return inIds.size() + outIds.size() > 0 && inIds.size() == outIds.size() && inIds.containsAll(outIds) && outIds.containsAll(inIds);
+
     }
 
     @Override
