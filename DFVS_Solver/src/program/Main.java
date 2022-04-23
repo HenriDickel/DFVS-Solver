@@ -43,16 +43,17 @@ public class Main {
             Log.Clear();
             Log.ignore = false;
 
-            testCorrectness();
+            //testCorrectness();
+            //testReduction();
 
             //List<GraphFile> files = InstanceCreator.getComplexAndSyntheticFiles(Dataset.DATASET_3, null);
             //List<GraphFile> files = InstanceCreator.getSelectedFiles();
             //List<GraphFile> files = InstanceCreator.getUnsolvedFiles();
             //List<GraphFile> files = InstanceCreator.getHeuristicFiles(null);
-            //List<GraphFile> files = InstanceCreator.getPaceFiles(null);
+            List<GraphFile> files = InstanceCreator.getPaceFiles(null);
 
             //files.forEach(Main::reductionExport);
-            //files.forEach(Main::run);
+            files.forEach(x -> run(x, true));
         }
     }
 
@@ -61,6 +62,46 @@ public class Main {
         files.forEach(x -> run(x, false));
     }
 
+    private static void testReduction() {
+        List<GraphFile> files = InstanceCreator.getPaceFiles(null);
+        files = files.subList(0, 50);
+
+        int nodeCount = 0;
+        int reduceNodeCount = 0;
+        int tarjanNodeCount = 0;
+        int secondReduceNodeCount = 0;
+        int kAgg = 0;
+        int reduceSAgg = 0;
+        for(GraphFile file: files) {
+            Instance instance = InstanceCreator.createFromPaceFile(file);
+            nodeCount += instance.getNodeCount();
+
+            // Apply reduction rules once
+            Log.debugLog(instance.NAME, "Applying reduction rules...");
+            List<Integer> reduceS = Reduction.applyRules(instance.subGraphs.get(0), true);
+            instance.S.addAll(reduceS);
+            reduceNodeCount += instance.getNodeCount();
+
+            // Create sub graphs
+            Log.debugLog(instance.NAME, "Applying Tarjan...");
+            instance.subGraphs = Preprocessing.findCyclicSubGraphs(instance.subGraphs.get(0));
+            tarjanNodeCount += instance.getNodeCount();
+
+            // Apply reduction rules again
+            Log.debugLog(instance.NAME, "Applying reduction rules again...");
+            for(Graph subGraph: instance.subGraphs) {
+                List<Integer> reduceSubS = Reduction.applyRules(subGraph, true);
+                instance.S.addAll(reduceSubS);
+            }
+            secondReduceNodeCount += instance.getNodeCount();
+
+            kAgg += instance.OPTIMAL_K;
+            reduceSAgg += instance.S.size();
+        }
+
+        System.out.println("Average nodes: " + nodeCount / files.size() + " => " + reduceNodeCount / files.size() + " => " + tarjanNodeCount / files.size() + " => " + secondReduceNodeCount / files.size());
+        System.out.println("Average k: " + kAgg / files.size() + ", reduced: " + reduceSAgg / files.size());
+    }
 
     private static void reductionExport(GraphFile file){
 

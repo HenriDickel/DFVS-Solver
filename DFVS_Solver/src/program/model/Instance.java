@@ -34,4 +34,8 @@ public class Instance {
         this.N = graph.getNodeCount();
         this.M = graph.getEdgeCount();
     }
+
+    public int getNodeCount() {
+        return subGraphs.stream().mapToInt(Graph::getNodeCount).sum();
+    }
 }

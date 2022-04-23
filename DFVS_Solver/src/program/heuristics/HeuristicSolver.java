@@ -60,7 +60,7 @@ public abstract class HeuristicSolver {
 
         // Calculate cycle packing
         PerformanceTimer.start();
-        long packingTimeLimit = (long) (10000L * nodePercentage);
+        long packingTimeLimit = (long) (1000L * nodePercentage);
         Log.debugLog(instance.NAME, "Creating cycle packing with time limit = " + packingTimeLimit);
         PackingManager pm = new PackingManager(graph, packingTimeLimit);
         PerformanceTimer.log(PerformanceTimer.MethodType.PACKING);
@@ -68,7 +68,7 @@ public abstract class HeuristicSolver {
 
         // Calculate heuristic
         PerformanceTimer.start();
-        long heuristicTimeLimit = (long) (10000L * nodePercentage);
+        long heuristicTimeLimit = (long) (1000L * nodePercentage);
         Log.debugLog(instance.NAME, "Creating heuristic with time limit = " + heuristicTimeLimit);
         List<Integer> heuristicS = GraphTimerFast(graph, heuristicTimeLimit, 0.95f, pm.size());
         PerformanceTimer.log(PerformanceTimer.MethodType.HEURISTIC);

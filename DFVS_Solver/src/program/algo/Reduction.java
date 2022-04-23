@@ -42,18 +42,15 @@ public abstract class Reduction {
                         in.addOutId(outId);
                     }
                     graph.removeNode(node.id);
-                } else{
+                } else {
                     //TODO - Check correctness again
-                    /*
+
                     //Check if full double connected
-                    if(node.getOutIdCount() == graph.getNodes().size() - 1){
-                        //All others connected to this
-                        if(graph.getNodes().stream().allMatch(x -> x.id == node.id || x.getOutIds().contains(node.id))){
-                            reduceS.add(node.id);
-                            graph.removeNode(node.id);
-                        }
+                    if(node.getOutIdCount() == graph.getNodes().size() - 1 && node.getInIdCount() == graph.getNodes().size() - 1
+                            && node.getOutIdCount() > 0 && node.getInIdCount() > 0){
+                        reduceS.add(node.id);
+                        graph.removeNode(node.id);
                     }
-                    */
                 }
             }
         }
