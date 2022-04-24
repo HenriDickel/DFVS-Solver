@@ -56,6 +56,20 @@ public abstract class Reduction {
 
                 } else { // Other rules
 
+                    // Remove trivial edges on double edge node
+                    if (node.getOutIds().stream().anyMatch(x -> node.getInIds().contains(x)) && node.getOutIdCount() != node.getInIdCount()) {
+                        List<Integer> ingoing = node.getInIds().stream().filter(x -> !node.getOutIds().contains(x)).collect(Collectors.toList());
+                        List<Integer> outgoing = node.getOutIds().stream().filter(x -> !node.getInIds().contains(x)).collect(Collectors.toList());
+                        if (ingoing.size() == 0) {
+                            outgoing.forEach(x -> graph.removeEdge(node.id, x));
+                            node.updated = true;
+                        }
+                        if (outgoing.size() == 0) {
+                            ingoing.forEach(x -> graph.removeEdge(x, node.id));
+                            node.updated = true;
+                        }
+                    }
+
                     // Fully connected triangle
                     if (node.hasOnlyDoubleEdges() && node.getOutIdCount() == 2) {
                         Node a = graph.getNode(node.getOutIds().get(0));
@@ -128,20 +142,6 @@ public abstract class Reduction {
                                     }
                                 }
                             }
-                        }
-                    }
-
-                    // Remove trivial edges on double edge node
-                    if (node.getOutIds().stream().anyMatch(x -> node.getInIds().contains(x)) && node.getOutIdCount() != node.getInIdCount()) {
-                        List<Integer> ingoing = node.getInIds().stream().filter(x -> !node.getOutIds().contains(x)).collect(Collectors.toList());
-                        List<Integer> outgoing = node.getOutIds().stream().filter(x -> !node.getInIds().contains(x)).collect(Collectors.toList());
-                        if (ingoing.size() == 0) {
-                            outgoing.forEach(x -> graph.removeEdge(node.id, x));
-                            node.updated = true;
-                        }
-                        if (outgoing.size() == 0) {
-                            ingoing.forEach(x -> graph.removeEdge(x, node.id));
-                            node.updated = true;
                         }
                     }
                 }
