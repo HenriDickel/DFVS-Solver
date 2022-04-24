@@ -59,7 +59,7 @@ public abstract class Solver {
 
         // Calculate cycle packing
         PerformanceTimer.start();
-        long packingTimeLimit = (long) (10L * nodePercentage);
+        long packingTimeLimit = (long) (1000L * nodePercentage);
         Log.debugLog(instance.NAME, "Creating cycle packing with time limit = " + packingTimeLimit);
         PackingManager pm = new PackingManager(graph, packingTimeLimit);
         PerformanceTimer.log(PerformanceTimer.MethodType.PACKING);
@@ -75,7 +75,7 @@ public abstract class Solver {
         instance.heuristicSize += heuristicS.size();
 
         // Initialize values
-        float startPercentage = 1.0f;
+        float startPercentage = 0.0f;
         int kRange = heuristicS.size() - pm.size() - 1;
         currentK = pm.size() + Math.round(startPercentage * kRange);
 

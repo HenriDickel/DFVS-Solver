@@ -128,6 +128,9 @@ public class Graph {
 
         outNode.removeOutId(in);
         inNode.removeInId(out);
+
+        outNode.updated = true;
+        inNode.updated = true;
     }
 
     public void removeForbiddenNodes(List<Integer> forbiddenNodeIds) {

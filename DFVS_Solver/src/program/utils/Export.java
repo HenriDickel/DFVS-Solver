@@ -13,7 +13,7 @@ import java.util.stream.Collectors;
 
 public class Export {
 
-    private static final String EXPORT_PATH = "src/exports/";
+    private static final String EXPORT_PATH = "src/python/GraphVizInputs/";
 
     public static void ExportGraph(Instance instance, String exportName){
 
@@ -66,6 +66,6 @@ public class Export {
         }
 
         //Log
-        System.out.println("Exported: " + instance.NAME + "_" + exportName);
+        System.out.println("Exported:" + instance.NAME + "_" + exportName + " (n = " + instance.getCurrentN() + ", m = " + instance.getCurrentM() + ")");
     }
 }

@@ -37,7 +37,7 @@ public class Instance {
     }
 
     public int getCurrentN(){
-        return (int) subGraphs.stream().map(Graph::getNodes).mapToLong(List::size).sum();
+        return subGraphs.stream().mapToInt(Graph::getNodeCount).sum();
 
     }
 
@@ -50,7 +50,4 @@ public class Instance {
         return getCurrentN() == 0 ? 0 : nodes.stream().map(Node::getOutIdCount).reduce(0, Integer::sum);
     }
 
-    public int getNodeCount() {
-        return subGraphs.stream().mapToInt(Graph::getNodeCount).sum();
-    }
 }

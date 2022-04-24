@@ -1,6 +1,5 @@
 package program.algo;
 
-import program.log.CycleCounter;
 import program.model.*;
 import program.packing.PackingManager;
 import program.utils.Timer;
@@ -11,7 +10,7 @@ import program.log.Log;
 import java.util.*;
 import java.util.stream.Collectors;
 
-public abstract class Solver {
+public abstract class OldSolver {
 
     public static Instance instance;
     public static int currentK;
@@ -134,7 +133,7 @@ public abstract class Solver {
     public static void dfvsSolveInstance(Instance instance) throws TimeoutException {
 
         //Set instance & branch count
-        Solver.instance = instance;
+        OldSolver.instance = instance;
 
         Graph initialGraph = instance.subGraphs.get(0);
 

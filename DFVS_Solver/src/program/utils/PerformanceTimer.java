@@ -1,6 +1,5 @@
 package program.utils;
 
-import program.algo.Solver;
 import program.log.Log;
 
 public abstract class PerformanceTimer {

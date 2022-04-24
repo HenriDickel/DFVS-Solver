@@ -101,9 +101,13 @@ public class Node {
      * Returns true if node has edges and all of them are double edges
      * @return
      */
-    public boolean onlyDoubleEdges(){
+    public boolean hasOnlyDoubleEdges(){
         return inIds.size() + outIds.size() > 0 && inIds.size() == outIds.size() && inIds.containsAll(outIds) && outIds.containsAll(inIds);
 
+    }
+
+    public boolean hasSelfEdge() {
+        return outIds.contains(id);
     }
 
     @Override
