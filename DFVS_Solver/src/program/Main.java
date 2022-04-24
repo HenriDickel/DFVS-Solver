@@ -93,13 +93,13 @@ public class Main {
     }
 
     private static void testPaceData(){
-        List<GraphFile> files = InstanceCreator.getPaceFiles("e_037");
+        List<GraphFile> files = InstanceCreator.getPaceFiles("e_085");
         files = files.subList(0, 1);
         files.forEach(x -> run(x, true));
     }
 
     private static void exportPaceData(){
-        List<GraphFile> files = InstanceCreator.getPaceFiles("e_037");
+        List<GraphFile> files = InstanceCreator.getPaceFiles("e_087");
         files = files.subList(0, 1);
         files.forEach(Main::reductionExport);
     }
@@ -182,9 +182,10 @@ public class Main {
 
         //Get instance
         Instance instance = InstanceCreator.createFromPaceFile(file);
+        Solver.instance = instance;
 
         //Export original graph
-        Export.ExportGraph(instance, "original");
+        //Export.ExportGraph(instance, "original");
 
         //Reduce
         List<Integer> reduceInit = Reduction.applyRules(instance.subGraphs.get(0), true);

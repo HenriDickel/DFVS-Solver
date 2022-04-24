@@ -1,5 +1,7 @@
 package program.algo;
 
+import program.heuristics.Solver;
+import program.model.AmbiguousResult;
 import program.model.Graph;
 import program.model.Node;
 
@@ -10,16 +12,13 @@ import java.util.stream.Collectors;
 
 public abstract class Reduction {
 
-    public static List<Integer> applyRules(Graph graph, boolean updateAll) {
+    public static List<Integer> applyRules(Graph graph, boolean isInitial) {
 
         //Set updated
-        if(updateAll) graph.setAllNodesUpdated();
+        if(isInitial) graph.setAllNodesUpdated();
 
         //Result
         List<Integer> reduceS = new ArrayList<>();
-
-        //Diamond
-        //reduceS.addAll(diamondCompleteRemove(graph));
 
         List<Integer> updatedNodeIds;
         while (!(updatedNodeIds = graph.getUpdatedNodeIds()).isEmpty()) {
@@ -56,6 +55,40 @@ public abstract class Reduction {
 
                 } else { // Other rules
 
+                    // Check for double chain remove a <-> node <-> other <-> b => a <-> b and S+1
+                    if (isInitial && !node.hasSelfEdge() && node.hasOnlyDoubleEdges() && node.getOutIdCount() == 2) {
+
+                        Node a = graph.getNode(node.getOutIds().get(0));
+                        Node b = graph.getNode(node.getOutIds().get(1));
+
+                        if(a.hasOnlyDoubleEdges() && b.hasOnlyDoubleEdges() && !a.hasSelfEdge() && !b.hasSelfEdge()) {
+
+                            //Log.debugLog(Solver.instance.NAME, "-----------------------Double edge rule: node = " + node.id + ", a = "
+                            //        + a.id + " (" + a.getOutIds() + "), b =" +
+                            //        " " + b.id + " (" + b.getOutIds() + ")");
+
+                            for (Integer outId : b.getOutIds()) {
+                                if(outId.equals(node.id)) continue;
+                                if(a.getOutIds().contains(outId)) continue;
+
+                                Node other = graph.getNode(outId);
+                                a.addOutId(outId);
+                                other.addInId(a.id);
+                                other.addOutId(a.id);
+                                a.addInId(other.id);
+                                other.updated = true;
+                            }
+
+                            // Remove nodes and add to reduceS
+                            graph.removeNode(node.id);
+                            graph.removeNode(b.id);
+                            //reduceS.add(node.id);
+                            Solver.instance.ambigousS.add(new AmbiguousResult(node.id, b.id, a.id));
+                            a.updated = true;
+                            break;
+                        }
+                    }
+
                     // Remove trivial edges on double edge node
                     if (node.getOutIds().stream().anyMatch(x -> node.getInIds().contains(x)) && node.getOutIdCount() != node.getInIdCount()) {
                         List<Integer> ingoing = node.getInIds().stream().filter(x -> !node.getOutIds().contains(x)).collect(Collectors.toList());
@@ -63,10 +96,15 @@ public abstract class Reduction {
                         if (ingoing.size() == 0) {
                             outgoing.forEach(x -> graph.removeEdge(node.id, x));
                             node.updated = true;
+                            // Set all out nodes to updated (on out node the OP rule could be used now)
+                            graph.setAllNodesUpdated(); // TODO dont set the nodes necessary to updated
+
                         }
                         if (outgoing.size() == 0) {
                             ingoing.forEach(x -> graph.removeEdge(x, node.id));
                             node.updated = true;
+                            // Set all out nodes to updated (on out node the OP rule could be used now)
+                            graph.setAllNodesUpdated();
                         }
                     }
 
@@ -85,7 +123,7 @@ public abstract class Reduction {
                         }
                     }
 
-                    // Fully connected quad
+                    // Quad
                     if (node.hasOnlyDoubleEdges() && node.getOutIdCount() == 2) {
                         Node a = graph.getNode(node.getOutIds().get(0));
                         Node b = graph.getNode(node.getOutIds().get(1));
@@ -109,8 +147,8 @@ public abstract class Reduction {
                             }
                         }
                     }
-
-                    // Fully connected pentagon
+/*
+                    // Pentagon
                     if (node.hasOnlyDoubleEdges() && node.getOutIdCount() >= 2) {
                         for(Integer aId: node.getOutIds()) {
                             for(Integer bId: node.getOutIds()) {
@@ -143,7 +181,7 @@ public abstract class Reduction {
                                 }
                             }
                         }
-                    }
+                    }*/
                 }
             }
         }

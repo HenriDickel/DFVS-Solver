@@ -14,6 +14,7 @@ public class Instance {
     // Algorithm variables
     public List<Graph> subGraphs;
     public List<Integer> S = new ArrayList<>(); // Result
+    public List<AmbiguousResult> ambigousS = new ArrayList<>();
 
     // Log variables
     public int startK = 0;
@@ -50,4 +51,12 @@ public class Instance {
         return getCurrentN() == 0 ? 0 : nodes.stream().map(Node::getOutIdCount).reduce(0, Integer::sum);
     }
 
+    public void addAmbiguousResult() {
+        Collections.reverse(ambigousS);
+        for(AmbiguousResult ambiguousResult: ambigousS) {
+            Integer value = ambiguousResult.getValue(S);
+            S.add(value);
+        }
+        ambigousS = new ArrayList<>();
+    }
 }

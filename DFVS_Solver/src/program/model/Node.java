@@ -47,15 +47,15 @@ public class Node {
         return inIds;
     }
 
-    public void addOutId(Integer id) {
-        if(!outIds.contains(id)) {
-            outIds.add(id);
+    public void addOutId(Integer outId) {
+        if(!outIds.contains(outId)) {
+            outIds.add(outId);
         }
     }
 
-    public void addInId(Integer id) {
-        if(!inIds.contains(id)) {
-            inIds.add(id);
+    public void addInId(Integer inId) {
+        if(!inIds.contains(inId)) {
+            inIds.add(inId);
         }
     }
 

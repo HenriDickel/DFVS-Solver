@@ -37,6 +37,10 @@ public class PackingManager {
         return packing;
     }
 
+    public Graph getPackingGraph() {
+        return packingGraph;
+    }
+
     public PackingManager(PackingManager oldPm, List<Integer> deleteIds, List<Integer> forbiddenIds) {
         this.initialNodes = oldPm.initialNodes;
         this.packingGraph = oldPm.packingGraph.copy();
@@ -151,6 +155,10 @@ public class PackingManager {
             Cycle bestPair = null;
             int minMinInOutSum = Integer.MAX_VALUE;
             for(Cycle pair: pairs) {
+                /*if(pair.get(0).getMinInOut() == 1 || pair.get(1).getMinInOut() == 1) {
+                    bestPair = pair;
+                    break;
+                }*/
                 if(bestPair == null || pair.getMinInOutSum() < minMinInOutSum) {
                     minMinInOutSum = pair.getMinInOutSum();
                     bestPair = pair;
@@ -159,6 +167,10 @@ public class PackingManager {
 
             // Look for fully connected triangles, quads etc.
             PackingRules.upgradeFullyConnected(bestPair, packingGraph);
+            /*if(bestPair.size() == 2) {
+                Cycle triangle = PackingRules.checkTriangle(bestPair, packingGraph);
+                if(triangle != null) bestPair = triangle;
+            }*/
 
             for (Node node : bestPair.getNodes()) {
                 packingGraph.removeNode(node.id);

@@ -160,4 +160,42 @@ public abstract class PackingRules {
             }
         }
     }
+
+    public static Cycle checkTriangle(Cycle bestPair, Graph packingGraph) {
+
+        for(Node node: bestPair.getNodes()) {
+            if(node.getInIdCount() < 2 || node.getOutIdCount() < 2 || !node.hasOnlyDoubleEdges()) return null;
+        }
+        for(Node node: bestPair.getNodes()) {
+            if(node.getOutIdCount() < 2) continue;
+
+            Node bestA = null;
+            Node bestB = null;
+            int minInOutSumMin = Integer.MAX_VALUE;
+            for(Integer aId: node.getOutIds()) {
+                if(node.getInIds().contains(aId)) { // check out nodes with double edge
+                    for(Integer bId: node.getOutIds()) {
+                        if(!bId.equals(aId) && node.getInIds().contains(aId)) { // check out nodes with double edge
+                            Node a = packingGraph.getNode(aId);
+                            if(a.getOutIds().contains(bId) && a.getInIds().contains(bId)) {
+                                Node b = packingGraph.getNode(bId);
+
+                                if(a.getMinInOut() + b.getMinInOut() < minInOutSumMin) {
+                                    bestA = a;
+                                    bestB = b;
+                                    minInOutSumMin = a.getMinInOut() + b.getMinInOut();
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            if(bestA != null) {
+                Cycle triangle = new Cycle(node, bestA, bestB);
+                triangle.setK(2);
+                return triangle;
+            }
+        }
+        return null;
+    }
 }

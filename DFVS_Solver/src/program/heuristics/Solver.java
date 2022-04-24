@@ -53,6 +53,8 @@ public abstract class Solver {
             List<Integer> S = dfvsSolveIncremental(subGraph, nodePercentage);
             instance.S.addAll(S);
         }
+        instance.addAmbiguousResult();
+
     }
 
     public static List<Integer> dfvsSolveIncremental(Graph graph, float nodePercentage) {
@@ -110,70 +112,6 @@ public abstract class Solver {
         return S;
     }
 
-    public static List<Integer> dfvsSolveBinary(Graph graph, float nodePercentage) {
-
-        // Calculate cycle packing
-        PerformanceTimer.start();
-        long packingTimeLimit = (long) (10000L * nodePercentage);
-        Log.debugLog(instance.NAME, "Creating cycle packing with time limit = " + packingTimeLimit);
-        PackingManager pm = new PackingManager(graph, packingTimeLimit);
-        PerformanceTimer.log(PerformanceTimer.MethodType.PACKING);
-        instance.packingSize += pm.size();
-
-        // Calculate heuristic
-        PerformanceTimer.start();
-        long heuristicTimeLimit = (long) (1000L * nodePercentage);
-        Log.debugLog(instance.NAME, "Creating heuristic with time limit = " + heuristicTimeLimit);
-        List<Integer> heuristicS = GraphTimerFast(graph, heuristicTimeLimit, 0.95f, pm.size());
-        PerformanceTimer.log(PerformanceTimer.MethodType.HEURISTIC);
-        Log.debugLog(instance.NAME, "Solution lies in [" + pm.size() + ", " + heuristicS.size() + "]");
-
-
-        int lowerBound = pm.size();
-        int upperBound = heuristicS.size();
-        List<Integer> S;
-        if(pm.size()==upperBound){
-            return heuristicS;
-        }else{
-            S = dfvsBranch(graph, upperBound-1, 0, pm);
-            if(S==null){
-                return heuristicS;
-            }else{
-                upperBound-=1;
-                currentK = (lowerBound+upperBound)/2;
-                S = null;
-                List<Integer> lastFoundS = heuristicS;
-                Log.debugLogNoBreak(instance.NAME, "Branching with k =");
-                while (S == null) {
-                    Log.debugLogAdd(" " + currentK, false);
-                    S = dfvsBranch(graph, currentK, 0, pm);
-                    if (S == null) {
-                        lowerBound= currentK;
-                    }else{
-                        lastFoundS=S;
-                        S = null;
-                        upperBound = currentK;
-                    }
-                    if(upperBound==lowerBound){
-                        return lastFoundS;
-                    }
-                    if(upperBound-lowerBound==1){
-                        List<Integer> lowerBoundS = dfvsBranch(graph, lowerBound, 0, pm);
-                        if(lowerBoundS == null){
-                            return lastFoundS;
-                        }else{
-                            return lowerBoundS;
-                        }
-                    }
-                    currentK= (lowerBound+upperBound)/2;
-                }
-            }
-            Log.debugLogAdd("", true);
-            return S;
-        }
-
-    }
-
     private static List<Integer> dfvsBranch(Graph graph, int k, int level, PackingManager pm) throws TimeoutException {
 
         if(Timer.isTimeout()) throw new TimeoutException();
@@ -198,7 +136,6 @@ public abstract class Solver {
         for (Node node: cycle.getNodes()) {
 
             if(Timer.isTimeout()) throw new TimeoutException();
-            //System.out.println("remove node " + node);
             // Create a copy of the graph and remove deleted & forbidden nodes
             PerformanceTimer.start();
             Graph copy = graph.copy();
@@ -241,7 +178,6 @@ public abstract class Solver {
             }
 
             // Recursive call
-            //System.out.println("branch on level " + level);
             List<Integer> S = dfvsBranch(copy, nextK, level + 1, newPm);
             if (S != null) {
                 S.add(node.id);
