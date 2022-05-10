@@ -39,7 +39,7 @@ public abstract class Solver {
         }
 
         instance.preRemovedNodes = instance.N - instance.subGraphs.stream().mapToInt(Graph::getNodeCount).sum();
-        instance.startK = instance.S.size();
+        instance.startK = instance.S.size() + instance.ambigousS.size();
         Log.debugLog(instance.NAME, "Removed " + instance.preRemovedNodes + " nodes in preprocessing, starting with k = " + instance.startK);
         PerformanceTimer.log(PerformanceTimer.MethodType.PREPROCESSING);
 
@@ -49,7 +49,7 @@ public abstract class Solver {
             //Check if there is no cycle
             if(DAG.isDAGFast(subGraph)) continue;
 
-            float nodePercentage = (float) subGraph.getNodeCount() / initialGraph.getNodeCount();
+            float nodePercentage = (float) subGraph.getNodeCount() / instance.getCurrentN();
             List<Integer> S = dfvsSolveIncremental(subGraph, nodePercentage);
             instance.S.addAll(S);
         }
@@ -64,6 +64,7 @@ public abstract class Solver {
         long packingTimeLimit = (long) (1000L * nodePercentage);
         Log.debugLog(instance.NAME, "Creating cycle packing with time limit = " + packingTimeLimit);
         PackingManager pm = new PackingManager(graph, packingTimeLimit);
+        List<Cycle> initialPacking = new ArrayList<>(pm.getPacking());
         PerformanceTimer.log(PerformanceTimer.MethodType.PACKING);
         instance.packingSize += pm.size();
 
@@ -109,7 +110,36 @@ public abstract class Solver {
             }
         }
         Log.debugLogAdd("", true);
+        List<Integer> finalS = new ArrayList<>(S);
+        //validatePacking(initialPacking, finalS);
         return S;
+    }
+
+    private static void validatePacking(List<Cycle> initialPacking, List<Integer> finalS) {
+
+        System.out.println("Packing: " + initialPacking);
+        Collections.sort(finalS);
+        System.out.println("S: " + finalS);
+
+        for(Cycle cycle: initialPacking) {
+            List<Integer> contained = new ArrayList<>();
+            for(Node node: cycle.getNodes()) {
+                if(finalS.contains(node.id)) {
+                    contained.add(node.id);
+                }
+            }
+            if(contained.size() > cycle.getK()) {
+                System.out.println("Found bad packed cycle: " + cycle + ", nodes in S: " + contained);
+            }
+        }
+
+        outer:
+        for(Integer nodeId: finalS) {
+            for(Cycle cycle: initialPacking) {
+                if(cycle.containsId(nodeId)) continue outer;
+            }
+            System.out.println("Didn't find node " + nodeId + " in packing");
+        }
     }
 
     private static List<Integer> dfvsBranch(Graph graph, int k, int level, PackingManager pm) throws TimeoutException {

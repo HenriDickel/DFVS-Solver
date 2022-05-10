@@ -38,6 +38,24 @@ public class Graph {
         return nodes.values().stream().map(Node::getOutIdCount).mapToInt(Integer::valueOf).sum();
     }
 
+    public Cycle getBestPairCycle() {
+        Cycle bestPair = null;
+        for (Node node : getNodes()) {
+            for(Integer outId: node.getOutIds()) {
+                if(node.getInIds().contains(outId)) {
+                    Node out = getNode(outId);
+                    Cycle pair = new Cycle(node, out);
+                    if(node.getMinInOut() == 1 ||out.getMinInOut() == 1) {
+                        return pair;
+                    } else if(bestPair == null || pair.getMinInOutSum() < bestPair.getMinInOutSum()) {
+                        bestPair = pair;
+                    }
+                }
+            }
+        }
+        return bestPair;
+    }
+
     public Cycle getFirstPairCycle() {
         for (Node node : getNodes()) {
             for(Integer outId: node.getOutIds()) {

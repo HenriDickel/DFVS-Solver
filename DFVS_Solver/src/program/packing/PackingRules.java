@@ -4,6 +4,11 @@ import program.model.Cycle;
 import program.model.Graph;
 import program.model.Node;
 
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+import java.util.stream.Collectors;
+
 public abstract class PackingRules {
 
 
@@ -48,10 +53,11 @@ public abstract class PackingRules {
         Node bestNode = null;
         while(upgrade) {
             upgrade = false;
-            for(Integer outId: a.getOutIds()) {
-                if(pair.isFullyConnected(outId)) {
-                    Node out = packingGraph.getNode(outId);
-                    if(bestNode == null || out.getMinInOut() < bestNode.getMinInOut()) {
+            List<Node> outNodes = a.getOutIds().stream().map(packingGraph::getNode).collect(Collectors.toList());
+            outNodes.sort(Comparator.comparing(Node::getMinInOut));
+            for(Node out: outNodes) {
+                if(pair.isFullyConnected(out.id)) {
+                    if(bestNode == null) {
                         bestNode = out;
                     }
                 }
@@ -197,5 +203,61 @@ public abstract class PackingRules {
             }
         }
         return null;
+    }
+
+    // Upgrade to cycle a-b-c-d-e
+    public static void upgradeCycleOfFive(Cycle bestPair, Graph packingGraph) {
+        Node a = bestPair.get(0);
+        Node b = bestPair.get(1);
+        for(Integer cId: b.getOutIds()) {
+            if(cId.equals(a.id)) continue;
+            if(!b.getInIds().contains(cId)) continue;
+            Node c = packingGraph.getNode(cId);
+            if(c.getMinInOut() > 4)  continue;
+            for(Integer dId: c.getOutIds()) {
+                if (dId.equals(a.id) || dId.equals(b.id)) continue;
+                if (!c.getInIds().contains(dId)) continue;
+                Node d = packingGraph.getNode(dId);
+                if(d.getMinInOut() > 4)  continue;
+                for (Integer eId : d.getOutIds()) {
+                    if (eId.equals(a.id) || eId.equals(b.id) || eId.equals(cId)) continue;
+                    if (!d.getInIds().contains(eId)) continue;
+                    if (a.getInIds().contains(eId) && a.getOutIds().contains(eId)) {
+                        Node e = packingGraph.getNode(eId);
+                        if(e.getMinInOut() > 4)  continue;
+                        bestPair.add(c);
+                        bestPair.add(d);
+                        bestPair.add(e);
+                        bestPair.setK(3);
+                        return;
+                    }
+                }
+            }
+        }
+    }
+
+    public static Cycle lookForFullyConnected(Cycle bestPair, Graph packingGraph) {
+        Node a = bestPair.get(0);
+        Node b = bestPair.get(1);
+        Cycle upgrade = bestPair;
+        for(Integer outId: a.getOutIds()) {
+            if(outId.equals(b.id)) continue;
+            if(!a.getInIds().contains(outId)) continue;
+            Node other = packingGraph.getNode(outId);
+            Cycle pair = new Cycle(a, other);
+            upgradeFullyConnected(pair, packingGraph);
+            if(pair.getK() > upgrade.getK()) upgrade = pair;
+            else if(pair.getMinInOutSum() < upgrade.getMinInOutSum()) upgrade = pair;
+        }
+        for(Integer outId: b.getOutIds()) {
+            if(outId.equals(a.id)) continue;
+            if(!b.getInIds().contains(outId)) continue;
+            Node other = packingGraph.getNode(outId);
+            Cycle pair = new Cycle(b, other);
+            upgradeFullyConnected(pair, packingGraph);
+            if(pair.getK() > upgrade.getK()) upgrade = pair;
+            else if(pair.getMinInOutSum() < upgrade.getMinInOutSum()) upgrade = pair;
+        }
+        return upgrade;
     }
 }

@@ -11,42 +11,58 @@ public abstract class FullBFS {
 
     public static Cycle findBestCycle(Graph graph) {
 
-        List<Cycle> minCycles = graph.getPairCycles();
-
-        // When there are no cycles of size 2, look for shortest cycles with BFS
-        if(minCycles.size() == 0) {
-            // Find nodes with highest minInOut
-            int maxMinInOut = 0;
-            List<Node> maxMinInOutNodes = new ArrayList<>();
-            for(Node node: graph.getNodes()) {
-                if(node.getMinInOut() > maxMinInOut) {
-                    maxMinInOutNodes.clear();
-                    maxMinInOutNodes.add(node);
-                    maxMinInOut = node.getMinInOut();
-                } else if(node.getMinInOut() == maxMinInOut) {
-                    maxMinInOutNodes.add(node);
-                }
+        Node maxNode = null;
+        for(Node node: graph.getNodes()) {
+            if(maxNode == null || node.getFullyConnectedIds().size() >= maxNode.getFullyConnectedIds().size()) {
+                maxNode = node;
             }
-
-            // Find shortest cycles for minInOut
-            int minSize = Integer.MAX_VALUE;
-            minCycles = new ArrayList<>();
-            for(Node node: maxMinInOutNodes) {
-
-                Cycle cycle = SimpleBFS.findBestCycle(graph, node, minSize);
-                if(cycle != null) {
-                    minCycles.add(cycle);
-                    minSize = cycle.size();
-                }
-            }
-            if(minCycles.size() == 0) {
-                return findShortestCycle(graph);
-            }
-
-            // Filter out all cycles which are longer than the min size
-            final int finalMinSize = minSize;
-            minCycles = minCycles.stream().filter(cycle -> cycle.size() == finalMinSize).collect(Collectors.toList());
         }
+        List<Integer> pairNodes = maxNode.getFullyConnectedIds();
+        if(pairNodes != null) {
+
+            Node maxPairNode = null;
+            for(Integer otherId: pairNodes) {
+                Node other = graph.getNode(otherId);
+                if(maxPairNode == null || other.getMinInOut() >= maxPairNode.getMinInOut()) {
+                    maxPairNode = other;
+                }
+            }
+            Cycle pair = new Cycle(maxNode, maxPairNode);
+            return pair;
+        }
+
+        List<Cycle> minCycles = new ArrayList<>();
+        // Find nodes with highest minInOut
+        int maxMinInOut = 0;
+        List<Node> maxMinInOutNodes = new ArrayList<>();
+        for(Node node: graph.getNodes()) {
+            if(node.getMinInOut() > maxMinInOut) {
+                maxMinInOutNodes.clear();
+                maxMinInOutNodes.add(node);
+                maxMinInOut = node.getMinInOut();
+            } else if(node.getMinInOut() == maxMinInOut) {
+                maxMinInOutNodes.add(node);
+            }
+        }
+
+        // Find shortest cycles for minInOut
+        int minSize = Integer.MAX_VALUE;
+        minCycles = new ArrayList<>();
+        for(Node node: maxMinInOutNodes) {
+
+            Cycle cycle = SimpleBFS.findBestCycle(graph, node, minSize);
+            if(cycle != null) {
+                minCycles.add(cycle);
+                minSize = cycle.size();
+            }
+        }
+        if(minCycles.size() == 0) {
+            return findShortestCycle(graph);
+        }
+
+        // Filter out all cycles which are longer than the min size
+        final int finalMinSize = minSize;
+        minCycles = minCycles.stream().filter(cycle -> cycle.size() == finalMinSize).collect(Collectors.toList());
 
         // Find the cycle with the highest minInOut sum
         double maxMinInOutSum = 0;
@@ -64,11 +80,8 @@ public abstract class FullBFS {
         }
 
         // Sort nodes in cycle
-        //bestCycle.getNodes().sort(Comparator.comparing(Node::getMinInOut));
-        //Collections.reverse(bestCycle.getNodes());
-
-        //Sort
-        bestCycle.getNodes().sort(Comparator.comparing(Node::getDoubleEdges));
+        bestCycle.getNodes().sort(Comparator.comparing(Node::getMinInOut));
+        Collections.reverse(bestCycle.getNodes());
 
         return bestCycle;
     }

@@ -9,7 +9,7 @@ import java.util.List;
 
 public abstract class SimpleSolver {
 
-    private static List<Cycle> dfvsBranch(Graph graph, int k) {
+    private static List<Integer> dfvsBranch(Graph graph, int k) {
 
         // Break to skip the redundant dfvs_branch()-call when k = 0
         if (k <= 0) {
@@ -31,9 +31,9 @@ public abstract class SimpleSolver {
             //if(nextK < 0) continue;
 
             // Recursive call
-            List<Cycle> S = dfvsBranch(copy, k - 1);
+            List<Integer> S = dfvsBranch(copy, k - 1);
             if (S != null) {
-                S.add(cycle);
+                S.add(node.id);
                 return S;
             }
             forbiddenIds.add(node.id);
@@ -41,10 +41,10 @@ public abstract class SimpleSolver {
         return null;
     }
 
-    public static List<Cycle> dfvsSolve(Graph initialGraph) {
+    public static List<Integer> dfvsSolve(Graph initialGraph) {
 
         int k = 0;
-        List<Cycle> S = null;
+        List<Integer> S = null;
         while (S == null) {
             S = dfvsBranch(initialGraph, k);
             k++;

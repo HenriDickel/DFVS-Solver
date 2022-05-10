@@ -2,6 +2,7 @@ package program.model;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Node {
 
@@ -35,8 +36,14 @@ public class Node {
     public Boolean acyclic = false;
     public Boolean pNew = false;
 
+    public Boolean marked = false;
+
     public Node(Integer id) {
         this.id = id;
+    }
+
+    public List<Integer> getFullyConnectedIds() {
+        return outIds.stream().filter(inIds::contains).collect(Collectors.toList());
     }
 
     public List<Integer> getOutIds() {
@@ -79,6 +86,12 @@ public class Node {
         return Math.min(inIds.size(), outIds.size());
     }
 
+    public Integer getBestDoubleEdge() {
+        List<Integer> fullyConnected = outIds.stream().filter(inIds::contains).collect(Collectors.toList());
+        if(fullyConnected.size() > 0) return fullyConnected.get(0);
+        else return null;
+    }
+
     public int getDoubleEdges(){
         return (int) outIds.stream().filter(inIds::contains).count();
     }
@@ -104,6 +117,10 @@ public class Node {
     public boolean hasOnlyDoubleEdges(){
         return inIds.size() + outIds.size() > 0 && inIds.size() == outIds.size() && inIds.containsAll(outIds) && outIds.containsAll(inIds);
 
+    }
+
+    public boolean hasDoubleEdge(Integer otherId) {
+        return inIds.contains(otherId) && outIds.contains(otherId);
     }
 
     public boolean hasSelfEdge() {

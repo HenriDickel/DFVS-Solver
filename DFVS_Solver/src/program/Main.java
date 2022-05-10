@@ -2,8 +2,11 @@ package program;
 
 import program.algo.*;
 import program.heuristics.Solver;
+import program.ilp.ILPSolver;
+import program.ilp.ILPSolverVertexCover;
 import program.log.Log;
 import program.model.*;
+import program.packing.PackingManager;
 import program.utils.*;
 import program.utils.TimeoutException;
 import program.utils.Timer;
@@ -26,7 +29,8 @@ public class Main {
             Instance instance = InstanceCreator.createPaceInstanceFromSystemIn();
 
             // Solve
-            Solver.dfvsSolveInstance(instance);
+            //Solver.dfvsSolveInstance(instance);
+            ILPSolver.solve(instance);
 
             // Print solution
             for(Integer nodeId : instance.S){
@@ -38,14 +42,16 @@ public class Main {
             Log.Clear();
             Log.ignore = false;
 
-            testPaceDataLite();
+            //testPaceDataLite();
             //testPaceData();
+            //testPacePacking();
             //testCorrectness();
             //exportPaceData();
 
             //testCorrectness();
             //testReduction();
             //paceReduction();
+            vertexCoverILP();
 
             //List<GraphFile> files = InstanceCreator.getComplexAndSyntheticFiles(Dataset.DATASET_3, null);
             //List<GraphFile> files = InstanceCreator.getSelectedFiles();
@@ -55,6 +61,7 @@ public class Main {
 
             //files.forEach(Main::reductionExport);
             //files.forEach(x -> run(x, true));
+            //files.forEach(x -> run(x, false));
         }
     }
 
@@ -93,13 +100,13 @@ public class Main {
     }
 
     private static void testPaceData(){
-        List<GraphFile> files = InstanceCreator.getPaceFiles("e_085");
+        List<GraphFile> files = InstanceCreator.getPaceFiles("e_087");
         files = files.subList(0, 1);
         files.forEach(x -> run(x, true));
     }
 
     private static void exportPaceData(){
-        List<GraphFile> files = InstanceCreator.getPaceFiles("e_087");
+        List<GraphFile> files = InstanceCreator.getPaceFiles("e_085");
         files = files.subList(0, 1);
         files.forEach(Main::reductionExport);
     }
@@ -110,12 +117,13 @@ public class Main {
     }
 
     private static void paceReduction() {
-        List<GraphFile> files = InstanceCreator.getPaceFiles("e_003");
+        List<GraphFile> files = InstanceCreator.getPaceFiles("e_089");
         files = files.subList(0, 1);
 
         for(GraphFile file: files) {
 
             Instance instance = InstanceCreator.createFromPaceFile(file);
+            Solver.instance = instance;
 
             // Apply reduction rules once
             Log.debugLog(instance.NAME, "Applying reduction rules...");
@@ -132,9 +140,45 @@ public class Main {
                 List<Integer> reduceSubS = Reduction.applyRules(subGraph, true);
                 instance.S.addAll(reduceSubS);
             }
+            Log.debugLog(instance.NAME, "Reduced node count from " + instance.N + " to " + instance.getCurrentN());
+            Log.debugLog(instance.NAME, "Reduced edge count from " + instance.M + " to " + instance.getCurrentM());
 
             Log.paceLog(instance, 0L, instance.getCurrentN(), instance.getCurrentM(), instance.S.size(), 0, 0);
         }
+    }
+
+    private static void testPacePacking() {
+        List<GraphFile> files = InstanceCreator.getPaceFiles("e_085");
+        files = files.subList(0, 3);
+
+        int packingSize = 0;
+        int packingSizeAgg = 0;
+        for(GraphFile file: files) {
+
+            Instance instance = InstanceCreator.createFromPaceFile(file);
+            Solver.instance = instance;
+
+            // Apply reduction rules once
+            List<Integer> reduceS = Reduction.applyRules(instance.subGraphs.get(0), true);
+            instance.S.addAll(reduceS);
+
+            // Create sub graphs
+            instance.subGraphs = Preprocessing.findCyclicSubGraphs(instance.subGraphs.get(0));
+
+            // Apply reduction rules again
+            for(Graph subGraph: instance.subGraphs) {
+                List<Integer> reduceSubS = Reduction.applyRules(subGraph, true);
+                instance.S.addAll(reduceSubS);
+                PackingManager pm = new PackingManager(subGraph, 1000L);
+                packingSize = pm.size();
+            }
+            Log.debugLog(instance.NAME, "|N| = " + instance.getCurrentN() + ", |M| = " + instance.getCurrentM());
+            Log.debugLog(instance.NAME, "Packing size = " + packingSize);
+            packingSizeAgg += packingSize;
+
+            Log.paceLog(instance, 0L, instance.getCurrentN(), instance.getCurrentM(), instance.S.size(), packingSize, 0);
+        }
+        System.out.println("Average packing size = " + packingSizeAgg / 3f);
     }
 
     private static void testReduction() {
@@ -204,7 +248,7 @@ public class Main {
 
     private static void run(GraphFile file, boolean isPaceData) {
 
-        Timer.start(90);
+        Timer.start(60);
         PerformanceTimer.reset();
 
         PerformanceTimer.start();
@@ -226,13 +270,82 @@ public class Main {
             PerformanceTimer.printResult(instance.NAME);
 
         } catch (TimeoutException e) {
-            instance.solvedK = instance.S.size() + Solver.currentK;
+            instance.solvedK = instance.S.size() + Solver.currentK + instance.ambigousS.size();
 
             // Log results
             Log.debugLogAdd("", true);
             Log.mainLog(instance, Timer.getMillis(), PerformanceTimer.getPackingMillis(), false);
-            Log.debugLog(instance.NAME, "Found no solution in " + Timer.getMillis() + " ms (recursive steps: " + instance.recursiveSteps + ")", Color.RED);
+            Log.debugLog(instance.NAME, "Found no solution with k = " + instance.solvedK + " in " + Timer.getMillis() + " ms (recursive steps: " + instance.recursiveSteps + ")", Color.RED);
             PerformanceTimer.printResult(instance.NAME);
         }
+    }
+
+    private static void vertexCoverILP() {
+        List<GraphFile> files = InstanceCreator.getPaceFiles(null);
+        //files = files.subList(0, 50);
+
+        List<GraphFile> solved = new ArrayList<>();
+        List<GraphFile> unsolved = new ArrayList<>();
+        for(int i = 0; i < files.size(); i++) {
+            GraphFile file = files.get(i);
+            Timer.start(90);
+            PerformanceTimer.reset();
+
+            PerformanceTimer.start();
+            Instance instance = InstanceCreator.createFromPaceFile(file);
+            Solver.instance = instance;
+            PerformanceTimer.log(PerformanceTimer.MethodType.FILE);
+
+            // Apply reduction rules once
+            Log.debugLog(instance.NAME + " (" + (i + 1) + ")", "Applying reduction rules...");
+            List<Integer> reduceS = Reduction.applyRules(instance.subGraphs.get(0), true);
+            instance.S.addAll(reduceS);
+
+            // Create sub graphs
+            Log.debugLog(instance.NAME + " (" + (i + 1) + ")", "Applying Tarjan...");
+            instance.subGraphs = Preprocessing.findCyclicSubGraphs(instance.subGraphs.get(0));
+
+            // Apply reduction rules again
+            Log.debugLog(instance.NAME + " (" + (i + 1) + ")", "Applying reduction rules again...");
+            for(Graph subGraph: instance.subGraphs) {
+                List<Integer> reduceSubS = Reduction.applyRules(subGraph, true);
+                instance.S.addAll(reduceSubS);
+            }
+
+            try {
+                for(Graph subGraph: instance.subGraphs) {
+
+                    // Count edges in subgraph
+                    int singleEdgeCount = 0;
+                    for(Node node: subGraph.getNodes()) {
+                        for(Integer outId: node.getOutIds()) {
+                            if(!node.getInIds().contains(outId)) {
+                                singleEdgeCount++;
+                            }
+                        }
+                    }
+                    //Log.debugLog(instance.NAME + " (" + (i + 1) + ")", "Single edge count: " + singleEdgeCount + "/" + subGraph.getEdgeCount());
+
+                    // Solve with ILP
+                    //Log.debugLog(instance.NAME + " (" + (i + 1) + ")", "Call Gurobi for subgraph with |N| = " + subGraph.getNodeCount() + ", |M| = " + subGraph.getEdgeCount());
+                    List<Integer> S = new ILPSolverVertexCover(subGraph, 90).solve(instance);
+                    instance.S.addAll(S);
+                }
+
+                // Add nodes that were ambiguous to result
+                instance.addAmbiguousResult();
+                Log.debugLog(instance.NAME + " (" + (i + 1) + ")", "Found solution k = " + instance.S.size() + " in " + Timer.getMillis() + " ms (recursive steps: " + instance.recursiveSteps + ")", Color.PURPLE);
+                solved.add(file);
+            } catch(TimeoutException e) {
+
+                // Log results
+                Log.mainLog(instance, Timer.getMillis(), PerformanceTimer.getPackingMillis(), false);
+                Log.debugLog(instance.NAME + " (" + (i + 1) + ")", "Found no solution in " + Timer.getMillis() + " ms (recursive steps: " + instance.recursiveSteps + ")", Color.RED);
+                unsolved.add(file);
+            }
+        }
+
+        System.out.println("Solved " + solved.size() + "/" + files.size() + " instances");
+        System.out.println("Unsolved: " + unsolved);
     }
 }

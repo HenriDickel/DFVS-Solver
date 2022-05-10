@@ -51,11 +51,28 @@ public class Cycle extends Component {
         return minInOutSum;
     }
 
+    public boolean isConnected(Integer otherId) {
+        if(containsId(otherId)) return false;
+        for(Node node: nodes) {
+            if(node.getOutIds().contains(otherId) && node.getInIds().contains(otherId)) return true;
+        }
+        return false;
+    }
+
     public boolean isFullyConnected(Integer otherId) {
         for(Node node: nodes) {
             if(node.id.equals(otherId)) return false;
             if(!node.getOutIds().contains(otherId)) return false;
             if(!node.getInIds().contains(otherId)) return false;
+        }
+        return true;
+    }
+
+    public boolean isClique() {
+        for(Node a: nodes) {
+            for(Node b: nodes) {
+                if(!a.equals(b) && !a.getOutIds().contains(b.id)) return false;
+            }
         }
         return true;
     }

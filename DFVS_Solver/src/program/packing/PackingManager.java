@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class PackingManager {
 
@@ -133,6 +134,8 @@ public class PackingManager {
         // Fill the packing with pair cycles
         fillPackingWithPairs();
 
+        improvePairPacking();
+
         // Initialize the map with the best cycle for each node
         for(Node node: packingGraph.getNodes()) {
             Cycle cycle = PackingBFS.findBestCycle(packingGraph, node);
@@ -147,45 +150,219 @@ public class PackingManager {
         fillPackingWithCycles(endMillis);
     }
 
-    private void fillPackingWithPairs() {
+    private Cycle getPackingCycle(Integer nodeId) {
+        for(Cycle cycle: packing) {
+            if (cycle.containsId(nodeId)) {
+                return cycle;
+            }
+        }
+        return null;
+    }
 
-        List<Cycle> pairs = packingGraph.getPairCycles();
-        while(!pairs.isEmpty()) {
+    private Cycle getICycle(Cycle cycle) {
+        Cycle iCycle = new Cycle();
+        for (Node node : cycle.getNodes()) {
+            iCycle.add(initialNodes.get(node.id));
+        }
+        iCycle.setK(cycle.getK());
+        return iCycle;
+    }
 
-            Cycle bestPair = null;
-            int minMinInOutSum = Integer.MAX_VALUE;
-            for(Cycle pair: pairs) {
-                /*if(pair.get(0).getMinInOut() == 1 || pair.get(1).getMinInOut() == 1) {
-                    bestPair = pair;
-                    break;
-                }*/
-                if(bestPair == null || pair.getMinInOutSum() < minMinInOutSum) {
-                    minMinInOutSum = pair.getMinInOutSum();
-                    bestPair = pair;
+    private void improvePairPacking() {
+
+        int remainingNodeSize = 0;
+        while(remainingNodeSize != packingGraph.getNodeCount()) {
+            remainingNodeSize = packingGraph.getNodeCount();
+
+            Node remove = null;
+            Cycle cycle1 = null;
+            Cycle cycle2 = null;
+            mainloop:
+            for(Node node: packingGraph.getNodes()) {
+                Node iNode = initialNodes.get(node.id);
+
+                List<Cycle> iCycles = new ArrayList<>();
+                for(Integer otherId: iNode.getFullyConnectedIds()) {
+                    if(iCycles.stream().noneMatch(e -> e.containsId(otherId))) {
+                        Cycle cycle = getPackingCycle(otherId);
+                        if(cycle != null) {
+                            Cycle iCycle = getICycle(cycle);
+                            if(iCycle.isClique()) {
+                                iCycles.add(iCycle);
+                            }
+                        }
+                    }
+                }
+
+                for(Cycle iCycle: iCycles) {
+                    for(Node cNode: iCycle.getNodes()) {
+                        cNode.marked = false;
+                        if(iNode.hasDoubleEdge(cNode.id)) { // mark all nodes connected to iNode
+                            cNode.marked = true;
+                        }
+                    }
+                }
+
+                for(Cycle iCycle: iCycles) {
+                    List<Node> unmarked = iCycle.getNodes().stream().filter(e -> !e.marked).collect(Collectors.toList());
+                    if(unmarked.size() == 1) {
+                        for(Cycle iCycle2: iCycles) {
+                            if(iCycle2.equals(iCycle)) continue;
+                            List<Node> unmarked2 = iCycle2.getNodes().stream().filter(e -> !e.marked).collect(Collectors.toList());
+
+                            if(unmarked2.size() == 1) {
+                                Node a = unmarked.get(0);
+                                Node b = unmarked2.get(0);
+                                if(a.hasDoubleEdge(b.id)) {
+                                    remove = node;
+                                    cycle1 = getPackingCycle(a.id);
+                                    cycle2 = getPackingCycle(b.id);
+                                    break mainloop;
+                                }
+                            }
+                        }
+                    }
                 }
             }
 
-            // Look for fully connected triangles, quads etc.
-            PackingRules.upgradeFullyConnected(bestPair, packingGraph);
-            /*if(bestPair.size() == 2) {
-                Cycle triangle = PackingRules.checkTriangle(bestPair, packingGraph);
-                if(triangle != null) bestPair = triangle;
-            }*/
+            if(remove != null && cycle1 != null && cycle2 != null) {
+                packingGraph.removeNode(remove.id);
+                packing.remove(cycle1);
+                packing.remove(cycle2);
+
+                Cycle newCycle = new Cycle(remove);
+                newCycle.addAll(cycle1.getNodes());
+                newCycle.addAll(cycle2.getNodes());
+                newCycle.setK(cycle1.getK() + cycle2.getK() + 1);
+                packing.add(newCycle);
+            }
+        }
+    }
+
+    /**
+     * Improve packing by merging two pairs to a cycle of 5
+     */
+    private void improvePacking2() {
+        for(Cycle cycle: packing) {
+            if(cycle.size() > 2) continue;
+
+            // Create the initial cycle
+            Cycle iCycle = new Cycle();
+            for(Node node: cycle.getNodes()) {
+                iCycle.add(initialNodes.get(node.id));
+            }
+            Node a = iCycle.get(0);
+            Node b = iCycle.get(1);
+
+            Cycle mergeCycle = null;
+            Node mergeNode = null;
+
+            loop:
+            for(Node remainingNode: packingGraph.getNodes()) {
+                if(a.hasDoubleEdge(remainingNode.id)) {
+                    Node iRemainingNode = initialNodes.get(remainingNode.id);
+                    for(Integer outId: iRemainingNode.getFullyConnectedIds()) {
+                        if(outId.equals(a.id) || outId.equals(b.id)) continue;
+
+                        for(Cycle otherCycle: packing) {
+                            if(otherCycle.containsId(outId)) {
+                                if(otherCycle.size() > 2) break;
+
+                                Integer otherId = (otherCycle.get(0).id.equals(outId)) ? otherCycle.get(1).id : otherCycle.get(0).id;
+
+                                if(b.hasDoubleEdge(otherId)) {
+                                    mergeCycle = otherCycle;
+                                    mergeNode = remainingNode;
+                                    break loop;
+                                }
+                            }
+                        }
+                    }
+                } else if (b.hasDoubleEdge(remainingNode.id)) {
+                    Node iRemainingNode = initialNodes.get(remainingNode.id);
+                    for(Integer outId: iRemainingNode.getFullyConnectedIds()) {
+                        if(outId.equals(a.id) || outId.equals(b.id)) continue;
+
+                        for(Cycle otherCycle: packing) {
+                            if(otherCycle.containsId(outId)) {
+                                if(otherCycle.size() > 2) break;
+
+                                Integer otherId = (otherCycle.get(0).id.equals(outId)) ? otherCycle.get(1).id : otherCycle.get(0).id;
+
+                                if(a.hasDoubleEdge(otherId)) {
+                                    mergeCycle = otherCycle;
+                                    mergeNode = remainingNode;
+                                    break loop;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            if(mergeCycle != null) {
+                System.out.println("Merge found");
+            }
+        }
+    }
+
+    private void tryImprovePacking() {
+        for(Cycle cycle: packing) {
+            Cycle initialCycle = new Cycle();
+            for(Node node: cycle.getNodes()) {
+                initialCycle.add(initialNodes.get(node.id));
+            }
+
+            for(Node other: initialNodes.values()) {
+                if(initialCycle.contains(other)) continue;
+
+                if(initialCycle.isConnected(other.id)) {
+
+                    for(Cycle otherCycle: packing) {
+                        if(otherCycle.containsId(other.id)) {
+
+                            for(Node node: otherCycle.getNodes()) {
+                                initialCycle.add(initialNodes.get(node.id));
+                            }
+
+                            Graph merge = new Graph();
+                            for(Node node: initialCycle.getNodes()) {
+                                for(Integer outId: node.getOutIds()) {
+                                    if(initialCycle.containsId(outId)) {
+                                        merge.addArc(node.id, outId);
+                                    }
+                                }
+                            }
+                            List<Integer> S = SimpleSolver.dfvsSolve(merge);
+                            if(S.size() > cycle.getK() + otherCycle.getK()) {
+                                System.out.println("Upgrade found!");
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    private void fillPackingWithPairs() {
+
+        Cycle bestPair;
+        while((bestPair = packingGraph.getBestPairCycle()) != null) {
+
+            if(bestPair.get(0).getMinInOut() > 1 && bestPair.get(1).getMinInOut() > 1) {
+                // Look for fully connected triangles, quads etc.
+                PackingRules.upgradeFullyConnected(bestPair, packingGraph);
+
+                if(bestPair.size() == 2) {
+                    Cycle upgrade = PackingRules.lookForFullyConnected(bestPair, packingGraph);
+                    if(upgrade != null) bestPair = upgrade;
+                }
+            }
 
             for (Node node : bestPair.getNodes()) {
                 packingGraph.removeNode(node.id);
             }
             packing.add(bestPair);
-
-            List<Cycle> removePairs = new ArrayList<>();
-            for(Cycle pair: pairs) {
-                if(!packingGraph.hasNode(pair.get(0).id) || !packingGraph.hasNode(pair.get(1).id)) {
-                    removePairs.add(pair);
-                }
-            }
-            for(Cycle removePair: removePairs) {
-                pairs.remove(removePair);
-            }
         }
     }
 
