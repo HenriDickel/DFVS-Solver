@@ -13,7 +13,7 @@ import java.util.Map;
 
 public class PackingManagerOld {
 
-    private Map<Integer, Node> initialNodes;
+    /*private Map<Integer, Node> initialNodes;
     private Graph packingGraph;
 
     private List<Cycle> packing = new ArrayList<>();
@@ -124,5 +124,5 @@ public class PackingManagerOld {
             }
             packing.add(cycle);
         }
-    }
+    }*/
 }

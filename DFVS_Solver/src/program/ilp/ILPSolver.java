@@ -3,7 +3,7 @@ package program.ilp;
 import program.algo.DAG;
 import program.algo.Preprocessing;
 import program.algo.Reduction;
-import program.heuristics.Solver;
+import program.algo.Solver;
 import program.log.Log;
 import program.model.Graph;
 import program.model.Instance;

@@ -4,6 +4,8 @@
     <root id="archive" name="dum.jar">
       <element id="module-output" name="DFVS_Solver" />
       <element id="extracted-dir" path="$PROJECT_DIR$/../../../../../../gurobi950/win64/lib/gurobi.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/scip.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/examples.jar" path-in-jar="/" />
     </root>
   </artifact>
 </component>

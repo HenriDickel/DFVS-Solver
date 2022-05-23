@@ -145,6 +145,23 @@ public class ILPSolverVertexCover extends GRBCallback{
             model.update();
             //Log.debugLog("GUROBI", "Added " + model.getConstrs().length + " initial constraints");
 
+            PerformanceTimer.start();
+
+            PackingManager pm = new PackingManager(graph, 1000L);
+            PerformanceTimer.log(PerformanceTimer.MethodType.PACKING);
+            // For each cycle in packing
+            for (int i = 0; i < pm.getPacking().size(); i++) {
+                Cycle cycle = pm.getPacking().get(i);
+                GRBLinExpr expr = new GRBLinExpr();
+                for (Node node : cycle.getNodes()) {
+                    GRBVar x = model.getVarByName("x" + node.id);
+                    expr.addTerm(1.0, x);
+                }
+                model.addConstr(expr, GRB.GREATER_EQUAL, cycle.getK(), "c-" + i);
+                numConstraints++;
+            }
+            //Log.debugLog("GUROBI", "Added " + pm.getPacking().size() + " cycle constraints");
+
             //Update Model
             model.update();
 

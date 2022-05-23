@@ -1,7 +1,5 @@
 package program.algo;
 
-import program.heuristics.Solver;
-import program.log.Log;
 import program.model.Graph;
 import program.model.Node;
 

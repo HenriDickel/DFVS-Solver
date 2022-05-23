@@ -1,7 +1,8 @@
 package program;
 
+import jscip.*;
 import program.algo.*;
-import program.heuristics.Solver;
+import program.algo.Solver;
 import program.ilp.ILPSolver;
 import program.ilp.ILPSolverVertexCover;
 import program.log.Log;
@@ -11,7 +12,9 @@ import program.utils.*;
 import program.utils.TimeoutException;
 import program.utils.Timer;
 
+import java.lang.reflect.Field;
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class Main {
 
@@ -22,6 +25,10 @@ public class Main {
             // Ignore Log
             Log.ignore = true;
 
+            System.loadLibrary("jscip");
+            Scip scip = new Scip();
+            scip.create("Example");
+
             // Start timer
             Timer.start(Integer.MAX_VALUE);
 
@@ -29,8 +36,8 @@ public class Main {
             Instance instance = InstanceCreator.createPaceInstanceFromSystemIn();
 
             // Solve
-            //Solver.dfvsSolveInstance(instance);
-            ILPSolver.solve(instance);
+            Solver.dfvsSolveInstance(instance);
+            //ILPSolver.solve(instance);
 
             // Print solution
             for(Integer nodeId : instance.S){
@@ -42,6 +49,8 @@ public class Main {
             Log.Clear();
             Log.ignore = false;
 
+            testScip();
+
             //testPaceDataLite();
             //testPaceData();
             //testPacePacking();
@@ -51,7 +60,7 @@ public class Main {
             //testCorrectness();
             //testReduction();
             //paceReduction();
-            vertexCoverILP();
+            //vertexCoverILP();
 
             //List<GraphFile> files = InstanceCreator.getComplexAndSyntheticFiles(Dataset.DATASET_3, null);
             //List<GraphFile> files = InstanceCreator.getSelectedFiles();
@@ -65,8 +74,118 @@ public class Main {
         }
     }
 
+    private static void testScip() {
+
+        List<GraphFile> files = InstanceCreator.getPaceFilesExact("e_085");
+        GraphFile file = files.get(0);
+
+        Timer.start(90);
+        PerformanceTimer.reset();
+
+        PerformanceTimer.start();
+        Instance instance = InstanceCreator.createFromPaceFile(file);
+        Solver.instance = instance;
+        PerformanceTimer.log(PerformanceTimer.MethodType.FILE);
+
+        // Apply reduction rules once
+        Log.debugLog(instance.NAME, "Applying reduction rules...");
+        List<Integer> reduceS = Reduction.applyRules(instance.subGraphs.get(0), true);
+        instance.S.addAll(reduceS);
+
+        // Create sub graphs
+        Log.debugLog(instance.NAME, "Applying Tarjan...");
+        instance.subGraphs = Preprocessing.findCyclicSubGraphs(instance.subGraphs.get(0));
+
+        // Apply reduction rules again
+        Log.debugLog(instance.NAME, "Applying reduction rules again...");
+        for(Graph subGraph: instance.subGraphs) {
+            List<Integer> reduceSubS = Reduction.applyRules(subGraph, true);
+            instance.S.addAll(reduceSubS);
+        }
+
+        int singleEdgeCount = 0;
+        int overallEdgeCount = 0;
+        try {
+            for(Graph subGraph: instance.subGraphs) {
+
+                // Count edges in subgraph
+                for(Node node: subGraph.getNodes()) {
+                    for(Integer outId: node.getOutIds()) {
+                        if(!node.getInIds().contains(outId)) {
+                            singleEdgeCount++;
+                        }
+                    }
+                }
+                overallEdgeCount += subGraph.getEdgeCount();
+
+                // Solve with ILP
+                Log.debugLog(instance.NAME, "Call SCIP for subgraph with |N| = " + subGraph.getNodeCount() + ", |M| = " + subGraph.getEdgeCount());
+                scip(instance.subGraphs);
+                //List<Integer> S = new ILPSolverVertexCover(subGraph, 90).solve(instance);
+                //instance.S.addAll(S);
+            }
+
+            // Add nodes that were ambiguous to result
+            instance.addAmbiguousResult();
+            Log.debugLog(instance.NAME, "Single edge count: " + singleEdgeCount + "/" + overallEdgeCount);
+            Log.debugLog(instance.NAME, "Found solution k = " + instance.S.size() + " in " + Timer.getMillis() + " ms (recursive steps: " + instance.recursiveSteps + ")", Color.PURPLE);
+        } catch(TimeoutException e) {
+
+            // Log results
+            Log.mainLog(instance, Timer.getMillis(), PerformanceTimer.getPackingMillis(), false);
+            Log.debugLog(instance.NAME, "Single edge count: " + singleEdgeCount + "/" + overallEdgeCount);
+            Log.debugLog(instance.NAME, "Found no solution in " + Timer.getMillis() + " ms (recursive steps: " + instance.recursiveSteps + ")", Color.RED);
+        }
+    }
+
+    private static void scip(List<Graph> graphs) {
+
+        System.loadLibrary("jscip");
+        Scip scip = new Scip();
+        scip.create("Example");
+
+        Graph graph1 = graphs.get(0);
+
+        // Create condition for each double edge
+        for(Node node: graph1.getNodes()) {
+            for(Integer outId: node.getOutIds()) {
+                if(outId > node.id) {
+                    // lower bound, upper bound, objective value (0, 1, 1)
+                    Variable a = scip.createVar("x-" + node.id, 0.0, 1.0, 1.0, SCIP_Vartype.SCIP_VARTYPE_INTEGER);
+                    Variable b = scip.createVar("x-" + outId, 0.0, 1.0, 1.0, SCIP_Vartype.SCIP_VARTYPE_INTEGER);
+                    double[] vals = {1.0, 1.0};
+                    Variable[] vars = {a, b};
+                    Constraint lincons = scip.createConsLinear("lin-cons-" + node.id + "-" + outId, vars, vals, 1, scip.infinity());
+                    scip.addCons(lincons);
+                }
+            }
+        }
+
+        scip.solve();
+
+        Solution sol = scip.getBestSol();
+        System.out.println("Objective value = " + scip.getSolOrigObj(sol));
+        if(sol != null )
+        {
+            System.out.println("Var Values: ");
+            // TODO why are values emptys in the end?
+            for( int i = 0; i < scip.getVars().length; i++)
+            {
+                Variable var = scip.getVars()[i];
+                System.out.println(var.getName() + " " + scip.getSolVal(sol, var));
+            }
+        }
+
+        for( int i = 0; i < scip.getVars().length; i++) {
+            Variable var = scip.getVars()[i];
+            scip.releaseVar(var);
+        }
+
+        scip.free();
+    }
+
     private static void testPaceDataLite() {
-        List<GraphFile> files = InstanceCreator.getPaceFiles(null);
+        List<GraphFile> files = InstanceCreator.getPaceFilesExact(null);
         int[] optimalKs = new int[]{2, 674, 631, 276, 450, 1917, 547, 788, 364, 1137};
 
         for(int i = 0; i < 10; i++) {
@@ -100,13 +219,13 @@ public class Main {
     }
 
     private static void testPaceData(){
-        List<GraphFile> files = InstanceCreator.getPaceFiles("e_087");
+        List<GraphFile> files = InstanceCreator.getPaceFilesExact("e_085");
         files = files.subList(0, 1);
         files.forEach(x -> run(x, true));
     }
 
     private static void exportPaceData(){
-        List<GraphFile> files = InstanceCreator.getPaceFiles("e_085");
+        List<GraphFile> files = InstanceCreator.getPaceFilesExact("e_085");
         files = files.subList(0, 1);
         files.forEach(Main::reductionExport);
     }
@@ -117,9 +236,17 @@ public class Main {
     }
 
     private static void paceReduction() {
-        List<GraphFile> files = InstanceCreator.getPaceFiles("e_089");
-        files = files.subList(0, 1);
+        List<GraphFile> files = InstanceCreator.getPaceFilesExact(null);
+        Log.ignore = false;
 
+        //List<GraphFile> files = InstanceCreator.getPaceFilesHeuristic(null);
+        //files = files.subList(0, 67);
+
+        int startKAgg = 0;
+        int nodeCountAgg = 0;
+        int edgeCountAgg = 0;
+        int reducedNodeCountAgg = 0;
+        int reducedEdgeCountAgg = 0;
         for(GraphFile file: files) {
 
             Instance instance = InstanceCreator.createFromPaceFile(file);
@@ -142,13 +269,26 @@ public class Main {
             }
             Log.debugLog(instance.NAME, "Reduced node count from " + instance.N + " to " + instance.getCurrentN());
             Log.debugLog(instance.NAME, "Reduced edge count from " + instance.M + " to " + instance.getCurrentM());
-
+            Log.debugLog(instance.NAME, "Start k = " + (instance.startK + instance.ambigousS.size()));
             Log.paceLog(instance, 0L, instance.getCurrentN(), instance.getCurrentM(), instance.S.size(), 0, 0);
+
+            nodeCountAgg += instance.N;
+            edgeCountAgg += instance.M;
+            reducedNodeCountAgg += instance.getCurrentN();
+            reducedEdgeCountAgg += instance.getCurrentM();
+            startKAgg += instance.S.size() + instance.ambigousS.size();
+
+            System.out.println(instance.NAME + "\t" + (instance.S.size() + instance.ambigousS.size()) + " (S = " + instance.S.size() + ", ambiS = " + instance.ambigousS.size() + ")");
         }
+        Log.debugLog("OVERALL", "Reduced node count from " + nodeCountAgg / (float) files.size() + " to " + reducedNodeCountAgg / (float) files.size());
+        Log.debugLog("OVERALL", "Reduced edge count from " + edgeCountAgg / (float) files.size() + " to " + reducedEdgeCountAgg / (float) files.size());
+        Log.debugLog("OVERALL", "Average start k = " + startKAgg / (float) files.size());
+
+        System.out.println("Average start k = " + startKAgg / (float) files.size());
     }
 
     private static void testPacePacking() {
-        List<GraphFile> files = InstanceCreator.getPaceFiles("e_085");
+        List<GraphFile> files = InstanceCreator.getPaceFilesExact("e_085");
         files = files.subList(0, 3);
 
         int packingSize = 0;
@@ -182,7 +322,7 @@ public class Main {
     }
 
     private static void testReduction() {
-        List<GraphFile> files = InstanceCreator.getPaceFiles(null);
+        List<GraphFile> files = InstanceCreator.getPaceFilesExact(null);
         files = files.subList(0, 50);
 
         int nodeCount = 0;
@@ -281,7 +421,7 @@ public class Main {
     }
 
     private static void vertexCoverILP() {
-        List<GraphFile> files = InstanceCreator.getPaceFiles(null);
+        List<GraphFile> files = InstanceCreator.getPaceFilesExact("e_085");
         //files = files.subList(0, 50);
 
         List<GraphFile> solved = new ArrayList<>();
@@ -312,11 +452,12 @@ public class Main {
                 instance.S.addAll(reduceSubS);
             }
 
+            int singleEdgeCount = 0;
+            int overallEdgeCount = 0;
             try {
                 for(Graph subGraph: instance.subGraphs) {
 
                     // Count edges in subgraph
-                    int singleEdgeCount = 0;
                     for(Node node: subGraph.getNodes()) {
                         for(Integer outId: node.getOutIds()) {
                             if(!node.getInIds().contains(outId)) {
@@ -324,28 +465,30 @@ public class Main {
                             }
                         }
                     }
-                    //Log.debugLog(instance.NAME + " (" + (i + 1) + ")", "Single edge count: " + singleEdgeCount + "/" + subGraph.getEdgeCount());
+                    overallEdgeCount += subGraph.getEdgeCount();
 
                     // Solve with ILP
                     //Log.debugLog(instance.NAME + " (" + (i + 1) + ")", "Call Gurobi for subgraph with |N| = " + subGraph.getNodeCount() + ", |M| = " + subGraph.getEdgeCount());
-                    List<Integer> S = new ILPSolverVertexCover(subGraph, 90).solve(instance);
-                    instance.S.addAll(S);
+                    //List<Integer> S = new ILPSolverVertexCover(subGraph, 90).solve(instance);
+                    //instance.S.addAll(S);
                 }
 
                 // Add nodes that were ambiguous to result
-                instance.addAmbiguousResult();
-                Log.debugLog(instance.NAME + " (" + (i + 1) + ")", "Found solution k = " + instance.S.size() + " in " + Timer.getMillis() + " ms (recursive steps: " + instance.recursiveSteps + ")", Color.PURPLE);
-                solved.add(file);
+                //instance.addAmbiguousResult();
+                Log.debugLog(instance.NAME + " (" + (i + 1) + ")", "Single edge count: " + singleEdgeCount + "/" + overallEdgeCount);
+                //Log.debugLog(instance.NAME + " (" + (i + 1) + ")", "Found solution k = " + instance.S.size() + " in " + Timer.getMillis() + " ms (recursive steps: " + instance.recursiveSteps + ")", Color.PURPLE);
+                //solved.add(file);
             } catch(TimeoutException e) {
 
                 // Log results
                 Log.mainLog(instance, Timer.getMillis(), PerformanceTimer.getPackingMillis(), false);
+                Log.debugLog(instance.NAME + " (" + (i + 1) + ")", "Single edge count: " + singleEdgeCount + "/" + overallEdgeCount);
                 Log.debugLog(instance.NAME + " (" + (i + 1) + ")", "Found no solution in " + Timer.getMillis() + " ms (recursive steps: " + instance.recursiveSteps + ")", Color.RED);
                 unsolved.add(file);
             }
         }
 
         System.out.println("Solved " + solved.size() + "/" + files.size() + " instances");
-        System.out.println("Unsolved: " + unsolved);
+        System.out.println("Unsolved: " + unsolved.stream().map(e -> e.name).collect(Collectors.toList()));
     }
 }

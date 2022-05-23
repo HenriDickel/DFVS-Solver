@@ -139,8 +139,19 @@ public abstract class InstanceCreator {
         throw new RuntimeException("Didn't found instance with name '" + startFilename + "'");
     }
 
-    public static List<GraphFile> getPaceFiles(String startFilename) {
+    public static List<GraphFile> getPaceFilesExact(String startFilename) {
         List<GraphFile> files = getFiles(Dataset.DATASET_3, "src/inputs/pace_exact_public/");
+        if(startFilename == null) return files;
+        for(int i = 0; i < files.size(); i++) {
+            if(files.get(i).name.equals(startFilename)) {
+                return files.subList(i, files.size());
+            }
+        }
+        throw new RuntimeException("Didn't found instance with name '" + startFilename + "'");
+    }
+
+    public static List<GraphFile> getPaceFilesHeuristic(String startFilename) {
+        List<GraphFile> files = getFiles(Dataset.DATASET_3, "src/inputs/pace_heuristic_public/");
         if(startFilename == null) return files;
         for(int i = 0; i < files.size(); i++) {
             if(files.get(i).name.equals(startFilename)) {
@@ -375,31 +386,15 @@ public abstract class InstanceCreator {
         String syntheticPath = getSyntheticPath(Dataset.DATASET_3);
         String solutionPath = getSolutionPath(Dataset.DATASET_3);
 
-        String name = "link-kv-n_1000";
+        String name = "chess-n_1500";
         files.add(new GraphFile(complexPath, name, readOptimalKFromFile(solutionPath, name)));
-        name = "chess-n_1500";
-        files.add(new GraphFile(complexPath, name, readOptimalKFromFile(solutionPath, name)));
-        name = "health-n_2000";
+        name = "link-kv-n_6916";
         files.add(new GraphFile(complexPath, name, readOptimalKFromFile(solutionPath, name)));
         name = "wikispeedia-n_1500";
         files.add(new GraphFile(complexPath, name, readOptimalKFromFile(solutionPath, name)));
-        name = "synth-n_1000-m_124702-k_200-p_0.2.txt";
+        name = "synth-n_150-m_1561-k_70-p_0.1.txt";
         files.add(new GraphFile(syntheticPath, name, readOptimalKFromFile(solutionPath, name)));
-        name = "synth-n_1300-m_52952-k_200-p_0.05.txt";
-        files.add(new GraphFile(syntheticPath, name, readOptimalKFromFile(solutionPath, name)));
-        name = "synth-n_150-m_1564-k_50-p_0.1.txt";
-        files.add(new GraphFile(syntheticPath, name, readOptimalKFromFile(solutionPath, name)));
-        name = "synth-n_2000-m_110886-k_120-p_0.05.txt";
-        files.add(new GraphFile(syntheticPath, name, readOptimalKFromFile(solutionPath, name)));
-        name = "synth-n_300-m_2943-k_70-p_0.05.txt";
-        files.add(new GraphFile(syntheticPath, name, readOptimalKFromFile(solutionPath, name)));
-        name = "synth-n_3500-m_672789-k_200-p_0.1.txt";
-        files.add(new GraphFile(syntheticPath, name, readOptimalKFromFile(solutionPath, name)));
-        name = "synth-n_700-m_16024-k_150-p_0.05.txt";
-        files.add(new GraphFile(syntheticPath, name, readOptimalKFromFile(solutionPath, name)));
-        name = "synth-n_700-m_64387-k_200-p_0.2.txt";
-        files.add(new GraphFile(syntheticPath, name, readOptimalKFromFile(solutionPath, name)));
-        name = "synth-n_2600-m_716555-k_100-p_0.2.txt";
+        name = "synth-n_500-m_9062-k_200-p_0.05.txt";
         files.add(new GraphFile(syntheticPath, name, readOptimalKFromFile(solutionPath, name)));
 
         return files;

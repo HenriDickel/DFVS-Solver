@@ -72,6 +72,32 @@ public abstract class PackingRules {
         }
     }
 
+    public static void upgradeFullyConnectedByLevel(Cycle pair, Graph packingGraph) {
+
+        Node a = pair.get(0);
+        boolean upgrade = true;
+        Node bestNode = null;
+        while(upgrade) {
+            upgrade = false;
+            List<Node> outNodes = a.getOutIds().stream().map(packingGraph::getNode).collect(Collectors.toList());
+            outNodes.sort(Comparator.comparing(Node::getPackingLevel));
+            for(Node out: outNodes) {
+                if(pair.isFullyConnected(out.id)) {
+                    if(bestNode == null) {
+                        bestNode = out;
+                    }
+                }
+            }
+            // When there is an upgrade node, upgrade cycle
+            if(bestNode != null) {
+                pair.add(bestNode);
+                pair.setK(pair.getK() + 1);
+                upgrade = true;
+                bestNode = null;
+            }
+        }
+    }
+
     public static void upgradeTriforce(Cycle triangle, Graph packingGraph) {
         for(int i = 0; i < 3; i++) {
             Node a = triangle.get(i);
