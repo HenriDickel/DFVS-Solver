@@ -1,9 +1,10 @@
-[0m[2022-05-23 11:25:20.690]                                  e_085: Applying reduction rules...[0m
-[0m[2022-05-23 11:25:20.982]                                  e_085: Applying Tarjan...[0m
-[0m[2022-05-23 11:25:21.000]                                  e_085: Applying reduction rules again...[0m
-[0m[2022-05-23 11:25:21.006]                                  e_085: Call SCIP for subgraph with |N| = 7, |M| = 24[0m
-[0m[2022-05-23 11:25:21.027]                                  e_085: Call SCIP for subgraph with |N| = 13, |M| = 54[0m
-[0m[2022-05-23 11:25:21.031]                                  e_085: Call SCIP for subgraph with |N| = 35, |M| = 146[0m
-[0m[2022-05-23 11:25:21.037]                                  e_085: Call SCIP for subgraph with |N| = 649, |M| = 3240[0m
-[0m[2022-05-23 11:25:21.046]                                  e_085: Single edge count: 0/3464[0m
-[35m[2022-05-23 11:25:21.050]                                  e_085: Found solution k = 5790 in 429 ms (recursive steps: 0)[0m
+[0m[2022-05-25 20:25:11.342]                                  e_087: Applying reduction rules...[0m
+[0m[2022-05-25 20:25:11.748]                                  e_087: Applying Tarjan...[0m
+[0m[2022-05-25 20:25:11.771]                                  e_087: Applying reduction rules again...[0m
+[0m[2022-05-25 20:25:11.782]                                  e_087: Call SCIP for subgraph with |N| = 13, |M| = 46[0m
+[0m[2022-05-25 20:25:11.810]                                  e_087: Call SCIP for subgraph with |N| = 26, |M| = 108[0m
+[0m[2022-05-25 20:25:11.825]                                  e_087: Call SCIP for subgraph with |N| = 55, |M| = 304[0m
+[0m[2022-05-25 20:25:11.923]                                  e_087: Call SCIP for subgraph with |N| = 172, |M| = 822[0m
+[0m[2022-05-25 20:25:12.171]                                  e_087: Call SCIP for subgraph with |N| = 463, |M| = 2390[0m
+[0m[2022-05-25 20:25:12.984]                                  e_087: Single edge count: 0/3670[0m
+[35m[2022-05-25 20:25:12.989]                                  e_087: Found solution k = 5766 in 1750 ms (recursive steps: 0)[0m

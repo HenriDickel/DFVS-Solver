@@ -75,8 +75,8 @@ public class Main {
     }
 
     private static void testScip() {
-
-        List<GraphFile> files = InstanceCreator.getPaceFilesExact("e_085");
+        System.loadLibrary("jscip");
+        List<GraphFile> files = InstanceCreator.getPaceFilesExact("e_087");
         GraphFile file = files.get(0);
 
         Timer.start(90);
@@ -120,7 +120,7 @@ public class Main {
 
                 // Solve with ILP
                 Log.debugLog(instance.NAME, "Call SCIP for subgraph with |N| = " + subGraph.getNodeCount() + ", |M| = " + subGraph.getEdgeCount());
-                scip(instance.subGraphs);
+                scip(subGraph);
                 //List<Integer> S = new ILPSolverVertexCover(subGraph, 90).solve(instance);
                 //instance.S.addAll(S);
             }
@@ -138,21 +138,23 @@ public class Main {
         }
     }
 
-    private static void scip(List<Graph> graphs) {
+    private static void scip(Graph graph) {
 
-        System.loadLibrary("jscip");
+
         Scip scip = new Scip();
         scip.create("Example");
-
-        Graph graph1 = graphs.get(0);
-
+        List<Variable> allVars = new ArrayList<>();
         // Create condition for each double edge
-        for(Node node: graph1.getNodes()) {
+        for(Node node: graph.getNodes()) {
+            allVars.add(scip.createVar("x-" + node.id, 0.0, 1.0, 1.0, SCIP_Vartype.SCIP_VARTYPE_INTEGER));
+        }
+
+        for(Node node: graph.getNodes()) {
+            Variable a = getFromAllVars(allVars,node.id,"x");
             for(Integer outId: node.getOutIds()) {
                 if(outId > node.id) {
                     // lower bound, upper bound, objective value (0, 1, 1)
-                    Variable a = scip.createVar("x-" + node.id, 0.0, 1.0, 1.0, SCIP_Vartype.SCIP_VARTYPE_INTEGER);
-                    Variable b = scip.createVar("x-" + outId, 0.0, 1.0, 1.0, SCIP_Vartype.SCIP_VARTYPE_INTEGER);
+                    Variable b = getFromAllVars(allVars,outId,"x");
                     double[] vals = {1.0, 1.0};
                     Variable[] vars = {a, b};
                     Constraint lincons = scip.createConsLinear("lin-cons-" + node.id + "-" + outId, vars, vals, 1, scip.infinity());
@@ -172,7 +174,7 @@ public class Main {
             for( int i = 0; i < scip.getVars().length; i++)
             {
                 Variable var = scip.getVars()[i];
-                System.out.println(var.getName() + " " + scip.getSolVal(sol, var));
+                //System.out.println(var.getName() + " " + scip.getSolVal(sol, var));
             }
         }
 
@@ -181,7 +183,16 @@ public class Main {
             scip.releaseVar(var);
         }
 
-        scip.free();
+        //scip.free();
+    }
+
+    private static Variable getFromAllVars(List<Variable> allVars, int id, String start){
+        for(Variable var : allVars){
+            if(var.getName().equals(start+"-"+id)){
+                return var;
+            }
+        }
+        return null;
     }
 
     private static void testPaceDataLite() {

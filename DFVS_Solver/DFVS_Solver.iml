@@ -17,6 +17,6 @@
       </library>
     </orderEntry>
     <orderEntry type="library" name="gurobi" level="project" />
-    <orderEntry type="library" name="lib" level="project" />
+    <orderEntry type="library" name="build" level="project" />
   </component>
 </module>
