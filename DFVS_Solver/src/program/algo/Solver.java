@@ -227,7 +227,7 @@ public abstract class Solver {
         return null;
     }
 
-    private static List<Integer> GraphTimerFast(Graph subGraph, long timeLimit, float precision, int lowerBound) {
+    public static List<Integer> GraphTimerFast(Graph subGraph, long timeLimit, float precision, int lowerBound) {
 
         long endMillis = System.currentTimeMillis() + timeLimit;
 
@@ -244,7 +244,7 @@ public abstract class Solver {
         return bestS;
     }
 
-    private static List<Integer> GraphTimerRecFast(Graph graph, List<Integer> solution, float precision) {
+    public static List<Integer> GraphTimerRecFast(Graph graph, List<Integer> solution, float precision) {
 
         //Check if DAG
         if (DAG.isDAGFast(graph)) return solution;

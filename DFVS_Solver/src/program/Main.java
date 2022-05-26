@@ -48,10 +48,47 @@ public class Main {
             //Reset Log
             Log.Clear();
             Log.ignore = false;
-            testScip();
+            /* Code to compate results between ILP and our solver
+            for(int i =1; i< 201; i+=2){
+                String filename ="e_";
+                if(i<11){
+                    filename=filename+"00"+i;
+                }else{
+                    if(i<101){
+                        filename=filename+"0"+i;
+                    }else{
+                        filename=filename+i;
+                    }
+                }
+                int scipS =testScip(filename).size();
+                int paceS =testPaceData(filename);
+                if(scipS==paceS){
+                    System.out.println("Both working for : " + filename);
+                }else{
+                    System.err.println("Error in: " + filename);
+                    System.err.println("SCIP SAYS: " + scipS);
+                    System.err.println("WE SAY: " + paceS);
+                }
+            }
+
+
+             */
+            String filename = "e_049";
+            List<Integer> scipRes =testScip(filename);
+            int scipS =scipRes.size();
+            int paceS =testPaceData(filename);
+
+            if(scipS==paceS){
+                System.out.println("Both working for : " + filename);
+            }else{
+                System.out.println(scipRes);
+                System.err.println("Error in: " + filename);
+                System.err.println("SCIP SAYS: " + scipS);
+                System.err.println("WE SAY: " + paceS);
+            }
 
             //testPaceDataLite();
-            testPaceData();
+            //testPaceData();
             //testPacePacking();
             //testCorrectness();
             //exportPaceData();
@@ -73,9 +110,9 @@ public class Main {
         }
     }
 
-    private static void testScip() {
+    private static List<Integer> testScip(String filename) {
         System.loadLibrary("jscip");
-        List<GraphFile> files = InstanceCreator.getPaceFilesExact("e_081");
+        List<GraphFile> files = InstanceCreator.getPaceFilesExact(filename);
         GraphFile file = files.get(0);
 
         Timer.start(90);
@@ -101,38 +138,76 @@ public class Main {
             List<Integer> reduceSubS = Reduction.applyRules(subGraph, true);
             instance.S.addAll(reduceSubS);
         }
-
+        int nodeCount =0;
+        for(Graph sub: instance.subGraphs){
+            nodeCount+=sub.getNodeCount();
+        }
         int singleEdgeCount = 0;
         int overallEdgeCount = 0;
         try {
             for(Graph subGraph: instance.subGraphs) {
 
                 // Count edges in subgraph
-                for(Node node: subGraph.getNodes()) {
-                    for(Integer outId: node.getOutIds()) {
-                        if(!node.getInIds().contains(outId)) {
+                for (Node node : subGraph.getNodes()) {
+                    for (Integer outId : node.getOutIds()) {
+                        if (!node.getInIds().contains(outId)) {
                             singleEdgeCount++;
                         }
                     }
                 }
                 overallEdgeCount += subGraph.getEdgeCount();
+                //Use Heuristics and packing in order to avoid creating too many ILPs
+                float nodePercentage = (float) subGraph.getNodeCount() / instance.getCurrentN();
+                long packingTimeLimit = (long) (3000L * nodePercentage);
+                PackingManager pm = new PackingManager(subGraph, packingTimeLimit);
+                long heuristicTimeLimit = (long) (3000L * nodePercentage);
+                List<Integer> heuristicS = Solver.GraphTimerFast(subGraph, heuristicTimeLimit, 0.95f, pm.size());
+                //Timer for the ILP
+                double timeLeft = (Timer.getSecondsLeft() * ((float) subGraph.getNodeCount() /  nodeCount));
 
-                // Solve with ILP
-                Log.debugLog(instance.NAME, "Call SCIP for subgraph with |N| = " + subGraph.getNodeCount() + ", |M| = " + subGraph.getEdgeCount());
-                if(hasOnlyDoubleEdges(subGraph)){
-                    instance.S.addAll(scip(subGraph));
-                }else{
-                    instance.S.addAll(scipOrdering(subGraph));
+                if (timeLeft > 0) {
+                    //In case packaging and heuristics already solve the subgraph
+                    if (pm.size() == heuristicS.size()) {
+                        Log.debugLog(instance.NAME, "Using Heuristic for subgraph with |N| = " + subGraph.getNodeCount() + ", |M| = " + subGraph.getEdgeCount());
+                        instance.S.addAll(heuristicS);
+                    } else {
+                        //If an ILP is needed
+                        Log.debugLog(instance.NAME, "Call SCIP for subgraph with |N| = " + subGraph.getNodeCount() + ", |M| = " + subGraph.getEdgeCount());
+                        // Input: Graph to be tested, if it has single edges or not, weird fix for a bug, if we want to use bounds or not, upperBound,lowerBound, timer
+                        // Due to SCIPs weird behavior for some of the graphs in the Ordering the size works if it's n-1 and sometimes when it's n,
+                        // not sure why but it's a temporary fix at least. Using the Bounds can also cause some issues for some graphs, for some stupid reason
+                        // therefore in those cases, once they fail we can drop the bounds, the bounds can also help to speed up the whole thing
+                        List<Integer> tempSol = scipILP(subGraph, !hasOnlyDoubleEdges(subGraph), 0,true, pm.size(), heuristicS.size(), timeLeft);
+                        if(isSolution(subGraph,tempSol)){
+                            System.out.println("Solution for Subgraph: " + tempSol.size());
+                            instance.S.addAll(tempSol);
+                        } else if(Timer.getSecondsLeft()>0){
+                            timeLeft = (Timer.getSecondsLeft() * ((float) subGraph.getNodeCount() /  nodeCount));
+                            tempSol = scipILP(subGraph, !hasOnlyDoubleEdges(subGraph), 1,true, pm.size(), heuristicS.size(), timeLeft);
+                            //Always check that the ILP output is a valid solution
+                            if (isSolution(subGraph,tempSol)) {
+                                System.out.println("Solution for Subgraph: " + tempSol.size());
+                                instance.S.addAll(tempSol);
+                            } else if(Timer.getSecondsLeft()>0){
+                                timeLeft = (Timer.getSecondsLeft() * ((float) subGraph.getNodeCount() /  nodeCount));
+                                tempSol = scipILP(subGraph, !hasOnlyDoubleEdges(subGraph), 1,false, pm.size(), heuristicS.size(), timeLeft);
+                                if(isSolution(subGraph,tempSol)){
+                                    System.out.println("Solution for Subgraph: " + tempSol.size());
+                                    instance.S.addAll(tempSol);
+                                }else {
+                                    System.err.println("Solution not correct. Solution size: " + tempSol.size());
+                                }
+                            }
+                        }
+                    }
                 }
-
-                //List<Integer> S = new ILPSolverVertexCover(subGraph, 90).solve(instance);
-                //instance.S.addAll(S);
             }
 
             // Add nodes that were ambiguous to result
             instance.addAmbiguousResult();
             Log.debugLog(instance.NAME, "Single edge count: " + singleEdgeCount + "/" + overallEdgeCount);
             Log.debugLog(instance.NAME, "Found solution k = " + instance.S.size() + " in " + Timer.getMillis() + " ms (recursive steps: " + instance.recursiveSteps + ")", Color.PURPLE);
+            return instance.S;
         } catch(TimeoutException e) {
 
             // Log results
@@ -140,7 +215,118 @@ public class Main {
             Log.debugLog(instance.NAME, "Single edge count: " + singleEdgeCount + "/" + overallEdgeCount);
             Log.debugLog(instance.NAME, "Found no solution in " + Timer.getMillis() + " ms (recursive steps: " + instance.recursiveSteps + ")", Color.RED);
         }
+        return new ArrayList<>();
     }
+
+    private static boolean isSolution(Graph g, List<Integer> S){
+        Graph copy = g.copy();
+        for (int i : S) {
+            copy.removeNode(i);
+        }
+        return DAG.isDAGFast(copy);
+
+
+    }
+
+    private static List<Integer> scipILP(Graph graph, boolean doOrdering, int fix, boolean useBounds, int lowerBound, int upperBound,double timeLeft) {
+
+        Scip scip = new Scip();
+        scip.create("SubgraphSolver");
+        scip.hideOutput(true);
+        //TODO Improve time limit
+        scip.setRealParam("limits/time",timeLeft);
+        List<Variable> allXs = new ArrayList<>();
+        List<Variable> allVars = new ArrayList<>();
+        //Add and create all Variables
+        for(Node node: graph.getNodes()) {
+            Variable x =scip.createVar("x-" + node.id, 0.0, 1.0, 1.0, SCIP_Vartype.SCIP_VARTYPE_BINARY);
+            allVars.add(x);
+            allXs.add(x);
+            if(doOrdering){
+                allVars.add(scip.createVar("u-" + node.id, 0.0, graph.getNodeCount()-fix, 0.0, SCIP_Vartype.SCIP_VARTYPE_INTEGER));
+            }
+        }
+        // Bound set up
+        double[] valsLB = new double[allXs.size()];
+        Variable[] varsLB = new Variable[allXs.size()];
+        for(int i =0; i<valsLB.length;i++){
+            varsLB[i]=allXs.get(i);
+            valsLB[i]=-1;
+        }
+        Constraint loweBoundCon = scip.createConsLinear("lowerBound",varsLB,valsLB,-scip.infinity(),lowerBound);
+
+        double[] valsUB = new double[allXs.size()];
+        Variable[] varsUB = new Variable[allXs.size()];
+        for(int i =0; i<valsUB.length;i++){
+            varsUB[i]=allXs.get(i);
+            valsUB[i]=1;
+        }
+        Constraint upperBoundCon = scip.createConsLinear("upperBound",varsUB,valsUB,-scip.infinity(),upperBound);
+        if(useBounds){
+            scip.addCons(loweBoundCon);
+            scip.addCons(upperBoundCon);
+        }
+        //Solving, either using Ordering or only the 2-Cycles,(potential speed up if other cycles are added??)
+        if(doOrdering){
+            System.out.println("Doing Ordering");
+            for(Node node: graph.getNodes()) {
+                Variable ua = getFromAllVars(allVars,node.id,"u");
+                for(Integer outId: node.getOutIds()) {
+                    Variable b = getFromAllVars(allVars,outId,"x");
+                    Variable ub = getFromAllVars(allVars,outId,"u");
+                    double[] vals = {-1.0, 1.0, -graph.getNodeCount()+fix};
+                    Variable[] vars = {ua,ub, b};
+                    Constraint lincons = scip.createConsLinear("lin-cons-" + node.id + "-" + outId, vars, vals, -scip.infinity(), -1);
+                    scip.addCons(lincons);
+                }
+            }
+        }else{
+            System.out.println("Doing Cycles");
+            for(Node node: graph.getNodes()) {
+                Variable a = getFromAllVars(allVars,node.id,"x");
+                for(Integer outId: node.getOutIds()) {
+                    // lower bound, upper bound, objective value (0, 1, 1)
+                    Variable b = getFromAllVars(allVars,outId,"x");
+                    double[] vals = {-1.0,-1.0};
+                    Variable[] vars = {a, b};
+                    Constraint lincons = scip.createConsLinear("lin-cons-" + node.id + "-" + outId, vars, vals, -scip.infinity(),-1);
+                    scip.addCons(lincons);
+                }
+            }
+        }
+
+        scip.solve();
+        List<Integer> S = new ArrayList<>();
+        Solution sol = scip.getBestSol();
+        //System.out.println("Objective value = " + scip.getSolOrigObj(sol));
+        if(sol != null )
+        {
+            for( int i = 0; i < scip.getVars().length; i++)
+            {
+                Variable var = scip.getVars()[i];
+                if(scip.getSolVal(sol,var)==1.0 && var.getName().startsWith("t_x")){
+                    int node = Integer.parseInt(var.getName().substring(4));
+                    S.add(node);
+                }
+            }
+        }
+
+        for( int i = 0; i < scip.getVars().length; i++) {
+            Variable var = scip.getVars()[i];
+            scip.releaseVar(var);
+        }
+        return S;
+    }
+
+    private static Variable getFromAllVars(List<Variable> allVars, int id, String start){
+        for(Variable var : allVars){
+            if(var.getName().equals(start+"-"+id)){
+                return var;
+            }
+        }
+        return null;
+    }
+
 
     private static boolean hasOnlyDoubleEdges(Graph subGraph) {
         for(Node node: subGraph.getNodes()) {
@@ -151,124 +337,6 @@ public class Main {
             }
         }
         return true;
-    }
-
-    private static List<Integer> scip(Graph graph) {
-
-
-        Scip scip = new Scip();
-        scip.create("Example");
-        scip.hideOutput(true);
-        List<Variable> allVars = new ArrayList<>();
-        // Create condition for each double edge
-        for(Node node: graph.getNodes()) {
-            allVars.add(scip.createVar("x-" + node.id, 0.0, 1.0, 1.0, SCIP_Vartype.SCIP_VARTYPE_INTEGER));
-        }
-
-        for(Node node: graph.getNodes()) {
-            Variable a = getFromAllVars(allVars,node.id,"x");
-            for(Integer outId: node.getOutIds()) {
-                if(outId > node.id) {
-                    // lower bound, upper bound, objective value (0, 1, 1)
-                    Variable b = getFromAllVars(allVars,outId,"x");
-                    double[] vals = {-1.0,-1.0};
-                    Variable[] vars = {a, b};
-                    Constraint lincons = scip.createConsLinear("lin-cons-" + node.id + "-" + outId, vars, vals, -scip.infinity(),-1);
-                    scip.addCons(lincons);
-                }
-            }
-        }
-        scip.solve();
-        List<Integer> S = new ArrayList<>();
-        Solution sol = scip.getBestSol();
-        //System.out.println("Objective value = " + scip.getSolOrigObj(sol));
-        if(sol != null )
-        {
-            //System.out.println("Var Values: ");
-            // TODO why are values emptys in the end?
-            for( int i = 0; i < scip.getVars().length; i++)
-            {
-
-                Variable var = scip.getVars()[i];
-                if(scip.getSolVal(sol,var)==1.0){
-                    int node = Integer.parseInt(var.getName().substring(4));
-                    S.add(node);
-                }
-                //System.out.println(var.getName() + " " + scip.getSolVal(sol, var));
-            }
-        }
-
-        for( int i = 0; i < scip.getVars().length; i++) {
-            Variable var = scip.getVars()[i];
-            scip.releaseVar(var);
-        }
-        System.out.println("Solution for Subgraph: "+ S.size() );
-        return S;
-        //scip.free();
-    }
-    private static List<Integer> scipOrdering(Graph graph) {
-
-
-        Scip scip = new Scip();
-        scip.create("Example");
-        scip.hideOutput(true);
-        scip.setRealParam("limits/time", 100.0);
-        List<Variable> allVars = new ArrayList<>();
-        // Create condition for each double edge
-        for(Node node: graph.getNodes()) {
-            allVars.add(scip.createVar("x-" + node.id, 0.0, 1.0, 1.0, SCIP_Vartype.SCIP_VARTYPE_INTEGER));
-            allVars.add(scip.createVar("u-" + node.id, 0.0, graph.getNodeCount(), 0.0, SCIP_Vartype.SCIP_VARTYPE_INTEGER));
-        }
-
-        for(Node node: graph.getNodes()) {
-            Variable a = getFromAllVars(allVars,node.id,"x");
-            Variable ua = getFromAllVars(allVars,node.id,"u");
-            for(Integer outId: node.getOutIds()) {
-                    // lower bound, upper bound, objective value (0, 1, 1)
-                    Variable b = getFromAllVars(allVars,outId,"x");
-                    Variable ub = getFromAllVars(allVars,outId,"u");
-                    double[] vals = {-1.0, 1.0, -graph.getNodeCount()};
-                    Variable[] vars = {ua,ub, b};
-                    Constraint lincons = scip.createConsLinear("lin-cons-" + node.id + "-" + outId, vars, vals, -scip.infinity(), -1);
-                    scip.addCons(lincons);
-            }
-        }
-
-        scip.solve();
-        List<Integer> S = new ArrayList<>();
-        Solution sol = scip.getBestSol();
-        //System.out.println("Objective value = " + scip.getSolOrigObj(sol));
-        if(sol != null )
-        {
-            //System.out.println("Var Values: ");
-            // TODO why are values emptys in the end?
-            for( int i = 0; i < scip.getVars().length; i++)
-            {
-                Variable var = scip.getVars()[i];
-                if(scip.getSolVal(sol,var)==1.0 && var.getName().startsWith("t_x")){
-                    int node = Integer.parseInt(var.getName().substring(4));
-                    S.add(node);
-                }
-            }
-
-        }
-
-        for( int i = 0; i < scip.getVars().length; i++) {
-            Variable var = scip.getVars()[i];
-            scip.releaseVar(var);
-        }
-        System.out.println("Solution for Subgraph From Ordering: "+ S.size() );
-        return S;
-        //scip.free();
-    }
-
-    private static Variable getFromAllVars(List<Variable> allVars, int id, String start){
-        for(Variable var : allVars){
-            if(var.getName().equals(start+"-"+id)){
-                return var;
-            }
-        }
-        return null;
     }
 
     private static void testPaceDataLite() {
@@ -305,10 +373,10 @@ public class Main {
         }
     }
 
-    private static void testPaceData(){
-        List<GraphFile> files = InstanceCreator.getPaceFilesExact("e_081");
+    private static int testPaceData(String filename){
+        List<GraphFile> files = InstanceCreator.getPaceFilesExact(filename);
         files = files.subList(0, 1);
-        files.forEach(x -> run(x, true));
+        return run(files.get(0), true).size();
     }
 
     private static void exportPaceData(){
@@ -473,7 +541,7 @@ public class Main {
         Export.ExportGraph(instance, "reduced");
     }
 
-    private static void run(GraphFile file, boolean isPaceData) {
+    private static List<Integer> run(GraphFile file, boolean isPaceData) {
 
         Timer.start(60);
         PerformanceTimer.reset();
@@ -495,7 +563,7 @@ public class Main {
             Color color = verified ? Color.WHITE : Color.RED;
             Log.debugLog(instance.NAME, "Found solution k = " + instance.solvedK + " in " + Timer.getMillis() + " ms (recursive steps: " + instance.recursiveSteps + ")", color);
             PerformanceTimer.printResult(instance.NAME);
-
+            return instance.S;
         } catch (TimeoutException e) {
             instance.solvedK = instance.S.size() + Solver.currentK + instance.ambigousS.size();
 
@@ -505,6 +573,7 @@ public class Main {
             Log.debugLog(instance.NAME, "Found no solution with k = " + instance.solvedK + " in " + Timer.getMillis() + " ms (recursive steps: " + instance.recursiveSteps + ")", Color.RED);
             PerformanceTimer.printResult(instance.NAME);
         }
+        return new ArrayList<>();
     }
 
     private static void vertexCoverILP() {
