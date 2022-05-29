@@ -1,427 +1,600 @@
-[0m[2022-05-26 18:50:55.230]                                  e_107: Applying reduction rules...[0m
-[0m[2022-05-26 18:50:56.150]                                  e_107: Applying Tarjan...[0m
-[0m[2022-05-26 18:50:56.325]                                  e_107: Applying reduction rules again...[0m
-[0m[2022-05-26 18:50:56.353]                                  e_107: Call SCIP for subgraph with |N| = 4, |M| = 9[0m
-[0m[2022-05-26 18:50:56.375]                                  e_107: Using Heuristic for subgraph with |N| = 6, |M| = 17[0m
-[0m[2022-05-26 18:50:56.376]                                  e_107: Using Heuristic for subgraph with |N| = 6, |M| = 17[0m
-[0m[2022-05-26 18:50:56.380]                                  e_107: Call SCIP for subgraph with |N| = 6, |M| = 13[0m
-[0m[2022-05-26 18:50:56.396]                                  e_107: Using Heuristic for subgraph with |N| = 8, |M| = 29[0m
-[0m[2022-05-26 18:50:56.398]                                  e_107: Using Heuristic for subgraph with |N| = 8, |M| = 27[0m
-[0m[2022-05-26 18:50:56.402]                                  e_107: Call SCIP for subgraph with |N| = 9, |M| = 30[0m
-[0m[2022-05-26 18:50:56.432]                                  e_107: Call SCIP for subgraph with |N| = 9, |M| = 35[0m
-[0m[2022-05-26 18:50:56.453]                                  e_107: Call SCIP for subgraph with |N| = 11, |M| = 59[0m
-[0m[2022-05-26 18:50:56.489]                                  e_107: Using Heuristic for subgraph with |N| = 12, |M| = 79[0m
-[0m[2022-05-26 18:50:56.490]                                  e_107: Using Heuristic for subgraph with |N| = 14, |M| = 68[0m
-[0m[2022-05-26 18:50:56.491]                                  e_107: Using Heuristic for subgraph with |N| = 14, |M| = 83[0m
-[0m[2022-05-26 18:50:56.498]                                  e_107: Call SCIP for subgraph with |N| = 15, |M| = 60[0m
-[0m[2022-05-26 18:50:56.574]                                  e_107: Call SCIP for subgraph with |N| = 18, |M| = 90[0m
-[0m[2022-05-26 18:50:56.735]                                  e_107: Call SCIP for subgraph with |N| = 21, |M| = 125[0m
-[0m[2022-05-26 18:50:56.916]                                  e_107: Call SCIP for subgraph with |N| = 23, |M| = 123[0m
-[0m[2022-05-26 18:50:57.189]                                  e_107: Using Heuristic for subgraph with |N| = 23, |M| = 86[0m
-[0m[2022-05-26 18:50:57.199]                                  e_107: Call SCIP for subgraph with |N| = 24, |M| = 125[0m
-[0m[2022-05-26 18:50:57.372]                                  e_107: Call SCIP for subgraph with |N| = 26, |M| = 99[0m
-[0m[2022-05-26 18:50:57.703]                                  e_107: Call SCIP for subgraph with |N| = 28, |M| = 152[0m
-[0m[2022-05-26 18:50:58.275]                                  e_107: Using Heuristic for subgraph with |N| = 30, |M| = 144[0m
-[0m[2022-05-26 18:50:58.289]                                  e_107: Call SCIP for subgraph with |N| = 32, |M| = 201[0m
-[0m[2022-05-26 18:50:59.031]                                  e_107: Call SCIP for subgraph with |N| = 34, |M| = 228[0m
-[0m[2022-05-26 18:50:59.725]                                  e_107: Call SCIP for subgraph with |N| = 39, |M| = 191[0m
-[0m[2022-05-26 18:51:00.194]                                  e_107: Call SCIP for subgraph with |N| = 40, |M| = 337[0m
-[0m[2022-05-26 18:51:01.387]                                  e_107: Call SCIP for subgraph with |N| = 42, |M| = 201[0m
-[0m[2022-05-26 18:51:02.506]                                  e_107: Call SCIP for subgraph with |N| = 46, |M| = 259[0m
-[0m[2022-05-26 18:51:04.861]                                  e_107: Call SCIP for subgraph with |N| = 58, |M| = 305[0m
-[0m[2022-05-26 18:51:06.988]                                  e_107: Call SCIP for subgraph with |N| = 62, |M| = 391[0m
-[0m[2022-05-26 18:51:14.028]                                  e_107: Call SCIP for subgraph with |N| = 68, |M| = 322[0m
-[0m[2022-05-26 18:51:15.972]                                  e_107: Call SCIP for subgraph with |N| = 81, |M| = 524[0m
-[0m[2022-05-26 18:51:20.863]                                  e_107: Call SCIP for subgraph with |N| = 81, |M| = 500[0m
-[0m[2022-05-26 18:51:26.243]                                  e_107: Call SCIP for subgraph with |N| = 120, |M| = 852[0m
-[0m[2022-05-26 18:51:49.889]                                  e_107: Call SCIP for subgraph with |N| = 132, |M| = 749[0m
-[0m[2022-05-26 18:52:03.079]                                  e_107: Call SCIP for subgraph with |N| = 179, |M| = 1063[0m
-[0m[2022-05-26 18:52:58.104]                                  e_107: Call SCIP for subgraph with |N| = 227, |M| = 1560[0m
-[0m[2022-05-26 18:54:03.253]                                  e_107: Call SCIP for subgraph with |N| = 536, |M| = 3591[0m
-[0m[2022-05-26 18:56:17.334]                                  e_107: Call SCIP for subgraph with |N| = 569, |M| = 3519[0m
-[0m[2022-05-26 18:58:12.438]                                  e_107: Call SCIP for subgraph with |N| = 744, |M| = 4439[0m
-[0m[2022-05-26 19:00:12.534]                                  e_107: Call SCIP for subgraph with |N| = 828, |M| = 5112[0m
-[0m[2022-05-26 19:01:51.888]                                  e_107: Call SCIP for subgraph with |N| = 1363, |M| = 8417[0m
-[0m[2022-05-26 19:03:46.297]                                  e_107: Call SCIP for subgraph with |N| = 2503, |M| = 15539[0m
-[0m[2022-05-26 19:05:39.368]                                  e_107: Single edge count: 8694/49770[0m
-[35m[2022-05-26 19:05:39.372]                                  e_107: Found solution k = 7964 in 884273 ms (recursive steps: 0)[0m
-[35m[2022-05-26 19:05:39.408]                                  e_107: e_107 (n = 16316, m = 104833, k = -1)[0m
-[0m[2022-05-26 19:05:39.924]                                  e_107: Found 43 cyclic sub graph(s) with n = [4, 6, 6, 6, 8, 8, 9, 9, 11, 12, 14, 14, 15, 15, 18, 21, 23, 23, 24, 26, 28, 30, 32, 34, 39, 40, 42, 46, 58, 62, 68, 81, 81, 120, 132, 179, 227, 536, 569, 744, 828, 1363, 2503][0m
-[0m[2022-05-26 19:05:39.944]                                  e_107: Removed 8217 nodes in preprocessing, starting with k = 4005[0m
-[0m[2022-05-26 19:05:39.946]                                  e_107: Creating cycle packing with time limit = 0[0m
-[0m[2022-05-26 19:05:39.947]                                  e_107: Creating heuristic with time limit = 0[0m
-[0m[2022-05-26 19:05:39.949]                                  e_107: Solution lies in [1, 2][0m
-[2022-05-26 19:05:39.949]                                  e_107: Branching with k = 1
-[0m[2022-05-26 19:05:39.954]                                  e_107: Creating cycle packing with time limit = 0[0m
-[0m[2022-05-26 19:05:39.954]                                  e_107: Creating heuristic with time limit = 0[0m
-[0m[2022-05-26 19:05:39.954]                                  e_107: Solution lies in [3, 3][0m
-[0m[2022-05-26 19:05:39.955]                                  e_107: Creating cycle packing with time limit = 0[0m
-[0m[2022-05-26 19:05:39.955]                                  e_107: Creating heuristic with time limit = 0[0m
-[0m[2022-05-26 19:05:39.956]                                  e_107: Solution lies in [3, 3][0m
-[0m[2022-05-26 19:05:39.956]                                  e_107: Creating cycle packing with time limit = 0[0m
-[0m[2022-05-26 19:05:39.956]                                  e_107: Creating heuristic with time limit = 0[0m
-[0m[2022-05-26 19:05:39.958]                                  e_107: Solution lies in [2, 3][0m
-[2022-05-26 19:05:39.958]                                  e_107: Branching with k = 2
-[0m[2022-05-26 19:05:39.958]                                  e_107: Creating cycle packing with time limit = 0[0m
-[0m[2022-05-26 19:05:39.959]                                  e_107: Creating heuristic with time limit = 0[0m
-[0m[2022-05-26 19:05:39.960]                                  e_107: Solution lies in [4, 4][0m
-[0m[2022-05-26 19:05:39.960]                                  e_107: Creating cycle packing with time limit = 0[0m
-[0m[2022-05-26 19:05:39.960]                                  e_107: Creating heuristic with time limit = 0[0m
-[0m[2022-05-26 19:05:39.961]                                  e_107: Solution lies in [4, 4][0m
-[0m[2022-05-26 19:05:39.962]                                  e_107: Creating cycle packing with time limit = 1[0m
-[0m[2022-05-26 19:05:39.962]                                  e_107: Creating heuristic with time limit = 1[0m
-[0m[2022-05-26 19:05:39.964]                                  e_107: Solution lies in [4, 5][0m
-[2022-05-26 19:05:39.964]                                  e_107: Branching with k = 4
-[0m[2022-05-26 19:05:39.965]                                  e_107: Creating cycle packing with time limit = 1[0m
-[0m[2022-05-26 19:05:39.966]                                  e_107: Creating heuristic with time limit = 1[0m
-[0m[2022-05-26 19:05:39.968]                                  e_107: Solution lies in [4, 5][0m
-[2022-05-26 19:05:39.968]                                  e_107: Branching with k = 4
-[0m[2022-05-26 19:05:39.969]                                  e_107: Creating cycle packing with time limit = 1[0m
-[0m[2022-05-26 19:05:39.969]                                  e_107: Creating heuristic with time limit = 1[0m
-[0m[2022-05-26 19:05:39.971]                                  e_107: Solution lies in [6, 7][0m
-[2022-05-26 19:05:39.971]                                  e_107: Branching with k = 6
-[0m[2022-05-26 19:05:39.972]                                  e_107: Creating cycle packing with time limit = 1[0m
-[0m[2022-05-26 19:05:39.972]                                  e_107: Creating heuristic with time limit = 1[0m
-[0m[2022-05-26 19:05:39.973]                                  e_107: Solution lies in [7, 7][0m
-[0m[2022-05-26 19:05:39.973]                                  e_107: Creating cycle packing with time limit = 1[0m
-[0m[2022-05-26 19:05:39.973]                                  e_107: Creating heuristic with time limit = 1[0m
-[0m[2022-05-26 19:05:39.974]                                  e_107: Solution lies in [8, 8][0m
-[0m[2022-05-26 19:05:39.974]                                  e_107: Creating cycle packing with time limit = 1[0m
-[0m[2022-05-26 19:05:39.975]                                  e_107: Creating heuristic with time limit = 1[0m
-[0m[2022-05-26 19:05:39.975]                                  e_107: Solution lies in [9, 9][0m
-[0m[2022-05-26 19:05:39.976]                                  e_107: Creating cycle packing with time limit = 1[0m
-[0m[2022-05-26 19:05:39.976]                                  e_107: Creating heuristic with time limit = 1[0m
-[0m[2022-05-26 19:05:39.979]                                  e_107: Solution lies in [7, 8][0m
-[2022-05-26 19:05:39.979]                                  e_107: Branching with k = 7
-[0m[2022-05-26 19:05:39.981]                                  e_107: Creating cycle packing with time limit = 2[0m
-[0m[2022-05-26 19:05:39.981]                                  e_107: Creating heuristic with time limit = 2[0m
-[0m[2022-05-26 19:05:39.985]                                  e_107: Solution lies in [10, 12][0m
-[2022-05-26 19:05:39.985]                                  e_107: Branching with k = 10
-[0m[2022-05-26 19:05:39.988]                                  e_107: Creating cycle packing with time limit = 2[0m
-[0m[2022-05-26 19:05:39.988]                                  e_107: Creating heuristic with time limit = 2[0m
-[0m[2022-05-26 19:05:39.992]                                  e_107: Solution lies in [12, 13][0m
-[2022-05-26 19:05:39.992]                                  e_107: Branching with k = 12
-[0m[2022-05-26 19:05:39.994]                                  e_107: Creating cycle packing with time limit = 2[0m
-[0m[2022-05-26 19:05:39.994]                                  e_107: Creating heuristic with time limit = 2[0m
-[0m[2022-05-26 19:05:39.998]                                  e_107: Solution lies in [12, 13][0m
-[2022-05-26 19:05:39.998]                                  e_107: Branching with k = 12
-[0m[2022-05-26 19:05:39.999]                                  e_107: Creating cycle packing with time limit = 2[0m
-[0m[2022-05-26 19:05:39.999]                                  e_107: Creating heuristic with time limit = 2[0m
-[0m[2022-05-26 19:05:40.000]                                  e_107: Solution lies in [11, 11][0m
-[0m[2022-05-26 19:05:40.000]                                  e_107: Creating cycle packing with time limit = 2[0m
-[0m[2022-05-26 19:05:40.001]                                  e_107: Creating heuristic with time limit = 2[0m
-[0m[2022-05-26 19:05:40.004]                                  e_107: Solution lies in [11, 13][0m
-[2022-05-26 19:05:40.004]                                  e_107: Branching with k = 11
-[0m[2022-05-26 19:05:40.007]                                  e_107: Creating cycle packing with time limit = 3[0m
-[0m[2022-05-26 19:05:40.007]                                  e_107: Creating heuristic with time limit = 3[0m
-[0m[2022-05-26 19:05:40.011]                                  e_107: Solution lies in [12, 14][0m
-[2022-05-26 19:05:40.011]                                  e_107: Branching with k = 12
-[0m[2022-05-26 19:05:40.013]                                  e_107: Creating cycle packing with time limit = 3[0m
-[0m[2022-05-26 19:05:40.014]                                  e_107: Creating heuristic with time limit = 3[0m
-[0m[2022-05-26 19:05:40.018]                                  e_107: Solution lies in [16, 18][0m
-[2022-05-26 19:05:40.018]                                  e_107: Branching with k = 16
-[0m[2022-05-26 19:05:40.022]                                  e_107: Creating cycle packing with time limit = 3[0m
-[0m[2022-05-26 19:05:40.023]                                  e_107: Creating heuristic with time limit = 3[0m
-[0m[2022-05-26 19:05:40.023]                                  e_107: Solution lies in [16, 16][0m
-[0m[2022-05-26 19:05:40.024]                                  e_107: Creating cycle packing with time limit = 3[0m
-[0m[2022-05-26 19:05:40.024]                                  e_107: Creating heuristic with time limit = 3[0m
-[0m[2022-05-26 19:05:40.029]                                  e_107: Solution lies in [19, 21][0m
-[2022-05-26 19:05:40.030]                                  e_107: Branching with k = 19
-[0m[2022-05-26 19:05:40.035]                                  e_107: Creating cycle packing with time limit = 4[0m
-[0m[2022-05-26 19:05:40.035]                                  e_107: Creating heuristic with time limit = 4[0m
-[0m[2022-05-26 19:05:40.041]                                  e_107: Solution lies in [20, 21][0m
-[2022-05-26 19:05:40.042]                                  e_107: Branching with k = 20
-[0m[2022-05-26 19:05:40.046]                                  e_107: Creating cycle packing with time limit = 4[0m
-[0m[2022-05-26 19:05:40.047]                                  e_107: Creating heuristic with time limit = 4[0m
-[0m[2022-05-26 19:05:40.052]                                  e_107: Solution lies in [21, 23][0m
-[2022-05-26 19:05:40.052]                                  e_107: Branching with k = 21
-[0m[2022-05-26 19:05:40.059]                                  e_107: Creating cycle packing with time limit = 4[0m
-[0m[2022-05-26 19:05:40.060]                                  e_107: Creating heuristic with time limit = 4[0m
-[0m[2022-05-26 19:05:40.066]                                  e_107: Solution lies in [23, 25][0m
-[2022-05-26 19:05:40.066]                                  e_107: Branching with k = 23
-[0m[2022-05-26 19:05:40.075]                                  e_107: Creating cycle packing with time limit = 5[0m
-[0m[2022-05-26 19:05:40.076]                                  e_107: Creating heuristic with time limit = 5[0m
-[0m[2022-05-26 19:05:40.082]                                  e_107: Solution lies in [21, 22][0m
-[2022-05-26 19:05:40.082]                                  e_107: Branching with k = 21
-[0m[2022-05-26 19:05:40.084]                                  e_107: Creating cycle packing with time limit = 5[0m
-[0m[2022-05-26 19:05:40.085]                                  e_107: Creating heuristic with time limit = 5[0m
-[0m[2022-05-26 19:05:40.091]                                  e_107: Solution lies in [25, 27][0m
-[2022-05-26 19:05:40.092]                                  e_107: Branching with k = 25
-[0m[2022-05-26 19:05:40.098]                                  e_107: Creating cycle packing with time limit = 7[0m
-[0m[2022-05-26 19:05:40.099]                                  e_107: Creating heuristic with time limit = 7[0m
-[0m[2022-05-26 19:05:40.107]                                  e_107: Solution lies in [31, 32][0m
-[2022-05-26 19:05:40.108]                                  e_107: Branching with k = 31
-[0m[2022-05-26 19:05:40.114]                                  e_107: Creating cycle packing with time limit = 7[0m
-[0m[2022-05-26 19:05:40.115]                                  e_107: Creating heuristic with time limit = 7[0m
-[0m[2022-05-26 19:05:40.124]                                  e_107: Solution lies in [38, 41][0m
-[2022-05-26 19:05:40.124]                                  e_107: Branching with k = 38
-[0m[2022-05-26 19:05:40.165]                                  e_107: Creating cycle packing with time limit = 8[0m
-[0m[2022-05-26 19:05:40.166]                                  e_107: Creating heuristic with time limit = 8[0m
-[0m[2022-05-26 19:05:40.176]                                  e_107: Solution lies in [37, 39][0m
-[2022-05-26 19:05:40.177]                                  e_107: Branching with k = 37
-[0m[2022-05-26 19:05:40.185]                                  e_107: Creating cycle packing with time limit = 10[0m
-[0m[2022-05-26 19:05:40.191]                                  e_107: Creating heuristic with time limit = 10[0m
-[0m[2022-05-26 19:05:40.204]                                  e_107: Solution lies in [43, 49][0m
-[2022-05-26 19:05:40.204]                                  e_107: Branching with k = 43
-[0m[2022-05-26 19:05:40.294]                                  e_107: Creating cycle packing with time limit = 10[0m
-[0m[2022-05-26 19:05:40.295]                                  e_107: Creating heuristic with time limit = 10[0m
-[0m[2022-05-26 19:05:40.308]                                  e_107: Solution lies in [43, 48][0m
-[2022-05-26 19:05:40.309]                                  e_107: Branching with k = 43
-[0m[2022-05-26 19:05:40.371]                                  e_107: Creating cycle packing with time limit = 14[0m
-[0m[2022-05-26 19:05:40.374]                                  e_107: Creating heuristic with time limit = 14[0m
-[0m[2022-05-26 19:05:40.391]                                  e_107: Solution lies in [70, 73][0m
-[2022-05-26 19:05:40.392]                                  e_107: Branching with k = 70
-[0m[2022-05-26 19:05:40.464]                                  e_107: Creating cycle packing with time limit = 16[0m
-[0m[2022-05-26 19:05:40.468]                                  e_107: Creating heuristic with time limit = 16[0m
-[0m[2022-05-26 19:05:40.488]                                  e_107: Solution lies in [73, 78][0m
-[2022-05-26 19:05:40.489]                                  e_107: Branching with k = 73
-[0m[2022-05-26 19:05:41.096]                                  e_107: Creating cycle packing with time limit = 22[0m
-[0m[2022-05-26 19:05:41.101]                                  e_107: Creating heuristic with time limit = 22[0m
-[0m[2022-05-26 19:05:41.126]                                  e_107: Solution lies in [97, 108][0m
-[2022-05-26 19:05:41.126]                                  e_107: Branching with k = 97
-[0m[2022-05-26 19:06:08.068]                                  e_107: Creating cycle packing with time limit = 28[0m
-[0m[2022-05-26 19:06:08.077]                                  e_107: Creating heuristic with time limit = 28[0m
-[0m[2022-05-26 19:06:08.106]                                  e_107: Solution lies in [129, 138][0m
-[2022-05-26 19:06:08.106]                                  e_107: Branching with k = 129
-[0m[2022-05-26 19:06:12.922]                                  e_107: Creating cycle packing with time limit = 66[0m
-[0m[2022-05-26 19:06:12.963]                                  e_107: Creating heuristic with time limit = 66[0m
-[0m[2022-05-26 19:06:13.041]                                  e_107: Solution lies in [314, 340][0m
-[2022-05-26 19:06:13.042]                                  e_107: Branching with k = 314
-[31m[2022-05-26 19:06:39.384]                                  e_107: Found no solution with k = 5243 in 60011 ms (recursive steps: 143059)[0m
-[33m[2022-05-26 19:06:39.390]                                  e_107: BFS: 9271, Packing: 23569, Heuristic: 298, Copy: 10146, Red: 10594, DAG: 4472, Pre: 536, File: 31[0m
-[0m[2022-05-26 19:06:39.417]                                  e_109: Applying reduction rules...[0m
-[0m[2022-05-26 19:06:40.077]                                  e_109: Applying Tarjan...[0m
-[0m[2022-05-26 19:06:40.099]                                  e_109: Applying reduction rules again...[0m
-[0m[2022-05-26 19:06:40.113]                                  e_109: Using Heuristic for subgraph with |N| = 9, |M| = 38[0m
-[0m[2022-05-26 19:06:40.160]                                  e_109: Call SCIP for subgraph with |N| = 48, |M| = 256[0m
-[0m[2022-05-26 19:06:40.301]                                  e_109: Call SCIP for subgraph with |N| = 79, |M| = 388[0m
-[0m[2022-05-26 19:06:40.542]                                  e_109: Call SCIP for subgraph with |N| = 167, |M| = 942[0m
-[0m[2022-05-26 19:06:44.592]                                  e_109: Call SCIP for subgraph with |N| = 2851, |M| = 15894[0m
-[0m[2022-05-26 19:20:17.476]                                  e_109: Single edge count: 0/17518[0m
-[35m[2022-05-26 19:20:17.476]                                  e_109: Found solution k = 12710 in 818084 ms (recursive steps: 0)[0m
-[35m[2022-05-26 19:20:17.501]                                  e_109: e_109 (n = 16382, m = 149298, k = -1)[0m
-[0m[2022-05-26 19:20:18.274]                                  e_109: Found 5 cyclic sub graph(s) with n = [9, 48, 79, 167, 2851][0m
-[0m[2022-05-26 19:20:18.289]                                  e_109: Removed 13228 nodes in preprocessing, starting with k = 10554[0m
-[0m[2022-05-26 19:20:18.290]                                  e_109: Creating cycle packing with time limit = 2[0m
-[0m[2022-05-26 19:20:18.290]                                  e_109: Creating heuristic with time limit = 2[0m
-[0m[2022-05-26 19:20:18.291]                                  e_109: Solution lies in [6, 6][0m
-[0m[2022-05-26 19:20:18.291]                                  e_109: Creating cycle packing with time limit = 15[0m
-[0m[2022-05-26 19:20:18.292]                                  e_109: Creating heuristic with time limit = 15[0m
-[0m[2022-05-26 19:20:18.308]                                  e_109: Solution lies in [32, 33][0m
-[2022-05-26 19:20:18.309]                                  e_109: Branching with k = 32
-[0m[2022-05-26 19:20:18.312]                                  e_109: Creating cycle packing with time limit = 25[0m
-[0m[2022-05-26 19:20:18.314]                                  e_109: Creating heuristic with time limit = 25[0m
-[0m[2022-05-26 19:20:18.340]                                  e_109: Solution lies in [50, 52][0m
-[2022-05-26 19:20:18.341]                                  e_109: Branching with k = 50
-[0m[2022-05-26 19:20:18.349]                                  e_109: Creating cycle packing with time limit = 52[0m
-[0m[2022-05-26 19:20:18.354]                                  e_109: Creating heuristic with time limit = 52[0m
-[0m[2022-05-26 19:20:18.408]                                  e_109: Solution lies in [108, 115][0m
-[2022-05-26 19:20:18.408]                                  e_109: Branching with k = 108
-[0m[2022-05-26 19:20:20.140]                                  e_109: Creating cycle packing with time limit = 903[0m
-[0m[2022-05-26 19:20:21.143]                                  e_109: Creating heuristic with time limit = 903[0m
-[0m[2022-05-26 19:20:22.116]                                  e_109: Solution lies in [1881, 1979][0m
-[2022-05-26 19:20:22.117]                                  e_109: Branching with k = 1881
-[31m[2022-05-26 19:21:17.480]                                  e_109: Found no solution with k = 12640 in 60002 ms (recursive steps: 16923)[0m
-[33m[2022-05-26 19:21:17.480]                                  e_109: BFS: 15309, Packing: 9035, Heuristic: 1071, Copy: 15522, Red: 8394, DAG: 8823, Pre: 788, File: 23[0m
-[0m[2022-05-26 19:21:17.486]                                  e_111: Applying reduction rules...[0m
-[0m[2022-05-26 19:21:17.540]                                  e_111: Applying Tarjan...[0m
-[0m[2022-05-26 19:21:17.549]                                  e_111: Applying reduction rules again...[0m
-[0m[2022-05-26 19:21:20.948]                                  e_111: Call SCIP for subgraph with |N| = 1189, |M| = 12594[0m
-[0m[2022-05-26 19:28:12.351]                                  e_111: Single edge count: 0/12594[0m
-[35m[2022-05-26 19:28:12.352]                                  e_111: Found solution k = 1741 in 414871 ms (recursive steps: 0)[0m
-[35m[2022-05-26 19:28:12.359]                                  e_111: e_111 (n = 2048, m = 31904, k = -1)[0m
-[0m[2022-05-26 19:28:12.427]                                  e_111: Found 1 cyclic sub graph(s) with n = [1189][0m
-[0m[2022-05-26 19:28:12.442]                                  e_111: Removed 859 nodes in preprocessing, starting with k = 807[0m
-[0m[2022-05-26 19:28:12.444]                                  e_111: Creating cycle packing with time limit = 1000[0m
-[0m[2022-05-26 19:28:12.758]                                  e_111: Creating heuristic with time limit = 1000[0m
-[0m[2022-05-26 19:28:13.833]                                  e_111: Solution lies in [906, 949][0m
-[2022-05-26 19:28:13.833]                                  e_111: Branching with k = 906
-[31m[2022-05-26 19:29:12.355]                                  e_111: Found no solution with k = 1713 in 60002 ms (recursive steps: 32575)[0m
-[33m[2022-05-26 19:29:12.355]                                  e_111: BFS: 11602, Packing: 11634, Heuristic: 1076, Copy: 10388, Red: 18755, DAG: 5651, Pre: 83, File: 6[0m
-[0m[2022-05-26 19:29:12.361]                                  e_113: Applying reduction rules...[0m
-[0m[2022-05-26 19:29:12.450]                                  e_113: Applying Tarjan...[0m
-[0m[2022-05-26 19:29:12.455]                                  e_113: Applying reduction rules again...[0m
-[0m[2022-05-26 19:29:15.777]                                  e_113: Call SCIP for subgraph with |N| = 648, |M| = 11546[0m
-[0m[2022-05-26 19:38:10.999]                                  e_113: Single edge count: 0/11546[0m
-[35m[2022-05-26 19:38:11.000]                                  e_113: Found solution k = 915 in 538643 ms (recursive steps: 0)[0m
-[35m[2022-05-26 19:38:11.006]                                  e_113: e_113 (n = 1024, m = 25750, k = -1)[0m
-[0m[2022-05-26 19:38:11.103]                                  e_113: Found 1 cyclic sub graph(s) with n = [648][0m
-[0m[2022-05-26 19:38:11.125]                                  e_113: Removed 376 nodes in preprocessing, starting with k = 367[0m
-[0m[2022-05-26 19:38:11.126]                                  e_113: Creating cycle packing with time limit = 1000[0m
-[0m[2022-05-26 19:38:11.244]                                  e_113: Creating heuristic with time limit = 1000[0m
-[0m[2022-05-26 19:38:12.347]                                  e_113: Solution lies in [534, 554][0m
-[2022-05-26 19:38:12.348]                                  e_113: Branching with k = 534
-[31m[2022-05-26 19:39:11.003]                                  e_113: Found no solution with k = 901 in 60002 ms (recursive steps: 32517)[0m
-[33m[2022-05-26 19:39:11.004]                                  e_113: BFS: 6681, Packing: 12413, Heuristic: 1103, Copy: 5612, Red: 31164, DAG: 2439, Pre: 119, File: 5[0m
-[0m[2022-05-26 19:39:11.054]                                  e_115: Applying reduction rules...[0m
-[0m[2022-05-26 19:39:15.643]                                  e_115: Applying Tarjan...[0m
-[0m[2022-05-26 19:39:16.028]                                  e_115: Applying reduction rules again...[0m
-[0m[2022-05-26 19:39:16.105]                                  e_115: Using Heuristic for subgraph with |N| = 6, |M| = 24[0m
-[0m[2022-05-26 19:39:16.105]                                  e_115: Using Heuristic for subgraph with |N| = 6, |M| = 24[0m
-[0m[2022-05-26 19:39:16.109]                                  e_115: Call SCIP for subgraph with |N| = 12, |M| = 58[0m
-[0m[2022-05-26 19:39:16.130]                                  e_115: Call SCIP for subgraph with |N| = 56, |M| = 288[0m
-[0m[2022-05-26 19:39:16.215]                                  e_115: Call SCIP for subgraph with |N| = 96, |M| = 498[0m
-[0m[2022-05-26 19:39:50.087]                                  e_115: Call SCIP for subgraph with |N| = 12617, |M| = 84180[0m
-[0m[2022-05-26 19:59:59.447]                                  e_115: Single edge count: 150/85072[0m
-[35m[2022-05-26 19:59:59.449]                                  e_115: Found solution k = 15410 in 1248444 ms (recursive steps: 0)[0m
-[35m[2022-05-26 19:59:59.516]                                  e_115: e_115 (n = 32766, m = 304304, k = -1)[0m
-[0m[2022-05-26 20:00:07.740]                                  e_115: Found 6 cyclic sub graph(s) with n = [6, 6, 12, 56, 96, 12617][0m
-[0m[2022-05-26 20:00:07.837]                                  e_115: Removed 19973 nodes in preprocessing, starting with k = 15293[0m
-[0m[2022-05-26 20:00:07.838]                                  e_115: Creating cycle packing with time limit = 0[0m
-[0m[2022-05-26 20:00:07.838]                                  e_115: Creating heuristic with time limit = 0[0m
-[0m[2022-05-26 20:00:07.839]                                  e_115: Solution lies in [4, 4][0m
-[0m[2022-05-26 20:00:07.839]                                  e_115: Creating cycle packing with time limit = 0[0m
-[0m[2022-05-26 20:00:07.840]                                  e_115: Creating heuristic with time limit = 0[0m
-[0m[2022-05-26 20:00:07.841]                                  e_115: Solution lies in [4, 4][0m
-[0m[2022-05-26 20:00:07.842]                                  e_115: Creating cycle packing with time limit = 0[0m
-[0m[2022-05-26 20:00:07.842]                                  e_115: Creating heuristic with time limit = 0[0m
-[0m[2022-05-26 20:00:07.844]                                  e_115: Solution lies in [7, 8][0m
-[2022-05-26 20:00:07.844]                                  e_115: Branching with k = 7
-[0m[2022-05-26 20:00:07.845]                                  e_115: Creating cycle packing with time limit = 4[0m
-[0m[2022-05-26 20:00:07.846]                                  e_115: Creating heuristic with time limit = 4[0m
-[0m[2022-05-26 20:00:07.852]                                  e_115: Solution lies in [35, 38][0m
-[2022-05-26 20:00:07.853]                                  e_115: Branching with k = 35
-[0m[2022-05-26 20:00:07.886]                                  e_115: Creating cycle packing with time limit = 7[0m
-[0m[2022-05-26 20:00:07.889]                                  e_115: Creating heuristic with time limit = 7[0m
-[0m[2022-05-26 20:00:07.898]                                  e_115: Solution lies in [60, 63][0m
-[2022-05-26 20:00:07.900]                                  e_115: Branching with k = 60
-[0m[2022-05-26 20:00:07.946]                                  e_115: Creating cycle packing with time limit = 986[0m
-[0m[2022-05-26 20:00:39.909]                                  e_115: Creating heuristic with time limit = 986[0m
-[0m[2022-05-26 20:00:53.808]                                  e_115: Solution lies in [8377, 8867][0m
-[2022-05-26 20:00:53.809]                                  e_115: Branching with k = 8377
-[31m[2022-05-26 20:00:59.457]                                  e_115: Found no solution with k = 23787 in 60007 ms (recursive steps: 428)[0m
-[33m[2022-05-26 20:00:59.458]                                  e_115: BFS: 2614, Packing: 32206, Heuristic: 13918, Copy: 1244, Red: 242, DAG: 1360, Pre: 8322, File: 66[0m
-[0m[2022-05-26 20:00:59.524]                                  e_117: Applying reduction rules...[0m
-[0m[2022-05-26 20:01:07.304]                                  e_117: Applying Tarjan...[0m
-[0m[2022-05-26 20:01:07.775]                                  e_117: Applying reduction rules again...[0m
-[0m[2022-05-26 20:01:07.895]                                  e_117: Call SCIP for subgraph with |N| = 5, |M| = 13[0m
-[0m[2022-05-26 20:01:07.912]                                  e_117: Call SCIP for subgraph with |N| = 7, |M| = 26[0m
-[0m[2022-05-26 20:01:07.921]                                  e_117: Call SCIP for subgraph with |N| = 11, |M| = 56[0m
-[0m[2022-05-26 20:01:07.963]                                  e_117: Using Heuristic for subgraph with |N| = 21, |M| = 122[0m
-[0m[2022-05-26 20:01:55.392]                                  e_117: Call SCIP for subgraph with |N| = 12981, |M| = 85745[0m
-[0m[2022-05-26 20:23:22.979]                                  e_117: Single edge count: 178/85962[0m
-[35m[2022-05-26 20:23:22.980]                                  e_117: Found solution k = 15177 in 1343521 ms (recursive steps: 0)[0m
-[35m[2022-05-26 20:23:23.043]                                  e_117: e_117 (n = 32764, m = 304790, k = -1)[0m
-[0m[2022-05-26 20:23:30.477]                                  e_117: Found 5 cyclic sub graph(s) with n = [5, 7, 11, 21, 12981][0m
-[0m[2022-05-26 20:23:30.568]                                  e_117: Removed 19739 nodes in preprocessing, starting with k = 15148[0m
-[0m[2022-05-26 20:23:30.569]                                  e_117: Creating cycle packing with time limit = 0[0m
-[0m[2022-05-26 20:23:30.569]                                  e_117: Creating heuristic with time limit = 0[0m
-[0m[2022-05-26 20:23:30.571]                                  e_117: Solution lies in [2, 3][0m
-[2022-05-26 20:23:30.571]                                  e_117: Branching with k = 2
-[0m[2022-05-26 20:23:30.571]                                  e_117: Creating cycle packing with time limit = 0[0m
-[0m[2022-05-26 20:23:30.572]                                  e_117: Creating heuristic with time limit = 0[0m
-[0m[2022-05-26 20:23:30.573]                                  e_117: Solution lies in [4, 5][0m
-[2022-05-26 20:23:30.573]                                  e_117: Branching with k = 4
-[0m[2022-05-26 20:23:30.576]                                  e_117: Creating cycle packing with time limit = 0[0m
-[0m[2022-05-26 20:23:30.577]                                  e_117: Creating heuristic with time limit = 0[0m
-[0m[2022-05-26 20:23:30.578]                                  e_117: Solution lies in [6, 7][0m
-[2022-05-26 20:23:30.578]                                  e_117: Branching with k = 6
-[0m[2022-05-26 20:23:30.578]                                  e_117: Creating cycle packing with time limit = 1[0m
-[0m[2022-05-26 20:23:30.579]                                  e_117: Creating heuristic with time limit = 1[0m
-[0m[2022-05-26 20:23:30.580]                                  e_117: Solution lies in [14, 14][0m
-[0m[2022-05-26 20:23:30.588]                                  e_117: Creating cycle packing with time limit = 996[0m
-[0m[2022-05-26 20:24:01.679]                                  e_117: Creating heuristic with time limit = 996[0m
-[0m[2022-05-26 20:24:14.879]                                  e_117: Solution lies in [8631, 9109][0m
-[2022-05-26 20:24:14.880]                                  e_117: Branching with k = 8631
-[31m[2022-05-26 20:24:22.990]                                  e_117: Found no solution with k = 23808 in 60008 ms (recursive steps: 259)[0m
-[33m[2022-05-26 20:24:22.990]                                  e_117: BFS: 3938, Packing: 31361, Heuristic: 13205, Copy: 1756, Red: 375, DAG: 1747, Pre: 7525, File: 62[0m
-[0m[2022-05-26 20:24:23.061]                                  e_119: Applying reduction rules...[0m
-[0m[2022-05-26 20:24:30.189]                                  e_119: Applying Tarjan...[0m
-[0m[2022-05-26 20:24:30.932]                                  e_119: Applying reduction rules again...[0m
-[0m[2022-05-26 20:24:31.026]                                  e_119: Call SCIP for subgraph with |N| = 5, |M| = 13[0m
-[0m[2022-05-26 20:24:31.037]                                  e_119: Using Heuristic for subgraph with |N| = 6, |M| = 19[0m
-[0m[2022-05-26 20:24:31.038]                                  e_119: Using Heuristic for subgraph with |N| = 6, |M| = 24[0m
-[0m[2022-05-26 20:24:31.038]                                  e_119: Using Heuristic for subgraph with |N| = 6, |M| = 17[0m
-[0m[2022-05-26 20:24:31.041]                                  e_119: Call SCIP for subgraph with |N| = 7, |M| = 23[0m
-[0m[2022-05-26 20:24:31.065]                                  e_119: Call SCIP for subgraph with |N| = 7, |M| = 19[0m
-[0m[2022-05-26 20:24:31.075]                                  e_119: Using Heuristic for subgraph with |N| = 9, |M| = 42[0m
-[0m[2022-05-26 20:24:31.076]                                  e_119: Using Heuristic for subgraph with |N| = 11, |M| = 54[0m
-[0m[2022-05-26 20:24:31.079]                                  e_119: Call SCIP for subgraph with |N| = 12, |M| = 52[0m
-[0m[2022-05-26 20:24:31.126]                                  e_119: Using Heuristic for subgraph with |N| = 12, |M| = 59[0m
-[0m[2022-05-26 20:24:31.127]                                  e_119: Using Heuristic for subgraph with |N| = 13, |M| = 56[0m
-[0m[2022-05-26 20:24:31.133]                                  e_119: Call SCIP for subgraph with |N| = 24, |M| = 143[0m
-[0m[2022-05-26 20:24:31.512]                                  e_119: Call SCIP for subgraph with |N| = 53, |M| = 267[0m
-[0m[2022-05-26 20:24:33.573]                                  e_119: Call SCIP for subgraph with |N| = 71, |M| = 424[0m
-[0m[2022-05-26 20:24:45.023]                                  e_119: Call SCIP for subgraph with |N| = 95, |M| = 548[0m
-[0m[2022-05-26 20:26:14.024]                                  e_119: Call SCIP for subgraph with |N| = 16772, |M| = 112452[0m
-[0m[2022-05-26 20:51:18.886]                                  e_119: Single edge count: 4828/114212[0m
-[35m[2022-05-26 20:51:18.888]                                  e_119: Found solution k = 10646 in 1615897 ms (recursive steps: 0)[0m
-[35m[2022-05-26 20:51:18.976]                                  e_119: e_119 (n = 32751, m = 272707, k = -1)[0m
-[0m[2022-05-26 20:51:27.847]                                  e_119: Found 16 cyclic sub graph(s) with n = [5, 6, 6, 6, 7, 7, 9, 11, 12, 12, 13, 24, 53, 71, 95, 16775][0m
-[0m[2022-05-26 20:51:27.928]                                  e_119: Removed 15642 nodes in preprocessing, starting with k = 10433[0m
-[0m[2022-05-26 20:51:27.929]                                  e_119: Creating cycle packing with time limit = 0[0m
-[0m[2022-05-26 20:51:27.929]                                  e_119: Creating heuristic with time limit = 0[0m
-[0m[2022-05-26 20:51:27.931]                                  e_119: Solution lies in [2, 3][0m
-[2022-05-26 20:51:27.931]                                  e_119: Branching with k = 2
-[0m[2022-05-26 20:51:27.931]                                  e_119: Creating cycle packing with time limit = 0[0m
-[0m[2022-05-26 20:51:27.932]                                  e_119: Creating heuristic with time limit = 0[0m
-[0m[2022-05-26 20:51:27.932]                                  e_119: Solution lies in [3, 3][0m
-[0m[2022-05-26 20:51:27.932]                                  e_119: Creating cycle packing with time limit = 0[0m
-[0m[2022-05-26 20:51:27.933]                                  e_119: Creating heuristic with time limit = 0[0m
-[0m[2022-05-26 20:51:27.933]                                  e_119: Solution lies in [4, 4][0m
-[0m[2022-05-26 20:51:27.933]                                  e_119: Creating cycle packing with time limit = 0[0m
-[0m[2022-05-26 20:51:27.934]                                  e_119: Creating heuristic with time limit = 0[0m
-[0m[2022-05-26 20:51:27.934]                                  e_119: Solution lies in [3, 3][0m
-[0m[2022-05-26 20:51:27.935]                                  e_119: Creating cycle packing with time limit = 0[0m
-[0m[2022-05-26 20:51:27.935]                                  e_119: Creating heuristic with time limit = 0[0m
-[0m[2022-05-26 20:51:27.936]                                  e_119: Solution lies in [3, 4][0m
-[2022-05-26 20:51:27.936]                                  e_119: Branching with k = 3
-[0m[2022-05-26 20:51:27.937]                                  e_119: Creating cycle packing with time limit = 0[0m
-[0m[2022-05-26 20:51:27.937]                                  e_119: Creating heuristic with time limit = 0[0m
-[0m[2022-05-26 20:51:27.939]                                  e_119: Solution lies in [3, 4][0m
-[2022-05-26 20:51:27.939]                                  e_119: Branching with k = 3
-[0m[2022-05-26 20:51:27.939]                                  e_119: Creating cycle packing with time limit = 0[0m
-[0m[2022-05-26 20:51:27.940]                                  e_119: Creating heuristic with time limit = 0[0m
-[0m[2022-05-26 20:51:27.940]                                  e_119: Solution lies in [6, 6][0m
-[0m[2022-05-26 20:51:27.940]                                  e_119: Creating cycle packing with time limit = 0[0m
-[0m[2022-05-26 20:51:27.941]                                  e_119: Creating heuristic with time limit = 0[0m
-[0m[2022-05-26 20:51:27.941]                                  e_119: Solution lies in [7, 7][0m
-[0m[2022-05-26 20:51:27.941]                                  e_119: Creating cycle packing with time limit = 0[0m
-[0m[2022-05-26 20:51:27.942]                                  e_119: Creating heuristic with time limit = 0[0m
-[0m[2022-05-26 20:51:27.943]                                  e_119: Solution lies in [7, 8][0m
-[2022-05-26 20:51:27.943]                                  e_119: Branching with k = 7
-[0m[2022-05-26 20:51:27.943]                                  e_119: Creating cycle packing with time limit = 0[0m
-[0m[2022-05-26 20:51:27.944]                                  e_119: Creating heuristic with time limit = 0[0m
-[0m[2022-05-26 20:51:27.944]                                  e_119: Solution lies in [7, 7][0m
-[0m[2022-05-26 20:51:27.945]                                  e_119: Creating cycle packing with time limit = 0[0m
-[0m[2022-05-26 20:51:27.945]                                  e_119: Creating heuristic with time limit = 0[0m
-[0m[2022-05-26 20:51:27.946]                                  e_119: Solution lies in [7, 7][0m
-[0m[2022-05-26 20:51:27.946]                                  e_119: Creating cycle packing with time limit = 1[0m
-[0m[2022-05-26 20:51:27.947]                                  e_119: Creating heuristic with time limit = 1[0m
-[0m[2022-05-26 20:51:27.949]                                  e_119: Solution lies in [15, 16][0m
-[2022-05-26 20:51:27.949]                                  e_119: Branching with k = 15
-[0m[2022-05-26 20:51:27.950]                                  e_119: Creating cycle packing with time limit = 3[0m
-[0m[2022-05-26 20:51:27.951]                                  e_119: Creating heuristic with time limit = 3[0m
-[0m[2022-05-26 20:51:27.955]                                  e_119: Solution lies in [30, 33][0m
-[2022-05-26 20:51:27.956]                                  e_119: Branching with k = 30
-[0m[2022-05-26 20:51:27.965]                                  e_119: Creating cycle packing with time limit = 4[0m
-[0m[2022-05-26 20:51:27.967]                                  e_119: Creating heuristic with time limit = 4[0m
-[0m[2022-05-26 20:51:27.972]                                  e_119: Solution lies in [43, 45][0m
-[2022-05-26 20:51:27.972]                                  e_119: Branching with k = 43
-[0m[2022-05-26 20:51:27.992]                                  e_119: Creating cycle packing with time limit = 5[0m
-[0m[2022-05-26 20:51:27.994]                                  e_119: Creating heuristic with time limit = 5[0m
-[0m[2022-05-26 20:51:28.002]                                  e_119: Solution lies in [56, 62][0m
-[2022-05-26 20:51:28.002]                                  e_119: Branching with k = 56
-[0m[2022-05-26 20:51:28.197]                                  e_119: Creating cycle packing with time limit = 980[0m
-[0m[2022-05-26 20:52:14.792]                                  e_119: Creating heuristic with time limit = 980[0m
-[0m[2022-05-26 20:52:40.924]                                  e_119: Solution lies in [10544, 11401][0m
-[2022-05-26 20:52:40.925]                                  e_119: Branching with k = 10544
-[31m[2022-05-26 20:52:40.926]                                  e_119: Found no solution with k = 21189 in 82036 ms (recursive steps: 741)[0m
-[33m[2022-05-26 20:52:40.927]                                  e_119: BFS: 16, Packing: 46692, Heuristic: 26156, Copy: 23, Red: 76, DAG: 16, Pre: 8953, File: 85[0m
-[0m[2022-05-26 20:52:40.931]                                  e_121: Applying reduction rules...[0m
-[0m[2022-05-26 20:52:40.936]                                  e_121: Applying Tarjan...[0m
-[0m[2022-05-26 20:52:40.939]                                  e_121: Applying reduction rules again...[0m
-[0m[2022-05-26 20:52:44.133]                                  e_121: Call SCIP for subgraph with |N| = 515, |M| = 3331[0m
-[0m[2022-05-26 21:07:40.029]                                  e_121: Single edge count: 3297/3331[0m
-[35m[2022-05-26 21:07:40.030]                                  e_121: Found solution k = 3 in 899101 ms (recursive steps: 0)[0m
-[35m[2022-05-26 21:07:40.032]                                  e_121: e_121 (n = 1024, m = 5480, k = -1)[0m
-[0m[2022-05-26 21:07:40.037]                                  e_121: Found 1 cyclic sub graph(s) with n = [515][0m
-[0m[2022-05-26 21:07:40.038]                                  e_121: Removed 509 nodes in preprocessing, starting with k = 3[0m
-[0m[2022-05-26 21:07:40.039]                                  e_121: Creating cycle packing with time limit = 1000[0m
-[0m[2022-05-26 21:07:40.103]                                  e_121: Creating heuristic with time limit = 1000[0m
-[0m[2022-05-26 21:07:41.144]                                  e_121: Solution lies in [55, 81][0m
-[2022-05-26 21:07:41.145]                                  e_121: Branching with k = 55
-[31m[2022-05-26 21:08:40.032]                                  e_121: Found no solution with k = 61 in 60001 ms (recursive steps: 22272)[0m
-[33m[2022-05-26 21:08:40.033]                                  e_121: BFS: 6028, Packing: 35809, Heuristic: 1041, Copy: 5657, Red: 8384, DAG: 2920, Pre: 6, File: 1[0m
-[0m[2022-05-26 21:08:40.073]                                  e_123: Applying reduction rules...[0m
-[0m[2022-05-26 21:08:44.394]                                  e_123: Applying Tarjan...[0m
+[0m[2022-05-29 09:18:51.619]                                  e_163: Applying reduction rules...[0m
+[0m[2022-05-29 09:20:50.932]                                  e_163: Applying Tarjan...[0m
+[0m[2022-05-29 09:20:50.941]                                  e_163: Applying reduction rules again...[0m
+[0m[2022-05-29 09:20:50.951]                                  e_163: Using Heuristic for subgraph with |N| = 6, |M| = 18[0m
+[0m[2022-05-29 09:20:50.952]                                  e_163: Using Heuristic for subgraph with |N| = 6, |M| = 18[0m
+[0m[2022-05-29 09:20:50.953]                                  e_163: Using Heuristic for subgraph with |N| = 6, |M| = 24[0m
+[0m[2022-05-29 09:20:51.110]                                  e_163: Call SCIP for subgraph with |N| = 9, |M| = 28[0m
+[0m[2022-05-29 09:20:51.131]                             SolveStart: Starting Solving[0m
+[0m[2022-05-29 09:20:51.137]                               SolveEnd: Found some solution[0m
+[0m[2022-05-29 09:20:51.139]           Solution found for subgraph:: [55072, 55075, 98516, 98539, 55065, 55078][0m
+[0m[2022-05-29 09:20:51.316]                                  e_163: Call SCIP for subgraph with |N| = 10, |M| = 38[0m
+[0m[2022-05-29 09:20:51.322]                             SolveStart: Starting Solving[0m
+[0m[2022-05-29 09:20:51.325]                               SolveEnd: Found some solution[0m
+[0m[2022-05-29 09:20:51.326]           Solution found for subgraph:: [53659, 55514, 55520, 55529, 53665, 53677, 55524][0m
+[0m[2022-05-29 09:20:51.327]                                  e_163: Using Heuristic for subgraph with |N| = 12, |M| = 46[0m
+[0m[2022-05-29 09:20:51.328]                                  e_163: Using Heuristic for subgraph with |N| = 13, |M| = 56[0m
+[0m[2022-05-29 09:20:51.589]                                  e_163: Call SCIP for subgraph with |N| = 15, |M| = 54[0m
+[0m[2022-05-29 09:20:51.593]                             SolveStart: Starting Solving[0m
+[0m[2022-05-29 09:20:51.597]                               SolveEnd: Found some solution[0m
+[0m[2022-05-29 09:20:51.598]           Solution found for subgraph:: [12007, 12026, 12001, 12029, 12016, 6113, 6115, 6111, 6134][0m
+[0m[2022-05-29 09:20:51.857]                                  e_163: Call SCIP for subgraph with |N| = 15, |M| = 52[0m
+[0m[2022-05-29 09:20:51.861]                             SolveStart: Starting Solving[0m
+[0m[2022-05-29 09:20:51.865]                               SolveEnd: Found some solution[0m
+[0m[2022-05-29 09:20:51.865]           Solution found for subgraph:: [88675, 88694, 88697, 88692, 88709, 88702, 88719, 88712, 88934, 88682][0m
+[0m[2022-05-29 09:20:52.125]                                  e_163: Call SCIP for subgraph with |N| = 15, |M| = 56[0m
+[0m[2022-05-29 09:20:52.129]                             SolveStart: Starting Solving[0m
+[0m[2022-05-29 09:20:52.133]                               SolveEnd: Found some solution[0m
+[0m[2022-05-29 09:20:52.134]           Solution found for subgraph:: [122486, 122489, 122479, 122497, 128592, 122740, 122735, 128587, 128572, 122737][0m
+[0m[2022-05-29 09:20:52.601]                                  e_163: Call SCIP for subgraph with |N| = 27, |M| = 106[0m
+[0m[2022-05-29 09:20:52.606]                             SolveStart: Starting Solving[0m
+[0m[2022-05-29 09:20:52.611]                               SolveEnd: Found some solution[0m
+[0m[2022-05-29 09:20:52.612]           Solution found for subgraph:: [23355, 23374, 23377, 29479, 29471, 23354, 23594, 23356, 29707, 23357, 23376, 23373, 23370, 29478, 29472, 29483, 29494][0m
+[0m[2022-05-29 09:20:52.615]                                  e_163: Using Heuristic for subgraph with |N| = 40, |M| = 158[0m
+[0m[2022-05-29 09:20:55.066]                                  e_163: Single edge count: 0/654[0m
+[35m[2022-05-29 09:20:55.071]                                  e_163: Found solution k = 76438 in 123824 ms (recursive steps: 0)[0m
+[35m[2022-05-29 09:20:55.255]                                  e_163: e_163 (n = 131067, m = 574081, k = -1)[0m
+[0m[2022-05-29 09:23:11.888]                                  e_163: Found 12 cyclic sub graph(s) with n = [6, 6, 6, 9, 10, 12, 13, 15, 15, 15, 27, 40][0m
+[0m[2022-05-29 09:23:11.890]                                  e_163: Removed 130893 nodes in preprocessing, starting with k = 76328[0m
+[0m[2022-05-29 09:23:11.893]                                  e_163: Creating cycle packing with time limit = 34[0m
+[0m[2022-05-29 09:23:11.894]                                  e_163: Creating heuristic with time limit = 34[0m
+[0m[2022-05-29 09:23:11.894]                                  e_163: Solution lies in [4, 4][0m
+[0m[2022-05-29 09:23:11.895]                                  e_163: Creating cycle packing with time limit = 34[0m
+[0m[2022-05-29 09:23:11.895]                                  e_163: Creating heuristic with time limit = 34[0m
+[0m[2022-05-29 09:23:11.896]                                  e_163: Solution lies in [4, 4][0m
+[0m[2022-05-29 09:23:11.896]                                  e_163: Creating cycle packing with time limit = 34[0m
+[0m[2022-05-29 09:23:11.897]                                  e_163: Creating heuristic with time limit = 34[0m
+[0m[2022-05-29 09:23:11.897]                                  e_163: Solution lies in [4, 4][0m
+[0m[2022-05-29 09:23:11.898]                                  e_163: Creating cycle packing with time limit = 51[0m
+[0m[2022-05-29 09:23:11.899]                                  e_163: Creating heuristic with time limit = 51[0m
+[0m[2022-05-29 09:23:11.951]                                  e_163: Solution lies in [5, 6][0m
+[2022-05-29 09:23:11.951]                                  e_163: Branching with k = 5
+[31m[2022-05-29 09:23:11.967]                                  e_163: Found no solution with k = 76345 in 136894 ms (recursive steps: 0)[0m
+[33m[2022-05-29 09:23:11.974]                                  e_163: BFS: 0, Packing: 4, Heuristic: 54, Copy: 0, Red: 0, DAG: 0, Pre: 136634, File: 179[0m
+[0m[2022-05-29 09:23:12.133]                                  e_165: Applying reduction rules...[0m
+[0m[2022-05-29 09:25:50.955]                                  e_165: Applying Tarjan...[0m
+[0m[2022-05-29 09:25:50.969]                                  e_165: Applying reduction rules again...[0m
+[0m[2022-05-29 09:25:50.978]                                  e_165: Using Heuristic for subgraph with |N| = 6, |M| = 18[0m
+[0m[2022-05-29 09:25:50.979]                                  e_165: Using Heuristic for subgraph with |N| = 6, |M| = 18[0m
+[0m[2022-05-29 09:25:50.979]                                  e_165: Using Heuristic for subgraph with |N| = 6, |M| = 18[0m
+[0m[2022-05-29 09:25:50.980]                                  e_165: Using Heuristic for subgraph with |N| = 6, |M| = 18[0m
+[0m[2022-05-29 09:25:50.980]                                  e_165: Using Heuristic for subgraph with |N| = 6, |M| = 18[0m
+[0m[2022-05-29 09:25:50.981]                                  e_165: Using Heuristic for subgraph with |N| = 7, |M| = 24[0m
+[0m[2022-05-29 09:25:50.994]                                  e_165: Call SCIP for subgraph with |N| = 7, |M| = 26[0m
+[0m[2022-05-29 09:25:50.998]                             SolveStart: Starting Solving[0m
+[0m[2022-05-29 09:25:51.002]                               SolveEnd: Found some solution[0m
+[0m[2022-05-29 09:25:51.002]           Solution found for subgraph:: [102252, 102257, 102260, 102448, 102283][0m
+[0m[2022-05-29 09:25:51.015]                                  e_165: Call SCIP for subgraph with |N| = 7, |M| = 26[0m
+[0m[2022-05-29 09:25:51.021]                             SolveStart: Starting Solving[0m
+[0m[2022-05-29 09:25:51.025]                               SolveEnd: Found some solution[0m
+[0m[2022-05-29 09:25:51.026]           Solution found for subgraph:: [119108, 119115, 119350, 119337, 119330][0m
+[0m[2022-05-29 09:25:51.026]                                  e_165: Using Heuristic for subgraph with |N| = 8, |M| = 28[0m
+[0m[2022-05-29 09:25:51.027]                                  e_165: Using Heuristic for subgraph with |N| = 8, |M| = 26[0m
+[0m[2022-05-29 09:25:51.027]                                  e_165: Using Heuristic for subgraph with |N| = 8, |M| = 28[0m
+[0m[2022-05-29 09:25:51.028]                                  e_165: Using Heuristic for subgraph with |N| = 8, |M| = 28[0m
+[0m[2022-05-29 09:25:51.029]                                  e_165: Using Heuristic for subgraph with |N| = 9, |M| = 36[0m
+[0m[2022-05-29 09:25:51.030]                                  e_165: Using Heuristic for subgraph with |N| = 9, |M| = 34[0m
+[0m[2022-05-29 09:25:51.030]                                  e_165: Using Heuristic for subgraph with |N| = 10, |M| = 36[0m
+[0m[2022-05-29 09:25:51.057]                                  e_165: Call SCIP for subgraph with |N| = 15, |M| = 62[0m
+[0m[2022-05-29 09:25:51.061]                             SolveStart: Starting Solving[0m
+[0m[2022-05-29 09:25:51.080]                               SolveEnd: Found some solution[0m
+[0m[2022-05-29 09:25:51.081]           Solution found for subgraph:: [59208, 59223, 61455, 61477, 61441, 61458, 59194, 59187, 59196, 59201][0m
+[0m[2022-05-29 09:25:51.082]                                  e_165: Using Heuristic for subgraph with |N| = 15, |M| = 60[0m
+[0m[2022-05-29 09:25:51.083]                                  e_165: Using Heuristic for subgraph with |N| = 16, |M| = 56[0m
+[0m[2022-05-29 09:25:51.084]                                  e_165: Using Heuristic for subgraph with |N| = 17, |M| = 66[0m
+[0m[2022-05-29 09:25:51.085]                                  e_165: Using Heuristic for subgraph with |N| = 19, |M| = 76[0m
+[0m[2022-05-29 09:25:51.121]                                  e_165: Call SCIP for subgraph with |N| = 20, |M| = 76[0m
+[0m[2022-05-29 09:25:51.128]                             SolveStart: Starting Solving[0m
+[0m[2022-05-29 09:25:51.159]                               SolveEnd: Found some solution[0m
+[0m[2022-05-29 09:25:51.160]           Solution found for subgraph:: [83118, 83122, 83138, 83145, 82913, 82895, 82910, 82917, 83136, 82901, 82929, 82911][0m
+[0m[2022-05-29 09:25:51.161]                                  e_165: Using Heuristic for subgraph with |N| = 21, |M| = 82[0m
+[0m[2022-05-29 09:25:51.198]                                  e_165: Call SCIP for subgraph with |N| = 21, |M| = 86[0m
+[0m[2022-05-29 09:25:51.203]                             SolveStart: Starting Solving[0m
+[0m[2022-05-29 09:25:51.214]                               SolveEnd: Found some solution[0m
+[0m[2022-05-29 09:25:51.215]           Solution found for subgraph:: [17767, 17772, 17807, 17773, 17774, 17775, 17795, 17800, 17797, 17801, 17780, 17777, 17788, 17781][0m
+[0m[2022-05-29 09:25:51.252]                                  e_165: Call SCIP for subgraph with |N| = 21, |M| = 82[0m
+[0m[2022-05-29 09:25:51.258]                             SolveStart: Starting Solving[0m
+[0m[2022-05-29 09:25:51.289]                               SolveEnd: Found some solution[0m
+[0m[2022-05-29 09:25:51.290]           Solution found for subgraph:: [54679, 54682, 54697, 54464, 54698, 56515, 56525, 56541, 56542, 56516, 56524, 54700, 56748][0m
+[0m[2022-05-29 09:25:51.292]                                  e_165: Using Heuristic for subgraph with |N| = 22, |M| = 102[0m
+[0m[2022-05-29 09:25:51.330]                                  e_165: Call SCIP for subgraph with |N| = 22, |M| = 86[0m
+[0m[2022-05-29 09:25:51.335]                             SolveStart: Starting Solving[0m
+[0m[2022-05-29 09:25:51.341]                               SolveEnd: Found some solution[0m
+[0m[2022-05-29 09:25:51.342]           Solution found for subgraph:: [126817, 126825, 129066, 126830, 126824, 126836, 126809, 126814, 126815, 126813, 126831, 126829, 126806, 126849][0m
+[0m[2022-05-29 09:25:51.383]                                  e_165: Call SCIP for subgraph with |N| = 24, |M| = 88[0m
+[0m[2022-05-29 09:25:51.388]                             SolveStart: Starting Solving[0m
+[0m[2022-05-29 09:25:51.393]                               SolveEnd: Found some solution[0m
+[0m[2022-05-29 09:25:51.394]           Solution found for subgraph:: [122092, 122110, 122102, 122085, 121886, 121896, 121900, 122134, 121861, 121877, 121880, 121887, 121893, 121901, 122109][0m
+[0m[2022-05-29 09:25:51.395]                                  e_165: Using Heuristic for subgraph with |N| = 27, |M| = 116[0m
+[0m[2022-05-29 09:25:51.397]                                  e_165: Using Heuristic for subgraph with |N| = 27, |M| = 102[0m
+[0m[2022-05-29 09:25:51.447]                                  e_165: Call SCIP for subgraph with |N| = 29, |M| = 110[0m
+[0m[2022-05-29 09:25:51.453]                             SolveStart: Starting Solving[0m
+[0m[2022-05-29 09:25:51.492]                               SolveEnd: Found some solution[0m
+[0m[2022-05-29 09:25:51.493]           Solution found for subgraph:: [8503, 8516, 8515, 8517, 8510, 8509, 8676, 8684, 8710, 8950, 8682, 8714, 8712, 8700, 8708, 8709, 8698, 8511][0m
+[0m[2022-05-29 09:25:51.544]                                  e_165: Call SCIP for subgraph with |N| = 29, |M| = 104[0m
+[0m[2022-05-29 09:25:51.548]                             SolveStart: Starting Solving[0m
+[0m[2022-05-29 09:25:51.580]                               SolveEnd: Found some solution[0m
+[0m[2022-05-29 09:25:51.580]           Solution found for subgraph:: [57725, 57728, 57731, 57733, 57723, 57720, 57726, 57746, 57740, 57710, 57713, 57714, 57734, 57693, 57718, 57466, 57695, 57707][0m
+[0m[2022-05-29 09:25:51.636]                                  e_165: Call SCIP for subgraph with |N| = 32, |M| = 132[0m
+[0m[2022-05-29 09:25:51.641]                             SolveStart: Starting Solving[0m
+[0m[2022-05-29 09:25:51.669]                               SolveEnd: Found some solution[0m
+[0m[2022-05-29 09:25:51.670]           Solution found for subgraph:: [35167, 35381, 35396, 35171, 35383, 35385, 35162, 35173, 35373, 35408, 35413, 35389, 35392, 35391, 35374, 35375, 35387, 35380, 35379, 35350][0m
+[0m[2022-05-29 09:25:51.671]                                  e_165: Using Heuristic for subgraph with |N| = 32, |M| = 124[0m
+[0m[2022-05-29 09:25:51.727]                                  e_165: Call SCIP for subgraph with |N| = 32, |M| = 120[0m
+[0m[2022-05-29 09:25:51.733]                             SolveStart: Starting Solving[0m
+[0m[2022-05-29 09:25:51.766]                               SolveEnd: Found some solution[0m
+[0m[2022-05-29 09:25:51.766]           Solution found for subgraph:: [126048, 126056, 126061, 126045, 126026, 126297, 126245, 126274, 126286, 126248, 126296, 126269, 126270, 126484, 126509, 126521, 126285, 126292, 126279][0m
+[0m[2022-05-29 09:25:51.768]                                  e_165: Using Heuristic for subgraph with |N| = 34, |M| = 130[0m
+[0m[2022-05-29 09:25:51.770]                                  e_165: Using Heuristic for subgraph with |N| = 36, |M| = 146[0m
+[0m[2022-05-29 09:25:51.771]                                  e_165: Using Heuristic for subgraph with |N| = 37, |M| = 148[0m
+[0m[2022-05-29 09:25:51.838]                                  e_165: Call SCIP for subgraph with |N| = 38, |M| = 166[0m
+[0m[2022-05-29 09:25:51.846]                             SolveStart: Starting Solving[0m
+[0m[2022-05-29 09:25:51.878]                               SolveEnd: Found some solution[0m
+[0m[2022-05-29 09:25:51.879]           Solution found for subgraph:: [86131, 86147, 88419, 88421, 86138, 86125, 86149, 86144, 86113, 86114, 86115, 86108, 86111, 88398, 88392, 88598, 88601, 88610, 88605][0m
+[0m[2022-05-29 09:25:51.883]                             SolveStart: Starting Solving[0m
+[0m[2022-05-29 09:25:51.914]                               SolveEnd: Found some solution[0m
+[0m[2022-05-29 09:25:51.915]           Solution found for subgraph:: [86131, 86147, 88419, 88421, 86138, 86125, 86149, 86144, 86113, 86114, 86115, 86108, 86111, 88398, 88392, 88598, 88601, 88610, 88605][0m
+[0m[2022-05-29 09:25:51.920]                             SolveStart: Starting Solving[0m
+[0m[2022-05-29 09:25:51.927]                               SolveEnd: Found some solution[0m
+[0m[2022-05-29 09:25:51.928]           Solution found for subgraph:: [88411, 88413, 88424, 86131, 86147, 88419, 88421, 86146, 86138, 88427, 86125, 86149, 86144, 86113, 86114, 86115, 86108, 86111, 88398, 88392, 88598, 88601, 88610, 88605][0m
+[0m[2022-05-29 09:25:51.998]                                  e_165: Call SCIP for subgraph with |N| = 40, |M| = 164[0m
+[0m[2022-05-29 09:25:52.005]                             SolveStart: Starting Solving[0m
+[0m[2022-05-29 09:25:52.045]                               SolveEnd: Found some solution[0m
+[0m[2022-05-29 09:25:52.046]           Solution found for subgraph:: [18518, 7954, 7970, 18770, 7971, 7982, 7991, 7975, 7986, 7988, 7973, 7980, 7977, 7747, 7753, 7759, 7767, 7779, 7750, 7756, 7749, 7979, 7981, 7987, 7769][0m
+[0m[2022-05-29 09:25:52.121]                                  e_165: Call SCIP for subgraph with |N| = 43, |M| = 170[0m
+[0m[2022-05-29 09:25:52.127]                             SolveStart: Starting Solving[0m
+[0m[2022-05-29 09:25:52.162]                               SolveEnd: Found some solution[0m
+[0m[2022-05-29 09:25:52.163]           Solution found for subgraph:: [55578, 55588, 55579, 55591, 55829, 56057, 56065, 56081, 56066, 56291, 56298, 56053, 56054, 56046, 56061, 56051, 56052, 56058, 56062, 54227, 56279, 56089, 55836, 55852, 55839, 55820, 56073, 55857][0m
+[0m[2022-05-29 09:25:52.164]                                  e_165: Using Heuristic for subgraph with |N| = 47, |M| = 186[0m
+[0m[2022-05-29 09:25:52.252]                                  e_165: Call SCIP for subgraph with |N| = 51, |M| = 194[0m
+[0m[2022-05-29 09:25:52.257]                             SolveStart: Starting Solving[0m
+[0m[2022-05-29 09:25:52.297]                               SolveEnd: Found some solution[0m
+[0m[2022-05-29 09:25:52.298]           Solution found for subgraph:: [49268, 49276, 49472, 49280, 49286, 49492, 49284, 49498, 49290, 49493, 49485, 49499, 49256, 49466, 49441, 26783, 26800, 26812, 16315, 16311, 26770, 26790, 16307, 16318, 16312, 16325, 16326, 16340, 16344, 16324, 16346, 16329, 16339][0m
+[0m[2022-05-29 09:25:52.390]                                  e_165: Call SCIP for subgraph with |N| = 53, |M| = 238[0m
+[0m[2022-05-29 09:25:52.398]                             SolveStart: Starting Solving[0m
+[0m[2022-05-29 09:25:52.465]                               SolveEnd: Found some solution[0m
+[0m[2022-05-29 09:25:52.466]           Solution found for subgraph:: [45329, 45343, 45344, 45346, 45354, 45315, 45320, 43049, 43068, 43073, 45307, 45322, 45311, 45324, 45325, 43070, 45317, 45319, 45287, 45284, 45286, 45295, 45306, 45321, 45301, 45304, 45314, 45327, 45332, 45357, 42881, 42891, 42906, 42901][0m
+[0m[2022-05-29 09:25:52.590]                                  e_165: Call SCIP for subgraph with |N| = 71, |M| = 282[0m
+[0m[2022-05-29 09:25:52.597]                             SolveStart: Starting Solving[0m
+[0m[2022-05-29 09:25:52.640]                               SolveEnd: Found some solution[0m
+[0m[2022-05-29 09:25:52.641]           Solution found for subgraph:: [55376, 55380, 55391, 55404, 53125, 55384, 55387, 53100, 55400, 55403, 55378, 55402, 55423, 53179, 53188, 55670, 53160, 55416, 55420, 53148, 55418, 53167, 55408, 53127, 53137, 53136, 53145, 53141, 55401, 55371, 55385, 53153, 55407, 55413, 55426, 55678, 55639, 55614, 55620, 55636, 55645, 55641, 55644, 55659, 55654][0m
+[0m[2022-05-29 09:25:52.644]                                  e_165: Using Heuristic for subgraph with |N| = 74, |M| = 286[0m
+[0m[2022-05-29 09:25:52.789]                                  e_165: Call SCIP for subgraph with |N| = 84, |M| = 366[0m
+[0m[2022-05-29 09:25:52.798]                             SolveStart: Starting Solving[0m
+[0m[2022-05-29 09:25:52.889]                               SolveEnd: Found some solution[0m
+[0m[2022-05-29 09:25:52.890]           Solution found for subgraph:: [121133, 121141, 121149, 126955, 124698, 118876, 124707, 124716, 126969, 118871, 118875, 118866, 118873, 121145, 121150, 121144, 126977, 126971, 126951, 124715, 124728, 124740, 126988, 126986, 126987, 126980, 127194, 127191, 127201, 127209, 127410, 127222, 127438, 127230, 126989, 126990, 127000, 126997, 126958, 126964, 126975, 126962, 126973, 126983, 126994, 126995, 124696, 124702, 124701, 124712, 124714, 124476, 126982][0m
+[0m[2022-05-29 09:25:53.064]                                  e_165: Call SCIP for subgraph with |N| = 98, |M| = 412[0m
+[0m[2022-05-29 09:25:53.075]                             SolveStart: Starting Solving[0m
+[0m[2022-05-29 09:25:53.134]                               SolveEnd: Found some solution[0m
+[0m[2022-05-29 09:25:53.136]           Solution found for subgraph:: [10314, 10331, 98290, 10325, 10327, 10349, 98315, 98313, 10332, 10346, 98343, 10337, 10350, 10340, 10561, 10333, 10339, 10555, 10566, 10571, 10574, 10567, 10532, 10539, 10553, 10285, 10290, 10297, 10296, 10302, 10292, 10509, 10280, 10310, 10526, 10520, 10534, 10521, 10543, 10529, 10540, 10360, 10364, 10365, 10376, 10385, 10377, 33126, 33118, 33135, 33361, 10608, 10826, 10830, 10837, 33355, 98373, 10392, 10357, 10374, 98328][0m
+[0m[2022-05-29 09:25:53.372]                                  e_165: Call SCIP for subgraph with |N| = 136, |M| = 572[0m
+[0m[2022-05-29 09:25:53.389]                             SolveStart: Starting Solving[0m
+[0m[2022-05-29 09:25:53.494]                               SolveEnd: Found some solution[0m
+[0m[2022-05-29 09:25:53.496]           Solution found for subgraph:: [4030, 4036, 4066, 3827, 3819, 3843, 3852, 3859, 3872, 3860, 3832, 3873, 3842, 3844, 3826, 4011, 3847, 3849, 3835, 3848, 3836, 4004, 4032, 6254, 6248, 6222, 6225, 6233, 6238, 6264, 6223, 6239, 6240, 6243, 6226, 6237, 6236, 6267, 6276, 4056, 4058, 6337, 6331, 6339, 6347, 6355, 6357, 6359, 6360, 6344, 4077, 4083, 9977, 4080, 4054, 4065, 4070, 6312, 3853, 3857, 3862, 3871, 3861, 3896, 3867, 3855, 3866, 4053, 4063, 4048, 4050, 4078, 4079, 4062, 4049, 4057, 4059, 6313, 6314, 6307, 3886, 3889, 6541, 6350, 6330][0m
+[0m[2022-05-29 09:25:53.736]                                  e_165: Call SCIP for subgraph with |N| = 138, |M| = 592[0m
+[0m[2022-05-29 09:25:53.753]                             SolveStart: Starting Solving[0m
+[0m[2022-05-29 09:25:53.856]                               SolveEnd: Found some solution[0m
+[0m[2022-05-29 09:25:53.857]           Solution found for subgraph:: [48821, 48822, 48825, 47067, 48797, 47047, 47061, 47028, 47031, 47037, 47043, 47035, 47041, 47247, 47038, 47026, 47057, 47060, 47044, 47046, 48808, 47277, 47055, 47056, 47059, 47289, 47276, 47279, 48804, 47296, 49030, 48817, 48803, 48799, 48802, 48810, 48807, 48809, 48819, 48826, 48827, 49035, 47293, 47016, 47251, 47221, 47246, 47240, 47241, 47243, 47261, 57564, 47269, 57589, 57605, 57541, 57545, 57546, 47173, 47195, 46953, 47180, 47203, 47183, 57553, 57548, 57579, 57580, 57566, 57578, 57574, 57577, 57614, 47264, 47248, 47249, 47250, 47254, 47265, 47253, 47263, 57591, 57603, 57585, 57599, 47281, 47283][0m
+[0m[2022-05-29 09:25:54.251]                                  e_165: Call SCIP for subgraph with |N| = 227, |M| = 952[0m
+[0m[2022-05-29 09:25:54.287]                             SolveStart: Starting Solving[0m
+[0m[2022-05-29 09:25:54.474]                               SolveEnd: Found some solution[0m
+[0m[2022-05-29 09:25:54.478]           Solution found for subgraph:: [14511, 14530, 14724, 14733, 14513, 14484, 14490, 14493, 14498, 14496, 14503, 14512, 12205, 12186, 12188, 12198, 12190, 12200, 14499, 14940, 14936, 14959, 14699, 14706, 14717, 14721, 14658, 14660, 14665, 14668, 14662, 14689, 14678, 14682, 14488, 14483, 14720, 14713, 14708, 14709, 14714, 14729, 14698, 14715, 14960, 14735, 14740, 14702, 14703, 14704, 14722, 14927, 14926, 14937, 14949, 14945, 14943, 14950, 14965, 14732, 14728, 14736, 14727, 14737, 37287, 37288, 37303, 37295, 37814, 37110, 37116, 37112, 37090, 37091, 37103, 37107, 37115, 34868, 34874, 34875, 37108, 37123, 34865, 34899, 37130, 34916, 34625, 37113, 37629, 37630, 37643, 37639, 37673, 37867, 37627, 37254, 37264, 37268, 37505, 37273, 37253, 37274, 37275, 37257, 37276, 37262, 37272, 37260, 37256, 37263, 37493, 37711, 37708, 37712, 37691, 37683, 37693, 37713, 37699, 37714, 37717, 39568, 37655, 37666, 37670, 37861, 37855, 37846, 37641, 37402, 37405, 37415, 37587, 37588, 37617, 37612, 37614, 37620, 37812, 37606, 37649, 14723][0m
+[0m[2022-05-29 09:25:58.925]                                  e_165: Single edge count: 0/7116[0m
+[35m[2022-05-29 09:25:58.925]                                  e_165: Found solution k = 80478 in 166949 ms (recursive steps: 0)[0m
+[35m[2022-05-29 09:25:59.101]                                  e_165: e_165 (n = 131072, m = 603932, k = -1)[0m
+[0m[2022-05-29 09:28:40.745]                                  e_165: Found 50 cyclic sub graph(s) with n = [6, 6, 6, 6, 6, 7, 7, 7, 8, 8, 8, 8, 9, 9, 10, 15, 15, 16, 17, 19, 20, 21, 21, 21, 22, 22, 24, 27, 27, 29, 29, 32, 32, 32, 34, 36, 37, 38, 40, 43, 47, 51, 53, 71, 74, 84, 98, 136, 138, 227][0m
+[0m[2022-05-29 09:28:40.751]                                  e_165: Removed 129313 nodes in preprocessing, starting with k = 79375[0m
+[0m[2022-05-29 09:28:40.752]                                  e_165: Creating cycle packing with time limit = 3[0m
+[0m[2022-05-29 09:28:40.753]                                  e_165: Creating heuristic with time limit = 3[0m
+[0m[2022-05-29 09:28:40.753]                                  e_165: Solution lies in [4, 4][0m
+[0m[2022-05-29 09:28:40.753]                                  e_165: Creating cycle packing with time limit = 3[0m
+[0m[2022-05-29 09:28:40.754]                                  e_165: Creating heuristic with time limit = 3[0m
+[0m[2022-05-29 09:28:40.754]                                  e_165: Solution lies in [4, 4][0m
+[0m[2022-05-29 09:28:40.755]                                  e_165: Creating cycle packing with time limit = 3[0m
+[0m[2022-05-29 09:28:40.755]                                  e_165: Creating heuristic with time limit = 3[0m
+[0m[2022-05-29 09:28:40.755]                                  e_165: Solution lies in [4, 4][0m
+[0m[2022-05-29 09:28:40.756]                                  e_165: Creating cycle packing with time limit = 3[0m
+[0m[2022-05-29 09:28:40.756]                                  e_165: Creating heuristic with time limit = 3[0m
+[0m[2022-05-29 09:28:40.757]                                  e_165: Solution lies in [4, 4][0m
+[0m[2022-05-29 09:28:40.757]                                  e_165: Creating cycle packing with time limit = 3[0m
+[0m[2022-05-29 09:28:40.758]                                  e_165: Creating heuristic with time limit = 3[0m
+[0m[2022-05-29 09:28:40.758]                                  e_165: Solution lies in [4, 4][0m
+[0m[2022-05-29 09:28:40.758]                                  e_165: Creating cycle packing with time limit = 3[0m
+[0m[2022-05-29 09:28:40.759]                                  e_165: Creating heuristic with time limit = 3[0m
+[0m[2022-05-29 09:28:40.759]                                  e_165: Solution lies in [4, 4][0m
+[0m[2022-05-29 09:28:40.759]                                  e_165: Creating cycle packing with time limit = 3[0m
+[0m[2022-05-29 09:28:40.760]                                  e_165: Creating heuristic with time limit = 3[0m
+[0m[2022-05-29 09:28:40.764]                                  e_165: Solution lies in [4, 5][0m
+[2022-05-29 09:28:40.764]                                  e_165: Branching with k = 4
+[31m[2022-05-29 09:28:40.765]                                  e_165: Found no solution with k = 79403 in 161838 ms (recursive steps: 0)[0m
+[33m[2022-05-29 09:28:40.765]                                  e_165: BFS: 0, Packing: 5, Heuristic: 5, Copy: 0, Red: 0, DAG: 0, Pre: 161650, File: 174[0m
+[0m[2022-05-29 09:28:40.924]                                  e_169: Applying reduction rules...[0m
+[0m[2022-05-29 09:31:24.868]                                  e_169: Applying Tarjan...[0m
+[0m[2022-05-29 09:31:24.876]                                  e_169: Applying reduction rules again...[0m
+[0m[2022-05-29 09:31:24.883]                                  e_169: Using Heuristic for subgraph with |N| = 6, |M| = 18[0m
+[0m[2022-05-29 09:31:24.883]                                  e_169: Using Heuristic for subgraph with |N| = 6, |M| = 18[0m
+[0m[2022-05-29 09:31:24.884]                                  e_169: Using Heuristic for subgraph with |N| = 6, |M| = 18[0m
+[0m[2022-05-29 09:31:24.884]                                  e_169: Using Heuristic for subgraph with |N| = 6, |M| = 18[0m
+[0m[2022-05-29 09:31:24.885]                                  e_169: Using Heuristic for subgraph with |N| = 6, |M| = 18[0m
+[0m[2022-05-29 09:31:24.885]                                  e_169: Using Heuristic for subgraph with |N| = 6, |M| = 18[0m
+[0m[2022-05-29 09:31:24.886]                                  e_169: Using Heuristic for subgraph with |N| = 6, |M| = 18[0m
+[0m[2022-05-29 09:31:24.886]                                  e_169: Using Heuristic for subgraph with |N| = 6, |M| = 18[0m
+[0m[2022-05-29 09:31:24.900]                                  e_169: Call SCIP for subgraph with |N| = 7, |M| = 26[0m
+[0m[2022-05-29 09:31:24.903]                             SolveStart: Starting Solving[0m
+[0m[2022-05-29 09:31:24.907]                               SolveEnd: Found some solution[0m
+[0m[2022-05-29 09:31:24.908]           Solution found for subgraph:: [86455, 86461, 86463, 86464, 86447][0m
+[0m[2022-05-29 09:31:24.909]                                  e_169: Using Heuristic for subgraph with |N| = 7, |M| = 24[0m
+[0m[2022-05-29 09:31:24.923]                                  e_169: Call SCIP for subgraph with |N| = 7, |M| = 26[0m
+[0m[2022-05-29 09:31:24.928]                             SolveStart: Starting Solving[0m
+[0m[2022-05-29 09:31:24.934]                               SolveEnd: Found some solution[0m
+[0m[2022-05-29 09:31:24.935]           Solution found for subgraph:: [127077, 127079, 127080, 127099, 127078][0m
+[0m[2022-05-29 09:31:24.936]                                  e_169: Using Heuristic for subgraph with |N| = 8, |M| = 32[0m
+[0m[2022-05-29 09:31:24.936]                                  e_169: Using Heuristic for subgraph with |N| = 9, |M| = 30[0m
+[0m[2022-05-29 09:31:24.955]                                  e_169: Call SCIP for subgraph with |N| = 9, |M| = 34[0m
+[0m[2022-05-29 09:31:24.959]                             SolveStart: Starting Solving[0m
+[0m[2022-05-29 09:31:24.964]                               SolveEnd: Found some solution[0m
+[0m[2022-05-29 09:31:24.965]           Solution found for subgraph:: [49635, 49863, 49868, 49647, 49860, 49872][0m
+[0m[2022-05-29 09:31:24.965]                                  e_169: Using Heuristic for subgraph with |N| = 10, |M| = 36[0m
+[0m[2022-05-29 09:31:24.967]                                  e_169: Using Heuristic for subgraph with |N| = 10, |M| = 36[0m
+[0m[2022-05-29 09:31:24.987]                                  e_169: Call SCIP for subgraph with |N| = 11, |M| = 44[0m
+[0m[2022-05-29 09:31:24.992]                             SolveStart: Starting Solving[0m
+[0m[2022-05-29 09:31:24.997]                               SolveEnd: Found some solution[0m
+[0m[2022-05-29 09:31:24.998]           Solution found for subgraph:: [14315, 14319, 14522, 14297, 14520, 14515, 14519][0m
+[0m[2022-05-29 09:31:25.019]                                  e_169: Call SCIP for subgraph with |N| = 11, |M| = 38[0m
+[0m[2022-05-29 09:31:25.026]                             SolveStart: Starting Solving[0m
+[0m[2022-05-29 09:31:25.030]                               SolveEnd: Found some solution[0m
+[0m[2022-05-29 09:31:25.031]           Solution found for subgraph:: [45460, 45478, 45459, 45462, 45465, 45470, 45471][0m
+[0m[2022-05-29 09:31:25.032]                                  e_169: Using Heuristic for subgraph with |N| = 11, |M| = 40[0m
+[0m[2022-05-29 09:31:25.032]                                  e_169: Using Heuristic for subgraph with |N| = 11, |M| = 42[0m
+[0m[2022-05-29 09:31:25.033]                                  e_169: Using Heuristic for subgraph with |N| = 12, |M| = 40[0m
+[0m[2022-05-29 09:31:25.056]                                  e_169: Call SCIP for subgraph with |N| = 12, |M| = 48[0m
+[0m[2022-05-29 09:31:25.061]                             SolveStart: Starting Solving[0m
+[0m[2022-05-29 09:31:25.066]                               SolveEnd: Found some solution[0m
+[0m[2022-05-29 09:31:25.067]           Solution found for subgraph:: [14343, 14346, 14347, 14337, 14096, 14109, 14117, 14341][0m
+[0m[2022-05-29 09:31:25.068]                                  e_169: Using Heuristic for subgraph with |N| = 12, |M| = 48[0m
+[0m[2022-05-29 09:31:25.068]                                  e_169: Using Heuristic for subgraph with |N| = 12, |M| = 42[0m
+[0m[2022-05-29 09:31:25.069]                                  e_169: Using Heuristic for subgraph with |N| = 13, |M| = 52[0m
+[0m[2022-05-29 09:31:25.071]                                  e_169: Using Heuristic for subgraph with |N| = 13, |M| = 44[0m
+[0m[2022-05-29 09:31:25.072]                                  e_169: Using Heuristic for subgraph with |N| = 13, |M| = 54[0m
+[0m[2022-05-29 09:31:25.073]                                  e_169: Using Heuristic for subgraph with |N| = 14, |M| = 68[0m
+[0m[2022-05-29 09:31:25.074]                                  e_169: Using Heuristic for subgraph with |N| = 14, |M| = 56[0m
+[0m[2022-05-29 09:31:25.074]                                  e_169: Using Heuristic for subgraph with |N| = 14, |M| = 54[0m
+[0m[2022-05-29 09:31:25.075]                                  e_169: Using Heuristic for subgraph with |N| = 15, |M| = 58[0m
+[0m[2022-05-29 09:31:25.105]                                  e_169: Call SCIP for subgraph with |N| = 16, |M| = 56[0m
+[0m[2022-05-29 09:31:25.110]                             SolveStart: Starting Solving[0m
+[0m[2022-05-29 09:31:25.129]                               SolveEnd: Found some solution[0m
+[0m[2022-05-29 09:31:25.130]           Solution found for subgraph:: [40284, 40292, 40327, 40299, 40326, 40334, 40336, 40311, 40316, 40561][0m
+[0m[2022-05-29 09:31:25.131]                                  e_169: Using Heuristic for subgraph with |N| = 19, |M| = 76[0m
+[0m[2022-05-29 09:31:25.132]                                  e_169: Using Heuristic for subgraph with |N| = 19, |M| = 76[0m
+[0m[2022-05-29 09:31:25.167]                                  e_169: Call SCIP for subgraph with |N| = 19, |M| = 78[0m
+[0m[2022-05-29 09:31:25.172]                             SolveStart: Starting Solving[0m
+[0m[2022-05-29 09:31:25.195]                               SolveEnd: Found some solution[0m
+[0m[2022-05-29 09:31:25.196]           Solution found for subgraph:: [37805, 37807, 37818, 37825, 37817, 37827, 37829, 38043, 37812, 38053, 38040, 37828][0m
+[0m[2022-05-29 09:31:25.197]                                  e_169: Using Heuristic for subgraph with |N| = 19, |M| = 70[0m
+[0m[2022-05-29 09:31:25.197]                                  e_169: Using Heuristic for subgraph with |N| = 19, |M| = 80[0m
+[0m[2022-05-29 09:31:25.198]                                  e_169: Using Heuristic for subgraph with |N| = 21, |M| = 90[0m
+[0m[2022-05-29 09:31:25.199]                                  e_169: Using Heuristic for subgraph with |N| = 21, |M| = 78[0m
+[0m[2022-05-29 09:31:25.240]                                  e_169: Call SCIP for subgraph with |N| = 22, |M| = 88[0m
+[0m[2022-05-29 09:31:25.243]                             SolveStart: Starting Solving[0m
+[0m[2022-05-29 09:31:25.250]                               SolveEnd: Found some solution[0m
+[0m[2022-05-29 09:31:25.251]           Solution found for subgraph:: [63942, 63947, 63943, 63933, 63941, 63939, 64164, 64172, 64185, 62057, 64180, 63929, 63936, 63940][0m
+[0m[2022-05-29 09:31:25.295]                                  e_169: Call SCIP for subgraph with |N| = 24, |M| = 104[0m
+[0m[2022-05-29 09:31:25.300]                             SolveStart: Starting Solving[0m
+[0m[2022-05-29 09:31:25.332]                               SolveEnd: Found some solution[0m
+[0m[2022-05-29 09:31:25.333]           Solution found for subgraph:: [105575, 105589, 105597, 105603, 105572, 105586, 105598, 105601, 105580, 105602, 105596, 105583, 105599, 111578, 111567, 111576][0m
+[0m[2022-05-29 09:31:25.334]                                  e_169: Using Heuristic for subgraph with |N| = 25, |M| = 100[0m
+[0m[2022-05-29 09:31:25.334]                                  e_169: Using Heuristic for subgraph with |N| = 28, |M| = 120[0m
+[0m[2022-05-29 09:31:25.336]                                  e_169: Using Heuristic for subgraph with |N| = 28, |M| = 100[0m
+[0m[2022-05-29 09:31:25.337]                                  e_169: Using Heuristic for subgraph with |N| = 30, |M| = 118[0m
+[0m[2022-05-29 09:31:25.396]                                  e_169: Call SCIP for subgraph with |N| = 32, |M| = 136[0m
+[0m[2022-05-29 09:31:25.400]                             SolveStart: Starting Solving[0m
+[0m[2022-05-29 09:31:25.433]                               SolveEnd: Found some solution[0m
+[0m[2022-05-29 09:31:25.433]           Solution found for subgraph:: [119036, 120845, 120850, 120857, 119034, 116694, 116684, 116689, 116700, 116716, 116720, 116697, 119017, 119037, 119026, 119028, 119029, 119030, 119035, 119253, 119272][0m
+[0m[2022-05-29 09:31:25.435]                                  e_169: Using Heuristic for subgraph with |N| = 34, |M| = 134[0m
+[0m[2022-05-29 09:31:25.499]                                  e_169: Call SCIP for subgraph with |N| = 35, |M| = 148[0m
+[0m[2022-05-29 09:31:25.506]                             SolveStart: Starting Solving[0m
+[0m[2022-05-29 09:31:25.538]                               SolveEnd: Found some solution[0m
+[0m[2022-05-29 09:31:25.539]           Solution found for subgraph:: [122739, 122740, 128600, 122480, 122490, 122486, 122489, 122481, 128355, 128357, 128361, 128577, 128605, 128358, 128349, 128593, 128360, 128368, 128366, 128606, 122503, 122501][0m
+[0m[2022-05-29 09:31:25.608]                                  e_169: Call SCIP for subgraph with |N| = 37, |M| = 140[0m
+[0m[2022-05-29 09:31:25.614]                             SolveStart: Starting Solving[0m
+[0m[2022-05-29 09:31:25.654]                               SolveEnd: Found some solution[0m
+[0m[2022-05-29 09:31:25.655]           Solution found for subgraph:: [121207, 121195, 121215, 121178, 121435, 121445, 121447, 121191, 121179, 121429, 121442, 121449, 121422, 120966, 120978, 120980, 121424, 121433, 121436, 121440, 120965, 120988, 120967][0m
+[0m[2022-05-29 09:31:25.733]                                  e_169: Call SCIP for subgraph with |N| = 42, |M| = 166[0m
+[0m[2022-05-29 09:31:25.738]                             SolveStart: Starting Solving[0m
+[0m[2022-05-29 09:31:25.770]                               SolveEnd: Found some solution[0m
+[0m[2022-05-29 09:31:25.771]           Solution found for subgraph:: [79039, 79046, 79058, 79047, 79083, 79051, 79063, 79035, 79038, 79057, 79041, 79034, 79044, 79297, 79302, 79284, 79296, 79509, 79287, 79289, 78831, 78824, 78837, 78862, 78591, 78580, 78600][0m
+[0m[2022-05-29 09:31:25.772]                                  e_169: Using Heuristic for subgraph with |N| = 44, |M| = 170[0m
+[0m[2022-05-29 09:31:25.857]                                  e_169: Call SCIP for subgraph with |N| = 46, |M| = 172[0m
+[0m[2022-05-29 09:31:25.863]                             SolveStart: Starting Solving[0m
+[0m[2022-05-29 09:31:25.903]                               SolveEnd: Found some solution[0m
+[0m[2022-05-29 09:31:25.904]           Solution found for subgraph:: [126937, 126882, 126911, 129199, 129209, 129216, 129168, 129181, 129173, 129185, 126930, 126929, 126940, 129183, 129110, 129108, 129109, 129112, 129130, 129113, 129148, 129143, 129156, 129136, 129391, 129140, 129146, 129149, 129158][0m
+[0m[2022-05-29 09:31:25.994]                                  e_169: Call SCIP for subgraph with |N| = 48, |M| = 194[0m
+[0m[2022-05-29 09:31:26.001]                             SolveStart: Starting Solving[0m
+[0m[2022-05-29 09:31:26.049]                               SolveEnd: Found some solution[0m
+[0m[2022-05-29 09:31:26.050]           Solution found for subgraph:: [65869, 65884, 65891, 65887, 65903, 65876, 65889, 65902, 65653, 65662, 65669, 65694, 65900, 65904, 65919, 65922, 65915, 65918, 65907, 65938, 65945, 65912, 65927, 65930, 65935, 65928, 65932, 65692, 65906, 65910][0m
+[0m[2022-05-29 09:31:26.053]                                  e_169: Using Heuristic for subgraph with |N| = 60, |M| = 250[0m
+[0m[2022-05-29 09:31:26.175]                                  e_169: Call SCIP for subgraph with |N| = 66, |M| = 258[0m
+[0m[2022-05-29 09:31:26.201]                             SolveStart: Starting Solving[0m
+[0m[2022-05-29 09:31:26.247]                               SolveEnd: Found some solution[0m
+[0m[2022-05-29 09:31:26.248]           Solution found for subgraph:: [124334, 124348, 118329, 124535, 124337, 124534, 124537, 127728, 127738, 127477, 127748, 127768, 127997, 127989, 128018, 127754, 127765, 127762, 127770, 127771, 127764, 127500, 127474, 127274, 127452, 118789, 121063, 124747, 124757, 127016, 127009, 127000, 127007, 127014, 127011, 127001, 124744, 124746, 124538, 124749, 124333, 124329][0m
+[0m[2022-05-29 09:31:26.381]                                  e_169: Call SCIP for subgraph with |N| = 72, |M| = 284[0m
+[0m[2022-05-29 09:31:26.390]                             SolveStart: Starting Solving[0m
+[0m[2022-05-29 09:31:26.460]                               SolveEnd: Found some solution[0m
+[0m[2022-05-29 09:31:26.461]           Solution found for subgraph:: [79582, 79596, 79815, 81385, 81623, 81647, 81666, 81657, 81641, 81634, 81653, 90434, 90438, 90455, 90199, 90202, 90210, 90224, 79796, 79818, 79820, 79778, 79799, 79817, 90228, 79798, 90222, 90226, 90194, 90218, 90212, 90221, 90422, 90421, 90216, 90424, 90441, 90460, 90219, 90225, 79807, 79809, 81640, 81668, 79776][0m
+[0m[2022-05-29 09:31:26.607]                                  e_169: Call SCIP for subgraph with |N| = 79, |M| = 334[0m
+[0m[2022-05-29 09:31:26.620]                             SolveStart: Starting Solving[0m
+[0m[2022-05-29 09:31:26.700]                               SolveEnd: Found some solution[0m
+[0m[2022-05-29 09:31:26.702]           Solution found for subgraph:: [32744, 32774, 32974, 32737, 32764, 32777, 32964, 32766, 32995, 32813, 32828, 32847, 120701, 32768, 32749, 32773, 32789, 32791, 32801, 32802, 32827, 120690, 120693, 120704, 32808, 32806, 32814, 32816, 32815, 32826, 120696, 32810, 32798, 33013, 33021, 33017, 33010, 32792, 32786, 32750, 32751, 32765, 32775, 32758, 32754, 33488, 33481, 33464, 33457, 32739][0m
+[0m[2022-05-29 09:31:26.874]                                  e_169: Call SCIP for subgraph with |N| = 93, |M| = 384[0m
+[0m[2022-05-29 09:31:26.885]                             SolveStart: Starting Solving[0m
+[0m[2022-05-29 09:31:26.951]                               SolveEnd: Found some solution[0m
+[0m[2022-05-29 09:31:26.952]           Solution found for subgraph:: [97577, 97583, 97606, 97589, 97576, 97580, 97597, 97598, 97596, 97602, 97830, 97831, 97604, 97607, 97867, 97843, 97857, 97858, 97866, 97865, 97847, 97854, 97873, 98054, 98077, 98079, 97834, 97838, 97829, 97832, 98062, 98064, 9973, 9956, 9984, 10203, 10218, 10227, 10220, 10213, 95648, 95682, 95662, 95673, 95460, 95668, 95694, 95656, 95657, 95702, 95683, 95705, 95658, 95709, 95696, 95703, 95697][0m
+[0m[2022-05-29 09:31:27.131]                                  e_169: Call SCIP for subgraph with |N| = 97, |M| = 402[0m
+[0m[2022-05-29 09:31:27.144]                             SolveStart: Starting Solving[0m
+[0m[2022-05-29 09:31:27.223]                               SolveEnd: Found some solution[0m
+[0m[2022-05-29 09:31:27.225]           Solution found for subgraph:: [14433, 14442, 14464, 14246, 14247, 14257, 14475, 14462, 14671, 14446, 14460, 14455, 14274, 14447, 14453, 14454, 14457, 14466, 14476, 14444, 14425, 14430, 14441, 14427, 14434, 14280, 14496, 14278, 14498, 14503, 37065, 36839, 36843, 36858, 14285, 36850, 36855, 14292, 11994, 11975, 14270, 11986, 14282, 14273, 37058, 36853, 36856, 36840, 37103, 36863, 37075, 14497, 14508, 14487, 14735, 37062, 37052, 37056, 37064, 14507][0m
+[0m[2022-05-29 09:31:27.450]                                  e_169: Call SCIP for subgraph with |N| = 122, |M| = 522[0m
+[0m[2022-05-29 09:31:27.464]                             SolveStart: Starting Solving[0m
+[0m[2022-05-29 09:31:27.562]                               SolveEnd: Found some solution[0m
+[0m[2022-05-29 09:31:27.565]           Solution found for subgraph:: [28257, 50709, 50720, 50962, 50963, 50987, 53300, 53521, 53536, 53294, 53541, 53529, 53752, 53754, 53762, 53729, 53720, 53728, 53731, 53498, 53500, 53705, 53290, 53493, 53523, 53489, 53495, 53502, 53514, 53525, 53715, 53749, 53739, 53768, 53767, 53733, 53744, 53753, 51017, 50981, 50994, 51021, 51018, 53286, 50995, 51001, 50699, 50695, 50697, 50718, 50952, 28259, 28264, 50696, 50694, 50700, 50710, 50712, 50711, 50713, 50972, 50975, 50958, 50999, 50739, 50978, 50991, 51000, 53268, 53260, 53274, 53259, 53301, 53287, 51013, 51029, 51028][0m
+[0m[2022-05-29 09:31:27.817]                                  e_169: Call SCIP for subgraph with |N| = 136, |M| = 548[0m
+[0m[2022-05-29 09:31:27.832]                             SolveStart: Starting Solving[0m
+[0m[2022-05-29 09:31:27.918]                               SolveEnd: Found some solution[0m
+[0m[2022-05-29 09:31:27.921]           Solution found for subgraph:: [32048, 32053, 32291, 32310, 32328, 32332, 32334, 32335, 32337, 32336, 31893, 31901, 31932, 31922, 31941, 31920, 32150, 31938, 32146, 32633, 32647, 32388, 32178, 32393, 32426, 32638, 32407, 32408, 32646, 32417, 32423, 32644, 32420, 32629, 32636, 32637, 32416, 32430, 32451, 32439, 32419, 32428, 32400, 32640, 32634, 32671, 32165, 32104, 32118, 31911, 31917, 31895, 31909, 32339, 32342, 32557, 32283, 32285, 32315, 32284, 32324, 32319, 32322, 32539, 32548, 32551, 32511, 32344, 32317, 31829, 31844, 31828, 31834, 31839, 32060, 30117, 32058, 32061, 30111, 30127, 30115, 30116, 30388, 30121, 32065][0m
+[0m[2022-05-29 09:31:33.287]                                  e_169: Single edge count: 0/6592[0m
+[35m[2022-05-29 09:31:33.288]                                  e_169: Found solution k = 80521 in 172522 ms (recursive steps: 0)[0m
+[35m[2022-05-29 09:31:33.434]                                  e_169: e_169 (n = 131072, m = 604300, k = -1)[0m
+[0m[2022-05-29 09:34:34.368]                                  e_169: Found 61 cyclic sub graph(s) with n = [6, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7, 8, 9, 9, 10, 10, 11, 11, 11, 11, 12, 12, 12, 12, 13, 13, 13, 14, 14, 14, 15, 16, 19, 19, 19, 19, 19, 21, 21, 22, 24, 25, 28, 28, 30, 32, 34, 35, 37, 42, 44, 46, 48, 60, 66, 72, 79, 93, 97, 122, 136][0m
+[0m[2022-05-29 09:34:34.374]                                  e_169: Removed 129416 nodes in preprocessing, starting with k = 79481[0m
+[0m[2022-05-29 09:34:34.375]                                  e_169: Creating cycle packing with time limit = 3[0m
+[0m[2022-05-29 09:34:34.375]                                  e_169: Creating heuristic with time limit = 3[0m
+[0m[2022-05-29 09:34:34.376]                                  e_169: Solution lies in [4, 4][0m
+[0m[2022-05-29 09:34:34.376]                                  e_169: Creating cycle packing with time limit = 3[0m
+[0m[2022-05-29 09:34:34.376]                                  e_169: Creating heuristic with time limit = 3[0m
+[0m[2022-05-29 09:34:34.377]                                  e_169: Solution lies in [4, 4][0m
+[0m[2022-05-29 09:34:34.377]                                  e_169: Creating cycle packing with time limit = 3[0m
+[0m[2022-05-29 09:34:34.378]                                  e_169: Creating heuristic with time limit = 3[0m
+[0m[2022-05-29 09:34:34.378]                                  e_169: Solution lies in [4, 4][0m
+[0m[2022-05-29 09:34:34.378]                                  e_169: Creating cycle packing with time limit = 3[0m
+[0m[2022-05-29 09:34:34.379]                                  e_169: Creating heuristic with time limit = 3[0m
+[0m[2022-05-29 09:34:34.379]                                  e_169: Solution lies in [4, 4][0m
+[0m[2022-05-29 09:34:34.380]                                  e_169: Creating cycle packing with time limit = 3[0m
+[0m[2022-05-29 09:34:34.380]                                  e_169: Creating heuristic with time limit = 3[0m
+[0m[2022-05-29 09:34:34.381]                                  e_169: Solution lies in [4, 4][0m
+[0m[2022-05-29 09:34:34.381]                                  e_169: Creating cycle packing with time limit = 3[0m
+[0m[2022-05-29 09:34:34.382]                                  e_169: Creating heuristic with time limit = 3[0m
+[0m[2022-05-29 09:34:34.382]                                  e_169: Solution lies in [4, 4][0m
+[0m[2022-05-29 09:34:34.383]                                  e_169: Creating cycle packing with time limit = 3[0m
+[0m[2022-05-29 09:34:34.383]                                  e_169: Creating heuristic with time limit = 3[0m
+[0m[2022-05-29 09:34:34.384]                                  e_169: Solution lies in [4, 4][0m
+[0m[2022-05-29 09:34:34.384]                                  e_169: Creating cycle packing with time limit = 3[0m
+[0m[2022-05-29 09:34:34.385]                                  e_169: Creating heuristic with time limit = 3[0m
+[0m[2022-05-29 09:34:34.385]                                  e_169: Solution lies in [4, 4][0m
+[0m[2022-05-29 09:34:34.386]                                  e_169: Creating cycle packing with time limit = 4[0m
+[0m[2022-05-29 09:34:34.387]                                  e_169: Creating heuristic with time limit = 4[0m
+[0m[2022-05-29 09:34:34.392]                                  e_169: Solution lies in [4, 5][0m
+[2022-05-29 09:34:34.392]                                  e_169: Branching with k = 4
+[31m[2022-05-29 09:34:34.393]                                  e_169: Found no solution with k = 79517 in 181105 ms (recursive steps: 0)[0m
+[33m[2022-05-29 09:34:34.393]                                  e_169: BFS: 0, Packing: 6, Heuristic: 9, Copy: 0, Red: 0, DAG: 0, Pre: 180939, File: 146[0m
+[0m[2022-05-29 09:34:34.606]                                  e_171: Applying reduction rules...[0m
+[0m[2022-05-29 09:37:46.148]                                  e_171: Applying Tarjan...[0m
+[0m[2022-05-29 09:37:46.158]                                  e_171: Applying reduction rules again...[0m
+[0m[2022-05-29 09:37:46.170]                                  e_171: Using Heuristic for subgraph with |N| = 6, |M| = 18[0m
+[0m[2022-05-29 09:37:46.171]                                  e_171: Using Heuristic for subgraph with |N| = 6, |M| = 18[0m
+[0m[2022-05-29 09:37:46.171]                                  e_171: Using Heuristic for subgraph with |N| = 6, |M| = 18[0m
+[0m[2022-05-29 09:37:46.172]                                  e_171: Using Heuristic for subgraph with |N| = 6, |M| = 18[0m
+[0m[2022-05-29 09:37:46.173]                                  e_171: Using Heuristic for subgraph with |N| = 6, |M| = 18[0m
+[0m[2022-05-29 09:37:46.173]                                  e_171: Using Heuristic for subgraph with |N| = 6, |M| = 18[0m
+[0m[2022-05-29 09:37:46.173]                                  e_171: Using Heuristic for subgraph with |N| = 6, |M| = 24[0m
+[0m[2022-05-29 09:37:46.174]                                  e_171: Using Heuristic for subgraph with |N| = 6, |M| = 18[0m
+[0m[2022-05-29 09:37:46.175]                                  e_171: Using Heuristic for subgraph with |N| = 6, |M| = 18[0m
+[0m[2022-05-29 09:37:46.176]                                  e_171: Using Heuristic for subgraph with |N| = 6, |M| = 18[0m
+[0m[2022-05-29 09:37:46.188]                                  e_171: Call SCIP for subgraph with |N| = 7, |M| = 26[0m
+[0m[2022-05-29 09:37:46.194]                             SolveStart: Starting Solving[0m
+[0m[2022-05-29 09:37:46.197]                               SolveEnd: Found some solution[0m
+[0m[2022-05-29 09:37:46.198]           Solution found for subgraph:: [40113, 40139, 40153, 40165, 40152][0m
+[0m[2022-05-29 09:37:46.198]                                  e_171: Using Heuristic for subgraph with |N| = 7, |M| = 22[0m
+[0m[2022-05-29 09:37:46.212]                                  e_171: Call SCIP for subgraph with |N| = 7, |M| = 26[0m
+[0m[2022-05-29 09:37:46.218]                             SolveStart: Starting Solving[0m
+[0m[2022-05-29 09:37:46.223]                               SolveEnd: Found some solution[0m
+[0m[2022-05-29 09:37:46.225]           Solution found for subgraph:: [43456, 43461, 43463, 43718, 43712][0m
+[0m[2022-05-29 09:37:46.237]                                  e_171: Call SCIP for subgraph with |N| = 7, |M| = 26[0m
+[0m[2022-05-29 09:37:46.244]                             SolveStart: Starting Solving[0m
+[0m[2022-05-29 09:37:46.247]                               SolveEnd: Found some solution[0m
+[0m[2022-05-29 09:37:46.247]           Solution found for subgraph:: [68259, 68283, 68284, 68516, 68508][0m
+[0m[2022-05-29 09:37:46.248]                                  e_171: Using Heuristic for subgraph with |N| = 8, |M| = 32[0m
+[0m[2022-05-29 09:37:46.248]                                  e_171: Using Heuristic for subgraph with |N| = 8, |M| = 28[0m
+[0m[2022-05-29 09:37:46.264]                                  e_171: Call SCIP for subgraph with |N| = 9, |M| = 34[0m
+[0m[2022-05-29 09:37:46.273]                             SolveStart: Starting Solving[0m
+[0m[2022-05-29 09:37:46.278]                               SolveEnd: Found some solution[0m
+[0m[2022-05-29 09:37:46.279]           Solution found for subgraph:: [534, 571, 572, 570, 573, 784][0m
+[0m[2022-05-29 09:37:46.280]                                  e_171: Using Heuristic for subgraph with |N| = 9, |M| = 36[0m
+[0m[2022-05-29 09:37:46.281]                                  e_171: Using Heuristic for subgraph with |N| = 9, |M| = 34[0m
+[0m[2022-05-29 09:37:46.282]                                  e_171: Using Heuristic for subgraph with |N| = 9, |M| = 34[0m
+[0m[2022-05-29 09:37:46.282]                                  e_171: Using Heuristic for subgraph with |N| = 10, |M| = 36[0m
+[0m[2022-05-29 09:37:46.300]                                  e_171: Call SCIP for subgraph with |N| = 10, |M| = 40[0m
+[0m[2022-05-29 09:37:46.308]                             SolveStart: Starting Solving[0m
+[0m[2022-05-29 09:37:46.314]                               SolveEnd: Found some solution[0m
+[0m[2022-05-29 09:37:46.315]           Solution found for subgraph:: [8951, 8952, 8953, 8958, 8957, 8978, 8959][0m
+[0m[2022-05-29 09:37:46.335]                                  e_171: Call SCIP for subgraph with |N| = 11, |M| = 48[0m
+[0m[2022-05-29 09:37:46.341]                             SolveStart: Starting Solving[0m
+[0m[2022-05-29 09:37:46.346]                               SolveEnd: Found some solution[0m
+[0m[2022-05-29 09:37:46.347]           Solution found for subgraph:: [13098, 13107, 13122, 13344, 13113, 13124, 13126, 13361][0m
+[0m[2022-05-29 09:37:46.348]                                  e_171: Using Heuristic for subgraph with |N| = 11, |M| = 38[0m
+[0m[2022-05-29 09:37:46.369]                                  e_171: Call SCIP for subgraph with |N| = 12, |M| = 46[0m
+[0m[2022-05-29 09:37:46.376]                             SolveStart: Starting Solving[0m
+[0m[2022-05-29 09:37:46.381]                               SolveEnd: Found some solution[0m
+[0m[2022-05-29 09:37:46.382]           Solution found for subgraph:: [23349, 23410, 23384, 23395, 23386, 23405, 23387, 23394][0m
+[0m[2022-05-29 09:37:46.382]                                  e_171: Using Heuristic for subgraph with |N| = 12, |M| = 46[0m
+[0m[2022-05-29 09:37:46.384]                                  e_171: Using Heuristic for subgraph with |N| = 13, |M| = 50[0m
+[0m[2022-05-29 09:37:46.386]                                  e_171: Using Heuristic for subgraph with |N| = 14, |M| = 56[0m
+[0m[2022-05-29 09:37:46.386]                                  e_171: Using Heuristic for subgraph with |N| = 16, |M| = 64[0m
+[0m[2022-05-29 09:37:46.414]                                  e_171: Call SCIP for subgraph with |N| = 16, |M| = 76[0m
+[0m[2022-05-29 09:37:46.421]                             SolveStart: Starting Solving[0m
+[0m[2022-05-29 09:37:46.443]                               SolveEnd: Found some solution[0m
+[0m[2022-05-29 09:37:46.444]           Solution found for subgraph:: [24671, 24672, 24673, 24683, 24659, 67783, 24667, 24678, 24691, 67821][0m
+[0m[2022-05-29 09:37:46.472]                                  e_171: Call SCIP for subgraph with |N| = 16, |M| = 60[0m
+[0m[2022-05-29 09:37:46.478]                             SolveStart: Starting Solving[0m
+[0m[2022-05-29 09:37:46.486]                               SolveEnd: Found some solution[0m
+[0m[2022-05-29 09:37:46.487]           Solution found for subgraph:: [43659, 43664, 43673, 43911, 43675, 43920, 43700, 43702, 43707, 43900][0m
+[0m[2022-05-29 09:37:46.488]                                  e_171: Using Heuristic for subgraph with |N| = 16, |M| = 66[0m
+[0m[2022-05-29 09:37:46.490]                                  e_171: Using Heuristic for subgraph with |N| = 17, |M| = 68[0m
+[0m[2022-05-29 09:37:46.491]                                  e_171: Using Heuristic for subgraph with |N| = 17, |M| = 58[0m
+[0m[2022-05-29 09:37:46.524]                                  e_171: Call SCIP for subgraph with |N| = 19, |M| = 80[0m
+[0m[2022-05-29 09:37:46.534]                             SolveStart: Starting Solving[0m
+[0m[2022-05-29 09:37:46.545]                               SolveEnd: Found some solution[0m
+[0m[2022-05-29 09:37:46.547]           Solution found for subgraph:: [1883, 1898, 1903, 4177, 47509, 1892, 45268, 45269, 45267, 45277, 45275, 45272, 47508][0m
+[0m[2022-05-29 09:37:46.579]                                  e_171: Call SCIP for subgraph with |N| = 19, |M| = 72[0m
+[0m[2022-05-29 09:37:46.585]                             SolveStart: Starting Solving[0m
+[0m[2022-05-29 09:37:46.593]                               SolveEnd: Found some solution[0m
+[0m[2022-05-29 09:37:46.594]           Solution found for subgraph:: [14867, 14885, 14891, 14900, 14901, 14921, 15164, 14905, 15145, 15150, 15143, 15146][0m
+[0m[2022-05-29 09:37:46.595]                                  e_171: Using Heuristic for subgraph with |N| = 19, |M| = 84[0m
+[0m[2022-05-29 09:37:46.627]                                  e_171: Call SCIP for subgraph with |N| = 19, |M| = 76[0m
+[0m[2022-05-29 09:37:46.632]                             SolveStart: Starting Solving[0m
+[0m[2022-05-29 09:37:46.640]                               SolveEnd: Found some solution[0m
+[0m[2022-05-29 09:37:46.642]           Solution found for subgraph:: [76951, 76970, 76955, 76969, 76985, 76986, 76988, 76992, 76996, 76981, 76978, 76948][0m
+[0m[2022-05-29 09:37:46.643]                                  e_171: Using Heuristic for subgraph with |N| = 19, |M| = 78[0m
+[0m[2022-05-29 09:37:46.646]                                  e_171: Using Heuristic for subgraph with |N| = 20, |M| = 82[0m
+[0m[2022-05-29 09:37:46.647]                                  e_171: Using Heuristic for subgraph with |N| = 21, |M| = 94[0m
+[0m[2022-05-29 09:37:46.683]                                  e_171: Call SCIP for subgraph with |N| = 21, |M| = 82[0m
+[0m[2022-05-29 09:37:46.689]                             SolveStart: Starting Solving[0m
+[0m[2022-05-29 09:37:46.697]                               SolveEnd: Found some solution[0m
+[0m[2022-05-29 09:37:46.698]           Solution found for subgraph:: [112504, 112511, 112514, 112513, 112519, 112516, 112517, 112512, 112546, 112509, 112737, 112753, 112741][0m
+[0m[2022-05-29 09:37:46.698]                                  e_171: Using Heuristic for subgraph with |N| = 21, |M| = 88[0m
+[0m[2022-05-29 09:37:46.736]                                  e_171: Call SCIP for subgraph with |N| = 22, |M| = 92[0m
+[0m[2022-05-29 09:37:46.741]                             SolveStart: Starting Solving[0m
+[0m[2022-05-29 09:37:46.770]                               SolveEnd: Found some solution[0m
+[0m[2022-05-29 09:37:46.771]           Solution found for subgraph:: [18071, 18091, 18098, 18076, 18050, 18052, 18056, 18069, 18062, 18086, 18087, 18078, 18070, 18084][0m
+[0m[2022-05-29 09:37:46.809]                                  e_171: Call SCIP for subgraph with |N| = 22, |M| = 78[0m
+[0m[2022-05-29 09:37:46.813]                             SolveStart: Starting Solving[0m
+[0m[2022-05-29 09:37:46.819]                               SolveEnd: Found some solution[0m
+[0m[2022-05-29 09:37:46.819]           Solution found for subgraph:: [19950, 20181, 20183, 25922, 20180, 20172, 20164, 20389, 20395, 20398, 19947, 19954, 19946, 19959][0m
+[0m[2022-05-29 09:37:46.820]                                  e_171: Using Heuristic for subgraph with |N| = 22, |M| = 90[0m
+[0m[2022-05-29 09:37:46.821]                                  e_171: Using Heuristic for subgraph with |N| = 22, |M| = 82[0m
+[0m[2022-05-29 09:37:46.822]                                  e_171: Using Heuristic for subgraph with |N| = 22, |M| = 82[0m
+[0m[2022-05-29 09:37:46.861]                                  e_171: Call SCIP for subgraph with |N| = 23, |M| = 106[0m
+[0m[2022-05-29 09:37:46.866]                             SolveStart: Starting Solving[0m
+[0m[2022-05-29 09:37:46.876]                               SolveEnd: Found some solution[0m
+[0m[2022-05-29 09:37:46.877]           Solution found for subgraph:: [6415, 6429, 9989, 12298, 6426, 12289, 6421, 12293, 12290, 12288, 12304, 12292, 12285, 4149, 6427][0m
+[0m[2022-05-29 09:37:46.879]                                  e_171: Using Heuristic for subgraph with |N| = 23, |M| = 98[0m
+[0m[2022-05-29 09:37:46.882]                                  e_171: Using Heuristic for subgraph with |N| = 24, |M| = 86[0m
+[0m[2022-05-29 09:37:46.883]                                  e_171: Using Heuristic for subgraph with |N| = 26, |M| = 112[0m
+[0m[2022-05-29 09:37:46.884]                                  e_171: Using Heuristic for subgraph with |N| = 27, |M| = 98[0m
+[0m[2022-05-29 09:37:46.885]                                  e_171: Using Heuristic for subgraph with |N| = 32, |M| = 136[0m
+[0m[2022-05-29 09:37:46.941]                                  e_171: Call SCIP for subgraph with |N| = 33, |M| = 128[0m
+[0m[2022-05-29 09:37:46.947]                             SolveStart: Starting Solving[0m
+[0m[2022-05-29 09:37:46.981]                               SolveEnd: Found some solution[0m
+[0m[2022-05-29 09:37:46.982]           Solution found for subgraph:: [14189, 14200, 14206, 14215, 14180, 24789, 14181, 24803, 24812, 25048, 25050, 25061, 25064, 25046, 25065, 25049, 25059, 25088, 25052, 25056][0m
+[0m[2022-05-29 09:37:46.983]                                  e_171: Using Heuristic for subgraph with |N| = 35, |M| = 142[0m
+[0m[2022-05-29 09:37:47.053]                                  e_171: Call SCIP for subgraph with |N| = 42, |M| = 172[0m
+[0m[2022-05-29 09:37:47.060]                             SolveStart: Starting Solving[0m
+[0m[2022-05-29 09:37:47.114]                               SolveEnd: Found some solution[0m
+[0m[2022-05-29 09:37:47.115]           Solution found for subgraph:: [65369, 108977, 108983, 65398, 108965, 108966, 108986, 109193, 108963, 108973, 109177, 109172, 109181, 109194, 109175, 109195, 109222, 109185, 109184, 109401, 109402, 109216, 109210, 108970, 65392, 65400, 65394][0m
+[0m[2022-05-29 09:37:47.117]                                  e_171: Using Heuristic for subgraph with |N| = 42, |M| = 170[0m
+[0m[2022-05-29 09:37:47.187]                                  e_171: Call SCIP for subgraph with |N| = 42, |M| = 174[0m
+[0m[2022-05-29 09:37:47.193]                             SolveStart: Starting Solving[0m
+[0m[2022-05-29 09:37:47.257]                               SolveEnd: Found some solution[0m
+[0m[2022-05-29 09:37:47.259]           Solution found for subgraph:: [66589, 66595, 66599, 66592, 66590, 66580, 67316, 69895, 69908, 69909, 69888, 69910, 69903, 69878, 69913, 70167, 69890, 69886, 69907, 70170, 70176, 70159, 70160, 70168, 70173, 70162, 69871][0m
+[0m[2022-05-29 09:37:47.334]                                  e_171: Call SCIP for subgraph with |N| = 45, |M| = 160[0m
+[0m[2022-05-29 09:37:47.346]                             SolveStart: Starting Solving[0m
+[0m[2022-05-29 09:37:47.380]                               SolveEnd: Found some solution[0m
+[0m[2022-05-29 09:37:47.383]           Solution found for subgraph:: [30511, 30514, 30520, 30530, 30516, 30533, 30545, 30805, 30812, 30824, 30800, 30803, 30815, 30819, 30833, 30844, 30828, 30834, 30846, 32709, 30814, 30816, 30806, 30840, 30799, 31058, 31063, 30795][0m
+[0m[2022-05-29 09:37:47.465]                                  e_171: Call SCIP for subgraph with |N| = 49, |M| = 214[0m
+[0m[2022-05-29 09:37:47.477]                             SolveStart: Starting Solving[0m
+[0m[2022-05-29 09:37:47.554]                               SolveEnd: Found some solution[0m
+[0m[2022-05-29 09:37:47.555]           Solution found for subgraph:: [48389, 48643, 48393, 48399, 46626, 48396, 48419, 48423, 48653, 48655, 48440, 48690, 48651, 48673, 48656, 48664, 48654, 48648, 48663, 48662, 48660, 48666, 48646, 48665, 48627, 48635, 48671, 48640, 48631, 48391, 48413][0m
+[0m[2022-05-29 09:37:47.647]                                  e_171: Call SCIP for subgraph with |N| = 55, |M| = 218[0m
+[0m[2022-05-29 09:37:47.655]                             SolveStart: Starting Solving[0m
+[0m[2022-05-29 09:37:47.711]                               SolveEnd: Found some solution[0m
+[0m[2022-05-29 09:37:47.711]           Solution found for subgraph:: [85799, 83945, 85821, 86060, 86068, 86072, 86063, 85869, 86107, 86091, 85801, 85806, 85820, 85822, 85823, 85824, 85811, 86045, 85803, 86052, 85812, 85805, 85847, 86061, 85831, 85827, 85841, 86056, 86058, 86067, 86092, 86106, 86082][0m
+[0m[2022-05-29 09:37:47.808]                                  e_171: Call SCIP for subgraph with |N| = 58, |M| = 248[0m
+[0m[2022-05-29 09:37:47.814]                             SolveStart: Starting Solving[0m
+[0m[2022-05-29 09:37:47.858]                               SolveEnd: Found some solution[0m
+[0m[2022-05-29 09:37:47.860]           Solution found for subgraph:: [47601, 47604, 47814, 47834, 47841, 47833, 47836, 47856, 47823, 47832, 47829, 47847, 47854, 47866, 47855, 47606, 47617, 47602, 47612, 47614, 47624, 47627, 47630, 47639, 47632, 47637, 47633, 47662, 47650, 47657, 47661, 47848, 47655, 47825, 47827, 47830, 47831][0m
+[0m[2022-05-29 09:37:47.964]                                  e_171: Call SCIP for subgraph with |N| = 62, |M| = 254[0m
+[0m[2022-05-29 09:37:47.973]                             SolveStart: Starting Solving[0m
+[0m[2022-05-29 09:37:48.033]                               SolveEnd: Found some solution[0m
+[0m[2022-05-29 09:37:48.034]           Solution found for subgraph:: [73993, 73987, 74186, 74030, 74044, 74017, 74288, 74271, 74531, 74534, 74290, 74487, 74522, 74528, 74760, 74504, 74747, 74489, 74523, 74491, 74509, 74527, 74758, 74769, 74275, 74283, 74273, 74043, 74015, 73988, 73989, 74001, 74226, 74229, 74220, 74240, 73969, 73967, 74202][0m
+[0m[2022-05-29 09:37:48.142]                                  e_171: Call SCIP for subgraph with |N| = 65, |M| = 254[0m
+[0m[2022-05-29 09:37:48.148]                             SolveStart: Starting Solving[0m
+[0m[2022-05-29 09:37:48.186]                               SolveEnd: Found some solution[0m
+[0m[2022-05-29 09:37:48.187]           Solution found for subgraph:: [40946, 40959, 40948, 40957, 47082, 41212, 41209, 41211, 41221, 46451, 46673, 46680, 46688, 46685, 46683, 46446, 46445, 46458, 46444, 46876, 46890, 46895, 46882, 46873, 46892, 46872, 46884, 46856, 47124, 46865, 46866, 46859, 46875, 57365, 57373, 47084, 57371, 57379, 57409, 57408][0m
+[0m[2022-05-29 09:37:48.308]                                  e_171: Call SCIP for subgraph with |N| = 73, |M| = 284[0m
+[0m[2022-05-29 09:37:48.318]                             SolveStart: Starting Solving[0m
+[0m[2022-05-29 09:37:48.380]                               SolveEnd: Found some solution[0m
+[0m[2022-05-29 09:37:48.381]           Solution found for subgraph:: [62814, 62811, 63052, 62848, 62865, 62849, 62819, 62833, 62834, 62837, 62857, 62846, 63071, 63072, 62860, 107035, 107040, 107045, 107047, 107038, 107039, 107050, 106859, 106842, 106875, 63232, 106870, 107057, 107076, 107292, 107287, 107298, 107072, 107081, 107064, 107067, 107283, 107090, 107290, 107293, 107295, 107059, 63256, 63066, 63064][0m
+[0m[2022-05-29 09:37:48.535]                                  e_171: Call SCIP for subgraph with |N| = 92, |M| = 370[0m
+[0m[2022-05-29 09:37:48.547]                             SolveStart: Starting Solving[0m
+[0m[2022-05-29 09:37:48.623]                               SolveEnd: Found some solution[0m
+[0m[2022-05-29 09:37:48.625]           Solution found for subgraph:: [106631, 106635, 106622, 106641, 105744, 105981, 106196, 105976, 105986, 106161, 106179, 105978, 105739, 105745, 106212, 106172, 106191, 106158, 106164, 106177, 106176, 106180, 106190, 106204, 106175, 106173, 106181, 106424, 117013, 116973, 116984, 116995, 116976, 116963, 116981, 116988, 117227, 116991, 116992, 117693, 117706, 117708, 117696, 117711, 117709, 117715, 117697, 117707, 117713, 117481, 117216, 117222, 117223, 117228, 116998, 106629, 106648, 106166][0m
+[0m[2022-05-29 09:37:48.804]                                  e_171: Call SCIP for subgraph with |N| = 107, |M| = 460[0m
+[0m[2022-05-29 09:37:48.819]                             SolveStart: Starting Solving[0m
+[0m[2022-05-29 09:37:48.901]                               SolveEnd: Found some solution[0m
+[0m[2022-05-29 09:37:48.902]           Solution found for subgraph:: [94085, 94058, 94106, 94097, 94096, 94100, 116258, 116055, 116074, 116286, 116278, 116273, 116281, 116277, 94086, 94095, 94103, 94333, 94343, 94562, 116472, 94336, 94342, 94344, 94349, 116487, 96833, 94567, 96836, 94335, 94340, 94578, 94557, 94566, 94570, 96825, 94542, 94555, 96826, 94556, 94554, 96845, 96834, 96842, 96856, 96846, 96853, 96855, 94575, 116723, 116711, 116715, 116705, 116717, 116722, 116721, 116480, 116479, 116488, 116476, 94091, 116259, 116267, 116257, 116265, 116486, 116276, 94092][0m
+[0m[2022-05-29 09:37:49.087]                                  e_171: Call SCIP for subgraph with |N| = 111, |M| = 436[0m
+[0m[2022-05-29 09:37:49.099]                             SolveStart: Starting Solving[0m
+[0m[2022-05-29 09:37:49.208]                               SolveEnd: Found some solution[0m
+[0m[2022-05-29 09:37:49.211]           Solution found for subgraph:: [119798, 119791, 119799, 119814, 119804, 119582, 119588, 119590, 119579, 119864, 119844, 119843, 119853, 120082, 119870, 119848, 119849, 119638, 119643, 119655, 119873, 119651, 119866, 119872, 121664, 121676, 119874, 119871, 119879, 121467, 121472, 121474, 121482, 121723, 121725, 121740, 121522, 121490, 121506, 121515, 121499, 121502, 121508, 121479, 121481, 121485, 121488, 121495, 121533, 121738, 121735, 121732, 121736, 121711, 121663, 121655, 121884, 121880, 121885, 120068, 120059, 120074, 119825, 119811, 119800, 119793, 119805, 119810, 119812, 119818, 119820][0m
+[0m[2022-05-29 09:37:49.450]                                  e_171: Call SCIP for subgraph with |N| = 143, |M| = 590[0m
+[0m[2022-05-29 09:37:49.471]                             SolveStart: Starting Solving[0m
+[0m[2022-05-29 09:37:49.589]                               SolveEnd: Found some solution[0m
+[0m[2022-05-29 09:37:49.592]           Solution found for subgraph:: [122752, 122764, 122768, 122773, 122754, 122757, 122795, 122810, 122816, 122776, 122798, 122806, 122559, 122563, 122547, 122564, 122560, 122544, 122343, 122351, 128347, 122341, 122346, 122361, 122548, 122507, 122529, 122539, 122300, 122301, 122311, 122334, 122282, 122331, 122071, 122089, 122093, 122077, 122079, 122081, 122105, 122090, 122323, 122326, 122527, 122531, 122524, 122532, 122533, 122525, 122540, 122526, 122315, 122528, 122543, 122558, 122536, 122314, 122355, 122339, 122330, 122359, 122348, 122100, 122101, 122102, 128139, 122756, 122716, 122738, 122753, 122899, 122909, 122912, 122703, 122919, 122949, 122726, 122945, 122944, 122729, 122953, 122969, 122954, 122984, 123001, 122974, 122933][0m
+[0m[2022-05-29 09:37:58.992]                                  e_171: Single edge count: 0/7306[0m
+[35m[2022-05-29 09:37:58.993]                                  e_171: Found solution k = 80549 in 204598 ms (recursive steps: 0)[0m
+[35m[2022-05-29 09:37:59.179]                                  e_171: e_171 (n = 131072, m = 604042, k = -1)[0m
+[0m[2022-05-29 09:41:09.471]                                  e_171: Found 70 cyclic sub graph(s) with n = [6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7, 7, 8, 8, 9, 9, 9, 9, 10, 10, 11, 11, 12, 12, 13, 14, 16, 16, 16, 16, 17, 17, 19, 19, 19, 19, 19, 20, 21, 21, 21, 22, 22, 22, 22, 22, 23, 23, 24, 26, 27, 32, 33, 35, 42, 42, 42, 45, 49, 55, 58, 62, 65, 73, 92, 107, 111, 143][0m
+[0m[2022-05-29 09:41:09.480]                                  e_171: Removed 129244 nodes in preprocessing, starting with k = 79398[0m
+[0m[2022-05-29 09:41:09.480]                                  e_171: Creating cycle packing with time limit = 3[0m
+[0m[2022-05-29 09:41:09.481]                                  e_171: Creating heuristic with time limit = 3[0m
+[0m[2022-05-29 09:41:09.481]                                  e_171: Solution lies in [4, 4][0m
+[0m[2022-05-29 09:41:09.481]                                  e_171: Creating cycle packing with time limit = 3[0m
+[0m[2022-05-29 09:41:09.482]                                  e_171: Creating heuristic with time limit = 3[0m
+[0m[2022-05-29 09:41:09.482]                                  e_171: Solution lies in [4, 4][0m
+[0m[2022-05-29 09:41:09.482]                                  e_171: Creating cycle packing with time limit = 3[0m
+[0m[2022-05-29 09:41:09.483]                                  e_171: Creating heuristic with time limit = 3[0m
+[0m[2022-05-29 09:41:09.483]                                  e_171: Solution lies in [4, 4][0m
+[0m[2022-05-29 09:41:09.483]                                  e_171: Creating cycle packing with time limit = 3[0m
+[0m[2022-05-29 09:41:09.484]                                  e_171: Creating heuristic with time limit = 3[0m
+[0m[2022-05-29 09:41:09.484]                                  e_171: Solution lies in [4, 4][0m
+[0m[2022-05-29 09:41:09.484]                                  e_171: Creating cycle packing with time limit = 3[0m
+[0m[2022-05-29 09:41:09.485]                                  e_171: Creating heuristic with time limit = 3[0m
+[0m[2022-05-29 09:41:09.485]                                  e_171: Solution lies in [4, 4][0m
+[0m[2022-05-29 09:41:09.485]                                  e_171: Creating cycle packing with time limit = 3[0m
+[0m[2022-05-29 09:41:09.486]                                  e_171: Creating heuristic with time limit = 3[0m
+[0m[2022-05-29 09:41:09.486]                                  e_171: Solution lies in [4, 4][0m
+[0m[2022-05-29 09:41:09.486]                                  e_171: Creating cycle packing with time limit = 3[0m
+[0m[2022-05-29 09:41:09.487]                                  e_171: Creating heuristic with time limit = 3[0m
+[0m[2022-05-29 09:41:09.487]                                  e_171: Solution lies in [4, 4][0m
+[0m[2022-05-29 09:41:09.487]                                  e_171: Creating cycle packing with time limit = 3[0m
+[0m[2022-05-29 09:41:09.488]                                  e_171: Creating heuristic with time limit = 3[0m
+[0m[2022-05-29 09:41:09.488]                                  e_171: Solution lies in [4, 4][0m
+[0m[2022-05-29 09:41:09.489]                                  e_171: Creating cycle packing with time limit = 3[0m
+[0m[2022-05-29 09:41:09.489]                                  e_171: Creating heuristic with time limit = 3[0m
+[0m[2022-05-29 09:41:09.490]                                  e_171: Solution lies in [4, 4][0m
+[0m[2022-05-29 09:41:09.490]                                  e_171: Creating cycle packing with time limit = 3[0m
+[0m[2022-05-29 09:41:09.490]                                  e_171: Creating heuristic with time limit = 3[0m
+[0m[2022-05-29 09:41:09.491]                                  e_171: Solution lies in [4, 4][0m
+[0m[2022-05-29 09:41:09.491]                                  e_171: Creating cycle packing with time limit = 3[0m
+[0m[2022-05-29 09:41:09.491]                                  e_171: Creating heuristic with time limit = 3[0m
+[0m[2022-05-29 09:41:09.496]                                  e_171: Solution lies in [4, 5][0m
+[2022-05-29 09:41:09.496]                                  e_171: Branching with k = 4
+[31m[2022-05-29 09:41:09.497]                                  e_171: Found no solution with k = 79442 in 190503 ms (recursive steps: 0)[0m
+[33m[2022-05-29 09:41:09.498]                                  e_171: BFS: 0, Packing: 8, Heuristic: 7, Copy: 0, Red: 0, DAG: 0, Pre: 190300, File: 185[0m
+[0m[2022-05-29 09:41:09.507]                                  e_183: Applying reduction rules...[0m
+[0m[2022-05-29 09:41:09.516]                                  e_183: Applying Tarjan...[0m
+[0m[2022-05-29 09:41:09.528]                                  e_183: Applying reduction rules again...[0m
+[0m[2022-05-29 09:41:12.742]                                  e_183: Call SCIP for subgraph with |N| = 549, |M| = 3678[0m
+[0m[2022-05-29 09:41:13.299]                             SolveStart: Starting Solving[0m
+[0m[2022-05-29 09:51:09.001]                               SolveEnd: Found some solution[0m
+[0m[2022-05-29 09:51:09.064]           Solution found for subgraph:: [][0m
+[0m[2022-05-29 09:51:09.066]                                  e_183: Single edge count: 3660/3678[0m
+[35m[2022-05-29 09:51:09.066]                                  e_183: Found solution k = 0 in 599567 ms (recursive steps: 0)[0m
+[35m[2022-05-29 09:51:09.069]                                  e_183: e_183 (n = 1024, m = 5471, k = -1)[0m
+[0m[2022-05-29 09:51:09.089]                                  e_183: Found 1 cyclic sub graph(s) with n = [549][0m
+[0m[2022-05-29 09:51:09.090]                                  e_183: Removed 475 nodes in preprocessing, starting with k = 0[0m
+[0m[2022-05-29 09:51:09.090]                                  e_183: Creating cycle packing with time limit = 1000[0m
+[0m[2022-05-29 09:51:09.269]                                  e_183: Creating heuristic with time limit = 1000[0m
+[0m[2022-05-29 09:51:10.326]                                  e_183: Solution lies in [48, 70][0m
+[2022-05-29 09:51:10.326]                                  e_183: Branching with k = 48
+[31m[2022-05-29 09:52:09.073]                                  e_183: Found no solution with k = 54 in 60006 ms (recursive steps: 11956)[0m
+[33m[2022-05-29 09:52:09.074]                                  e_183: BFS: 5639, Packing: 38101, Heuristic: 1056, Copy: 5897, Red: 6736, DAG: 2313, Pre: 21, File: 2[0m
