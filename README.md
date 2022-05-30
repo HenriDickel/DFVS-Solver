@@ -62,7 +62,7 @@ Previously we used our own branch and bound solver, however we decided to use SC
 We access SCIP through a Java interface called "JSCIPOpt". 
 JSCIPopt is open-source and licensed under a MIT-license.   
 You can access it here: 
-[JSCIPOpt]("https://github.com/scipopt/JSCIPOpt")
+<a href="https://github.com/scipopt/JSCIPOpt">JSCIPOpt</a>
 
 # Packing
 
@@ -79,7 +79,7 @@ Even though we developed an exact solver, we decided to use heuristics to create
 # Installation Description
 
 - We are using Java 16
-- You have to install SCIP and add it to the path: [SCIP]("https://www.scipopt.org/index.php#download")
+- You have to install SCIP and add it to the path: <a href="https://www.scipopt.org/index.php#download">SCIP</a>
 
 
 
