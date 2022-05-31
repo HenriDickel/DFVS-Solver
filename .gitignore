@@ -24,3 +24,6 @@ hs_err_pid*
 
 # production folder
 DFVS_Solver/out/
+
+# lib folder
+DFVS_Solver/lib
