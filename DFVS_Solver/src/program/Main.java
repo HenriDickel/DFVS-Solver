@@ -22,9 +22,8 @@ public class Main {
             // Ignore Log
             Log.ignore = true;
 
+            // Load scip library
             System.loadLibrary("jscip");
-            Scip scip = new Scip();
-            scip.create("Example");
 
             // Start timer
             Timer.start(Integer.MAX_VALUE);
@@ -48,8 +47,25 @@ public class Main {
             //testScipILP();
             //exportToGraphViz();
 
-            //List<GraphFile> files = InstanceCreator.getPaceFilesExact(null);
-            //files = files.subList()
+            List<GraphFile> files = InstanceCreator.getPaceFilesExact(null);
+            Instance instance = InstanceCreator.createFromPaceFile(files.get(43));
+
+            // Ignore Log
+            Log.ignore = true;
+
+            // Load scip library
+            System.loadLibrary("jscip");
+
+            // Start timer
+            Timer.start(Integer.MAX_VALUE);
+
+            // Solve
+            ILPSolver.solve(instance);
+
+            // Print solution
+            for(Integer nodeId : instance.S){
+                System.out.println(nodeId);
+            }
         }
     }
 
