@@ -5,7 +5,17 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class Cycle extends Component {
+public class Cycle {
+
+    private int k = 1;
+
+    public int getK() {
+        return k;
+    }
+
+    public void setK(int k) {
+        this.k = k;
+    }
 
     private final List<Node> nodes = new ArrayList<>();
     public int cycleCount = 0;
@@ -43,6 +53,12 @@ public class Cycle extends Component {
             if(node.id.equals(id)) return true;
         }
         return false;
+    }
+
+    public int getPackingLevelSum() {
+        int minInOutSum = 0;
+        for(Node node: nodes) minInOutSum += node.packingLevel;
+        return minInOutSum;
     }
 
     public int getMinInOutSum() {

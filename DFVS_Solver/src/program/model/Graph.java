@@ -8,6 +8,8 @@ public class Graph {
 
     private final Map<Integer, Node> nodes = new LinkedHashMap<>();
 
+    public boolean hasDoubleEdges = true;
+
     public List<Node> getNodes() {
         return nodes.values().stream().toList();
     }
@@ -20,6 +22,18 @@ public class Graph {
         Node node = nodes.get(id);
         if(node == null) throw new RuntimeException("Couldn't find node with id " + id);
         return node;
+    }
+
+    public void setAllNeighborsUpdated(Integer nodeId) {
+        Node node = getNode(nodeId);
+        for(Integer neighborId: node.getOutIds()) {
+            Node neighbor = getNode(neighborId);
+            neighbor.updated = true;
+        }
+        for(Integer neighborId: node.getInIds()) {
+            Node neighbor = getNode(neighborId);
+            neighbor.updated = true;
+        }
     }
 
     public boolean hasNode(int id) {
@@ -36,6 +50,22 @@ public class Graph {
 
     public int getEdgeCount() {
         return nodes.values().stream().map(Node::getOutIdCount).mapToInt(Integer::valueOf).sum();
+    }
+
+    public Cycle getBestUpdatePair() {
+        Cycle bestPair = null;
+        for (Node node : getNodes()) {
+            for(Integer outId: node.getOutIds()) {
+                if(node.getInIds().contains(outId)) {
+                    Node out = getNode(outId);
+                    Cycle pair = new Cycle(node, out);
+                    if(bestPair == null || pair.getPackingLevelSum() < bestPair.getPackingLevelSum()) {
+                        bestPair = pair;
+                    }
+                }
+            }
+        }
+        return bestPair;
     }
 
     public Cycle getBestPairCycle() {
@@ -57,6 +87,7 @@ public class Graph {
     }
 
     public Cycle getFirstPairCycle() {
+
         for (Node node : getNodes()) {
             for(Integer outId: node.getOutIds()) {
                 if(node.getInIds().contains(outId)) {
@@ -64,6 +95,25 @@ public class Graph {
                 }
             }
         } return null;
+    }
+
+    public Cycle getFirstPairCyclePrio() {
+
+        List<Node> prioNodes = getNodes().stream().sorted(Comparator.comparing(Node::getMinInOut)).collect(Collectors.toList());
+        Collections.reverse(prioNodes);
+
+        for (Node node : prioNodes) {
+            // Prioritize nodes with higher min in out
+            List<Node> outNodes = node.getOutIds().stream().map(this::getNode).sorted(Comparator.comparing(Node::getMinInOut)).collect(Collectors.toList());
+            //Collections.reverse(outNodes);
+
+            for(Node out: outNodes) {
+                if(node.getInIds().contains(out.id)) {
+                    return new Cycle(node, out);
+                }
+            }
+        }
+        return null;
     }
 
     public List<Cycle> getPairCycles() {
@@ -104,6 +154,7 @@ public class Graph {
 
     public Graph copy() {
         Graph copyGraph = new Graph();
+        copyGraph.hasDoubleEdges = hasDoubleEdges;
 
         for (Node node : getNodes()) {
             Node copyNode = node.copy();
@@ -131,13 +182,26 @@ public class Graph {
             Node out = getNode(outId);
             out.removeInId(nodeId);
             out.updated = true;
+            // necessary, because the double-edge-chain-rule might be used
+            setAllNeighborsUpdated(outId);
         }
         for(Integer inId: node.getInIds()) {
             Node in = getNode(inId);
             in.removeOutId(nodeId);
             in.updated = true;
+            // necessary, because the double-edge-chain-rule might be used
+            setAllNeighborsUpdated(inId);
         }
         nodes.remove(nodeId);
+    }
+
+    public void removeEdgesFromFC(Cycle fullyConnected) {
+        for(Node node: fullyConnected.getNodes()) {
+            for(Node other: fullyConnected.getNodes()) {
+                if(node.equals(other)) continue;
+                removeEdge(node.id, other.id);
+            }
+        }
     }
 
     public void removeEdge(Integer out, Integer in){
@@ -157,21 +221,27 @@ public class Graph {
         }
     }
 
+    /**
+     * Removes a forbidden node from the graph by connecting all ingoing and outgoing nodes
+     * @param forbiddenId The id of the forbidden node.
+     */
     private void removeForbiddenNode(Integer forbiddenId) {
         Node forbidden = getNode(forbiddenId);
-        for(Node node: getNodes()) {
-            if(node.getOutIds().contains(forbiddenId)) {
-                for(Node out: getOutNodes(forbidden)) {
-                    out.addInId(node.id);
-                    node.addOutId(out.id);
-                }
+        for(Integer inId: forbidden.getInIds()) {
+            Node in = getNode(inId);
+            for(Integer outId: forbidden.getOutIds()) {
+                Node out= getNode(outId);
+                out.addInId(inId);
+                in.addOutId(outId);
             }
         }
         removeNode(forbidden.id);
     }
 
-    public void addInitialNode(Node initialNode) {
+    public void addInitialNode(Node initialNode, int level) {
         Node add = new Node(initialNode.id);
+        add.packingLevel = level;
+        add.pNew = true;
         for(Integer outId: initialNode.getOutIds()) {
             if(hasNode(outId)) {
                 Node out = getNode(outId);

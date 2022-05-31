@@ -4,9 +4,7 @@ import program.model.Cycle;
 import program.model.Graph;
 import program.model.Node;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public abstract class SimpleBFS {
@@ -31,8 +29,12 @@ public abstract class SimpleBFS {
     }
 
     private static Cycle visitNode(Graph graph, Node node, Node root) {
-        for(Integer outId: node.getOutIds()) {
-            Node out = graph.getNode(outId);
+
+        // Prioritize nodes with higher min in out
+        List<Node> outNodes = node.getOutIds().stream().map(graph::getNode).sorted(Comparator.comparing(Node::getMinInOut)).collect(Collectors.toList());
+        Collections.reverse(outNodes);
+
+        for(Node out: outNodes) {
             if(out.equals(root)) {
                 return pathToRoot(node);
             } else if(out.parent == null){

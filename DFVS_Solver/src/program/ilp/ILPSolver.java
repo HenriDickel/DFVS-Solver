@@ -3,22 +3,23 @@ package program.ilp;
 import program.algo.DAG;
 import program.algo.Preprocessing;
 import program.algo.Reduction;
-import program.heuristics.Solver;
 import program.log.Log;
 import program.model.Graph;
 import program.model.Instance;
 import program.utils.PerformanceTimer;
+import program.utils.Timer;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
 public abstract class ILPSolver {
 
+    public static Instance instance;
 
     public static void solve(Instance instance) {
 
         //Set instance & branch count
-        Solver.instance = instance;
+        ILPSolver.instance = instance;
 
         Graph initialGraph = instance.subGraphs.get(0);
 
@@ -48,11 +49,7 @@ public abstract class ILPSolver {
             //Check if there is no cycle
             if(DAG.isDAGFast(subGraph)) continue;
 
-            float nodePercentage = (float) subGraph.getNodeCount() / instance.getCurrentN();
-            System.out.println(subGraph.getNodeCount() + "/" +  instance.getCurrentN());
-            // TODO ILP
-            System.out.println("Call ILP");
-            List<Integer> S = new ILPSolverVertexCover(subGraph, 90).solve(instance);
+            List<Integer> S = ILPSolverScip.solve(subGraph, Timer.getSecondsLeft());
             instance.S.addAll(S);
         }
 

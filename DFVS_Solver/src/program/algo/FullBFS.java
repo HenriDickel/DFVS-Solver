@@ -11,6 +11,7 @@ public abstract class FullBFS {
 
     public static Cycle findBestCycle(Graph graph) {
 
+        // First look for the node with the most double edges
         Node maxNode = null;
         for(Node node: graph.getNodes()) {
             if(maxNode == null || node.getFullyConnectedIds().size() >= maxNode.getFullyConnectedIds().size()) {
@@ -18,7 +19,7 @@ public abstract class FullBFS {
             }
         }
         List<Integer> pairNodes = maxNode.getFullyConnectedIds();
-        if(pairNodes != null) {
+        if(!pairNodes.isEmpty()) {
 
             Node maxPairNode = null;
             for(Integer otherId: pairNodes) {

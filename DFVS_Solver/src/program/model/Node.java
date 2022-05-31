@@ -38,6 +38,8 @@ public class Node {
 
     public Boolean marked = false;
 
+    public int packingLevel = 0;
+
     public Node(Integer id) {
         this.id = id;
     }
@@ -86,6 +88,10 @@ public class Node {
         return Math.min(inIds.size(), outIds.size());
     }
 
+    public int getPackingLevel() {
+        return packingLevel;
+    }
+
     public Integer getBestDoubleEdge() {
         List<Integer> fullyConnected = outIds.stream().filter(inIds::contains).collect(Collectors.toList());
         if(fullyConnected.size() > 0) return fullyConnected.get(0);
@@ -104,10 +110,16 @@ public class Node {
         Node copy = new Node(id);
         copy.maxPetal = maxPetal;
         copy.petal = petal;
+        copy.packingLevel = packingLevel;
         // Clone out ids and in ids
         copy.outIds.addAll(outIds);
         copy.inIds.addAll(inIds);
         return copy;
+    }
+
+    public boolean hasSingleEdge() {
+        if(inIds.size() != outIds.size()) return true;
+        return !inIds.containsAll(outIds);
     }
 
     /**
