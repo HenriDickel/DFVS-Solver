@@ -1,9 +1,13 @@
 <component name="libraryTable">
   <library name="scip">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/lib/scip.jar!/" />
+      <root url="file://C:/Program Files/SCIPOptSuite 8.0.0/build/Release" />
     </CLASSES>
     <JAVADOC />
+    <NATIVE>
+      <root url="file://C:/Program Files/SCIPOptSuite 8.0.0/build/Release" />
+    </NATIVE>
     <SOURCES />
+    <jarDirectory url="file://C:/Program Files/SCIPOptSuite 8.0.0/build/Release" recursive="false" />
   </library>
 </component>

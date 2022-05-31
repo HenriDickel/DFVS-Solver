@@ -2,7 +2,6 @@ package program.ilp;
 
 import jscip.*;
 import program.algo.DAG;
-import program.log.Log;
 import program.model.Cycle;
 import program.model.Graph;
 import program.model.Node;
@@ -39,7 +38,6 @@ public abstract class ILPSolverScip {
                 uMap.put(node.id, u);
             }
         }
-        Log.debugLog("SCIP",  "Created " + scip.getNVars() + " vars");
 
         // Add a linear constraint for each double edge a <-> b
         int numPairCons = 0;
@@ -100,15 +98,9 @@ public abstract class ILPSolverScip {
             }
         }
 
-        Log.debugLog("SCIP",  "Created " + numPairCons + " pair constraints");
-        Log.debugLog("SCIP",  "Created " + numOrderingCons + " ordering constraints");
-        Log.debugLog("SCIP",  "Created " + numPackingCons + " packing constraints");
-
-        Log.debugLog("SCIP","Start Solving");
-        scip.solve();
+         scip.solve();
         List<Integer> S = new ArrayList<>();
         Solution sol = scip.getBestSol();
-        Log.debugLog("SCIP","Found some solution with objective value = " + scip.getSolOrigObj(sol) + " and gap = " + scip.getGap());
 
         if(sol != null && scip.getGap() == 0)
         {
@@ -126,8 +118,7 @@ public abstract class ILPSolverScip {
             return S;
         }
         else {
-            Log.debugLog("SCIP","Calculation timeout at objective value = " + scip.getSolOrigObj(sol) + " and gap = " + scip.getGap());
-            for( int i = 0; i < scip.getVars().length; i++) {
+           for( int i = 0; i < scip.getVars().length; i++) {
                 Variable var = scip.getVars()[i];
                 scip.releaseVar(var);
             }

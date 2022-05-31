@@ -1,11 +1,9 @@
 <component name="ArtifactManager">
-  <artifact type="jar" name="dum">
+  <artifact type="jar" build-on-make="true" name="dum">
     <output-path>$PROJECT_DIR$/out/artifacts/dum</output-path>
     <root id="archive" name="dum.jar">
       <element id="module-output" name="DFVS_Solver" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../../../gurobi950/win64/lib/gurobi.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/lib/scip.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/lib/examples.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/Program Files/SCIPOptSuite 8.0.0/build/Release/scip.jar" path-in-jar="/" />
     </root>
   </artifact>
 </component>

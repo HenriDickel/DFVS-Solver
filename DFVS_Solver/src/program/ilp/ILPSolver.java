@@ -3,10 +3,8 @@ package program.ilp;
 import program.algo.DAG;
 import program.algo.Preprocessing;
 import program.algo.Reduction;
-import program.log.Log;
 import program.model.Graph;
 import program.model.Instance;
-import program.utils.PerformanceTimer;
 import program.utils.Timer;
 
 import java.util.List;
@@ -24,13 +22,11 @@ public abstract class ILPSolver {
         Graph initialGraph = instance.subGraphs.get(0);
 
         // Preprocessing
-        PerformanceTimer.start();
         List<Integer> reduceS = Reduction.applyRules(initialGraph, true);
         instance.S.addAll(reduceS);
 
         // Create sub graphs
         instance.subGraphs = Preprocessing.findCyclicSubGraphs(initialGraph);
-        Log.debugLog(instance.NAME, "Found " + instance.subGraphs.size() + " cyclic sub graph(s) with n = " + instance.subGraphs.stream().map(Graph::getNodeCount).collect(Collectors.toList()));
 
         // Apply rules on each sub graph
         for(Graph subGraph: instance.subGraphs) {
@@ -40,8 +36,6 @@ public abstract class ILPSolver {
 
         instance.preRemovedNodes = instance.N - instance.subGraphs.stream().mapToInt(Graph::getNodeCount).sum();
         instance.startK = instance.S.size();
-        Log.debugLog(instance.NAME, "Removed " + instance.preRemovedNodes + " nodes in preprocessing, starting with k = " + instance.startK);
-        PerformanceTimer.log(PerformanceTimer.MethodType.PREPROCESSING);
 
         // Run for all sub graphs
         for (Graph subGraph : instance.subGraphs) {
