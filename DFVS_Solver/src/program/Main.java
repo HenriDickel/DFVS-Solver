@@ -17,8 +17,11 @@ public class Main {
             // Start timer
             Timer.start(Integer.MAX_VALUE);
 
+            // Path
+            String fileName = args[0];
+
             // Create instance
-            Instance instance = InstanceCreator.createPaceInstanceFromSystemIn();
+            Instance instance = InstanceCreator.createFromPaceFile(fileName);
 
             // Solve
             ILPSolver.solve(instance);
